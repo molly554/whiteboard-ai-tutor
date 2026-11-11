@@ -1,0 +1,168 @@
+{
+ "title": "Distance is not the cause",
+ "lang": "en",
+ "steps": [
+  {
+   "title": "Yes, we are farther in July",
+   "say": "You are right: Earth is actually farther from the Sun in early July. So distance cannot explain northern summer.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "confirm",
+     "x": 60,
+     "y": 820,
+     "text": "Yes! In early July, Earth is farther from the Sun.",
+     "size": 36,
+     "color": "blue"
+    },
+    {
+     "op": "line",
+     "id": "pointer1",
+     "x1": 345,
+     "y1": 805,
+     "x2": 1290,
+     "y2": 625,
+     "color": "gray",
+     "width": 3,
+     "dash": true,
+     "arrow": true
+    },
+    {
+     "op": "write",
+     "id": "july",
+     "x": 1225,
+     "y": 535,
+     "text": "early July: farther",
+     "size": 28,
+     "color": "gray",
+     "anchor": "middle"
+    }
+   ]
+  },
+  {
+   "title": "January is closest",
+   "say": "Earth is closest to the Sun in early January, yet the northern half is cold.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "january",
+     "x": 215,
+     "y": 515,
+     "text": "early January: closest",
+     "size": 28,
+     "color": "gray",
+     "anchor": "middle"
+    },
+    {
+     "op": "line",
+     "id": "pointer2",
+     "x1": 930,
+     "y1": 805,
+     "x2": 305,
+     "y2": 625,
+     "color": "gray",
+     "width": 3,
+     "dash": true,
+     "arrow": true
+    }
+   ]
+  },
+  {
+   "title": "The tilt decides",
+   "say": "The small distance change is not the reason. The tilt decides how directly sunlight hits each hemisphere.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "tiltkey",
+     "x": 60,
+     "y": 128,
+     "text": "Distance changes by only about 3%.\nThe tilt decides direct vs. slanted sunlight.",
+     "size": 36,
+     "color": "red"
+    },
+    {
+     "op": "erase",
+     "ids": [
+      "key"
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Northern summer",
+   "say": "In northern summer, the north pole leans toward the Sun, so northern sunlight is more direct.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "summerlabel",
+     "x": 745,
+     "y": 320,
+     "text": "Northern summer: north leans toward Sun",
+     "size": 30,
+     "color": "blue",
+     "anchor": "middle"
+    },
+    {
+     "op": "line",
+     "id": "sunray1a",
+     "x1": 845,
+     "y1": 575,
+     "x2": 810,
+     "y2": 445,
+     "color": "red",
+     "width": 3,
+     "arrow": true
+    },
+    {
+     "op": "line",
+     "id": "sunray1b",
+     "x1": 835,
+     "y1": 585,
+     "x2": 790,
+     "y2": 455,
+     "color": "red",
+     "width": 3,
+     "arrow": true
+    }
+   ]
+  },
+  {
+   "title": "Northern winter",
+   "say": "In northern winter, the north pole leans away, so the same sunlight is spread over a larger area.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "winterlabel",
+     "x": 745,
+     "y": 845,
+     "text": "Northern winter: north leans away",
+     "size": 30,
+     "color": "blue",
+     "anchor": "middle"
+    },
+    {
+     "op": "line",
+     "id": "sunray2a",
+     "x1": 845,
+     "y1": 625,
+     "x2": 810,
+     "y2": 755,
+     "color": "red",
+     "width": 3,
+     "arrow": true
+    },
+    {
+     "op": "line",
+     "id": "sunray2b",
+     "x1": 835,
+     "y1": 615,
+     "x2": 790,
+     "y2": 745,
+     "color": "red",
+     "width": 3,
+     "arrow": true
+    }
+   ]
+  }
+ ]
+}

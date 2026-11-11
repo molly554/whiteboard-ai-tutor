@@ -1,0 +1,375 @@
+{
+ "title": "When Demand Rises",
+ "lang": "en",
+ "steps": [
+  {
+   "title": "Set Up the Market Graph",
+   "say": "Let's draw a standard supply and demand graph with Price on the vertical axis and Quantity on the horizontal axis.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "t_main",
+     "x": 800,
+     "y": 50,
+     "text": "What Happens When Demand Rises?",
+     "size": 54,
+     "anchor": "middle",
+     "underline": true
+    },
+    {
+     "op": "line",
+     "id": "ax_y",
+     "x1": 180,
+     "y1": 760,
+     "x2": 180,
+     "y2": 150,
+     "arrow": true
+    },
+    {
+     "op": "line",
+     "id": "ax_x",
+     "x1": 180,
+     "y1": 760,
+     "x2": 880,
+     "y2": 760,
+     "arrow": true
+    },
+    {
+     "op": "write",
+     "id": "lbl_p",
+     "x": 80,
+     "y": 150,
+     "text": "Price\n(P)",
+     "size": 32
+    },
+    {
+     "op": "write",
+     "id": "lbl_q",
+     "x": 750,
+     "y": 780,
+     "text": "Quantity (Q)",
+     "size": 32
+    }
+   ]
+  },
+  {
+   "title": "Initial Supply and Demand",
+   "say": "The upward-sloping line is Supply, and the downward-sloping line is initial Demand.",
+   "ops": [
+    {
+     "op": "line",
+     "id": "line_s",
+     "x1": 240,
+     "y1": 680,
+     "x2": 740,
+     "y2": 180,
+     "color": "blue"
+    },
+    {
+     "op": "write",
+     "id": "lbl_s",
+     "x": 755,
+     "y": 160,
+     "text": "S",
+     "size": 36,
+     "color": "blue"
+    },
+    {
+     "op": "line",
+     "id": "line_d1",
+     "x1": 240,
+     "y1": 240,
+     "x2": 680,
+     "y2": 680,
+     "color": "green"
+    },
+    {
+     "op": "write",
+     "id": "lbl_d1",
+     "x": 695,
+     "y": 665,
+     "text": "D1",
+     "size": 36,
+     "color": "green"
+    },
+    {
+     "op": "write",
+     "id": "n_1",
+     "x": 960,
+     "y": 200,
+     "text": "1. Initial Market:\n   Supply (S) & Demand (D1)",
+     "size": 36
+    }
+   ]
+  },
+  {
+   "title": "Initial Equilibrium",
+   "say": "Where Supply and Demand intersect, we find the initial equilibrium price P1 and quantity Q1.",
+   "ops": [
+    {
+     "op": "ellipse",
+     "id": "pt_e1",
+     "cx": 460,
+     "cy": 460,
+     "rx": 8,
+     "ry": 8,
+     "color": "ink",
+     "fill": "ink"
+    },
+    {
+     "op": "write",
+     "id": "lbl_e1",
+     "x": 460,
+     "y": 405,
+     "text": "E1",
+     "size": 30,
+     "anchor": "middle"
+    },
+    {
+     "op": "line",
+     "id": "dash_p1",
+     "x1": 180,
+     "y1": 460,
+     "x2": 460,
+     "y2": 460,
+     "color": "gray",
+     "width": 3,
+     "dash": true
+    },
+    {
+     "op": "write",
+     "id": "lbl_p1",
+     "x": 125,
+     "y": 442,
+     "text": "P1",
+     "size": 32
+    },
+    {
+     "op": "line",
+     "id": "dash_q1",
+     "x1": 460,
+     "y1": 460,
+     "x2": 460,
+     "y2": 760,
+     "color": "gray",
+     "width": 3,
+     "dash": true
+    },
+    {
+     "op": "write",
+     "id": "lbl_q1",
+     "x": 460,
+     "y": 775,
+     "text": "Q1",
+     "size": 32,
+     "anchor": "middle"
+    }
+   ]
+  },
+  {
+   "title": "Demand Shifts Right",
+   "say": "When demand rises, consumers want more at every price, shifting the demand curve to the right from D1 to D2.",
+   "ops": [
+    {
+     "op": "line",
+     "id": "line_d2",
+     "x1": 400,
+     "y1": 240,
+     "x2": 840,
+     "y2": 680,
+     "color": "red"
+    },
+    {
+     "op": "write",
+     "id": "lbl_d2",
+     "x": 855,
+     "y": 665,
+     "text": "D2",
+     "size": 36,
+     "color": "red"
+    },
+    {
+     "op": "line",
+     "id": "arr_shift",
+     "x1": 350,
+     "y1": 330,
+     "x2": 490,
+     "y2": 330,
+     "color": "red",
+     "width": 4,
+     "arrow": true
+    },
+    {
+     "op": "write",
+     "id": "n_2",
+     "x": 960,
+     "y": 330,
+     "text": "2. Demand Rises:\n   Curve shifts right (D1 -> D2)",
+     "size": 36,
+     "color": "red"
+    }
+   ]
+  },
+  {
+   "title": "Temporary Shortage at P1",
+   "say": "At the old price P1, quantity demanded now exceeds quantity supplied, creating a shortage that pushes prices up.",
+   "ops": [
+    {
+     "op": "ellipse",
+     "id": "pt_short",
+     "cx": 620,
+     "cy": 460,
+     "rx": 6,
+     "ry": 6,
+     "color": "red",
+     "fill": "red"
+    },
+    {
+     "op": "line",
+     "id": "arr_short",
+     "x1": 475,
+     "y1": 460,
+     "x2": 605,
+     "y2": 460,
+     "color": "red",
+     "width": 3,
+     "arrow": "both"
+    },
+    {
+     "op": "write",
+     "id": "lbl_short",
+     "x": 540,
+     "y": 470,
+     "text": "Shortage",
+     "size": 26,
+     "color": "red",
+     "anchor": "middle"
+    },
+    {
+     "op": "write",
+     "id": "n_3",
+     "x": 960,
+     "y": 460,
+     "text": "3. At old price P1:\n   Demand > Supply (Shortage)",
+     "size": 36
+    }
+   ]
+  },
+  {
+   "title": "New Equilibrium & Higher Price",
+   "say": "The market reaches a new equilibrium E2. As a result, the equilibrium price rises to P2 and quantity increases to Q2.",
+   "ops": [
+    {
+     "op": "erase",
+     "ids": [
+      "pt_short",
+      "arr_short",
+      "lbl_short"
+     ]
+    },
+    {
+     "op": "ellipse",
+     "id": "pt_e2",
+     "cx": 540,
+     "cy": 380,
+     "rx": 8,
+     "ry": 8,
+     "color": "red",
+     "fill": "red"
+    },
+    {
+     "op": "write",
+     "id": "lbl_e2",
+     "x": 540,
+     "y": 325,
+     "text": "E2",
+     "size": 30,
+     "color": "red",
+     "anchor": "middle"
+    },
+    {
+     "op": "line",
+     "id": "dash_p2",
+     "x1": 180,
+     "y1": 380,
+     "x2": 540,
+     "y2": 380,
+     "color": "red",
+     "width": 3,
+     "dash": true
+    },
+    {
+     "op": "write",
+     "id": "lbl_p2",
+     "x": 125,
+     "y": 362,
+     "text": "P2",
+     "size": 32,
+     "color": "red"
+    },
+    {
+     "op": "line",
+     "id": "arr_p",
+     "x1": 105,
+     "y1": 455,
+     "x2": 105,
+     "y2": 385,
+     "color": "red",
+     "width": 4,
+     "arrow": true
+    },
+    {
+     "op": "line",
+     "id": "dash_q2",
+     "x1": 540,
+     "y1": 380,
+     "x2": 540,
+     "y2": 760,
+     "color": "red",
+     "width": 3,
+     "dash": true
+    },
+    {
+     "op": "write",
+     "id": "lbl_q2",
+     "x": 540,
+     "y": 775,
+     "text": "Q2",
+     "size": 32,
+     "color": "red",
+     "anchor": "middle"
+    },
+    {
+     "op": "line",
+     "id": "arr_q",
+     "x1": 485,
+     "y1": 792,
+     "x2": 515,
+     "y2": 792,
+     "color": "red",
+     "width": 4,
+     "arrow": true
+    },
+    {
+     "op": "rect",
+     "id": "box_sum",
+     "x": 950,
+     "y": 590,
+     "w": 570,
+     "h": 160,
+     "color": "red",
+     "fill": "red"
+    },
+    {
+     "op": "write",
+     "id": "n_4",
+     "x": 980,
+     "y": 615,
+     "text": "Conclusion (at E2):\n• Price RISES (P1 -> P2)\n• Quantity RISES (Q1 -> Q2)",
+     "size": 36,
+     "color": "red"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,282 @@
+{
+ "title": "Why the Pythagorean Theorem Works",
+ "lang": "en",
+ "steps": [
+  {
+   "title": "The Right Triangle",
+   "say": "Let's start with any right-angled triangle having legs a and b, and hypotenuse c.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "main_title",
+     "x": 800,
+     "y": 50,
+     "text": "Why Does a² + b² = c² Work?",
+     "size": 52,
+     "color": "ink",
+     "anchor": "middle"
+    },
+    {
+     "op": "path",
+     "id": "tri_demo",
+     "d": "M 150 350 L 350 350 L 150 200 Z",
+     "color": "blue",
+     "width": 5,
+     "fill": "blue"
+    },
+    {
+     "op": "rect",
+     "id": "rt_angle",
+     "x": 150,
+     "y": 330,
+     "w": 20,
+     "h": 20,
+     "color": "gray",
+     "width": 3
+    },
+    {
+     "op": "write",
+     "id": "lbl_a",
+     "x": 115,
+     "y": 265,
+     "text": "a",
+     "size": 36,
+     "color": "blue"
+    },
+    {
+     "op": "write",
+     "id": "lbl_b",
+     "x": 240,
+     "y": 365,
+     "text": "b",
+     "size": 36,
+     "color": "blue"
+    },
+    {
+     "op": "write",
+     "id": "lbl_c",
+     "x": 260,
+     "y": 250,
+     "text": "c",
+     "size": 36,
+     "color": "blue"
+    }
+   ]
+  },
+  {
+   "title": "Arrange Four Triangles",
+   "say": "Now place four identical copies of this triangle inside a large square of side length a + b.",
+   "ops": [
+    {
+     "op": "rect",
+     "id": "outer_sq",
+     "x": 600,
+     "y": 180,
+     "w": 400,
+     "h": 400,
+     "color": "ink",
+     "width": 5
+    },
+    {
+     "op": "path",
+     "id": "tri_1",
+     "d": "M 600 300 L 720 180 L 600 180 Z",
+     "color": "blue",
+     "width": 4,
+     "fill": "blue"
+    },
+    {
+     "op": "path",
+     "id": "tri_2",
+     "d": "M 720 180 L 1000 300 L 1000 180 Z",
+     "color": "blue",
+     "width": 4,
+     "fill": "blue"
+    },
+    {
+     "op": "path",
+     "id": "tri_3",
+     "d": "M 1000 300 L 880 580 L 1000 580 Z",
+     "color": "blue",
+     "width": 4,
+     "fill": "blue"
+    },
+    {
+     "op": "path",
+     "id": "tri_4",
+     "d": "M 880 580 L 600 460 L 600 580 Z",
+     "color": "blue",
+     "width": 4,
+     "fill": "blue"
+    },
+    {
+     "op": "write",
+     "id": "lbl_out_top_a",
+     "x": 650,
+     "y": 135,
+     "text": "a",
+     "size": 32,
+     "color": "ink"
+    },
+    {
+     "op": "write",
+     "id": "lbl_out_top_b",
+     "x": 850,
+     "y": 135,
+     "text": "b",
+     "size": 32,
+     "color": "ink"
+    }
+   ]
+  },
+  {
+   "title": "Inspect the Inner Tilt",
+   "say": "Notice the tilted square formed in the center: each side has length c.",
+   "ops": [
+    {
+     "op": "path",
+     "id": "inner_sq",
+     "d": "M 600 300 L 720 180 L 1000 300 L 880 580 Z",
+     "color": "red",
+     "width": 5,
+     "fill": "red"
+    },
+    {
+     "op": "write",
+     "id": "lbl_inner_c",
+     "x": 800,
+     "y": 360,
+     "text": "Area = c²",
+     "size": 40,
+     "color": "red",
+     "anchor": "middle"
+    }
+   ]
+  },
+  {
+   "title": "Calculate Total Area",
+   "say": "The big square's area is (a + b)², which also equals the four blue triangles plus the center square c².",
+   "ops": [
+    {
+     "op": "write",
+     "id": "eq_line1",
+     "x": 1100,
+     "y": 220,
+     "text": "Total Area of Big Square:",
+     "size": 34,
+     "color": "ink"
+    },
+    {
+     "op": "write",
+     "id": "eq_line2",
+     "x": 1100,
+     "y": 270,
+     "text": "(a + b)²",
+     "size": 40,
+     "color": "blue"
+    },
+    {
+     "op": "write",
+     "id": "eq_line3",
+     "x": 1100,
+     "y": 340,
+     "text": "= 4 · (½ · a · b) + c²",
+     "size": 38,
+     "color": "ink"
+    },
+    {
+     "op": "write",
+     "id": "eq_line4",
+     "x": 1100,
+     "y": 410,
+     "text": "= 2ab + c²",
+     "size": 38,
+     "color": "ink"
+    }
+   ]
+  },
+  {
+   "title": "Expand and Simplify",
+   "say": "Expand the left side to get a² + 2ab + b². Subtract 2ab from both sides, and a² + b² = c² remains!",
+   "ops": [
+    {
+     "op": "write",
+     "id": "eq_expand",
+     "x": 1100,
+     "y": 480,
+     "text": "a² + 2ab + b² = 2ab + c²",
+     "size": 36,
+     "color": "ink"
+    },
+    {
+     "op": "line",
+     "id": "strike_left",
+     "x1": 1165,
+     "y1": 505,
+     "x2": 1245,
+     "y2": 505,
+     "color": "red",
+     "width": 4
+    },
+    {
+     "op": "line",
+     "id": "strike_right",
+     "x1": 1345,
+     "y1": 505,
+     "x2": 1425,
+     "y2": 505,
+     "color": "red",
+     "width": 4
+    },
+    {
+     "op": "rect",
+     "id": "box_result",
+     "x": 1100,
+     "y": 550,
+     "w": 380,
+     "h": 90,
+     "color": "green",
+     "width": 4,
+     "fill": "green"
+    },
+    {
+     "op": "write",
+     "id": "final_pythagoras",
+     "x": 1290,
+     "y": 575,
+     "text": "a² + b² = c²",
+     "size": 44,
+     "color": "green",
+     "anchor": "middle"
+    }
+   ]
+  },
+  {
+   "title": "Geometric Meaning",
+   "say": "So the sum of the areas of squares on the two legs always equals the area of the square on the hypotenuse.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "summary_note",
+     "x": 800,
+     "y": 720,
+     "text": "Area of Square(a) + Area of Square(b) = Area of Square(c)",
+     "size": 38,
+     "color": "ink",
+     "anchor": "middle",
+     "underline": true
+    },
+    {
+     "op": "write",
+     "id": "qed_note",
+     "x": 800,
+     "y": 790,
+     "text": "This geometric harmony holds for every right triangle!",
+     "size": 32,
+     "color": "gray",
+     "anchor": "middle"
+    }
+   ]
+  }
+ ]
+}

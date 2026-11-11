@@ -1,0 +1,374 @@
+{
+ "title": "When Demand Rises: Price Impact",
+ "lang": "en",
+ "steps": [
+  {
+   "title": "Setting Up Market Axes",
+   "say": "Let's see what happens to prices when demand rises, using a classic supply and demand graph.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "title",
+     "x": 80,
+     "y": 50,
+     "text": "Market Dynamics: When Demand Rises",
+     "size": 52
+    },
+    {
+     "op": "line",
+     "id": "y_axis",
+     "x1": 200,
+     "y1": 720,
+     "x2": 200,
+     "y2": 190,
+     "arrow": true,
+     "width": 4
+    },
+    {
+     "op": "write",
+     "id": "lbl_p",
+     "x": 200,
+     "y": 145,
+     "text": "Price (P)",
+     "size": 32,
+     "anchor": "middle"
+    },
+    {
+     "op": "line",
+     "id": "x_axis",
+     "x1": 200,
+     "y1": 720,
+     "x2": 820,
+     "y2": 720,
+     "arrow": true,
+     "width": 4
+    },
+    {
+     "op": "write",
+     "id": "lbl_q",
+     "x": 830,
+     "y": 705,
+     "text": "Quantity (Q)",
+     "size": 32,
+     "anchor": "start"
+    }
+   ]
+  },
+  {
+   "title": "Initial Equilibrium",
+   "say": "At baseline, supply and demand intersect at point E1, establishing our starting price P1 and quantity Q1.",
+   "ops": [
+    {
+     "op": "line",
+     "id": "curve_s",
+     "x1": 260,
+     "y1": 660,
+     "x2": 740,
+     "y2": 260,
+     "color": "blue",
+     "width": 4
+    },
+    {
+     "op": "write",
+     "id": "lbl_s",
+     "x": 755,
+     "y": 245,
+     "text": "Supply (S)",
+     "size": 30,
+     "color": "blue"
+    },
+    {
+     "op": "line",
+     "id": "curve_d1",
+     "x1": 260,
+     "y1": 260,
+     "x2": 740,
+     "y2": 660,
+     "color": "ink",
+     "width": 4
+    },
+    {
+     "op": "write",
+     "id": "lbl_d1",
+     "x": 755,
+     "y": 655,
+     "text": "D1",
+     "size": 30,
+     "color": "ink"
+    },
+    {
+     "op": "ellipse",
+     "id": "pt_e1",
+     "cx": 500,
+     "cy": 460,
+     "rx": 7,
+     "ry": 7,
+     "color": "ink",
+     "fill": "ink"
+    },
+    {
+     "op": "line",
+     "id": "dash_p1",
+     "x1": 500,
+     "y1": 460,
+     "x2": 200,
+     "y2": 460,
+     "color": "gray",
+     "width": 2,
+     "dash": true
+    },
+    {
+     "op": "write",
+     "id": "lbl_p1",
+     "x": 145,
+     "y": 445,
+     "text": "P1",
+     "size": 30,
+     "color": "gray"
+    },
+    {
+     "op": "line",
+     "id": "dash_q1",
+     "x1": 500,
+     "y1": 460,
+     "x2": 500,
+     "y2": 720,
+     "color": "gray",
+     "width": 2,
+     "dash": true
+    },
+    {
+     "op": "write",
+     "id": "lbl_q1",
+     "x": 485,
+     "y": 735,
+     "text": "Q1",
+     "size": 30,
+     "color": "gray"
+    }
+   ]
+  },
+  {
+   "title": "Demand Curve Shifts Outward",
+   "say": "When demand rises, consumers want to purchase more at every price point, shifting the entire demand curve rightward to D2.",
+   "ops": [
+    {
+     "op": "line",
+     "id": "curve_d2",
+     "x1": 380,
+     "y1": 260,
+     "x2": 860,
+     "y2": 660,
+     "color": "red",
+     "width": 4
+    },
+    {
+     "op": "write",
+     "id": "lbl_d2",
+     "x": 875,
+     "y": 655,
+     "text": "D2",
+     "size": 30,
+     "color": "red"
+    },
+    {
+     "op": "line",
+     "id": "shift_arrow",
+     "x1": 490,
+     "y1": 350,
+     "x2": 570,
+     "y2": 350,
+     "color": "red",
+     "width": 3,
+     "arrow": true
+    },
+    {
+     "op": "write",
+     "id": "lbl_shift",
+     "x": 490,
+     "y": 310,
+     "text": "Demand Rises",
+     "size": 28,
+     "color": "red"
+    },
+    {
+     "op": "write",
+     "id": "text_shift_expl",
+     "x": 960,
+     "y": 200,
+     "text": "Why Demand Rises:\n• More consumers enter market\n• Rise in household income\n• Product becomes more popular",
+     "size": 32,
+     "color": "ink"
+    }
+   ]
+  },
+  {
+   "title": "Immediate Shortage at Old Price",
+   "say": "At the original price P1, buyers now want far more goods than producers have made available, causing an immediate shortage.",
+   "ops": [
+    {
+     "op": "line",
+     "id": "dash_shortage",
+     "x1": 500,
+     "y1": 460,
+     "x2": 700,
+     "y2": 460,
+     "color": "red",
+     "width": 3,
+     "dash": true
+    },
+    {
+     "op": "ellipse",
+     "id": "pt_shortage",
+     "cx": 700,
+     "cy": 460,
+     "rx": 6,
+     "ry": 6,
+     "color": "red",
+     "fill": "red"
+    },
+    {
+     "op": "write",
+     "id": "lbl_shortage",
+     "x": 960,
+     "y": 360,
+     "text": "At original price P1:\n• Quantity Demanded > Supplied\n• Creates a Shortage",
+     "size": 32,
+     "color": "red"
+    },
+    {
+     "op": "write",
+     "id": "lbl_compete",
+     "x": 960,
+     "y": 470,
+     "text": "Buyers compete for scarce items,\nbidding the price upward.",
+     "size": 30,
+     "color": "ink"
+    }
+   ]
+  },
+  {
+   "title": "New Equilibrium at Higher Price",
+   "say": "As prices rise, suppliers increase output until the market settles at a new equilibrium E2, where both price and quantity are higher.",
+   "ops": [
+    {
+     "op": "ellipse",
+     "id": "pt_e2",
+     "cx": 560,
+     "cy": 410,
+     "rx": 7,
+     "ry": 7,
+     "color": "green",
+     "fill": "green"
+    },
+    {
+     "op": "write",
+     "id": "lbl_e2",
+     "x": 575,
+     "y": 390,
+     "text": "E2",
+     "size": 30,
+     "color": "green"
+    },
+    {
+     "op": "line",
+     "id": "dash_p2",
+     "x1": 560,
+     "y1": 410,
+     "x2": 200,
+     "y2": 410,
+     "color": "green",
+     "width": 2,
+     "dash": true
+    },
+    {
+     "op": "write",
+     "id": "lbl_p2",
+     "x": 145,
+     "y": 395,
+     "text": "P2",
+     "size": 30,
+     "color": "green"
+    },
+    {
+     "op": "line",
+     "id": "dash_q2",
+     "x1": 560,
+     "y1": 410,
+     "x2": 560,
+     "y2": 720,
+     "color": "green",
+     "width": 2,
+     "dash": true
+    },
+    {
+     "op": "write",
+     "id": "lbl_q2",
+     "x": 550,
+     "y": 735,
+     "text": "Q2",
+     "size": 30,
+     "color": "green"
+    },
+    {
+     "op": "line",
+     "id": "arr_p_up",
+     "x1": 170,
+     "y1": 445,
+     "x2": 170,
+     "y2": 420,
+     "color": "green",
+     "width": 3,
+     "arrow": true
+    },
+    {
+     "op": "line",
+     "id": "arr_q_up",
+     "x1": 515,
+     "y1": 765,
+     "x2": 545,
+     "y2": 765,
+     "color": "green",
+     "width": 3,
+     "arrow": true
+    }
+   ]
+  },
+  {
+   "title": "Key Takeaway",
+   "say": "To sum up: when demand rises and supply stays unchanged, the market price always increases.",
+   "ops": [
+    {
+     "op": "rect",
+     "id": "box_summary",
+     "x": 950,
+     "y": 600,
+     "w": 590,
+     "h": 220,
+     "color": "green",
+     "fill": "green",
+     "width": 2
+    },
+    {
+     "op": "write",
+     "id": "text_sum_title",
+     "x": 980,
+     "y": 625,
+     "text": "Direct Answer: Price RISES (↑)",
+     "size": 34,
+     "color": "green",
+     "underline": true
+    },
+    {
+     "op": "write",
+     "id": "text_sum_body",
+     "x": 980,
+     "y": 685,
+     "text": "Holding supply constant:\n1. Equilibrium Price rises (P1 → P2)\n2. Equilibrium Quantity rises (Q1 → Q2)",
+     "size": 30,
+     "color": "ink"
+    }
+   ]
+  }
+ ]
+}

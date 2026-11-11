@@ -1,0 +1,235 @@
+{
+ "title": "Solving x² − 5x + 6 = 0",
+ "lang": "en",
+ "steps": [
+  {
+   "title": "Problem Statement",
+   "say": "Let's solve this quadratic equation. We can start by writing out the standard quadratic formula.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "main_title",
+     "x": 800,
+     "y": 50,
+     "text": "Solve: x² − 5x + 6 = 0",
+     "size": 52,
+     "anchor": "middle"
+    },
+    {
+     "op": "write",
+     "id": "m1_lbl",
+     "x": 100,
+     "y": 140,
+     "text": "Method 1: Quadratic Formula",
+     "size": 36,
+     "color": "blue",
+     "underline": true
+    },
+    {
+     "op": "write",
+     "id": "coeff",
+     "x": 100,
+     "y": 200,
+     "text": "a = 1,  b = -5,  c = 6",
+     "size": 32,
+     "color": "gray"
+    },
+    {
+     "op": "write",
+     "id": "qf_formula",
+     "x": 100,
+     "y": 260,
+     "text": "x = [ -b ± √(b² - 4ac) ] / 2a",
+     "size": 34
+    }
+   ]
+  },
+  {
+   "title": "Formula Expansion",
+   "say": "Plugging in the coefficients gives us a somewhat lengthy computation.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "qf_sub",
+     "x": 100,
+     "y": 330,
+     "text": "x = [ -(-5) ± √((-5)² - 4(1)(6)) ] / (2 · 1)",
+     "size": 32
+    },
+    {
+     "op": "write",
+     "id": "qf_eval",
+     "x": 100,
+     "y": 390,
+     "text": "x = [ 5 ± √(25 - 24) ] / 2",
+     "size": 32,
+     "color": "gray"
+    },
+    {
+     "op": "rect",
+     "id": "tedious_box",
+     "x": 80,
+     "y": 190,
+     "w": 680,
+     "h": 260,
+     "color": "gray",
+     "dash": true
+    }
+   ]
+  },
+  {
+   "title": "Switching Methods",
+   "say": "Wait, using the quadratic formula here is unnecessary heavy lifting. Let's switch to factoring!",
+   "ops": [
+    {
+     "op": "line",
+     "id": "cross_line",
+     "x1": 80,
+     "y1": 190,
+     "x2": 760,
+     "y2": 450,
+     "color": "red",
+     "width": 4
+    },
+    {
+     "op": "write",
+     "id": "switch_note",
+     "x": 800,
+     "y": 250,
+     "text": "Hold on! There's a simpler way →",
+     "size": 34,
+     "color": "red"
+    },
+    {
+     "op": "write",
+     "id": "m2_lbl",
+     "x": 800,
+     "y": 320,
+     "text": "Method 2: Factoring",
+     "size": 40,
+     "color": "green",
+     "underline": true
+    }
+   ]
+  },
+  {
+   "title": "Finding Factors",
+   "say": "We just need two numbers that multiply to positive 6 and add up to negative 5.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "sum_prod_cond",
+     "x": 800,
+     "y": 390,
+     "text": "Find p, q such that:\n  • p · q = 6\n  • p + q = -5",
+     "size": 32
+    },
+    {
+     "op": "write",
+     "id": "factors_found",
+     "x": 800,
+     "y": 500,
+     "text": "Choose  -2  and  -3 :",
+     "size": 34,
+     "color": "blue"
+    },
+    {
+     "op": "write",
+     "id": "verify",
+     "x": 840,
+     "y": 550,
+     "text": "(-2) · (-3) = 6\n(-2) + (-3) = -5",
+     "size": 30,
+     "color": "gray"
+    }
+   ]
+  },
+  {
+   "title": "Factored Form",
+   "say": "Rewrite the equation directly into its factored form.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "factor_eq",
+     "x": 800,
+     "y": 660,
+     "text": "(x - 2)(x - 3) = 0",
+     "size": 44,
+     "color": "blue"
+    },
+    {
+     "op": "line",
+     "id": "branch_1",
+     "x1": 880,
+     "y1": 720,
+     "x2": 820,
+     "y2": 770,
+     "color": "gray",
+     "arrow": true
+    },
+    {
+     "op": "line",
+     "id": "branch_2",
+     "x1": 980,
+     "y1": 720,
+     "x2": 1040,
+     "y2": 770,
+     "color": "gray",
+     "arrow": true
+    },
+    {
+     "op": "write",
+     "id": "case_1",
+     "x": 750,
+     "y": 780,
+     "text": "x - 2 = 0",
+     "size": 30,
+     "color": "gray"
+    },
+    {
+     "op": "write",
+     "id": "case_2",
+     "x": 1000,
+     "y": 780,
+     "text": "x - 3 = 0",
+     "size": 30,
+     "color": "gray"
+    }
+   ]
+  },
+  {
+   "title": "Final Solution",
+   "say": "This instantly gives us our solutions: x equals 2 or x equals 3.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "ans_1",
+     "x": 750,
+     "y": 825,
+     "text": "x = 2",
+     "size": 36,
+     "color": "green"
+    },
+    {
+     "op": "write",
+     "id": "ans_2",
+     "x": 1000,
+     "y": 825,
+     "text": "x = 3",
+     "size": 36,
+     "color": "green"
+    },
+    {
+     "op": "rect",
+     "id": "ans_box",
+     "x": 710,
+     "y": 765,
+     "w": 440,
+     "h": 110,
+     "color": "green",
+     "width": 3
+    }
+   ]
+  }
+ ]
+}

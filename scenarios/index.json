@@ -1,0 +1,60 @@
+{
+ "scripts": [
+  {
+   "id": "r1-seasons",
+   "file": "scenarios/r1-seasons.json",
+   "group": "Lessons",
+   "title": "Why do we have seasons?",
+   "question": "Why do we have seasons?"
+  },
+  {
+   "id": "r1-pythagoras",
+   "file": "scenarios/r1-pythagoras.json",
+   "group": "Lessons",
+   "title": "Why does the Pythagorean theorem work?",
+   "question": "Why does the Pythagorean theorem work?"
+  },
+  {
+   "id": "r1-quadratic",
+   "file": "scenarios/r1-quadratic.json",
+   "group": "Lessons",
+   "title": "Solve x² − 5x + 6 = 0 (switch method midway)",
+   "question": "Solve x² − 5x + 6 = 0. (Switch to a simpler method midway.)"
+  },
+  {
+   "id": "r1-supply-demand",
+   "file": "scenarios/r1-supply-demand.json",
+   "group": "Lessons",
+   "title": "What happens to the price when demand rises?",
+   "question": "What happens to the price when demand rises?"
+  },
+  {
+   "id": "r1-photosynthesis",
+   "file": "scenarios/r1-photosynthesis.json",
+   "group": "Lessons",
+   "title": "Photosynthesis: where does it happen? (Chinese)",
+   "question": "光合作用发生在细胞的哪个部分？"
+  },
+  {
+   "id": "r1-i1-seasons-distance",
+   "file": "scenarios/r1-i1-seasons-distance.json",
+   "group": "Interruptions",
+   "title": "Interrupt 1 · seasons: \"isn't Earth farther in summer?\"",
+   "question": "Wait — in northern summer, isn't Earth farther from the Sun? Why is it hotter then?"
+  },
+  {
+   "id": "r1-i2-demand-simpler",
+   "file": "scenarios/r1-i2-demand-simpler.json",
+   "group": "Interruptions",
+   "title": "Interrupt 2 · supply & demand: \"show it a simpler way\"",
+   "question": "I don't get the demand shift. Can you show it a simpler way?"
+  },
+  {
+   "id": "r1-i3-arrow-meaning",
+   "file": "scenarios/r1-i3-arrow-meaning.json",
+   "group": "Interruptions",
+   "title": "Interrupt 3 · supply & demand: \"what does this arrow mean?\"",
+   "question": "What does this arrow mean?"
+  }
+ ]
+}

@@ -1,0 +1,303 @@
+{
+ "title": "When Demand Rises",
+ "lang": "en",
+ "steps": [
+  {
+   "title": "Title",
+   "say": "Let's see what a rise in demand does to price.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "title",
+     "x": 40,
+     "y": 40,
+     "text": "When Demand Rises",
+     "size": 56
+    }
+   ]
+  },
+  {
+   "title": "Axes",
+   "say": "Start with price on the vertical axis and quantity on the horizontal axis.",
+   "ops": [
+    {
+     "op": "line",
+     "id": "axis_y",
+     "x1": 300,
+     "y1": 740,
+     "x2": 300,
+     "y2": 160,
+     "width": 5,
+     "arrow": true
+    },
+    {
+     "op": "line",
+     "id": "axis_x",
+     "x1": 300,
+     "y1": 740,
+     "x2": 1250,
+     "y2": 740,
+     "width": 5,
+     "arrow": true
+    },
+    {
+     "op": "write",
+     "id": "ylabel",
+     "x": 220,
+     "y": 100,
+     "text": "Price",
+     "size": 32
+    },
+    {
+     "op": "write",
+     "id": "xlabel",
+     "x": 1080,
+     "y": 760,
+     "text": "Quantity",
+     "size": 32
+    }
+   ]
+  },
+  {
+   "title": "Curves",
+   "say": "Demand slopes down; supply slopes up.",
+   "ops": [
+    {
+     "op": "line",
+     "id": "D1",
+     "x1": 450,
+     "y1": 300,
+     "x2": 1050,
+     "y2": 650,
+     "color": "blue",
+     "width": 5
+    },
+    {
+     "op": "line",
+     "id": "S",
+     "x1": 450,
+     "y1": 650,
+     "x2": 1050,
+     "y2": 300,
+     "color": "green",
+     "width": 5
+    },
+    {
+     "op": "write",
+     "id": "D1_label",
+     "x": 1060,
+     "y": 625,
+     "text": "D1",
+     "size": 32,
+     "color": "blue"
+    },
+    {
+     "op": "write",
+     "id": "S_label",
+     "x": 1060,
+     "y": 275,
+     "text": "S",
+     "size": 32,
+     "color": "green"
+    }
+   ]
+  },
+  {
+   "title": "Initial Equilibrium",
+   "say": "The initial equilibrium is where demand meets supply.",
+   "ops": [
+    {
+     "op": "ellipse",
+     "id": "E1",
+     "cx": 750,
+     "cy": 475,
+     "rx": 12,
+     "ry": 12,
+     "color": "red",
+     "fill": "red"
+    },
+    {
+     "op": "line",
+     "id": "P1_dash",
+     "x1": 300,
+     "y1": 475,
+     "x2": 750,
+     "y2": 475,
+     "color": "gray",
+     "width": 3,
+     "dash": true
+    },
+    {
+     "op": "line",
+     "id": "Q1_dash",
+     "x1": 750,
+     "y1": 475,
+     "x2": 750,
+     "y2": 740,
+     "color": "gray",
+     "width": 3,
+     "dash": true
+    },
+    {
+     "op": "write",
+     "id": "P1_label",
+     "x": 235,
+     "y": 455,
+     "text": "P1",
+     "size": 32
+    },
+    {
+     "op": "write",
+     "id": "Q1_label",
+     "x": 720,
+     "y": 760,
+     "text": "Q1",
+     "size": 32
+    },
+    {
+     "op": "write",
+     "id": "E1_label",
+     "x": 765,
+     "y": 445,
+     "text": "E1",
+     "size": 32,
+     "color": "red"
+    }
+   ]
+  },
+  {
+   "title": "Demand Rises",
+   "say": "Demand shifts right: at every price, buyers want more.",
+   "ops": [
+    {
+     "op": "line",
+     "id": "D2",
+     "x1": 600,
+     "y1": 300,
+     "x2": 1200,
+     "y2": 650,
+     "color": "blue",
+     "width": 5
+    },
+    {
+     "op": "write",
+     "id": "D2_label",
+     "x": 1210,
+     "y": 625,
+     "text": "D2",
+     "size": 32,
+     "color": "blue"
+    },
+    {
+     "op": "line",
+     "id": "shift_arrow",
+     "x1": 900,
+     "y1": 562,
+     "x2": 900,
+     "y2": 475,
+     "color": "red",
+     "width": 4,
+     "arrow": true
+    }
+   ]
+  },
+  {
+   "title": "New Equilibrium",
+   "say": "The new equilibrium has a higher price and a larger quantity.",
+   "ops": [
+    {
+     "op": "ellipse",
+     "id": "E2",
+     "cx": 825,
+     "cy": 431,
+     "rx": 12,
+     "ry": 12,
+     "color": "red",
+     "fill": "red"
+    },
+    {
+     "op": "line",
+     "id": "P2_dash",
+     "x1": 300,
+     "y1": 431,
+     "x2": 825,
+     "y2": 431,
+     "color": "gray",
+     "width": 3,
+     "dash": true
+    },
+    {
+     "op": "line",
+     "id": "Q2_dash",
+     "x1": 825,
+     "y1": 431,
+     "x2": 825,
+     "y2": 740,
+     "color": "gray",
+     "width": 3,
+     "dash": true
+    },
+    {
+     "op": "write",
+     "id": "P2_label",
+     "x": 235,
+     "y": 411,
+     "text": "P2",
+     "size": 32
+    },
+    {
+     "op": "write",
+     "id": "Q2_label",
+     "x": 805,
+     "y": 760,
+     "text": "Q2",
+     "size": 32
+    },
+    {
+     "op": "write",
+     "id": "E2_label",
+     "x": 840,
+     "y": 400,
+     "text": "E2",
+     "size": 32,
+     "color": "red"
+    },
+    {
+     "op": "line",
+     "id": "price_arrow",
+     "x1": 340,
+     "y1": 475,
+     "x2": 340,
+     "y2": 431,
+     "color": "red",
+     "width": 4,
+     "arrow": true
+    },
+    {
+     "op": "write",
+     "id": "price_up",
+     "x": 355,
+     "y": 440,
+     "text": "P up",
+     "size": 32,
+     "color": "red"
+    }
+   ]
+  },
+  {
+   "title": "Result",
+   "say": "So when demand rises, the equilibrium price goes up.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "summary",
+     "x": 1000,
+     "y": 180,
+     "text": "Result:\nPrice up\nQuantity up",
+     "size": 40,
+     "color": "red"
+    }
+   ]
+  }
+ ]
+}

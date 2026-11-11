@@ -1,0 +1,217 @@
+{
+ "title": "Why Farther Can Still Be Hotter",
+ "lang": "en",
+ "steps": [
+  {
+   "title": "Clear up the orbit view",
+   "say": "Yes, Earth really is farther from the Sun in July! Let's zoom into June to see why that distance doesn't stop summer.",
+   "ops": [
+    {
+     "op": "erase",
+     "ids": [
+      "sun",
+      "sunlabel",
+      "orbit",
+      "orbitlabel",
+      "earth2",
+      "axis2",
+      "earth3",
+      "axis3",
+      "earth4",
+      "axis4"
+     ]
+    },
+    {
+     "op": "erase",
+     "ids": [
+      "earth1",
+      "axis1"
+     ]
+    },
+    {
+     "op": "write",
+     "id": "fact",
+     "x": 60,
+     "y": 240,
+     "text": "True! In July, Earth is ~5 million km farther.\nDistance change is tiny (~3%), but the tilt matters far more.",
+     "size": 32,
+     "color": "ink"
+    }
+   ]
+  },
+  {
+   "title": "Tilt causes direct sunlight",
+   "say": "In June, the northern half leans directly toward incoming sunlight.",
+   "ops": [
+    {
+     "op": "ellipse",
+     "id": "zoom_earth",
+     "cx": 450,
+     "cy": 580,
+     "rx": 130,
+     "ry": 130,
+     "color": "blue",
+     "width": 4,
+     "fill": "blue"
+    },
+    {
+     "op": "line",
+     "id": "zoom_axis",
+     "x1": 380,
+     "y1": 740,
+     "x2": 520,
+     "y2": 420,
+     "width": 4,
+     "dash": [
+      8,
+      8
+     ]
+    },
+    {
+     "op": "write",
+     "id": "north_pole",
+     "x": 525,
+     "y": 395,
+     "text": "North Pole (tilted toward Sun)",
+     "size": 28,
+     "color": "blue"
+    },
+    {
+     "op": "line",
+     "id": "equator",
+     "x1": 324,
+     "y1": 530,
+     "x2": 576,
+     "y2": 630,
+     "width": 3,
+     "color": "gray"
+    },
+    {
+     "op": "write",
+     "id": "eq_label",
+     "x": 210,
+     "y": 515,
+     "text": "Equator",
+     "size": 26,
+     "color": "gray"
+    }
+   ]
+  },
+  {
+   "title": "Light concentration",
+   "say": "When light hits straight on, heat is concentrated in a tight patch. When it hits at an angle, the same heat is spread out weak and thin.",
+   "ops": [
+    {
+     "op": "line",
+     "id": "ray_north1",
+     "x1": 850,
+     "y1": 490,
+     "x2": 560,
+     "y2": 490,
+     "color": "red",
+     "width": 4,
+     "arrow": true
+    },
+    {
+     "op": "line",
+     "id": "ray_north2",
+     "x1": 850,
+     "y1": 530,
+     "x2": 580,
+     "y2": 530,
+     "color": "red",
+     "width": 4,
+     "arrow": true
+    },
+    {
+     "op": "rect",
+     "id": "box_summer",
+     "x": 920,
+     "y": 460,
+     "w": 460,
+     "h": 100,
+     "color": "red",
+     "width": 2,
+     "fill": "red"
+    },
+    {
+     "op": "write",
+     "id": "text_summer",
+     "x": 940,
+     "y": 480,
+     "text": "North: Direct rays\n→ Concentrated energy = Hot (Summer)",
+     "size": 28,
+     "color": "red"
+    },
+    {
+     "op": "line",
+     "id": "ray_south1",
+     "x1": 850,
+     "y1": 650,
+     "x2": 540,
+     "y2": 650,
+     "color": "blue",
+     "width": 4,
+     "arrow": true
+    },
+    {
+     "op": "line",
+     "id": "ray_south2",
+     "x1": 850,
+     "y1": 690,
+     "x2": 490,
+     "y2": 690,
+     "color": "blue",
+     "width": 4,
+     "arrow": true
+    },
+    {
+     "op": "rect",
+     "id": "box_winter",
+     "x": 920,
+     "y": 620,
+     "w": 460,
+     "h": 100,
+     "color": "blue",
+     "width": 2,
+     "fill": "blue"
+    },
+    {
+     "op": "write",
+     "id": "text_winter",
+     "x": 940,
+     "y": 640,
+     "text": "South: Slanted rays\n→ Spread-out energy = Cold (Winter)",
+     "size": 28,
+     "color": "blue"
+    }
+   ]
+  },
+  {
+   "title": "Longer days add more heat",
+   "say": "Tilted toward the Sun also means longer daylight hours, giving the surface much more time to bake.",
+   "ops": [
+    {
+     "op": "rect",
+     "id": "summary_box",
+     "x": 920,
+     "y": 760,
+     "w": 460,
+     "h": 90,
+     "color": "green",
+     "width": 3,
+     "fill": "green"
+    },
+    {
+     "op": "write",
+     "id": "summary_text",
+     "x": 940,
+     "y": 775,
+     "text": "+ Longer daylight (15+ hours)\nDirect angle beats tiny distance!",
+     "size": 28,
+     "color": "green"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,143 @@
+{
+ "title": "光合作用的地点",
+ "lang": "zh",
+ "steps": [
+  {
+   "title": "提出问题",
+   "say": "光合作用发生在细胞的哪里？我们先画一个植物细胞。",
+   "ops": [
+    {
+     "op": "write",
+     "id": "title",
+     "x": 800,
+     "y": 60,
+     "text": "光合作用发生的地点",
+     "size": 56,
+     "anchor": "middle",
+     "underline": true
+    }
+   ]
+  },
+  {
+   "title": "植物细胞",
+   "say": "植物细胞里有很多细胞器，光合作用主要在其中一种细胞器里进行。",
+   "ops": [
+    {
+     "op": "ellipse",
+     "id": "cell",
+     "cx": 600,
+     "cy": 480,
+     "rx": 420,
+     "ry": 300,
+     "color": "gray",
+     "width": 4
+    },
+    {
+     "op": "write",
+     "id": "cell_lbl",
+     "x": 600,
+     "y": 230,
+     "text": "植物细胞",
+     "size": 36,
+     "anchor": "middle",
+     "color": "gray"
+    }
+   ]
+  },
+  {
+   "title": "叶绿体",
+   "say": "这个绿色的椭圆就是叶绿体，它是光合作用的场所。",
+   "ops": [
+    {
+     "op": "ellipse",
+     "id": "chl",
+     "cx": 600,
+     "cy": 500,
+     "rx": 220,
+     "ry": 130,
+     "color": "green",
+     "width": 5,
+     "fill": "green"
+    },
+    {
+     "op": "write",
+     "id": "chl_lbl",
+     "x": 600,
+     "y": 470,
+     "text": "叶绿体",
+     "size": 40,
+     "anchor": "middle",
+     "color": "ink"
+    }
+   ]
+  },
+  {
+   "title": "光反应",
+   "say": "在叶绿体的类囊体膜上，光能被吸收，并转化为化学能。",
+   "ops": [
+    {
+     "op": "line",
+     "id": "l1",
+     "x1": 820,
+     "y1": 480,
+     "x2": 1000,
+     "y2": 400,
+     "color": "blue",
+     "width": 4,
+     "arrow": true
+    },
+    {
+     "op": "write",
+     "id": "t_thy",
+     "x": 1010,
+     "y": 360,
+     "text": "类囊体膜\n光反应：吸收光能",
+     "size": 34,
+     "color": "blue"
+    }
+   ]
+  },
+  {
+   "title": "暗反应",
+   "say": "在叶绿体基质中，二氧化碳被固定并合成糖类。",
+   "ops": [
+    {
+     "op": "line",
+     "id": "l2",
+     "x1": 760,
+     "y1": 580,
+     "x2": 1000,
+     "y2": 610,
+     "color": "green",
+     "width": 4,
+     "arrow": true
+    },
+    {
+     "op": "write",
+     "id": "t_str",
+     "x": 1010,
+     "y": 560,
+     "text": "叶绿体基质\n暗反应：固定CO2合成糖",
+     "size": 34,
+     "color": "green"
+    }
+   ]
+  },
+  {
+   "title": "结论",
+   "say": "所以，光合作用发生在细胞的叶绿体中。",
+   "ops": [
+    {
+     "op": "write",
+     "id": "sum",
+     "x": 800,
+     "y": 760,
+     "text": "光合作用在叶绿体中完成",
+     "size": 44,
+     "anchor": "middle",
+     "underline": true
+    }
+   ]
+  }
+ ]
+}

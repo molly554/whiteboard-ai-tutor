@@ -1,0 +1,12 @@
+[
+ {
+  "model": "deepseek-flash",
+  "cond": "mid",
+  "scenario": "r1-seasons"
+ },
+ {
+  "model": "deepseek-v4-pro",
+  "cond": "mid",
+  "scenario": "r1-seasons"
+ }
+]

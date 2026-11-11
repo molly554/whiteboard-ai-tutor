@@ -1,0 +1,191 @@
+{
+ "title": "Solving x² − 5x + 6 = 0",
+ "lang": "en",
+ "steps": [
+  {
+   "title": "The equation",
+   "say": "We need to solve this quadratic equation.",
+   "ops": [
+    {
+     "id": "eq",
+     "x": 500,
+     "y": 100,
+     "text": "x² − 5x + 6 = 0",
+     "size": 56
+    }
+   ]
+  },
+  {
+   "title": "Start with factoring",
+   "say": "First I'll try factoring: find two numbers that multiply to 6 and add to −5.",
+   "ops": [
+    {
+     "id": "facGoal",
+     "x": 500,
+     "y": 220,
+     "text": "Factor: (x + a)(x + b)",
+     "size": 40
+    },
+    {
+     "id": "prod",
+     "x": 500,
+     "y": 290,
+     "text": "a·b = 6",
+     "size": 36,
+     "color": "blue"
+    },
+    {
+     "id": "sum",
+     "x": 500,
+     "y": 350,
+     "text": "a + b = −5",
+     "size": 36,
+     "color": "blue"
+    }
+   ]
+  },
+  {
+   "title": "Factoring gets messy",
+   "say": "I need two numbers with product 6 and sum −5. That would be −2 and −3, but checking signs is easy to slip up on.",
+   "ops": [
+    {
+     "id": "guess1",
+     "x": 500,
+     "y": 430,
+     "text": "Try −2 and −3",
+     "size": 36
+    },
+    {
+     "id": "check1",
+     "x": 500,
+     "y": 490,
+     "text": "(−2)(−3) = 6 ✓",
+     "size": 36,
+     "color": "green"
+    },
+    {
+     "id": "check2",
+     "x": 500,
+     "y": 545,
+     "text": "(−2) + (−3) = −5 ✓",
+     "size": 36,
+     "color": "green"
+    }
+   ]
+  },
+  {
+   "title": "Switch methods",
+   "say": "This is getting fiddly. Let me switch to a simpler, more reliable method: the quadratic formula.",
+   "ops": [
+    {
+     "id": "switch",
+     "x": 500,
+     "y": 640,
+     "text": "Switch to quadratic formula",
+     "size": 44,
+     "color": "red"
+    }
+   ]
+  },
+  {
+   "title": "Quadratic formula",
+   "say": "For ax² + bx + c = 0, the solutions are x = (−b ± √(b² − 4ac)) / 2a.",
+   "ops": [
+    {
+     "id": "formula",
+     "x": 400,
+     "y": 100,
+     "text": "x = (−b ± √(b² − 4ac)) / 2a",
+     "size": 44,
+     "color": "blue"
+    }
+   ]
+  },
+  {
+   "title": "Identify coefficients",
+   "say": "Here a = 1, b = −5, and c = 6.",
+   "ops": [
+    {
+     "id": "coefA",
+     "x": 400,
+     "y": 200,
+     "text": "a = 1",
+     "size": 36
+    },
+    {
+     "id": "coefB",
+     "x": 550,
+     "y": 200,
+     "text": "b = −5",
+     "size": 36
+    },
+    {
+     "id": "coefC",
+     "x": 700,
+     "y": 200,
+     "text": "c = 6",
+     "size": 36
+    }
+   ]
+  },
+  {
+   "title": "Compute the discriminant",
+   "say": "The discriminant is b² − 4ac = 25 − 24 = 1.",
+   "ops": [
+    {
+     "id": "disc",
+     "x": 400,
+     "y": 300,
+     "text": "b² − 4ac = (−5)² − 4·1·6",
+     "size": 36
+    },
+    {
+     "id": "discVal",
+     "x": 400,
+     "y": 360,
+     "text": "= 25 − 24 = 1",
+     "size": 36,
+     "color": "green"
+    }
+   ]
+  },
+  {
+   "title": "Final solutions",
+   "say": "Then x = (5 ± 1) / 2, giving x = 3 and x = 2.",
+   "ops": [
+    {
+     "id": "rootExpr",
+     "x": 400,
+     "y": 460,
+     "text": "x = (5 ± 1) / 2",
+     "size": 40
+    },
+    {
+     "id": "root1",
+     "x": 400,
+     "y": 530,
+     "text": "x = 3",
+     "size": 44,
+     "color": "green"
+    },
+    {
+     "id": "root2",
+     "x": 550,
+     "y": 530,
+     "text": "x = 2",
+     "size": 44,
+     "color": "green"
+    },
+    {
+     "id": "box",
+     "x": 380,
+     "y": 510,
+     "w": 260,
+     "h": 90,
+     "color": "green",
+     "width": 3
+    }
+   ]
+  }
+ ]
+}

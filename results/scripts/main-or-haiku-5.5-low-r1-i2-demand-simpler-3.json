@@ -1,0 +1,152 @@
+{
+ "title": "Simpler view: same price, more buyers",
+ "lang": "en",
+ "steps": [
+  {
+   "title": "Clear the old drawing",
+   "say": "Let's drop the crossing curves and look at one simple case.",
+   "ops": [
+    {
+     "op": "erase",
+     "ids": [
+      "d1",
+      "d1lab",
+      "note1",
+      "s",
+      "slab",
+      "note2",
+      "e1",
+      "e1v",
+      "e1h",
+      "p1",
+      "q1",
+      "note3",
+      "d2",
+      "d2lab",
+      "shift",
+      "shiftlab"
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Fix one price",
+   "say": "Pick one price, say $5. Keep it fixed and count how many buyers want the product.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "fix",
+     "x": 260,
+     "y": 200,
+     "text": "Hold the price fixed at $5",
+     "size": 40
+    },
+    {
+     "op": "line",
+     "id": "pline",
+     "x1": 200,
+     "y1": 460,
+     "x2": 1000,
+     "y2": 460,
+     "color": "gray",
+     "width": 3,
+     "dash": true
+    },
+    {
+     "op": "write",
+     "id": "p5",
+     "x": 120,
+     "y": 440,
+     "text": "$5",
+     "size": 30
+    }
+   ]
+  },
+  {
+   "title": "Before: 10 buyers",
+   "say": "At $5, 10 buyers want it. That's one point on the demand curve.",
+   "ops": [
+    {
+     "op": "ellipse",
+     "id": "dot10",
+     "cx": 400,
+     "cy": 460,
+     "rx": 10,
+     "ry": 10,
+     "color": "red",
+     "fill": "red"
+    },
+    {
+     "op": "write",
+     "id": "lab10",
+     "x": 340,
+     "y": 490,
+     "text": "10 buyers",
+     "size": 30,
+     "color": "red"
+    }
+   ]
+  },
+  {
+   "title": "After: 20 buyers",
+   "say": "Now more people want it at that same $5. The quantity demanded doubles to 20.",
+   "ops": [
+    {
+     "op": "ellipse",
+     "id": "dot20",
+     "cx": 700,
+     "cy": 460,
+     "rx": 10,
+     "ry": 10,
+     "color": "blue",
+     "fill": "blue"
+    },
+    {
+     "op": "write",
+     "id": "lab20",
+     "x": 640,
+     "y": 490,
+     "text": "20 buyers",
+     "size": 30,
+     "color": "blue"
+    },
+    {
+     "op": "line",
+     "id": "more",
+     "x1": 420,
+     "y1": 400,
+     "x2": 680,
+     "y2": 400,
+     "color": "green",
+     "width": 5,
+     "arrow": true
+    },
+    {
+     "op": "write",
+     "id": "morelab",
+     "x": 550,
+     "y": 355,
+     "text": "more buyers",
+     "size": 30,
+     "anchor": "middle",
+     "color": "green"
+    }
+   ]
+  },
+  {
+   "title": "That is the shift",
+   "say": "Doing this at every price moves the whole demand curve right. At the same price, more is wanted.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "takeaway",
+     "x": 260,
+     "y": 620,
+     "text": "Demand rises = the whole curve moves right.\nAt any price, more buyers want the product.",
+     "size": 34,
+     "color": "green"
+    }
+   ]
+  }
+ ]
+}

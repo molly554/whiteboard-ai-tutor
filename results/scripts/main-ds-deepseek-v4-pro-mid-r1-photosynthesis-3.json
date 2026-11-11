@@ -1,0 +1,224 @@
+{
+ "title": "光合作用的位置",
+ "lang": "zh",
+ "steps": [
+  {
+   "title": "直接回答",
+   "say": "我们先直接回答：光合作用发生在细胞的叶绿体里。",
+   "ops": [
+    {
+     "op": "write",
+     "id": "title",
+     "x": 800,
+     "y": 50,
+     "text": "光合作用发生在细胞的哪个部分？",
+     "size": 52,
+     "color": "ink",
+     "anchor": "middle"
+    },
+    {
+     "op": "write",
+     "id": "answer",
+     "x": 800,
+     "y": 125,
+     "text": "答案：叶绿体",
+     "size": 46,
+     "color": "green",
+     "anchor": "middle"
+    }
+   ]
+  },
+  {
+   "title": "画植物细胞",
+   "say": "我们画一个植物细胞，光合作用就发生在它的叶绿体里。",
+   "ops": [
+    {
+     "op": "ellipse",
+     "id": "cell",
+     "cx": 310,
+     "cy": 340,
+     "rx": 220,
+     "ry": 180,
+     "color": "blue",
+     "width": 5
+    },
+    {
+     "op": "write",
+     "id": "cell_label",
+     "x": 310,
+     "y": 530,
+     "text": "植物细胞",
+     "size": 34,
+     "color": "blue",
+     "anchor": "middle"
+    }
+   ]
+  },
+  {
+   "title": "标出叶绿体",
+   "say": "在植物细胞里，这个绿色的小椭圆就是叶绿体。",
+   "ops": [
+    {
+     "op": "ellipse",
+     "id": "chloroplast",
+     "cx": 260,
+     "cy": 280,
+     "rx": 55,
+     "ry": 32,
+     "color": "green",
+     "width": 3,
+     "fill": "green"
+    },
+    {
+     "op": "write",
+     "id": "chloroplast_label",
+     "x": 260,
+     "y": 198,
+     "text": "叶绿体",
+     "size": 30,
+     "color": "green",
+     "anchor": "middle"
+    }
+   ]
+  },
+  {
+   "title": "放大叶绿体",
+   "say": "我们把叶绿体放大，看看它的内部结构。",
+   "ops": [
+    {
+     "op": "ellipse",
+     "id": "chloroplast_zoom",
+     "cx": 1000,
+     "cy": 390,
+     "rx": 310,
+     "ry": 185,
+     "color": "green",
+     "width": 5
+    },
+    {
+     "op": "write",
+     "id": "zoom_label",
+     "x": 1000,
+     "y": 210,
+     "text": "叶绿体内部（放大）",
+     "size": 32,
+     "color": "green",
+     "anchor": "middle"
+    }
+   ]
+  },
+  {
+   "title": "基粒和类囊体",
+   "say": "叶绿体里有一个个由类囊体堆叠成的基粒。",
+   "ops": [
+    {
+     "op": "ellipse",
+     "id": "granum1",
+     "cx": 870,
+     "cy": 340,
+     "rx": 38,
+     "ry": 20,
+     "color": "green",
+     "fill": "green"
+    },
+    {
+     "op": "ellipse",
+     "id": "granum2",
+     "cx": 1000,
+     "cy": 325,
+     "rx": 38,
+     "ry": 20,
+     "color": "green",
+     "fill": "green"
+    },
+    {
+     "op": "ellipse",
+     "id": "granum3",
+     "cx": 1130,
+     "cy": 345,
+     "rx": 38,
+     "ry": 20,
+     "color": "green",
+     "fill": "green"
+    },
+    {
+     "op": "write",
+     "id": "granum_label",
+     "x": 850,
+     "y": 390,
+     "text": "基粒（类囊体堆）",
+     "size": 30,
+     "color": "green"
+    },
+    {
+     "op": "line",
+     "id": "granum_line",
+     "x1": 980,
+     "y1": 405,
+     "x2": 1000,
+     "y2": 350,
+     "color": "gray",
+     "width": 2,
+     "arrow": "true",
+     "dash": true
+    }
+   ]
+  },
+  {
+   "title": "基质",
+   "say": "基粒以外的液体部分，叫做基质。",
+   "ops": [
+    {
+     "op": "write",
+     "id": "matrix_label",
+     "x": 1180,
+     "y": 470,
+     "text": "基质",
+     "size": 34,
+     "color": "ink",
+     "anchor": "middle"
+    }
+   ]
+  },
+  {
+   "title": "两个反应的位置",
+   "say": "光反应发生在类囊体膜上，暗反应发生在基质中。",
+   "ops": [
+    {
+     "op": "write",
+     "id": "light_reaction",
+     "x": 690,
+     "y": 630,
+     "text": "光反应：类囊体膜",
+     "size": 34,
+     "color": "blue"
+    },
+    {
+     "op": "write",
+     "id": "dark_reaction",
+     "x": 690,
+     "y": 690,
+     "text": "暗反应（碳反应）：基质",
+     "size": 34,
+     "color": "blue"
+    }
+   ]
+  },
+  {
+   "title": "总结",
+   "say": "所以，光合作用发生在叶绿体里。",
+   "ops": [
+    {
+     "op": "write",
+     "id": "summary",
+     "x": 800,
+     "y": 790,
+     "text": "所以：光合作用发生在叶绿体",
+     "size": 44,
+     "color": "red",
+     "anchor": "middle"
+    }
+   ]
+  }
+ ]
+}

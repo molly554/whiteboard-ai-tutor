@@ -1,0 +1,55 @@
+{
+ "title": "The green arrow means the whole demand curve moves",
+ "lang": "en",
+ "steps": [
+  {
+   "title": "What the green arrow means",
+   "say": "The green arrow is not a movement along the curve. It shows that the whole demand curve shifts to the right.",
+   "ops": [
+    {
+     "op": "rect",
+     "id": "zoom",
+     "x": 190,
+     "y": 170,
+     "w": 930,
+     "h": 470,
+     "color": "gray",
+     "width": 3,
+     "fill": "gray"
+    },
+    {
+     "op": "erase",
+     "ids": [
+      "shiftlab"
+     ]
+    },
+    {
+     "op": "write",
+     "id": "shiftlab2",
+     "x": 230,
+     "y": 185,
+     "text": "demand curve shifts right",
+     "size": 32,
+     "color": "green"
+    },
+    {
+     "op": "write",
+     "id": "arrownote",
+     "x": 230,
+     "y": 330,
+     "text": "The arrow means:\nnot moving along D1.\nThe entire D1 moves\noutward to become D2.",
+     "size": 32,
+     "color": "green"
+    },
+    {
+     "op": "write",
+     "id": "reason",
+     "x": 230,
+     "y": 500,
+     "text": "That happens because buyers\nnow want more at every price:\ntheir demand has increased.",
+     "size": 32
+    }
+   ]
+  }
+ ]
+}

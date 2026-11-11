@@ -1,0 +1,186 @@
+{
+ "title": "Distance is not the cause",
+ "lang": "en",
+ "steps": [
+  {
+   "title": "You're right",
+   "say": "Good catch. Earth is actually farthest from the Sun in early July and closest in early January, so distance can't be the reason.",
+   "ops": [
+    {
+     "op": "erase",
+     "ids": [
+      "key",
+      "orbitlabel"
+     ]
+    },
+    {
+     "op": "write",
+     "id": "fact",
+     "x": 60,
+     "y": 128,
+     "text": "Good catch! In July Earth is farthest\n(152 million km), in January closest (147).",
+     "size": 36,
+     "color": "red"
+    },
+    {
+     "op": "write",
+     "id": "jan",
+     "x": 60,
+     "y": 670,
+     "text": "January:\nclosest",
+     "size": 30
+    },
+    {
+     "op": "write",
+     "id": "jul",
+     "x": 1345,
+     "y": 670,
+     "text": "July:\nfarthest",
+     "size": 30
+    }
+   ]
+  },
+  {
+   "title": "Direct or slanted light",
+   "say": "What matters is the tilt. In northern summer the north is tipped toward the Sun, so its sunlight comes in higher and more direct, and the days are longer.",
+   "ops": [
+    {
+     "op": "erase",
+     "ids": [
+      "sun",
+      "sunlabel",
+      "orbit",
+      "earth1",
+      "axis1",
+      "earth2",
+      "axis2",
+      "earth3",
+      "axis3",
+      "earth4",
+      "axis4",
+      "jan",
+      "jul"
+     ]
+    },
+    {
+     "op": "ellipse",
+     "id": "sun2",
+     "cx": 200,
+     "cy": 560,
+     "rx": 60,
+     "ry": 60,
+     "color": "red",
+     "width": 5,
+     "fill": "red"
+    },
+    {
+     "op": "write",
+     "id": "sun2l",
+     "x": 200,
+     "y": 700,
+     "text": "Sun",
+     "size": 30,
+     "anchor": "middle"
+    },
+    {
+     "op": "line",
+     "id": "ray1",
+     "x1": 290,
+     "y1": 480,
+     "x2": 780,
+     "y2": 480,
+     "color": "red",
+     "width": 4,
+     "arrow": true
+    },
+    {
+     "op": "line",
+     "id": "ray2",
+     "x1": 290,
+     "y1": 560,
+     "x2": 780,
+     "y2": 560,
+     "color": "red",
+     "width": 4,
+     "arrow": true
+    },
+    {
+     "op": "line",
+     "id": "ray3",
+     "x1": 290,
+     "y1": 640,
+     "x2": 780,
+     "y2": 640,
+     "color": "red",
+     "width": 4,
+     "arrow": true
+    },
+    {
+     "op": "ellipse",
+     "id": "earthS",
+     "cx": 900,
+     "cy": 560,
+     "rx": 100,
+     "ry": 100,
+     "color": "blue",
+     "width": 5,
+     "fill": "blue"
+    },
+    {
+     "op": "line",
+     "id": "axisS",
+     "x1": 960,
+     "y1": 697,
+     "x2": 840,
+     "y2": 423,
+     "width": 4
+    },
+    {
+     "op": "write",
+     "id": "summer",
+     "x": 1060,
+     "y": 450,
+     "text": "Northern summer:\nnorth tilts toward the Sun\n- high, direct sunlight\n- longer days",
+     "size": 34,
+     "color": "blue"
+    }
+   ]
+  },
+  {
+   "title": "Tilt beats distance",
+   "say": "The distance changes by only about 3 percent, which is tiny next to the effect of the tilt.",
+   "ops": [
+    {
+     "op": "erase",
+     "ids": [
+      "fact"
+     ]
+    },
+    {
+     "op": "write",
+     "id": "verdict",
+     "x": 60,
+     "y": 128,
+     "text": "Tilt beats distance: a 3% change is tiny.",
+     "size": 40,
+     "color": "green"
+    }
+   ]
+  },
+  {
+   "title": "The other hemisphere",
+   "say": "Proof: in that same July the southern half is tipped away from the Sun, and it is winter there.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "proof",
+     "x": 60,
+     "y": 790,
+     "text": "Same July: the south tilts away, so it's winter there!",
+     "size": 38,
+     "color": "green"
+    }
+   ]
+  }
+ ]
+}

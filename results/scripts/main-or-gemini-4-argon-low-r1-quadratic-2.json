@@ -1,0 +1,233 @@
+{
+ "title": "Solving x² − 5x + 6 = 0",
+ "lang": "en",
+ "steps": [
+  {
+   "title": "The Equation",
+   "say": "Let's solve the quadratic equation x squared minus 5x plus 6 equals 0.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "title",
+     "x": 800,
+     "y": 50,
+     "text": "Solve: x² − 5x + 6 = 0",
+     "size": 56,
+     "anchor": "middle",
+     "underline": true
+    },
+    {
+     "op": "write",
+     "id": "eq1",
+     "x": 120,
+     "y": 170,
+     "text": "x² − 5x + 6 = 0",
+     "size": 44,
+     "color": "blue"
+    }
+   ]
+  },
+  {
+   "title": "Try Completing the Square",
+   "say": "First, let's try completing the square. We move 6 to the right and add (5/2) squared to both sides.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "m1_label",
+     "x": 120,
+     "y": 260,
+     "text": "Method 1: Completing the Square",
+     "size": 34,
+     "color": "gray"
+    },
+    {
+     "op": "write",
+     "id": "m1_s1",
+     "x": 120,
+     "y": 330,
+     "text": "x² − 5x = −6",
+     "size": 40
+    },
+    {
+     "op": "write",
+     "id": "m1_s2",
+     "x": 120,
+     "y": 410,
+     "text": "x² − 5x + (5/2)² = −6 + 25/4",
+     "size": 40
+    },
+    {
+     "op": "write",
+     "id": "m1_note",
+     "x": 850,
+     "y": 415,
+     "text": "← Fractions are messy...",
+     "size": 34,
+     "color": "red"
+    }
+   ]
+  },
+  {
+   "title": "Switch to a Simpler Method",
+   "say": "Wait, working with quarters is a bit tedious. Let's erase this and use a much simpler method: factoring!",
+   "ops": [
+    {
+     "op": "erase",
+     "ids": [
+      "m1_label",
+      "m1_s1",
+      "m1_s2",
+      "m1_note"
+     ]
+    },
+    {
+     "op": "write",
+     "id": "m2_label",
+     "x": 120,
+     "y": 260,
+     "text": "Simpler Method: Factoring!",
+     "size": 38,
+     "color": "green"
+    }
+   ]
+  },
+  {
+   "title": "Find Two Numbers",
+   "say": "We just need two numbers that multiply to positive 6 and add up to negative 5.",
+   "ops": [
+    {
+     "op": "rect",
+     "id": "puzzle_box",
+     "x": 850,
+     "y": 240,
+     "w": 620,
+     "h": 220,
+     "color": "blue",
+     "fill": "blue"
+    },
+    {
+     "op": "write",
+     "id": "p_title",
+     "x": 890,
+     "y": 265,
+     "text": "Find two numbers p, q:",
+     "size": 34,
+     "color": "blue"
+    },
+    {
+     "op": "write",
+     "id": "p_mult",
+     "x": 920,
+     "y": 325,
+     "text": "p × q = +6   (constant)",
+     "size": 34
+    },
+    {
+     "op": "write",
+     "id": "p_add",
+     "x": 920,
+     "y": 385,
+     "text": "p + q = −5   (middle coeff.)",
+     "size": 34
+    }
+   ]
+  },
+  {
+   "title": "Write in Factored Form",
+   "say": "Negative 2 and negative 3 work! (−2)×(−3) = 6, and (−2)+(−3) = −5. So we factor it as (x − 2)(x − 3) = 0.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "p_ans",
+     "x": 890,
+     "y": 490,
+     "text": "Try −2 and −3:  (−2)(−3) = 6,  −2 − 3 = −5  ✓",
+     "size": 32,
+     "color": "green"
+    },
+    {
+     "op": "write",
+     "id": "f_step",
+     "x": 120,
+     "y": 360,
+     "text": "(x − 2)(x − 3) = 0",
+     "size": 44,
+     "color": "ink"
+    },
+    {
+     "op": "line",
+     "id": "arr1",
+     "x1": 830,
+     "y1": 505,
+     "x2": 520,
+     "y2": 385,
+     "color": "green",
+     "arrow": true,
+     "dash": true
+    }
+   ]
+  },
+  {
+   "title": "Solve Each Factor",
+   "say": "By the zero product property, either x minus 2 is 0, or x minus 3 is 0. This gives x = 2 or x = 3!",
+   "ops": [
+    {
+     "op": "line",
+     "id": "branch1",
+     "x1": 210,
+     "y1": 430,
+     "x2": 170,
+     "y2": 510,
+     "color": "gray",
+     "arrow": true
+    },
+    {
+     "op": "line",
+     "id": "branch2",
+     "x1": 370,
+     "y1": 430,
+     "x2": 410,
+     "y2": 510,
+     "color": "gray",
+     "arrow": true
+    },
+    {
+     "op": "write",
+     "id": "eq_a",
+     "x": 100,
+     "y": 530,
+     "text": "x − 2 = 0",
+     "size": 38
+    },
+    {
+     "op": "write",
+     "id": "eq_b",
+     "x": 350,
+     "y": 530,
+     "text": "x − 3 = 0",
+     "size": 38
+    },
+    {
+     "op": "rect",
+     "id": "ans_box",
+     "x": 100,
+     "y": 630,
+     "w": 460,
+     "h": 95,
+     "color": "green",
+     "fill": "green"
+    },
+    {
+     "op": "write",
+     "id": "ans_text",
+     "x": 330,
+     "y": 655,
+     "text": "x = 2   or   x = 3",
+     "size": 44,
+     "color": "green",
+     "anchor": "middle"
+    }
+   ]
+  }
+ ]
+}

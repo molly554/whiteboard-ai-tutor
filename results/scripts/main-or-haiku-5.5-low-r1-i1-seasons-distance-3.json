@@ -1,0 +1,54 @@
+{
+ "title": "Distance vs tilt",
+ "lang": "en",
+ "steps": [
+  {
+   "title": "Distance matters very little",
+   "say": "You're right that Earth is farther from the Sun in northern summer, about 3% farther. That gap is too small to make a big difference in temperature.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "q1",
+     "x": 900,
+     "y": 130,
+     "text": "Good question! Earth is about 3%\nfarther from the Sun in July.",
+     "size": 34,
+     "color": "blue"
+    },
+    {
+     "op": "write",
+     "id": "q2",
+     "x": 900,
+     "y": 230,
+     "text": "That gap is too small to\ncause summer.",
+     "size": 34
+    }
+   ]
+  },
+  {
+   "title": "Tilt decides the heat",
+   "say": "In northern summer the Northern Hemisphere is tilted toward the Sun. Sunlight hits it more directly and the days are longer, so it heats up.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "q3",
+     "x": 1320,
+     "y": 660,
+     "text": "N. summer",
+     "size": 28,
+     "anchor": "middle",
+     "color": "red"
+    },
+    {
+     "op": "write",
+     "id": "q4",
+     "x": 900,
+     "y": 330,
+     "text": "Tilt: sunlight hits the tilted\nhemisphere more directly, and days\nare longer. That's the real cause.",
+     "size": 30,
+     "color": "red"
+    }
+   ]
+  }
+ ]
+}

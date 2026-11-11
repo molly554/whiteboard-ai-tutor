@@ -1,0 +1,164 @@
+{
+ "title": "A Simpler View: Concert Tickets",
+ "lang": "en",
+ "steps": [
+  {
+   "title": "Clear the graph",
+   "say": "Let's wipe the curves away and think about something simple: concert tickets.",
+   "ops": [
+    {
+     "op": "erase",
+     "ids": [
+      "d1",
+      "d1lab",
+      "note1",
+      "s",
+      "slab",
+      "note2",
+      "e1",
+      "e1v",
+      "e1h",
+      "p1",
+      "q1",
+      "note3",
+      "d2",
+      "d2lab",
+      "shift",
+      "shiftlab",
+      "xaxis",
+      "yaxis",
+      "price",
+      "qty"
+     ]
+    },
+    {
+     "op": "write",
+     "id": "ex_title",
+     "x": 60,
+     "y": 140,
+     "text": "Example: 100 Concert Tickets",
+     "size": 42,
+     "color": "blue"
+    }
+   ]
+  },
+  {
+   "title": "Normal Demand",
+   "say": "Imagine there are only 100 tickets available. Normally, exactly 100 people want to buy them.",
+   "ops": [
+    {
+     "op": "rect",
+     "id": "box_supply",
+     "x": 100,
+     "y": 240,
+     "w": 380,
+     "h": 220,
+     "color": "blue"
+    },
+    {
+     "op": "write",
+     "id": "sup_text",
+     "x": 130,
+     "y": 280,
+     "text": "Tickets Available:\n100 seats\nPrice = $50",
+     "size": 36,
+     "color": "blue"
+    },
+    {
+     "op": "rect",
+     "id": "box_dem1",
+     "x": 600,
+     "y": 240,
+     "w": 380,
+     "h": 220,
+     "color": "ink"
+    },
+    {
+     "op": "write",
+     "id": "dem1_text",
+     "x": 630,
+     "y": 280,
+     "text": "Normal Demand:\n100 buyers\nEveryone gets one!",
+     "size": 36
+    }
+   ]
+  },
+  {
+   "title": "Demand Rises",
+   "say": "Now the band goes viral! Suddenly 500 people want those same 100 tickets.",
+   "ops": [
+    {
+     "op": "rect",
+     "id": "box_dem2",
+     "x": 1100,
+     "y": 240,
+     "w": 420,
+     "h": 220,
+     "color": "red"
+    },
+    {
+     "op": "write",
+     "id": "dem2_text",
+     "x": 1130,
+     "y": 280,
+     "text": "Demand Rises:\n500 buyers!\nShortage of 400 seats",
+     "size": 36,
+     "color": "red"
+    }
+   ]
+  },
+  {
+   "title": "Bidding War",
+   "say": "Because there aren't enough tickets, buyers start offering more money to make sure they get one.",
+   "ops": [
+    {
+     "op": "line",
+     "id": "arrow_bid",
+     "x1": 1100,
+     "y1": 560,
+     "x2": 520,
+     "y2": 560,
+     "arrow": true,
+     "color": "red",
+     "width": 5
+    },
+    {
+     "op": "write",
+     "id": "bid_text",
+     "x": 810,
+     "y": 500,
+     "text": "Buyers outbid each other: \"I'll pay $70!\" \"I'll pay $100!\"",
+     "size": 34,
+     "anchor": "middle",
+     "color": "red"
+    }
+   ]
+  },
+  {
+   "title": "The Rule",
+   "say": "That is all demand shift means: more people chasing the same goods naturally drives the price up.",
+   "ops": [
+    {
+     "op": "rect",
+     "id": "summary_box",
+     "x": 200,
+     "y": 660,
+     "w": 1200,
+     "h": 160,
+     "fill": "green",
+     "color": "green"
+    },
+    {
+     "op": "write",
+     "id": "summary_text",
+     "x": 800,
+     "y": 710,
+     "text": "More buyers + Same supply = Shortage → Price goes UP",
+     "size": 40,
+     "anchor": "middle",
+     "color": "green"
+    }
+   ]
+  }
+ ]
+}

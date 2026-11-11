@@ -1,0 +1,27 @@
+{
+ "title": "The green arrow",
+ "lang": "en",
+ "steps": [
+  {
+   "title": "What the arrow means",
+   "say": "The green arrow shows the demand curve shifting right from D1 to D2. This means at every price, buyers now want a larger quantity.",
+   "ops": [
+    {
+     "op": "erase",
+     "ids": [
+      "shiftlab"
+     ]
+    },
+    {
+     "op": "write",
+     "id": "shift_explain",
+     "x": 440,
+     "y": 170,
+     "text": "demand curve shifts right\n= more demanded at every price",
+     "size": 26,
+     "color": "green"
+    }
+   ]
+  }
+ ]
+}

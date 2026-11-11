@@ -1,0 +1,73 @@
+{
+ "title": "What the green arrow means",
+ "lang": "en",
+ "steps": [
+  {
+   "title": "Point at the arrow",
+   "say": "This green arrow shows the demand curve moving to the right, from D1 to D2. It means that at every price, buyers now want more.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "c1",
+     "x": 200,
+     "y": 790,
+     "text": "Arrow = the whole demand curve shifts right",
+     "size": 34,
+     "color": "green"
+    }
+   ]
+  },
+  {
+   "title": "Compare the two curves",
+   "say": "Look at one price level. On D1 buyers want the quantity at the old curve, but on D2 they want more at that same price.",
+   "ops": [
+    {
+     "op": "line",
+     "id": "cmp",
+     "x1": 300,
+     "y1": 400,
+     "x2": 1000,
+     "y2": 400,
+     "color": "gray",
+     "width": 3,
+     "dash": true,
+     "arrow": "both"
+    },
+    {
+     "op": "write",
+     "id": "cmplab",
+     "x": 650,
+     "y": 345,
+     "text": "same price, more wanted",
+     "size": 30,
+     "anchor": "middle",
+     "color": "gray"
+    }
+   ]
+  },
+  {
+   "title": "Why it matters",
+   "say": "With more demand but the same supply, buyers compete for the goods, and the price is pushed up. That is why the arrow leads to a higher price.",
+   "ops": [
+    {
+     "op": "erase",
+     "ids": [
+      "cmp",
+      "cmplab",
+      "c1"
+     ]
+    },
+    {
+     "op": "write",
+     "id": "c2",
+     "x": 1200,
+     "y": 790,
+     "text": "More demand → higher price",
+     "size": 34,
+     "color": "red",
+     "anchor": "middle"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,173 @@
+{
+ "title": "Why we have seasons",
+ "lang": "en",
+ "steps": [
+  {
+   "title": "Question",
+   "say": "Seasons come from Earth's tilt, not from how far Earth is from the Sun.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "title",
+     "x": 800,
+     "y": 60,
+     "text": "Why do we have seasons?",
+     "size": 56,
+     "anchor": "middle",
+     "underline": true
+    }
+   ]
+  },
+  {
+   "title": "The Sun and orbit",
+   "say": "Earth travels around the Sun in a nearly circular orbit.",
+   "ops": [
+    {
+     "op": "ellipse",
+     "id": "sun",
+     "cx": 120,
+     "cy": 450,
+     "rx": 70,
+     "ry": 70,
+     "color": "red",
+     "width": 4,
+     "fill": "red"
+    },
+    {
+     "op": "write",
+     "id": "sunlbl",
+     "x": 120,
+     "y": 540,
+     "text": "Sun",
+     "size": 30,
+     "anchor": "middle",
+     "color": "red"
+    },
+    {
+     "op": "ellipse",
+     "id": "orbit",
+     "cx": 700,
+     "cy": 450,
+     "rx": 480,
+     "ry": 260,
+     "color": "gray",
+     "width": 3,
+     "dash": "10 8"
+    },
+    {
+     "op": "ellipse",
+     "id": "earth",
+     "cx": 1180,
+     "cy": 450,
+     "rx": 45,
+     "ry": 45,
+     "color": "blue",
+     "width": 4,
+     "fill": "blue"
+    },
+    {
+     "op": "write",
+     "id": "orbitlbl",
+     "x": 700,
+     "y": 140,
+     "text": "Earth's orbit",
+     "size": 30,
+     "anchor": "middle",
+     "color": "gray"
+    }
+   ]
+  },
+  {
+   "title": "Tilted axis",
+   "say": "Earth's axis is tilted about 23.4 degrees, and it keeps pointing the same way all year.",
+   "ops": [
+    {
+     "op": "line",
+     "id": "axis",
+     "x1": 1150,
+     "y1": 385,
+     "x2": 1210,
+     "y2": 515,
+     "color": "ink",
+     "width": 4,
+     "dash": "6 6"
+    },
+    {
+     "op": "write",
+     "id": "tiltlbl",
+     "x": 1240,
+     "y": 380,
+     "text": "tilt 23.4°",
+     "size": 30,
+     "color": "ink"
+    }
+   ]
+  },
+  {
+   "title": "Uneven sunlight",
+   "say": "Sunlight hits the tilted hemisphere more directly, so it gets more energy.",
+   "ops": [
+    {
+     "op": "line",
+     "id": "rays",
+     "x1": 200,
+     "y1": 450,
+     "x2": 1120,
+     "y2": 450,
+     "color": "red",
+     "width": 3,
+     "arrow": true
+    },
+    {
+     "op": "write",
+     "id": "raylbl",
+     "x": 640,
+     "y": 400,
+     "text": "sunlight",
+     "size": 30,
+     "anchor": "middle",
+     "color": "red"
+    }
+   ]
+  },
+  {
+   "title": "Summer and winter",
+   "say": "When the north leans toward the Sun it is summer there, and when it leans away it is winter.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "summer",
+     "x": 900,
+     "y": 720,
+     "text": "Northern summer: tilt toward Sun",
+     "size": 34,
+     "color": "blue"
+    },
+    {
+     "op": "write",
+     "id": "winter",
+     "x": 900,
+     "y": 780,
+     "text": "Northern winter: tilt away",
+     "size": 34,
+     "color": "red"
+    }
+   ]
+  },
+  {
+   "title": "Distance is not the cause",
+   "say": "Earth is actually closest to the Sun in January, which is winter in the north.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "note",
+     "x": 100,
+     "y": 760,
+     "text": "Distance is NOT the cause",
+     "size": 30,
+     "color": "gray"
+    }
+   ]
+  }
+ ]
+}

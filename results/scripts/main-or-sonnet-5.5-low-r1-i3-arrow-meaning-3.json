@@ -1,0 +1,93 @@
+{
+ "title": "What the green arrow means",
+ "lang": "en",
+ "steps": [
+  {
+   "title": "The arrow",
+   "say": "The green arrow points from the old demand curve D1 to the new one, D2. It shows the whole demand curve shifting to the right.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "c_t",
+     "x": 1200,
+     "y": 80,
+     "text": "Arrow = shift",
+     "size": 36,
+     "color": "green"
+    },
+    {
+     "op": "line",
+     "id": "c_a1",
+     "x1": 300,
+     "y1": 340,
+     "x2": 460,
+     "y2": 340,
+     "color": "green",
+     "width": 5,
+     "arrow": true
+    },
+    {
+     "op": "line",
+     "id": "c_a2",
+     "x1": 560,
+     "y1": 500,
+     "x2": 720,
+     "y2": 500,
+     "color": "green",
+     "width": 5,
+     "arrow": true
+    }
+   ]
+  },
+  {
+   "title": "Why right means more",
+   "say": "Moving right means more quantity is wanted at every price, so buyers want more than before. That is what a demand rise looks like.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "c_n1",
+     "x": 1200,
+     "y": 140,
+     "text": "Right = more bought\nat the same price",
+     "size": 32
+    }
+   ]
+  },
+  {
+   "title": "The new balance",
+   "say": "With D2 crossing the supply curve higher up, the new equilibrium has a higher price and a larger quantity. That is why price rises when demand rises.",
+   "ops": [
+    {
+     "op": "ellipse",
+     "id": "c_e2",
+     "cx": 740,
+     "cy": 470,
+     "rx": 9,
+     "ry": 9,
+     "color": "red",
+     "fill": "red"
+    },
+    {
+     "op": "line",
+     "id": "c_h2",
+     "x1": 200,
+     "y1": 470,
+     "x2": 740,
+     "y2": 470,
+     "color": "gray",
+     "width": 3,
+     "dash": true
+    },
+    {
+     "op": "write",
+     "id": "c_n2",
+     "x": 1200,
+     "y": 790,
+     "text": "New point: higher price,\nmore quantity",
+     "size": 30,
+     "color": "red"
+    }
+   ]
+  }
+ ]
+}

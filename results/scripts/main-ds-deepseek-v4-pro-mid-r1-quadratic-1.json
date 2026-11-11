@@ -1,0 +1,188 @@
+{
+ "title": "Solving x² − 5x + 6 = 0",
+ "lang": "en",
+ "steps": [
+  {
+   "title": "State the equation",
+   "say": "Let's solve this quadratic equation. I'll start by writing it clearly.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "title",
+     "x": 800,
+     "y": 70,
+     "text": "Solving x² − 5x + 6 = 0",
+     "size": 52,
+     "anchor": "middle"
+    },
+    {
+     "op": "write",
+     "id": "eq1",
+     "x": 800,
+     "y": 160,
+     "text": "x² − 5x + 6 = 0",
+     "size": 44,
+     "color": "blue",
+     "anchor": "middle",
+     "underline": true
+    }
+   ]
+  },
+  {
+   "title": "Try the quadratic formula",
+   "say": "The formula always works, but it feels heavy here. Let's look for a simpler way.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "qf_label",
+     "x": 80,
+     "y": 260,
+     "text": "Quadratic formula",
+     "size": 36,
+     "color": "gray"
+    },
+    {
+     "op": "write",
+     "id": "qf_abc",
+     "x": 80,
+     "y": 310,
+     "text": "a = 1, b = −5, c = 6",
+     "size": 36
+    },
+    {
+     "op": "write",
+     "id": "qf_disc",
+     "x": 80,
+     "y": 360,
+     "text": "b² − 4ac = 25 − 24 = 1",
+     "size": 36
+    },
+    {
+     "op": "write",
+     "id": "qf_formula",
+     "x": 80,
+     "y": 410,
+     "text": "x = (−b ± √(b²−4ac)) / (2a)",
+     "size": 36
+    },
+    {
+     "op": "write",
+     "id": "qf_note",
+     "x": 80,
+     "y": 470,
+     "text": "works, but bulky",
+     "size": 28,
+     "color": "gray"
+    }
+   ]
+  },
+  {
+   "title": "Switch to factoring",
+   "say": "Let's factor instead. We need numbers that multiply to 6 and add to −5.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "factor_label",
+     "x": 880,
+     "y": 260,
+     "text": "Factoring",
+     "size": 40,
+     "color": "blue"
+    },
+    {
+     "op": "write",
+     "id": "factor_ask1",
+     "x": 880,
+     "y": 320,
+     "text": "Find two numbers that multiply to 6",
+     "size": 32
+    },
+    {
+     "op": "write",
+     "id": "factor_ask2",
+     "x": 880,
+     "y": 370,
+     "text": "and add to −5.",
+     "size": 32
+    }
+   ]
+  },
+  {
+   "title": "Find the numbers",
+   "say": "The numbers are −2 and −3.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "nums",
+     "x": 880,
+     "y": 420,
+     "text": "−2 and −3",
+     "size": 40,
+     "color": "red"
+    }
+   ]
+  },
+  {
+   "title": "Write the factored form",
+   "say": "This gives the factored form.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "factored",
+     "x": 880,
+     "y": 480,
+     "text": "(x − 2)(x − 3) = 0",
+     "size": 44,
+     "color": "blue",
+     "underline": true
+    }
+   ]
+  },
+  {
+   "title": "Use the zero product property",
+   "say": "If a product is zero, one factor must be zero.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "zp1",
+     "x": 880,
+     "y": 560,
+     "text": "If (x − 2)(x − 3) = 0,",
+     "size": 32
+    },
+    {
+     "op": "write",
+     "id": "zp2",
+     "x": 880,
+     "y": 610,
+     "text": "then x − 2 = 0 or x − 3 = 0.",
+     "size": 32
+    }
+   ]
+  },
+  {
+   "title": "Solve",
+   "say": "So the solutions are x = 2 and x = 3.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "ans1",
+     "x": 880,
+     "y": 680,
+     "text": "x = 2",
+     "size": 44,
+     "color": "green"
+    },
+    {
+     "op": "write",
+     "id": "ans2",
+     "x": 1040,
+     "y": 680,
+     "text": "x = 3",
+     "size": 44,
+     "color": "green"
+    }
+   ]
+  }
+ ]
+}

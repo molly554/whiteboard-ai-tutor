@@ -1,0 +1,230 @@
+{
+ "title": "Demand Rise → Price",
+ "lang": "en",
+ "steps": [
+  {
+   "title": "Setup",
+   "say": "Let's draw a simple supply and demand diagram.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "title",
+     "x": 640,
+     "y": 60,
+     "text": "Demand Rise and Price",
+     "size": 54,
+     "anchor": "middle"
+    },
+    {
+     "op": "line",
+     "id": "demand1",
+     "x1": 180,
+     "y1": 650,
+     "x2": 720,
+     "y2": 180,
+     "color": "blue",
+     "width": 5
+    },
+    {
+     "op": "write",
+     "id": "d1_label",
+     "x": 730,
+     "y": 150,
+     "text": "D1",
+     "size": 36,
+     "color": "blue"
+    },
+    {
+     "op": "line",
+     "id": "supply",
+     "x1": 180,
+     "y1": 180,
+     "x2": 720,
+     "y2": 650,
+     "color": "red",
+     "width": 5
+    },
+    {
+     "op": "write",
+     "id": "s_label",
+     "x": 730,
+     "y": 630,
+     "text": "S",
+     "size": 36,
+     "color": "red"
+    }
+   ]
+  },
+  {
+   "title": "Initial Equilibrium",
+   "say": "The initial equilibrium is where D1 and S meet.",
+   "ops": [
+    {
+     "op": "ellipse",
+     "id": "eq1_dot",
+     "cx": 450,
+     "cy": 415,
+     "rx": 12,
+     "ry": 12,
+     "fill": "ink"
+    },
+    {
+     "op": "line",
+     "id": "eq1_q_line",
+     "x1": 450,
+     "y1": 415,
+     "x2": 450,
+     "y2": 730,
+     "color": "gray",
+     "width": 3,
+     "dash": true
+    },
+    {
+     "op": "line",
+     "id": "eq1_p_line",
+     "x1": 450,
+     "y1": 415,
+     "x2": 150,
+     "y2": 415,
+     "color": "gray",
+     "width": 3,
+     "dash": true
+    },
+    {
+     "op": "write",
+     "id": "q1_label",
+     "x": 450,
+     "y": 750,
+     "text": "Q1",
+     "size": 32,
+     "anchor": "middle"
+    },
+    {
+     "op": "write",
+     "id": "p1_label",
+     "x": 105,
+     "y": 400,
+     "text": "P1",
+     "size": 32
+    }
+   ]
+  },
+  {
+   "title": "Demand Shifts Right",
+   "say": "When demand rises, the demand curve shifts to the right.",
+   "ops": [
+    {
+     "op": "line",
+     "id": "demand2",
+     "x1": 330,
+     "y1": 650,
+     "x2": 870,
+     "y2": 180,
+     "color": "blue",
+     "width": 5
+    },
+    {
+     "op": "write",
+     "id": "d2_label",
+     "x": 880,
+     "y": 150,
+     "text": "D2",
+     "size": 36,
+     "color": "blue"
+    },
+    {
+     "op": "path",
+     "id": "shift_arrow",
+     "d": "M 600 330 L 750 330",
+     "color": "blue",
+     "width": 5,
+     "arrow": true
+    }
+   ]
+  },
+  {
+   "title": "New Equilibrium",
+   "say": "The new equilibrium is at a higher price and higher quantity.",
+   "ops": [
+    {
+     "op": "ellipse",
+     "id": "eq2_dot",
+     "cx": 600,
+     "cy": 415,
+     "rx": 12,
+     "ry": 12,
+     "fill": "ink"
+    },
+    {
+     "op": "line",
+     "id": "eq2_q_line",
+     "x1": 600,
+     "y1": 415,
+     "x2": 600,
+     "y2": 730,
+     "color": "gray",
+     "width": 3,
+     "dash": true
+    },
+    {
+     "op": "line",
+     "id": "eq2_p_line",
+     "x1": 600,
+     "y1": 415,
+     "x2": 150,
+     "y2": 415,
+     "color": "gray",
+     "width": 3,
+     "dash": true
+    },
+    {
+     "op": "write",
+     "id": "q2_label",
+     "x": 600,
+     "y": 750,
+     "text": "Q2",
+     "size": 32,
+     "anchor": "middle"
+    },
+    {
+     "op": "write",
+     "id": "p2_label",
+     "x": 105,
+     "y": 400,
+     "text": "P2",
+     "size": 32
+    }
+   ]
+  },
+  {
+   "title": "Compare Price",
+   "say": "P2 is higher than P1, so the price rises.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "price_note",
+     "x": 900,
+     "y": 300,
+     "text": "P2 > P1\nPrice rises",
+     "size": 36,
+     "color": "red"
+    }
+   ]
+  },
+  {
+   "title": "Compare Quantity",
+   "say": "Q2 is also higher than Q1, so quantity rises too.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "qty_note",
+     "x": 900,
+     "y": 500,
+     "text": "Q2 > Q1\nQuantity rises",
+     "size": 36,
+     "color": "green"
+    }
+   ]
+  }
+ ]
+}

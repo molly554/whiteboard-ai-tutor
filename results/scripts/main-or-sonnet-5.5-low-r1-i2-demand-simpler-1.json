@@ -1,0 +1,152 @@
+{
+ "title": "Demand shift, simply",
+ "lang": "en",
+ "steps": [
+  {
+   "title": "Clear the board",
+   "say": "Let's wipe the crowded graph and use a simple everyday example instead.",
+   "ops": [
+    {
+     "op": "erase",
+     "all": true
+    },
+    {
+     "op": "write",
+     "id": "t2",
+     "x": 60,
+     "y": 40,
+     "text": "A simpler view: ice cream",
+     "size": 54
+    }
+   ]
+  },
+  {
+   "title": "One price, few buyers",
+   "say": "Imagine ice cream costs $2 and 10 people want to buy it today.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "price2",
+     "x": 200,
+     "y": 200,
+     "text": "Price: $2",
+     "size": 44,
+     "color": "blue"
+    },
+    {
+     "op": "write",
+     "id": "buy1",
+     "x": 200,
+     "y": 300,
+     "text": "Buyers: 10",
+     "size": 44,
+     "color": "red"
+    }
+   ]
+  },
+  {
+   "title": "A hot day arrives",
+   "say": "Now it gets hot. At the very same $2, more people want ice cream, so 30 people show up.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "hot",
+     "x": 200,
+     "y": 430,
+     "text": "Hot day!",
+     "size": 44,
+     "color": "green"
+    },
+    {
+     "op": "line",
+     "id": "arr1",
+     "x1": 520,
+     "y1": 322,
+     "x2": 820,
+     "y2": 322,
+     "arrow": true,
+     "color": "green",
+     "width": 5
+    },
+    {
+     "op": "write",
+     "id": "buy2",
+     "x": 860,
+     "y": 300,
+     "text": "Buyers: 30",
+     "size": 44,
+     "color": "red"
+    }
+   ]
+  },
+  {
+   "title": "That is a shift",
+   "say": "Wanting more at the same price is what we call a demand shift. The price did not cause it; the weather did.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "def",
+     "x": 200,
+     "y": 560,
+     "text": "More wanted at the same price\n= demand shifts right",
+     "size": 40,
+     "color": "green"
+    }
+   ]
+  },
+  {
+   "title": "Not enough ice cream",
+   "say": "But the seller only made 10 scoops. With 30 buyers and 10 scoops, people compete for them.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "stock",
+     "x": 200,
+     "y": 720,
+     "text": "Seller has: 10 scoops",
+     "size": 44,
+     "color": "blue"
+    },
+    {
+     "op": "write",
+     "id": "short",
+     "x": 900,
+     "y": 720,
+     "text": "Shortage!",
+     "size": 44,
+     "color": "red"
+    }
+   ]
+  },
+  {
+   "title": "Price rises",
+   "say": "The seller notices the line and raises the price to $3. Some buyers drop out, and the market settles. That is why higher demand pushes price up.",
+   "ops": [
+    {
+     "op": "erase",
+     "ids": [
+      "price2"
+     ]
+    },
+    {
+     "op": "write",
+     "id": "price3",
+     "x": 200,
+     "y": 200,
+     "text": "Price: $3",
+     "size": 44,
+     "color": "blue"
+    },
+    {
+     "op": "write",
+     "id": "concl",
+     "x": 900,
+     "y": 560,
+     "text": "Demand up → price up",
+     "size": 40,
+     "color": "green"
+    }
+   ]
+  }
+ ]
+}

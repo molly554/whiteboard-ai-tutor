@@ -1,0 +1,140 @@
+{
+ "title": "光合作用发生在哪里？",
+ "lang": "zh",
+ "steps": [
+  {
+   "title": "提出问题",
+   "say": "我们先来看细胞的结构。光合作用发生在一种特殊的细胞器里。",
+   "ops": [
+    {
+     "op": "write",
+     "id": "main-title",
+     "x": 800,
+     "y": 70,
+     "text": "光合作用发生在细胞的哪个部分？",
+     "size": 56,
+     "anchor": "middle",
+     "color": "ink",
+     "underline": true
+    }
+   ]
+  },
+  {
+   "title": "画植物细胞",
+   "say": "这是一个植物细胞。植物细胞是光合作用发生的地方之一。",
+   "ops": [
+    {
+     "op": "ellipse",
+     "id": "plant-cell",
+     "cx": 520,
+     "cy": 430,
+     "rx": 240,
+     "ry": 220,
+     "color": "blue",
+     "width": 6
+    },
+    {
+     "op": "write",
+     "id": "cell-label",
+     "x": 600,
+     "y": 230,
+     "text": "植物细胞",
+     "size": 36,
+     "anchor": "middle",
+     "color": "blue"
+    }
+   ]
+  },
+  {
+   "title": "画出叶绿体",
+   "say": "细胞里这些绿色的椭圆形就是叶绿体。",
+   "ops": [
+    {
+     "op": "ellipse",
+     "id": "chloroplast-1",
+     "cx": 440,
+     "cy": 360,
+     "rx": 50,
+     "ry": 28,
+     "color": "green",
+     "width": 4,
+     "fill": "green"
+    },
+    {
+     "op": "ellipse",
+     "id": "chloroplast-2",
+     "cx": 620,
+     "cy": 330,
+     "rx": 48,
+     "ry": 26,
+     "color": "green",
+     "width": 4,
+     "fill": "green"
+    },
+    {
+     "op": "ellipse",
+     "id": "chloroplast-3",
+     "cx": 530,
+     "cy": 470,
+     "rx": 55,
+     "ry": 32,
+     "color": "green",
+     "width": 4,
+     "fill": "green"
+    }
+   ]
+  },
+  {
+   "title": "标注叶绿体",
+   "say": "叶绿体是光合作用的场所，它含有叶绿素。",
+   "ops": [
+    {
+     "op": "write",
+     "id": "chloroplast-label",
+     "x": 840,
+     "y": 310,
+     "text": "叶绿体",
+     "size": 40,
+     "color": "green"
+    },
+    {
+     "op": "write",
+     "id": "chloroplast-function",
+     "x": 840,
+     "y": 375,
+     "text": "光合作用的场所",
+     "size": 32,
+     "color": "ink"
+    },
+    {
+     "op": "line",
+     "id": "arrow-to-chloroplast",
+     "x1": 830,
+     "y1": 350,
+     "x2": 672,
+     "y2": 332,
+     "color": "red",
+     "width": 4,
+     "arrow": true
+    }
+   ]
+  },
+  {
+   "title": "总结",
+   "say": "所以记住：光合作用发生在细胞的叶绿体里。",
+   "ops": [
+    {
+     "op": "write",
+     "id": "summary",
+     "x": 800,
+     "y": 730,
+     "text": "光合作用发生在叶绿体中",
+     "size": 44,
+     "anchor": "middle",
+     "color": "blue",
+     "underline": true
+    }
+   ]
+  }
+ ]
+}

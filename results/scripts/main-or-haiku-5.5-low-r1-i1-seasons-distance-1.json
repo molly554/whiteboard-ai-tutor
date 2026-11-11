@@ -1,0 +1,114 @@
+{
+ "mode": "continue",
+ "question": "Wait — in northern summer, isn't Earth farther from the Sun? Why is it hotter then?",
+ "steps": [
+  {
+   "title": "Distance isn't the cause",
+   "say": "Good question! Earth is only about 3% farther from the Sun in July, which is far too small to matter.",
+   "ops": [
+    {
+     "op": "erase",
+     "ids": [
+      "key",
+      "earth1",
+      "axis1",
+      "earth2",
+      "axis2",
+      "earth3",
+      "axis3",
+      "earth4",
+      "axis4",
+      "sun",
+      "sunlabel",
+      "orbit",
+      "orbitlabel"
+     ]
+    },
+    {
+     "op": "write",
+     "id": "q",
+     "x": 60,
+     "y": 128,
+     "text": "Distance barely changes the seasons.",
+     "size": 40,
+     "color": "red"
+    },
+    {
+     "op": "write",
+     "id": "d1",
+     "x": 60,
+     "y": 200,
+     "text": "Earth is only about 3% farther from the Sun\nin July than in January. That gap is too\nsmall to cause summer.",
+     "size": 34
+    }
+   ]
+  },
+  {
+   "title": "Tilt causes the seasons",
+   "say": "In northern summer the northern half leans toward the Sun, so sunlight hits more directly and the days are longer.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "t1",
+     "x": 60,
+     "y": 360,
+     "text": "Northern summer: the north leans toward\nthe Sun. Sunlight hits more directly, and\ndays are longer.",
+     "size": 34,
+     "color": "blue"
+    },
+    {
+     "op": "ellipse",
+     "id": "sun2",
+     "cx": 200,
+     "cy": 640,
+     "rx": 60,
+     "ry": 60,
+     "color": "red",
+     "width": 5,
+     "fill": "red"
+    },
+    {
+     "op": "line",
+     "id": "ray1",
+     "x1": 280,
+     "y1": 640,
+     "x2": 830,
+     "y2": 640,
+     "color": "red",
+     "width": 4,
+     "arrow": true
+    },
+    {
+     "op": "write",
+     "id": "ray1label",
+     "x": 440,
+     "y": 598,
+     "text": "Sunlight",
+     "size": 30,
+     "color": "red"
+    },
+    {
+     "op": "ellipse",
+     "id": "earth5",
+     "cx": 900,
+     "cy": 640,
+     "rx": 40,
+     "ry": 40,
+     "color": "blue",
+     "width": 4,
+     "fill": "blue"
+    },
+    {
+     "op": "line",
+     "id": "axis5",
+     "x1": 876,
+     "y1": 705,
+     "x2": 950,
+     "y2": 575,
+     "width": 4,
+     "arrow": "both"
+    }
+   ]
+  }
+ ]
+}

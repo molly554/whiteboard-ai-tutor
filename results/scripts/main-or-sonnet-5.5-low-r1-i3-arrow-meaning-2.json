@@ -1,0 +1,128 @@
+{
+ "title": "What the green arrow means",
+ "lang": "en",
+ "steps": [
+  {
+   "title": "Spot the arrow",
+   "say": "The green arrow points from left to right, from the old demand curve toward the new one. Let me circle it so we can focus on it.",
+   "ops": [
+    {
+     "op": "rect",
+     "id": "hl",
+     "x": 240,
+     "y": 200,
+     "w": 200,
+     "h": 90,
+     "color": "green",
+     "width": 3,
+     "dash": true
+    }
+   ]
+  },
+  {
+   "title": "What it shows",
+   "say": "It shows the whole demand curve moving right, from D1 to D2. At every price, buyers now want more than before.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "ex1",
+     "x": 1200,
+     "y": 120,
+     "text": "Arrow = demand\ncurve shifts right",
+     "size": 32,
+     "color": "green"
+    },
+    {
+     "op": "line",
+     "id": "ptr",
+     "x1": 1190,
+     "y1": 150,
+     "x2": 1080,
+     "y2": 300,
+     "color": "green",
+     "width": 3,
+     "dash": true
+    }
+   ]
+  },
+  {
+   "title": "Why it matters",
+   "say": "With the same supply, the new demand curve crosses supply further up and to the right. So price and quantity both rise.",
+   "ops": [
+    {
+     "op": "ellipse",
+     "id": "e2",
+     "cx": 690,
+     "cy": 410,
+     "rx": 9,
+     "ry": 9,
+     "color": "red",
+     "fill": "red"
+    },
+    {
+     "op": "line",
+     "id": "e2h",
+     "x1": 200,
+     "y1": 410,
+     "x2": 690,
+     "y2": 410,
+     "color": "gray",
+     "width": 3,
+     "dash": true
+    },
+    {
+     "op": "line",
+     "id": "e2v",
+     "x1": 690,
+     "y1": 410,
+     "x2": 690,
+     "y2": 720,
+     "color": "gray",
+     "width": 3,
+     "dash": true
+    },
+    {
+     "op": "write",
+     "id": "p2",
+     "x": 130,
+     "y": 392,
+     "text": "P2",
+     "size": 32,
+     "anchor": "middle"
+    },
+    {
+     "op": "write",
+     "id": "q2",
+     "x": 690,
+     "y": 735,
+     "text": "Q2",
+     "size": 32,
+     "anchor": "middle"
+    }
+   ]
+  },
+  {
+   "title": "Summary",
+   "say": "So the arrow means demand increased, and the result is a higher price, P2 above P1.",
+   "ops": [
+    {
+     "op": "erase",
+     "ids": [
+      "hl",
+      "ex1",
+      "ptr"
+     ]
+    },
+    {
+     "op": "write",
+     "id": "sum",
+     "x": 1000,
+     "y": 120,
+     "text": "Demand up →\nprice up (P2 > P1)",
+     "size": 34,
+     "color": "red"
+    }
+   ]
+  }
+ ]
+}

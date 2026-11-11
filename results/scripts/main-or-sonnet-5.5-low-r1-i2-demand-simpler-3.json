@@ -1,0 +1,192 @@
+{
+ "title": "Demand shift, simpler",
+ "lang": "en",
+ "steps": [
+  {
+   "title": "Clear the board",
+   "say": "Let's start fresh with a simpler picture: just one price and a crowd of buyers.",
+   "ops": [
+    {
+     "op": "erase",
+     "ids": [
+      "d1",
+      "d1lab",
+      "note1",
+      "s",
+      "slab",
+      "note2",
+      "e1",
+      "e1v",
+      "e1h",
+      "p1",
+      "q1",
+      "note3",
+      "d2",
+      "d2lab",
+      "shift",
+      "shiftlab",
+      "xaxis",
+      "yaxis",
+      "price",
+      "qty",
+      "title"
+     ]
+    },
+    {
+     "op": "write",
+     "id": "t2",
+     "x": 60,
+     "y": 40,
+     "text": "Demand rising, the simple way",
+     "size": 54
+    }
+   ]
+  },
+  {
+   "title": "A lemonade stand",
+   "say": "Imagine a lemonade stand with only 10 cups to sell today.",
+   "ops": [
+    {
+     "op": "rect",
+     "id": "stand",
+     "x": 160,
+     "y": 300,
+     "w": 300,
+     "h": 200,
+     "color": "blue"
+    },
+    {
+     "op": "write",
+     "id": "standlab",
+     "x": 310,
+     "y": 350,
+     "text": "10 cups\n$2 each",
+     "size": 40,
+     "anchor": "middle",
+     "color": "blue"
+    },
+    {
+     "op": "write",
+     "id": "few",
+     "x": 160,
+     "y": 540,
+     "text": "3 buyers want a cup",
+     "size": 36
+    }
+   ]
+  },
+  {
+   "title": "More buyers",
+   "say": "Now it's a hot day, and many more people want lemonade. Demand has risen.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "many",
+     "x": 160,
+     "y": 620,
+     "text": "Hot day: 20 buyers want a cup!",
+     "size": 36,
+     "color": "red"
+    },
+    {
+     "op": "line",
+     "id": "crowd",
+     "x1": 760,
+     "y1": 400,
+     "x2": 520,
+     "y2": 400,
+     "arrow": true,
+     "color": "red",
+     "width": 6
+    },
+    {
+     "op": "write",
+     "id": "crowdlab",
+     "x": 780,
+     "y": 375,
+     "text": "20 buyers",
+     "size": 40,
+     "color": "red"
+    }
+   ]
+  },
+  {
+   "title": "Too few cups",
+   "say": "There are 20 buyers but only 10 cups. Some buyers will miss out at $2.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "short",
+     "x": 160,
+     "y": 720,
+     "text": "20 buyers > 10 cups  →  shortage",
+     "size": 40,
+     "color": "red"
+    }
+   ]
+  },
+  {
+   "title": "Price goes up",
+   "say": "Buyers who really want a cup offer more, so the seller raises the price to $3.",
+   "ops": [
+    {
+     "op": "erase",
+     "ids": [
+      "standlab"
+     ]
+    },
+    {
+     "op": "write",
+     "id": "standlab2",
+     "x": 310,
+     "y": 350,
+     "text": "10 cups\n$3 each",
+     "size": 40,
+     "anchor": "middle",
+     "color": "green"
+    },
+    {
+     "op": "line",
+     "id": "up",
+     "x1": 1000,
+     "y1": 560,
+     "x2": 1000,
+     "y2": 380,
+     "arrow": true,
+     "color": "green",
+     "width": 6
+    },
+    {
+     "op": "write",
+     "id": "uplab",
+     "x": 1040,
+     "y": 440,
+     "text": "price rises",
+     "size": 40,
+     "color": "green"
+    }
+   ]
+  },
+  {
+   "title": "Balance again",
+   "say": "At $3 some buyers drop out, until the buyers left match the cups. More demand, same supply, higher price.",
+   "ops": [
+    {
+     "op": "erase",
+     "ids": [
+      "short"
+     ]
+    },
+    {
+     "op": "write",
+     "id": "sum",
+     "x": 160,
+     "y": 720,
+     "text": "More demand + same supply = higher price",
+     "size": 42,
+     "color": "green"
+    }
+   ]
+  }
+ ]
+}

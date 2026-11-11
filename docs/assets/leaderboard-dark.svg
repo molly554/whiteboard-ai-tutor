@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 400" width="900" height="400" role="img" aria-label="Whiteboard AI Tutor leaderboard: blind-review pass share, time to first stroke and cost per lesson for six models">
+<rect width="900" height="400" rx="12" fill="#1a1a19"/>
+<g font-family="-apple-system,'Segoe UI',Helvetica,Arial,sans-serif">
+<text x="175" y="44" font-size="14" font-weight="600" fill="#f0efec">Blind review: boards passed</text>
+<text x="175" y="63" font-size="11.5" fill="#c3c2b7">of the boards reviewed per model</text>
+<line x1="175" y1="96" x2="175" y2="348" stroke="#3a3a37" stroke-width="1"/>
+<path d="M175.0 104.0 H321.0 Q325.0 104.0 325.0 108.0 V118.0 Q325.0 122.0 321.0 122.0 H175.0 Z" fill="#3987e5"><title>Gemini 4 Argon: 11 / 11</title></path>
+<text x="333.0" y="117.5" font-size="13" fill="#f0efec">11 / 11</text>
+<path d="M175.0 146.0 H293.7 Q297.7 146.0 297.7 150.0 V160.0 Q297.7 164.0 293.7 164.0 H175.0 Z" fill="#3987e5"><title>Claude Haiku 5.5: 9 / 11</title></path>
+<text x="305.7" y="159.5" font-size="13" fill="#f0efec">9 / 11</text>
+<path d="M175.0 188.0 H280.1 Q284.1 188.0 284.1 192.0 V202.0 Q284.1 206.0 280.1 206.0 H175.0 Z" fill="#3987e5"><title>Gemini 3.8 Flash: 8 / 11</title></path>
+<text x="292.1" y="201.5" font-size="13" fill="#f0efec">8 / 11</text>
+<path d="M175.0 230.0 H266.5 Q270.5 230.0 270.5 234.0 V244.0 Q270.5 248.0 266.5 248.0 H175.0 Z" fill="#3987e5"><title>Claude Sonnet 5.5: 7 / 11</title></path>
+<text x="278.5" y="243.5" font-size="13" fill="#f0efec">7 / 11</text>
+<path d="M175.0 272.0 H246.0 Q250.0 272.0 250.0 276.0 V286.0 Q250.0 290.0 246.0 290.0 H175.0 Z" fill="#3987e5"><title>DeepSeek V4 Pro: 5 / 10</title></path>
+<text x="258.0" y="285.5" font-size="13" fill="#f0efec">5 / 10</text>
+<path d="M175.0 314.0 H231.0 Q235.0 314.0 235.0 318.0 V328.0 Q235.0 332.0 231.0 332.0 H175.0 Z" fill="#3987e5"><title>DeepSeek V4.1 Flash: 4 / 10</title></path>
+<text x="243.0" y="327.5" font-size="13" fill="#f0efec">4 / 10</text>
+<text x="420" y="44" font-size="14" font-weight="600" fill="#f0efec">Time to first stroke</text>
+<text x="420" y="63" font-size="11.5" fill="#c3c2b7">lesson, median, seconds · lower is better</text>
+<line x1="420" y1="96" x2="420" y2="348" stroke="#3a3a37" stroke-width="1"/>
+<path d="M420.0 104.0 H501.7 Q505.7 104.0 505.7 108.0 V118.0 Q505.7 122.0 501.7 122.0 H420.0 Z" fill="#3987e5"><title>Gemini 4 Argon: 8.0 s</title></path>
+<text x="513.7" y="117.5" font-size="13" fill="#f0efec">8.0 s</text>
+<path d="M420.0 146.0 H554.2 Q558.2 146.0 558.2 150.0 V160.0 Q558.2 164.0 554.2 164.0 H420.0 Z" fill="#3987e5"><title>Claude Haiku 5.5: 12.9 s</title></path>
+<text x="566.2" y="159.5" font-size="13" fill="#f0efec">12.9 s</text>
+<path d="M420.0 188.0 H452.4 Q456.4 188.0 456.4 192.0 V202.0 Q456.4 206.0 452.4 206.0 H420.0 Z" fill="#3987e5"><title>Gemini 3.8 Flash: 3.4 s</title></path>
+<text x="464.4" y="201.5" font-size="13" fill="#f0efec">3.4 s</text>
+<path d="M420.0 230.0 H446.0 Q450.0 230.0 450.0 234.0 V244.0 Q450.0 248.0 446.0 248.0 H420.0 Z" fill="#3987e5"><title>Claude Sonnet 5.5: 2.8 s</title></path>
+<text x="458.0" y="243.5" font-size="13" fill="#f0efec">2.8 s</text>
+<path d="M420.0 272.0 H456.7 Q460.7 272.0 460.7 276.0 V286.0 Q460.7 290.0 456.7 290.0 H420.0 Z" fill="#3987e5"><title>DeepSeek V4 Pro: 3.8 s</title></path>
+<text x="468.7" y="285.5" font-size="13" fill="#f0efec">3.8 s</text>
+<path d="M420.0 314.0 H442.8 Q446.8 314.0 446.8 318.0 V328.0 Q446.8 332.0 442.8 332.0 H420.0 Z" fill="#3987e5"><title>DeepSeek V4.1 Flash: 2.5 s</title></path>
+<text x="454.8" y="327.5" font-size="13" fill="#f0efec">2.5 s</text>
+<text x="665" y="44" font-size="14" font-weight="600" fill="#f0efec">Cost per lesson</text>
+<text x="665" y="63" font-size="11.5" fill="#c3c2b7">US dollars, one generation · lower is better</text>
+<line x1="665" y1="96" x2="665" y2="348" stroke="#3a3a37" stroke-width="1"/>
+<path d="M665.0 104.0 H799.5 Q803.5 104.0 803.5 108.0 V118.0 Q803.5 122.0 799.5 122.0 H665.0 Z" fill="#3987e5"><title>Gemini 4 Argon: $0.0277</title></path>
+<text x="811.5" y="117.5" font-size="13" fill="#f0efec">$0.0277</text>
+<path d="M665.0 146.0 H670.5 Q674.5 146.0 674.5 150.0 V160.0 Q674.5 164.0 670.5 164.0 H665.0 Z" fill="#3987e5"><title>Claude Haiku 5.5: $0.0019</title></path>
+<text x="682.5" y="159.5" font-size="13" fill="#f0efec">$0.0019</text>
+<path d="M665.0 188.0 H701.0 Q705.0 188.0 705.0 192.0 V202.0 Q705.0 206.0 701.0 206.0 H665.0 Z" fill="#3987e5"><title>Gemini 3.8 Flash: $0.0080</title></path>
+<text x="713.0" y="201.5" font-size="13" fill="#f0efec">$0.0080</text>
+<path d="M665.0 230.0 H740.0 Q744.0 230.0 744.0 234.0 V244.0 Q744.0 248.0 740.0 248.0 H665.0 Z" fill="#3987e5"><title>Claude Sonnet 5.5: $0.0158</title></path>
+<text x="752.0" y="243.5" font-size="13" fill="#f0efec">$0.0158</text>
+<path d="M665.0 272.0 H693.0 Q697.0 272.0 697.0 276.0 V286.0 Q697.0 290.0 693.0 290.0 H665.0 Z" fill="#3987e5"><title>DeepSeek V4 Pro: $0.0064</title></path>
+<text x="705.0" y="285.5" font-size="13" fill="#f0efec">$0.0064</text>
+<path d="M665.0 314.0 H669.5 Q673.5 314.0 673.5 318.0 V328.0 Q673.5 332.0 669.5 332.0 H665.0 Z" fill="#3987e5"><title>DeepSeek V4.1 Flash: $0.0017</title></path>
+<text x="681.5" y="327.5" font-size="13" fill="#f0efec">$0.0017</text>
+<text x="20" y="118.0" font-size="14" fill="#f0efec">Gemini 4 Argon</text>
+<text x="20" y="160.0" font-size="14" fill="#f0efec">Claude Haiku 5.5</text>
+<text x="20" y="202.0" font-size="14" fill="#f0efec">Gemini 3.8 Flash</text>
+<text x="20" y="244.0" font-size="14" fill="#f0efec">Claude Sonnet 5.5</text>
+<text x="20" y="286.0" font-size="14" fill="#f0efec">DeepSeek V4 Pro</text>
+<text x="20" y="328.0" font-size="14" fill="#f0efec">DeepSeek V4.1 Flash</text>
+<text x="20" y="378" font-size="11.5" fill="#c3c2b7">Low-thinking setting · 288 API calls · blind review by Claude Fable 5.2 of 64 boards · small sample, see Limitations</text>
+</g></svg>

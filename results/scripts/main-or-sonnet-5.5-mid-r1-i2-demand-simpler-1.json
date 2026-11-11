@@ -1,0 +1,200 @@
+{
+ "title": "A simpler way to see it",
+ "lang": "en",
+ "steps": [
+  {
+   "title": "Clear the board",
+   "say": "Let's forget the graph for a moment and use a tiny lemonade stand instead.",
+   "ops": [
+    {
+     "op": "erase",
+     "all": true
+    },
+    {
+     "op": "write",
+     "id": "t2",
+     "x": 60,
+     "y": 40,
+     "text": "A simpler way: a lemonade stand",
+     "size": 54
+    }
+   ]
+  },
+  {
+   "title": "Few buyers",
+   "say": "The stand has 3 cups of lemonade. Two buyers want one, so the price stays low, at $2.",
+   "ops": [
+    {
+     "op": "rect",
+     "id": "c1",
+     "x": 200,
+     "y": 300,
+     "w": 100,
+     "h": 120,
+     "color": "blue"
+    },
+    {
+     "op": "rect",
+     "id": "c2",
+     "x": 350,
+     "y": 300,
+     "w": 100,
+     "h": 120,
+     "color": "blue"
+    },
+    {
+     "op": "rect",
+     "id": "c3",
+     "x": 500,
+     "y": 300,
+     "w": 100,
+     "h": 120,
+     "color": "blue"
+    },
+    {
+     "op": "write",
+     "id": "cl",
+     "x": 400,
+     "y": 450,
+     "text": "3 cups",
+     "size": 40,
+     "anchor": "middle",
+     "color": "blue"
+    },
+    {
+     "op": "ellipse",
+     "id": "b1",
+     "cx": 900,
+     "cy": 340,
+     "rx": 35,
+     "ry": 35,
+     "color": "red"
+    },
+    {
+     "op": "ellipse",
+     "id": "b2",
+     "cx": 1020,
+     "cy": 340,
+     "rx": 35,
+     "ry": 35,
+     "color": "red"
+    },
+    {
+     "op": "write",
+     "id": "bl",
+     "x": 960,
+     "y": 450,
+     "text": "2 buyers",
+     "size": 40,
+     "anchor": "middle",
+     "color": "red"
+    },
+    {
+     "op": "write",
+     "id": "pr",
+     "x": 800,
+     "y": 600,
+     "text": "Price: $2",
+     "size": 48,
+     "anchor": "middle"
+    }
+   ]
+  },
+  {
+   "title": "Demand rises",
+   "say": "Now demand rises: five people want a cup. That's the demand shift, simply more buyers wanting the same thing.",
+   "ops": [
+    {
+     "op": "erase",
+     "ids": [
+      "bl"
+     ]
+    },
+    {
+     "op": "ellipse",
+     "id": "b3",
+     "cx": 1140,
+     "cy": 340,
+     "rx": 35,
+     "ry": 35,
+     "color": "red"
+    },
+    {
+     "op": "ellipse",
+     "id": "b4",
+     "cx": 1260,
+     "cy": 340,
+     "rx": 35,
+     "ry": 35,
+     "color": "red"
+    },
+    {
+     "op": "ellipse",
+     "id": "b5",
+     "cx": 1380,
+     "cy": 340,
+     "rx": 35,
+     "ry": 35,
+     "color": "red"
+    },
+    {
+     "op": "write",
+     "id": "bl2",
+     "x": 1140,
+     "y": 450,
+     "text": "5 buyers",
+     "size": 40,
+     "anchor": "middle",
+     "color": "red"
+    }
+   ]
+  },
+  {
+   "title": "Competition",
+   "say": "There are still only 3 cups, so buyers start offering more money to win one.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "short",
+     "x": 800,
+     "y": 720,
+     "text": "Only 3 cups for 5 people!",
+     "size": 40,
+     "anchor": "middle",
+     "color": "green"
+    }
+   ]
+  },
+  {
+   "title": "Price goes up",
+   "say": "The price climbs from $2 to $5. More demand with the same supply means a higher price.",
+   "ops": [
+    {
+     "op": "erase",
+     "ids": [
+      "pr"
+     ]
+    },
+    {
+     "op": "write",
+     "id": "pr2",
+     "x": 800,
+     "y": 600,
+     "text": "Price: $5",
+     "size": 48,
+     "anchor": "middle",
+     "color": "red"
+    },
+    {
+     "op": "write",
+     "id": "sum",
+     "x": 800,
+     "y": 800,
+     "text": "More buyers + same supply = higher price",
+     "size": 40,
+     "anchor": "middle"
+    }
+   ]
+  }
+ ]
+}

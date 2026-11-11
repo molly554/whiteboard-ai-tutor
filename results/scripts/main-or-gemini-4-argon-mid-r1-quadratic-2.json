@@ -1,0 +1,274 @@
+{
+ "title": "Solving x² − 5x + 6 = 0",
+ "lang": "en",
+ "steps": [
+  {
+   "title": "The Equation",
+   "say": "Let's solve the quadratic equation x squared minus 5x plus 6 equals 0.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "main_title",
+     "x": 80,
+     "y": 60,
+     "text": "Solve Quadratic Equation",
+     "size": 52,
+     "color": "blue"
+    },
+    {
+     "op": "write",
+     "id": "eq",
+     "x": 80,
+     "y": 150,
+     "text": "x² − 5x + 6 = 0",
+     "size": 44,
+     "color": "ink"
+    }
+   ]
+  },
+  {
+   "title": "Try Completing the Square",
+   "say": "First, we could try completing the square by moving 6 to the right and adding 5 over 2 squared.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "m1_title",
+     "x": 80,
+     "y": 250,
+     "text": "Attempt 1: Completing the Square",
+     "size": 36,
+     "color": "gray"
+    },
+    {
+     "op": "write",
+     "id": "m1_s1",
+     "x": 80,
+     "y": 320,
+     "text": "x² − 5x = −6",
+     "size": 40,
+     "color": "ink"
+    },
+    {
+     "op": "write",
+     "id": "m1_s2",
+     "x": 80,
+     "y": 390,
+     "text": "x² − 5x + (5/2)² = −6 + 25/4",
+     "size": 40,
+     "color": "ink"
+    },
+    {
+     "op": "write",
+     "id": "m1_note",
+     "x": 750,
+     "y": 390,
+     "text": "← Fractions are messy!",
+     "size": 34,
+     "color": "red"
+    }
+   ]
+  },
+  {
+   "title": "Switch to a Simpler Method",
+   "say": "Wait, dealing with fractions like 25 over 4 is tedious. Let's erase this and use a much simpler method: factoring!",
+   "ops": [
+    {
+     "op": "erase",
+     "ids": [
+      "m1_title",
+      "m1_s1",
+      "m1_s2",
+      "m1_note"
+     ]
+    },
+    {
+     "op": "write",
+     "id": "m2_title",
+     "x": 80,
+     "y": 250,
+     "text": "Simpler Method: Factoring!",
+     "size": 36,
+     "color": "green"
+    },
+    {
+     "op": "write",
+     "id": "m2_goal",
+     "x": 80,
+     "y": 320,
+     "text": "Find two numbers that:",
+     "size": 36,
+     "color": "ink"
+    },
+    {
+     "op": "write",
+     "id": "m2_cond1",
+     "x": 120,
+     "y": 380,
+     "text": "• Multiply to  +6",
+     "size": 36,
+     "color": "blue"
+    },
+    {
+     "op": "write",
+     "id": "m2_cond2",
+     "x": 120,
+     "y": 440,
+     "text": "• Add up to   −5",
+     "size": 36,
+     "color": "blue"
+    }
+   ]
+  },
+  {
+   "title": "Find the Factors",
+   "say": "Let's test negative factor pairs of 6. Negative 2 times negative 3 is 6, and negative 2 plus negative 3 is negative 5!",
+   "ops": [
+    {
+     "op": "rect",
+     "id": "box_factors",
+     "x": 850,
+     "y": 250,
+     "w": 600,
+     "h": 240,
+     "color": "gray",
+     "width": 3
+    },
+    {
+     "op": "write",
+     "id": "f_head",
+     "x": 890,
+     "y": 270,
+     "text": "Pair          Product     Sum",
+     "size": 32,
+     "color": "gray"
+    },
+    {
+     "op": "write",
+     "id": "f_row1",
+     "x": 890,
+     "y": 330,
+     "text": "−1, −6          +6         −7",
+     "size": 34,
+     "color": "ink"
+    },
+    {
+     "op": "write",
+     "id": "f_row2",
+     "x": 890,
+     "y": 395,
+     "text": "−2, −3          +6         −5",
+     "size": 34,
+     "color": "green"
+    },
+    {
+     "op": "ellipse",
+     "id": "hl_pair",
+     "cx": 960,
+     "cy": 412,
+     "rx": 90,
+     "ry": 30,
+     "color": "green",
+     "width": 4
+    }
+   ]
+  },
+  {
+   "title": "Rewrite in Factored Form",
+   "say": "Now we can rewrite the quadratic expression directly as x minus 2 times x minus 3 equals 0.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "factored_eq",
+     "x": 80,
+     "y": 540,
+     "text": "(x − 2)(x − 3) = 0",
+     "size": 44,
+     "color": "ink"
+    },
+    {
+     "op": "path",
+     "id": "arrow_to_eq",
+     "d": "M 860 412 Q 650 480 480 555",
+     "color": "green",
+     "width": 4,
+     "arrow": true,
+     "dash": true
+    }
+   ]
+  },
+  {
+   "title": "Solve for x",
+   "say": "By the zero product property, either x minus 2 is 0, or x minus 3 is 0. This gives us x equals 2 or x equals 3.",
+   "ops": [
+    {
+     "op": "line",
+     "id": "arr_left",
+     "x1": 180,
+     "y1": 600,
+     "x2": 140,
+     "y2": 650,
+     "color": "blue",
+     "width": 4,
+     "arrow": true
+    },
+    {
+     "op": "line",
+     "id": "arr_right",
+     "x1": 330,
+     "y1": 600,
+     "x2": 370,
+     "y2": 650,
+     "color": "blue",
+     "width": 4,
+     "arrow": true
+    },
+    {
+     "op": "write",
+     "id": "sol1_step",
+     "x": 70,
+     "y": 665,
+     "text": "x − 2 = 0",
+     "size": 36,
+     "color": "ink"
+    },
+    {
+     "op": "write",
+     "id": "sol2_step",
+     "x": 310,
+     "y": 665,
+     "text": "x − 3 = 0",
+     "size": 36,
+     "color": "ink"
+    },
+    {
+     "op": "write",
+     "id": "sol1",
+     "x": 90,
+     "y": 740,
+     "text": "x = 2",
+     "size": 44,
+     "color": "green"
+    },
+    {
+     "op": "write",
+     "id": "sol2",
+     "x": 330,
+     "y": 740,
+     "text": "x = 3",
+     "size": 44,
+     "color": "green"
+    },
+    {
+     "op": "rect",
+     "id": "ans_box",
+     "x": 65,
+     "y": 725,
+     "w": 410,
+     "h": 75,
+     "color": "green",
+     "width": 4
+    }
+   ]
+  }
+ ]
+}

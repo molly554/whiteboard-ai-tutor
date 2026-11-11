@@ -1,0 +1,171 @@
+{
+ "title": "Demand shift, simpler",
+ "lang": "en",
+ "steps": [
+  {
+   "title": "Clear the side notes",
+   "say": "Let’s remove the side notes so we can focus just on the curves.",
+   "ops": [
+    {
+     "op": "erase",
+     "ids": [
+      "note1",
+      "note2",
+      "note3"
+     ]
+    }
+   ]
+  },
+  {
+   "title": "One demand curve",
+   "say": "Start with one demand curve, D1.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "simtitle",
+     "x": 60,
+     "y": 40,
+     "text": "What a demand shift means",
+     "size": 54
+    },
+    {
+     "op": "erase",
+     "ids": [
+      "d2",
+      "d2lab",
+      "shift",
+      "shiftlab"
+     ]
+    },
+    {
+     "op": "write",
+     "id": "simd1",
+     "x": 915,
+     "y": 630,
+     "text": "D1",
+     "size": 34,
+     "color": "red"
+    },
+    {
+     "op": "write",
+     "id": "simnote",
+     "x": 1200,
+     "y": 250,
+     "text": "D1 shows how\nmuch buyers want\nat each price.",
+     "size": 30
+    }
+   ]
+  },
+  {
+   "title": "Pick one price",
+   "say": "At price P, buyers want this much: quantity Q1.",
+   "ops": [
+    {
+     "op": "line",
+     "id": "simph",
+     "x1": 200,
+     "y1": 500,
+     "x2": 500,
+     "y2": 500,
+     "color": "gray",
+     "width": 3,
+     "dash": true
+    },
+    {
+     "op": "line",
+     "id": "simpv",
+     "x1": 500,
+     "y1": 500,
+     "x2": 500,
+     "y2": 720,
+     "color": "gray",
+     "width": 3,
+     "dash": true
+    },
+    {
+     "op": "write",
+     "id": "simp",
+     "x": 130,
+     "y": 482,
+     "text": "P",
+     "size": 32,
+     "anchor": "middle"
+    },
+    {
+     "op": "write",
+     "id": "simq1",
+     "x": 500,
+     "y": 735,
+     "text": "Q1",
+     "size": 32,
+     "anchor": "middle"
+    }
+   ]
+  },
+  {
+   "title": "Same price, buyers want more",
+   "say": "After the shift, at the same price P, buyers want a larger quantity, Q2. That is what shifting right means.",
+   "ops": [
+    {
+     "op": "line",
+     "id": "d3",
+     "x1": 400,
+     "y1": 300,
+     "x2": 1040,
+     "y2": 640,
+     "color": "red",
+     "width": 5
+    },
+    {
+     "op": "write",
+     "id": "d3lab",
+     "x": 1055,
+     "y": 625,
+     "text": "D2",
+     "size": 34,
+     "color": "red"
+    },
+    {
+     "op": "line",
+     "id": "simph2",
+     "x1": 200,
+     "y1": 500,
+     "x2": 700,
+     "y2": 500,
+     "color": "gray",
+     "width": 3,
+     "dash": true
+    },
+    {
+     "op": "line",
+     "id": "simpv2",
+     "x1": 700,
+     "y1": 500,
+     "x2": 700,
+     "y2": 720,
+     "color": "gray",
+     "width": 3,
+     "dash": true
+    },
+    {
+     "op": "write",
+     "id": "simq2",
+     "x": 700,
+     "y": 735,
+     "text": "Q2",
+     "size": 32,
+     "anchor": "middle"
+    },
+    {
+     "op": "write",
+     "id": "simshiftnote",
+     "x": 1200,
+     "y": 430,
+     "text": "Same price P,\nbut buyers now\nwant Q2, not Q1.",
+     "size": 30,
+     "color": "green"
+    }
+   ]
+  }
+ ]
+}

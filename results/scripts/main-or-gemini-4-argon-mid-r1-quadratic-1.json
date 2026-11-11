@@ -1,0 +1,286 @@
+{
+ "title": "Solving x² − 5x + 6 = 0",
+ "lang": "en",
+ "steps": [
+  {
+   "title": "The Equation",
+   "say": "Let's solve the quadratic equation x squared minus 5x plus 6 equals 0.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "main_title",
+     "x": 80,
+     "y": 60,
+     "text": "Solve: x² − 5x + 6 = 0",
+     "size": 56,
+     "color": "ink",
+     "underline": true
+    },
+    {
+     "op": "write",
+     "id": "eq_box_txt",
+     "x": 80,
+     "y": 160,
+     "text": "Standard form: ax² + bx + c = 0",
+     "size": 34,
+     "color": "gray"
+    }
+   ]
+  },
+  {
+   "title": "Try the Quadratic Formula",
+   "say": "First, we could try using the quadratic formula by identifying a, b, and c.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "qf_title",
+     "x": 80,
+     "y": 260,
+     "text": "Method 1: Quadratic Formula",
+     "size": 42,
+     "color": "blue"
+    },
+    {
+     "op": "write",
+     "id": "qf_abc",
+     "x": 80,
+     "y": 330,
+     "text": "a = 1,   b = −5,   c = 6",
+     "size": 38,
+     "color": "ink"
+    },
+    {
+     "op": "write",
+     "id": "qf_form",
+     "x": 80,
+     "y": 410,
+     "text": "x = [ −b ± √(b² − 4ac) ] / 2a",
+     "size": 38,
+     "color": "gray"
+    },
+    {
+     "op": "write",
+     "id": "qf_sub",
+     "x": 80,
+     "y": 490,
+     "text": "x = [ −(−5) ± √((−5)² − 4(1)(6)) ] / 2(1)",
+     "size": 38,
+     "color": "ink"
+    }
+   ]
+  },
+  {
+   "title": "Pause and Rethink",
+   "say": "Wait a second—this arithmetic is getting a bit clunky for such simple numbers. Let's switch to a faster method!",
+   "ops": [
+    {
+     "op": "line",
+     "id": "strike1",
+     "x1": 70,
+     "y1": 510,
+     "x2": 900,
+     "y2": 510,
+     "color": "red",
+     "width": 4
+    },
+    {
+     "op": "write",
+     "id": "wait_note",
+     "x": 940,
+     "y": 485,
+     "text": "Too much work! Let's factor instead.",
+     "size": 34,
+     "color": "red"
+    }
+   ]
+  },
+  {
+   "title": "Switch to Factoring",
+   "say": "Let's erase the formula and factor the trinomial directly. We just need two numbers that multiply to 6 and add to negative 5.",
+   "ops": [
+    {
+     "op": "erase",
+     "ids": [
+      "qf_title",
+      "qf_abc",
+      "qf_form",
+      "qf_sub",
+      "strike1",
+      "wait_note"
+     ]
+    },
+    {
+     "op": "write",
+     "id": "m2_title",
+     "x": 80,
+     "y": 260,
+     "text": "Method 2: Factoring (Much Simpler!)",
+     "size": 42,
+     "color": "green"
+    },
+    {
+     "op": "write",
+     "id": "puzzle_title",
+     "x": 900,
+     "y": 260,
+     "text": "Find two numbers:",
+     "size": 38,
+     "color": "blue"
+    },
+    {
+     "op": "rect",
+     "id": "puzzle_box",
+     "x": 880,
+     "y": 320,
+     "w": 560,
+     "h": 180,
+     "color": "blue",
+     "fill": "blue"
+    },
+    {
+     "op": "write",
+     "id": "p_mult",
+     "x": 910,
+     "y": 350,
+     "text": "• Multiply to  c = +6",
+     "size": 36,
+     "color": "ink"
+    },
+    {
+     "op": "write",
+     "id": "p_add",
+     "x": 910,
+     "y": 420,
+     "text": "• Add up to   b = −5",
+     "size": 36,
+     "color": "ink"
+    }
+   ]
+  },
+  {
+   "title": "Find the Factors",
+   "say": "Since the product is positive and the sum is negative, both numbers must be negative. Negative 2 and negative 3 work perfectly!",
+   "ops": [
+    {
+     "op": "write",
+     "id": "try_nums",
+     "x": 880,
+     "y": 540,
+     "text": "Try −2 and −3:",
+     "size": 36,
+     "color": "blue"
+    },
+    {
+     "op": "write",
+     "id": "chk_mult",
+     "x": 910,
+     "y": 600,
+     "text": "(−2) × (−3) = +6   ✓",
+     "size": 36,
+     "color": "green"
+    },
+    {
+     "op": "write",
+     "id": "chk_add",
+     "x": 910,
+     "y": 660,
+     "text": "(−2) + (−3) = −5   ✓",
+     "size": 36,
+     "color": "green"
+    },
+    {
+     "op": "write",
+     "id": "factored_eq",
+     "x": 80,
+     "y": 360,
+     "text": "(x − 2)(x − 3) = 0",
+     "size": 44,
+     "color": "ink"
+    },
+    {
+     "op": "line",
+     "id": "arr_factor",
+     "x1": 860,
+     "y1": 600,
+     "x2": 480,
+     "y2": 390,
+     "color": "green",
+     "width": 4,
+     "arrow": true,
+     "dash": true
+    }
+   ]
+  },
+  {
+   "title": "Zero Product Property",
+   "say": "Finally, set each factor to zero to get our two solutions: x equals 2, or x equals 3.",
+   "ops": [
+    {
+     "op": "erase",
+     "ids": [
+      "arr_factor"
+     ]
+    },
+    {
+     "op": "line",
+     "id": "split_l",
+     "x1": 160,
+     "y1": 420,
+     "x2": 120,
+     "y2": 490,
+     "color": "blue",
+     "width": 4,
+     "arrow": true
+    },
+    {
+     "op": "line",
+     "id": "split_r",
+     "x1": 310,
+     "y1": 420,
+     "x2": 350,
+     "y2": 490,
+     "color": "blue",
+     "width": 4,
+     "arrow": true
+    },
+    {
+     "op": "write",
+     "id": "sub_eq1",
+     "x": 70,
+     "y": 510,
+     "text": "x − 2 = 0",
+     "size": 38,
+     "color": "ink"
+    },
+    {
+     "op": "write",
+     "id": "sub_eq2",
+     "x": 300,
+     "y": 510,
+     "text": "x − 3 = 0",
+     "size": 38,
+     "color": "ink"
+    },
+    {
+     "op": "rect",
+     "id": "ans_box",
+     "x": 70,
+     "y": 600,
+     "w": 430,
+     "h": 100,
+     "color": "green",
+     "fill": "green"
+    },
+    {
+     "op": "write",
+     "id": "ans_txt",
+     "x": 95,
+     "y": 625,
+     "text": "x = 2   or   x = 3",
+     "size": 44,
+     "color": "ink"
+    }
+   ]
+  }
+ ]
+}

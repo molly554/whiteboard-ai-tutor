@@ -1,0 +1,18 @@
+{
+ "B04": {"content": 0, "match": 0, "layout": 2, "pedagogy": 0, "conf": "high", "note": "the Sun is drawn outside Earth's orbit; both Earth positions tilt the same way relative to the Sun, so summer vs winter is never shown; no title"},
+ "B09": {"content": 1, "match": 0, "layout": 2, "pedagogy": 1, "conf": "high", "note": "labels swapped: the Earth whose north end leans toward the Sun is labelled 'North: winter' and the other 'North: summer'"},
+ "B15": {"content": 1, "match": 0, "layout": 1, "pedagogy": 0, "conf": "low", "note": "statements correct but the figure never shows the Sun-Earth geometry; Sun drawn over the first sentence, labels crossed by arrows"},
+ "B22": {"content": 1, "match": 1, "layout": 1, "pedagogy": 1, "conf": "high", "note": "four positions, tilt and June/December labels consistent; top label crossed by an Earth; 'myth' line wording loose (distance does change slightly)"},
+ "B24": {"content": 1, "match": 1, "layout": 2, "pedagogy": 1, "conf": "high", "note": "June/December tilt consistent, plus direct vs low-angle panel and summary"},
+ "B36": {"content": 1, "match": 1, "layout": 2, "pedagogy": 1, "conf": "high", "note": "correct and clean but only the summer position is drawn; mentions closest in January"},
+ "B39": {"content": 0, "match": 0, "layout": 0, "pedagogy": 0, "conf": "high", "note": "every step title written on the same spot (illegible), text over the orbit, axis drawn vertical, an unexplained second red disc"},
+ "B43": {"content": 1, "match": 1, "layout": 2, "pedagogy": 1, "conf": "high", "note": "final board shows direct vs slanted rays and takeaway; orbit diagram was erased earlier (checked separately)"},
+ "B50": {"content": 1, "match": 1, "layout": 2, "pedagogy": 1, "conf": "high", "note": "single Sun-Earth view, final state shows north leaning away = winter, consistent (summer step checked separately)"},
+ "B55": {"content": 1, "match": 1, "layout": 2, "pedagogy": 1, "conf": "high", "note": "final board: two clean panels, toward vs away; orbit diagram erased earlier (checked separately)"},
+ "B03": {"content": 1, "match": 0, "layout": 1, "pedagogy": 1, "answers": 1, "placement": 1, "conf": "high", "note": "season labels swapped: 'North winter' put at the Earth leaning toward the Sun; one label crossed by the orbit; the distance facts were erased from the final board"},
+ "B17": {"content": 1, "match": 1, "layout": 2, "pedagogy": 1, "answers": 1, "placement": 0, "conf": "high", "note": "wiped the whole orbit diagram and drew a new zoomed Earth; correct and clean, answer about July given in narration only"},
+ "B20": {"content": 1, "match": 0, "layout": 0, "pedagogy": 1, "answers": 1, "placement": 0, "conf": "high", "note": "'Tilted toward Sun' label and rays placed at the Earth that leans away; two labels overprinted at the top; text runs across the orbit"},
+ "B23": {"content": 1, "match": 1, "layout": 0, "pedagogy": 1, "answers": 1, "placement": 0, "conf": "high", "note": "explanation and summer/winter labels correct, but new text and two empty boxes are drawn over existing text and the orbit"},
+ "B25": {"content": 1, "match": 0, "layout": 0, "pedagogy": 1, "answers": 1, "placement": 0, "conf": "high", "note": "June/December labels attached to the two positions where the axis leans neither toward nor away; two text blocks overprinted; bottom label runs off the board"},
+ "B44": {"content": 1, "match": 1, "layout": 2, "pedagogy": 1, "answers": 1, "placement": 0, "conf": "high", "note": "best answer: 147 vs 152 million km = 3%, then angle and day length; but it wiped the existing orbit diagram to do it"}
+}

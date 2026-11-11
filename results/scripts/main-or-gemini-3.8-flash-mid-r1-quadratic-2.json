@@ -1,0 +1,209 @@
+{
+ "title": "Solving x² − 5x + 6 = 0",
+ "lang": "en",
+ "steps": [
+  {
+   "title": "Problem Setup",
+   "say": "We want to solve x² − 5x + 6 = 0. Let's first identify the coefficients.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "title_main",
+     "x": 800,
+     "y": 60,
+     "text": "Solve: x² − 5x + 6 = 0",
+     "size": 52,
+     "anchor": "middle"
+    },
+    {
+     "op": "write",
+     "id": "eq_main",
+     "x": 100,
+     "y": 150,
+     "text": "x² − 5x + 6 = 0",
+     "size": 42
+    },
+    {
+     "op": "write",
+     "id": "eq_coeff",
+     "x": 100,
+     "y": 215,
+     "text": "a = 1,   b = −5,   c = 6",
+     "size": 32,
+     "color": "gray"
+    }
+   ]
+  },
+  {
+   "title": "Start with Quadratic Formula",
+   "say": "A standard approach is the quadratic formula, so we begin substituting our values.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "qf_title",
+     "x": 100,
+     "y": 300,
+     "text": "Method 1: Quadratic Formula",
+     "size": 34,
+     "color": "blue"
+    },
+    {
+     "op": "write",
+     "id": "qf_form",
+     "x": 100,
+     "y": 360,
+     "text": "x = [ −b ± √(b² − 4ac) ] / 2a",
+     "size": 34
+    },
+    {
+     "op": "write",
+     "id": "qf_sub",
+     "x": 100,
+     "y": 430,
+     "text": "x = [ 5 ± √( (−5)² − 4(1)(6) ) ] / 2",
+     "size": 34
+    }
+   ]
+  },
+  {
+   "title": "Pivot to a Simpler Method",
+   "say": "Wait! Calculating square roots here is unnecessary work. Since the leading coefficient is 1, factoring is much quicker.",
+   "ops": [
+    {
+     "op": "line",
+     "id": "qf_slash",
+     "x1": 80,
+     "y1": 450,
+     "x2": 660,
+     "y2": 450,
+     "color": "red",
+     "width": 4
+    },
+    {
+     "op": "write",
+     "id": "pivot_tag",
+     "x": 100,
+     "y": 510,
+     "text": "Wait — why use big formulas?",
+     "size": 32,
+     "color": "red"
+    },
+    {
+     "op": "line",
+     "id": "pivot_arrow",
+     "x1": 550,
+     "y1": 525,
+     "x2": 800,
+     "y2": 260,
+     "color": "red",
+     "width": 4,
+     "arrow": true
+    }
+   ]
+  },
+  {
+   "title": "Find Factors of 6",
+   "say": "We look for two numbers that multiply to 6 and add up to −5.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "f_title",
+     "x": 860,
+     "y": 150,
+     "text": "Method 2: Factoring (Much Faster)",
+     "size": 36,
+     "color": "green"
+    },
+    {
+     "op": "write",
+     "id": "f_rule1",
+     "x": 860,
+     "y": 225,
+     "text": "Product = 6",
+     "size": 32
+    },
+    {
+     "op": "write",
+     "id": "f_rule2",
+     "x": 860,
+     "y": 280,
+     "text": "Sum     = −5",
+     "size": 32
+    },
+    {
+     "op": "write",
+     "id": "f_find",
+     "x": 860,
+     "y": 350,
+     "text": "Numbers:  −2  and  −3",
+     "size": 36,
+     "color": "blue"
+    },
+    {
+     "op": "write",
+     "id": "f_check",
+     "x": 860,
+     "y": 415,
+     "text": "(−2) × (−3) = 6    and    (−2) + (−3) = −5  ✓",
+     "size": 28,
+     "color": "gray"
+    }
+   ]
+  },
+  {
+   "title": "Solve by Factoring",
+   "say": "We rewrite the equation as (x − 2)(x − 3) = 0, which immediately yields the two roots.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "f_eq",
+     "x": 860,
+     "y": 500,
+     "text": "(x − 2)(x − 3) = 0",
+     "size": 42
+    },
+    {
+     "op": "write",
+     "id": "f_sol1",
+     "x": 860,
+     "y": 580,
+     "text": "x − 2 = 0   ⇒   x = 2",
+     "size": 36
+    },
+    {
+     "op": "write",
+     "id": "f_sol2",
+     "x": 860,
+     "y": 645,
+     "text": "x − 3 = 0   ⇒   x = 3",
+     "size": 36
+    }
+   ]
+  },
+  {
+   "title": "Conclusion",
+   "say": "We get x = 2 or x = 3 in seconds, avoiding the arithmetic of the formula.",
+   "ops": [
+    {
+     "op": "rect",
+     "id": "box_ans",
+     "x": 840,
+     "y": 560,
+     "w": 440,
+     "h": 140,
+     "color": "green",
+     "width": 4
+    },
+    {
+     "op": "write",
+     "id": "f_tip",
+     "x": 860,
+     "y": 745,
+     "text": "Tip: Always check if you can factor before using the formula!",
+     "size": 30,
+     "color": "blue"
+    }
+   ]
+  }
+ ]
+}

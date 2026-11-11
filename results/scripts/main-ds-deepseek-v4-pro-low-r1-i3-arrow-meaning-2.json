@@ -1,0 +1,49 @@
+{
+ "title": "What does the green arrow mean?",
+ "lang": "en",
+ "steps": [
+  {
+   "title": "The arrow is a shift",
+   "say": "The green arrow does not mean movement along one demand curve. It means the whole demand curve has moved to the right.",
+   "ops": [
+    {
+     "op": "erase",
+     "ids": [
+      "note1",
+      "note2",
+      "note3"
+     ]
+    },
+    {
+     "op": "ellipse",
+     "id": "shiftarrow",
+     "cx": 340,
+     "cy": 262,
+     "rx": 165,
+     "ry": 48,
+     "color": "gray",
+     "width": 3,
+     "dash": true
+    },
+    {
+     "op": "write",
+     "id": "shiftnote",
+     "x": 1200,
+     "y": 210,
+     "text": "The green arrow = a shift\nof the whole demand curve,\nnot a move along it.",
+     "size": 30,
+     "color": "green"
+    },
+    {
+     "op": "write",
+     "id": "d1d2note",
+     "x": 1200,
+     "y": 350,
+     "text": "D1 → D2 means buyers\nwant more at every price.",
+     "size": 30,
+     "color": "red"
+    }
+   ]
+  }
+ ]
+}

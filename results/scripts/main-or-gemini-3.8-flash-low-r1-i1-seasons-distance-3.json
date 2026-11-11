@@ -1,0 +1,199 @@
+{
+ "title": "Why tilt beats distance",
+ "lang": "en",
+ "steps": [
+  {
+   "title": "Zoom in on July",
+   "say": "Yes, in July Earth is farthest from the Sun, but the North Pole tilts right toward it.",
+   "ops": [
+    {
+     "op": "rect",
+     "id": "box_left",
+     "x": 190,
+     "y": 480,
+     "w": 180,
+     "h": 220,
+     "color": "blue",
+     "dash": true,
+     "width": 3
+    },
+    {
+     "op": "write",
+     "id": "lbl_far",
+     "x": 200,
+     "y": 710,
+     "text": "July (aphelion):\nFarthest from Sun,\nNorth tilts IN",
+     "size": 28,
+     "color": "blue"
+    }
+   ]
+  },
+  {
+   "title": "Angle of sunlight",
+   "say": "Look at the beam of light hitting the Northern Hemisphere: direct rays concentrate the heat over a small area.",
+   "ops": [
+    {
+     "op": "erase",
+     "ids": [
+      "key"
+     ]
+    },
+    {
+     "op": "write",
+     "id": "factor1_title",
+     "x": 60,
+     "y": 125,
+     "text": "1. Angle of Sunlight",
+     "size": 38,
+     "color": "blue"
+    },
+    {
+     "op": "rect",
+     "id": "ground_direct",
+     "x": 60,
+     "y": 230,
+     "w": 260,
+     "h": 10,
+     "color": "ink",
+     "fill": "gray"
+    },
+    {
+     "op": "line",
+     "id": "beam_dir_1",
+     "x1": 130,
+     "y1": 170,
+     "x2": 130,
+     "y2": 230,
+     "color": "red",
+     "width": 4,
+     "arrow": true
+    },
+    {
+     "op": "line",
+     "id": "beam_dir_2",
+     "x1": 250,
+     "y1": 170,
+     "x2": 250,
+     "y2": 230,
+     "color": "red",
+     "width": 4,
+     "arrow": true
+    },
+    {
+     "op": "rect",
+     "id": "spot_direct",
+     "x": 130,
+     "y": 226,
+     "w": 120,
+     "h": 18,
+     "color": "red",
+     "fill": "red"
+    },
+    {
+     "op": "write",
+     "id": "direct_desc",
+     "x": 60,
+     "y": 255,
+     "text": "Direct rays:\nSmall area = Concentrated heat",
+     "size": 28
+    }
+   ]
+  },
+  {
+   "title": "Slanted light in winter",
+   "say": "In the Southern Hemisphere, the same beam spreads out thinly across the curved surface, staying cool.",
+   "ops": [
+    {
+     "op": "rect",
+     "id": "ground_slant",
+     "x": 520,
+     "y": 230,
+     "w": 360,
+     "h": 10,
+     "color": "ink",
+     "fill": "gray"
+    },
+    {
+     "op": "line",
+     "id": "beam_sl_1",
+     "x1": 490,
+     "y1": 170,
+     "x2": 580,
+     "y2": 230,
+     "color": "gray",
+     "width": 4,
+     "arrow": true
+    },
+    {
+     "op": "line",
+     "id": "beam_sl_2",
+     "x1": 690,
+     "y1": 170,
+     "x2": 780,
+     "y2": 230,
+     "color": "gray",
+     "width": 4,
+     "arrow": true
+    },
+    {
+     "op": "rect",
+     "id": "spot_slant",
+     "x": 580,
+     "y": 226,
+     "w": 200,
+     "h": 18,
+     "color": "gray",
+     "fill": "gray"
+    },
+    {
+     "op": "write",
+     "id": "slant_desc",
+     "x": 520,
+     "y": 255,
+     "text": "Slanted rays:\nWide area = Diluted, weaker heat",
+     "size": 28,
+     "color": "gray"
+    }
+   ]
+  },
+  {
+   "title": "Day length effect",
+   "say": "Tilting toward the Sun also means staying in daylight for over 15 hours, giving the land more time to warm up.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "factor2_title",
+     "x": 980,
+     "y": 125,
+     "text": "2. Daylight Hours",
+     "size": 38,
+     "color": "blue"
+    },
+    {
+     "op": "write",
+     "id": "factor2_desc",
+     "x": 980,
+     "y": 180,
+     "text": "Summer: 15+ hours of sun\n  → Long heating time\n\nWinter: only 8-9 hours\n  → Short heating time",
+     "size": 28
+    }
+   ]
+  },
+  {
+   "title": "Distance change is tiny",
+   "say": "Earth's orbit is nearly a circle. Distance varies by only 3 percent, completely dwarfed by the tilt effect.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "summary",
+     "x": 550,
+     "y": 820,
+     "text": "Distance changes by only ~3%, but tilt changes sun angle by ~47°!",
+     "size": 32,
+     "color": "red",
+     "anchor": "middle"
+    }
+   ]
+  }
+ ]
+}

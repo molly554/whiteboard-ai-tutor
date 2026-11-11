@@ -1,0 +1,229 @@
+{
+ "title": "Why We Have Seasons",
+ "lang": "en",
+ "steps": [
+  {
+   "title": "The question",
+   "say": "Seasons are not caused by Earth being closer to or farther from the Sun. They come from Earth's tilt.",
+   "ops": [
+    {
+     "id": "t1",
+     "x": 800,
+     "y": 50,
+     "text": "Why We Have Seasons",
+     "size": 56,
+     "anchor": "middle",
+     "color": "blue",
+     "op": "write",
+     "underline": true
+    },
+    {
+     "id": "t2",
+     "x": 800,
+     "y": 150,
+     "text": "Not distance, but TILT!",
+     "size": 40,
+     "anchor": "middle",
+     "color": "red",
+     "op": "write"
+    }
+   ]
+  },
+  {
+   "title": "Sun and orbit",
+   "say": "Earth travels around the Sun once a year in a nearly circular orbit.",
+   "ops": [
+    {
+     "id": "sun",
+     "op": "ellipse",
+     "cx": 800,
+     "cy": 560,
+     "rx": 70,
+     "ry": 70,
+     "color": "red",
+     "fill": "red"
+    },
+    {
+     "id": "sunl",
+     "op": "write",
+     "x": 800,
+     "y": 650,
+     "text": "Sun",
+     "size": 32,
+     "anchor": "middle"
+    },
+    {
+     "id": "orb",
+     "op": "ellipse",
+     "cx": 800,
+     "cy": 560,
+     "rx": 520,
+     "ry": 200,
+     "color": "gray",
+     "dash": true,
+     "width": 3
+    }
+   ]
+  },
+  {
+   "title": "Tilted Earth",
+   "say": "Earth's axis is tilted about 23.5 degrees, and it always points toward the same direction in space.",
+   "ops": [
+    {
+     "id": "e1",
+     "op": "ellipse",
+     "cx": 300,
+     "cy": 560,
+     "rx": 55,
+     "ry": 55,
+     "color": "blue",
+     "fill": "blue"
+    },
+    {
+     "id": "ax1",
+     "op": "line",
+     "x1": 270,
+     "y1": 640,
+     "x2": 330,
+     "y2": 480,
+     "color": "ink",
+     "width": 5
+    },
+    {
+     "id": "tl",
+     "op": "write",
+     "x": 150,
+     "y": 330,
+     "text": "Axis tilt 23.5°",
+     "size": 34,
+     "color": "ink"
+    }
+   ]
+  },
+  {
+   "title": "Same tilt, other side",
+   "say": "Half a year later, on the opposite side of the Sun, the axis still points the same way.",
+   "ops": [
+    {
+     "id": "e2",
+     "op": "ellipse",
+     "cx": 1300,
+     "cy": 560,
+     "rx": 55,
+     "ry": 55,
+     "color": "blue",
+     "fill": "blue"
+    },
+    {
+     "id": "ax2",
+     "op": "line",
+     "x1": 1270,
+     "y1": 640,
+     "x2": 1330,
+     "y2": 480,
+     "color": "ink",
+     "width": 5
+    },
+    {
+     "id": "same",
+     "op": "write",
+     "x": 1100,
+     "y": 330,
+     "text": "Same direction!",
+     "size": 34,
+     "color": "ink"
+    }
+   ]
+  },
+  {
+   "title": "June: north leans in",
+   "say": "When the northern half leans toward the Sun, sunlight hits it more directly and days are longer, so it is summer there.",
+   "ops": [
+    {
+     "id": "l1",
+     "op": "line",
+     "x1": 880,
+     "y1": 520,
+     "x2": 1210,
+     "y2": 530,
+     "color": "red",
+     "arrow": true,
+     "width": 4
+    },
+    {
+     "id": "l2",
+     "op": "line",
+     "x1": 880,
+     "y1": 590,
+     "x2": 1210,
+     "y2": 590,
+     "color": "red",
+     "arrow": true,
+     "width": 4
+    },
+    {
+     "id": "n1",
+     "op": "write",
+     "x": 1130,
+     "y": 740,
+     "text": "North: summer",
+     "size": 36,
+     "color": "green"
+    }
+   ]
+  },
+  {
+   "title": "December: north leans away",
+   "say": "On the other side of the orbit the northern half leans away, so light is slanted and weaker, and days are shorter. That is winter.",
+   "ops": [
+    {
+     "id": "l3",
+     "op": "line",
+     "x1": 720,
+     "y1": 520,
+     "x2": 390,
+     "y2": 530,
+     "color": "red",
+     "arrow": true,
+     "width": 4
+    },
+    {
+     "id": "l4",
+     "op": "line",
+     "x1": 720,
+     "y1": 590,
+     "x2": 390,
+     "y2": 590,
+     "color": "red",
+     "arrow": true,
+     "width": 4
+    },
+    {
+     "id": "n2",
+     "op": "write",
+     "x": 150,
+     "y": 740,
+     "text": "North: winter",
+     "size": 36,
+     "color": "blue"
+    }
+   ]
+  },
+  {
+   "title": "Summary",
+   "say": "So seasons come from Earth's tilt: direct light and long days bring summer, slanted light and short days bring winter.",
+   "ops": [
+    {
+     "id": "sum",
+     "op": "write",
+     "x": 800,
+     "y": 230,
+     "text": "Tilt → direct vs slanted sunlight → seasons",
+     "size": 40,
+     "anchor": "middle",
+     "color": "green"
+    }
+   ]
+  }
+ ]
+}

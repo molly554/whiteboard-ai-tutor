@@ -1,0 +1,208 @@
+{
+ "title": "光合作用的场所",
+ "lang": "zh",
+ "steps": [
+  {
+   "title": "写下标题",
+   "say": "我们要回答：光合作用发生在细胞的哪个部分？",
+   "ops": [
+    {
+     "op": "write",
+     "id": "t1",
+     "x": 800,
+     "y": 40,
+     "text": "光合作用发生在哪里？",
+     "size": 56,
+     "anchor": "middle",
+     "underline": true
+    }
+   ]
+  },
+  {
+   "title": "画出植物细胞",
+   "say": "先画一个植物细胞，光合作用主要在它的叶绿体里完成。",
+   "ops": [
+    {
+     "op": "rect",
+     "id": "cell",
+     "x": 120,
+     "y": 170,
+     "w": 760,
+     "h": 600,
+     "color": "gray",
+     "width": 5
+    },
+    {
+     "op": "write",
+     "id": "cellLbl",
+     "x": 140,
+     "y": 185,
+     "text": "植物细胞",
+     "size": 32,
+     "color": "gray"
+    },
+    {
+     "op": "ellipse",
+     "id": "chl",
+     "cx": 400,
+     "cy": 470,
+     "rx": 220,
+     "ry": 130,
+     "color": "green",
+     "width": 5
+    },
+    {
+     "op": "write",
+     "id": "chlLbl",
+     "x": 920,
+     "y": 380,
+     "text": "叶绿体",
+     "size": 36,
+     "color": "green"
+    },
+    {
+     "op": "line",
+     "id": "chlArrow",
+     "x1": 915,
+     "y1": 395,
+     "x2": 615,
+     "y2": 460,
+     "color": "green",
+     "width": 4,
+     "arrow": true
+    }
+   ]
+  },
+  {
+   "title": "标出类囊体",
+   "say": "叶绿体内部有许多堆叠的类囊体，形成基粒。",
+   "ops": [
+    {
+     "op": "ellipse",
+     "id": "g1",
+     "cx": 300,
+     "cy": 430,
+     "rx": 70,
+     "ry": 26,
+     "color": "green",
+     "width": 4,
+     "fill": "green"
+    },
+    {
+     "op": "ellipse",
+     "id": "g2",
+     "cx": 440,
+     "cy": 380,
+     "rx": 70,
+     "ry": 26,
+     "color": "green",
+     "width": 4,
+     "fill": "green"
+    },
+    {
+     "op": "ellipse",
+     "id": "g3",
+     "cx": 360,
+     "cy": 520,
+     "rx": 70,
+     "ry": 26,
+     "color": "green",
+     "width": 4,
+     "fill": "green"
+    },
+    {
+     "op": "write",
+     "id": "thyLbl",
+     "x": 920,
+     "y": 240,
+     "text": "类囊体（基粒）",
+     "size": 36,
+     "color": "blue"
+    },
+    {
+     "op": "line",
+     "id": "thyArrow",
+     "x1": 915,
+     "y1": 262,
+     "x2": 515,
+     "y2": 370,
+     "color": "blue",
+     "width": 4,
+     "arrow": true
+    }
+   ]
+  },
+  {
+   "title": "标出基质",
+   "say": "类囊体之间的液体部分叫叶绿体基质。",
+   "ops": [
+    {
+     "op": "write",
+     "id": "strLbl",
+     "x": 920,
+     "y": 520,
+     "text": "叶绿体基质",
+     "size": 36,
+     "color": "green"
+    },
+    {
+     "op": "line",
+     "id": "strArrow",
+     "x1": 915,
+     "y1": 535,
+     "x2": 525,
+     "y2": 500,
+     "color": "green",
+     "width": 4,
+     "arrow": true
+    }
+   ]
+  },
+  {
+   "title": "光反应的位置",
+   "say": "光能被吸收并转化的过程，在类囊体薄膜上进行。",
+   "ops": [
+    {
+     "op": "write",
+     "id": "lightTxt",
+     "x": 920,
+     "y": 630,
+     "text": "光反应：吸收光能\n在类囊体薄膜上进行",
+     "size": 32,
+     "color": "blue"
+    }
+   ]
+  },
+  {
+   "title": "暗反应的位置",
+   "say": "利用光反应的产物合成有机物的过程，在基质中进行。",
+   "ops": [
+    {
+     "op": "write",
+     "id": "darkTxt",
+     "x": 920,
+     "y": 760,
+     "text": "暗反应：合成有机物\n在叶绿体基质中进行",
+     "size": 32,
+     "color": "green"
+    }
+   ]
+  },
+  {
+   "title": "总结",
+   "say": "总结一下：光合作用的主要场所是叶绿体。",
+   "ops": [
+    {
+     "op": "write",
+     "id": "sum",
+     "x": 920,
+     "y": 130,
+     "text": "总结：主要场所是叶绿体",
+     "size": 34,
+     "color": "ink",
+     "underline": true
+    }
+   ]
+  }
+ ]
+}

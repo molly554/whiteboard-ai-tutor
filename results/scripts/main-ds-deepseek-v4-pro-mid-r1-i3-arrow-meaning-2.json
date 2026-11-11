@@ -1,0 +1,21 @@
+{
+ "title": "Explaining the arrow",
+ "lang": "en",
+ "steps": [
+  {
+   "title": "What the green arrow means",
+   "say": "The green arrow shows the direction of the shift: demand has increased, so the demand curve moves to the right from D1 to D2.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "arrowExplain",
+     "x": 450,
+     "y": 180,
+     "text": "More demand at every price\n→ demand curve shifts right",
+     "size": 30,
+     "color": "green"
+    }
+   ]
+  }
+ ]
+}

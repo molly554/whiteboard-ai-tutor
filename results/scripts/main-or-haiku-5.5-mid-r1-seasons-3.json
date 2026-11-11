@@ -1,0 +1,164 @@
+{
+ "title": "Why We Have Seasons",
+ "lang": "en",
+ "steps": [
+  {
+   "title": "Title",
+   "say": "Seasons come from how Earth is tilted, not from how far it is from the Sun.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "title",
+     "x": 800,
+     "y": 60,
+     "text": "Why We Have Seasons",
+     "size": 56,
+     "anchor": "middle",
+     "underline": true
+    }
+   ]
+  },
+  {
+   "title": "The Sun and Earth",
+   "say": "The Sun is on the left and Earth is on the right.",
+   "ops": [
+    {
+     "op": "ellipse",
+     "id": "sun",
+     "cx": 300,
+     "cy": 450,
+     "rx": 80,
+     "ry": 80,
+     "color": "red",
+     "fill": "red"
+    },
+    {
+     "op": "write",
+     "id": "sun_lbl",
+     "x": 300,
+     "y": 560,
+     "text": "Sun",
+     "size": 36,
+     "anchor": "middle"
+    },
+    {
+     "op": "ellipse",
+     "id": "earth",
+     "cx": 1000,
+     "cy": 450,
+     "rx": 90,
+     "ry": 90,
+     "color": "blue",
+     "fill": "blue"
+    },
+    {
+     "op": "write",
+     "id": "earth_lbl",
+     "x": 1000,
+     "y": 600,
+     "text": "Earth",
+     "size": 36,
+     "anchor": "middle"
+    }
+   ]
+  },
+  {
+   "title": "Earth's tilted axis",
+   "say": "Earth's axis is tilted about 23.5 degrees, and it stays pointed the same way all year.",
+   "ops": [
+    {
+     "op": "line",
+     "id": "axis",
+     "x1": 948,
+     "y1": 331,
+     "x2": 1052,
+     "y2": 569,
+     "color": "gray",
+     "width": 4,
+     "dash": "8 6"
+    },
+    {
+     "op": "write",
+     "id": "axis_lbl",
+     "x": 1090,
+     "y": 300,
+     "text": "Tilted axis 23.5°",
+     "size": 32,
+     "color": "gray"
+    }
+   ]
+  },
+  {
+   "title": "Sunlight",
+   "say": "Sunlight travels across space to reach Earth.",
+   "ops": [
+    {
+     "op": "line",
+     "id": "ray",
+     "x1": 400,
+     "y1": 450,
+     "x2": 905,
+     "y2": 450,
+     "color": "red",
+     "width": 5,
+     "arrow": true
+    },
+    {
+     "op": "write",
+     "id": "ray_lbl",
+     "x": 650,
+     "y": 400,
+     "text": "Sunlight",
+     "size": 32,
+     "anchor": "middle",
+     "color": "red"
+    }
+   ]
+  },
+  {
+   "title": "Northern summer",
+   "say": "When the north leans toward the Sun, sunlight hits it more directly and the days are longer.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "summer",
+     "x": 100,
+     "y": 660,
+     "text": "Summer (North): tilted toward Sun, direct rays",
+     "size": 34,
+     "color": "blue"
+    }
+   ]
+  },
+  {
+   "title": "Northern winter",
+   "say": "Six months later the north leans away, so the rays are spread out and the days are shorter.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "winter",
+     "x": 100,
+     "y": 720,
+     "text": "Winter (North): tilted away, slanted rays",
+     "size": 34,
+     "color": "red"
+    }
+   ]
+  },
+  {
+   "title": "Not distance",
+   "say": "Earth is actually closest to the Sun in January, so distance is not the cause.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "note",
+     "x": 100,
+     "y": 780,
+     "text": "Not distance: Earth is closest to Sun in January!",
+     "size": 34,
+     "color": "gray"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,55 @@
+{
+  "title": "Why does a² + b² = c² work?",
+  "lang": "en",
+  "steps": [
+    {
+      "title": "A right triangle",
+      "say": "Take any right triangle. Its two short sides are a and b, and the long side is c.",
+      "ops": [
+        { "op": "write", "id": "title", "x": 60, "y": 40, "text": "Why does a² + b² = c² work?", "size": 56, "underline": true },
+        { "op": "path", "id": "tri", "d": "M 100 720 L 380 720 L 100 510 Z", "color": "blue", "width": 5 },
+        { "op": "write", "id": "lb", "x": 240, "y": 735, "text": "b", "size": 36, "anchor": "middle" },
+        { "op": "write", "id": "la", "x": 60, "y": 590, "text": "a", "size": 36, "anchor": "middle" },
+        { "op": "write", "id": "lc", "x": 264, "y": 560, "text": "c", "size": 36, "anchor": "middle" }
+      ]
+    },
+    {
+      "title": "Build a big square",
+      "say": "Place four copies of the triangle inside a big square with side a + b. The tilted shape in the middle has side c.",
+      "ops": [
+        { "op": "rect", "id": "bigsq", "x": 100, "y": 230, "w": 490, "h": 490, "color": "ink", "width": 5 },
+        { "op": "path", "id": "inner", "d": "M 310 230 L 590 440 L 380 720 L 100 510 Z", "color": "red", "width": 5, "fill": "red" },
+        { "op": "write", "id": "csq", "x": 345, "y": 440, "text": "c²", "size": 52, "anchor": "middle", "color": "red" },
+        { "op": "write", "id": "cap1", "x": 100, "y": 160, "text": "4 triangles + a tilted square of side c", "size": 34 }
+      ]
+    },
+    {
+      "title": "Rearrange the same triangles",
+      "say": "Now rearrange the same four triangles inside an identical big square. The leftover space is two squares: one with area b², one with area a².",
+      "ops": [
+        { "op": "write", "id": "cap2", "x": 800, "y": 160, "text": "Rearrange the same 4 triangles:", "size": 34 },
+        { "op": "rect", "id": "bigsq2", "x": 800, "y": 230, "w": 490, "h": 490, "color": "ink", "width": 5 },
+        { "op": "line", "id": "v1", "x1": 1080, "y1": 230, "x2": 1080, "y2": 720, "color": "gray", "width": 4 },
+        { "op": "line", "id": "h1", "x1": 800, "y1": 510, "x2": 1290, "y2": 510, "color": "gray", "width": 4 },
+        { "op": "line", "id": "d1", "x1": 1080, "y1": 230, "x2": 1290, "y2": 510, "color": "blue", "width": 5 },
+        { "op": "line", "id": "d2", "x1": 800, "y1": 510, "x2": 1080, "y2": 720, "color": "blue", "width": 5 },
+        { "op": "write", "id": "bsq", "x": 940, "y": 350, "text": "b²", "size": 52, "anchor": "middle", "color": "blue" },
+        { "op": "write", "id": "asq", "x": 1185, "y": 590, "text": "a²", "size": 52, "anchor": "middle", "color": "red" }
+      ]
+    },
+    {
+      "title": "Compare the areas",
+      "say": "Both big squares have the same side a + b, so they have the same area, and both contain the same four triangles.",
+      "ops": [
+        { "op": "write", "id": "same", "x": 300, "y": 748, "text": "Both squares have area (a+b)² and hold the same 4 triangles.", "size": 34 }
+      ]
+    },
+    {
+      "title": "What is left must match",
+      "say": "Take the four triangles away from both squares. What remains must be equal: c² on the left, a² + b² on the right.",
+      "ops": [
+        { "op": "write", "id": "eq", "x": 300, "y": 800, "text": "So  c² = a² + b²", "size": 56, "color": "red", "underline": true }
+      ]
+    }
+  ]
+}

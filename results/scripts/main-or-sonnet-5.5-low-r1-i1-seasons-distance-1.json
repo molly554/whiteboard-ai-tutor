@@ -1,0 +1,176 @@
+{
+ "title": "Distance vs. tilt",
+ "lang": "en",
+ "steps": [
+  {
+   "title": "Yes, you're right",
+   "say": "Good catch: in northern summer, around July, Earth is actually farther from the Sun. So distance cannot be the cause.",
+   "ops": [
+    {
+     "op": "erase",
+     "ids": [
+      "key",
+      "orbitlabel"
+     ]
+    },
+    {
+     "op": "write",
+     "id": "yes",
+     "x": 60,
+     "y": 128,
+     "text": "Yes! In July Earth is farthest from the Sun,\nyet the north is hot. Distance isn't the cause.",
+     "size": 36,
+     "color": "red"
+    },
+    {
+     "op": "write",
+     "id": "jan",
+     "x": 1000,
+     "y": 330,
+     "text": "January: closest",
+     "size": 30,
+     "color": "gray"
+    },
+    {
+     "op": "write",
+     "id": "jul",
+     "x": 1000,
+     "y": 820,
+     "text": "July: farthest",
+     "size": 30,
+     "color": "gray"
+    }
+   ]
+  },
+  {
+   "title": "What tilt changes",
+   "say": "The tilt decides how directly sunlight hits each half of Earth. A direct hit is concentrated, a slanted hit is spread thin.",
+   "ops": [
+    {
+     "op": "erase",
+     "ids": [
+      "yes",
+      "jan",
+      "jul"
+     ]
+    },
+    {
+     "op": "write",
+     "id": "tiltnote",
+     "x": 60,
+     "y": 128,
+     "text": "Tilt changes the angle of sunlight,\nnot the distance.",
+     "size": 36,
+     "color": "blue"
+    }
+   ]
+  },
+  {
+   "title": "Direct vs. slanted light",
+   "say": "Here, light hitting straight on warms a small patch strongly. Slanted light spreads over a larger patch, so it warms less.",
+   "ops": [
+    {
+     "op": "erase",
+     "region": {
+      "x": 0,
+      "y": 330,
+      "w": 1600,
+      "h": 570
+     }
+    },
+    {
+     "op": "line",
+     "id": "ground",
+     "x1": 160,
+     "y1": 780,
+     "x2": 700,
+     "y2": 780,
+     "width": 5
+    },
+    {
+     "op": "line",
+     "id": "d1",
+     "x1": 330,
+     "y1": 420,
+     "x2": 330,
+     "y2": 770,
+     "color": "red",
+     "arrow": true
+    },
+    {
+     "op": "line",
+     "id": "d2",
+     "x1": 530,
+     "y1": 420,
+     "x2": 530,
+     "y2": 770,
+     "color": "red",
+     "arrow": true
+    },
+    {
+     "op": "write",
+     "id": "dlabel",
+     "x": 430,
+     "y": 340,
+     "text": "Direct: concentrated, hot",
+     "size": 30,
+     "anchor": "middle"
+    },
+    {
+     "op": "line",
+     "id": "ground2",
+     "x1": 900,
+     "y1": 780,
+     "x2": 1500,
+     "y2": 780,
+     "width": 5
+    },
+    {
+     "op": "line",
+     "id": "s1",
+     "x1": 1000,
+     "y1": 420,
+     "x2": 1130,
+     "y2": 770,
+     "color": "red",
+     "arrow": true
+    },
+    {
+     "op": "line",
+     "id": "s2",
+     "x1": 1200,
+     "y1": 420,
+     "x2": 1330,
+     "y2": 770,
+     "color": "red",
+     "arrow": true
+    },
+    {
+     "op": "write",
+     "id": "slabel",
+     "x": 1200,
+     "y": 340,
+     "text": "Slanted: spread out, cooler",
+     "size": 30,
+     "anchor": "middle"
+    }
+   ]
+  },
+  {
+   "title": "Summary",
+   "say": "In northern summer the north tilts toward the Sun, so light is more direct and days are longer. That beats the small extra distance.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "sum",
+     "x": 800,
+     "y": 840,
+     "text": "Summer = tilted toward the Sun: direct light + long days",
+     "size": 36,
+     "color": "green",
+     "anchor": "middle"
+    }
+   ]
+  }
+ ]
+}

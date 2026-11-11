@@ -1,0 +1,165 @@
+{
+ "title": "Why does price rise when demand rises?",
+ "lang": "en",
+ "steps": [
+  {
+   "title": "Hold the price steady",
+   "say": "Sure! Let's clear the notes and look at just one fixed price, P1.",
+   "ops": [
+    {
+     "op": "erase",
+     "ids": [
+      "d2",
+      "d2lab",
+      "shift",
+      "shiftlab",
+      "note1",
+      "note2",
+      "note3"
+     ]
+    },
+    {
+     "op": "write",
+     "id": "ex1",
+     "x": 1140,
+     "y": 200,
+     "text": "Example: Cold vs Hot Day\nKeep price fixed at P1 ($2)",
+     "size": 32,
+     "color": "ink"
+    }
+   ]
+  },
+  {
+   "title": "More buyers at the same price",
+   "say": "On a hot day, at that exact same two-dollar price, people suddenly want more cups—from Q1 out to Q-hot.",
+   "ops": [
+    {
+     "op": "line",
+     "id": "p1ext",
+     "x1": 580,
+     "y1": 470,
+     "x2": 740,
+     "y2": 470,
+     "color": "red",
+     "width": 4,
+     "arrow": true
+    },
+    {
+     "op": "ellipse",
+     "id": "ehot",
+     "cx": 740,
+     "cy": 470,
+     "rx": 9,
+     "ry": 9,
+     "color": "red",
+     "fill": "red"
+    },
+    {
+     "op": "line",
+     "id": "qhotv",
+     "x1": 740,
+     "y1": 470,
+     "x2": 740,
+     "y2": 720,
+     "color": "gray",
+     "width": 3,
+     "dash": true
+    },
+    {
+     "op": "write",
+     "id": "qhot",
+     "x": 740,
+     "y": 735,
+     "text": "Q_hot",
+     "size": 32,
+     "anchor": "middle",
+     "color": "red"
+    },
+    {
+     "op": "write",
+     "id": "ex2",
+     "x": 1140,
+     "y": 310,
+     "text": "• Cold day: want Q1 (50 cups)\n• Hot day: want Q_hot (80 cups)\nSame price, more quantity →\npoints move RIGHT!",
+     "size": 28,
+     "color": "red"
+    }
+   ]
+  },
+  {
+   "title": "Every price shifts right",
+   "say": "This happens at every price, creating the new line D2. At P1 there is now a shortage, so sellers raise the price to P2!",
+   "ops": [
+    {
+     "op": "line",
+     "id": "d2new",
+     "x1": 420,
+     "y1": 300,
+     "x2": 1060,
+     "y2": 640,
+     "color": "red",
+     "width": 5
+    },
+    {
+     "op": "write",
+     "id": "d2labnew",
+     "x": 1075,
+     "y": 625,
+     "text": "D2",
+     "size": 34,
+     "color": "red"
+    },
+    {
+     "op": "ellipse",
+     "id": "e2",
+     "cx": 660,
+     "cy": 428,
+     "rx": 9,
+     "ry": 9,
+     "color": "green",
+     "fill": "green"
+    },
+    {
+     "op": "line",
+     "id": "e2h",
+     "x1": 200,
+     "y1": 428,
+     "x2": 660,
+     "y2": 428,
+     "color": "gray",
+     "width": 3,
+     "dash": true
+    },
+    {
+     "op": "write",
+     "id": "p2",
+     "x": 130,
+     "y": 405,
+     "text": "P2",
+     "size": 32,
+     "anchor": "middle",
+     "color": "green"
+    },
+    {
+     "op": "line",
+     "id": "pup",
+     "x1": 130,
+     "y1": 445,
+     "x2": 130,
+     "y2": 438,
+     "color": "green",
+     "width": 3
+    },
+    {
+     "op": "write",
+     "id": "ex3",
+     "x": 1140,
+     "y": 500,
+     "text": "At P1: Buyers want 80,\nsellers only have 50.\nShortage! Price rises\nto P2 where they meet.",
+     "size": 30,
+     "color": "green"
+    }
+   ]
+  }
+ ]
+}

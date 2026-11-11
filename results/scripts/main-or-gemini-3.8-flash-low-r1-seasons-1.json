@@ -1,0 +1,258 @@
+{
+ "title": "Why Do We Have Seasons?",
+ "lang": "en",
+ "steps": [
+  {
+   "title": "Topic & Common Myth",
+   "say": "Many people think seasons are caused by Earth getting closer to or farther from the Sun, but that is actually a myth.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "t_main",
+     "x": 800,
+     "y": 50,
+     "text": "Why Do We Have Seasons?",
+     "size": 52,
+     "anchor": "middle"
+    },
+    {
+     "op": "write",
+     "id": "myth_txt",
+     "x": 800,
+     "y": 120,
+     "text": "Common Myth: Earth's distance to the Sun changes",
+     "size": 32,
+     "color": "gray",
+     "anchor": "middle"
+    },
+    {
+     "op": "line",
+     "id": "myth_cross",
+     "x1": 420,
+     "y1": 138,
+     "x2": 1180,
+     "y2": 138,
+     "color": "red",
+     "width": 4
+    }
+   ]
+  },
+  {
+   "title": "The Real Cause: Axial Tilt",
+   "say": "The real reason is Earth's axial tilt. Earth spins tilted at about 23.5 degrees relative to its orbital plane.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "cause_txt",
+     "x": 800,
+     "y": 170,
+     "text": "The Real Cause: Axial Tilt (23.5°)",
+     "size": 36,
+     "color": "blue",
+     "anchor": "middle"
+    },
+    {
+     "op": "ellipse",
+     "id": "sun_body",
+     "cx": 800,
+     "cy": 510,
+     "rx": 70,
+     "ry": 70,
+     "color": "red",
+     "fill": "red"
+    },
+    {
+     "op": "write",
+     "id": "sun_lbl",
+     "x": 800,
+     "y": 492,
+     "text": "Sun",
+     "size": 36,
+     "color": "ink",
+     "anchor": "middle"
+    },
+    {
+     "op": "ellipse",
+     "id": "orbit_path",
+     "cx": 800,
+     "cy": 510,
+     "rx": 520,
+     "ry": 230,
+     "color": "gray",
+     "width": 3,
+     "dash": true
+    }
+   ]
+  },
+  {
+   "title": "Earth in June (Northern Summer)",
+   "say": "In June, the Northern Hemisphere tilts toward the Sun, receiving direct sunlight and experiencing summer.",
+   "ops": [
+    {
+     "op": "ellipse",
+     "id": "earth_jun",
+     "cx": 280,
+     "cy": 510,
+     "rx": 48,
+     "ry": 48,
+     "color": "blue",
+     "fill": "blue"
+    },
+    {
+     "op": "line",
+     "id": "axis_jun",
+     "x1": 255,
+     "y1": 435,
+     "x2": 305,
+     "y2": 585,
+     "color": "ink",
+     "width": 4
+    },
+    {
+     "op": "write",
+     "id": "jun_pole",
+     "x": 250,
+     "y": 405,
+     "text": "North Tilt",
+     "size": 28,
+     "color": "ink",
+     "anchor": "middle"
+    },
+    {
+     "op": "write",
+     "id": "jun_hdr",
+     "x": 280,
+     "y": 605,
+     "text": "JUNE",
+     "size": 34,
+     "color": "ink",
+     "anchor": "middle"
+    },
+    {
+     "op": "write",
+     "id": "jun_desc",
+     "x": 280,
+     "y": 650,
+     "text": "North: Summer (Direct light)\nSouth: Winter (Slanted light)",
+     "size": 28,
+     "color": "ink",
+     "anchor": "middle"
+    },
+    {
+     "op": "line",
+     "id": "ray_jun",
+     "x1": 710,
+     "y1": 510,
+     "x2": 350,
+     "y2": 510,
+     "color": "red",
+     "width": 3,
+     "arrow": true
+    }
+   ]
+  },
+  {
+   "title": "Earth in December (Northern Winter)",
+   "say": "Six months later in December, the Northern Hemisphere tilts away, getting weaker, slanted light, which brings winter.",
+   "ops": [
+    {
+     "op": "ellipse",
+     "id": "earth_dec",
+     "cx": 1320,
+     "cy": 510,
+     "rx": 48,
+     "ry": 48,
+     "color": "blue",
+     "fill": "blue"
+    },
+    {
+     "op": "line",
+     "id": "axis_dec",
+     "x1": 1295,
+     "y1": 435,
+     "x2": 1345,
+     "y2": 585,
+     "color": "ink",
+     "width": 4
+    },
+    {
+     "op": "write",
+     "id": "dec_pole",
+     "x": 1290,
+     "y": 405,
+     "text": "North Tilt",
+     "size": 28,
+     "color": "ink",
+     "anchor": "middle"
+    },
+    {
+     "op": "write",
+     "id": "dec_hdr",
+     "x": 1320,
+     "y": 605,
+     "text": "DECEMBER",
+     "size": 34,
+     "color": "ink",
+     "anchor": "middle"
+    },
+    {
+     "op": "write",
+     "id": "dec_desc",
+     "x": 1320,
+     "y": 650,
+     "text": "North: Winter (Slanted light)\nSouth: Summer (Direct light)",
+     "size": 28,
+     "color": "ink",
+     "anchor": "middle"
+    },
+    {
+     "op": "line",
+     "id": "ray_dec",
+     "x1": 890,
+     "y1": 510,
+     "x2": 1250,
+     "y2": 510,
+     "color": "red",
+     "width": 3,
+     "arrow": true
+    }
+   ]
+  },
+  {
+   "title": "Direct vs. Slanted Sunlight",
+   "say": "Direct rays concentrate solar energy over a small area, warming it efficiently, while slanted rays spread the same energy over a larger area.",
+   "ops": [
+    {
+     "op": "rect",
+     "id": "box_summary",
+     "x": 420,
+     "y": 740,
+     "w": 760,
+     "h": 120,
+     "color": "green",
+     "width": 3
+    },
+    {
+     "op": "write",
+     "id": "sum_title",
+     "x": 800,
+     "y": 755,
+     "text": "Angle of Sunlight = Heat Intensity",
+     "size": 32,
+     "color": "green",
+     "anchor": "middle"
+    },
+    {
+     "op": "write",
+     "id": "sum_detail",
+     "x": 800,
+     "y": 795,
+     "text": "Steeper angle → concentrated heat & longer days (Summer)\nShallower angle → spread-out heat & shorter days (Winter)",
+     "size": 28,
+     "color": "ink",
+     "anchor": "middle"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,20 @@
+{
+ "mode": "continue",
+ "steps": [
+  {
+   "title": "What the green arrow means",
+   "say": "The green arrow shows the demand curve moving right, from D1 to D2. At every price, buyers now want more of the product.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "shiftexp",
+     "x": 460,
+     "y": 150,
+     "text": "Green arrow: the whole demand curve\nmoves right, from D1 to D2.\nAt every price, buyers want more.",
+     "size": 30,
+     "color": "green"
+    }
+   ]
+  }
+ ]
+}

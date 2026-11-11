@@ -1,0 +1,103 @@
+{
+ "title": "What the green arrow means",
+ "lang": "en",
+ "steps": [
+  {
+   "title": "The arrow",
+   "say": "The green arrow shows the demand curve moving to the right, from D1 to D2. It is a shift, not a movement along one curve.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "c1",
+     "x": 60,
+     "y": 800,
+     "text": "Arrow = the whole demand curve shifts right",
+     "size": 36,
+     "color": "green"
+    }
+   ]
+  },
+  {
+   "title": "Why right",
+   "say": "Right means more quantity demanded at every price. Buyers want more, perhaps because incomes rose or the product became popular.",
+   "ops": [
+    {
+     "op": "erase",
+     "ids": [
+      "note1",
+      "note2",
+      "note3"
+     ]
+    },
+    {
+     "op": "write",
+     "id": "n1",
+     "x": 1200,
+     "y": 250,
+     "text": "Shift right =\nmore wanted at\nevery price",
+     "size": 32,
+     "color": "green"
+    },
+    {
+     "op": "write",
+     "id": "n2",
+     "x": 1200,
+     "y": 420,
+     "text": "Causes: higher\nincome, trend,\nmore buyers",
+     "size": 30
+    }
+   ]
+  },
+  {
+   "title": "Compare",
+   "say": "At the old price P1, buyers now want more than sellers supply. That shortage pushes the price up to a new equilibrium.",
+   "ops": [
+    {
+     "op": "erase",
+     "ids": [
+      "c1"
+     ]
+    },
+    {
+     "op": "ellipse",
+     "id": "e2",
+     "cx": 670,
+     "cy": 420,
+     "rx": 9,
+     "ry": 9,
+     "color": "green",
+     "fill": "green"
+    },
+    {
+     "op": "line",
+     "id": "e2h",
+     "x1": 200,
+     "y1": 420,
+     "x2": 670,
+     "y2": 420,
+     "color": "gray",
+     "width": 3,
+     "dash": true
+    },
+    {
+     "op": "write",
+     "id": "p2",
+     "x": 130,
+     "y": 402,
+     "text": "P2",
+     "size": 32,
+     "anchor": "middle"
+    },
+    {
+     "op": "write",
+     "id": "c2",
+     "x": 60,
+     "y": 800,
+     "text": "Higher demand → price rises from P1 to P2",
+     "size": 36,
+     "color": "green"
+    }
+   ]
+  }
+ ]
+}

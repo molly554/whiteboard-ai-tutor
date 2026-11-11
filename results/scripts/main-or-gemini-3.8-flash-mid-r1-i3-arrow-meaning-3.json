@@ -1,0 +1,168 @@
+{
+ "title": "Understanding the Demand Shift",
+ "lang": "en",
+ "steps": [
+  {
+   "title": "What the shift means",
+   "say": "The arrow indicates that demand increased: at every single price, buyers now want to purchase a greater quantity.",
+   "ops": [
+    {
+     "op": "erase",
+     "ids": [
+      "note3"
+     ]
+    },
+    {
+     "op": "write",
+     "id": "arrow_def",
+     "x": 1200,
+     "y": 580,
+     "text": "Green arrow =\nAt ANY given price,\nconsumers now want\nto buy more goods.",
+     "size": 28,
+     "color": "green"
+    },
+    {
+     "op": "line",
+     "id": "d_jump",
+     "x1": 580,
+     "y1": 470,
+     "x2": 740,
+     "y2": 470,
+     "color": "green",
+     "width": 4,
+     "arrow": true
+    },
+    {
+     "op": "write",
+     "id": "d_jump_txt",
+     "x": 660,
+     "y": 485,
+     "text": "more wanted at P1",
+     "size": 26,
+     "anchor": "middle",
+     "color": "green"
+    }
+   ]
+  },
+  {
+   "title": "Shortage bids price up",
+   "say": "At the old price P1, buyers want more than sellers provide. This shortage causes buyers to compete and bid the price up.",
+   "ops": [
+    {
+     "op": "erase",
+     "ids": [
+      "d_jump_txt"
+     ]
+    },
+    {
+     "op": "write",
+     "id": "shortage_lbl",
+     "x": 660,
+     "y": 485,
+     "text": "Shortage at P1!",
+     "size": 26,
+     "anchor": "middle",
+     "color": "red"
+    },
+    {
+     "op": "line",
+     "id": "p_up_arr",
+     "x1": 90,
+     "y1": 470,
+     "x2": 90,
+     "y2": 420,
+     "color": "red",
+     "width": 4,
+     "arrow": true
+    },
+    {
+     "op": "write",
+     "id": "p_up_lbl",
+     "x": 80,
+     "y": 435,
+     "text": "Price\nrises",
+     "size": 24,
+     "anchor": "middle",
+     "color": "red"
+    }
+   ]
+  },
+  {
+   "title": "New equilibrium",
+   "say": "The market settles at the new intersection E2: the price rises to P2, and the quantity traded rises to Q2.",
+   "ops": [
+    {
+     "op": "erase",
+     "ids": [
+      "d_jump",
+      "shortage_lbl",
+      "p_up_arr",
+      "p_up_lbl",
+      "arrow_def"
+     ]
+    },
+    {
+     "op": "ellipse",
+     "id": "e2",
+     "cx": 660,
+     "cy": 428,
+     "rx": 9,
+     "ry": 9,
+     "color": "red",
+     "fill": "red"
+    },
+    {
+     "op": "line",
+     "id": "e2v",
+     "x1": 660,
+     "y1": 428,
+     "x2": 660,
+     "y2": 720,
+     "color": "gray",
+     "width": 3,
+     "dash": true
+    },
+    {
+     "op": "line",
+     "id": "e2h",
+     "x1": 200,
+     "y1": 428,
+     "x2": 660,
+     "y2": 428,
+     "color": "gray",
+     "width": 3,
+     "dash": true
+    },
+    {
+     "op": "write",
+     "id": "p2",
+     "x": 130,
+     "y": 410,
+     "text": "P2",
+     "size": 32,
+     "anchor": "middle",
+     "color": "red"
+    },
+    {
+     "op": "write",
+     "id": "q2",
+     "x": 660,
+     "y": 735,
+     "text": "Q2",
+     "size": 32,
+     "anchor": "middle",
+     "color": "red"
+    },
+    {
+     "op": "write",
+     "id": "summary",
+     "x": 1200,
+     "y": 580,
+     "text": "Conclusion:\nWhen demand rises,\nboth price (P1 → P2)\nand quantity (Q1 → Q2)\nincrease.",
+     "size": 30,
+     "color": "red"
+    }
+   ]
+  }
+ ]
+}

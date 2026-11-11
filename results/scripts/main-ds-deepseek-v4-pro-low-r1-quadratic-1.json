@@ -1,0 +1,154 @@
+{
+ "title": "Solving x² − 5x + 6 = 0",
+ "lang": "en",
+ "steps": [
+  {
+   "title": "Write the equation",
+   "say": "We start with the quadratic equation x squared minus five x plus six equals zero.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "eq1",
+     "x": 80,
+     "y": 100,
+     "text": "x² − 5x + 6 = 0",
+     "size": 48,
+     "color": "ink"
+    }
+   ]
+  },
+  {
+   "title": "Try the quadratic formula",
+   "say": "One way is the quadratic formula. Here a is 1, b is negative 5, and c is 6.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "formula",
+     "x": 80,
+     "y": 240,
+     "text": "x = [ −b ± √(b² − 4ac) ] / 2a",
+     "size": 40,
+     "color": "blue"
+    },
+    {
+     "op": "write",
+     "id": "abc",
+     "x": 80,
+     "y": 330,
+     "text": "a = 1,  b = −5,  c = 6",
+     "size": 36,
+     "color": "ink"
+    }
+   ]
+  },
+  {
+   "title": "Switch to factoring",
+   "say": "But factoring is simpler here. We need two numbers that multiply to 6 and add to negative 5.",
+   "ops": [
+    {
+     "op": "erase",
+     "ids": [
+      "formula",
+      "abc"
+     ]
+    },
+    {
+     "op": "write",
+     "id": "factor_goal",
+     "x": 80,
+     "y": 240,
+     "text": "Find two numbers:",
+     "size": 36,
+     "color": "ink"
+    },
+    {
+     "op": "write",
+     "id": "factor_cond",
+     "x": 80,
+     "y": 310,
+     "text": "product = 6,  sum = −5",
+     "size": 36,
+     "color": "blue"
+    }
+   ]
+  },
+  {
+   "title": "Find the numbers",
+   "say": "Negative two and negative three multiply to positive six and add to negative five.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "nums",
+     "x": 80,
+     "y": 420,
+     "text": "−2 and −3",
+     "size": 40,
+     "color": "green"
+    }
+   ]
+  },
+  {
+   "title": "Write the factored form",
+   "say": "So the equation factors as x minus two times x minus three equals zero.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "factored",
+     "x": 80,
+     "y": 530,
+     "text": "(x − 2)(x − 3) = 0",
+     "size": 48,
+     "color": "ink"
+    }
+   ]
+  },
+  {
+   "title": "Set each factor to zero",
+   "say": "For the product to be zero, one of the factors must be zero.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "factor1",
+     "x": 80,
+     "y": 650,
+     "text": "x − 2 = 0",
+     "size": 40,
+     "color": "ink"
+    },
+    {
+     "op": "write",
+     "id": "factor2",
+     "x": 480,
+     "y": 650,
+     "text": "x − 3 = 0",
+     "size": 40,
+     "color": "ink"
+    }
+   ]
+  },
+  {
+   "title": "Solve for x",
+   "say": "Adding two to both sides gives x equals two, and adding three gives x equals three.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "sol1",
+     "x": 80,
+     "y": 760,
+     "text": "x = 2",
+     "size": 48,
+     "color": "red"
+    },
+    {
+     "op": "write",
+     "id": "sol2",
+     "x": 480,
+     "y": 760,
+     "text": "x = 3",
+     "size": 48,
+     "color": "red"
+    }
+   ]
+  }
+ ]
+}

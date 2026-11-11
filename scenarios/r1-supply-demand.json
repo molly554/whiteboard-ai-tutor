@@ -1,0 +1,69 @@
+{
+  "title": "Why does price rise when demand rises?",
+  "lang": "en",
+  "steps": [
+    {
+      "title": "The axes",
+      "say": "Price goes up the side, and quantity goes along the bottom.",
+      "ops": [
+        { "op": "write", "id": "title", "x": 60, "y": 40, "text": "Why does price rise when demand rises?", "size": 54 },
+        { "op": "line", "id": "xaxis", "x1": 200, "y1": 720, "x2": 1120, "y2": 720, "arrow": true, "width": 4 },
+        { "op": "line", "id": "yaxis", "x1": 200, "y1": 720, "x2": 200, "y2": 180, "arrow": true, "width": 4 },
+        { "op": "write", "id": "price", "x": 200, "y": 128, "text": "Price", "size": 34, "anchor": "middle" },
+        { "op": "write", "id": "qty", "x": 1000, "y": 740, "text": "Quantity", "size": 34 }
+      ]
+    },
+    {
+      "title": "Demand",
+      "say": "Demand slopes down: the higher the price, the less buyers want.",
+      "ops": [
+        { "op": "line", "id": "d1", "x1": 260, "y1": 300, "x2": 900, "y2": 640, "color": "red", "width": 5 },
+        { "op": "write", "id": "d1lab", "x": 915, "y": 630, "text": "D1", "size": 34, "color": "red" },
+        { "op": "write", "id": "note1", "x": 1200, "y": 250, "text": "Demand: buyers want\nless when the price\nis higher → slopes down", "size": 30 }
+      ]
+    },
+    {
+      "title": "Supply",
+      "say": "Supply slopes up: the higher the price, the more sellers offer.",
+      "ops": [
+        { "op": "line", "id": "s", "x1": 260, "y1": 640, "x2": 900, "y2": 300, "color": "blue", "width": 5 },
+        { "op": "write", "id": "slab", "x": 915, "y": 270, "text": "S", "size": 34, "color": "blue" },
+        { "op": "write", "id": "note2", "x": 1200, "y": 430, "text": "Supply: sellers offer\nmore when the price\nis higher → slopes up", "size": 30 }
+      ]
+    },
+    {
+      "title": "Equilibrium",
+      "say": "Where the two curves cross, the market settles: this is the equilibrium price and quantity.",
+      "ops": [
+        { "op": "ellipse", "id": "e1", "cx": 580, "cy": 470, "rx": 9, "ry": 9, "color": "green", "fill": "green" },
+        { "op": "line", "id": "e1v", "x1": 580, "y1": 470, "x2": 580, "y2": 720, "color": "gray", "width": 3, "dash": true },
+        { "op": "line", "id": "e1h", "x1": 200, "y1": 470, "x2": 580, "y2": 470, "color": "gray", "width": 3, "dash": true },
+        { "op": "write", "id": "p1", "x": 130, "y": 452, "text": "P1", "size": 32, "anchor": "middle" },
+        { "op": "write", "id": "q1", "x": 580, "y": 735, "text": "Q1", "size": 32, "anchor": "middle" },
+        { "op": "write", "id": "note3", "x": 1200, "y": 610, "text": "They meet at E:\nthat is the market\nprice and quantity.", "size": 30, "color": "green" }
+      ]
+    },
+    {
+      "title": "Demand rises",
+      "say": "Now demand increases: more people want the product at every price. The demand curve shifts right, to D2.",
+      "ops": [
+        { "op": "line", "id": "d2", "x1": 420, "y1": 300, "x2": 1060, "y2": 640, "color": "red", "width": 5 },
+        { "op": "write", "id": "d2lab", "x": 1075, "y": 625, "text": "D2", "size": 34, "color": "red" },
+        { "op": "line", "id": "shift", "x1": 260, "y1": 262, "x2": 420, "y2": 262, "color": "green", "width": 5, "arrow": true },
+        { "op": "write", "id": "shiftlab", "x": 340, "y": 215, "text": "demand rises", "size": 30, "anchor": "middle", "color": "green" }
+      ]
+    },
+    {
+      "title": "The new equilibrium",
+      "say": "The curves now cross at a new point: a higher price and a larger quantity.",
+      "ops": [
+        { "op": "ellipse", "id": "e2", "cx": 660, "cy": 427, "rx": 9, "ry": 9, "color": "green", "fill": "green" },
+        { "op": "line", "id": "e2v", "x1": 660, "y1": 427, "x2": 660, "y2": 720, "color": "gray", "width": 3, "dash": true },
+        { "op": "line", "id": "e2h", "x1": 200, "y1": 427, "x2": 660, "y2": 427, "color": "gray", "width": 3, "dash": true },
+        { "op": "write", "id": "p2", "x": 130, "y": 408, "text": "P2", "size": 32, "anchor": "middle" },
+        { "op": "write", "id": "q2", "x": 660, "y": 735, "text": "Q2", "size": 32, "anchor": "middle" },
+        { "op": "write", "id": "concl", "x": 200, "y": 800, "text": "More demand → a higher price and a larger quantity.", "size": 38, "color": "red" }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,166 @@
+{
+ "title": "Why does price rise when demand rises?",
+ "lang": "en",
+ "steps": [
+  {
+   "title": "What the arrow means",
+   "say": "The horizontal arrow shows that at the exact same price P1, buyers now want a larger quantity Q', pushing the entire curve to the right.",
+   "ops": [
+    {
+     "op": "erase",
+     "ids": [
+      "note1",
+      "note2",
+      "note3"
+     ]
+    },
+    {
+     "op": "line",
+     "id": "p1ext",
+     "x1": 580,
+     "y1": 470,
+     "x2": 740,
+     "y2": 470,
+     "color": "green",
+     "width": 4,
+     "arrow": true
+    },
+    {
+     "op": "ellipse",
+     "id": "pt_new",
+     "cx": 740,
+     "cy": 470,
+     "rx": 7,
+     "ry": 7,
+     "color": "green",
+     "fill": "green"
+    },
+    {
+     "op": "line",
+     "id": "q_prime_v",
+     "x1": 740,
+     "y1": 470,
+     "x2": 740,
+     "y2": 720,
+     "color": "gray",
+     "width": 3,
+     "dash": true
+    },
+    {
+     "op": "write",
+     "id": "q_prime",
+     "x": 740,
+     "y": 735,
+     "text": "Q'",
+     "size": 32,
+     "anchor": "middle",
+     "color": "green"
+    },
+    {
+     "op": "write",
+     "id": "exp1",
+     "x": 1160,
+     "y": 240,
+     "text": "What the arrow means:\nAt the SAME price (P1),\nbuyers now want MORE\n(from Q1 to Q').",
+     "size": 32,
+     "color": "green"
+    },
+    {
+     "op": "write",
+     "id": "exp2",
+     "x": 1160,
+     "y": 440,
+     "text": "Since this happens at\nevery price, the whole\ncurve shifts right\n(D1 → D2).",
+     "size": 32
+    }
+   ]
+  },
+  {
+   "title": "New equilibrium",
+   "say": "Because buyers want more than sellers offer at P1, they bid up the price until a new equilibrium is reached at a higher price P2 and quantity Q2.",
+   "ops": [
+    {
+     "op": "erase",
+     "ids": [
+      "p1ext",
+      "pt_new",
+      "q_prime_v",
+      "q_prime"
+     ]
+    },
+    {
+     "op": "ellipse",
+     "id": "e2",
+     "cx": 660,
+     "cy": 428,
+     "rx": 9,
+     "ry": 9,
+     "color": "green",
+     "fill": "green"
+    },
+    {
+     "op": "line",
+     "id": "e2h",
+     "x1": 200,
+     "y1": 428,
+     "x2": 660,
+     "y2": 428,
+     "color": "gray",
+     "width": 3,
+     "dash": true
+    },
+    {
+     "op": "line",
+     "id": "e2v",
+     "x1": 660,
+     "y1": 428,
+     "x2": 660,
+     "y2": 720,
+     "color": "gray",
+     "width": 3,
+     "dash": true
+    },
+    {
+     "op": "write",
+     "id": "p2",
+     "x": 130,
+     "y": 405,
+     "text": "P2",
+     "size": 32,
+     "anchor": "middle",
+     "color": "green"
+    },
+    {
+     "op": "write",
+     "id": "q2",
+     "x": 660,
+     "y": 735,
+     "text": "Q2",
+     "size": 32,
+     "anchor": "middle",
+     "color": "green"
+    },
+    {
+     "op": "line",
+     "id": "p_up",
+     "x1": 85,
+     "y1": 468,
+     "x2": 85,
+     "y2": 425,
+     "color": "green",
+     "width": 4,
+     "arrow": true
+    },
+    {
+     "op": "write",
+     "id": "exp3",
+     "x": 1160,
+     "y": 640,
+     "text": "Result at new E:\nPrice rises (P1 → P2)\nQuantity rises (Q1 → Q2)",
+     "size": 32,
+     "color": "green"
+    }
+   ]
+  }
+ ]
+}

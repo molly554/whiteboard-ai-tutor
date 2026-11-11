@@ -1,0 +1,94 @@
+{
+ "title": "Why is northern summer hotter?",
+ "lang": "en",
+ "steps": [
+  {
+   "title": "Distance isn't the reason",
+   "say": "Good catch: in northern summer Earth is a bit farther from the Sun. Distance changes only about 3%, so it can't cause the seasons.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "ans",
+     "x": 760,
+     "y": 130,
+     "text": "Good catch! Distance barely matters:\nEarth is only about 3% closer or farther.",
+     "size": 40,
+     "color": "red"
+    }
+   ]
+  },
+  {
+   "title": "Tilt points one hemisphere at the Sun",
+   "say": "Earth's tilted axis makes the northern half lean toward the Sun in northern summer, and the southern half lean away.",
+   "ops": [
+    {
+     "op": "ellipse",
+     "id": "mini",
+     "cx": 330,
+     "cy": 790,
+     "rx": 70,
+     "ry": 70,
+     "color": "blue",
+     "width": 4
+    },
+    {
+     "op": "line",
+     "id": "miniaxis",
+     "x1": 300,
+     "y1": 855,
+     "x2": 360,
+     "y2": 725,
+     "width": 4
+    },
+    {
+     "op": "line",
+     "id": "ray1",
+     "x1": 290,
+     "y1": 636,
+     "x2": 290,
+     "y2": 712,
+     "width": 4,
+     "color": "red",
+     "arrow": true
+    },
+    {
+     "op": "line",
+     "id": "ray2",
+     "x1": 330,
+     "y1": 636,
+     "x2": 330,
+     "y2": 712,
+     "width": 4,
+     "color": "red",
+     "arrow": true
+    },
+    {
+     "op": "line",
+     "id": "ray3",
+     "x1": 370,
+     "y1": 636,
+     "x2": 370,
+     "y2": 712,
+     "width": 4,
+     "color": "red",
+     "arrow": true
+    }
+   ]
+  },
+  {
+   "title": "Steep sunlight means more heat",
+   "say": "Sunlight hits the north at a steep angle, so the energy is concentrated and the days are long. That is why it is hotter there.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "expl",
+     "x": 480,
+     "y": 660,
+     "text": "Northern summer: the north is tilted toward the Sun.\nSunlight hits steeply and days are long, so it heats up.",
+     "size": 30,
+     "color": "blue"
+    }
+   ]
+  }
+ ]
+}

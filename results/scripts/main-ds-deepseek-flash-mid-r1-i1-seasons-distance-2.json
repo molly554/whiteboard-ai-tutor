@@ -1,0 +1,68 @@
+{
+ "title": "Why do we have seasons?",
+ "lang": "en",
+ "steps": [
+  {
+   "title": "Distance is a small effect",
+   "say": "Good catch — but distance barely matters. Earth's orbit is almost circular, so the Earth–Sun distance changes by only about 3%, which alters sunlight by roughly 7%. That is far too small to explain summer and winter.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "dist",
+     "x": 760,
+     "y": 110,
+     "text": "Distance changes by only ~3%.\nSunlight intensity changes ~7% — too small.",
+     "size": 34
+    },
+    {
+     "op": "write",
+     "id": "tiltdetail",
+     "x": 760,
+     "y": 210,
+     "text": "Tilt matters far more. It changes:\n1) how steeply sunlight hits the ground\n2) how many hours of daylight",
+     "size": 34,
+     "color": "blue"
+    }
+   ]
+  },
+  {
+   "title": "Which position is which season",
+   "say": "Since the axis always leans the same way, the north pole tilts toward the Sun on the left side of the orbit and away from it on the right — so those are northern summer and northern winter.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "nsummer",
+     "x": 60,
+     "y": 455,
+     "text": "Northern summer\nN pole toward Sun",
+     "size": 28,
+     "color": "red"
+    },
+    {
+     "op": "write",
+     "id": "nwinter",
+     "x": 1340,
+     "y": 455,
+     "text": "Northern winter\nN pole\naway from Sun",
+     "size": 28,
+     "color": "red"
+    }
+   ]
+  },
+  {
+   "title": "Why that makes it hotter",
+   "say": "So northern summer is hotter not because we are closer, but because sunlight arrives more directly and the days are longer.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "whyhot",
+     "x": 60,
+     "y": 680,
+     "text": "Steeper sunlight = more energy per area.\nLonger days = more hours of heating.\nTogether: warmer summer.",
+     "size": 34,
+     "color": "green"
+    }
+   ]
+  }
+ ]
+}

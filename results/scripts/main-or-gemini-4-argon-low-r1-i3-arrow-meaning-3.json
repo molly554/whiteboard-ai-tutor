@@ -1,0 +1,159 @@
+{
+ "title": "Why does price rise when demand rises?",
+ "lang": "en",
+ "steps": [
+  {
+   "title": "What the green arrow means",
+   "say": "That green arrow means at the exact same price P1, buyers now want a larger quantity than before—we call this a shortage.",
+   "ops": [
+    {
+     "op": "erase",
+     "ids": [
+      "note1",
+      "note2",
+      "note3"
+     ]
+    },
+    {
+     "op": "ellipse",
+     "id": "pt_d2",
+     "cx": 740,
+     "cy": 470,
+     "rx": 9,
+     "ry": 9,
+     "color": "red",
+     "fill": "red"
+    },
+    {
+     "op": "line",
+     "id": "d2_v",
+     "x1": 740,
+     "y1": 470,
+     "x2": 740,
+     "y2": 720,
+     "color": "gray",
+     "width": 3,
+     "dash": true
+    },
+    {
+     "op": "write",
+     "id": "qd_lab",
+     "x": 740,
+     "y": 735,
+     "text": "Qd",
+     "size": 32,
+     "anchor": "middle",
+     "color": "red"
+    },
+    {
+     "op": "line",
+     "id": "short_arr",
+     "x1": 595,
+     "y1": 470,
+     "x2": 725,
+     "y2": 470,
+     "color": "green",
+     "width": 5,
+     "arrow": true
+    },
+    {
+     "op": "write",
+     "id": "short_txt",
+     "x": 660,
+     "y": 500,
+     "text": "shortage",
+     "size": 28,
+     "anchor": "middle",
+     "color": "green"
+    },
+    {
+     "op": "write",
+     "id": "exp1",
+     "x": 1160,
+     "y": 240,
+     "text": "The green arrow means:\nAt the SAME price (P1),\nbuyers now want more\n(from Q1 up to Qd).",
+     "size": 32,
+     "color": "green"
+    }
+   ]
+  },
+  {
+   "title": "Price rises to new equilibrium",
+   "say": "Because buyers are competing for limited goods, they bid the price up until the market reaches a new balance at P2 and Q2.",
+   "ops": [
+    {
+     "op": "ellipse",
+     "id": "e2",
+     "cx": 660,
+     "cy": 428,
+     "rx": 9,
+     "ry": 9,
+     "color": "green",
+     "fill": "green"
+    },
+    {
+     "op": "line",
+     "id": "e2h",
+     "x1": 200,
+     "y1": 428,
+     "x2": 660,
+     "y2": 428,
+     "color": "gray",
+     "width": 3,
+     "dash": true
+    },
+    {
+     "op": "line",
+     "id": "e2v",
+     "x1": 660,
+     "y1": 428,
+     "x2": 660,
+     "y2": 720,
+     "color": "gray",
+     "width": 3,
+     "dash": true
+    },
+    {
+     "op": "write",
+     "id": "p2",
+     "x": 130,
+     "y": 405,
+     "text": "P2",
+     "size": 32,
+     "anchor": "middle",
+     "color": "red"
+    },
+    {
+     "op": "write",
+     "id": "q2",
+     "x": 660,
+     "y": 735,
+     "text": "Q2",
+     "size": 32,
+     "anchor": "middle",
+     "color": "green"
+    },
+    {
+     "op": "line",
+     "id": "p_up",
+     "x1": 80,
+     "y1": 470,
+     "x2": 80,
+     "y2": 428,
+     "color": "red",
+     "width": 5,
+     "arrow": true
+    },
+    {
+     "op": "write",
+     "id": "exp2",
+     "x": 1160,
+     "y": 460,
+     "text": "Result of the shortage:\n1. Buyers bid up the price\n   (P1 → P2)\n2. Market settles at a new\n   higher price & quantity!",
+     "size": 32,
+     "color": "ink"
+    }
+   ]
+  }
+ ]
+}

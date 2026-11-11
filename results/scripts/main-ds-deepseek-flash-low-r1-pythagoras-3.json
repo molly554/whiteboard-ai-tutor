@@ -1,0 +1,253 @@
+{
+ "title": "Why the Pythagorean Theorem Works",
+ "lang": "en",
+ "steps": [
+  {
+   "title": "The theorem",
+   "say": "For a right triangle with legs a, b and hypotenuse c, a² + b² = c². Let's see why.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "title",
+     "x": 800,
+     "y": 60,
+     "text": "Why does a² + b² = c²?",
+     "size": 56,
+     "anchor": "middle"
+    },
+    {
+     "op": "write",
+     "id": "theorem",
+     "x": 800,
+     "y": 150,
+     "text": "a² + b² = c²",
+     "size": 44,
+     "anchor": "middle",
+     "color": "blue"
+    }
+   ]
+  },
+  {
+   "title": "Draw the triangle",
+   "say": "Start with a right triangle. The two shorter sides are a and b, the longest side is c.",
+   "ops": [
+    {
+     "op": "line",
+     "id": "tri_ab",
+     "x1": 300,
+     "y1": 700,
+     "x2": 300,
+     "y2": 500,
+     "color": "ink",
+     "width": 5
+    },
+    {
+     "op": "line",
+     "id": "tri_bc",
+     "x1": 300,
+     "y1": 700,
+     "x2": 500,
+     "y2": 700,
+     "color": "ink",
+     "width": 5
+    },
+    {
+     "op": "line",
+     "id": "tri_ac",
+     "x1": 300,
+     "y1": 500,
+     "x2": 500,
+     "y2": 700,
+     "color": "ink",
+     "width": 5
+    },
+    {
+     "op": "write",
+     "id": "label_a",
+     "x": 270,
+     "y": 580,
+     "text": "a",
+     "size": 36,
+     "color": "blue",
+     "anchor": "middle"
+    },
+    {
+     "op": "write",
+     "id": "label_b",
+     "x": 400,
+     "y": 720,
+     "text": "b",
+     "size": 36,
+     "color": "blue",
+     "anchor": "middle"
+    },
+    {
+     "op": "write",
+     "id": "label_c",
+     "x": 420,
+     "y": 570,
+     "text": "c",
+     "size": 36,
+     "color": "red",
+     "anchor": "middle"
+    },
+    {
+     "op": "rect",
+     "id": "right_angle",
+     "x": 300,
+     "y": 680,
+     "w": 20,
+     "h": 20,
+     "color": "gray",
+     "width": 2
+    }
+   ]
+  },
+  {
+   "title": "Square on side a",
+   "say": "Build a square on side a. Its area is a².",
+   "ops": [
+    {
+     "op": "rect",
+     "id": "sq_a",
+     "x": 100,
+     "y": 500,
+     "w": 200,
+     "h": 200,
+     "color": "blue",
+     "width": 4,
+     "fill": "blue"
+    },
+    {
+     "op": "write",
+     "id": "area_a",
+     "x": 200,
+     "y": 590,
+     "text": "a²",
+     "size": 40,
+     "color": "blue",
+     "anchor": "middle"
+    }
+   ]
+  },
+  {
+   "title": "Square on side b",
+   "say": "Build a square on side b. Its area is b².",
+   "ops": [
+    {
+     "op": "rect",
+     "id": "sq_b",
+     "x": 300,
+     "y": 700,
+     "w": 200,
+     "h": 200,
+     "color": "green",
+     "width": 4,
+     "fill": "green"
+    },
+    {
+     "op": "write",
+     "id": "area_b",
+     "x": 400,
+     "y": 790,
+     "text": "b²",
+     "size": 40,
+     "color": "green",
+     "anchor": "middle"
+    }
+   ]
+  },
+  {
+   "title": "Square on hypotenuse c",
+   "say": "Build a square on the hypotenuse. Its area is c².",
+   "ops": [
+    {
+     "op": "rect",
+     "id": "sq_c",
+     "x": 500,
+     "y": 500,
+     "w": 282,
+     "h": 282,
+     "color": "red",
+     "width": 4,
+     "fill": "red"
+    },
+    {
+     "op": "write",
+     "id": "area_c",
+     "x": 640,
+     "y": 630,
+     "text": "c²",
+     "size": 40,
+     "color": "red",
+     "anchor": "middle"
+    }
+   ]
+  },
+  {
+   "title": "Rearrange the pieces",
+   "say": "If we rearrange the same four triangles inside a big square, the uncovered area equals c².",
+   "ops": [
+    {
+     "op": "rect",
+     "id": "big_square",
+     "x": 1000,
+     "y": 400,
+     "w": 400,
+     "h": 400,
+     "color": "ink",
+     "width": 4
+    },
+    {
+     "op": "line",
+     "id": "rearrange1",
+     "x1": 1000,
+     "y1": 400,
+     "x2": 1200,
+     "y2": 500,
+     "color": "gray",
+     "width": 3,
+     "dash": true
+    },
+    {
+     "op": "line",
+     "id": "rearrange2",
+     "x1": 1400,
+     "y1": 400,
+     "x2": 1200,
+     "y2": 500,
+     "color": "gray",
+     "width": 3,
+     "dash": true
+    },
+    {
+     "op": "write",
+     "id": "rearrange_label",
+     "x": 1200,
+     "y": 580,
+     "text": "c²",
+     "size": 36,
+     "color": "red",
+     "anchor": "middle"
+    }
+   ]
+  },
+  {
+   "title": "Conclusion",
+   "say": "The areas match: a² + b² = c². That's why the Pythagorean theorem works.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "conclusion",
+     "x": 800,
+     "y": 820,
+     "text": "a² + b² = c²",
+     "size": 48,
+     "color": "blue",
+     "anchor": "middle",
+     "underline": true
+    }
+   ]
+  }
+ ]
+}

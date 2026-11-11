@@ -1,0 +1,183 @@
+{
+ "title": "Why do we have seasons?",
+ "lang": "en",
+ "steps": [
+  {
+   "title": "Distance is almost constant",
+   "say": "Yes, in July Earth is slightly farther away, but only by 3%! Our orbit is nearly a perfect circle, so distance barely changes the heat.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "dist_note",
+     "x": 60,
+     "y": 240,
+     "text": "Orbit is nearly a circle (distance varies only 3%!).",
+     "size": 34,
+     "color": "gray"
+    },
+    {
+     "op": "write",
+     "id": "june_lbl",
+     "x": 280,
+     "y": 680,
+     "text": "June (North tilted to Sun)\nFarther (152M km), but HOT!",
+     "size": 30,
+     "color": "red",
+     "anchor": "middle"
+    },
+    {
+     "op": "write",
+     "id": "dec_lbl",
+     "x": 1320,
+     "y": 680,
+     "text": "Dec (North tilted away)\nCloser (147M km), but COLD!",
+     "size": 30,
+     "color": "blue",
+     "anchor": "middle"
+    },
+    {
+     "op": "line",
+     "id": "ray_june",
+     "x1": 740,
+     "y1": 585,
+     "x2": 325,
+     "y2": 585,
+     "color": "red",
+     "width": 4,
+     "arrow": true
+    }
+   ]
+  },
+  {
+   "title": "Reason 1: Direct vs. Angled Sunlight",
+   "say": "When tilted toward the Sun, sunlight hits the ground directly, concentrating heat into a small area. Low-angle winter light spreads out.",
+   "ops": [
+    {
+     "op": "erase",
+     "ids": [
+      "orbitlabel"
+     ]
+    },
+    {
+     "op": "rect",
+     "id": "box1",
+     "x": 830,
+     "y": 40,
+     "w": 720,
+     "h": 280,
+     "color": "gray",
+     "width": 3
+    },
+    {
+     "op": "write",
+     "id": "b1_title",
+     "x": 850,
+     "y": 55,
+     "text": "Why tilt beats distance: Beam Angle",
+     "size": 34,
+     "color": "ink",
+     "underline": true
+    },
+    {
+     "op": "line",
+     "id": "gnd1",
+     "x1": 870,
+     "y1": 240,
+     "x2": 1130,
+     "y2": 240,
+     "color": "green",
+     "width": 6
+    },
+    {
+     "op": "line",
+     "id": "sr1",
+     "x1": 970,
+     "y1": 120,
+     "x2": 970,
+     "y2": 230,
+     "color": "red",
+     "width": 4,
+     "arrow": true
+    },
+    {
+     "op": "line",
+     "id": "sr2",
+     "x1": 1030,
+     "y1": 120,
+     "x2": 1030,
+     "y2": 230,
+     "color": "red",
+     "width": 4,
+     "arrow": true
+    },
+    {
+     "op": "write",
+     "id": "s_txt",
+     "x": 1000,
+     "y": 255,
+     "text": "Summer: Direct (Concentrated)",
+     "size": 28,
+     "color": "red",
+     "anchor": "middle"
+    },
+    {
+     "op": "line",
+     "id": "gnd2",
+     "x1": 1220,
+     "y1": 240,
+     "x2": 1520,
+     "y2": 240,
+     "color": "green",
+     "width": 6
+    },
+    {
+     "op": "line",
+     "id": "wr1",
+     "x1": 1240,
+     "y1": 120,
+     "x2": 1340,
+     "y2": 230,
+     "color": "blue",
+     "width": 4,
+     "arrow": true
+    },
+    {
+     "op": "line",
+     "id": "wr2",
+     "x1": 1340,
+     "y1": 120,
+     "x2": 1440,
+     "y2": 230,
+     "color": "blue",
+     "width": 4,
+     "arrow": true
+    },
+    {
+     "op": "write",
+     "id": "w_txt",
+     "x": 1370,
+     "y": 255,
+     "text": "Winter: Angled (Spread out)",
+     "size": 28,
+     "color": "blue",
+     "anchor": "middle"
+    }
+   ]
+  },
+  {
+   "title": "Reason 2: Longer Days",
+   "say": "The tilt also gives us more hours of daylight in summer, giving the Sun much more time to warm the ground every day.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "hrs_txt",
+     "x": 60,
+     "y": 310,
+     "text": "Plus: Tilted toward Sun = Longer days (~15 hrs vs ~9 hrs)!\nDirect rays + extra hours easily beat the 3% distance gap.",
+     "size": 32,
+     "color": "green"
+    }
+   ]
+  }
+ ]
+}

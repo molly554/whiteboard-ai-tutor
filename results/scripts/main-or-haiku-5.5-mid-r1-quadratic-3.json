@@ -1,0 +1,161 @@
+{
+ "title": "Solving x² − 5x + 6 = 0",
+ "lang": "en",
+ "steps": [
+  {
+   "title": "Set up the equation",
+   "say": "We want the x-values that make this equation true. It is a quadratic with a = 1, b = −5, c = 6. I'll start with the quadratic formula.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "t",
+     "x": 800,
+     "y": 50,
+     "text": "Solve x² − 5x + 6 = 0",
+     "size": 56,
+     "anchor": "middle"
+    },
+    {
+     "op": "write",
+     "id": "m1h",
+     "x": 100,
+     "y": 170,
+     "text": "Method 1: quadratic formula",
+     "size": 40,
+     "color": "blue"
+    },
+    {
+     "op": "write",
+     "id": "m1a",
+     "x": 100,
+     "y": 250,
+     "text": "a = 1,  b = −5,  c = 6",
+     "size": 40
+    }
+   ]
+  },
+  {
+   "title": "Plug into the formula",
+   "say": "Substitute a, b, and c into x = (−b ± √(b² − 4ac)) / 2a.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "f1",
+     "x": 100,
+     "y": 330,
+     "text": "x = (5 ± √(25 − 24)) / 2",
+     "size": 40
+    }
+   ]
+  },
+  {
+   "title": "The method is slow",
+   "say": "The discriminant simplifies to 1, but there are still several steps to finish. Factoring is faster here, so I'll switch.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "f2",
+     "x": 100,
+     "y": 410,
+     "text": "√(25 − 24) = √1 = 1",
+     "size": 40
+    },
+    {
+     "op": "write",
+     "id": "sw",
+     "x": 100,
+     "y": 490,
+     "text": "Too many steps. Switch to factoring!",
+     "size": 36,
+     "color": "red"
+    }
+   ]
+  },
+  {
+   "title": "Switch to factoring",
+   "say": "Forget the formula. Find two numbers with product 6 and sum −5. They are −2 and −3.",
+   "ops": [
+    {
+     "op": "erase",
+     "ids": [
+      "m1h",
+      "m1a",
+      "f1",
+      "f2",
+      "sw"
+     ]
+    },
+    {
+     "op": "write",
+     "id": "fh",
+     "x": 100,
+     "y": 170,
+     "text": "Method 2: factoring (simpler)",
+     "size": 40,
+     "color": "green"
+    },
+    {
+     "op": "write",
+     "id": "fa",
+     "x": 100,
+     "y": 250,
+     "text": "product 6, sum −5  →  −2 and −3",
+     "size": 40
+    }
+   ]
+  },
+  {
+   "title": "Write the factored form",
+   "say": "So the left side factors as (x − 2)(x − 3).",
+   "ops": [
+    {
+     "op": "write",
+     "id": "ff",
+     "x": 100,
+     "y": 330,
+     "text": "(x − 2)(x − 3) = 0",
+     "size": 44
+    }
+   ]
+  },
+  {
+   "title": "Solve each factor",
+   "say": "A product is zero only if one factor is zero, so x − 2 = 0 or x − 3 = 0. That gives x = 2 or x = 3.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "fz",
+     "x": 100,
+     "y": 410,
+     "text": "x − 2 = 0  or  x − 3 = 0",
+     "size": 40
+    },
+    {
+     "op": "write",
+     "id": "fs",
+     "x": 100,
+     "y": 490,
+     "text": "x = 2  or  x = 3",
+     "size": 44,
+     "color": "green",
+     "underline": true
+    }
+   ]
+  },
+  {
+   "title": "Check the answers",
+   "say": "Substitute each value back into the original equation to confirm both give 0.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "ck",
+     "x": 100,
+     "y": 570,
+     "text": "Check: 4 − 10 + 6 = 0 ✓     9 − 15 + 6 = 0 ✓",
+     "size": 36,
+     "color": "gray"
+    }
+   ]
+  }
+ ]
+}

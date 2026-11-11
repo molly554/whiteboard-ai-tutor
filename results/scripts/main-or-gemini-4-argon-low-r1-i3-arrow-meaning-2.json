@@ -1,0 +1,196 @@
+{
+ "title": "What the shift arrow means and the new price",
+ "lang": "en",
+ "steps": [
+  {
+   "title": "Meaning of the shift arrow",
+   "say": "The green arrow shows that at the exact same price P1, buyers now want a larger quantity than before.",
+   "ops": [
+    {
+     "op": "erase",
+     "ids": [
+      "note1",
+      "note2",
+      "note3"
+     ]
+    },
+    {
+     "op": "line",
+     "id": "ext_p1",
+     "x1": 580,
+     "y1": 470,
+     "x2": 740,
+     "y2": 470,
+     "color": "green",
+     "width": 4,
+     " arrow": true,
+     "dash": true
+    },
+    {
+     "op": "ellipse",
+     "id": "pt_d2",
+     "cx": 740,
+     "cy": 470,
+     "rx": 8,
+     "ry": 8,
+     "color": "red",
+     "fill": "red"
+    },
+    {
+     "op": "line",
+     "id": "v_qd",
+     "x1": 740,
+     "y1": 470,
+     "x2": 740,
+     "y2": 720,
+     "color": "gray",
+     "width": 3,
+     "dash": true
+    },
+    {
+     "op": "write",
+     "id": "qd_lab",
+     "x": 740,
+     "y": 735,
+     "text": "Q'",
+     "size": 32,
+     "anchor": "middle",
+     "color": "red"
+    },
+    {
+     "op": "write",
+     "id": "exp1",
+     "x": 1160,
+     "y": 220,
+     "text": "The green arrow means:\nAt the SAME price (P1),\nbuyers now want MORE\n(from Q1 up to Q').",
+     "size": 32,
+     "color": "green"
+    }
+   ]
+  },
+  {
+   "title": "Shortage at the old price",
+   "say": "Because buyers want Q' while sellers only offer Q1 at price P1, there is a shortage.",
+   "ops": [
+    {
+     "op": "line",
+     "id": "short_arr",
+     "x1": 580,
+     "y1": 515,
+     "x2": 740,
+     "y2": 515,
+     "color": "red",
+     "width": 4,
+     "arrow": "both"
+    },
+    {
+     "op": "write",
+     "id": "short_lab",
+     "x": 660,
+     "y": 530,
+     "text": "Shortage",
+     "size": 28,
+     "anchor": "middle",
+     "color": "red"
+    },
+    {
+     "op": "write",
+     "id": "exp2",
+     "x": 1160,
+     "y": 430,
+     "text": "At old price P1:\nDemand (Q') > Supply (Q1).\nThis creates a shortage,\npushing the price up!",
+     "size": 32
+    }
+   ]
+  },
+  {
+   "title": "New higher equilibrium price",
+   "say": "Competition among buyers drives the price up to P2, reaching a new equilibrium where supply meets the new demand.",
+   "ops": [
+    {
+     "op": "erase",
+     "ids": [
+      "ext_p1",
+      "pt_d2",
+      "v_qd",
+      "qd_lab",
+      "short_arr",
+      "short_lab"
+     ]
+    },
+    {
+     "op": "ellipse",
+     "id": "e2",
+     "cx": 660,
+     "cy": 428,
+     "rx": 9,
+     "ry": 9,
+     "color": "green",
+     "fill": "green"
+    },
+    {
+     "op": "line",
+     "id": "e2h",
+     "x1": 200,
+     "y1": 428,
+     "x2": 660,
+     "y2": 428,
+     "color": "gray",
+     "width": 3,
+     "dash": true
+    },
+    {
+     "op": "line",
+     "id": "e2v",
+     "x1": 660,
+     "y1": 428,
+     "x2": 660,
+     "y2": 720,
+     "color": "gray",
+     "width": 3,
+     "dash": true
+    },
+    {
+     "op": "write",
+     "id": "p2",
+     "x": 130,
+     "y": 405,
+     "text": "P2",
+     "size": 32,
+     "anchor": "middle",
+     "color": "red"
+    },
+    {
+     "op": "write",
+     "id": "q2",
+     "x": 660,
+     "y": 735,
+     "text": "Q2",
+     "size": 32,
+     "anchor": "middle",
+     "color": "red"
+    },
+    {
+     "op": "line",
+     "id": "p_up",
+     "x1": 80,
+     "y1": 468,
+     "x2": 80,
+     "y2": 422,
+     "color": "red",
+     "width": 4,
+     "arrow": true
+    },
+    {
+     "op": "write",
+     "id": "exp3",
+     "x": 1160,
+     "y": 640,
+     "text": "Result at new E2:\nPrice rises (P1 → P2)\nQuantity rises (Q1 → Q2)",
+     "size": 32,
+     "color": "red"
+    }
+   ]
+  }
+ ]
+}

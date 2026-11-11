@@ -1,0 +1,121 @@
+{
+ "title": "A Simpler Way: Umbrella Example",
+ "lang": "en",
+ "steps": [
+  {
+   "title": "Think of an umbrella shop",
+   "say": "Forget the curves for a second. Imagine a shop selling umbrellas on a normal sunny day.",
+   "ops": [
+    {
+     "op": "erase",
+     "ids": [
+      "note1",
+      "note2",
+      "note3"
+     ]
+    },
+    {
+     "op": "rect",
+     "id": "exbox",
+     "x": 1180,
+     "y": 200,
+     "w": 380,
+     "h": 500,
+     "color": "blue",
+     "fill": "blue"
+    },
+    {
+     "op": "write",
+     "id": "ex1",
+     "x": 1205,
+     "y": 225,
+     "text": "1. Sunny day ($10):\n   5 buyers want 5 umbrellas.\n   Everyone is happy.\n   The market is balanced.",
+     "size": 26,
+     "color": "ink"
+    }
+   ]
+  },
+  {
+   "title": "Sudden rain = Demand shift",
+   "say": "Now it suddenly pours outside. Fifty people rush in wanting an umbrella. That sudden surge is the demand shift.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "ex2",
+     "x": 1205,
+     "y": 370,
+     "text": "2. Sudden downpour:\n   50 people rush in!\n   Shift = more people want it\n   at the very same price.\n   Result: a shortage!",
+     "size": 26,
+     "color": "red"
+    }
+   ]
+  },
+  {
+   "title": "Competition bids price up",
+   "say": "With only a few umbrellas and dozens of wet people, buyers compete and bid the price up. On the graph, that lands at a higher price P2.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "ex3",
+     "x": 1205,
+     "y": 530,
+     "text": "3. Price gets bid up:\n   Buyers offer $15, then $20.\n   Price rises until buyers\n   and stock balance again.",
+     "size": 26,
+     "color": "green"
+    },
+    {
+     "op": "ellipse",
+     "id": "e2",
+     "cx": 660,
+     "cy": 428,
+     "rx": 9,
+     "ry": 9,
+     "color": "red",
+     "fill": "red"
+    },
+    {
+     "op": "line",
+     "id": "e2h",
+     "x1": 200,
+     "y1": 428,
+     "x2": 660,
+     "y2": 428,
+     "color": "red",
+     "width": 3,
+     "dash": true
+    },
+    {
+     "op": "line",
+     "id": "e2v",
+     "x1": 660,
+     "y1": 428,
+     "x2": 660,
+     "y2": 720,
+     "color": "red",
+     "width": 3,
+     "dash": true
+    },
+    {
+     "op": "write",
+     "id": "p2",
+     "x": 130,
+     "y": 400,
+     "text": "P2 ↑",
+     "size": 32,
+     "anchor": "middle",
+     "color": "red"
+    },
+    {
+     "op": "write",
+     "id": "q2",
+     "x": 660,
+     "y": 735,
+     "text": "Q2",
+     "size": 32,
+     "anchor": "middle",
+     "color": "red"
+    }
+   ]
+  }
+ ]
+}

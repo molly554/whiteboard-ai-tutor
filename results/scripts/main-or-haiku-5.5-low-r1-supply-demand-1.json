@@ -1,0 +1,231 @@
+{
+ "title": "Demand Rises, Price Rises",
+ "lang": "en",
+ "steps": [
+  {
+   "title": "Set up the board",
+   "say": "Price goes on the vertical axis and quantity on the horizontal axis. Demand and supply will be drawn on these axes.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "t1",
+     "x": 800,
+     "y": 70,
+     "text": "Demand Rises, Price Rises",
+     "size": 56,
+     "anchor": "middle",
+     "underline": true
+    },
+    {
+     "op": "line",
+     "id": "ax_y",
+     "x1": 200,
+     "y1": 800,
+     "x2": 200,
+     "y2": 120,
+     "arrow": true,
+     "width": 5
+    },
+    {
+     "op": "line",
+     "id": "ax_x",
+     "x1": 200,
+     "y1": 800,
+     "x2": 1200,
+     "y2": 800,
+     "arrow": true,
+     "width": 5
+    },
+    {
+     "op": "write",
+     "id": "yl",
+     "x": 120,
+     "y": 110,
+     "text": "Price",
+     "size": 30
+    },
+    {
+     "op": "write",
+     "id": "xl",
+     "x": 1120,
+     "y": 812,
+     "text": "Quantity",
+     "size": 30
+    }
+   ]
+  },
+  {
+   "title": "Supply curve",
+   "say": "The supply curve slopes upward: sellers offer more when the price is higher.",
+   "ops": [
+    {
+     "op": "line",
+     "id": "S",
+     "x1": 300,
+     "y1": 650,
+     "x2": 1000,
+     "y2": 250,
+     "color": "blue",
+     "width": 5
+    },
+    {
+     "op": "write",
+     "id": "lS",
+     "x": 1015,
+     "y": 235,
+     "text": "S",
+     "size": 34,
+     "color": "blue"
+    }
+   ]
+  },
+  {
+   "title": "Original demand",
+   "say": "The demand curve slopes downward: buyers want less when the price is higher.",
+   "ops": [
+    {
+     "op": "line",
+     "id": "D1",
+     "x1": 300,
+     "y1": 250,
+     "x2": 1000,
+     "y2": 700,
+     "color": "red",
+     "width": 5
+    },
+    {
+     "op": "write",
+     "id": "lD1",
+     "x": 1015,
+     "y": 690,
+     "text": "D1",
+     "size": 34,
+     "color": "red"
+    }
+   ]
+  },
+  {
+   "title": "Original equilibrium",
+   "say": "Supply and demand meet at equilibrium price P1.",
+   "ops": [
+    {
+     "op": "ellipse",
+     "id": "E1",
+     "cx": 629,
+     "cy": 461,
+     "rx": 14,
+     "ry": 14,
+     "color": "ink",
+     "width": 4
+    },
+    {
+     "op": "line",
+     "id": "g1",
+     "x1": 200,
+     "y1": 461,
+     "x2": 615,
+     "y2": 461,
+     "color": "gray",
+     "width": 3,
+     "dash": "8 6"
+    },
+    {
+     "op": "write",
+     "id": "pE1",
+     "x": 150,
+     "y": 445,
+     "text": "P1",
+     "size": 30
+    }
+   ]
+  },
+  {
+   "title": "Demand shifts right",
+   "say": "Demand rises: at every price, buyers now want more. The demand curve moves to D2.",
+   "ops": [
+    {
+     "op": "line",
+     "id": "D2",
+     "x1": 450,
+     "y1": 250,
+     "x2": 1150,
+     "y2": 700,
+     "color": "red",
+     "width": 5
+    },
+    {
+     "op": "write",
+     "id": "lD2",
+     "x": 1165,
+     "y": 690,
+     "text": "D2",
+     "size": 34,
+     "color": "red"
+    }
+   ]
+  },
+  {
+   "title": "New equilibrium",
+   "say": "The new equilibrium P2 is at a higher price, and the quantity traded is also higher.",
+   "ops": [
+    {
+     "op": "ellipse",
+     "id": "E2",
+     "cx": 709,
+     "cy": 417,
+     "rx": 14,
+     "ry": 14,
+     "color": "green",
+     "width": 4
+    },
+    {
+     "op": "line",
+     "id": "g2",
+     "x1": 200,
+     "y1": 417,
+     "x2": 695,
+     "y2": 417,
+     "color": "gray",
+     "width": 3,
+     "dash": "8 6"
+    },
+    {
+     "op": "write",
+     "id": "pE2",
+     "x": 700,
+     "y": 365,
+     "text": "P2",
+     "size": 30,
+     "color": "green"
+    }
+   ]
+  },
+  {
+   "title": "Summary",
+   "say": "Higher demand pushes the price up. Price rises from P1 to P2.",
+   "ops": [
+    {
+     "op": "line",
+     "id": "shift",
+     "x1": 645,
+     "y1": 452,
+     "x2": 693,
+     "y2": 425,
+     "color": "green",
+     "width": 4,
+     "arrow": true
+    },
+    {
+     "op": "write",
+     "id": "sum",
+     "x": 800,
+     "y": 830,
+     "text": "Higher demand, higher price",
+     "size": 30,
+     "anchor": "middle",
+     "color": "green"
+    }
+   ]
+  }
+ ]
+}

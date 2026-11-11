@@ -1,0 +1,311 @@
+{
+ "title": "When Demand Rises",
+ "lang": "en",
+ "steps": [
+  {
+   "title": "Set the Stage",
+   "say": "Let's draw a standard supply and demand graph with price on the vertical axis and quantity on the horizontal axis.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "main_title",
+     "x": 800,
+     "y": 50,
+     "text": "Market Impact: Demand Rises",
+     "size": 52,
+     "anchor": "middle",
+     "color": "ink"
+    },
+    {
+     "op": "line",
+     "id": "axis_p",
+     "x1": 150,
+     "y1": 650,
+     "x2": 150,
+     "y2": 180,
+     "width": 5,
+     "arrow": true,
+     "color": "ink"
+    },
+    {
+     "op": "line",
+     "id": "axis_q",
+     "x1": 150,
+     "y1": 650,
+     "x2": 750,
+     "y2": 650,
+     "width": 5,
+     "arrow": true,
+     "color": "ink"
+    },
+    {
+     "op": "write",
+     "id": "label_p",
+     "x": 120,
+     "y": 170,
+     "text": "Price (P)",
+     "size": 32,
+     "anchor": "middle",
+     "color": "ink"
+    },
+    {
+     "op": "write",
+     "id": "label_q",
+     "x": 750,
+     "y": 670,
+     "text": "Quantity (Q)",
+     "size": 32,
+     "anchor": "middle",
+     "color": "ink"
+    }
+   ]
+  },
+  {
+   "title": "Initial Equilibrium",
+   "say": "Here is the upward-sloping supply curve S and initial demand curve D1, intersecting at price P1.",
+   "ops": [
+    {
+     "op": "line",
+     "id": "curve_s",
+     "x1": 220,
+     "y1": 600,
+     "x2": 650,
+     "y2": 250,
+     "width": 5,
+     "color": "blue"
+    },
+    {
+     "op": "write",
+     "id": "label_s",
+     "x": 665,
+     "y": 240,
+     "text": "S",
+     "size": 36,
+     "color": "blue"
+    },
+    {
+     "op": "line",
+     "id": "curve_d1",
+     "x1": 220,
+     "y1": 250,
+     "x2": 650,
+     "y2": 600,
+     "width": 5,
+     "color": "ink"
+    },
+    {
+     "op": "write",
+     "id": "label_d1",
+     "x": 665,
+     "y": 600,
+     "text": "D1",
+     "size": 36,
+     "color": "ink"
+    },
+    {
+     "op": "ellipse",
+     "id": "point_e1",
+     "cx": 435,
+     "cy": 425,
+     "rx": 7,
+     "ry": 7,
+     "fill": "ink",
+     "color": "ink"
+    },
+    {
+     "op": "line",
+     "id": "dash_p1",
+     "x1": 435,
+     "y1": 425,
+     "x2": 150,
+     "y2": 425,
+     "dash": true,
+     "width": 3,
+     "color": "gray"
+    },
+    {
+     "op": "write",
+     "id": "text_p1",
+     "x": 105,
+     "y": 410,
+     "text": "P1",
+     "size": 32,
+     "color": "ink"
+    }
+   ]
+  },
+  {
+   "title": "Demand Shifts Right",
+   "say": "When demand rises, the entire demand curve shifts outward to the right, from D1 to D2.",
+   "ops": [
+    {
+     "op": "line",
+     "id": "curve_d2",
+     "x1": 340,
+     "y1": 250,
+     "x2": 770,
+     "y2": 600,
+     "width": 5,
+     "color": "red"
+    },
+    {
+     "op": "write",
+     "id": "label_d2",
+     "x": 785,
+     "y": 600,
+     "text": "D2",
+     "size": 36,
+     "color": "red"
+    },
+    {
+     "op": "line",
+     "id": "arrow_shift",
+     "x1": 470,
+     "y1": 395,
+     "x2": 550,
+     "y2": 395,
+     "width": 4,
+     "arrow": true,
+     "color": "red"
+    },
+    {
+     "op": "write",
+     "id": "note_shift",
+     "x": 450,
+     "y": 355,
+     "text": "Shift Right",
+     "size": 28,
+     "color": "red"
+    }
+   ]
+  },
+  {
+   "title": "Shortage at Initial Price",
+   "say": "At the original price P1, buyers want more goods than sellers can provide, creating an immediate shortage.",
+   "ops": [
+    {
+     "op": "rect",
+     "id": "box_summary",
+     "x": 900,
+     "y": 180,
+     "w": 620,
+     "h": 500,
+     "color": "gray",
+     "width": 3
+    },
+    {
+     "op": "write",
+     "id": "step_head",
+     "x": 930,
+     "y": 210,
+     "text": "Chain of Events:",
+     "size": 38,
+     "color": "ink",
+     "underline": true
+    },
+    {
+     "op": "write",
+     "id": "step_1",
+     "x": 930,
+     "y": 270,
+     "text": "1. Demand increases (D1 -> D2)",
+     "size": 32,
+     "color": "red"
+    },
+    {
+     "op": "write",
+     "id": "step_2",
+     "x": 930,
+     "y": 330,
+     "text": "2. At old price P1: Demand > Supply",
+     "size": 32,
+     "color": "ink"
+    },
+    {
+     "op": "write",
+     "id": "step_2b",
+     "x": 970,
+     "y": 375,
+     "text": "-> Causes a shortage",
+     "size": 30,
+     "color": "gray"
+    }
+   ]
+  },
+  {
+   "title": "New Higher Equilibrium",
+   "say": "Buyers compete, bidding the price up until a new equilibrium is reached at P2, where price and quantity are both higher.",
+   "ops": [
+    {
+     "op": "ellipse",
+     "id": "point_e2",
+     "cx": 495,
+     "cy": 375,
+     "rx": 7,
+     "ry": 7,
+     "fill": "red",
+     "color": "red"
+    },
+    {
+     "op": "line",
+     "id": "dash_p2",
+     "x1": 495,
+     "y1": 375,
+     "x2": 150,
+     "y2": 375,
+     "dash": true,
+     "width": 3,
+     "color": "red"
+    },
+    {
+     "op": "write",
+     "id": "text_p2",
+     "x": 105,
+     "y": 360,
+     "text": "P2",
+     "size": 32,
+     "color": "red"
+    },
+    {
+     "op": "line",
+     "id": "arrow_p_up",
+     "x1": 70,
+     "y1": 420,
+     "x2": 70,
+     "y2": 375,
+     "width": 4,
+     "arrow": true,
+     "color": "red"
+    },
+    {
+     "op": "write",
+     "id": "step_3",
+     "x": 930,
+     "y": 435,
+     "text": "3. Competition bids prices up",
+     "size": 32,
+     "color": "ink"
+    },
+    {
+     "op": "write",
+     "id": "step_4",
+     "x": 930,
+     "y": 495,
+     "text": "4. Result: Higher Price (P2 > P1)",
+     "size": 34,
+     "color": "green",
+     "underline": true
+    },
+    {
+     "op": "write",
+     "id": "step_4b",
+     "x": 970,
+     "y": 545,
+     "text": "and Higher Quantity traded",
+     "size": 30,
+     "color": "green"
+    }
+   ]
+  }
+ ]
+}

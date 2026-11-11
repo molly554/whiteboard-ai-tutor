@@ -1,0 +1,208 @@
+{
+ "title": "Why do we have seasons?",
+ "lang": "en",
+ "steps": [
+  {
+   "title": "The distance paradox",
+   "say": "You're spot on! Earth is actually 5 million kilometers farther from the Sun in July than in January.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "dist_fact",
+     "x": 60,
+     "y": 230,
+     "text": "Spot on! Earth is ~5M km farther in July (aphelion).\nDistance changes by only ~3% — too small to matter.",
+     "size": 32,
+     "color": "green"
+    }
+   ]
+  },
+  {
+   "title": "Factor 1: Sunlight angle",
+   "say": "What really matters is the angle of incoming sunlight. Direct rays concentrate heat, while slanted rays spread it thin.",
+   "ops": [
+    {
+     "op": "erase",
+     "ids": [
+      "key",
+      "dist_fact",
+      "sun",
+      "sunlabel",
+      "orbit",
+      "orbitlabel",
+      "earth1",
+      "axis1",
+      "earth2",
+      "axis2",
+      "earth3",
+      "axis3",
+      "earth4",
+      "axis4"
+     ]
+    },
+    {
+     "op": "write",
+     "id": "angle_head",
+     "x": 60,
+     "y": 130,
+     "text": "1. Sunlight Angle (Energy Concentration)",
+     "size": 40,
+     "underline": true
+    },
+    {
+     "op": "line",
+     "id": "gnd_sum",
+     "x1": 120,
+     "y1": 340,
+     "x2": 680,
+     "y2": 340,
+     "width": 4
+    },
+    {
+     "op": "line",
+     "id": "ray_s1",
+     "x1": 340,
+     "y1": 200,
+     "x2": 380,
+     "y2": 340,
+     "color": "red",
+     "width": 4,
+     "arrow": true
+    },
+    {
+     "op": "line",
+     "id": "ray_s2",
+     "x1": 420,
+     "y1": 200,
+     "x2": 460,
+     "y2": 340,
+     "color": "red",
+     "width": 4,
+     "arrow": true
+    },
+    {
+     "op": "rect",
+     "id": "patch_sum",
+     "x": 380,
+     "y": 334,
+     "w": 80,
+     "h": 12,
+     "color": "red",
+     "fill": "red"
+    },
+    {
+     "op": "write",
+     "id": "txt_sum",
+     "x": 120,
+     "y": 370,
+     "text": "Summer (steep angle):\nEnergy focused on small area\n-> Hotter surface",
+     "size": 28,
+     "color": "red"
+    },
+    {
+     "op": "line",
+     "id": "gnd_win",
+     "x1": 880,
+     "y1": 340,
+     "x2": 1480,
+     "y2": 340,
+     "width": 4
+    },
+    {
+     "op": "line",
+     "id": "ray_w1",
+     "x1": 960,
+     "y1": 220,
+     "x2": 1100,
+     "y2": 340,
+     "color": "blue",
+     "width": 4,
+     "arrow": true
+    },
+    {
+     "op": "line",
+     "id": "ray_w2",
+     "x1": 1040,
+     "y1": 220,
+     "x2": 1260,
+     "y2": 340,
+     "color": "blue",
+     "width": 4,
+     "arrow": true
+    },
+    {
+     "op": "rect",
+     "id": "patch_win",
+     "x": 1100,
+     "y": 334,
+     "w": 160,
+     "h": 12,
+     "color": "blue",
+     "fill": "blue"
+    },
+    {
+     "op": "write",
+     "id": "txt_win",
+     "x": 880,
+     "y": 370,
+     "text": "Winter (shallow angle):\nSame energy spread thin\n-> Weaker heating",
+     "size": 28,
+     "color": "blue"
+    }
+   ]
+  },
+  {
+   "title": "Factor 2: Day length & takeaway",
+   "say": "Tilt also gives summer longer days to absorb heat, completely overwhelming the tiny distance difference.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "day_head",
+     "x": 60,
+     "y": 520,
+     "text": "2. Hours of Daylight",
+     "size": 40,
+     "underline": true
+    },
+    {
+     "op": "write",
+     "id": "day_txt1",
+     "x": 120,
+     "y": 585,
+     "text": "• Summer: ~15 hours of sun\n  More heating, less cooling time",
+     "size": 30,
+     "color": "red"
+    },
+    {
+     "op": "write",
+     "id": "day_txt2",
+     "x": 880,
+     "y": 585,
+     "text": "• Winter: ~9 hours of sun\n  Brief heating, long cold nights",
+     "size": 30,
+     "color": "blue"
+    },
+    {
+     "op": "rect",
+     "id": "sum_box",
+     "x": 120,
+     "y": 710,
+     "w": 1360,
+     "h": 110,
+     "color": "green",
+     "width": 3,
+     "fill": "green"
+    },
+    {
+     "op": "write",
+     "id": "sum_txt",
+     "x": 800,
+     "y": 745,
+     "text": "Angle + daylight duration completely overpower the tiny 3% distance change!",
+     "size": 34,
+     "anchor": "middle"
+    }
+   ]
+  }
+ ]
+}

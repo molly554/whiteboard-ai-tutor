@@ -1,0 +1,191 @@
+{
+ "title": "Why is it hotter when farther?",
+ "lang": "en",
+ "steps": [
+  {
+   "title": "Distance barely changes",
+   "say": "Yes, Earth is slightly farther in July! But the orbit is nearly a circle—distance only changes by 3 percent.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "dist_note",
+     "x": 60,
+     "y": 240,
+     "text": "Distance changes by only ~3% (152M vs 147M km).\nThat tiny difference barely affects temperature!",
+     "size": 34,
+     "color": "ink"
+    },
+    {
+     "op": "line",
+     "id": " June_ray",
+     "x1": 740,
+     "y1": 585,
+     "x2": 330,
+     "y2": 585,
+     "color": "red",
+     "width": 4,
+     "arrow": true
+    },
+    {
+     "op": "write",
+     "id": "june_lbl",
+     "x": 280,
+     "y": 485,
+     "text": "June ( N. Summer )",
+     "size": 30,
+     "color": "red",
+     "anchor": "middle"
+    },
+    {
+     "op": "write",
+     "id": "dec_lbl",
+     "x": 1320,
+     "y": 485,
+     "text": "Dec ( N. Winter )",
+     "size": 30,
+     "color": "blue",
+     "anchor": "middle"
+    }
+   ]
+  },
+  {
+   "title": "Direct vs. angled sunlight",
+   "say": "What really matters is the angle of sunlight. Let's look at a flashlight shining on the ground in the top right.",
+   "ops": [
+    {
+     "op": "erase",
+     "ids": [
+      "orbitlabel"
+     ]
+    },
+    {
+     "op": "rect",
+     "id": "box_cmp",
+     "x": 880,
+     "y": 40,
+     "w": 660,
+     "h": 280,
+     "color": "gray",
+     "width": 3
+    },
+    {
+     "op": "write",
+     "id": "cmp_title",
+     "x": 910,
+     "y": 55,
+     "text": "Sunlight Angle Effect:",
+     "size": 34,
+     "underline": true
+    },
+    {
+     "op": "line",
+     "id": "gnd1",
+     "x1": 920,
+     "y1": 240,
+     "x2": 1160,
+     "y2": 240,
+     "color": "ink",
+     "width": 5
+    },
+    {
+     "op": "line",
+     "id": "b1_a",
+     "x1": 1010,
+     "y1": 120,
+     "x2": 1010,
+     "y2": 230,
+     "color": "red",
+     "width": 4,
+     "arrow": true
+    },
+    {
+     "op": "line",
+     "id": "b1_b",
+     "x1": 1070,
+     "y1": 120,
+     "x2": 1070,
+     "y2": 230,
+     "color": "red",
+     "width": 4,
+     "arrow": true
+    },
+    {
+     "op": "write",
+     "id": "lbl_direct",
+     "x": 1040,
+     "y": 255,
+     "text": "Direct = Concentrated (Hot)",
+     "size": 28,
+     "color": "red",
+     "anchor": "middle"
+    },
+    {
+     "op": "line",
+     "id": "gnd2",
+     "x1": 1220,
+     "y1": 240,
+     "x2": 1500,
+     "y2": 240,
+     "color": "ink",
+     "width": 5
+    },
+    {
+     "op": "line",
+     "id": "b2_a",
+     "x1": 1240,
+     "y1": 120,
+     "x2": 1330,
+     "y2": 230,
+     "color": "blue",
+     "width": 4,
+     "arrow": true
+    },
+    {
+     "op": "line",
+     "id": "b2_b",
+     "x1": 1300,
+     "y1": 120,
+     "x2": 1390,
+     "y2": 230,
+     "color": "blue",
+     "width": 4,
+     "arrow": true
+    },
+    {
+     "op": "write",
+     "id": "lbl_angled",
+     "x": 1360,
+     "y": 255,
+     "text": "Angled = Spread out (Cold)",
+     "size": 28,
+     "color": "blue",
+     "anchor": "middle"
+    }
+   ]
+  },
+  {
+   "title": "Two reasons it's hotter",
+   "say": "So when the North Pole tilts toward the Sun in June, the north gets both steeper rays and longer days, easily beating the tiny distance change.",
+   "ops": [
+    {
+     "op": "write",
+     "id": " summary_1",
+     "x": 60,
+     "y": 360,
+     "text": "In June, North tilts TOWARD the Sun:",
+     "size": 32,
+     "color": "red"
+    },
+    {
+     "op": "write",
+     "id": "summary_2",
+     "x": 60,
+     "y": 410,
+     "text": "1. Steeper rays = much more heat per km²\n2. Longer days = more hours to warm up",
+     "size": 30,
+     "color": "green"
+    }
+   ]
+  }
+ ]
+}

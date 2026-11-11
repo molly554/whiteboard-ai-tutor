@@ -1,0 +1,171 @@
+{
+ "title": "Why We Have Seasons",
+ "lang": "en",
+ "steps": [
+  {
+   "title": "Title",
+   "say": "Seasons come from how Earth is tilted as it travels around the Sun.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "t1",
+     "x": 800,
+     "y": 40,
+     "text": "Why We Have Seasons",
+     "size": 56,
+     "anchor": "middle",
+     "underline": true
+    }
+   ]
+  },
+  {
+   "title": "The Sun",
+   "say": "The Sun gives off light and heat that reach the whole Earth.",
+   "ops": [
+    {
+     "op": "ellipse",
+     "id": "sun",
+     "cx": 200,
+     "cy": 300,
+     "rx": 70,
+     "ry": 70,
+     "color": "red",
+     "fill": "red"
+    },
+    {
+     "op": "write",
+     "id": "sun_lbl",
+     "x": 200,
+     "y": 390,
+     "text": "Sun",
+     "size": 32,
+     "anchor": "middle"
+    }
+   ]
+  },
+  {
+   "title": "Tilted Earth",
+   "say": "Earth's axis is tilted about 23.4 degrees, and it stays tilted the same way all year.",
+   "ops": [
+    {
+     "op": "ellipse",
+     "id": "earth",
+     "cx": 900,
+     "cy": 330,
+     "rx": 110,
+     "ry": 110,
+     "color": "blue"
+    },
+    {
+     "op": "line",
+     "id": "axis",
+     "x1": 849,
+     "y1": 211,
+     "x2": 951,
+     "y2": 449,
+     "color": "gray",
+     "width": 3,
+     "dash": "8 6"
+    },
+    {
+     "op": "write",
+     "id": "earth_lbl",
+     "x": 900,
+     "y": 470,
+     "text": "Earth",
+     "size": 32,
+     "anchor": "middle"
+    },
+    {
+     "op": "write",
+     "id": "tilt",
+     "x": 1000,
+     "y": 220,
+     "text": "axis tilt 23.4°",
+     "size": 28,
+     "color": "gray"
+    }
+   ]
+  },
+  {
+   "title": "Sunlight",
+   "say": "Sunlight travels to Earth in nearly parallel rays.",
+   "ops": [
+    {
+     "op": "line",
+     "id": "r1",
+     "x1": 290,
+     "y1": 290,
+     "x2": 780,
+     "y2": 290,
+     "color": "red",
+     "width": 4,
+     "arrow": true
+    },
+    {
+     "op": "line",
+     "id": "r2",
+     "x1": 290,
+     "y1": 370,
+     "x2": 790,
+     "y2": 370,
+     "color": "red",
+     "width": 4,
+     "arrow": true
+    }
+   ]
+  },
+  {
+   "title": "Northern Summer",
+   "say": "When the Northern Hemisphere leans toward the Sun, its light is more direct and its days are longer.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "n1",
+     "x": 100,
+     "y": 560,
+     "text": "Northern summer: tilted toward the Sun",
+     "size": 36,
+     "color": "red"
+    }
+   ]
+  },
+  {
+   "title": "Winter",
+   "say": "Six months later, the Northern Hemisphere leans away, so its light is spread out and its days are shorter.",
+   "ops": [
+    {
+     "op": "erase",
+     "ids": [
+      "r1",
+      "r2"
+     ]
+    },
+    {
+     "op": "write",
+     "id": "w1",
+     "x": 100,
+     "y": 660,
+     "text": "Northern winter: tilted away from the Sun",
+     "size": 36,
+     "color": "blue"
+    }
+   ]
+  },
+  {
+   "title": "Not Distance",
+   "say": "Distance is not the cause. Earth is actually closest to the Sun in January.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "d1",
+     "x": 100,
+     "y": 760,
+     "text": "Not distance: Earth is closest to the Sun in January.",
+     "size": 32,
+     "color": "gray"
+    }
+   ]
+  }
+ ]
+}

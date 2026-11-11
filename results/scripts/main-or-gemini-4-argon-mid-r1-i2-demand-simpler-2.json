@@ -1,0 +1,304 @@
+{
+ "title": "A simpler way to see the shift",
+ "lang": "en",
+ "steps": [
+  {
+   "title": "Clear the extra lines",
+   "say": "Let's temporarily clear the supply curve and the new demand line so we can focus just on the buyers.",
+   "ops": [
+    {
+     "op": "erase",
+     "ids": [
+      "s",
+      "slab",
+      "e1",
+      "d2",
+      "d2lab",
+      "shift",
+      "shiftlab",
+      "note1",
+      "note2",
+      "note3"
+     ]
+    }
+   ]
+  },
+  {
+   "title": "A normal day",
+   "say": "Imagine selling lemonade on a mild day. At price P1, 5 people want a cup. That gives us this point on D1.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "ex_title",
+     "x": 1160,
+     "y": 220,
+     "text": "Example: Lemonade",
+     "size": 36
+    },
+    {
+     "op": "write",
+     "id": "ex_1",
+     "x": 1160,
+     "y": 290,
+     "text": "Mild day (D1):\nAt price P1,\n5 buyers want it.",
+     "size": 30
+    },
+    {
+     "op": "ellipse",
+     "id": "pt1",
+     "cx": 580,
+     "cy": 470,
+     "rx": 8,
+     "ry": 8,
+     "color": "red",
+     "fill": "red"
+    }
+   ]
+  },
+  {
+   "title": "A hot day!",
+   "say": "Suddenly it's a hot day! Even at the exact same price P1, now 8 people want lemonade. The point moves right.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "ex_2",
+     "x": 1160,
+     "y": 440,
+     "text": "Hot day (D2):\nAt the SAME price P1,\n8 buyers want it!",
+     "size": 30,
+     "color": "red"
+    },
+    {
+     "op": "line",
+     "id": "move_r",
+     "x1": 595,
+     "y1": 470,
+     "x2": 725,
+     "y2": 470,
+     "color": "green",
+     "width": 5,
+     "arrow": true
+    },
+    {
+     "op": "ellipse",
+     "id": "pt2",
+     "cx": 740,
+     "cy": 470,
+     "rx": 8,
+     "ry": 8,
+     "color": "red",
+     "fill": "red"
+    },
+    {
+     "op": "line",
+     "id": "q_hot_v",
+     "x1": 740,
+     "y1": 470,
+     "x2": 740,
+     "y2": 720,
+     "color": "gray",
+     "width": 3,
+     "dash": true
+    },
+    {
+     "op": "write",
+     "id": "q_hot",
+     "x": 740,
+     "y": 735,
+     "text": "More",
+     "size": 30,
+     "anchor": "middle",
+     "color": "red"
+    }
+   ]
+  },
+  {
+   "title": "Every price shifts right",
+   "say": "This happens at every price—whether cheap or expensive, more people want it today. Connecting these new points gives D2.",
+   "ops": [
+    {
+     "op": "ellipse",
+     "id": "pt_hi1",
+     "cx": 392,
+     "cy": 370,
+     "rx": 6,
+     "ry": 6,
+     "color": "red",
+     "fill": "red"
+    },
+    {
+     "op": "line",
+     "id": "arr_hi",
+     "x1": 405,
+     "y1": 370,
+     "x2": 535,
+     "y2": 370,
+     "color": "green",
+     "width": 4,
+     "arrow": true
+    },
+    {
+     "op": "ellipse",
+     "id": "pt_hi2",
+     "cx": 552,
+     "cy": 370,
+     "rx": 6,
+     "ry": 6,
+     "color": "red",
+     "fill": "red"
+    },
+    {
+     "op": "ellipse",
+     "id": "pt_lo1",
+     "cx": 768,
+     "cy": 570,
+     "rx": 6,
+     "ry": 6,
+     "color": "red",
+     "fill": "red"
+    },
+    {
+     "op": "line",
+     "id": "arr_lo",
+     "x1": 780,
+     "y1": 570,
+     "x2": 910,
+     "y2": 570,
+     "color": "green",
+     "width": 4,
+     "arrow": true
+    },
+    {
+     "op": "ellipse",
+     "id": "pt_lo2",
+     "cx": 928,
+     "cy": 570,
+     "rx": 6,
+     "ry": 6,
+     "color": "red",
+     "fill": "red"
+    },
+    {
+     "op": "line",
+     "id": "d2",
+     "x1": 420,
+     "y1": 300,
+     "x2": 1060,
+     "y2": 640,
+     "color": "red",
+     "width": 5
+    },
+    {
+     "op": "write",
+     "id": "d2lab",
+     "x": 1075,
+     "y": 625,
+     "text": "D2",
+     "size": 34,
+     "color": "red"
+    }
+   ]
+  },
+  {
+   "title": "Why price goes up",
+   "say": "Now put Supply back. Since so many people want lemonade, sellers can raise the price to P2, reaching the new equilibrium!",
+   "ops": [
+    {
+     "op": "erase",
+     "ids": [
+      "pt_hi1",
+      "arr_hi",
+      "pt_hi2",
+      "pt_lo1",
+      "arr_lo",
+      "pt_lo2",
+      "q_hot_v",
+      "q_hot",
+      "move_r",
+      "pt2"
+     ]
+    },
+    {
+     "op": "line",
+     "id": "s",
+     "x1": 260,
+     "y1": 640,
+     "x2": 900,
+     "y2": 300,
+     "color": "blue",
+     "width": 5
+    },
+    {
+     "op": "write",
+     "id": "slab",
+     "x": 915,
+     "y": 270,
+     "text": "S",
+     "size": 34,
+     "color": "blue"
+    },
+    {
+     "op": "ellipse",
+     "id": "e2",
+     "cx": 660,
+     "cy": 428,
+     "rx": 9,
+     "ry": 9,
+     "color": "green",
+     "fill": "green"
+    },
+    {
+     "op": "line",
+     "id": "e2h",
+     "x1": 200,
+     "y1": 428,
+     "x2": 660,
+     "y2": 428,
+     "color": "gray",
+     "width": 3,
+     "dash": true
+    },
+    {
+     "op": " line",
+     "id": "e2v",
+     "x1": 660,
+     "y1": 428,
+     "x2": 660,
+     "y2": 720,
+     "color": "gray",
+     "width": 3,
+     "dash": true
+    },
+    {
+     "op": "write",
+     "id": "p2",
+     "x": 130,
+     "y": 405,
+     "text": "P2",
+     "size": 32,
+     "anchor": "middle",
+     "color": "green"
+    },
+    {
+     "op": "write",
+     "id": "q2",
+     "x": 660,
+     "y": 735,
+     "text": "Q2",
+     "size": 32,
+     "anchor": "middle",
+     "color": "green"
+    },
+    {
+     "op": "write",
+     "id": "ex_3",
+     "x": 1160,
+     "y": 600,
+     "text": "Result:\nPrice rises (P1 → P2)\nSales rise (Q1 → Q2)",
+     "size": 30,
+     "color": "green"
+    }
+   ]
+  }
+ ]
+}

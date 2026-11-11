@@ -1,0 +1,229 @@
+{
+ "title": "Demand Rises, Price Rises",
+ "lang": "en",
+ "steps": [
+  {
+   "title": "Set up the axes",
+   "say": "Let's draw a market graph with quantity on the horizontal axis and price on the vertical axis.",
+   "ops": [
+    {
+     "id": "t1",
+     "op": "write",
+     "x": 800,
+     "y": 50,
+     "text": "Demand Rises, Price Rises",
+     "size": 56,
+     "anchor": "middle"
+    },
+    {
+     "id": "ax_y",
+     "op": "line",
+     "x1": 300,
+     "y1": 760,
+     "x2": 300,
+     "y2": 200,
+     "arrow": true,
+     "width": 5
+    },
+    {
+     "id": "ax_x",
+     "op": "line",
+     "x1": 300,
+     "y1": 760,
+     "x2": 900,
+     "y2": 760,
+     "arrow": true,
+     "width": 5
+    },
+    {
+     "id": "lbl_p",
+     "op": "write",
+     "x": 180,
+     "y": 170,
+     "text": "Price",
+     "size": 34
+    },
+    {
+     "id": "lbl_q",
+     "op": "write",
+     "x": 880,
+     "y": 790,
+     "text": "Quantity",
+     "size": 34
+    }
+   ]
+  },
+  {
+   "title": "Supply curve",
+   "say": "Supply slopes upward: sellers offer more when the price is higher.",
+   "ops": [
+    {
+     "id": "sup",
+     "op": "line",
+     "x1": 380,
+     "y1": 680,
+     "x2": 820,
+     "y2": 280,
+     "color": "green",
+     "width": 6
+    },
+    {
+     "id": "sup_l",
+     "op": "write",
+     "x": 830,
+     "y": 240,
+     "text": "Supply",
+     "size": 34,
+     "color": "green"
+    }
+   ]
+  },
+  {
+   "title": "Original demand",
+   "say": "Demand slopes downward: buyers want less when the price is higher.",
+   "ops": [
+    {
+     "id": "d1",
+     "op": "line",
+     "x1": 380,
+     "y1": 280,
+     "x2": 820,
+     "y2": 680,
+     "color": "blue",
+     "width": 6
+    },
+    {
+     "id": "d1_l",
+     "op": "write",
+     "x": 830,
+     "y": 690,
+     "text": "D1",
+     "size": 34,
+     "color": "blue"
+    }
+   ]
+  },
+  {
+   "title": "Original equilibrium",
+   "say": "Where the curves cross is the equilibrium: the starting price and quantity.",
+   "ops": [
+    {
+     "id": "e1",
+     "op": "ellipse",
+     "cx": 600,
+     "cy": 480,
+     "rx": 12,
+     "ry": 12,
+     "color": "ink",
+     "fill": "gray"
+    },
+    {
+     "id": "p1_line",
+     "op": "line",
+     "x1": 300,
+     "y1": 480,
+     "x2": 588,
+     "y2": 480,
+     "color": "gray",
+     "dash": true,
+     "width": 3
+    },
+    {
+     "id": "p1_l",
+     "op": "write",
+     "x": 225,
+     "y": 462,
+     "text": "P1",
+     "size": 32
+    }
+   ]
+  },
+  {
+   "title": "Demand shifts right",
+   "say": "Now demand rises, so the whole demand curve shifts to the right. Buyers want more at every price.",
+   "ops": [
+    {
+     "id": "d2",
+     "op": "line",
+     "x1": 500,
+     "y1": 280,
+     "x2": 900,
+     "y2": 640,
+     "color": "red",
+     "width": 6
+    },
+    {
+     "id": "d2_l",
+     "op": "write",
+     "x": 910,
+     "y": 620,
+     "text": "D2",
+     "size": 34,
+     "color": "red"
+    },
+    {
+     "id": "shift",
+     "op": "line",
+     "x1": 700,
+     "y1": 220,
+     "x2": 780,
+     "y2": 220,
+     "color": "red",
+     "arrow": true,
+     "width": 5
+    }
+   ]
+  },
+  {
+   "title": "New equilibrium",
+   "say": "The curves now cross higher up, so the new equilibrium has a higher price and a larger quantity.",
+   "ops": [
+    {
+     "id": "e2",
+     "op": "ellipse",
+     "cx": 670,
+     "cy": 400,
+     "rx": 12,
+     "ry": 12,
+     "color": "ink",
+     "fill": "red"
+    },
+    {
+     "id": "p2_line",
+     "op": "line",
+     "x1": 300,
+     "y1": 400,
+     "x2": 658,
+     "y2": 400,
+     "color": "red",
+     "dash": true,
+     "width": 3
+    },
+    {
+     "id": "p2_l",
+     "op": "write",
+     "x": 225,
+     "y": 382,
+     "text": "P2",
+     "size": 32,
+     "color": "red"
+    }
+   ]
+  },
+  {
+   "title": "Takeaway",
+   "say": "So when demand rises and supply stays the same, the price goes up, and more is bought and sold.",
+   "ops": [
+    {
+     "id": "sum",
+     "op": "write",
+     "x": 1000,
+     "y": 360,
+     "text": "Demand ↑\nPrice ↑\nQuantity ↑",
+     "size": 44,
+     "color": "red"
+    }
+   ]
+  }
+ ]
+}

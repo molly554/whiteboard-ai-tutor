@@ -1,0 +1,68 @@
+{
+  "title": "Why do we have seasons?",
+  "lang": "en",
+  "steps": [
+    {
+      "title": "The common guess",
+      "say": "Most people guess that summer happens because Earth is closer to the Sun. Let's test that guess.",
+      "ops": [
+        { "op": "write", "id": "title", "x": 60, "y": 40, "text": "Why do we have seasons?", "size": 56, "underline": true },
+        { "op": "write", "id": "guess", "x": 60, "y": 128, "text": "Common guess: summer happens when Earth\nis closer to the Sun.", "size": 36 },
+        { "op": "write", "id": "check", "x": 60, "y": 230, "text": "Check: Earth is closest to the Sun in early January —\nright in the middle of the northern winter!", "size": 36, "color": "red" }
+      ]
+    },
+    {
+      "title": "The Sun and Earth's orbit",
+      "say": "Here is the Sun, with Earth's path around it.",
+      "ops": [
+        { "op": "ellipse", "id": "sun", "cx": 800, "cy": 600, "rx": 50, "ry": 50, "color": "red", "width": 5, "fill": "red" },
+        { "op": "write", "id": "sunlabel", "x": 800, "y": 582, "text": "Sun", "size": 30, "anchor": "middle" },
+        { "op": "ellipse", "id": "orbit", "cx": 800, "cy": 600, "rx": 520, "ry": 200, "color": "gray", "width": 4 },
+        { "op": "write", "id": "orbitlabel", "x": 1000, "y": 350, "text": "Earth's orbit", "size": 30 }
+      ]
+    },
+    {
+      "title": "The tilt",
+      "say": "The real cause: Earth's axis is tilted 23.5 degrees, and it keeps pointing the same way all year round.",
+      "ops": [
+        { "op": "erase", "ids": ["guess", "check"] },
+        { "op": "write", "id": "key", "x": 60, "y": 128, "text": "Real reason: Earth's axis is tilted 23.5°\nand always points toward the same star.", "size": 36, "color": "blue" },
+        { "op": "ellipse", "id": "earth1", "cx": 280, "cy": 600, "rx": 34, "ry": 34, "color": "blue", "width": 4, "fill": "blue" },
+        { "op": "line", "id": "axis1", "x1": 255, "y1": 657, "x2": 305, "y2": 543, "width": 4 },
+        { "op": "ellipse", "id": "earth2", "cx": 1320, "cy": 600, "rx": 34, "ry": 34, "color": "blue", "width": 4, "fill": "blue" },
+        { "op": "line", "id": "axis2", "x1": 1295, "y1": 657, "x2": 1345, "y2": 543, "width": 4 },
+        { "op": "ellipse", "id": "earth3", "cx": 800, "cy": 800, "rx": 34, "ry": 34, "color": "blue", "width": 4, "fill": "blue" },
+        { "op": "line", "id": "axis3", "x1": 775, "y1": 857, "x2": 825, "y2": 743, "width": 4 },
+        { "op": "ellipse", "id": "earth4", "cx": 800, "cy": 400, "rx": 34, "ry": 34, "color": "blue", "width": 4, "fill": "blue" },
+        { "op": "line", "id": "axis4", "x1": 775, "y1": 457, "x2": 825, "y2": 343, "width": 4 }
+      ]
+    },
+    {
+      "title": "Summer and winter",
+      "say": "When the northern half tilts toward the Sun it gets more direct sunlight: summer. Tilted away, it is winter.",
+      "ops": [
+        { "op": "write", "id": "lab1", "x": 150, "y": 572, "text": "Northern\nsummer", "size": 28, "anchor": "middle", "color": "green" },
+        { "op": "write", "id": "lab2", "x": 1450, "y": 572, "text": "Northern\nwinter", "size": 28, "anchor": "middle", "color": "blue" },
+        { "op": "line", "id": "ray1", "x1": 745, "y1": 600, "x2": 335, "y2": 600, "color": "red", "width": 4, "arrow": true },
+        { "op": "line", "id": "ray2", "x1": 855, "y1": 600, "x2": 1265, "y2": 600, "color": "red", "width": 4, "arrow": true },
+        { "op": "write", "id": "eq1", "x": 880, "y": 820, "text": "Equinox", "size": 28 },
+        { "op": "write", "id": "eq2", "x": 880, "y": 345, "text": "Equinox", "size": 28 }
+      ]
+    },
+    {
+      "title": "Why the tilt matters",
+      "say": "Tilted toward the Sun, sunlight is more direct and days are longer. Tilted away, sunlight is weaker and days are shorter.",
+      "ops": [
+        { "op": "write", "id": "sumnote", "x": 40, "y": 790, "text": "Tilted toward the Sun: direct\nsunlight, longer days → summer.", "size": 30, "color": "green" },
+        { "op": "write", "id": "winnote", "x": 1090, "y": 790, "text": "Tilted away: weaker sunlight,\nshorter days → winter.", "size": 30, "color": "blue" }
+      ]
+    },
+    {
+      "title": "Takeaway",
+      "say": "So the seasons come from the tilt of Earth's axis, not from how far away the Sun is.",
+      "ops": [
+        { "op": "write", "id": "take", "x": 820, "y": 40, "text": "It's the TILT, not the distance!", "size": 44, "color": "red", "underline": true }
+      ]
+    }
+  ]
+}

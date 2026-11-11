@@ -1,0 +1,337 @@
+{
+ "title": "When Demand Rises",
+ "lang": "en",
+ "steps": [
+  {
+   "title": "Set up axes",
+   "say": "Let's draw a standard supply and demand graph, with Price on the vertical axis and Quantity on the horizontal axis.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "main_title",
+     "x": 800,
+     "y": 50,
+     "text": "What Happens When Demand Rises?",
+     "size": 48,
+     "color": "ink",
+     "anchor": "middle"
+    },
+    {
+     "op": "line",
+     "id": "axis_p",
+     "x1": 200,
+     "y1": 700,
+     "x2": 200,
+     "y2": 180,
+     "color": "ink",
+     "width": 4,
+     "arrow": true
+    },
+    {
+     "op": "line",
+     "id": "axis_q",
+     "x1": 200,
+     "y1": 700,
+     "x2": 850,
+     "y2": 700,
+     "color": "ink",
+     "width": 4,
+     "arrow": true
+    },
+    {
+     "op": "write",
+     "id": "lbl_p",
+     "x": 190,
+     "y": 140,
+     "text": "Price (P)",
+     "size": 32,
+     "color": "ink",
+     "anchor": "middle"
+    },
+    {
+     "op": "write",
+     "id": "lbl_q",
+     "x": 860,
+     "y": 710,
+     "text": "Quantity (Q)",
+     "size": 32,
+     "color": "ink",
+     "anchor": "start"
+    }
+   ]
+  },
+  {
+   "title": "Initial equilibrium",
+   "say": "Here is our initial downward-sloping demand curve D1 and upward-sloping supply curve S. They cross at the first equilibrium, E1.",
+   "ops": [
+    {
+     "op": "line",
+     "id": "curve_d1",
+     "x1": 260,
+     "y1": 260,
+     "x2": 720,
+     "y2": 660,
+     "color": "blue",
+     "width": 4
+    },
+    {
+     "op": "write",
+     "id": "lbl_d1",
+     "x": 730,
+     "y": 660,
+     "text": "D1",
+     "size": 32,
+     "color": "blue"
+    },
+    {
+     "op": "line",
+     "id": "curve_s",
+     "x1": 260,
+     "y1": 660,
+     "x2": 720,
+     "y2": 260,
+     "color": "gray",
+     "width": 4
+    },
+    {
+     "op": "write",
+     "id": "lbl_s",
+     "x": 730,
+     "y": 240,
+     "text": "S",
+     "size": 32,
+     "color": "gray"
+    },
+    {
+     "op": "ellipse",
+     "id": "pt_e1",
+     "cx": 490,
+     "cy": 460,
+     "rx": 6,
+     "ry": 6,
+     "color": "ink",
+     "fill": "ink"
+    },
+    {
+     "op": "write",
+     "id": "lbl_e1",
+     "x": 510,
+     "y": 445,
+     "text": "E1",
+     "size": 28,
+     "color": "ink"
+    }
+   ]
+  },
+  {
+   "title": "Baseline price and quantity",
+   "say": "At this intersection, the initial market-clearing price is P1, and the quantity sold is Q1.",
+   "ops": [
+    {
+     "op": "line",
+     "id": "dash_p1",
+     "x1": 490,
+     "y1": 460,
+     "x2": 200,
+     "y2": 460,
+     "color": "gray",
+     "width": 2,
+     "dash": true
+    },
+    {
+     "op": "line",
+     "id": "dash_q1",
+     "x1": 490,
+     "y1": 460,
+     "x2": 490,
+     "y2": 700,
+     "color": "gray",
+     "width": 2,
+     "dash": true
+    },
+    {
+     "op": "write",
+     "id": "lbl_p1",
+     "x": 160,
+     "y": 442,
+     "text": "P1",
+     "size": 30,
+     "color": "ink"
+    },
+    {
+     "op": "write",
+     "id": "lbl_q1",
+     "x": 475,
+     "y": 715,
+     "text": "Q1",
+     "size": 30,
+     "color": "ink"
+    }
+   ]
+  },
+  {
+   "title": "Demand shifts right",
+   "say": "When consumer demand increases, the entire demand curve shifts outward to the right, to D2.",
+   "ops": [
+    {
+     "op": "line",
+     "id": "curve_d2",
+     "x1": 400,
+     "y1": 260,
+     "x2": 820,
+     "y2": 625,
+     "color": "red",
+     "width": 4
+    },
+    {
+     "op": "write",
+     "id": "lbl_d2",
+     "x": 830,
+     "y": 625,
+     "text": "D2",
+     "size": 32,
+     "color": "red"
+    },
+    {
+     "op": "line",
+     "id": "arrow_shift",
+     "x1": 530,
+     "y1": 340,
+     "x2": 610,
+     "y2": 340,
+     "color": "red",
+     "width": 3,
+     "arrow": true
+    },
+    {
+     "op": "write",
+     "id": "txt_shift",
+     "x": 570,
+     "y": 295,
+     "text": "+ Demand",
+     "size": 26,
+     "color": "red",
+     "anchor": "middle"
+    }
+   ]
+  },
+  {
+   "title": "New equilibrium",
+   "say": "Along the stationary supply curve, the new crossing point moves up and to the right, to E2.",
+   "ops": [
+    {
+     "op": "ellipse",
+     "id": "pt_e2",
+     "cx": 610,
+     "cy": 356,
+     "rx": 6,
+     "ry": 6,
+     "color": "red",
+     "fill": "red"
+    },
+    {
+     "op": "write",
+     "id": "lbl_e2",
+     "x": 625,
+     "y": 335,
+     "text": "E2",
+     "size": 28,
+     "color": "red"
+    },
+    {
+     "op": "line",
+     "id": "dash_p2",
+     "x1": 610,
+     "y1": 356,
+     "x2": 200,
+     "y2": 356,
+     "color": "red",
+     "width": 2,
+     "dash": true
+    },
+    {
+     "op": "line",
+     "id": "dash_q2",
+     "x1": 610,
+     "y1": 356,
+     "x2": 610,
+     "y2": 700,
+     "color": "red",
+     "width": 2,
+     "dash": true
+    },
+    {
+     "op": "write",
+     "id": "lbl_p2",
+     "x": 160,
+     "y": 338,
+     "text": "P2",
+     "size": 30,
+     "color": "red"
+    },
+    {
+     "op": "write",
+     "id": "lbl_q2",
+     "x": 595,
+     "y": 715,
+     "text": "Q2",
+     "size": 30,
+     "color": "red"
+    }
+   ]
+  },
+  {
+   "title": "Conclusion",
+   "say": "Buyers compete for limited supply, creating a shortage at the old price. Consequently, the equilibrium price rises, and quantity supplied increases.",
+   "ops": [
+    {
+     "op": "rect",
+     "id": "box_summary",
+     "x": 980,
+     "y": 240,
+     "w": 540,
+     "h": 420,
+     "color": "ink",
+     "width": 3,
+     "fill": "gray"
+    },
+    {
+     "op": "write",
+     "id": "sum_title",
+     "x": 1020,
+     "y": 275,
+     "text": "Market Impact:",
+     "size": 36,
+     "color": "ink"
+    },
+    {
+     "op": "write",
+     "id": "sum_p",
+     "x": 1020,
+     "y": 350,
+     "text": "• Price rises  (P1 → P2)",
+     "size": 32,
+     "color": "red"
+    },
+    {
+     "op": "write",
+     "id": "sum_q",
+     "x": 1020,
+     "y": 415,
+     "text": "• Quantity rises  (Q1 → Q2)",
+     "size": 32,
+     "color": "green"
+    },
+    {
+     "op": "write",
+     "id": "sum_reason",
+     "x": 1020,
+     "y": 490,
+     "text": "Why?\nHigher demand causes a shortage\nat P1, bidding prices up until\nsupply matches demand again.",
+     "size": 28,
+     "color": "ink"
+    }
+   ]
+  }
+ ]
+}

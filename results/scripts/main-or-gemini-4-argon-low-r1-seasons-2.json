@@ -1,0 +1,468 @@
+{
+ "title": "Why Do We Have Seasons?",
+ "lang": "en",
+ "steps": [
+  {
+   "title": "The Real Reason",
+   "say": "Many think seasons come from Earth's distance to the Sun, but the real reason is Earth's axial tilt.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "t_main",
+     "x": 800,
+     "y": 50,
+     "text": "Why Do We Have Seasons?",
+     "size": 56,
+     "anchor": "middle",
+     "underline": true
+    },
+    {
+     "op": "write",
+     "id": "t_myth",
+     "x": 200,
+     "y": 130,
+     "text": "NOT distance to the Sun",
+     "size": 36,
+     "color": "red"
+    },
+    {
+     "op": "line",
+     "id": "l_strike",
+     "x1": 190,
+     "y1": 152,
+     "x2": 620,
+     "y2": 152,
+     "color": "red",
+     "width": 4
+    },
+    {
+     "op": "write",
+     "id": "t_truth",
+     "x": 900,
+     "y": 130,
+     "text": "YES: 23.5° Axial Tilt!",
+     "size": 36,
+     "color": "green"
+    }
+   ]
+  },
+  {
+   "title": "Earth's Tilt",
+   "say": "As Earth orbits the Sun, its spin axis is tilted by 23.5 degrees from vertical.",
+   "ops": [
+    {
+     "op": "ellipse",
+     "id": "e_tilt",
+     "cx": 300,
+     "cy": 450,
+     "rx": 90,
+     "ry": 90,
+     "color": "blue",
+     "fill": "blue"
+    },
+    {
+     "op": "line",
+     "id": "l_vert",
+     "x1": 300,
+     "y1": 310,
+     "x2": 300,
+     "y2": 590,
+     "color": "gray",
+     "width": 3,
+     "dash": true
+    },
+    {
+     "op": "line",
+     "id": "l_axis",
+     "x1": 240,
+     "y1": 575,
+     "x2": 360,
+     "y2": 325,
+     "color": "ink",
+     "width": 5,
+     "arrow": true
+    },
+    {
+     "op": "line",
+     "id": "l_eq",
+     "x1": 218,
+     "y1": 410,
+     "x2": 382,
+     "y2": 490,
+     "color": "blue",
+     "width": 3,
+     "dash": true
+    },
+    {
+     "op": "path",
+     "id": "p_arc",
+     "d": "M 300 350 A 100 100 0 0 1 340 358",
+     "color": "red",
+     "width": 3
+    },
+    {
+     "op": "write",
+     "id": "t_deg",
+     "x": 385,
+     "y": 315,
+     "text": "23.5° tilt",
+     "size": 32,
+     "color": "red"
+    },
+    {
+     "op": "write",
+     "id": "t_np",
+     "x": 375,
+     "y": 290,
+     "text": "North Pole",
+     "size": 28,
+     "color": "ink"
+    }
+   ]
+  },
+  {
+   "title": "Earth's Orbit",
+   "say": "Importantly, this tilt always points in the same direction in space as Earth travels around the Sun.",
+   "ops": [
+    {
+     "op": "erase",
+     "ids": [
+      "e_tilt",
+      "l_vert",
+      "l_axis",
+      "l_eq",
+      "p_arc",
+      "t_deg",
+      "t_np"
+     ]
+    },
+    {
+     "op": "ellipse",
+     "id": "sun",
+     "cx": 480,
+     "cy": 430,
+     "rx": 55,
+     "ry": 55,
+     "color": "red",
+     "fill": "red"
+    },
+    {
+     "op": "write",
+     "id": "t_sun",
+     "x": 480,
+     "y": 340,
+     "text": "Sun",
+     "size": 32,
+     "color": "red",
+     "anchor": "middle"
+    },
+    {
+     "op": "ellipse",
+     "id": "orbit",
+     "cx": 480,
+     "cy": 430,
+     "rx": 340,
+     "ry": 130,
+     "color": "gray",
+     "width": 3,
+     "dash": true
+    }
+   ]
+  },
+  {
+   "title": "June: Northern Summer",
+   "say": "In June, the North Pole tilts toward the Sun, giving the Northern Hemisphere summer.",
+   "ops": [
+    {
+     "op": "ellipse",
+     "id": "e_left",
+     "cx": 140,
+     "cy": 430,
+     "rx": 45,
+     "ry": 45,
+     "color": "blue",
+     "fill": "blue"
+    },
+    {
+     "op": "line",
+     "id": "ax_left",
+     "x1": 112,
+     "y1": 495,
+     "x2": 168,
+     "y2": 365,
+     "color": "ink",
+     "width": 4,
+     "arrow": true
+    },
+    {
+     "op": "line",
+     "id": "eq_left",
+     "x1": 99,
+     "y1": 412,
+     "x2": 181,
+     "y2": 448,
+     "color": "ink",
+     "width": 2,
+     "dash": true
+    },
+    {
+     "op": "line",
+     "id": "ray_l1",
+     "x1": 410,
+     "y1": 410,
+     "x2": 200,
+     "y2": 410,
+     "color": "red",
+     "width": 4,
+     "arrow": true
+    },
+    {
+     "op": "line",
+     "id": "ray_l2",
+     "x1": 410,
+     "y1": 450,
+     "x2": 200,
+     "y2": 450,
+     "color": "red",
+     "width": 4,
+     "arrow": true
+    },
+    {
+     "op": "write",
+     "id": "t_june",
+     "x": 140,
+     "y": 300,
+     "text": "June",
+     "size": 36,
+     "color": "ink",
+     "anchor": "middle"
+    },
+    {
+     "op": "write",
+     "id": "t_j_ns",
+     "x": 140,
+     "y": 515,
+     "text": "North: Summer\nSouth: Winter",
+     "size": 28,
+     "color": "blue",
+     "anchor": "middle"
+    }
+   ]
+  },
+  {
+   "title": "December: Northern Winter",
+   "say": "Six months later in December, the North Pole tilts away from the Sun, bringing winter to the north and summer to the south.",
+   "ops": [
+    {
+     "op": "ellipse",
+     "id": "e_right",
+     "cx": 820,
+     "cy": 430,
+     "rx": 45,
+     "ry": 45,
+     "color": "blue",
+     "fill": "blue"
+    },
+    {
+     "op": "line",
+     "id": "ax_right",
+     "x1": 792,
+     "y1": 495,
+     "x2": 848,
+     "y2": 365,
+     "color": "ink",
+     "width": 4,
+     "arrow": true
+    },
+    {
+     "op": "line",
+     "id": "eq_right",
+     "x1": 779,
+     "y1": 412,
+     "x2": 861,
+     "y2": 448,
+     "color": "ink",
+     "width": 2,
+     "dash": true
+    },
+    {
+     "op": "line",
+     "id": "ray_r1",
+     "x1": 550,
+     "y1": 410,
+     "x2": 760,
+     "y2": 410,
+     "color": "red",
+     "width": 4,
+     "arrow": true
+    },
+    {
+     "op": "line",
+     "id": "ray_r2",
+     "x1": 550,
+     "y1": 450,
+     "x2": 760,
+     "y2": 450,
+     "color": "red",
+     "width": 4,
+     "arrow": true
+    },
+    {
+     "op": "write",
+     "id": "t_dec",
+     "x": 820,
+     "y": 300,
+     "text": "December",
+     "size": 36,
+     "color": "ink",
+     "anchor": "middle"
+    },
+    {
+     "op": "write",
+     "id": "t_d_ns",
+     "x": 820,
+     "y": 515,
+     "text": "North: Winter\nSouth: Summer",
+     "size": 28,
+     "color": "blue",
+     "anchor": "middle"
+    }
+   ]
+  },
+  {
+   "title": "Why Tilt Changes Temperature",
+   "say": "When tilted toward the Sun, sunlight hits directly and concentrates heat. When tilted away, light hits at a shallow angle and spreads out.",
+   "ops": [
+    {
+     "op": "rect",
+     "id": "box_ang",
+     "x": 980,
+     "y": 230,
+     "w": 560,
+     "h": 430,
+     "color": "gray",
+     "width": 3
+    },
+    {
+     "op": "write",
+     "id": "t_ang",
+     "x": 1260,
+     "y": 250,
+     "text": "Sunlight Angle",
+     "size": 36,
+     "color": "ink",
+     "anchor": "middle"
+    },
+    {
+     "op": "line",
+     "id": "r_dir1",
+     "x1": 1020,
+     "y1": 340,
+     "x2": 1150,
+     "y2": 340,
+     "color": "red",
+     "width": 4,
+     "arrow": true
+    },
+    {
+     "op": "line",
+     "id": "r_dir2",
+     "x1": 1020,
+     "y1": 380,
+     "x2": 1150,
+     "y2": 380,
+     "color": "red",
+     "width": 4,
+     "arrow": true
+    },
+    {
+     "op": "line",
+     "id": "surf_dir",
+     "x1": 1170,
+     "y1": 320,
+     "x2": 1170,
+     "y2": 400,
+     "color": "green",
+     "width": 6
+    },
+    {
+     "op": "write",
+     "id": "t_dir",
+     "x": 1200,
+     "y": 330,
+     "text": "Direct (Summer)\nConcentrated = Hot",
+     "size": 28,
+     "color": "red"
+    },
+    {
+     "op": "line",
+     "id": "r_low1",
+     "x1": 1020,
+     "y1": 510,
+     "x2": 1130,
+     "y2": 510,
+     "color": "red",
+     "width": 4,
+     "arrow": true
+    },
+    {
+     "op": "line",
+     "id": "r_low2",
+     "x1": 1020,
+     "y1": 550,
+     "x2": 1170,
+     "y2": 550,
+     "color": "red",
+     "width": 4,
+     "arrow": true
+    },
+    {
+     "op": "line",
+     "id": "surf_low",
+     "x1": 1120,
+     "y1": 480,
+     "x2": 1210,
+     "y2": 590,
+     "color": "blue",
+     "width": 6
+    },
+    {
+     "op": "write",
+     "id": "t_low",
+     "x": 1220,
+     "y": 500,
+     "text": "Low Angle (Winter)\nSpread out = Cold",
+     "size": 28,
+     "color": "blue"
+    }
+   ]
+  },
+  {
+   "title": "Summary",
+   "say": "So seasons happen because Earth's 23.5-degree tilt changes both the angle of sunlight and the length of daylight throughout the year.",
+   "ops": [
+    {
+     "op": "rect",
+     "id": "box_sum",
+     "x": 140,
+     "y": 710,
+     "w": 1320,
+     "h": 110,
+     "color": "green",
+     "width": 4,
+     "fill": "green"
+    },
+    {
+     "op": "write",
+     "id": "t_sum",
+     "x": 800,
+     "y": 745,
+     "text": "23.5° Tilt  ->  Sunlight Angle + Day Length  ->  Seasons!",
+     "size": 40,
+     "color": "ink",
+     "anchor": "middle"
+    }
+   ]
+  }
+ ]
+}

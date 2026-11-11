@@ -1,0 +1,39 @@
+{
+  "mode": "continue",
+  "base": "r1-seasons",
+  "atStep": 3,
+  "question": "Wait — in northern summer, isn't Earth farther from the Sun? Why is it hotter then?",
+  "steps": [
+    {
+      "title": "Good question",
+      "say": "Distance isn't the cause: the orbit is almost a circle, and Earth is actually closest to the Sun in January.",
+      "ops": [
+        { "op": "write", "id": "dist", "x": 900, "y": 128, "text": "Good question! The orbit is almost\na circle: the distance changes by\nonly about 3%. Earth is closest in\nJanuary, in northern winter.", "size": 32, "color": "red" }
+      ]
+    },
+    {
+      "title": "Perspective",
+      "say": "The picture is tilted to show the orbit, so distances in the drawing look different from real life.",
+      "ops": [
+        { "op": "write", "id": "persp", "x": 40, "y": 790, "text": "Drawing is tilted for perspective —\nthe real orbit is almost circular.", "size": 30 }
+      ]
+    },
+    {
+      "title": "What really changes",
+      "say": "What changes is how directly sunlight hits the northern half: more direct when tilted toward the Sun, less direct when tilted away.",
+      "ops": [
+        { "op": "write", "id": "lab1", "x": 150, "y": 572, "text": "Northern\nsummer", "size": 28, "anchor": "middle", "color": "green" },
+        { "op": "write", "id": "lab2", "x": 1450, "y": 572, "text": "Northern\nwinter", "size": 28, "anchor": "middle", "color": "blue" },
+        { "op": "line", "id": "ray1", "x1": 745, "y1": 600, "x2": 335, "y2": 600, "color": "red", "width": 4, "arrow": true },
+        { "op": "line", "id": "ray2", "x1": 855, "y1": 600, "x2": 1265, "y2": 600, "color": "red", "width": 4, "arrow": true }
+      ]
+    },
+    {
+      "title": "Tilt, not distance",
+      "say": "So the tilt, not the distance, drives the seasons.",
+      "ops": [
+        { "op": "write", "id": "sum", "x": 1090, "y": 790, "text": "Tilt changes how directly\nsunlight hits → seasons.", "size": 30, "color": "red" }
+      ]
+    }
+  ]
+}

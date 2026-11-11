@@ -1,0 +1,219 @@
+{
+ "title": "Why Pythagorean Theorem Works",
+ "lang": "en",
+ "steps": [
+  {
+   "title": "Draw a right triangle",
+   "say": "Let's start with a right triangle. I'll label the legs as a and b, and the hypotenuse as c.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "title_step1",
+     "x": 80,
+     "y": 60,
+     "text": "Right Triangle",
+     "size": 52,
+     "color": "ink"
+    },
+    {
+     "op": "path",
+     "id": "tri1",
+     "d": "M 200 700 L 500 700 L 200 300 Z",
+     "color": "blue",
+     "width": 4,
+     "fill": "blue"
+    },
+    {
+     "op": "write",
+     "id": "label_a",
+     "x": 130,
+     "y": 510,
+     "text": "a",
+     "size": 40,
+     "color": "red"
+    },
+    {
+     "op": "write",
+     "id": "label_b",
+     "x": 340,
+     "y": 720,
+     "text": "b",
+     "size": 40,
+     "color": "green"
+    },
+    {
+     "op": "write",
+     "id": "label_c",
+     "x": 360,
+     "y": 460,
+     "text": "c",
+     "size": 40,
+     "color": "ink"
+    }
+   ]
+  },
+  {
+   "title": "Square each side",
+   "say": "Now I'll draw a square on each side of the triangle.",
+   "ops": [
+    {
+     "op": "rect",
+     "id": "square_a",
+     "x": 200,
+     "y": 300,
+     "w": 300,
+     "h": 300,
+     "color": "red",
+     "width": 3,
+     "fill": "red"
+    },
+    {
+     "op": "rect",
+     "id": "square_b",
+     "x": 500,
+     "y": 700,
+     "w": 300,
+     "h": 300,
+     "color": "green",
+     "width": 3,
+     "fill": "green"
+    },
+    {
+     "op": "rect",
+     "id": "square_c",
+     "x": 173,
+     "y": 264,
+     "w": 424,
+     "h": 424,
+     "color": "gray",
+     "width": 3,
+     "fill": "gray",
+     "rotate": 45
+    }
+   ]
+  },
+  {
+   "title": "Area formulas",
+   "say": "The area of each square is the side length squared.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "area_a",
+     "x": 120,
+     "y": 250,
+     "text": "a²",
+     "size": 36,
+     "color": "red"
+    },
+    {
+     "op": "write",
+     "id": "area_b",
+     "x": 610,
+     "y": 780,
+     "text": "b²",
+     "size": 36,
+     "color": "green"
+    },
+    {
+     "op": "write",
+     "id": "area_c",
+     "x": 360,
+     "y": 210,
+     "text": "c²",
+     "size": 36,
+     "color": "gray"
+    }
+   ]
+  },
+  {
+   "title": "Rearrange pieces",
+   "say": "The two smaller squares can be cut and rearranged to exactly cover the large square.",
+   "ops": [
+    {
+     "op": "erase",
+     "ids": [
+      "square_a",
+      "square_b",
+      "square_c",
+      "area_a",
+      "area_b",
+      "area_c"
+     ]
+    },
+    {
+     "op": "path",
+     "id": "rearranged_a",
+     "d": "M 900 400 L 1200 400 L 1200 700 L 900 700 Z",
+     "color": "red",
+     "width": 3,
+     "fill": "red"
+    },
+    {
+     "op": "path",
+     "id": "rearranged_b",
+     "d": "M 1200 400 L 1500 400 L 1500 700 L 1200 700 Z",
+     "color": "green",
+     "width": 3,
+     "fill": "green"
+    },
+    {
+     "op": "write",
+     "id": "rearranged_label",
+     "x": 900,
+     "y": 740,
+     "text": "a² + b²",
+     "size": 36,
+     "color": "ink"
+    }
+   ]
+  },
+  {
+   "title": "They match",
+   "say": "The combined area of the two smaller squares equals the area of the large square.",
+   "ops": [
+    {
+     "op": "path",
+     "id": "combined_square",
+     "d": "M 900 100 L 1500 100 L 1500 700 L 900 700 Z",
+     "color": "gray",
+     "width": 3,
+     "fill": "gray"
+    },
+    {
+     "op": "write",
+     "id": "combined_label",
+     "x": 900,
+     "y": 740,
+     "text": "c²",
+     "size": 36,
+     "color": "gray"
+    }
+   ]
+  },
+  {
+   "title": "Conclusion",
+   "say": "This shows why a squared plus b squared equals c squared.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "conclusion",
+     "x": 80,
+     "y": 800,
+     "text": "a² + b² = c²",
+     "size": 48,
+     "color": "ink"
+    },
+    {
+     "op": "line",
+     "id": "underline_conclusion",
+     "x1": 80,
+     "y1": 870,
+     "x2": 420,
+     "y2": 870,
+     "color": "ink",
+     "width": 4
+    }
+   ]
+  }
+ ]
+}

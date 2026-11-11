@@ -1,0 +1,204 @@
+{
+ "title": "Solving x² - 5x + 6 = 0",
+ "lang": "en",
+ "steps": [
+  {
+   "title": "Problem Statement",
+   "say": "Let's solve this quadratic equation. We can always start with the standard quadratic formula.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "t_eq",
+     "x": 800,
+     "y": 60,
+     "text": "Solve:  x² - 5x + 6 = 0",
+     "size": 52,
+     "color": "ink",
+     "anchor": "middle"
+    },
+    {
+     "op": "line",
+     "id": "l_div",
+     "x1": 80,
+     "y1": 130,
+     "x2": 1520,
+     "y2": 130,
+     "color": "gray",
+     "width": 3
+    }
+   ]
+  },
+  {
+   "title": "Attempting Formula",
+   "say": "Here, a is 1, b is negative 5, and c is 6. Let's substitute them into the formula.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "t_coeff",
+     "x": 100,
+     "y": 170,
+     "text": "Method 1: Quadratic Formula\na = 1,  b = -5,  c = 6",
+     "size": 36,
+     "color": "blue"
+    },
+    {
+     "op": "write",
+     "id": "t_form",
+     "x": 100,
+     "y": 280,
+     "text": "x = [-(-5) ± √((-5)² - 4·1·6)] / (2·1)",
+     "size": 36,
+     "color": "ink"
+    }
+   ]
+  },
+  {
+   "title": "Hold On - Switch Method",
+   "say": "Wait, this arithmetic is unnecessary! There is a much simpler way: factoring.",
+   "ops": [
+    {
+     "op": "line",
+     "id": "l_cross1",
+     "x1": 90,
+     "y1": 270,
+     "x2": 820,
+     "y2": 330,
+     "color": "red",
+     "width": 4
+    },
+    {
+     "op": "line",
+     "id": "l_cross2",
+     "x1": 90,
+     "y1": 330,
+     "x2": 820,
+     "y2": 270,
+     "color": "red",
+     "width": 4
+    },
+    {
+     "op": "write",
+     "id": "t_switch",
+     "x": 880,
+     "y": 280,
+     "text": "Wait! Factoring is much faster!",
+     "size": 34,
+     "color": "red"
+    }
+   ]
+  },
+  {
+   "title": "Factoring Strategy",
+   "say": "We look for two numbers that multiply to 6 and add up to negative 5.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "t_m2",
+     "x": 100,
+     "y": 380,
+     "text": "Method 2: Factoring",
+     "size": 40,
+     "color": "blue"
+    },
+    {
+     "op": "rect",
+     "id": "box_clue",
+     "x": 100,
+     "y": 450,
+     "w": 460,
+     "h": 140,
+     "color": "blue",
+     "width": 3
+    },
+    {
+     "op": "write",
+     "id": "t_clue1",
+     "x": 130,
+     "y": 475,
+     "text": "Need:   p · q = +6",
+     "size": 34,
+     "color": "ink"
+    },
+    {
+     "op": "write",
+     "id": "t_clue2",
+     "x": 130,
+     "y": 525,
+     "text": "        p + q = -5",
+     "size": 34,
+     "color": "ink"
+    },
+    {
+     "op": "line",
+     "id": "arr_clue",
+     "x1": 590,
+     "y1": 520,
+     "x2": 690,
+     "y2": 520,
+     "color": "green",
+     "width": 4,
+     "arrow": true
+    },
+    {
+     "op": "write",
+     "id": "t_found",
+     "x": 720,
+     "y": 500,
+     "text": "p = -2,   q = -3",
+     "size": 36,
+     "color": "green"
+    }
+   ]
+  },
+  {
+   "title": "Factorized Form",
+   "say": "So the left-hand side factors directly into (x - 2)(x - 3) = 0.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "t_fac_step",
+     "x": 100,
+     "y": 640,
+     "text": "(x - 2)(x - 3) = 0",
+     "size": 44,
+     "color": "ink"
+    }
+   ]
+  },
+  {
+   "title": "Final Solution",
+   "say": "Setting each factor to zero gives our solutions: x = 2 or x = 3.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "t_split",
+     "x": 100,
+     "y": 720,
+     "text": "x - 2 = 0   ⇒   x = 2\nx - 3 = 0   ⇒   x = 3",
+     "size": 36,
+     "color": "ink"
+    },
+    {
+     "op": "rect",
+     "id": "box_ans",
+     "x": 780,
+     "y": 680,
+     "w": 380,
+     "h": 110,
+     "color": "green",
+     "width": 4
+    },
+    {
+     "op": "write",
+     "id": "t_ans",
+     "x": 970,
+     "y": 715,
+     "text": "x = 2   or   x = 3",
+     "size": 40,
+     "color": "green",
+     "anchor": "middle"
+    }
+   ]
+  }
+ ]
+}

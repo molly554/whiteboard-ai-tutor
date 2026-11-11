@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Whiteboard AI Tutor · player</title>
+<style>
+:root{--bg:#d9d5cc;--ink:#26363d}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);font-family:"Segoe UI","Microsoft YaHei",sans-serif;color:#222}
+#wrap{max-width:1240px;margin:0 auto;padding:12px 16px 40px}
+#top{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-bottom:10px}
+select,button{font:inherit;font-size:14px;padding:5px 12px;border-radius:16px;border:1px solid #8a8a85;background:#fff;cursor:pointer;color:#222}
+button:hover{background:#f3f3f0}
+button.pri{background:var(--ink);border-color:var(--ink);color:#fff}
+button.pri:hover{background:#34484f}
+label.chk{font-size:13px;display:flex;align-items:center;gap:4px}
+#badge{font-size:13px;padding:4px 10px;border-radius:12px;background:#fff;border:1px solid #bbb;cursor:pointer}
+#badge.bad{background:#fde7e7;border-color:#d96b6b;color:#9b1c1c}
+#badge.ok{background:#e4f4e8;border-color:#6bb27d;color:#1d6a35}
+#frame{background:#f6f6f4;border:12px solid #e6e6e2;border-radius:12px;box-shadow:0 3px 10px #0003}
+svg#board{display:block;width:100%;height:auto;background:linear-gradient(180deg,#fcfcfb,#f0f0ee)}
+#panel{display:flex;gap:18px;align-items:flex-start;flex-wrap:wrap;margin-top:12px;background:#eceeed;border-radius:12px;padding:12px 16px;box-shadow:0 2px 8px #0002}
+#narr{flex:1 1 520px;min-width:300px}
+#q{font-size:13px;color:#555}
+#stitle{font-weight:600;margin-top:4px}
+#say{margin-top:2px;font-size:15px;line-height:1.5}
+#chips{display:flex;gap:6px;flex-wrap:wrap;align-items:center}
+.chip{width:28px;height:28px;border-radius:50%;border:1.5px solid #8a8a85;display:flex;align-items:center;justify-content:center;font-size:13px;background:#fff;color:#555}
+.chip.done{background:#26363d;border-color:#26363d;color:#fff}
+.chip.cur{border-color:#1b8a4a;color:#1b8a4a;border-width:2.5px}
+.chip.cont{border-style:dashed;border-color:#d32f2f}
+.chip.cont.done{background:#d32f2f;border-color:#d32f2f}
+#lint,#report,#statebox{margin-top:12px;background:#fff;border-radius:10px;padding:10px 14px;font-size:13px;display:none;box-shadow:0 1px 4px #0002}
+#lint ul{margin:6px 0 0;padding-left:18px}
+#lint li{margin:3px 0}
+.h{color:#b3261e;font-weight:600}.s{color:#8a6d00;font-weight:600}
+table{border-collapse:collapse;width:100%}
+th,td{border-bottom:1px solid #e3e3e0;padding:5px 8px;text-align:left}
+td.num{text-align:right}
+textarea{width:100%;height:180px;font:12px Consolas,monospace}
+.hint{font-size:12px;color:#666;margin-top:8px}
+.boardonly #top,.boardonly #panel,.boardonly .hint,.boardonly #lint,.boardonly #report,.boardonly #statebox{display:none}
+</style>
+</head>
+<body>
+<div id="wrap">
+  <div id="top">
+    <select id="sel"></select>
+    <button id="play" class="pri">▶ Play</button>
+    <button id="next">⏭ Next step</button>
+    <button id="replay">⟲ Replay</button>
+    <button id="finish">⏩ Finished board</button>
+    <select id="speed"><option value="1">1×</option><option value="2">2×</option><option value="4">4×</option></select>
+    <label class="chk"><input type="checkbox" id="auto" checked>Auto-advance</label>
+    <button id="export">Export board state</button>
+    <button id="lintall">Lint all scenarios</button>
+    <span id="badge" title="Click for lint details">linting…</span>
+  </div>
+
+  <div id="frame">
+    <svg id="board" viewBox="0 0 1600 900" xmlns="http://www.w3.org/2000/svg">
+      <defs id="defs"></defs>
+      <g id="layer"></g>
+      <g id="pen" style="display:none"><g transform="rotate(-35)"><rect x="2" y="-5" width="46" height="10" rx="3" fill="#333"/></g><circle r="3.5" fill="#333"/></g>
+    </svg>
+  </div>
+
+  <div id="panel">
+    <div id="narr">
+      <div id="q"></div>
+      <div id="stitle"></div>
+      <div id="say"></div>
+    </div>
+    <div id="chips"></div>
+  </div>
+
+  <div id="lint"></div>
+  <div id="statebox"><b>Current board state</b> (send this to the tutor model to simulate a student interruption)<textarea id="statetxt" readonly></textarea><div class="hint" id="statehint"></div></div>
+  <div id="report"></div>
+  <div class="hint">Space = play / pause. To simulate an interruption: turn off Auto-advance, pause after a step, then Export board state.</div>
+</div>
+
+<svg id="meas" width="1600" height="900" xmlns="http://www.w3.org/2000/svg" style="position:absolute;left:-9999px;top:0"></svg>
+
+<script>
+const NS='http://www.w3.org/2000/svg';
+const BASE='../';   // the player lives in /player/, data lives at the repo root
+const COLORS={ink:'#1d1d1f',blue:'#1f4fd8',red:'#d32f2f',green:'#1b8a4a',gray:'#9a9a9a'};
+const FONT="'Ink Free','Segoe Print','KaiTi','STKaiti','Microsoft YaHei',cursive";
+const $=s=>document.querySelector(s);
+const layer=$('#layer'), defs=$('#defs');
+function mk(tag,attrs,parent){const e=document.createElementNS(NS,tag);for(const k in attrs)e.setAttribute(k,attrs[k]);if(parent)parent.appendChild(e);return e;}
+
+/* ───────── validation ───────── */
+const isNum=v=>typeof v==='number'&&isFinite(v);
+function validateOp(op){
+  if(!op||typeof op!=='object')return 'not an object';
+  const k=op.op;
+  if(!['write','line','rect','ellipse','path','erase'].includes(k))return `unknown op ${k}`;
+  if(k==='erase'){
+    const n=(op.ids?1:0)+(op.region?1:0)+(op.all?1:0);
+    if(n!==1)return 'erase needs exactly one of ids / region / all';
+    if(op.ids&&!(Array.isArray(op.ids)&&op.ids.every(s=>typeof s==='string')))return 'ids must be an array of strings';
+    if(op.region&&!['x','y','w','h'].every(f=>isNum(op.region[f])))return 'region needs numeric x, y, w, h';
+    return null;
+  }
+  if(typeof op.id!=='string'||!op.id)return 'missing id';
+  const need={write:['x','y'],line:['x1','y1','x2','y2'],rect:['x','y','w','h'],ellipse:['cx','cy','rx','ry'],path:[]}[k];
+  for(const f of need) if(!isNum(op[f]))return `field ${f} must be a number`;
+  if(k==='write'&&(typeof op.text!=='string'||!op.text))return 'missing text';
+  if(k==='path'&&(typeof op.d!=='string'||!op.d))return 'missing d';
+  if(op.color!==undefined&&!COLORS[op.color])return `color ${op.color} is not one of ink/blue/red/green/gray`;
+  if(op.fill!==undefined&&!COLORS[op.fill])return `invalid fill ${JSON.stringify(op.fill)}`;
+  if(op.size!==undefined&&!(isNum(op.size)&&op.size>0))return 'size must be positive';
+  if(op.width!==undefined&&!(isNum(op.width)&&op.width>0))return 'width must be positive';
+  if(op.anchor!==undefined&&!['start','middle'].includes(op.anchor))return 'anchor must be start or middle';
+  if(op.arrow!==undefined&&![true,false,'both'].includes(op.arrow))return 'arrow must be true, false or "both"';
+  return null;
+}
+
+/* ───────── building board objects ───────── */
+let clipN=0;
+function samplePts(p,len){const n=Math.max(2,Math.ceil(len/6)),a=[];for(let i=0;i<=n;i++){const q=p.getPointAtLength(len*i/n);a.push({x:q.x,y:q.y});}return a;}
+function mkHead(g,p,len,end,col,w,hide){
+  const a=end==='end'?p.getPointAtLength(len):p.getPointAtLength(0);
+  const b=end==='end'?p.getPointAtLength(Math.max(0,len-5)):p.getPointAtLength(Math.min(len,5));
+  const ang=Math.atan2(a.y-b.y,a.x-b.x),L=16+w*2.2,sp=0.45;
+  const p1={x:a.x-L*Math.cos(ang-sp),y:a.y-L*Math.sin(ang-sp)},p2={x:a.x-L*Math.cos(ang+sp),y:a.y-L*Math.sin(ang+sp)};
+  return mk('path',{d:`M ${p1.x} ${p1.y} L ${a.x} ${a.y} L ${p2.x} ${p2.y}`,fill:'none',stroke:col,'stroke-width':w,'stroke-linecap':'round','stroke-linejoin':'round',opacity:hide?0:1},g);
+}
+function addStroke(o,d,col,w,opts,hide){
+  const g=o.g;
+  let fillEl=null;
+  if(opts.fill)fillEl=mk('path',{d,fill:COLORS[opts.fill],'fill-opacity':hide?0:0.2,stroke:'none'},g);
+  const p=mk('path',{d,fill:'none',stroke:col,'stroke-width':w,'stroke-linecap':'round','stroke-linejoin':'round'},g);
+  const len=p.getTotalLength();
+  const s={el:p,len,fillEl,heads:[],dash:!!opts.dash,col,w};
+  if(opts.dash){p.setAttribute('stroke-dasharray','12 10');if(hide)p.style.opacity=0;}
+  else if(hide){p.setAttribute('stroke-dasharray',len+2);p.setAttribute('stroke-dashoffset',len+2);}
+  if(opts.arrow&&len>0){(opts.arrow==='both'?['end','start']:['end']).forEach(e=>s.heads.push(mkHead(g,p,len,e,col,w,hide)));}
+  s.pts=len>0?samplePts(p,len):[];
+  o.strokes.push(s);
+  return s;
+}
+function build(op,parent,step,hide){
+  const g=mk('g',{'data-id':op.id},parent);
+  const o={id:op.id,op:op.op,spec:op,step,g,texts:[],strokes:[]};
+  const col=COLORS[op.color||'ink'];
+  if(op.op==='write'){
+    const size=op.size||40,lines=String(op.text).split('\n'),mid=op.anchor==='middle';
+    lines.forEach((ln,i)=>{
+      const t=mk('text',{x:op.x,y:op.y+size*0.82+i*size*1.3,'font-size':size,fill:col,'text-anchor':mid?'middle':'start','font-family':FONT,style:'white-space:pre'},g);
+      t.textContent=ln;o.texts.push(t);
+    });
+    o.texts.forEach(t=>{
+      t._bb=t.getBBox();
+      if(hide){
+        const id='c'+(++clipN),cp=mk('clipPath',{id},defs);
+        t._clipEl=cp;t._clipRect=mk('rect',{x:t._bb.x-3,y:t._bb.y-4,width:0,height:t._bb.height+8},cp);
+        t.setAttribute('clip-path',`url(#${id})`);
+      }
+    });
+    if(op.underline){const bb=g.getBBox(),y=bb.y+bb.height+2;addStroke(o,`M ${bb.x} ${y} L ${bb.x+bb.width} ${y}`,col,4,{},hide);}
+  }else{
+    const w=op.width||5;let d;
+    if(op.op==='line')d=`M ${op.x1} ${op.y1} L ${op.x2} ${op.y2}`;
+    else if(op.op==='rect')d=`M ${op.x} ${op.y} L ${op.x+op.w} ${op.y} L ${op.x+op.w} ${op.y+op.h} L ${op.x} ${op.y+op.h} Z`;
+    else if(op.op==='ellipse'){
+      const th=(op.rotate||0)*Math.PI/180,ax=op.rx*Math.cos(th),ay=op.rx*Math.sin(th);
+      const sx=op.cx-ax,sy=op.cy-ay,ex=op.cx+ax,ey=op.cy+ay;
+      d=`M ${sx} ${sy} A ${op.rx} ${op.ry} ${op.rotate||0} 0 1 ${ex} ${ey} A ${op.rx} ${op.ry} ${op.rotate||0} 0 1 ${sx} ${sy}`;
+    }else d=op.d;
+    addStroke(o,d,col,w,{fill:op.fill,dash:op.dash,arrow:op.arrow},hide);
+  }
+  // bounding box: measured box for text, sampled points for strokes
+  let x0=1e9,y0=1e9,x1=-1e9,y1=-1e9;
+  const add=(x,y)=>{x0=Math.min(x0,x);y0=Math.min(y0,y);x1=Math.max(x1,x);y1=Math.max(y1,y);};
+  o.texts.forEach(t=>{const b=t._bb;add(b.x,b.y);add(b.x+b.width,b.y+b.height);});
+  o.strokes.forEach(s=>s.pts.forEach(p=>add(p.x,p.y)));
+  o.bb=x0>x1?{x:0,y:0,w:0,h:0}:{x:x0,y:y0,w:x1-x0,h:y1-y0};
+  return o;
+}
+function eraseTargets(op,map){
+  if(op.all)return [...map.values()];
+  if(op.ids)return op.ids.map(i=>map.get(i)).filter(Boolean);
+  const r=op.region;
+  return [...map.values()].filter(o=>{const cx=o.bb.x+o.bb.w/2,cy=o.bb.y+o.bb.h/2;return cx>=r.x&&cx<=r.x+r.w&&cy>=r.y&&cy<=r.y+r.h;});
+}
+
+/* ───────── animation engine ───────── */
+let TOKEN=0,paused=false,speed=1,INSTANT=false,runningFlag=false,inStep=false,stepOnce=false,finished=false;
+const CANCEL={cancel:true};
+let CAP=null;   // frame-capture mode: used to render the README animations deterministically
+const frame=()=>new Promise(r=>requestAnimationFrame(r));
+async function anim(ms,fn,tok){
+  if(INSTANT){fn(1);return;}
+  if(CAP){const n=Math.max(1,Math.round(ms/CAP.dt));for(let i=1;i<=n;i++){fn(i/n);await CAP.frame();if(tok!==TOKEN)throw CANCEL;}return;}
+  let el=0,last=performance.now();
+  fn(0);
+  while(el<ms){
+    await frame();if(tok!==TOKEN)throw CANCEL;
+    const n=performance.now(),dt=Math.min(100,n-last);last=n;
+    if(!paused)el+=dt*speed;
+    fn(Math.min(1,el/ms));
+  }
+  fn(1);
+}
+const wait=(ms,tok)=>anim(ms,()=>{},tok);
+async function gate(tok){while(paused){await frame();if(tok!==TOKEN)throw CANCEL;}}
+function pen(x,y,col){const p=$('#pen');p.style.display='';p.setAttribute('transform',`translate(${x},${y})`);p.querySelectorAll('rect,circle').forEach(e=>e.setAttribute('fill',col));}
+const hidePen=()=>{$('#pen').style.display='none';};
+
+async function reveal(o,tok){
+  if(INSTANT)return;
+  const col=COLORS[o.spec.color||'ink'];
+  for(const t of o.texts){
+    const b=t._bb,cjk=/[㐀-鿿]/.test(t.textContent);
+    const ms=Math.max(280,t.textContent.length*(cjk?110:62));
+    await anim(ms,k=>{t._clipRect.setAttribute('width',(b.width+8)*k);pen(b.x+b.width*k,b.y+b.height*0.72,col);},tok);
+    t.removeAttribute('clip-path');t._clipEl.remove();
+  }
+  for(const s of o.strokes){
+    if(s.len<=0)continue;
+    if(s.dash){
+      await anim(450,k=>{s.el.style.opacity=k;const q=s.el.getPointAtLength(s.len*k);pen(q.x,q.y,s.col);},tok);
+    }else{
+      await anim(Math.min(2200,Math.max(260,s.len*1.7)),k=>{
+        s.el.setAttribute('stroke-dashoffset',(s.len+2)*(1-k));
+        const q=s.el.getPointAtLength(s.len*k);pen(q.x,q.y,s.col);
+      },tok);
+      s.el.removeAttribute('stroke-dasharray');s.el.removeAttribute('stroke-dashoffset');
+    }
+    s.heads.forEach(h=>h.setAttribute('opacity',1));
+    if(s.fillEl)await anim(300,k=>s.fillEl.setAttribute('fill-opacity',0.2*k),tok);
+  }
+  hidePen();
+}
+
+/* ───────── board state ───────── */
+const objs=new Map();
+function resetBoard(){
+  TOKEN++;runningFlag=false;inStep=false;finished=false;stepOnce=false;
+  layer.innerHTML='';defs.innerHTML='';objs.clear();hidePen();
+}
+async function doErase(op,tok){
+  const tg=eraseTargets(op,objs);
+  let flash=null;
+  if(op.region&&!INSTANT)flash=mk('rect',{x:op.region.x,y:op.region.y,width:op.region.w,height:op.region.h,fill:'#7aa7ff','fill-opacity':.15,stroke:'#7aa7ff','stroke-dasharray':'8 6','stroke-width':3},layer);
+  await anim(500,k=>tg.forEach(o=>{o.g.style.opacity=1-k;}),tok);
+  tg.forEach(o=>{o.g.remove();objs.delete(o.id);});
+  if(flash)flash.remove();
+}
+async function doOp(op,step,tok){
+  const err=validateOp(op);
+  if(err){console.warn('skipping invalid op:',err,op);return;}
+  if(op.op==='erase'){await doErase(op,tok);return;}
+  if(objs.has(op.id)){console.warn('duplicate id, skipped:',op.id);return;}
+  const o=build(op,layer,step,!INSTANT);
+  objs.set(op.id,o);
+  await reveal(o,tok);
+}
+function getState(){
+  return {
+    script:S?S.entry.id:null,
+    atStep:cursor,
+    midStep:inStep,
+    objects:[...objs.values()].map(o=>{
+      const r={id:o.id,type:o.op,bbox:[o.bb.x,o.bb.y,o.bb.w,o.bb.h].map(Math.round),color:o.spec.color||'ink',step:o.step};
+      if(o.spec.text)r.text=o.spec.text;
+      return r;
+    })
+  };
+}
+
+/* ───────── loading scripts ───────── */
+let INDEX=[],S=null,cursor=0;
+async function fetchJSON(f){const r=await fetch(f+'?t='+Date.now());if(!r.ok)throw new Error(f+' → '+r.status);return r.json();}
+async function loadSteps(entry){
+  const j=await fetchJSON(BASE+entry.file);
+  if(j.mode==='continue'){
+    const be=INDEX.find(e=>e.id===j.base),bj=await fetchJSON(BASE+be.file),at=j.atStep|0;
+    return {steps:bj.steps.slice(0,at).map(s=>({...s,src:'base'})).concat((j.steps||[]).map(s=>({...s,src:'cont'}))),
+            question:j.question||entry.question||'',atStep:at,cont:true};
+  }
+  return {steps:(j.steps||[]).map(s=>({...s,src:'main'})),question:entry.question||j.title||'',atStep:0,cont:false};
+}
+async function prepareBoard(){
+  resetBoard();
+  cursor=0;
+  const tok=TOKEN;
+  if(S.atStep){
+    INSTANT=true;
+    for(let i=0;i<S.atStep;i++)for(const op of S.steps[i].ops||[])await doOp(op,i+1,tok);
+    INSTANT=false;cursor=S.atStep;
+  }
+  $('#stitle').textContent=S.atStep?`Board shown up to step ${S.atStep}; the continuation plays next`:'';
+  $('#say').textContent='';
+  renderChips();syncBtn();
+}
+async function loadEntry(id){
+  const entry=INDEX.find(e=>e.id===id);
+  const L=await loadSteps(entry);
+  S={entry,...L};
+  $('#q').textContent='The question: '+(S.question||'');
+  await prepareBoard();
+  runLintUI();
+}
+
+/* ───────── playback controls ───────── */
+function renderChips(curIdx){
+  const c=$('#chips');c.innerHTML='';
+  S.steps.forEach((st,i)=>{
+    const d=document.createElement('div');
+    d.className='chip'+(i<cursor?' done':'')+(i===curIdx?' cur':'')+(st.src==='cont'?' cont':'');
+    d.textContent=i+1;d.title=st.title||'';c.appendChild(d);
+  });
+}
+function syncBtn(){
+  const b=$('#play');
+  if(!runningFlag)b.textContent=cursor>=S.steps.length?'⟲ Replay':'▶ Play';
+  else b.textContent=paused?'▶ Resume':'⏸ Pause';
+}
+async function playStep(i,tok){
+  const st=S.steps[i];
+  $('#stitle').textContent=`Step ${i+1}${st.title?': '+st.title:''}`;$('#say').textContent=st.say||'';
+  renderChips(i);inStep=true;
+  for(const op of st.ops||[]){await doOp(op,i+1,tok);await wait(160,tok);}
+  inStep=false;
+}
+async function runFrom(tok){
+  try{
+    while(cursor<S.steps.length){
+      const i=cursor;
+      await playStep(i,tok);
+      cursor=i+1;renderChips();
+      if(stepOnce||!$('#auto').checked){paused=true;stepOnce=false;syncBtn();}
+      if(cursor<S.steps.length){await gate(tok);await wait(500,tok);}
+    }
+    if(tok===TOKEN){finished=true;}
+  }catch(e){if(e!==CANCEL)throw e;return;}
+  if(tok===TOKEN){runningFlag=false;paused=false;syncBtn();}
+}
+function start(){runningFlag=true;paused=false;syncBtn();runFrom(TOKEN);}
+$('#play').onclick=async()=>{
+  if(!S)return;
+  if(!runningFlag){
+    if(cursor>=S.steps.length)await prepareBoard();
+    start();
+  }else{paused=!paused;syncBtn();}
+};
+$('#next').onclick=async()=>{
+  if(!S)return;
+  stepOnce=true;
+  if(!runningFlag){if(cursor>=S.steps.length)await prepareBoard();start();}
+  else{paused=false;syncBtn();}
+};
+$('#replay').onclick=async()=>{if(!S)return;await prepareBoard();start();};
+$('#finish').onclick=async()=>{
+  if(!S)return;
+  await prepareBoard();
+  const tok=TOKEN;INSTANT=true;
+  for(let i=cursor;i<S.steps.length;i++)for(const op of S.steps[i].ops||[])await doOp(op,i+1,tok);
+  INSTANT=false;cursor=S.steps.length;finished=true;renderChips();syncBtn();
+  $('#stitle').textContent='Finished board';$('#say').textContent='';
+};
+$('#speed').onchange=e=>{speed=+e.target.value;};
+$('#sel').onchange=e=>loadEntry(e.target.value);
+document.addEventListener('keydown',e=>{if(e.code==='Space'&&!/SELECT|TEXTAREA|INPUT/.test(e.target.tagName)){e.preventDefault();$('#play').click();}});
+$('#export').onclick=()=>{
+  const st=getState(),box=$('#statebox');
+  $('#statetxt').value=JSON.stringify(st,null,1);
+  $('#statehint').textContent=st.midStep?'⚠ A step is still being drawn. Turn off Auto-advance and export after the step finishes.':`Steps 1–${st.atStep} have been played.`;
+  box.style.display='block';
+  try{navigator.clipboard.writeText($('#statetxt').value);}catch(e){}
+};
+
+/* ───────── linter (deterministic rules, no model self-assessment) ───────── */
+function lintSim(steps){
+  const hold=$('#meas');hold.innerHTML='';
+  const present=new Map(),out={hard:[],soft:[]},seen=new Set();
+  const add=(lvl,code,si,msg,ids,src)=>{if(src==='base')return;out[lvl].push({code,step:si+1,msg,ids:(ids||[]).filter(Boolean)});};
+  const ink=t=>{const b=t._bb;return {x:b.x+3,y:b.y+b.height*0.2,w:Math.max(0,b.width-6),h:b.height*0.62};};
+  const inBox=(p,b)=>p.x>=b.x&&p.x<=b.x+b.w&&p.y>=b.y&&p.y<=b.y+b.h;
+  const ov=(a,b)=>{const w=Math.min(a.x+a.w,b.x+b.w)-Math.max(a.x,b.x),h=Math.min(a.y+a.h,b.y+b.h)-Math.max(a.y,b.y);return w>0&&h>0?w*h:0;};
+  const once=(k)=>{if(seen.has(k))return false;seen.add(k);return true;};
+  steps.forEach((st,si)=>{
+    const src=st.src,ops=st.ops||[];
+    if(!ops.length)add('soft','EMPTY_STEP',si,'step has no ops',[],src);
+    if(!st.say)add('soft','NO_SAY',si,'missing narration',[],src);
+    if(ops.length>12)add('soft','TOO_MANY_OPS',si,`${ops.length} ops in one step (protocol suggests ≤ 12)`,[],src);
+    ops.forEach((op,oi)=>{
+      const err=validateOp(op);
+      if(err){add('hard','SCHEMA',si,`op ${oi+1}: ${err}`,[op&&op.id],src);return;}
+      if(op.op==='erase'){
+        const tg=eraseTargets(op,present);
+        if(op.ids)op.ids.forEach(id=>{if(!present.has(id))add('hard','ERASE_MISSING',si,`erase target ${id} does not exist (or was already erased)`,[id],src);});
+        else if(!tg.length)add('soft','ERASE_EMPTY',si,'nothing inside the erase region',[],src);
+        tg.forEach(o=>{o.g.remove();present.delete(o.id);});
+        return;
+      }
+      if(present.has(op.id)){add('hard','DUP_ID',si,`duplicate id ${op.id}`,[op.id],src);return;}
+      const o=build(op,hold,si+1,false);o.src=src;present.set(op.id,o);
+      if(op.op==='write'&&(op.size||40)<24)add('soft','SMALL_TEXT',si,`${op.id}: font size ${op.size} is small (< 24)`,[op.id],src);
+      if(o.strokes.some(s=>s.len<=0))add('hard','EMPTY_PATH',si,`${op.id} draws nothing (invalid path)`,[op.id],src);
+      const b=o.bb;
+      if(b.w>0&&(b.x<8||b.y<8||b.x+b.w>1592||b.y+b.h>892))
+        add('hard','OUT_OF_BOARD',si,`${op.id} leaves the board (x ${Math.round(b.x)}–${Math.round(b.x+b.w)}, y ${Math.round(b.y)}–${Math.round(b.y+b.h)})`,[op.id],src);
+      for(const p of present.values()){
+        if(p===o)continue;
+        // text x text
+        for(const t1 of o.texts)for(const t2 of p.texts){
+          const a=ink(t1),c=ink(t2),m=Math.min(a.w*a.h,c.w*c.h);
+          if(m>0&&ov(a,c)/m>0.1&&once(`TT|${o.id}|${p.id}`))
+            add('hard','TEXT_OVERLAP',si,`text ${o.id} overlaps text ${p.id}`,[o.id,p.id],src);
+        }
+        // text x stroke
+        const cross=(tx,st2,A,B)=>{
+          for(const t of tx.texts){
+            const bx=ink(t);
+            for(const s of st2.strokes){
+              let n=0;for(const q of s.pts)if(inBox(q,bx))n++;
+              if(n>=2&&once(`TS|${A.id}|${B.id}`)){add('hard','TEXT_CROSSES_STROKE',si,`text ${A.id} is crossed by stroke ${B.id}`,[A.id,B.id],src);return;}
+            }
+          }
+        };
+        cross(o,p,o,p);cross(p,o,p,o);
+      }
+    });
+  });
+  const mainSteps=steps.filter(s=>s.src==='main').length;
+  if(mainSteps&&(mainSteps<5||mainSteps>8))add('soft','STEP_COUNT',0,`${mainSteps} steps (protocol asks for 5–8)`,[],'main');
+  hold.innerHTML='';
+  return out;
+}
+function issueHTML(r){
+  const li=(lvl,i)=>`<li><span class="${lvl==='hard'?'h':'s'}">[${lvl==='hard'?'hard':'note'}] ${i.code}</span> step ${i.step}: ${i.msg}</li>`;
+  return r.hard.map(i=>li('hard',i)).join('')+r.soft.map(i=>li('soft',i)).join('');
+}
+let LASTLINT=null;
+function runLintUI(){
+  const r=lintSim(S.steps);LASTLINT=r;
+  const b=$('#badge');
+  b.className=r.hard.length?'bad':'ok';
+  b.textContent=`hard ${r.hard.length} · notes ${r.soft.length}`;
+  $('#lint').innerHTML=`<b>Lint details</b><ul>${issueHTML(r)||'<li>no issues</li>'}</ul>`;
+}
+$('#badge').onclick=()=>{const l=$('#lint');l.style.display=l.style.display==='block'?'none':'block';};
+async function lintAll(){
+  const rows=[];
+  for(const e of INDEX){
+    try{
+      const L=await loadSteps(e),r=lintSim(L.steps);
+      const ops=L.steps.filter(s=>s.src!=='base').reduce((n,s)=>n+(s.ops||[]).length,0);
+      rows.push({id:e.id,title:e.title,group:e.group,steps:L.steps.filter(s=>s.src!=='base').length,ops,hard:r.hard.length,soft:r.soft.length,detail:r});
+    }catch(err){rows.push({id:e.id,title:e.title,group:e.group,error:String(err),hard:99,soft:0,steps:0,ops:0,detail:{hard:[],soft:[]}});}
+  }
+  return rows;
+}
+$('#lintall').onclick=async()=>{
+  const rows=await lintAll(),box=$('#report');
+  box.innerHTML='<b>Lint results for all scenarios</b><table><tr><th>scenario</th><th class="num">steps</th><th class="num">ops</th><th class="num">hard</th><th class="num">notes</th></tr>'+
+    rows.map(r=>`<tr><td>${r.group?'['+r.group+'] ':''}${r.title}${r.error?' ⚠ '+r.error:''}</td><td class="num">${r.steps}</td><td class="num">${r.ops}</td><td class="num ${r.hard?'h':''}">${r.hard}</td><td class="num ${r.soft?'s':''}">${r.soft}</td></tr>`+
+      ((r.hard||r.soft)?`<tr><td colspan="5"><ul style="margin:0;padding-left:18px">${issueHTML(r.detail)}</ul></td></tr>`:'')).join('')+'</table>';
+  box.style.display='block';
+};
+
+/* ───────── benchmark runs: load, lint, render ───────── */
+const INTERRUPT_BASE={'r1-i1-seasons-distance':['r1-seasons',3],'r1-i2-demand-simpler':['r1-supply-demand',5],'r1-i3-arrow-meaning':['r1-supply-demand',5]};
+async function stepsFromRun(obj,scenario){
+  const b=INTERRUPT_BASE[scenario];
+  if(b){
+    const be=INDEX.find(e=>e.id===b[0]),bj=await fetchJSON(BASE+be.file);
+    return {steps:bj.steps.slice(0,b[1]).map(s=>({...s,src:'base'})).concat((obj.steps||[]).map(s=>({...s,src:'cont'}))),atStep:b[1],cont:true};
+  }
+  return {steps:(obj.steps||[]).map(s=>({...s,src:'main'})),atStep:0,cont:false};
+}
+async function loadRun(runId,scenario){
+  const obj=await fetchJSON(BASE+'results/scripts/'+runId+'.json');
+  const L=await stepsFromRun(obj,scenario);
+  S={entry:{id:runId},question:'',...L};
+  await prepareBoard();
+  return S;
+}
+async function finishBoard(){
+  const tok=TOKEN;INSTANT=true;
+  for(let i=cursor;i<S.steps.length;i++)for(const op of S.steps[i].ops||[])await doOp(op,i+1,tok);
+  INSTANT=false;cursor=S.steps.length;
+}
+async function lintRuns(phases){
+  const rows=[];
+  for(const ph of phases){
+    const txt=await (await fetch(BASE+'results/runs/'+ph+'.jsonl?t='+Date.now())).text();
+    for(const line of txt.split('\n')){
+      if(!line.trim())continue;
+      const r=JSON.parse(line);
+      const row={run_id:r.run_id,model:r.model,cond:r.cond,scenario:r.scenario,rep:r.rep,http:r.http,parse_ok:r.parse_ok};
+      if(r.http===200&&r.parse_ok){
+        try{
+          const obj=await fetchJSON(BASE+'results/scripts/'+r.run_id+'.json');
+          const L=await stepsFromRun(obj,r.scenario),res=lintSim(L.steps);
+          row.hard=res.hard.map(i=>i.code+'|s'+i.step+'|'+i.msg);row.soft=res.soft.map(i=>i.code);
+          row.ops=L.steps.filter(s=>s.src!=='base').reduce((n,s)=>n+(s.ops||[]).length,0);
+          row.steps=L.steps.filter(s=>s.src!=='base').length;
+        }catch(e){row.lint_error=String(e);}
+      }
+      rows.push(row);
+    }
+  }
+  return rows;
+}
+async function saveFile(name,body,type){
+  const r=await fetch('/save/'+name,{method:'POST',body,headers:{'Content-Type':type||'application/octet-stream'}});
+  if(!r.ok)throw new Error('save failed '+r.status);
+}
+const xmlEsc=t=>String(t).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+function wrapText(t,max){const w=String(t||'').split(/\s+/),out=[];let cur='';for(const x of w){if((cur+' '+x).trim().length>max){out.push(cur);cur=x;}else cur=(cur+' '+x).trim();}if(cur)out.push(cur);return out;}
+function boardSVG(cap){
+  // cap = {w, title, say}: adds a caption bar under the board (used for the README animations)
+  const pen=$('#pen'),penS=(pen.style.display==='none')?'':'<g transform="'+pen.getAttribute('transform')+'">'+pen.innerHTML+'</g>';
+  const H=cap?1050:900,W=cap?cap.w:1280;
+  let extra='';
+  if(cap){
+    const lines=wrapText(cap.say,104).slice(0,2);
+    extra='<rect x="0" y="900" width="1600" height="150" fill="#26363d"/>'+
+      '<text x="36" y="944" font-family="Segoe UI,Arial,sans-serif" font-size="27" font-weight="700" fill="#9fd9b6">'+xmlEsc(cap.title)+'</text>'+
+      lines.map((ln,i)=>'<text x="36" y="'+(986+i*38)+'" font-family="Segoe UI,Arial,sans-serif" font-size="28" fill="#f2f4f3">'+xmlEsc(ln)+'</text>').join('');
+  }
+  return '<svg xmlns="'+NS+'" viewBox="0 0 1600 '+H+'" width="'+W+'" height="'+Math.round(W*H/1600)+'"><defs>'+defs.innerHTML+'</defs><rect width="1600" height="'+H+'" fill="#fbfbfa"/>'+layer.innerHTML+penS+extra+'</svg>';
+}
+async function svgToPNG(svg,w,h){
+  const img=new Image();
+  await new Promise((res,rej)=>{img.onload=res;img.onerror=rej;img.src='data:image/svg+xml;charset=utf-8,'+encodeURIComponent(svg);});
+  const c=document.createElement('canvas');c.width=w;c.height=h;
+  c.getContext('2d').drawImage(img,0,0,w,h);
+  return await new Promise(r=>c.toBlob(r,'image/png'));
+}
+async function boardPNG(){return svgToPNG(boardSVG(),1280,720);}
+/* frame capture (tooling): plays a run deterministically and saves PNG frames under results/.frames/<outDir>/ */
+async function captureRun(runId,scenario,outDir,opts){
+  opts=Object.assign({dt:400,w:800,question:''},opts||{});
+  const h=Math.round(opts.w*1050/1600);
+  await loadRun(runId,scenario);
+  const frames=[];let last=null,n=0,cap={title:opts.question?'Student interrupts':'',say:opts.question||''};
+  // Only the rectangle that changed since the previous frame is stored (APNG supports partial frames),
+  // which keeps the animation small: most frames are just the few pixels around the pen.
+  const cv=document.createElement('canvas');cv.width=opts.w;cv.height=h;
+  const cx=cv.getContext('2d',{willReadFrequently:true});let prev=null;
+  const snap=async()=>{
+    const svg=boardSVG({w:opts.w,title:cap.title,say:cap.say});
+    if(svg===last){frames[frames.length-1].hold++;return;}
+    last=svg;
+    const img=new Image();
+    await new Promise((res,rej)=>{img.onload=res;img.onerror=rej;img.src='data:image/svg+xml;charset=utf-8,'+encodeURIComponent(svg);});
+    cx.clearRect(0,0,opts.w,h);cx.drawImage(img,0,0,opts.w,h);
+    const cur=cx.getImageData(0,0,opts.w,h);
+    let x0=0,y0=0,x1=opts.w-1,y1=h-1;
+    if(prev){
+      x0=opts.w;y0=h;x1=-1;y1=-1;
+      const a=new Uint32Array(cur.data.buffer),b=new Uint32Array(prev.data.buffer);
+      for(let y=0,i=0;y<h;y++)for(let x=0;x<opts.w;x++,i++)if(a[i]!==b[i]){if(x<x0)x0=x;if(x>x1)x1=x;if(y<y0)y0=y;if(y>y1)y1=y;}
+      if(x1<0){frames[frames.length-1].hold++;return;}
+    }
+    prev=cur;
+    const c2=document.createElement('canvas');c2.width=x1-x0+1;c2.height=y1-y0+1;
+    c2.getContext('2d').putImageData(cur,-x0,-y0);
+    const blob=await new Promise(r=>c2.toBlob(r,'image/png')),name=String(++n).padStart(4,'0');
+    await saveFile('.frames/'+outDir+'/'+name+'.png',blob,'image/png');
+    frames.push({name,hold:1,x:x0,y:y0});
+  };
+  CAP={dt:opts.dt,frame:snap};
+  const tok=TOKEN;
+  try{
+    await snap();await wait(opts.question?3200:800,tok);
+    for(let i=cursor;i<S.steps.length;i++){
+      const st=S.steps[i];cap={title:'Step '+(i+1)+(st.title?' · '+st.title:''),say:st.say||''};
+      for(const op of st.ops||[]){await doOp(op,i+1,tok);await wait(160,tok);}
+      await wait(1400,tok);
+    }
+    await wait(3000,tok);
+  }finally{CAP=null;}
+  // the finished board, full size: becomes the still image shown wherever the animation does not play
+  await saveFile('.frames/'+outDir+'/poster.png',await new Promise(r=>cv.toBlob(r,'image/png')),'image/png');
+  await saveFile('.frames/'+outDir+'/frames.json',JSON.stringify({dt:opts.dt,w:opts.w,h,frames}),'application/json');
+  return frames.length;
+}
+async function renderRuns(list,outDir){   // list: [{run_id, scenario, name}]
+  const done=[];
+  for(const it of list){
+    await loadRun(it.run_id,it.scenario);await finishBoard();
+    const blob=await boardPNG();await saveFile(outDir+'/'+it.name+'.png',blob,'image/png');done.push(it.name);
+  }
+  return done;
+}
+
+async function renderFromFile(listPath,outDir){const list=await fetchJSON(BASE+listPath);return renderRuns(list,outDir);}
+async function lintToFile(phases,outName){const rows=await lintRuns(phases);await saveFile(outName,JSON.stringify(rows),'application/json');return rows.length;}
+
+/* ───────── startup ───────── */
+(async()=>{
+  const idx=await fetchJSON(BASE+'scenarios/index.json');
+  INDEX=idx.scripts;
+  const sel=$('#sel'),groups={};
+  INDEX.forEach(e=>{
+    if(!groups[e.group]){groups[e.group]=document.createElement('optgroup');groups[e.group].label=e.group;sel.appendChild(groups[e.group]);}
+    const o=document.createElement('option');o.value=e.id;o.textContent=e.title;groups[e.group].appendChild(o);
+  });
+  const want=new URLSearchParams(location.search).get('s');
+  const first=(want&&INDEX.find(e=>e.id===want))?want:INDEX[0].id;
+  sel.value=first;
+  const qp=new URLSearchParams(location.search);
+  if(qp.get('run')){                       // ?run=<run id>&sc=<scenario id>[&board=1]: replay one benchmark run
+    if(qp.get('board'))document.body.classList.add('boardonly');
+    const sc=INDEX.find(e=>e.id===qp.get('sc'));
+    await loadRun(qp.get('run'),qp.get('sc')||'');
+    $('#sel').style.display='none';
+    $('#q').innerHTML='<a href="../">← gallery</a> · '+xmlEsc(qp.get('run'))+(sc?' · question: '+xmlEsc(sc.question):'');
+    runLintUI();
+    if(qp.get('board'))await finishBoard();else{renderChips();syncBtn();start();}   // a replay starts playing by itself
+  }else await loadEntry(first);
+  window.__ready=true;
+})();
+window.__wb={loadEntry,lintAll,getState,loadSteps,get S(){return S;},objs,finishNow:()=>$('#finish').click(),
+  lintRuns,renderRuns,renderFromFile,lintToFile,loadRun,finishBoard,saveFile,captureRun,get ready(){return !!window.__ready;}};
+</script>
+</body>
+</html>

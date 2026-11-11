@@ -1,0 +1,144 @@
+{
+ "title": "Distance vs. tilt",
+ "lang": "en",
+ "steps": [
+  {
+   "title": "You're right",
+   "say": "Yes, in northern summer Earth is actually a bit farther from the Sun, in early July. So distance can't be the cause.",
+   "ops": [
+    {
+     "op": "erase",
+     "ids": [
+      "key",
+      "orbitlabel"
+     ]
+    },
+    {
+     "op": "write",
+     "id": "r1",
+     "x": 60,
+     "y": 128,
+     "text": "Yes! In July Earth is farther from the Sun,\nyet the north is hot. Distance isn't the cause.",
+     "size": 36,
+     "color": "red"
+    }
+   ]
+  },
+  {
+   "title": "The distance gap is tiny",
+   "say": "Earth's distance changes by only about 3 percent over the year, which is too small to make summer and winter.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "r2",
+     "x": 60,
+     "y": 250,
+     "text": "Distance changes only ~3% in a year.",
+     "size": 36
+    }
+   ]
+  },
+  {
+   "title": "Clear the picture",
+   "say": "Let me clear the extra Earths and keep one on each side to compare the two seasons.",
+   "ops": [
+    {
+     "op": "erase",
+     "ids": [
+      "earth3",
+      "axis3",
+      "earth4",
+      "axis4",
+      "r2"
+     ]
+    },
+    {
+     "op": "write",
+     "id": "julylabel",
+     "x": 1190,
+     "y": 690,
+     "text": "July",
+     "size": 32,
+     "color": "green"
+    },
+    {
+     "op": "write",
+     "id": "janlabel",
+     "x": 150,
+     "y": 690,
+     "text": "January",
+     "size": 32,
+     "color": "green"
+    }
+   ]
+  },
+  {
+   "title": "Tilt toward the Sun",
+   "say": "In July the northern half tips toward the Sun, so sunlight hits it more directly and the days are longer.",
+   "ops": [
+    {
+     "op": "line",
+     "id": "ray1",
+     "x1": 1000,
+     "y1": 600,
+     "x2": 1230,
+     "y2": 600,
+     "color": "red",
+     "arrow": true,
+     "width": 4
+    },
+    {
+     "op": "write",
+     "id": "r3",
+     "x": 1000,
+     "y": 230,
+     "text": "July: north tilts\ntoward the Sun",
+     "size": 34,
+     "color": "blue"
+    }
+   ]
+  },
+  {
+   "title": "Tilt away from the Sun",
+   "say": "In January the north tips away, so the light is slanted and weaker, and the days are shorter. That is winter.",
+   "ops": [
+    {
+     "op": "line",
+     "id": "ray2",
+     "x1": 700,
+     "y1": 600,
+     "x2": 340,
+     "y2": 600,
+     "color": "red",
+     "arrow": true,
+     "width": 4
+    },
+    {
+     "op": "write",
+     "id": "r4",
+     "x": 60,
+     "y": 230,
+     "text": "January: north tilts\naway from the Sun",
+     "size": 34,
+     "color": "blue"
+    }
+   ]
+  },
+  {
+   "title": "The takeaway",
+   "say": "So seasons come from the tilt, which changes how direct the sunlight is, and not from distance.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "r5",
+     "x": 800,
+     "y": 130,
+     "text": "Seasons = tilt, not distance",
+     "size": 44,
+     "color": "green",
+     "anchor": "middle"
+    }
+   ]
+  }
+ ]
+}

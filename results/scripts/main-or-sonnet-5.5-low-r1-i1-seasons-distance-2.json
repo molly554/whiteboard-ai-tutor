@@ -1,0 +1,142 @@
+{
+ "title": "Distance vs. tilt",
+ "lang": "en",
+ "steps": [
+  {
+   "title": "Yes, you're right",
+   "say": "Good catch: in northern summer, Earth is actually a bit farther from the Sun, in early July. So distance can't be the cause.",
+   "ops": [
+    {
+     "op": "erase",
+     "ids": [
+      "key"
+     ]
+    },
+    {
+     "op": "write",
+     "id": "yes",
+     "x": 60,
+     "y": 128,
+     "text": "Yes! In July Earth is FARTHER from the Sun.",
+     "size": 38,
+     "color": "red"
+    },
+    {
+     "op": "write",
+     "id": "yes2",
+     "x": 60,
+     "y": 185,
+     "text": "So distance is not what makes summer.",
+     "size": 38
+    }
+   ]
+  },
+  {
+   "title": "Orbit is almost a circle",
+   "say": "Earth's orbit is nearly circular. The distance changes by only about 3 percent, which is too small to matter much.",
+   "ops": [
+    {
+     "op": "erase",
+     "ids": [
+      "yes",
+      "yes2"
+     ]
+    },
+    {
+     "op": "write",
+     "id": "near",
+     "x": 60,
+     "y": 128,
+     "text": "Distance changes only about 3%\n(147 million km vs 152 million km).",
+     "size": 36,
+     "color": "gray"
+    }
+   ]
+  },
+  {
+   "title": "Tilt changes sunlight",
+   "say": "What matters is the tilt. In July the northern half leans toward the Sun, so sunlight hits it more directly and days are longer.",
+   "ops": [
+    {
+     "op": "erase",
+     "ids": [
+      "near"
+     ]
+    },
+    {
+     "op": "write",
+     "id": "tilt1",
+     "x": 60,
+     "y": 128,
+     "text": "Tilt toward the Sun: direct light + long days\n= summer. Tilt away: slanted light = winter.",
+     "size": 36,
+     "color": "blue"
+    },
+    {
+     "op": "write",
+     "id": "jul",
+     "x": 1000,
+     "y": 470,
+     "text": "North leans toward\nthe Sun here?",
+     "size": 30,
+     "color": "green"
+    }
+   ]
+  },
+  {
+   "title": "Label the seasons",
+   "say": "Opposite sides of the orbit give opposite seasons in the north and south. Summer in one hemisphere is winter in the other.",
+   "ops": [
+    {
+     "op": "erase",
+     "ids": [
+      "jul"
+     ]
+    },
+    {
+     "op": "write",
+     "id": "sum",
+     "x": 1120,
+     "y": 470,
+     "text": "North summer",
+     "size": 30,
+     "color": "green"
+    },
+    {
+     "op": "write",
+     "id": "win",
+     "x": 60,
+     "y": 470,
+     "text": "North winter",
+     "size": 30,
+     "color": "blue"
+    },
+    {
+     "op": "write",
+     "id": "south",
+     "x": 60,
+     "y": 520,
+     "text": "(South: opposite)",
+     "size": 28,
+     "color": "gray"
+    }
+   ]
+  },
+  {
+   "title": "Summary",
+   "say": "So seasons come from tilt, not distance. The tilt changes how directly sunlight strikes each hemisphere.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "sumline",
+     "x": 60,
+     "y": 230,
+     "text": "Seasons = tilt, not distance.",
+     "size": 44,
+     "color": "red",
+     "underline": true
+    }
+   ]
+  }
+ ]
+}

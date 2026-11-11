@@ -1,0 +1,348 @@
+{
+ "title": "Why the Pythagorean Theorem Works",
+ "lang": "en",
+ "steps": [
+  {
+   "title": "The Right Triangle",
+   "say": "Let's start with a right triangle with legs a and b, and hypotenuse c.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "t_main",
+     "x": 800,
+     "y": 60,
+     "text": "Why Does a² + b² = c² Work?",
+     "size": 52,
+     "color": "ink",
+     "anchor": "middle"
+    },
+    {
+     "op": "path",
+     "id": "tri_base",
+     "d": "M 200 480 L 440 480 L 200 300 Z",
+     "color": "blue",
+     "width": 5,
+     "fill": "blue"
+    },
+    {
+     "op": "rect",
+     "id": "tri_sq",
+     "x": 200,
+     "y": 450,
+     "w": 30,
+     "h": 30,
+     "color": "ink",
+     "width": 3
+    },
+    {
+     "op": "write",
+     "id": "lbl_a",
+     "x": 160,
+     "y": 380,
+     "text": "a",
+     "size": 36,
+     "color": "ink"
+    },
+    {
+     "op": "write",
+     "id": "lbl_b",
+     "x": 310,
+     "y": 500,
+     "text": "b",
+     "size": 36,
+     "color": "ink"
+    },
+    {
+     "op": "write",
+     "id": "lbl_c",
+     "x": 340,
+     "y": 370,
+     "text": "c",
+     "size": 36,
+     "color": "ink"
+    },
+    {
+     "op": "write",
+     "id": "exp_1",
+     "x": 580,
+     "y": 350,
+     "text": "Can we prove that the area of the squares\non sides a and b equals the square on c?",
+     "size": 36,
+     "color": "ink"
+    }
+   ]
+  },
+  {
+   "title": "Arrange 4 Triangles in a Square",
+   "say": "Take four copies of this triangle and arrange them inside a large square of side a + b.",
+   "ops": [
+    {
+     "op": "erase",
+     "ids": [
+      "tri_base",
+      "tri_sq",
+      "lbl_a",
+      "lbl_b",
+      "lbl_c",
+      "exp_1"
+     ]
+    },
+    {
+     "op": "write",
+     "id": "fig1_title",
+     "x": 420,
+     "y": 160,
+     "text": "Arrangement 1",
+     "size": 38,
+     "color": "blue",
+     "anchor": "middle"
+    },
+    {
+     "op": "rect",
+     "id": "sq1_outer",
+     "x": 200,
+     "y": 240,
+     "w": 440,
+     "h": 440,
+     "color": "ink",
+     "width": 5
+    },
+    {
+     "op": "path",
+     "id": "tri1_1",
+     "d": "M 200 540 L 200 680 L 500 680 Z",
+     "color": "blue",
+     "width": 4,
+     "fill": "blue"
+    },
+    {
+     "op": "path",
+     "id": "tri1_2",
+     "d": "M 500 680 L 640 680 L 640 380 Z",
+     "color": "blue",
+     "width": 4,
+     "fill": "blue"
+    },
+    {
+     "op": "path",
+     "id": "tri1_3",
+     "d": "M 640 380 L 640 240 L 340 240 Z",
+     "color": "blue",
+     "width": 4,
+     "fill": "blue"
+    },
+    {
+     "op": "path",
+     "id": "tri1_4",
+     "d": "M 340 240 L 200 240 L 200 540 Z",
+     "color": "blue",
+     "width": 4,
+     "fill": "blue"
+    },
+    {
+     "op": "write",
+     "id": "lbl1_b1",
+     "x": 340,
+     "y": 700,
+     "text": "b",
+     "size": 32,
+     "color": "ink"
+    },
+    {
+     "op": "write",
+     "id": "lbl1_a1",
+     "x": 560,
+     "y": 700,
+     "text": "a",
+     "size": 32,
+     "color": "ink"
+    },
+    {
+     "op": "write",
+     "id": "lbl1_side",
+     "x": 420,
+     "y": 750,
+     "text": "Total side = a + b",
+     "size": 34,
+     "color": "gray",
+     "anchor": "middle"
+    }
+   ]
+  },
+  {
+   "title": "Uncovered Space is c²",
+   "say": "The tilted inner space has four equal sides of length c, forming a square of area c².",
+   "ops": [
+    {
+     "op": "path",
+     "id": "c_square",
+     "d": "M 200 540 L 500 680 L 640 380 L 340 240 Z",
+     "color": "green",
+     "width": 5,
+     "fill": "green"
+    },
+    {
+     "op": "write",
+     "id": "lbl_c2",
+     "x": 420,
+     "y": 440,
+     "text": "Area = c²",
+     "size": 40,
+     "color": "green",
+     "anchor": "middle"
+    },
+    {
+     "op": "write",
+     "id": "c_edge",
+     "x": 370,
+     "y": 590,
+     "text": "c",
+     "size": 32,
+     "color": "green"
+    }
+   ]
+  },
+  {
+   "title": "Rearrange into Two Rectangles",
+   "say": "Now build an identical outer square of side a + b, but pair the four triangles into two rectangles.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "fig2_title",
+     "x": 1180,
+     "y": 160,
+     "text": "Arrangement 2",
+     "size": 38,
+     "color": "blue",
+     "anchor": "middle"
+    },
+    {
+     "op": "rect",
+     "id": "sq2_outer",
+     "x": 960,
+     "y": 240,
+     "w": 440,
+     "h": 440,
+     "color": "ink",
+     "width": 5
+    },
+    {
+     "op": "path",
+     "id": "tri2_1",
+     "d": "M 960 380 L 960 240 L 1260 240 Z",
+     "color": "blue",
+     "width": 4,
+     "fill": "blue"
+    },
+    {
+     "op": "path",
+     "id": "tri2_2",
+     "d": "M 960 380 L 1260 380 L 1260 240 Z",
+     "color": "blue",
+     "width": 4,
+     "fill": "blue"
+    },
+    {
+     "op": "path",
+     "id": "tri2_3",
+     "d": "M 1260 680 L 1260 380 L 1400 380 Z",
+     "color": "blue",
+     "width": 4,
+     "fill": "blue"
+    },
+    {
+     "op": "path",
+     "id": "tri2_4",
+     "d": "M 1260 680 L 1400 680 L 1400 380 Z",
+     "color": "blue",
+     "width": 4,
+     "fill": "blue"
+    },
+    {
+     "op": "write",
+     "id": "lbl2_side",
+     "x": 1180,
+     "y": 750,
+     "text": "Total side = a + b",
+     "size": 34,
+     "color": "gray",
+     "anchor": "middle"
+    }
+   ]
+  },
+  {
+   "title": "Uncovered Space is a² + b²",
+   "say": "This regrouping leaves two empty squares: one of size a by a, and one of size b by b.",
+   "ops": [
+    {
+     "op": "rect",
+     "id": "sq_a2",
+     "x": 1260,
+     "y": 240,
+     "w": 140,
+     "h": 140,
+     "color": "red",
+     "width": 4,
+     "fill": "red"
+    },
+    {
+     "op": "write",
+     "id": "lbl_a2",
+     "x": 1330,
+     "y": 295,
+     "text": "a²",
+     "size": 36,
+     "color": "red",
+     "anchor": "middle"
+    },
+    {
+     "op": "rect",
+     "id": "sq_b2",
+     "x": 960,
+     "y": 380,
+     "w": 300,
+     "h": 300,
+     "color": "red",
+     "width": 4,
+     "fill": "red"
+    },
+    {
+     "op": "write",
+     "id": "lbl_b2",
+     "x": 1110,
+     "y": 515,
+     "text": "b²",
+     "size": 40,
+     "color": "red",
+     "anchor": "middle"
+    }
+   ]
+  },
+  {
+   "title": "Conclusion: a² + b² = c²",
+   "say": "Since both outer squares are identical and have 4 triangles removed, the remaining areas must be equal!",
+   "ops": [
+    {
+     "op": "rect",
+     "id": "res_box",
+     "x": 480,
+     "y": 800,
+     "w": 640,
+     "h": 70,
+     "color": "ink",
+     "width": 4
+    },
+    {
+     "op": "write",
+     "id": "final_eq",
+     "x": 800,
+     "y": 815,
+     "text": "Remaining Area:  c²  =  a² + b²",
+     "size": 42,
+     "color": "ink",
+     "anchor": "middle"
+    }
+   ]
+  }
+ ]
+}

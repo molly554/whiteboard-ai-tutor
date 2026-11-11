@@ -1,0 +1,175 @@
+{
+ "title": "Why the Pythagorean Theorem Works",
+ "lang": "en",
+ "steps": [
+  {
+   "title": "The claim",
+   "say": "The Pythagorean theorem says that for a right triangle, a² + b² = c².",
+   "ops": [
+    {
+     "id": "title",
+     "op": "write",
+     "x": 800,
+     "y": 60,
+     "text": "Why a² + b² = c²?",
+     "size": 56,
+     "anchor": "middle"
+    },
+    {
+     "id": "eq",
+     "op": "write",
+     "x": 800,
+     "y": 150,
+     "text": "a² + b² = c²",
+     "size": 48,
+     "anchor": "middle",
+     "color": "blue"
+    }
+   ]
+  },
+  {
+   "title": "Draw the triangle",
+   "say": "Start with a right triangle with legs a and b and hypotenuse c.",
+   "ops": [
+    {
+     "id": "tri",
+     "op": "path",
+     "d": "M 300 700 L 300 400 L 700 700 Z",
+     "color": "ink",
+     "width": 5
+    },
+    {
+     "id": "right_angle",
+     "op": "path",
+     "d": "M 300 660 L 340 660 L 340 700",
+     "color": "gray",
+     "width": 3
+    },
+    {
+     "id": "lbl_a",
+     "op": "write",
+     "x": 270,
+     "y": 540,
+     "text": "a",
+     "size": 40,
+     "anchor": "middle"
+    },
+    {
+     "id": "lbl_b",
+     "op": "write",
+     "x": 500,
+     "y": 720,
+     "text": "b",
+     "size": 40,
+     "anchor": "middle"
+    },
+    {
+     "id": "lbl_c",
+     "op": "write",
+     "x": 520,
+     "y": 520,
+     "text": "c",
+     "size": 40,
+     "anchor": "middle"
+    }
+   ]
+  },
+  {
+   "title": "Build the big square",
+   "say": "Put four copies of the triangle inside a square of side a + b.",
+   "ops": [
+    {
+     "id": "big_sq",
+     "op": "rect",
+     "x": 900,
+     "y": 300,
+     "w": 400,
+     "h": 400,
+     "color": "ink",
+     "width": 4
+    },
+    {
+     "id": "t1",
+     "op": "path",
+     "d": "M 900 300 L 1100 300 L 900 500 Z",
+     "color": "blue",
+     "width": 3
+    },
+    {
+     "id": "t2",
+     "op": "path",
+     "d": "M 1300 300 L 1300 500 L 1100 300 Z",
+     "color": "blue",
+     "width": 3
+    },
+    {
+     "id": "t3",
+     "op": "path",
+     "d": "M 1300 700 L 1100 700 L 1300 500 Z",
+     "color": "blue",
+     "width": 3
+    },
+    {
+     "id": "t4",
+     "op": "path",
+     "d": "M 900 700 L 900 500 L 1100 700 Z",
+     "color": "blue",
+     "width": 3
+    },
+    {
+     "id": "inner_sq",
+     "op": "rect",
+     "x": 1100,
+     "y": 500,
+     "w": 200,
+     "h": 200,
+     "color": "red",
+     "width": 4,
+     "fill": "red"
+    }
+   ]
+  },
+  {
+   "title": "Area bookkeeping",
+   "say": "The big square has area (a+b)². It is made of four triangles plus the tilted inner square of area c².",
+   "ops": [
+    {
+     "id": "area_eq",
+     "op": "write",
+     "x": 800,
+     "y": 760,
+     "text": "(a+b)² = 4·(½ab) + c²",
+     "size": 40,
+     "anchor": "middle",
+     "color": "ink"
+    },
+    {
+     "id": "expand",
+     "op": "write",
+     "x": 800,
+     "y": 820,
+     "text": "a² + 2ab + b² = 2ab + c²",
+     "size": 40,
+     "anchor": "middle",
+     "color": "ink"
+    }
+   ]
+  },
+  {
+   "title": "Cancel to finish",
+   "say": "Cancel 2ab from both sides and you are left with a² + b² = c².",
+   "ops": [
+    {
+     "id": "cancel",
+     "op": "write",
+     "x": 800,
+     "y": 860,
+     "text": "a² + b² = c²",
+     "size": 44,
+     "anchor": "middle",
+     "color": "green"
+    }
+   ]
+  }
+ ]
+}

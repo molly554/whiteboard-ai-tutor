@@ -1,0 +1,187 @@
+{
+ "title": "Sunlight Angle & Intensity",
+ "lang": "en",
+ "steps": [
+  {
+   "title": "Direct vs Slanted Sunlight",
+   "say": "Yes, Earth is actually farthest in July! What matters is the angle of sunlight hitting the surface, not the distance.",
+   "ops": [
+    {
+     "op": "erase",
+     "ids": [
+      "key"
+     ]
+    },
+    {
+     "op": "write",
+     "id": "answer",
+     "x": 60,
+     "y": 120,
+     "text": "Distance changes by only ~3%, which barely matters.\nWhat matters is the angle of the incoming sunlight!",
+     "size": 34,
+     "color": "blue"
+    },
+    {
+     "op": "line",
+     "id": "beam1_top",
+     "x1": 860,
+     "y1": 590,
+     "x2": 1270,
+     "y2": 580,
+     "color": "red",
+     "width": 3,
+     "arrow": true
+    },
+    {
+     "op": "line",
+     "id": "beam1_bot",
+     "x1": 860,
+     "y1": 610,
+     "x2": 1270,
+     "y2": 620,
+     "color": "red",
+     "width": 3,
+     "arrow": true
+    },
+    {
+     "op": "write",
+     "id": "lbl_summer",
+     "x": 1330,
+     "y": 510,
+     "text": "Tilted toward Sun:\nDirect light = Hotter",
+     "size": 28,
+     "color": "red"
+    }
+   ]
+  },
+  {
+   "title": "Energy Concentration",
+   "say": "When light hits straight on, heat is concentrated in a small area. When tilted, the same energy is spread thin.",
+   "ops": [
+    {
+     "op": "erase",
+     "ids": [
+      "answer"
+     ]
+    },
+    {
+     "op": "write",
+     "id": "direct_title",
+     "x": 60,
+     "y": 120,
+     "text": "Summer: Direct light (concentrated)",
+     "size": 30,
+     "color": "red"
+    },
+    {
+     "op": "rect",
+     "id": "ground1",
+     "x": 60,
+     "y": 260,
+     "w": 200,
+     "h": 6,
+     "color": "ink",
+     "fill": "gray"
+    },
+    {
+     "op": "line",
+     "id": "ray1",
+     "x1": 100,
+     "y1": 170,
+     "x2": 100,
+     "y2": 255,
+     "color": "red",
+     "width": 3,
+     "arrow": true
+    },
+    {
+     "op": "line",
+     "id": "ray2",
+     "x1": 220,
+     "y1": 170,
+     "x2": 220,
+     "y2": 255,
+     "color": "red",
+     "width": 3,
+     "arrow": true
+    },
+    {
+     "op": "rect",
+     "id": "focus1",
+     "x": 100,
+     "y": 258,
+     "w": 120,
+     "h": 10,
+     "color": "red",
+     "fill": "red"
+    },
+    {
+     "op": "write",
+     "id": "winter_title",
+     "x": 380,
+     "y": 120,
+     "text": "Winter: Slanted light (spread out)",
+     "size": 30,
+     "color": "blue"
+    },
+    {
+     "op": "rect",
+     "id": "ground2",
+     "x": 380,
+     "y": 260,
+     "w": 280,
+     "h": 6,
+     "color": "ink",
+     "fill": "gray"
+    },
+    {
+     "op": "line",
+     "id": "ray3",
+     "x1": 390,
+     "y1": 170,
+     "x2": 450,
+     "y2": 255,
+     "color": "blue",
+     "width": 3,
+     "arrow": true
+    },
+    {
+     "op": "line",
+     "id": "ray4",
+     "x1": 510,
+     "y1": 170,
+     "x2": 630,
+     "y2": 255,
+     "color": "blue",
+     "width": 3,
+     "arrow": true
+    },
+    {
+     "op": "rect",
+     "id": "focus2",
+     "x": 450,
+     "y": 258,
+     "w": 180,
+     "h": 10,
+     "color": "blue",
+     "fill": "blue"
+    }
+   ]
+  },
+  {
+   "title": "Summary",
+   "say": "So even though the Sun is slightly farther, direct light and longer days make summer much hotter.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "takeaway",
+     "x": 60,
+     "y": 290,
+     "text": "Tilt creates 2 big effects in summer:\n1. Direct angle = more heat per sq meter\n2. Longer daylight hours = more time to warm up",
+     "size": 32,
+     "color": "ink"
+    }
+   ]
+  }
+ ]
+}

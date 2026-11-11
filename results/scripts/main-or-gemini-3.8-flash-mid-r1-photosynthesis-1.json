@@ -1,0 +1,270 @@
+{
+ "title": "光合作用的场所：叶绿体",
+ "lang": "zh",
+ "steps": [
+  {
+   "title": "核心结论",
+   "say": "光合作用主要发生在植物绿色细胞的特定细胞器中，它就是叶绿体。",
+   "ops": [
+    {
+     "op": "write",
+     "id": "t1",
+     "x": 60,
+     "y": 50,
+     "text": "光合作用发生在细胞的哪个部分？",
+     "size": 52,
+     "color": "ink"
+    },
+    {
+     "op": "write",
+     "id": "ans",
+     "x": 60,
+     "y": 125,
+     "text": "核心场所：植物细胞中的【叶绿体】(Chloroplast)",
+     "size": 38,
+     "color": "green",
+     "underline": true
+    }
+   ]
+  },
+  {
+   "title": "叶绿体的双层膜结构",
+   "say": "叶绿体具有两层膜，内部充满了胶状的基质，并分布着精细的膜结构。",
+   "ops": [
+    {
+     "op": "ellipse",
+     "id": "outer_mem",
+     "cx": 520,
+     "cy": 500,
+     "rx": 380,
+     "ry": 230,
+     "color": "green",
+     "width": 5,
+     "fill": "green"
+    },
+    {
+     "op": "ellipse",
+     "id": "inner_mem",
+     "cx": 520,
+     "cy": 500,
+     "rx": 355,
+     "ry": 210,
+     "color": "green",
+     "width": 3
+    },
+    {
+     "op": "line",
+     "id": "l_outer",
+     "x1": 240,
+     "y1": 340,
+     "x2": 180,
+     "y2": 310,
+     "color": "gray",
+     "width": 3
+    },
+    {
+     "op": "write",
+     "id": "lbl_outer",
+     "x": 60,
+     "y": 290,
+     "text": "双层膜 (外膜与内膜)",
+     "size": 30,
+     "color": "gray"
+    }
+   ]
+  },
+  {
+   "title": "类囊体：光反应场所",
+   "say": "基质内叠放着许多圆盘状的囊状结构，称为类囊体，光反应就在类囊体薄膜上进行。",
+   "ops": [
+    {
+     "op": "ellipse",
+     "id": "t_stack1_1",
+     "cx": 380,
+     "cy": 560,
+     "rx": 70,
+     "ry": 22,
+     "color": "green",
+     "fill": "green",
+     "width": 3
+    },
+    {
+     "op": "ellipse",
+     "id": "t_stack1_2",
+     "cx": 380,
+     "cy": 525,
+     "rx": 70,
+     "ry": 22,
+     "color": "green",
+     "fill": "green",
+     "width": 3
+    },
+    {
+     "op": "ellipse",
+     "id": "t_stack1_3",
+     "cx": 380,
+     "cy": 490,
+     "rx": 70,
+     "ry": 22,
+     "color": "green",
+     "fill": "green",
+     "width": 3
+    },
+    {
+     "op": "ellipse",
+     "id": "t_stack2_1",
+     "cx": 520,
+     "cy": 510,
+     "rx": 70,
+     "ry": 22,
+     "color": "green",
+     "fill": "green",
+     "width": 3
+    },
+    {
+     "op": "ellipse",
+     "id": "t_stack2_2",
+     "cx": 520,
+     "cy": 475,
+     "rx": 70,
+     "ry": 22,
+     "color": "green",
+     "fill": "green",
+     "width": 3
+    },
+    {
+     "op": "line",
+     "id": "link_grana",
+     "x1": 380,
+     "y1": 490,
+     "x2": 520,
+     "y2": 510,
+     "color": "green",
+     "width": 3
+    },
+    {
+     "op": "line",
+     "id": "l_grana",
+     "x1": 380,
+     "y1": 465,
+     "x2": 420,
+     "y2": 370,
+     "color": "blue",
+     "width": 3,
+     "arrow": true
+    },
+    {
+     "op": "write",
+     "id": "lbl_grana",
+     "x": 390,
+     "y": 330,
+     "text": "类囊体 / 基粒 (Grana)",
+     "size": 30,
+     "color": "blue"
+    },
+    {
+     "op": "rect",
+     "id": "box_light",
+     "x": 1000,
+     "y": 240,
+     "w": 520,
+     "h": 220,
+     "color": "blue",
+     "width": 3
+    },
+    {
+     "op": "write",
+     "id": "txt_light",
+     "x": 1025,
+     "y": 265,
+     "text": "1. 光反应 (Light Reactions)\n· 发生位置：类囊体薄膜\n· 作用：吸收光能，分解 H₂O\n· 产生：O₂、ATP、NADPH",
+     "size": 30,
+     "color": "ink"
+    }
+   ]
+  },
+  {
+   "title": "叶绿体基质：暗反应场所",
+   "say": "类囊体之外充满液体的基质中含有大量酶，负责进行暗反应，把二氧化碳转化为糖类。",
+   "ops": [
+    {
+     "op": "line",
+     "id": "l_stroma",
+     "x1": 660,
+     "y1": 560,
+     "x2": 750,
+     "y2": 610,
+     "color": "red",
+     "width": 3,
+     "arrow": true
+    },
+    {
+     "op": "write",
+     "id": "lbl_stroma",
+     "x": 620,
+     "y": 625,
+     "text": "叶绿体基质 (Stroma)",
+     "size": 30,
+     "color": "red"
+    },
+    {
+     "op": "rect",
+     "id": "box_dark",
+     "x": 1000,
+     "y": 500,
+     "w": 520,
+     "h": 220,
+     "color": "red",
+     "width": 3
+    },
+    {
+     "op": "write",
+     "id": "txt_dark",
+     "x": 1025,
+     "y": 525,
+     "text": "2. 暗反应 (Calvin Cycle / 基质反应)\n· 发生位置：叶绿体基质\n· 作用：利用 ATP 与 NADPH\n· 过程：固定 CO₂，合成糖类有机物",
+     "size": 30,
+     "color": "ink"
+    }
+   ]
+  },
+  {
+   "title": "协同总结",
+   "say": "总结来说：叶绿体是光合作用的完整工厂，光反应在类囊体捕获光能，暗反应在基质中制造养分。",
+   "ops": [
+    {
+     "op": "line",
+     "id": "l_flow",
+     "x1": 1260,
+     "y1": 460,
+     "x2": 1260,
+     "y2": 500,
+     "color": "green",
+     "width": 4,
+     "arrow": true
+    },
+    {
+     "op": "rect",
+     "id": "box_summary",
+     "x": 60,
+     "y": 770,
+     "w": 1460,
+     "h": 85,
+     "color": "ink",
+     "width": 2,
+     "fill": "gray"
+    },
+    {
+     "op": "write",
+     "id": "txt_summary",
+     "x": 790,
+     "y": 792,
+     "text": "光能 + CO₂ + H₂O  ⟶  (叶绿体：类囊体捕能 + 基质固碳)  ⟶  糖类 + O₂",
+     "size": 34,
+     "color": "ink",
+     "anchor": "middle"
+    }
+   ]
+  }
+ ]
+}

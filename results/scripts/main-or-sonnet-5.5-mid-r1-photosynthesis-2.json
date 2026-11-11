@@ -1,0 +1,184 @@
+{
+ "title": "光合作用发生在哪里",
+ "lang": "zh",
+ "steps": [
+  {
+   "title": "问题",
+   "say": "光合作用发生在细胞的哪个部分？答案是叶绿体。",
+   "ops": [
+    {
+     "id": "t1",
+     "op": "write",
+     "x": 800,
+     "y": 50,
+     "text": "光合作用发生在叶绿体",
+     "size": 56,
+     "anchor": "middle",
+     "color": "blue"
+    },
+    {
+     "id": "t1u",
+     "op": "line",
+     "x1": 380,
+     "y1": 125,
+     "x2": 1220,
+     "y2": 125,
+     "color": "blue",
+     "width": 4
+    }
+   ]
+  },
+  {
+   "title": "植物细胞",
+   "say": "先看一个植物细胞，外面是细胞壁，里面有细胞核和叶绿体等结构。",
+   "ops": [
+    {
+     "id": "cw",
+     "op": "rect",
+     "x": 120,
+     "y": 200,
+     "w": 620,
+     "h": 520,
+     "color": "ink",
+     "width": 6
+    },
+    {
+     "id": "cwl",
+     "op": "write",
+     "x": 430,
+     "y": 740,
+     "text": "植物细胞",
+     "size": 36,
+     "anchor": "middle"
+    },
+    {
+     "id": "nuc",
+     "op": "ellipse",
+     "cx": 300,
+     "cy": 400,
+     "rx": 80,
+     "ry": 65,
+     "color": "gray",
+     "width": 5
+    },
+    {
+     "id": "nucl",
+     "op": "write",
+     "x": 300,
+     "y": 380,
+     "text": "细胞核",
+     "size": 30,
+     "anchor": "middle",
+     "color": "gray"
+    }
+   ]
+  },
+  {
+   "title": "画出叶绿体",
+   "say": "细胞里有许多椭圆形的绿色小结构，就是叶绿体。",
+   "ops": [
+    {
+     "id": "c1",
+     "op": "ellipse",
+     "cx": 540,
+     "cy": 330,
+     "rx": 70,
+     "ry": 40,
+     "rotate": -20,
+     "color": "green",
+     "width": 5,
+     "fill": "green"
+    },
+    {
+     "id": "c2",
+     "op": "ellipse",
+     "cx": 560,
+     "cy": 560,
+     "rx": 70,
+     "ry": 40,
+     "rotate": 15,
+     "color": "green",
+     "width": 5,
+     "fill": "green"
+    },
+    {
+     "id": "c3",
+     "op": "ellipse",
+     "cx": 300,
+     "cy": 600,
+     "rx": 70,
+     "ry": 40,
+     "rotate": -10,
+     "color": "green",
+     "width": 5,
+     "fill": "green"
+    }
+   ]
+  },
+  {
+   "title": "标注",
+   "say": "用箭头指出叶绿体的位置。",
+   "ops": [
+    {
+     "id": "arr",
+     "op": "line",
+     "x1": 1000,
+     "y1": 330,
+     "x2": 640,
+     "y2": 330,
+     "color": "red",
+     "width": 5,
+     "arrow": true
+    },
+    {
+     "id": "arrl",
+     "op": "write",
+     "x": 1010,
+     "y": 300,
+     "text": "叶绿体",
+     "size": 44,
+     "color": "red"
+    }
+   ]
+  },
+  {
+   "title": "为什么在这里",
+   "say": "叶绿体里含有叶绿素，能吸收光能，所以光合作用在这里进行。",
+   "ops": [
+    {
+     "id": "why",
+     "op": "write",
+     "x": 900,
+     "y": 440,
+     "text": "含叶绿素\n吸收光能",
+     "size": 40,
+     "color": "green"
+    }
+   ]
+  },
+  {
+   "title": "总结",
+   "say": "在叶绿体中，二氧化碳和水在光照下变成葡萄糖和氧气。",
+   "ops": [
+    {
+     "id": "eq",
+     "op": "write",
+     "x": 900,
+     "y": 640,
+     "text": "CO₂ + H₂O → 葡萄糖 + O₂",
+     "size": 38,
+     "color": "blue"
+    },
+    {
+     "id": "eqs",
+     "op": "write",
+     "x": 900,
+     "y": 710,
+     "text": "（需要光照）",
+     "size": 32,
+     "color": "gray"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,184 @@
+{
+ "title": "Explaining the demand-shift arrow",
+ "lang": "en",
+ "steps": [
+  {
+   "title": "Highlight the arrow",
+   "say": "This arrow is not showing a price change along the demand curve. It shows the whole demand curve moving right.",
+   "ops": [
+    {
+     "op": "line",
+     "id": "shift-arrow",
+     "x1": 260,
+     "y1": 262,
+     "x2": 420,
+     "y2": 262,
+     "color": "green",
+     "width": 7,
+     "arrow": true
+    },
+    {
+     "op": "write",
+     "id": "arrow-callout",
+     "x": 340,
+     "y": 310,
+     "text": "This arrow means:\nthe entire demand\ncurve shifts right",
+     "size": 30,
+     "anchor": "middle",
+     "color": "green"
+    },
+    {
+     "op": "ellipse",
+     "id": "d1-zone",
+     "cx": 260,
+     "cy": 300,
+     "rx": 14,
+     "ry": 14,
+     "color": "green",
+     "width": 4
+    },
+    {
+     "op": "ellipse",
+     "id": "d2-zone",
+     "cx": 420,
+     "cy": 300,
+     "rx": 14,
+     "ry": 14,
+     "color": "green",
+     "width": 4
+    }
+   ]
+  },
+  {
+   "title": "From D1 to D2",
+   "say": "The arrow starts at D1 and points to D2. That means the old demand curve is replaced by the new one.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "d1-new",
+     "x": 215,
+     "y": 330,
+     "text": "D1",
+     "size": 32,
+     "color": "red"
+    },
+    {
+     "op": "write",
+     "id": "d2-new",
+     "x": 430,
+     "y": 330,
+     "text": "D2",
+     "size": 32,
+     "color": "red"
+    },
+    {
+     "op": "line",
+     "id": "d1-callout",
+     "x1": 260,
+     "y1": 300,
+     "x2": 260,
+     "y2": 330,
+     "color": "gray",
+     "width": 3,
+     "arrow": true
+    },
+    {
+     "op": "line",
+     "id": "d2-callout",
+     "x1": 420,
+     "y1": 300,
+     "x2": 420,
+     "y2": 330,
+     "color": "gray",
+     "width": 3,
+     "arrow": true
+    }
+   ]
+  },
+  {
+   "title": "What shifts right means",
+   "say": "At every possible price, people now want a larger quantity. That is why the new demand curve lies to the right of the old one.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "meaning",
+     "x": 340,
+     "y": 390,
+     "text": "At every price,\nbuyers want more\nthan before",
+     "size": 32,
+     "anchor": "middle"
+    },
+    {
+     "op": "line",
+     "id": "meaning-underline",
+     "x1": 210,
+     "y1": 505,
+     "x2": 470,
+     "y2": 505,
+     "color": "green",
+     "width": 4
+    }
+   ]
+  },
+  {
+   "title": "Why the price will rise",
+   "say": "Because buyers want more at every price, the market will move to a new equilibrium with a higher price.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "result",
+     "x": 340,
+     "y": 535,
+     "text": "So the market moves to\na higher equilibrium price",
+     "size": 32,
+     "anchor": "middle",
+     "color": "blue"
+    },
+    {
+     "op": "line",
+     "id": "result-box",
+     "x1": 180,
+     "y1": 525,
+     "x2": 500,
+     "y2": 525,
+     "color": "blue",
+     "width": 3,
+     "dash": true
+    },
+    {
+     "op": "line",
+     "id": "result-box2",
+     "x1": 180,
+     "y1": 525,
+     "x2": 180,
+     "y2": 640,
+     "color": "blue",
+     "width": 3,
+     "dash": true
+    },
+    {
+     "op": "line",
+     "id": "result-box3",
+     "x1": 500,
+     "y1": 525,
+     "x2": 500,
+     "y2": 640,
+     "color": "blue",
+     "width": 3,
+     "dash": true
+    },
+    {
+     "op": "line",
+     "id": "result-box4",
+     "x1": 180,
+     "y1": 640,
+     "x2": 500,
+     "y2": 640,
+     "color": "blue",
+     "width": 3,
+     "dash": true
+    }
+   ]
+  }
+ ]
+}

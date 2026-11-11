@@ -1,0 +1,179 @@
+{
+ "title": "Why We Have Seasons",
+ "lang": "en",
+ "steps": [
+  {
+   "title": "The question",
+   "say": "Seasons are not caused by Earth being closer to or farther from the Sun. They come from something else: Earth's tilt.",
+   "ops": [
+    {
+     "id": "t1",
+     "op": "write",
+     "x": 800,
+     "y": 50,
+     "text": "Why do we have seasons?",
+     "size": 56,
+     "anchor": "middle",
+     "color": "blue"
+    },
+    {
+     "id": "t2",
+     "op": "write",
+     "x": 800,
+     "y": 160,
+     "text": "Not distance... it's TILT!",
+     "size": 40,
+     "anchor": "middle",
+     "color": "red"
+    }
+   ]
+  },
+  {
+   "title": "Sun and Earth",
+   "say": "Picture the Sun on the left, shining light toward Earth on the right.",
+   "ops": [
+    {
+     "id": "sun",
+     "op": "ellipse",
+     "cx": 200,
+     "cy": 520,
+     "rx": 100,
+     "ry": 100,
+     "color": "red",
+     "fill": "red"
+    },
+    {
+     "id": "sunl",
+     "op": "write",
+     "x": 200,
+     "y": 650,
+     "text": "Sun",
+     "size": 34,
+     "anchor": "middle"
+    },
+    {
+     "id": "earth",
+     "op": "ellipse",
+     "cx": 900,
+     "cy": 520,
+     "rx": 110,
+     "ry": 110,
+     "color": "blue",
+     "fill": "blue"
+    },
+    {
+     "id": "earthl",
+     "op": "write",
+     "x": 900,
+     "y": 660,
+     "text": "Earth",
+     "size": 34,
+     "anchor": "middle"
+    },
+    {
+     "id": "ray1",
+     "op": "line",
+     "x1": 320,
+     "y1": 450,
+     "x2": 770,
+     "y2": 450,
+     "arrow": true,
+     "color": "gray",
+     "width": 4
+    },
+    {
+     "id": "ray2",
+     "op": "line",
+     "x1": 320,
+     "y1": 590,
+     "x2": 770,
+     "y2": 590,
+     "arrow": true,
+     "color": "gray",
+     "width": 4
+    }
+   ]
+  },
+  {
+   "title": "The tilted axis",
+   "say": "Earth's axis is tilted about 23.5 degrees, and it always points toward the same direction in space.",
+   "ops": [
+    {
+     "id": "axis",
+     "op": "line",
+     "x1": 990,
+     "y1": 340,
+     "x2": 810,
+     "y2": 700,
+     "color": "green",
+     "width": 5,
+     "arrow": "both"
+    },
+    {
+     "id": "tiltl",
+     "op": "write",
+     "x": 1040,
+     "y": 330,
+     "text": "axis tilt 23.5°",
+     "size": 34,
+     "color": "green"
+    }
+   ]
+  },
+  {
+   "title": "Summer in the north",
+   "say": "When the north end leans toward the Sun, sunlight hits the north more directly and days are longer. That is summer there.",
+   "ops": [
+    {
+     "id": "sum",
+     "op": "write",
+     "x": 1040,
+     "y": 440,
+     "text": "North leans toward Sun:\ndirect light, long days\n= NORTH SUMMER",
+     "size": 34,
+     "color": "red"
+    }
+   ]
+  },
+  {
+   "title": "Winter in the north",
+   "say": "Half a year later Earth is on the other side, and the north leans away. Light is slanted and spread thin, so it is winter.",
+   "ops": [
+    {
+     "id": "clr",
+     "op": "erase",
+     "ids": [
+      "sum",
+      "tiltl"
+     ]
+    },
+    {
+     "id": "win",
+     "op": "write",
+     "x": 1040,
+     "y": 440,
+     "text": "North leans away:\nslanted light, short days\n= NORTH WINTER",
+     "size": 34,
+     "color": "blue"
+    }
+   ]
+  },
+  {
+   "title": "Summary",
+   "say": "So the tilt, not the distance, changes how strongly sunlight hits each hemisphere, and that gives us the seasons.",
+   "ops": [
+    {
+     "id": "sm",
+     "op": "write",
+     "x": 800,
+     "y": 790,
+     "text": "Tilt → light angle + day length → seasons",
+     "size": 44,
+     "anchor": "middle",
+     "color": "green",
+     "underline": true
+    }
+   ]
+  }
+ ]
+}

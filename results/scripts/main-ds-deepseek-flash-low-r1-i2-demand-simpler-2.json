@@ -1,0 +1,157 @@
+{
+ "title": "Demand shift, simply",
+ "lang": "en",
+ "steps": [
+  {
+   "title": "Clear the right side",
+   "say": "Let me clear the side notes and the old shift arrow, and make room for a simpler picture.",
+   "ops": [
+    {
+     "op": "erase",
+     "ids": [
+      "note1",
+      "note2",
+      "note3",
+      "shift",
+      "shiftlab",
+      "d2",
+      "d2lab"
+     ]
+    }
+   ]
+  },
+  {
+   "title": "One price, two curves",
+   "say": "Pick a single price level. At that price, read off how much buyers want on each demand curve.",
+   "ops": [
+    {
+     "op": "line",
+     "id": "pricebar",
+     "x1": 200,
+     "y1": 470,
+     "x2": 1060,
+     "y2": 470,
+     "color": "gray",
+     "width": 3,
+     "dash": true
+    },
+    {
+     "op": "write",
+     "id": "sameprice",
+     "x": 1090,
+     "y": 452,
+     "text": "same price",
+     "size": 30,
+     "color": "gray"
+    }
+   ]
+  },
+  {
+   "title": "Old quantity",
+   "say": "On D1, buyers want this much quantity — Q1.",
+   "ops": [
+    {
+     "op": "ellipse",
+     "id": "dotA",
+     "cx": 580,
+     "cy": 470,
+     "rx": 8,
+     "ry": 8,
+     "color": "red",
+     "fill": "red"
+    },
+    {
+     "op": "write",
+     "id": "labA",
+     "x": 570,
+     "y": 490,
+     "text": "Q1",
+     "size": 30,
+     "color": "red",
+     "anchor": "middle"
+    }
+   ]
+  },
+  {
+   "title": "New quantity",
+   "say": "On D2, at the very same price, buyers now want more — Q2, further right.",
+   "ops": [
+    {
+     "op": "ellipse",
+     "id": "dotB",
+     "cx": 740,
+     "cy": 470,
+     "rx": 8,
+     "ry": 8,
+     "color": "red",
+     "fill": "red"
+    },
+    {
+     "op": "line",
+     "id": "gap",
+     "x1": 588,
+     "y1": 470,
+     "x2": 732,
+     "y2": 470,
+     "color": "green",
+     "width": 5,
+     "arrow": "both"
+    },
+    {
+     "op": "write",
+     "id": "labB",
+     "x": 730,
+     "y": 490,
+     "text": "Q2",
+     "size": 30,
+     "color": "red",
+     "anchor": "middle"
+    },
+    {
+     "op": "write",
+     "id": "more",
+     "x": 660,
+     "y": 425,
+     "text": "more wanted",
+     "size": 30,
+     "color": "green",
+     "anchor": "middle"
+    }
+   ]
+  },
+  {
+   "title": "So the shift is just this",
+   "say": "Demand rising means: at every price, the wanted quantity moves right. The curve slides right to D2.",
+   "ops": [
+    {
+     "op": "line",
+     "id": "d2new",
+     "x1": 420,
+     "y1": 300,
+     "x2": 1060,
+     "y2": 640,
+     "color": "red",
+     "width": 5
+    },
+    {
+     "op": "write",
+     "id": "d2newlab",
+     "x": 1075,
+     "y": 625,
+     "text": "D2",
+     "size": 34,
+     "color": "red"
+    },
+    {
+     "op": "write",
+     "id": "takeaway",
+     "x": 1190,
+     "y": 300,
+     "text": "Demand rises =\nsame price,\nmore quantity\n→ curve slides right",
+     "size": 30,
+     "color": "green"
+    }
+   ]
+  }
+ ]
+}

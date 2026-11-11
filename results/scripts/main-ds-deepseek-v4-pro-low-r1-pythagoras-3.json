@@ -1,0 +1,264 @@
+{
+ "title": "Pythagorean Theorem",
+ "lang": "en",
+ "steps": [
+  {
+   "title": "Right Triangle",
+   "say": "Start with a right triangle with legs a and b and hypotenuse c.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "title",
+     "x": 80,
+     "y": 60,
+     "text": "Pythagorean Theorem",
+     "size": 56,
+     "anchor": "start",
+     "color": "ink"
+    },
+    {
+     "op": "line",
+     "id": "tri-base",
+     "x1": 300,
+     "y1": 650,
+     "x2": 750,
+     "y2": 650,
+     "color": "ink",
+     "width": 5
+    },
+    {
+     "op": "line",
+     "id": "tri-height",
+     "x1": 750,
+     "y1": 650,
+     "x2": 750,
+     "y2": 350,
+     "color": "ink",
+     "width": 5
+    },
+    {
+     "op": "line",
+     "id": "tri-hyp",
+     "x1": 300,
+     "y1": 650,
+     "x2": 750,
+     "y2": 350,
+     "color": "ink",
+     "width": 5
+    },
+    {
+     "op": "write",
+     "id": "label-a",
+     "x": 500,
+     "y": 670,
+     "text": "a",
+     "size": 36,
+     "anchor": "middle",
+     "color": "ink"
+    },
+    {
+     "op": "write",
+     "id": "label-b",
+     "x": 770,
+     "y": 500,
+     "text": "b",
+     "size": 36,
+     "anchor": "start",
+     "color": "ink"
+    },
+    {
+     "op": "write",
+     "id": "label-c",
+     "x": 490,
+     "y": 480,
+     "text": "c",
+     "size": 36,
+     "anchor": "middle",
+     "color": "ink"
+    },
+    {
+     "op": "rect",
+     "id": "right-angle",
+     "x": 700,
+     "y": 600,
+     "w": 50,
+     "h": 50,
+     "color": "ink",
+     "width": 3
+    }
+   ]
+  },
+  {
+   "title": "Squares on Sides",
+   "say": "Draw a square on each side of the triangle.",
+   "ops": [
+    {
+     "op": "rect",
+     "id": "sq-a",
+     "x": 300,
+     "y": 650,
+     "w": 450,
+     "h": 450,
+     "color": "blue",
+     "width": 4,
+     "fill": "blue"
+    },
+    {
+     "op": "rect",
+     "id": "sq-b",
+     "x": 750,
+     "y": 50,
+     "w": 300,
+     "h": 300,
+     "color": "green",
+     "width": 4,
+     "fill": "green"
+    },
+    {
+     "op": "write",
+     "id": "sq-a-label",
+     "x": 480,
+     "y": 720,
+     "text": "a²",
+     "size": 36,
+     "anchor": "middle",
+     "color": "ink"
+    },
+    {
+     "op": "write",
+     "id": "sq-b-label",
+     "x": 860,
+     "y": 180,
+     "text": "b²",
+     "size": 36,
+     "anchor": "middle",
+     "color": "ink"
+    }
+   ]
+  },
+  {
+   "title": "Hypotenuse Square",
+   "say": "Now draw the square on the hypotenuse c.",
+   "ops": [
+    {
+     "op": "path",
+     "id": "sq-c",
+     "d": "M 750 350 L 450 50 L 150 350 L 450 650 Z",
+     "color": "red",
+     "width": 4,
+     "fill": "red"
+    },
+    {
+     "op": "write",
+     "id": "sq-c-label",
+     "x": 450,
+     "y": 350,
+     "text": "c²",
+     "size": 36,
+     "anchor": "middle",
+     "color": "ink"
+    }
+   ]
+  },
+  {
+   "title": "Rearrange",
+   "say": "The two smaller squares can be cut and rearranged to exactly cover the big square.",
+   "ops": [
+    {
+     "op": "line",
+     "id": "cut-1",
+     "x1": 300,
+     "y1": 650,
+     "x2": 750,
+     "y2": 350,
+     "color": "gray",
+     "width": 3,
+     "dash": "6 6"
+    },
+    {
+     "op": "line",
+     "id": "cut-2",
+     "x1": 750,
+     "y1": 350,
+     "x2": 750,
+     "y2": 650,
+     "color": "gray",
+     "width": 3,
+     "dash": "6 6"
+    },
+    {
+     "op": "write",
+     "id": "note-rearrange",
+     "x": 950,
+     "y": 500,
+     "text": "Cut and\nrearrange",
+     "size": 32,
+     "anchor": "start",
+     "color": "gray"
+    }
+   ]
+  },
+  {
+   "title": "Areas Equal",
+   "say": "The total area of the two smaller squares equals the area of the big square.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "formula",
+     "x": 80,
+     "y": 780,
+     "text": "a² + b² = c²",
+     "size": 48,
+     "anchor": "start",
+     "color": "ink"
+    },
+    {
+     "op": "write",
+     "id": "note-areas",
+     "x": 1050,
+     "y": 320,
+     "text": "Area a²\n+\nArea b²\n=\nArea c²",
+     "size": 32,
+     "anchor": "start",
+     "color": "ink"
+    }
+   ]
+  },
+  {
+   "title": "Why It Works",
+   "say": "Because both arrangements use the same four triangles plus the same total square area, the leftover areas must match.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "why-1",
+     "x": 80,
+     "y": 200,
+     "text": "Same four triangles",
+     "size": 36,
+     "anchor": "start",
+     "color": "ink"
+    },
+    {
+     "op": "write",
+     "id": "why-2",
+     "x": 80,
+     "y": 250,
+     "text": "Same total square",
+     "size": 36,
+     "anchor": "start",
+     "color": "ink"
+    },
+    {
+     "op": "write",
+     "id": "why-3",
+     "x": 80,
+     "y": 300,
+     "text": "So leftovers equal",
+     "size": 36,
+     "anchor": "start",
+     "color": "ink"
+    }
+   ]
+  }
+ ]
+}

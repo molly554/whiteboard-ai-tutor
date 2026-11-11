@@ -1,0 +1,137 @@
+{
+ "title": "Solve x² − 5x + 6 = 0",
+ "lang": "en",
+ "steps": [
+  {
+   "title": "Write the equation",
+   "say": "Let’s start with the given quadratic equation.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "eq_title",
+     "x": 80,
+     "y": 80,
+     "text": "Solve:  x² − 5x + 6 = 0",
+     "size": 52
+    }
+   ]
+  },
+  {
+   "title": "Try factoring",
+   "say": "First, let’s try factoring the left side.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "factoring_label",
+     "x": 80,
+     "y": 220,
+     "text": "Try factoring:",
+     "size": 36,
+     "color": "blue"
+    },
+    {
+     "op": "write",
+     "id": "factoring_attempt",
+     "x": 80,
+     "y": 290,
+     "text": "x² − 5x + 6",
+     "size": 40
+    },
+    {
+     "op": "write",
+     "id": "factoring_question",
+     "x": 80,
+     "y": 360,
+     "text": "Need two numbers that multiply to 6 and add to −5.",
+     "size": 32,
+     "color": "gray"
+    }
+   ]
+  },
+  {
+   "title": "Notice a simpler method",
+   "say": "The numbers −2 and −3 work, so factoring is quick here.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "factor_pair",
+     "x": 80,
+     "y": 440,
+     "text": "−2 and −3",
+     "size": 40,
+     "color": "green"
+    },
+    {
+     "op": "write",
+     "id": "factored_form",
+     "x": 80,
+     "y": 520,
+     "text": "(x − 2)(x − 3) = 0",
+     "size": 44
+    }
+   ]
+  },
+  {
+   "title": "Apply zero product property",
+   "say": "If the product is zero, at least one factor must be zero.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "zero_product_title",
+     "x": 80,
+     "y": 640,
+     "text": "Zero product property:",
+     "size": 36,
+     "color": "blue"
+    },
+    {
+     "op": "write",
+     "id": "zero_product_rule",
+     "x": 80,
+     "y": 710,
+     "text": "x − 2 = 0   or   x − 3 = 0",
+     "size": 40
+    }
+   ]
+  },
+  {
+   "title": "Solve each simple equation",
+   "say": "Now solve each small equation.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "solve_first",
+     "x": 80,
+     "y": 810,
+     "text": "x = 2",
+     "size": 44,
+     "color": "green"
+    },
+    {
+     "op": "write",
+     "id": "solve_second",
+     "x": 300,
+     "y": 810,
+     "text": "x = 3",
+     "size": 44,
+     "color": "green"
+    }
+   ]
+  },
+  {
+   "title": "Final answer",
+   "say": "So the solutions are x equals 2 and x equals 3.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "final_answer",
+     "x": 80,
+     "y": 880,
+     "text": "Solutions: x = 2, 3",
+     "size": 46,
+     "underline": true
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,293 @@
+{
+ "title": "Why price rises: an auction story",
+ "lang": "en",
+ "steps": [
+  {
+   "title": "Clear the board",
+   "say": "Let's set the graph aside and think of this like a simple auction for concert tickets.",
+   "ops": [
+    {
+     "op": "erase",
+     "all": true
+    },
+    {
+     "op": "write",
+     "id": "new_title",
+     "x": 60,
+     "y": 40,
+     "text": "Think of an auction: Concert Tickets",
+     "size": 52
+    },
+    {
+     "op": "rect",
+     "id": "stage",
+     "x": 100,
+     "y": 160,
+     "w": 1400,
+     "h": 660,
+     "color": "gray",
+     "width": 2
+    }
+   ]
+  },
+  {
+   "title": "Fixed supply",
+   "say": "Suppose there are only 3 tickets available for sale.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "ticket_hdr",
+     "x": 160,
+     "y": 220,
+     "text": "Available: 3 Tickets",
+     "size": 40,
+     "color": "blue"
+    },
+    {
+     "op": "rect",
+     "id": "t1",
+     "x": 160,
+     "y": 300,
+     "w": 100,
+     "h": 70,
+     "color": "blue",
+     "fill": "blue"
+    },
+    {
+     "op": "write",
+     "id": "t1_txt",
+     "x": 210,
+     "y": 318,
+     "text": "#1",
+     "size": 32,
+     "anchor": "middle",
+     "color": "blue"
+    },
+    {
+     "op": "rect",
+     "id": "t2",
+     "x": 290,
+     "y": 300,
+     "w": 100,
+     "h": 70,
+     "color": "blue",
+     "fill": "blue"
+    },
+    {
+     "op": "write",
+     "id": "t2_txt",
+     "x": 340,
+     "y": 318,
+     "text": "#2",
+     "size": 32,
+     "anchor": "middle",
+     "color": "blue"
+    },
+    {
+     "op": "rect",
+     "id": "t3",
+     "x": 420,
+     "y": 300,
+     "w": 100,
+     "h": 70,
+     "color": "blue",
+     "fill": "blue"
+    },
+    {
+     "op": "write",
+     "id": "t3_txt",
+     "x": 470,
+     "y": 318,
+     "text": "#3",
+     "size": 32,
+     "anchor": "middle",
+     "color": "blue"
+    }
+   ]
+  },
+  {
+   "title": "Before: 3 buyers",
+   "say": "At first, only 3 fans show up. Everyone gets a ticket without competing, so the price stays at $50.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "sc1_title",
+     "x": 160,
+     "y": 430,
+     "text": "Scenario A: 3 buyers arrive",
+     "size": 36
+    },
+    {
+     "op": "ellipse",
+     "id": "b1",
+     "cx": 210,
+     "cy": 520,
+     "rx": 30,
+     "ry": 30,
+     "color": "ink"
+    },
+    {
+     "op": "ellipse",
+     "id": "b2",
+     "cx": 340,
+     "cy": 520,
+     "rx": 30,
+     "ry": 30,
+     "color": "ink"
+    },
+    {
+     "op": "ellipse",
+     "id": "b3",
+     "cx": 470,
+     "cy": 520,
+     "rx": 30,
+     "ry": 30,
+     "color": "ink"
+    },
+    {
+     "op": "write",
+     "id": "p_low",
+     "x": 160,
+     "y": 580,
+     "text": "No competition → Price stays at $50",
+     "size": 32,
+     "color": "green"
+    }
+   ]
+  },
+  {
+   "title": "Demand rises: more buyers arrive",
+   "say": "Now demand rises: the band goes viral, and 7 buyers show up wanting those same 3 tickets!",
+   "ops": [
+    {
+     "op": "line",
+     "id": "div",
+     "x1": 780,
+     "y1": 200,
+     "x2": 780,
+     "y2": 780,
+     "color": "gray",
+     "dash": true,
+     "width": 3
+    },
+    {
+     "op": "write",
+     "id": "sc2_title",
+     "x": 840,
+     "y": 220,
+     "text": "Scenario B: Demand rises! (7 buyers)",
+     "size": 36,
+     "color": "red"
+    },
+    {
+     "op": "ellipse",
+     "id": "nb1",
+     "cx": 890,
+     "cy": 320,
+     "rx": 25,
+     "ry": 25,
+     "color": "red"
+    },
+    {
+     "op": "ellipse",
+     "id": "nb2",
+     "cx": 970,
+     "cy": 320,
+     "rx": 25,
+     "ry": 25,
+     "color": "red"
+    },
+    {
+     "op": "ellipse",
+     "id": "nb3",
+     "cx": 1050,
+     "cy": 320,
+     "rx": 25,
+     "ry": 25,
+     "color": "red"
+    },
+    {
+     "op": "ellipse",
+     "id": "nb4",
+     "cx": 1130,
+     "cy": 320,
+     "rx": 25,
+     "ry": 25,
+     "color": "red"
+    },
+    {
+     "op": "ellipse",
+     "id": "nb5",
+     "cx": 1210,
+     "cy": 320,
+     "rx": 25,
+     "ry": 25,
+     "color": "red"
+    },
+    {
+     "op": "ellipse",
+     "id": "nb6",
+     "cx": 930,
+     "cy": 400,
+     "rx": 25,
+     "ry": 25,
+     "color": "red"
+    },
+    {
+     "op": "ellipse",
+     "id": "nb7",
+     "cx": 1010,
+     "cy": 400,
+     "rx": 25,
+     "ry": 25,
+     "color": "red"
+    }
+   ]
+  },
+  {
+   "title": "Bidding war drives price up",
+   "say": "Because there aren't enough tickets, buyers outbid each other. That competition is what pushes the price up.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "bidding",
+     "x": 840,
+     "y": 490,
+     "text": "\"I'll pay $70!\"\n\"I'll pay $100!\"\n\"I'll pay $150!\"",
+     "size": 32,
+     "color": "ink"
+    },
+    {
+     "op": "line",
+     "id": "p_arrow",
+     "x1": 1250,
+     "y1": 650,
+     "x2": 1250,
+     "y2": 520,
+     "color": "red",
+     "width": 6,
+     "arrow": true
+    },
+    {
+     "op": "write",
+     "id": "p_high",
+     "x": 1250,
+     "y": 670,
+     "text": "Price rises to $150!",
+     "size": 34,
+     "color": "red",
+     "anchor": "middle"
+    },
+    {
+     "op": "write",
+     "id": "summary",
+     "x": 840,
+     "y": 730,
+     "text": "More buyers chasing same goods = higher price",
+     "size": 30,
+     "underline": true
+    }
+   ]
+  }
+ ]
+}

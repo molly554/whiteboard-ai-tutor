@@ -1,0 +1,157 @@
+{
+ "title": "Solve x² − 5x + 6 = 0",
+ "lang": "en",
+ "steps": [
+  {
+   "title": "Write equation",
+   "say": "We start with the given quadratic equation.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "main-title",
+     "x": 80,
+     "y": 60,
+     "text": "Solve x² − 5x + 6 = 0",
+     "size": 52
+    },
+    {
+     "op": "write",
+     "id": "eq",
+     "x": 80,
+     "y": 170,
+     "text": "x² − 5x + 6 = 0",
+     "size": 46
+    }
+   ]
+  },
+  {
+   "title": "Quadratic formula",
+   "say": "Let's plug into the quadratic formula first.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "qf-formula",
+     "x": 80,
+     "y": 280,
+     "text": "x = (−b ± √(b² − 4ac)) / (2a)",
+     "size": 40
+    },
+    {
+     "op": "write",
+     "id": "qf-params",
+     "x": 80,
+     "y": 370,
+     "text": "a = 1,  b = −5,  c = 6",
+     "size": 36
+    },
+    {
+     "op": "write",
+     "id": "qf-subst",
+     "x": 80,
+     "y": 440,
+     "text": "x = (5 ± √(25 − 24)) / 2",
+     "size": 38
+    }
+   ]
+  },
+  {
+   "title": "Simplify",
+   "say": "The discriminant is 1, so this is easy.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "qf-simp",
+     "x": 80,
+     "y": 510,
+     "text": "x = (5 ± √1) / 2",
+     "size": 38
+    },
+    {
+     "op": "write",
+     "id": "qf-further",
+     "x": 80,
+     "y": 570,
+     "text": "x = (5 ± 1) / 2",
+     "size": 38
+    }
+   ]
+  },
+  {
+   "title": "Switch to factoring",
+   "say": "But factoring is even simpler here. Let's switch.",
+   "ops": [
+    {
+     "op": "erase",
+     "ids": [
+      "qf-formula",
+      "qf-params",
+      "qf-subst",
+      "qf-simp",
+      "qf-further"
+     ]
+    },
+    {
+     "op": "write",
+     "id": "factor-hint",
+     "x": 80,
+     "y": 280,
+     "text": "Find two numbers with product 6 and sum −5.",
+     "size": 36,
+     "color": "blue"
+    },
+    {
+     "op": "write",
+     "id": "factor-eq",
+     "x": 80,
+     "y": 360,
+     "text": "(x − 2)(x − 3) = 0",
+     "size": 46
+    }
+   ]
+  },
+  {
+   "title": "Solve factors",
+   "say": "Set each factor equal to zero and solve.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "sol1",
+     "x": 80,
+     "y": 450,
+     "text": "x − 2 = 0  ⇒  x = 2",
+     "size": 40
+    },
+    {
+     "op": "write",
+     "id": "sol2",
+     "x": 80,
+     "y": 520,
+     "text": "x − 3 = 0  ⇒  x = 3",
+     "size": 40
+    }
+   ]
+  },
+  {
+   "title": "Verify",
+   "say": "Check both solutions in the original equation.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "verify1",
+     "x": 80,
+     "y": 610,
+     "text": "x = 2:  4 − 10 + 6 = 0 ✓",
+     "size": 36
+    },
+    {
+     "op": "write",
+     "id": "verify2",
+     "x": 80,
+     "y": 670,
+     "text": "x = 3:  9 − 15 + 6 = 0 ✓",
+     "size": 36
+    }
+   ]
+  }
+ ]
+}

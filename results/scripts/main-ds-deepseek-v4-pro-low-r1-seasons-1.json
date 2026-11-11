@@ -1,0 +1,346 @@
+{
+ "title": "Why Do We Have Seasons?",
+ "lang": "en",
+ "steps": [
+  {
+   "title": "The Sun and Earth",
+   "say": "Seasons are caused by the tilt of Earth's axis, not by how close Earth is to the Sun.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "title",
+     "x": 80,
+     "y": 60,
+     "text": "Why Do We Have Seasons?",
+     "size": 52
+    },
+    {
+     "op": "write",
+     "id": "intro",
+     "x": 80,
+     "y": 150,
+     "text": "Seasons come from Earth's tilt,\nnot from distance to the Sun.",
+     "size": 38
+    }
+   ]
+  },
+  {
+   "title": "Earth's Tilt",
+   "say": "Earth is tilted about 23.5 degrees from vertical.",
+   "ops": [
+    {
+     "op": "line",
+     "id": "vertical-axis",
+     "x1": 400,
+     "y1": 180,
+     "x2": 400,
+     "y2": 520,
+     "color": "gray",
+     "width": 4,
+     "dash": "6,6"
+    },
+    {
+     "op": "line",
+     "id": "tilted-axis",
+     "x1": 400,
+     "y1": 180,
+     "x2": 470,
+     "y2": 520,
+     "color": "blue",
+     "width": 5
+    },
+    {
+     "op": "write",
+     "id": "tilt-label",
+     "x": 490,
+     "y": 330,
+     "text": "23.5°",
+     "size": 32,
+     "color": "blue"
+    },
+    {
+     "op": "ellipse",
+     "id": "earth",
+     "cx": 435,
+     "cy": 350,
+     "rx": 70,
+     "ry": 70,
+     "rotate": 23.5,
+     "color": "blue",
+     "width": 4,
+     "fill": "blue"
+    }
+   ]
+  },
+  {
+   "title": "Orbit Around the Sun",
+   "say": "As Earth orbits the Sun, the tilt always points in the same direction.",
+   "ops": [
+    {
+     "op": "ellipse",
+     "id": "sun",
+     "cx": 1150,
+     "cy": 450,
+     "rx": 60,
+     "ry": 60,
+     "color": "red",
+     "width": 4,
+     "fill": "red"
+    },
+    {
+     "op": "write",
+     "id": "sun-label",
+     "x": 1120,
+     "y": 540,
+     "text": "Sun",
+     "size": 36,
+     "color": "red",
+     "anchor": "middle"
+    },
+    {
+     "op": "ellipse",
+     "id": "orbit",
+     "cx": 800,
+     "cy": 450,
+     "rx": 360,
+     "ry": 160,
+     "color": "gray",
+     "width": 3,
+     "dash": "6,6"
+    },
+    {
+     "op": "write",
+     "id": "orbit-note",
+     "x": 80,
+     "y": 650,
+     "text": "Earth's tilt direction stays fixed\nwhile it orbits the Sun.",
+     "size": 34
+    }
+   ]
+  },
+  {
+   "title": "Summer in the North",
+   "say": "When the Northern Hemisphere tilts toward the Sun, it gets more direct sunlight and longer days: summer.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "summer-title",
+     "x": 80,
+     "y": 150,
+     "text": "Northern Hemisphere tilts toward Sun",
+     "size": 36,
+     "color": "blue"
+    },
+    {
+     "op": "ellipse",
+     "id": "earth-summer",
+     "cx": 470,
+     "cy": 450,
+     "rx": 55,
+     "ry": 55,
+     "rotate": 23.5,
+     "color": "blue",
+     "width": 4,
+     "fill": "blue"
+    },
+    {
+     "op": "line",
+     "id": "tilt-summer",
+     "x1": 470,
+     "y1": 390,
+     "x2": 500,
+     "y2": 510,
+     "color": "blue",
+     "width": 3
+    },
+    {
+     "op": "write",
+     "id": "north-summer",
+     "x": 400,
+     "y": 370,
+     "text": "N",
+     "size": 30,
+     "color": "blue"
+    },
+    {
+     "op": "line",
+     "id": "sunlight-summer",
+     "x1": 1080,
+     "y1": 450,
+     "x2": 530,
+     "y2": 450,
+     "color": "red",
+     "width": 4,
+     "arrow": true
+    },
+    {
+     "op": "write",
+     "id": "summer-label",
+     "x": 620,
+     "y": 300,
+     "text": "More direct sunlight",
+     "size": 32,
+     "color": "red"
+    }
+   ]
+  },
+  {
+   "title": "Winter in the North",
+   "say": "When the Northern Hemisphere tilts away from the Sun, sunlight is weaker and days are shorter: winter.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "winter-title",
+     "x": 80,
+     "y": 150,
+     "text": "Northern Hemisphere tilts away from Sun",
+     "size": 36,
+     "color": "blue"
+    },
+    {
+     "op": "ellipse",
+     "id": "earth-winter",
+     "cx": 1130,
+     "cy": 450,
+     "rx": 55,
+     "ry": 55,
+     "rotate": 23.5,
+     "color": "blue",
+     "width": 4,
+     "fill": "blue"
+    },
+    {
+     "op": "line",
+     "id": "tilt-winter",
+     "x1": 1130,
+     "y1": 390,
+     "x2": 1100,
+     "y2": 510,
+     "color": "blue",
+     "width": 3
+    },
+    {
+     "op": "write",
+     "id": "north-winter",
+     "x": 1190,
+     "y": 370,
+     "text": "N",
+     "size": 30,
+     "color": "blue"
+    },
+    {
+     "op": "line",
+     "id": "sunlight-winter",
+     "x1": 1080,
+     "y1": 450,
+     "x2": 530,
+     "y2": 450,
+     "color": "red",
+     "width": 4,
+     "arrow": true
+    },
+    {
+     "op": "write",
+     "id": "winter-label",
+     "x": 900,
+     "y": 300,
+     "text": "Less direct sunlight",
+     "size": 32,
+     "color": "red"
+    }
+   ]
+  },
+  {
+   "title": "Spring and Autumn",
+   "say": "In spring and autumn, neither hemisphere tilts strongly toward or away from the Sun.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "equinox-title",
+     "x": 80,
+     "y": 150,
+     "text": "In-between positions",
+     "size": 36,
+     "color": "blue"
+    },
+    {
+     "op": "ellipse",
+     "id": "earth-spring",
+     "cx": 800,
+     "cy": 290,
+     "rx": 55,
+     "ry": 55,
+     "rotate": 23.5,
+     "color": "blue",
+     "width": 4,
+     "fill": "blue"
+    },
+    {
+     "op": "ellipse",
+     "id": "earth-autumn",
+     "cx": 800,
+     "cy": 610,
+     "rx": 55,
+     "ry": 55,
+     "rotate": 23.5,
+     "color": "blue",
+     "width": 4,
+     "fill": "blue"
+    },
+    {
+     "op": "write",
+     "id": "spring-label",
+     "x": 880,
+     "y": 260,
+     "text": "Spring",
+     "size": 32,
+     "color": "green"
+    },
+    {
+     "op": "write",
+     "id": "autumn-label",
+     "x": 880,
+     "y": 580,
+     "text": "Autumn",
+     "size": 32,
+     "color": "green"
+    }
+   ]
+  },
+  {
+   "title": "Summary",
+   "say": "So the seasons change because Earth's tilted axis changes how directly sunlight hits each hemisphere during the year.",
+   "ops": [
+    {
+     "op": "rect",
+     "id": "summary-box",
+     "x": 80,
+     "y": 700,
+     "w": 1440,
+     "h": 140,
+     "color": "green",
+     "width": 4,
+     "fill": "green"
+    },
+    {
+     "op": "write",
+     "id": "summary-text",
+     "x": 120,
+     "y": 730,
+     "text": "Tilt + Orbit = Seasons",
+     "size": 44,
+     "color": "ink"
+    },
+    {
+     "op": "write",
+     "id": "summary-detail",
+     "x": 120,
+     "y": 790,
+     "text": "The same tilt gives summer, winter, spring, and autumn.",
+     "size": 32,
+     "color": "ink"
+    }
+   ]
+  }
+ ]
+}

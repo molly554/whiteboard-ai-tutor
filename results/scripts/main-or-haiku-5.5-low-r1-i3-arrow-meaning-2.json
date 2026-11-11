@@ -1,0 +1,56 @@
+{
+ "mode": "continue",
+ "steps": [
+  {
+   "title": "What the arrow means",
+   "say": "The green arrow shows the shift: the whole demand curve moves right, from D1 to D2. At each price, buyers now want more.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "shiftnote",
+     "x": 200,
+     "y": 790,
+     "text": "Green arrow = demand shifts right (D1 → D2)",
+     "size": 32,
+     "color": "green"
+    }
+   ]
+  },
+  {
+   "title": "Result at the old price",
+   "say": "At the old price P1, demand is now higher than supply, so there is a shortage. Buyers compete for the goods.",
+   "ops": [
+    {
+     "op": "line",
+     "id": "newdemandpt",
+     "x1": 580,
+     "y1": 470,
+     "x2": 760,
+     "y2": 470,
+     "color": "gray",
+     "width": 3,
+     "dash": true
+    },
+    {
+     "op": "ellipse",
+     "id": "e2",
+     "cx": 760,
+     "cy": 470,
+     "rx": 9,
+     "ry": 9,
+     "color": "red",
+     "fill": "red"
+    },
+    {
+     "op": "write",
+     "id": "shortage",
+     "x": 1200,
+     "y": 790,
+     "text": "Shortage at P1",
+     "size": 30,
+     "color": "red"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,147 @@
+{
+ "title": "Solving x² − 5x + 6 = 0",
+ "lang": "en",
+ "steps": [
+  {
+   "title": "Start with the quadratic formula",
+   "say": "The equation has the form ax² + bx + c = 0, with a = 1, b = −5, c = 6. The quadratic formula gives the roots directly.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "title",
+     "x": 800,
+     "y": 90,
+     "text": "Solve x² − 5x + 6 = 0",
+     "size": 56,
+     "anchor": "middle",
+     "underline": true
+    },
+    {
+     "op": "write",
+     "id": "m1",
+     "x": 120,
+     "y": 200,
+     "text": "Method 1: quadratic formula",
+     "size": 40,
+     "color": "blue"
+    },
+    {
+     "op": "write",
+     "id": "f",
+     "x": 120,
+     "y": 270,
+     "text": "x = (5 ± √Δ) / 2",
+     "size": 40
+    },
+    {
+     "op": "write",
+     "id": "abc",
+     "x": 120,
+     "y": 360,
+     "text": "a = 1,   b = −5,   c = 6",
+     "size": 36,
+     "color": "gray"
+    }
+   ]
+  },
+  {
+   "title": "Compute the discriminant",
+   "say": "The discriminant Δ = b² − 4ac = 25 − 24 = 1 is positive, so there are two real roots.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "disc",
+     "x": 120,
+     "y": 460,
+     "text": "Δ = b² − 4ac = 25 − 24 = 1",
+     "size": 40
+    }
+   ]
+  },
+  {
+   "title": "Switch to factoring",
+   "say": "The formula works, but factoring is quicker here. I'll clear the board and try that instead.",
+   "ops": [
+    {
+     "op": "erase",
+     "ids": [
+      "m1",
+      "f",
+      "abc",
+      "disc"
+     ]
+    },
+    {
+     "op": "write",
+     "id": "switch",
+     "x": 120,
+     "y": 200,
+     "text": "Simpler method: factoring",
+     "size": 40,
+     "color": "blue"
+    }
+   ]
+  },
+  {
+   "title": "Find the two factors",
+   "say": "We need two numbers whose product is 6 and whose sum is −5. Those are −2 and −3, so the expression factors as (x − 2)(x − 3).",
+   "ops": [
+    {
+     "op": "write",
+     "id": "need",
+     "x": 120,
+     "y": 290,
+     "text": "Need two numbers: product 6, sum −5",
+     "size": 36
+    },
+    {
+     "op": "write",
+     "id": "fac",
+     "x": 120,
+     "y": 380,
+     "text": "(x − 2)(x − 3) = 0",
+     "size": 44
+    }
+   ]
+  },
+  {
+   "title": "Use the zero product rule",
+   "say": "If a product equals zero, at least one factor must be zero. So each factor set to zero gives a solution.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "zp",
+     "x": 120,
+     "y": 480,
+     "text": "Either  x − 2 = 0   or   x − 3 = 0",
+     "size": 40
+    }
+   ]
+  },
+  {
+   "title": "Read off the solutions",
+   "say": "Solving each factor gives x = 2 or x = 3. Both agree with the formula result.",
+   "ops": [
+    {
+     "op": "rect",
+     "id": "box",
+     "x": 110,
+     "y": 580,
+     "w": 620,
+     "h": 110,
+     "color": "green",
+     "width": 4
+    },
+    {
+     "op": "write",
+     "id": "ans",
+     "x": 130,
+     "y": 600,
+     "text": "x = 2  or  x = 3",
+     "size": 52,
+     "color": "green"
+    }
+   ]
+  }
+ ]
+}

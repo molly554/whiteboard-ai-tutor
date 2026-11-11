@@ -1,0 +1,161 @@
+{
+ "title": "Solving x² − 5x + 6 = 0",
+ "lang": "en",
+ "steps": [
+  {
+   "title": "The equation",
+   "say": "We need to solve the quadratic equation x squared minus five x plus six equals zero.",
+   "ops": [
+    {
+     "id": "eq",
+     "x": 800,
+     "y": 120,
+     "text": "x² − 5x + 6 = 0",
+     "size": 56,
+     "anchor": "middle"
+    }
+   ]
+  },
+  {
+   "title": "Try factoring",
+   "say": "First, let's try factoring. We look for two numbers that multiply to 6 and add to −5.",
+   "ops": [
+    {
+     "id": "fac1",
+     "x": 400,
+     "y": 260,
+     "text": "Factor: find m, n such that",
+     "size": 36
+    },
+    {
+     "id": "fac2",
+     "x": 400,
+     "y": 320,
+     "text": "m · n = 6   and   m + n = −5",
+     "size": 36
+    },
+    {
+     "id": "fac3",
+     "x": 400,
+     "y": 400,
+     "text": "Try: −2 and −3?",
+     "size": 36,
+     "color": "blue"
+    }
+   ]
+  },
+  {
+   "title": "Check the factors",
+   "say": "(−2)(−3) = 6 and (−2) + (−3) = −5. It works! So we can factor as (x − 2)(x − 3) = 0.",
+   "ops": [
+    {
+     "id": "chk",
+     "x": 400,
+     "y": 480,
+     "text": "(−2)(−3) = 6  ✓\n(−2) + (−3) = −5  ✓",
+     "size": 36,
+     "color": "green"
+    },
+    {
+     "id": "facform",
+     "x": 400,
+     "y": 580,
+     "text": "(x − 2)(x − 3) = 0",
+     "size": 44,
+     "color": "blue"
+    }
+   ]
+  },
+  {
+   "title": "Switch to quadratic formula",
+   "say": "But let's switch to a simpler, more general method midway: the quadratic formula. It always works.",
+   "ops": [
+    {
+     "id": "switch",
+     "x": 400,
+     "y": 680,
+     "text": "Switch to quadratic formula:",
+     "size": 36,
+     "color": "red"
+    },
+    {
+     "id": "formula",
+     "x": 400,
+     "y": 740,
+     "text": "x = [ −b ± √(b² − 4ac) ] / (2a)",
+     "size": 40
+    }
+   ]
+  },
+  {
+   "title": "Identify coefficients",
+   "say": "Here a = 1, b = −5, and c = 6. Substitute these into the formula.",
+   "ops": [
+    {
+     "id": "coef",
+     "x": 400,
+     "y": 820,
+     "text": "a = 1,  b = −5,  c = 6",
+     "size": 40
+    },
+    {
+     "id": "sub",
+     "x": 400,
+     "y": 880,
+     "text": "x = [ 5 ± √(25 − 24) ] / 2",
+     "size": 40,
+     "color": "blue"
+    }
+   ]
+  },
+  {
+   "title": "Simplify",
+   "say": "The discriminant is 25 − 24 = 1, so the square root is 1. Thus x = (5 ± 1) / 2.",
+   "ops": [
+    {
+     "id": "disc",
+     "x": 400,
+     "y": 940,
+     "text": "Discriminant: 25 − 24 = 1",
+     "size": 36
+    },
+    {
+     "id": "simp",
+     "x": 400,
+     "y": 1000,
+     "text": "x = (5 ± 1) / 2",
+     "size": 44,
+     "color": "blue"
+    }
+   ]
+  },
+  {
+   "title": "Two solutions",
+   "say": "This gives two solutions: x = (5 + 1)/2 = 3 and x = (5 − 1)/2 = 2.",
+   "ops": [
+    {
+     "id": "sol1",
+     "x": 400,
+     "y": 1080,
+     "text": "x = (5 + 1)/2 = 3",
+     "size": 40
+    },
+    {
+     "id": "sol2",
+     "x": 400,
+     "y": 1140,
+     "text": "x = (5 − 1)/2 = 2",
+     "size": 40
+    },
+    {
+     "id": "final",
+     "x": 400,
+     "y": 1220,
+     "text": "Solutions: x = 2 or x = 3",
+     "size": 48,
+     "color": "green"
+    }
+   ]
+  }
+ ]
+}

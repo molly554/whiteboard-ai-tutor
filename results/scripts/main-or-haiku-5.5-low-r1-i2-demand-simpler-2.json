@@ -1,0 +1,106 @@
+{
+ "title": "Demand rising, seen at one price",
+ "lang": "en",
+ "steps": [
+  {
+   "title": "Start with one price",
+   "say": "Forget the shifting curve for a moment. Pick one price, P1, and look only at that horizontal line.",
+   "ops": [
+    {
+     "op": "erase",
+     "ids": [
+      "shift",
+      "shiftlab"
+     ]
+    },
+    {
+     "op": "line",
+     "id": "pline",
+     "x1": 200,
+     "y1": 470,
+     "x2": 740,
+     "y2": 470,
+     "color": "gray",
+     "width": 3,
+     "dash": true
+    }
+   ]
+  },
+  {
+   "title": "Sales before",
+   "say": "At price P1, buyers want Q1 units. That is the point E on the old demand curve D1.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "before",
+     "x": 470,
+     "y": 520,
+     "text": "before: Q1",
+     "size": 30,
+     "color": "red"
+    }
+   ]
+  },
+  {
+   "title": "More buyers",
+   "say": "Demand rises, so at the same price P1 more buyers want the product. The quantity sold moves right, from Q1 to Q2.",
+   "ops": [
+    {
+     "op": "line",
+     "id": "more",
+     "x1": 600,
+     "y1": 470,
+     "x2": 716,
+     "y2": 470,
+     "color": "green",
+     "width": 6,
+     "arrow": true
+    },
+    {
+     "op": "ellipse",
+     "id": "q2dot",
+     "cx": 740,
+     "cy": 470,
+     "rx": 9,
+     "ry": 9,
+     "color": "green",
+     "fill": "green"
+    },
+    {
+     "op": "write",
+     "id": "q2lab",
+     "x": 740,
+     "y": 495,
+     "text": "Q2",
+     "size": 32,
+     "anchor": "middle",
+     "color": "green"
+    },
+    {
+     "op": "write",
+     "id": "more_note",
+     "x": 790,
+     "y": 400,
+     "text": "more buyers,\nsame price",
+     "size": 28,
+     "color": "green"
+    }
+   ]
+  },
+  {
+   "title": "Price follows",
+   "say": "Sellers now have more buyers than they can serve at P1, so the price is pushed up until the market settles at a higher price.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "takeaway",
+     "x": 1200,
+     "y": 610,
+     "text": "Shortage at P1\n→ price rises",
+     "size": 30,
+     "color": "green"
+    }
+   ]
+  }
+ ]
+}

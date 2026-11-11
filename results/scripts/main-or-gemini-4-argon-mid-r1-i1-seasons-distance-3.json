@@ -1,0 +1,189 @@
+{
+ "title": "Distance vs. Sunlight Angle",
+ "lang": "en",
+ "steps": [
+  {
+   "title": "The Orbit is Almost a Circle",
+   "say": "Great question! Earth is slightly farther in July, from 147 to 152 million km, which is only a 3% difference—too small to drive the seasons.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "dist_note",
+     "x": 60,
+     "y": 240,
+     "text": "Distance changes by only ~3% (nearly a circle!).\nAngle of sunlight matters much more.",
+     "size": 36,
+     "color": "ink"
+    },
+    {
+     "op": "write",
+     "id": "july_lbl",
+     "x": 280,
+     "y": 465,
+     "text": "July (N. Summer)\n152 million km",
+     "size": 28,
+     "color": "red",
+     "anchor": "middle"
+    },
+    {
+     "op": "write",
+     "id": "jan_lbl",
+     "x": 1320,
+     "y": 465,
+     "text": "Jan (N. Winter)\n147 million km",
+     "size": 28,
+     "color": "blue",
+     "anchor": "middle"
+    },
+    {
+     "op": "line",
+     "id": "ray_july",
+     "x1": 740,
+     "y1": 590,
+     "x2": 325,
+     "y2": 590,
+     "color": "red",
+     "width": 4,
+     "arrow": true,
+     "dash": true
+    },
+    {
+     "op": "line",
+     "id": "ray_jan",
+     "x1": 860,
+     "y1": 590,
+     "x2": 1275,
+     "y2": 590,
+     "color": "blue",
+     "width": 4,
+     "arrow": true,
+     "dash": true
+    }
+   ]
+  },
+  {
+   "title": "Why Tilt Beats Distance",
+   "say": "In July, the North Pole tilts toward the Sun. That makes sunlight hit the northern hemisphere much more directly, concentrating the heat.",
+   "ops": [
+    {
+     "op": "rect",
+     "id": "zoom_box",
+     "x": 760,
+     "y": 45,
+     "w": 780,
+     "h": 285,
+     "color": "gray",
+     "width": 3
+    },
+    {
+     "op": "write",
+     "id": "zoom_title",
+     "x": 785,
+     "y": 60,
+     "text": "Same beam of sunlight on the ground:",
+     "size": 32,
+     "color": "ink"
+    },
+    {
+     "op": "line",
+     "id": "gnd1",
+     "x1": 790,
+     "y1": 230,
+     "x2": 1090,
+     "y2": 230,
+     "color": "ink",
+     "width": 5
+    },
+    {
+     "op": "line",
+     "id": "sr1",
+     "x1": 900,
+     "y1": 115,
+     "x2": 900,
+     "y2": 220,
+     "color": "red",
+     "width": 5,
+     "arrow": true
+    },
+    {
+     "op": "line",
+     "id": "sr2",
+     "x1": 980,
+     "y1": 115,
+     "x2": 980,
+     "y2": 220,
+     "color": "red",
+     "width": 5,
+     "arrow": true
+    },
+    {
+     "op": "write",
+     "id": "slbl1",
+     "x": 940,
+     "y": 245,
+     "text": "Summer: High angle\nFocused = HOT",
+     "size": 28,
+     "color": "red",
+     "anchor": "middle"
+    },
+    {
+     "op": "line",
+     "id": "gnd2",
+     "x1": 1160,
+     "y1": 230,
+     "x2": 1510,
+     "y2": 230,
+     "color": "ink",
+     "width": 5
+    },
+    {
+     "op": "line",
+     "id": "wr1",
+     "x1": 1190,
+     "y1": 115,
+     "x2": 1300,
+     "y2": 220,
+     "color": "blue",
+     "width": 5,
+     "arrow": true
+    },
+    {
+     "op": "line",
+     "id": "wr2",
+     "x1": 1290,
+     "y1": 115,
+     "x2": 1400,
+     "y2": 220,
+     "color": "blue",
+     "width": 5,
+     "arrow": true
+    },
+    {
+     "op": "write",
+     "id": "slbl2",
+     "x": 1335,
+     "y": 245,
+     "text": "Winter: Low angle\nSpread out = COLD",
+     "size": 28,
+     "color": "blue",
+     "anchor": "middle"
+    }
+   ]
+  },
+  {
+   "title": "Bonus: Longer Days",
+   "say": "Tilting toward the Sun also gives us much longer days in summer, meaning more hours of heating every single day!",
+   "ops": [
+    {
+     "op": "write",
+     "id": "day_len",
+     "x": 60,
+     "y": 780,
+     "text": "Plus: Tilting toward the Sun = Longer daylight hours = More time to heat up!",
+     "size": 34,
+     "color": "green"
+    }
+   ]
+  }
+ ]
+}

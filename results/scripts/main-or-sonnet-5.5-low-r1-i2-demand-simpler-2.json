@@ -1,0 +1,182 @@
+{
+ "title": "Demand shift, simply",
+ "lang": "en",
+ "steps": [
+  {
+   "title": "Clear the board",
+   "say": "Let's clear the clutter and use a simpler picture with a single everyday example.",
+   "ops": [
+    {
+     "op": "erase",
+     "all": true
+    },
+    {
+     "op": "write",
+     "id": "t2",
+     "x": 60,
+     "y": 40,
+     "text": "Demand rises: a simple view",
+     "size": 54
+    }
+   ]
+  },
+  {
+   "title": "One shop",
+   "say": "Imagine a small shop selling ice cream, with only 10 cones in stock today.",
+   "ops": [
+    {
+     "op": "rect",
+     "id": "shop",
+     "x": 120,
+     "y": 220,
+     "w": 420,
+     "h": 260,
+     "color": "blue"
+    },
+    {
+     "op": "write",
+     "id": "shoplab",
+     "x": 330,
+     "y": 320,
+     "text": "Ice cream\nshop",
+     "size": 40,
+     "anchor": "middle",
+     "color": "blue"
+    },
+    {
+     "op": "write",
+     "id": "stock",
+     "x": 330,
+     "y": 520,
+     "text": "10 cones in stock",
+     "size": 34,
+     "anchor": "middle"
+    }
+   ]
+  },
+  {
+   "title": "Normal day",
+   "say": "On a normal day, 10 people want a cone, and the price is $2.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "n1",
+     "x": 700,
+     "y": 220,
+     "text": "Normal day",
+     "size": 40,
+     "color": "gray"
+    },
+    {
+     "op": "write",
+     "id": "n2",
+     "x": 700,
+     "y": 290,
+     "text": "10 buyers  →  $2",
+     "size": 44
+    }
+   ]
+  },
+  {
+   "title": "Hot day",
+   "say": "On a hot day, 20 people want a cone. That is what we mean by demand rising.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "h1",
+     "x": 700,
+     "y": 420,
+     "text": "Hot day",
+     "size": 40,
+     "color": "red"
+    },
+    {
+     "op": "write",
+     "id": "h2",
+     "x": 700,
+     "y": 490,
+     "text": "20 buyers  →  ?",
+     "size": 44,
+     "color": "red"
+    },
+    {
+     "op": "line",
+     "id": "ar1",
+     "x1": 560,
+     "y1": 350,
+     "x2": 660,
+     "y2": 350,
+     "arrow": true,
+     "color": "gray"
+    }
+   ]
+  },
+  {
+   "title": "Competition",
+   "say": "Twenty buyers are fighting for ten cones, so some will offer more money.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "c1",
+     "x": 700,
+     "y": 590,
+     "text": "20 buyers, only 10 cones",
+     "size": 38
+    },
+    {
+     "op": "write",
+     "id": "c2",
+     "x": 700,
+     "y": 650,
+     "text": "Some pay more to win one",
+     "size": 38
+    }
+   ]
+  },
+  {
+   "title": "Price rises",
+   "say": "The shop sees this and raises the price, for example to $3. More demand with the same supply pushes the price up.",
+   "ops": [
+    {
+     "op": "erase",
+     "ids": [
+      "n2"
+     ]
+    },
+    {
+     "op": "write",
+     "id": "n3",
+     "x": 700,
+     "y": 290,
+     "text": "10 buyers  →  $2",
+     "size": 44,
+     "color": "gray"
+    },
+    {
+     "op": "erase",
+     "ids": [
+      "h2"
+     ]
+    },
+    {
+     "op": "write",
+     "id": "h3",
+     "x": 700,
+     "y": 490,
+     "text": "20 buyers  →  $3",
+     "size": 44,
+     "color": "green"
+    },
+    {
+     "op": "write",
+     "id": "sum",
+     "x": 700,
+     "y": 760,
+     "text": "More demand → higher price",
+     "size": 44,
+     "color": "green"
+    }
+   ]
+  }
+ ]
+}

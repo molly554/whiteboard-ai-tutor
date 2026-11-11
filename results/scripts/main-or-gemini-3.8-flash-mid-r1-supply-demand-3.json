@@ -1,0 +1,341 @@
+{
+ "title": "Effect of Rising Demand on Price",
+ "lang": "en",
+ "steps": [
+  {
+   "title": "Set Up the Market Axes",
+   "say": "Let's begin by drawing the market axes, with price on the vertical axis and quantity on the horizontal axis.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "main_title",
+     "x": 80,
+     "y": 50,
+     "text": "What Happens to Price When Demand Rises?",
+     "size": 52
+    },
+    {
+     "op": "line",
+     "id": "axis_p",
+     "x1": 220,
+     "y1": 720,
+     "x2": 220,
+     "y2": 190,
+     "arrow": true,
+     "width": 5
+    },
+    {
+     "op": "write",
+     "id": "lbl_p",
+     "x": 130,
+     "y": 180,
+     "text": "Price (P)",
+     "size": 32
+    },
+    {
+     "op": "line",
+     "id": "axis_q",
+     "x1": 220,
+     "y1": 720,
+     "x2": 880,
+     "y2": 720,
+     "arrow": true,
+     "width": 5
+    },
+    {
+     "op": "write",
+     "id": "lbl_q",
+     "x": 890,
+     "y": 705,
+     "text": "Quantity (Q)",
+     "size": 32
+    }
+   ]
+  },
+  {
+   "title": "Initial Supply and Demand Curves",
+   "say": "The upward-sloping supply curve shows sellers offer more at higher prices, while the downward-sloping demand curve reflects buyers' willingness to pay.",
+   "ops": [
+    {
+     "op": "line",
+     "id": "curve_s",
+     "x1": 300,
+     "y1": 660,
+     "x2": 760,
+     "y2": 280,
+     "color": "gray",
+     "width": 5
+    },
+    {
+     "op": "write",
+     "id": "lbl_s",
+     "x": 775,
+     "y": 265,
+     "text": "Supply (S)",
+     "size": 34,
+     "color": "gray"
+    },
+    {
+     "op": "line",
+     "id": "curve_d1",
+     "x1": 300,
+     "y1": 320,
+     "x2": 700,
+     "y2": 680,
+     "color": "ink",
+     "width": 5
+    },
+    {
+     "op": "write",
+     "id": "lbl_d1",
+     "x": 715,
+     "y": 675,
+     "text": "Demand (D₁)",
+     "size": 34,
+     "color": "ink"
+    }
+   ]
+  },
+  {
+   "title": "Initial Equilibrium",
+   "say": "Where supply and demand intersect at E₁, the market determines the initial equilibrium price P₁ and quantity Q₁.",
+   "ops": [
+    {
+     "op": "ellipse",
+     "id": "dot_e1",
+     "cx": 500,
+     "cy": 500,
+     "rx": 7,
+     "ry": 7,
+     "fill": "ink"
+    },
+    {
+     "op": "write",
+     "id": "lbl_e1",
+     "x": 515,
+     "y": 480,
+     "text": "E₁",
+     "size": 30
+    },
+    {
+     "op": "line",
+     "id": "dash_p1",
+     "x1": 500,
+     "y1": 500,
+     "x2": 220,
+     "y2": 500,
+     "color": "gray",
+     "dash": true,
+     "width": 3
+    },
+    {
+     "op": "write",
+     "id": "lbl_p1",
+     "x": 165,
+     "y": 485,
+     "text": "P₁",
+     "size": 32
+    },
+    {
+     "op": "line",
+     "id": "dash_q1",
+     "x1": 500,
+     "y1": 500,
+     "x2": 500,
+     "y2": 720,
+     "color": "gray",
+     "dash": true,
+     "width": 3
+    },
+    {
+     "op": "write",
+     "id": "lbl_q1",
+     "x": 485,
+     "y": 735,
+     "text": "Q₁",
+     "size": 32
+    }
+   ]
+  },
+  {
+   "title": "Demand Increases and Shifts Right",
+   "say": "When demand rises, consumers want to purchase more at every price level, shifting the entire demand curve outward to D₂.",
+   "ops": [
+    {
+     "op": "line",
+     "id": "curve_d2",
+     "x1": 420,
+     "y1": 320,
+     "x2": 820,
+     "y2": 680,
+     "color": "blue",
+     "width": 5
+    },
+    {
+     "op": "write",
+     "id": "lbl_d2",
+     "x": 835,
+     "y": 675,
+     "text": "Demand (D₂)",
+     "size": 34,
+     "color": "blue"
+    },
+    {
+     "op": "line",
+     "id": "arrow_shift",
+     "x1": 540,
+     "y1": 420,
+     "x2": 630,
+     "y2": 420,
+     "color": "blue",
+     "arrow": true,
+     "width": 4
+    },
+    {
+     "op": "write",
+     "id": "txt_shift",
+     "x": 535,
+     "y": 380,
+     "text": "Demand Rises",
+     "size": 28,
+     "color": "blue"
+    }
+   ]
+  },
+  {
+   "title": "New Equilibrium Forms",
+   "say": "At the original price P₁, an immediate shortage occurs. Eager buyers compete and bid prices upward until reaching equilibrium E₂.",
+   "ops": [
+    {
+     "op": "ellipse",
+     "id": "dot_e2",
+     "cx": 560,
+     "cy": 445,
+     "rx": 7,
+     "ry": 7,
+     "fill": "blue",
+     "color": "blue"
+    },
+    {
+     "op": "write",
+     "id": "lbl_e2",
+     "x": 575,
+     "y": 425,
+     "text": "E₂",
+     "size": 30,
+     "color": "blue"
+    },
+    {
+     "op": "line",
+     "id": "dash_p2",
+     "x1": 560,
+     "y1": 445,
+     "x2": 220,
+     "y2": 445,
+     "color": "blue",
+     "dash": true,
+     "width": 3
+    },
+    {
+     "op": "write",
+     "id": "lbl_p2",
+     "x": 165,
+     "y": 430,
+     "text": "P₂",
+     "size": 32,
+     "color": "blue"
+    },
+    {
+     "op": "line",
+     "id": "dash_q2",
+     "x1": 560,
+     "y1": 445,
+     "x2": 560,
+     "y2": 720,
+     "color": "blue",
+     "dash": true,
+     "width": 3
+    },
+    {
+     "op": "write",
+     "id": "lbl_q2",
+     "x": 545,
+     "y": 735,
+     "text": "Q₂",
+     "size": 32,
+     "color": "blue"
+    },
+    {
+     "op": "line",
+     "id": "arrow_p_up",
+     "x1": 150,
+     "y1": 490,
+     "x2": 150,
+     "y2": 445,
+     "color": "red",
+     "arrow": true,
+     "width": 4
+    }
+   ]
+  },
+  {
+   "title": "Key Takeaways",
+   "say": "In conclusion, an increase in demand creates upward pressure on price, resulting in both a higher price and a greater quantity sold.",
+   "ops": [
+    {
+     "op": "rect",
+     "id": "panel_sum",
+     "x": 980,
+     "y": 210,
+     "w": 540,
+     "h": 440,
+     "color": "ink",
+     "width": 3,
+     "fill": "gray"
+    },
+    {
+     "op": "write",
+     "id": "txt_sum_title",
+     "x": 1020,
+     "y": 250,
+     "text": "Mechanism & Outcome",
+     "size": 38,
+     "underline": true
+    },
+    {
+     "op": "write",
+     "id": "txt_step1",
+     "x": 1020,
+     "y": 315,
+     "text": "1. Buyers demand more (D₁ → D₂)",
+     "size": 32
+    },
+    {
+     "op": "write",
+     "id": "txt_step2",
+     "x": 1020,
+     "y": 370,
+     "text": "2. Shortage at old price P₁",
+     "size": 32
+    },
+    {
+     "op": "write",
+     "id": "txt_step3",
+     "x": 1020,
+     "y": 425,
+     "text": "3. Competition bids price up",
+     "size": 32
+    },
+    {
+     "op": "write",
+     "id": "txt_final",
+     "x": 1020,
+     "y": 505,
+     "text": "Result:\n• Price RISES (P₁ → P₂)\n• Quantity RISES (Q₁ → Q₂)",
+     "size": 36,
+     "color": "red"
+    }
+   ]
+  }
+ ]
+}

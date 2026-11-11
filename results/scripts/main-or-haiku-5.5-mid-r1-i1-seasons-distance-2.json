@@ -1,0 +1,80 @@
+{
+ "title": "Why northern summer is hotter",
+ "lang": "en",
+ "steps": [
+  {
+   "title": "Distance is a small effect",
+   "say": "Earth is actually a bit farther from the Sun in northern summer, but only by about 3%. That difference is too small to cause the seasons.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "distance",
+     "x": 60,
+     "y": 240,
+     "text": "Distance changes only about 3% over the year,\nso it is not the main cause.",
+     "size": 34,
+     "color": "gray"
+    }
+   ]
+  },
+  {
+   "title": "Tilt decides the sunlight",
+   "say": "In northern summer the northern half leans toward the Sun. Sunlight hits it more directly and the days are longer, so it gets hotter.",
+   "ops": [
+    {
+     "op": "erase",
+     "ids": [
+      "earth1",
+      "axis1",
+      "earth3",
+      "axis3",
+      "earth4",
+      "axis4"
+     ]
+    },
+    {
+     "op": "line",
+     "id": "ray1",
+     "x1": 1080,
+     "y1": 560,
+     "x2": 1240,
+     "y2": 560,
+     "color": "red",
+     "width": 4,
+     "arrow": true
+    },
+    {
+     "op": "line",
+     "id": "ray2",
+     "x1": 1080,
+     "y1": 590,
+     "x2": 1240,
+     "y2": 590,
+     "color": "red",
+     "width": 4,
+     "arrow": true
+    },
+    {
+     "op": "line",
+     "id": "ray3",
+     "x1": 1080,
+     "y1": 620,
+     "x2": 1240,
+     "y2": 620,
+     "color": "red",
+     "width": 4,
+     "arrow": true
+    },
+    {
+     "op": "write",
+     "id": "summerlabel",
+     "x": 1040,
+     "y": 690,
+     "text": "Northern summer:\nthe north leans toward the Sun",
+     "size": 30,
+     "color": "red"
+    }
+   ]
+  }
+ ]
+}

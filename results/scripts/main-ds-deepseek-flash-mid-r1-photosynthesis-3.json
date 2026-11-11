@@ -1,0 +1,209 @@
+{
+ "title": "光合作用发生部位",
+ "lang": "zh",
+ "steps": [
+  {
+   "title": "提出问题",
+   "say": "先看问题：光合作用发生在细胞的哪个部分？",
+   "ops": [
+    {
+     "op": "write",
+     "id": "title",
+     "x": 80,
+     "y": 60,
+     "text": "光合作用发生在哪里？",
+     "size": 56,
+     "color": "ink"
+    }
+   ]
+  },
+  {
+   "title": "画出植物细胞",
+   "say": "先画一个植物细胞，光合作用就发生在这样的细胞里。",
+   "ops": [
+    {
+     "op": "rect",
+     "id": "cell",
+     "x": 120,
+     "y": 180,
+     "w": 620,
+     "h": 520,
+     "color": "green",
+     "width": 5,
+     "fill": "green"
+    },
+    {
+     "op": "write",
+     "id": "cell-label",
+     "x": 150,
+     "y": 205,
+     "text": "植物细胞",
+     "size": 36,
+     "color": "gray"
+    }
+   ]
+  },
+  {
+   "title": "找到叶绿体",
+   "say": "细胞里绿色的椭圆结构就是叶绿体，它是光合作用的场所。",
+   "ops": [
+    {
+     "op": "ellipse",
+     "id": "chloroplast",
+     "cx": 430,
+     "cy": 430,
+     "rx": 170,
+     "ry": 100,
+     "rotate": -15,
+     "color": "green",
+     "width": 6,
+     "fill": "green"
+    },
+    {
+     "op": "write",
+     "id": "chloroplast-label",
+     "x": 620,
+     "y": 390,
+     "text": "叶绿体",
+     "size": 36,
+     "color": "green"
+    },
+    {
+     "op": "line",
+     "id": "chloroplast-pointer",
+     "x1": 595,
+     "y1": 430,
+     "x2": 620,
+     "y2": 408,
+     "color": "gray",
+     "width": 3,
+     "arrow": true
+    }
+   ]
+  },
+  {
+   "title": "放大叶绿体",
+   "say": "把叶绿体放大，可以看到里面的类囊体和基质。",
+   "ops": [
+    {
+     "op": "ellipse",
+     "id": "zoom",
+     "cx": 1150,
+     "cy": 420,
+     "rx": 270,
+     "ry": 180,
+     "color": "green",
+     "width": 6,
+     "fill": "green"
+    },
+    {
+     "op": "write",
+     "id": "zoom-label",
+     "x": 980,
+     "y": 180,
+     "text": "叶绿体（放大）",
+     "size": 36,
+     "color": "green"
+    },
+    {
+     "op": "rect",
+     "id": "thylakoid-1",
+     "x": 980,
+     "y": 320,
+     "w": 140,
+     "h": 24,
+     "color": "green",
+     "width": 4
+    },
+    {
+     "op": "rect",
+     "id": "thylakoid-2",
+     "x": 1000,
+     "y": 360,
+     "w": 140,
+     "h": 24,
+     "color": "green",
+     "width": 4
+    },
+    {
+     "op": "rect",
+     "id": "thylakoid-3",
+     "x": 1020,
+     "y": 400,
+     "w": 140,
+     "h": 24,
+     "color": "green",
+     "width": 4
+    },
+    {
+     "op": "write",
+     "id": "thylakoid-label",
+     "x": 1180,
+     "y": 330,
+     "text": "类囊体",
+     "size": 32,
+     "color": "blue"
+    },
+    {
+     "op": "line",
+     "id": "thylakoid-pointer",
+     "x1": 1160,
+     "y1": 332,
+     "x2": 1180,
+     "y2": 340,
+     "color": "gray",
+     "width": 3,
+     "arrow": true
+    },
+    {
+     "op": "write",
+     "id": "stroma-label",
+     "x": 1040,
+     "y": 500,
+     "text": "基质",
+     "size": 32,
+     "color": "blue"
+    }
+   ]
+  },
+  {
+   "title": "标出反应位置",
+   "say": "在叶绿体里，光反应在类囊体薄膜上进行，暗反应在基质中进行。",
+   "ops": [
+    {
+     "op": "write",
+     "id": "light-reaction",
+     "x": 880,
+     "y": 640,
+     "text": "光反应：类囊体薄膜",
+     "size": 34,
+     "color": "blue"
+    },
+    {
+     "op": "write",
+     "id": "dark-reaction",
+     "x": 880,
+     "y": 700,
+     "text": "暗反应：叶绿体基质",
+     "size": 34,
+     "color": "blue"
+    }
+   ]
+  },
+  {
+   "title": "给出答案",
+   "say": "所以，光合作用发生在植物细胞的叶绿体中。",
+   "ops": [
+    {
+     "op": "write",
+     "id": "answer",
+     "x": 80,
+     "y": 760,
+     "text": "答案：植物细胞的叶绿体",
+     "size": 44,
+     "color": "red"
+    }
+   ]
+  }
+ ]
+}

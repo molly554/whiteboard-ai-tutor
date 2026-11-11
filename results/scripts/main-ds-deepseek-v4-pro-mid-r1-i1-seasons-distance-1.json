@@ -1,0 +1,74 @@
+{
+ "title": "Why do we have seasons?",
+ "lang": "en",
+ "steps": [
+  {
+   "title": "Distance check",
+   "say": "Yes — in early July, Earth is at its farthest point from the Sun, yet the Northern Hemisphere is tilted toward the Sun, so sunlight is more concentrated and days are longer.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "confirm",
+     "x": 60,
+     "y": 250,
+     "text": "Yes! In early July Earth is farthest\nfrom the Sun, but distance is not\nthe main cause.",
+     "size": 36
+    }
+   ]
+  },
+  {
+   "title": "Direct vs slanted sunlight",
+   "say": "Compare the same beam of sunlight: when it hits straight on, the energy is packed into a smaller spot; when it hits at a slant, the same energy spreads out.",
+   "ops": [
+    {
+     "op": "line",
+     "id": "groundline",
+     "x1": 60,
+     "y1": 520,
+     "x2": 260,
+     "y2": 520,
+     "width": 4,
+     "color": "ink"
+    },
+    {
+     "op": "line",
+     "id": "direct_arrow",
+     "x1": 150,
+     "y1": 430,
+     "x2": 150,
+     "y2": 510,
+     "arrow": true,
+     "width": 5,
+     "color": "red"
+    },
+    {
+     "op": "line",
+     "id": "slant_arrow",
+     "x1": 90,
+     "y1": 430,
+     "x2": 180,
+     "y2": 510,
+     "arrow": true,
+     "width": 5,
+     "color": "blue"
+    },
+    {
+     "op": "write",
+     "id": "direct_label",
+     "x": 160,
+     "y": 450,
+     "text": "direct",
+     "size": 28
+    },
+    {
+     "op": "write",
+     "id": "slant_label",
+     "x": 85,
+     "y": 445,
+     "text": "slanted",
+     "size": 28
+    }
+   ]
+  }
+ ]
+}

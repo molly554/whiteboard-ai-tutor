@@ -1,0 +1,197 @@
+{
+ "title": "光合作用的位置",
+ "lang": "zh",
+ "steps": [
+  {
+   "title": "标题",
+   "say": "我们先来看光合作用发生在细胞的哪个部分。",
+   "ops": [
+    {
+     "op": "write",
+     "id": "title",
+     "x": 620,
+     "y": 50,
+     "text": "光合作用发生在哪里？",
+     "size": 56,
+     "anchor": "middle"
+    }
+   ]
+  },
+  {
+   "title": "植物细胞",
+   "say": "这是植物细胞，光合作用就发生在它里面。",
+   "ops": [
+    {
+     "op": "ellipse",
+     "id": "cell",
+     "cx": 400,
+     "cy": 450,
+     "rx": 260,
+     "ry": 340,
+     "color": "ink",
+     "width": 4
+    },
+    {
+     "op": "write",
+     "id": "cell_label",
+     "x": 400,
+     "y": 820,
+     "text": "植物细胞",
+     "size": 36,
+     "anchor": "middle"
+    }
+   ]
+  },
+  {
+   "title": "叶绿体",
+   "say": "细胞里有一种绿色的小结构，叫叶绿体。",
+   "ops": [
+    {
+     "op": "ellipse",
+     "id": "chloroplast",
+     "cx": 400,
+     "cy": 440,
+     "rx": 100,
+     "ry": 60,
+     "rotate": -20,
+     "color": "green",
+     "width": 4,
+     "fill": "green"
+    },
+    {
+     "op": "write",
+     "id": "chloroplast_label",
+     "x": 520,
+     "y": 400,
+     "text": "叶绿体",
+     "size": 32,
+     "color": "green"
+    }
+   ]
+  },
+  {
+   "title": "光合作用位置",
+   "say": "光合作用就是在叶绿体里进行的。",
+   "ops": [
+    {
+     "op": "line",
+     "id": "arrow1",
+     "x1": 520,
+     "y1": 430,
+     "x2": 640,
+     "y2": 350,
+     "color": "red",
+     "width": 4,
+     "arrow": true
+    },
+    {
+     "op": "write",
+     "id": "note1",
+     "x": 650,
+     "y": 320,
+     "text": "光合作用\n在这里进行",
+     "size": 34,
+     "color": "red"
+    }
+   ]
+  },
+  {
+   "title": "光能",
+   "say": "叶绿体吸收光能，把二氧化碳和水变成有机物。",
+   "ops": [
+    {
+     "op": "line",
+     "id": "arrow2",
+     "x1": 150,
+     "y1": 200,
+     "x2": 300,
+     "y2": 400,
+     "color": "blue",
+     "width": 4,
+     "arrow": true
+    },
+    {
+     "op": "write",
+     "id": "light_label",
+     "x": 80,
+     "y": 160,
+     "text": "光能",
+     "size": 32,
+     "color": "blue"
+    }
+   ]
+  },
+  {
+   "title": "原料与产物",
+   "say": "二氧化碳和水进去，氧气和有机物出来。",
+   "ops": [
+    {
+     "op": "line",
+     "id": "arrow3",
+     "x1": 150,
+     "y1": 650,
+     "x2": 300,
+     "y2": 500,
+     "color": "blue",
+     "width": 4,
+     "arrow": true
+    },
+    {
+     "op": "write",
+     "id": "co2_label",
+     "x": 80,
+     "y": 620,
+     "text": "CO₂ + H₂O",
+     "size": 30,
+     "color": "blue"
+    },
+    {
+     "op": "line",
+     "id": "arrow4",
+     "x1": 500,
+     "y1": 500,
+     "x2": 700,
+     "y2": 600,
+     "color": "green",
+     "width": 4,
+     "arrow": true
+    },
+    {
+     "op": "write",
+     "id": "o2_label",
+     "x": 720,
+     "y": 570,
+     "text": "O₂ + 有机物",
+     "size": 30,
+     "color": "green"
+    }
+   ]
+  },
+  {
+   "title": "总结",
+   "say": "所以答案是：光合作用发生在叶绿体里。",
+   "ops": [
+    {
+     "op": "rect",
+     "id": "summary_box",
+     "x": 850,
+     "y": 200,
+     "w": 400,
+     "h": 200,
+     "color": "ink",
+     "width": 4,
+     "fill": "gray"
+    },
+    {
+     "op": "write",
+     "id": "summary",
+     "x": 870,
+     "y": 230,
+     "text": "答案：\n光合作用发生在\n叶绿体",
+     "size": 38,
+     "color": "ink"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,285 @@
+{
+ "title": "Demand Up, Price Up",
+ "lang": "en",
+ "steps": [
+  {
+   "title": "Set up the axes",
+   "say": "Price goes up the vertical axis and quantity goes across the horizontal axis. We start with a normal market.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "title",
+     "x": 800,
+     "y": 60,
+     "text": "Demand Up, Price Up",
+     "size": 56,
+     "anchor": "middle"
+    },
+    {
+     "op": "line",
+     "id": "ax_y",
+     "x1": 200,
+     "y1": 780,
+     "x2": 200,
+     "y2": 120,
+     "width": 4,
+     "arrow": true
+    },
+    {
+     "op": "line",
+     "id": "ax_x",
+     "x1": 200,
+     "y1": 780,
+     "x2": 920,
+     "y2": 780,
+     "width": 4,
+     "arrow": true
+    },
+    {
+     "op": "write",
+     "id": "lbl_price",
+     "x": 80,
+     "y": 100,
+     "text": "Price",
+     "size": 34
+    },
+    {
+     "op": "write",
+     "id": "lbl_qty",
+     "x": 920,
+     "y": 800,
+     "text": "Quantity",
+     "size": 34
+    }
+   ]
+  },
+  {
+   "title": "Draw the original curves",
+   "say": "Demand slopes down and supply slopes up. They cross at the original equilibrium.",
+   "ops": [
+    {
+     "op": "line",
+     "id": "d1",
+     "x1": 330,
+     "y1": 190,
+     "x2": 860,
+     "y2": 640,
+     "color": "blue",
+     "width": 5
+    },
+    {
+     "op": "line",
+     "id": "s",
+     "x1": 300,
+     "y1": 700,
+     "x2": 860,
+     "y2": 260,
+     "color": "green",
+     "width": 5
+    },
+    {
+     "op": "write",
+     "id": "lbl_d1",
+     "x": 870,
+     "y": 640,
+     "text": "D1",
+     "size": 32,
+     "color": "blue"
+    },
+    {
+     "op": "write",
+     "id": "lbl_s",
+     "x": 760,
+     "y": 260,
+     "text": "S",
+     "size": 32,
+     "color": "green"
+    }
+   ]
+  },
+  {
+   "title": "Mark the original equilibrium",
+   "say": "The original equilibrium sits at price P0 and quantity Q0.",
+   "ops": [
+    {
+     "op": "ellipse",
+     "id": "e0",
+     "cx": 627,
+     "cy": 442,
+     "rx": 12,
+     "ry": 12,
+     "color": "ink",
+     "width": 4
+    },
+    {
+     "op": "line",
+     "id": "g0h",
+     "x1": 200,
+     "y1": 442,
+     "x2": 615,
+     "y2": 442,
+     "color": "gray",
+     "dash": "6 6",
+     "width": 3
+    },
+    {
+     "op": "line",
+     "id": "g0v",
+     "x1": 627,
+     "y1": 454,
+     "x2": 627,
+     "y2": 780,
+     "color": "gray",
+     "dash": "6 6",
+     "width": 3
+    },
+    {
+     "op": "write",
+     "id": "lbl_p0",
+     "x": 140,
+     "y": 432,
+     "text": "P0",
+     "size": 30
+    },
+    {
+     "op": "write",
+     "id": "lbl_q0",
+     "x": 612,
+     "y": 800,
+     "text": "Q0",
+     "size": 30
+    }
+   ]
+  },
+  {
+   "title": "Demand rises",
+   "say": "More buyers want the product at every price, so the demand curve shifts right to D2.",
+   "ops": [
+    {
+     "op": "line",
+     "id": "d2",
+     "x1": 480,
+     "y1": 190,
+     "x2": 880,
+     "y2": 530,
+     "color": "red",
+     "width": 5
+    },
+    {
+     "op": "write",
+     "id": "lbl_d2",
+     "x": 895,
+     "y": 500,
+     "text": "D2",
+     "size": 32,
+     "color": "red"
+    },
+    {
+     "op": "write",
+     "id": "note_rise",
+     "x": 1000,
+     "y": 150,
+     "text": "Demand rises",
+     "size": 36,
+     "color": "red"
+    }
+   ]
+  },
+  {
+   "title": "Shortage at the old price",
+   "say": "At the old price P0, buyers want more than sellers offer, so there is a shortage.",
+   "ops": [
+    {
+     "op": "line",
+     "id": "short",
+     "x1": 627,
+     "y1": 442,
+     "x2": 777,
+     "y2": 442,
+     "color": "red",
+     "width": 4,
+     "arrow": "both"
+    },
+    {
+     "op": "write",
+     "id": "lbl_short",
+     "x": 640,
+     "y": 470,
+     "text": "shortage",
+     "size": 30,
+     "color": "red"
+    }
+   ]
+  },
+  {
+   "title": "Price rises to the new equilibrium",
+   "say": "Sellers raise the price until the shortage disappears, at P1 with quantity Q1.",
+   "ops": [
+    {
+     "op": "ellipse",
+     "id": "e1",
+     "cx": 705,
+     "cy": 381,
+     "rx": 12,
+     "ry": 12,
+     "color": "red",
+     "width": 4
+    },
+    {
+     "op": "line",
+     "id": "g1h",
+     "x1": 200,
+     "y1": 381,
+     "x2": 693,
+     "y2": 381,
+     "color": "red",
+     "dash": "6 6",
+     "width": 3
+    },
+    {
+     "op": "line",
+     "id": "g1v",
+     "x1": 705,
+     "y1": 393,
+     "x2": 705,
+     "y2": 780,
+     "color": "red",
+     "dash": "6 6",
+     "width": 3
+    },
+    {
+     "op": "write",
+     "id": "lbl_p1",
+     "x": 140,
+     "y": 371,
+     "text": "P1",
+     "size": 30,
+     "color": "red"
+    },
+    {
+     "op": "write",
+     "id": "lbl_q1",
+     "x": 695,
+     "y": 800,
+     "text": "Q1",
+     "size": 30,
+     "color": "red"
+    }
+   ]
+  },
+  {
+   "title": "Summary",
+   "say": "When demand rises, the price rises and the quantity sold rises too, moving up along the supply curve.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "summary",
+     "x": 1000,
+     "y": 380,
+     "text": "Price rises\nQuantity rises\nalong the supply curve",
+     "size": 34
+    }
+   ]
+  }
+ ]
+}

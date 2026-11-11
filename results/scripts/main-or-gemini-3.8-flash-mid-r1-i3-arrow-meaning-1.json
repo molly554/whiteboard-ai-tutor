@@ -1,0 +1,143 @@
+{
+ "title": "Why does price rise when demand rises?",
+ "lang": "en",
+ "steps": [
+  {
+   "title": "Shift of the entire curve",
+   "say": "The arrow shows that demand shifts right: buyers now want a larger quantity at every possible price, not just at one point.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "shift_exp",
+     "x": 500,
+     "y": 120,
+     "text": "Shift = higher demand at every price",
+     "size": 30,
+     "color": "green"
+    },
+    {
+     "op": "line",
+     "id": "shift_h",
+     "x1": 580,
+     "y1": 470,
+     "x2": 740,
+     "y2": 470,
+     "color": "green",
+     "width": 4,
+     "arrow": true
+    },
+    {
+     "op": "write",
+     "id": "shift_h_lab",
+     "x": 660,
+     "y": 485,
+     "text": "excess demand at P1",
+     "size": 26,
+     "anchor": "middle",
+     "color": "green"
+    }
+   ]
+  },
+  {
+   "title": "Shortage bids price up",
+   "say": "At the old price P1, buyers want more than sellers have. This shortage causes buyers to compete, bidding the price upward.",
+   "ops": [
+    {
+     "op": "line",
+     "id": "p_rise",
+     "x1": 70,
+     "y1": 470,
+     "x2": 70,
+     "y2": 410,
+     "color": "red",
+     "width": 4,
+     "arrow": true
+    },
+    {
+     "op": "write",
+     "id": "p_rise_lab",
+     "x": 60,
+     "y": 360,
+     "text": "Price\nbids up",
+     "size": 26,
+     "color": "red"
+    }
+   ]
+  },
+  {
+   "title": "New equilibrium at P2",
+   "say": "The market finds a new balance where D2 crosses S: the new equilibrium reaches a higher price P2 and a higher quantity Q2.",
+   "ops": [
+    {
+     "op": "erase",
+     "ids": [
+      "note3",
+      "shift_h",
+      "shift_h_lab"
+     ]
+    },
+    {
+     "op": "ellipse",
+     "id": "e2",
+     "cx": 660,
+     "cy": 428,
+     "rx": 9,
+     "ry": 9,
+     "color": "green",
+     "fill": "green"
+    },
+    {
+     "op": "line",
+     "id": "e2h",
+     "x1": 200,
+     "y1": 428,
+     "x2": 660,
+     "y2": 428,
+     "color": "gray",
+     "width": 3,
+     "dash": true
+    },
+    {
+     "op": "line",
+     "id": "e2v",
+     "x1": 660,
+     "y1": 428,
+     "x2": 660,
+     "y2": 720,
+     "color": "gray",
+     "width": 3,
+     "dash": true
+    },
+    {
+     "op": "write",
+     "id": "p2",
+     "x": 130,
+     "y": 410,
+     "text": "P2",
+     "size": 32,
+     "anchor": "middle",
+     "color": "red"
+    },
+    {
+     "op": "write",
+     "id": "q2",
+     "x": 660,
+     "y": 735,
+     "text": "Q2",
+     "size": 32,
+     "anchor": "middle",
+     "color": "red"
+    },
+    {
+     "op": "write",
+     "id": "conclusion",
+     "x": 1200,
+     "y": 590,
+     "text": "New Equilibrium (E2):\n• Price rises to P2\n• Quantity rises to Q2",
+     "size": 30,
+     "color": "red"
+    }
+   ]
+  }
+ ]
+}

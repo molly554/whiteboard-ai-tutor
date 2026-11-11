@@ -1,0 +1,381 @@
+{
+ "title": "Why the Pythagorean Theorem Works",
+ "lang": "en",
+ "steps": [
+  {
+   "title": "The Right Triangle",
+   "say": "Let's start with a right triangle having legs a and b, and hypotenuse c.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "main_title",
+     "x": 800,
+     "y": 50,
+     "text": "Why Does a² + b² = c² Work?",
+     "size": 52,
+     "anchor": "middle"
+    },
+    {
+     "op": "path",
+     "id": "t0_shape",
+     "d": "M 200 320 L 200 200 L 360 320 Z",
+     "color": "blue",
+     "width": 4,
+     "fill": "blue"
+    },
+    {
+     "op": "path",
+     "id": "t0_right_angle",
+     "d": "M 200 295 L 225 295 L 225 320",
+     "color": "gray",
+     "width": 2
+    },
+    {
+     "op": "write",
+     "id": "t0_lbl_a",
+     "x": 170,
+     "y": 245,
+     "text": "a",
+     "size": 32,
+     "color": "blue"
+    },
+    {
+     "op": "write",
+     "id": "t0_lbl_b",
+     "x": 270,
+     "y": 335,
+     "text": "b",
+     "size": 32,
+     "color": "blue"
+    },
+    {
+     "op": "write",
+     "id": "t0_lbl_c",
+     "x": 300,
+     "y": 235,
+     "text": "c",
+     "size": 32,
+     "color": "red"
+    },
+    {
+     "op": "write",
+     "id": "intro_text",
+     "x": 500,
+     "y": 230,
+     "text": "We want to prove that the area c²\nequals the sum of areas a² and b².\nLet's use a visual rearrangement proof!",
+     "size": 34,
+     "color": "ink"
+    }
+   ]
+  },
+  {
+   "title": "Build Two Identical Squares",
+   "say": "Imagine two identical large squares, each with side length a + b.",
+   "ops": [
+    {
+     "op": "erase",
+     "ids": [
+      "t0_shape",
+      "t0_right_angle",
+      "t0_lbl_a",
+      "t0_lbl_b",
+      "t0_lbl_c",
+      "intro_text"
+     ]
+    },
+    {
+     "op": "rect",
+     "id": "sq1_outer",
+     "x": 160,
+     "y": 200,
+     "w": 400,
+     "h": 400,
+     "color": "ink",
+     "width": 4
+    },
+    {
+     "op": "rect",
+     "id": "sq2_outer",
+     "x": 840,
+     "y": 200,
+     "w": 400,
+     "h": 400,
+     "color": "ink",
+     "width": 4
+    },
+    {
+     "op": "write",
+     "id": "sq1_title",
+     "x": 360,
+     "y": 140,
+     "text": "Square 1: Side (a + b)",
+     "size": 32,
+     "anchor": "middle"
+    },
+    {
+     "op": "write",
+     "id": "sq2_title",
+     "x": 1040,
+     "y": 140,
+     "text": "Square 2: Side (a + b)",
+     "size": 32,
+     "anchor": "middle"
+    },
+    {
+     "op": "write",
+     "id": "sq1_top_a",
+     "x": 220,
+     "y": 165,
+     "text": "a",
+     "size": 28,
+     "color": "gray"
+    },
+    {
+     "op": "write",
+     "id": "sq1_top_b",
+     "x": 420,
+     "y": 165,
+     "text": "b",
+     "size": 28,
+     "color": "gray"
+    },
+    {
+     "op": "write",
+     "id": "sq2_top_a",
+     "x": 900,
+     "y": 165,
+     "text": "a",
+     "size": 28,
+     "color": "gray"
+    },
+    {
+     "op": "write",
+     "id": "sq2_top_b",
+     "x": 1100,
+     "y": 165,
+     "text": "b",
+     "size": 28,
+     "color": "gray"
+    }
+   ]
+  },
+  {
+   "title": "Pack 4 Triangles in Square 1",
+   "say": "In the first square, place four copies of our triangle around the edges. A tilted square with side c appears in the center.",
+   "ops": [
+    {
+     "op": "path",
+     "id": "sq1_t1",
+     "d": "M 160 200 L 280 200 L 160 480 Z",
+     "color": "blue",
+     "width": 2,
+     "fill": "blue"
+    },
+    {
+     "op": "path",
+     "id": "sq1_t2",
+     "d": "M 280 200 L 560 200 L 560 320 Z",
+     "color": "blue",
+     "width": 2,
+     "fill": "blue"
+    },
+    {
+     "op": "path",
+     "id": "sq1_t3",
+     "d": "M 560 320 L 560 600 L 440 600 Z",
+     "color": "blue",
+     "width": 2,
+     "fill": "blue"
+    },
+    {
+     "op": "path",
+     "id": "sq1_t4",
+     "d": "M 440 600 L 160 600 L 160 480 Z",
+     "color": "blue",
+     "width": 2,
+     "fill": "blue"
+    },
+    {
+     "op": "path",
+     "id": "sq1_center",
+     "d": "M 280 200 L 560 320 L 440 600 L 160 480 Z",
+     "color": "red",
+     "width": 3,
+     "fill": "red"
+    },
+    {
+     "op": "write",
+     "id": "sq1_center_lbl",
+     "x": 360,
+     "y": 380,
+     "text": "Area = c²",
+     "size": 36,
+     "color": "red",
+     "anchor": "middle"
+    },
+    {
+     "op": "write",
+     "id": "sq1_hyp",
+     "x": 225,
+     "y": 320,
+     "text": "c",
+     "size": 28,
+     "color": "red"
+    }
+   ]
+  },
+  {
+   "title": "Rearrange 4 Triangles in Square 2",
+   "say": "In the second square, pair the four triangles into two rectangles in the corners. The leftover space splits into two squares: a² and b².",
+   "ops": [
+    {
+     "op": "path",
+     "id": "sq2_t1",
+     "d": "M 840 200 L 960 200 L 840 480 Z",
+     "color": "blue",
+     "width": 2,
+     "fill": "blue"
+    },
+    {
+     "op": "path",
+     "id": "sq2_t2",
+     "d": "M 960 200 L 960 480 L 840 480 Z",
+     "color": "blue",
+     "width": 2,
+     "fill": "blue"
+    },
+    {
+     "op": "path",
+     "id": "sq2_t3",
+     "d": "M 960 480 L 1240 480 L 1240 600 Z",
+     "color": "blue",
+     "width": 2,
+     "fill": "blue"
+    },
+    {
+     "op": "path",
+     "id": "sq2_t4",
+     "d": "M 960 480 L 960 600 L 1240 600 Z",
+     "color": "blue",
+     "width": 2,
+     "fill": "blue"
+    },
+    {
+     "op": "rect",
+     "id": "sq2_area_a",
+     "x": 840,
+     "y": 480,
+     "w": 120,
+     "h": 120,
+     "color": "green",
+     "width": 3,
+     "fill": "green"
+    },
+    {
+     "op": "write",
+     "id": "sq2_lbl_a2",
+     "x": 900,
+     "y": 525,
+     "text": "a²",
+     "size": 34,
+     "color": "green",
+     "anchor": "middle"
+    },
+    {
+     "op": "rect",
+     "id": "sq2_area_b",
+     "x": 960,
+     "y": 200,
+     "w": 280,
+     "h": 280,
+     "color": "green",
+     "width": 3,
+     "fill": "green"
+    },
+    {
+     "op": "write",
+     "id": "sq2_lbl_b2",
+     "x": 1100,
+     "y": 325,
+     "text": "b²",
+     "size": 38,
+     "color": "green",
+     "anchor": "middle"
+    }
+   ]
+  },
+  {
+   "title": "Compare Remaining Areas",
+   "say": "Both large frames have the same total area, and both contain four identical triangles. Remove the four blue triangles from both sides!",
+   "ops": [
+    {
+     "op": "write",
+     "id": "eq_left",
+     "x": 360,
+     "y": 640,
+     "text": "Left Uncovered: c²",
+     "size": 34,
+     "color": "red",
+     "anchor": "middle"
+    },
+    {
+     "op": "write",
+     "id": "eq_right",
+     "x": 1040,
+     "y": 640,
+     "text": "Right Uncovered: a² + b²",
+     "size": 34,
+     "color": "green",
+     "anchor": "middle"
+    },
+    {
+     "op": "line",
+     "id": "comp_arrow",
+     "x1": 530,
+     "y1": 655,
+     "x2": 850,
+     "y2": 655,
+     "color": "ink",
+     "width": 4,
+     "arrow": "both"
+    },
+    {
+     "op": "write",
+     "id": "comp_text",
+     "x": 690,
+     "y": 615,
+     "text": "Same total area\n− 4 triangles",
+     "size": 28,
+     "color": "ink",
+     "anchor": "middle"
+    }
+   ]
+  },
+  {
+   "title": "Conclusion: a² + b² = c²",
+   "say": "Because the remaining areas must be equal, a² + b² must equal c². That is why the Pythagorean theorem is always true.",
+   "ops": [
+    {
+     "op": "rect",
+     "id": "box_final",
+     "x": 480,
+     "y": 740,
+     "w": 440,
+     "h": 90,
+     "color": "red",
+     "width": 4
+    },
+    {
+     "op": "write",
+     "id": "final_proof",
+     "x": 700,
+     "y": 760,
+     "text": "a² + b² = c²",
+     "size": 50,
+     "color": "ink",
+     "anchor": "middle"
+    }
+   ]
+  }
+ ]
+}

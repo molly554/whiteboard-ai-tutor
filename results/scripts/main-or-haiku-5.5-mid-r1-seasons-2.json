@@ -1,0 +1,164 @@
+{
+ "title": "Why do we have seasons?",
+ "lang": "en",
+ "steps": [
+  {
+   "title": "The question",
+   "say": "Seasons happen because Earth is tilted. Let's see how.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "title",
+     "x": 800,
+     "y": 60,
+     "text": "Why do we have seasons?",
+     "size": 56,
+     "anchor": "middle",
+     "underline": true
+    }
+   ]
+  },
+  {
+   "title": "The Sun and its rays",
+   "say": "The Sun sends light and heat out in straight rays toward Earth.",
+   "ops": [
+    {
+     "op": "ellipse",
+     "id": "sun",
+     "cx": 200,
+     "cy": 480,
+     "rx": 70,
+     "ry": 70,
+     "color": "red",
+     "fill": "red"
+    },
+    {
+     "op": "write",
+     "id": "sunlabel",
+     "x": 200,
+     "y": 330,
+     "text": "Sun",
+     "size": 36,
+     "anchor": "middle"
+    },
+    {
+     "op": "line",
+     "id": "ray1",
+     "x1": 290,
+     "y1": 480,
+     "x2": 880,
+     "y2": 480,
+     "color": "red",
+     "arrow": true,
+     "width": 4
+    }
+   ]
+  },
+  {
+   "title": "The tilted axis",
+   "say": "Earth spins on an axis that is tilted about 23.5 degrees.",
+   "ops": [
+    {
+     "op": "ellipse",
+     "id": "earth",
+     "cx": 1000,
+     "cy": 480,
+     "rx": 110,
+     "ry": 110,
+     "color": "blue",
+     "fill": "blue"
+    },
+    {
+     "op": "line",
+     "id": "axis",
+     "x1": 940,
+     "y1": 342,
+     "x2": 1060,
+     "y2": 618,
+     "color": "gray",
+     "dash": "8 6",
+     "width": 4
+    },
+    {
+     "op": "write",
+     "id": "earthlabel",
+     "x": 1140,
+     "y": 440,
+     "text": "Earth",
+     "size": 36
+    },
+    {
+     "op": "write",
+     "id": "tiltlabel",
+     "x": 1140,
+     "y": 300,
+     "text": "tilt 23.5°",
+     "size": 30,
+     "color": "gray"
+    }
+   ]
+  },
+  {
+   "title": "Distance is not the cause",
+   "say": "Earth is actually closest to the Sun in January, so distance is not the reason.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "myth",
+     "x": 40,
+     "y": 180,
+     "text": "Not the distance: Earth is closest to the Sun in January.",
+     "size": 32,
+     "color": "gray"
+    }
+   ]
+  },
+  {
+   "title": "Northern summer",
+   "say": "In June the northern half leans toward the Sun, so its rays are more direct and days are longer.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "summer",
+     "x": 40,
+     "y": 680,
+     "text": "June: north tilts toward the Sun\nmore direct rays, longer days\n= summer",
+     "size": 34,
+     "color": "red"
+    }
+   ]
+  },
+  {
+   "title": "Northern winter",
+   "say": "Six months later the northern half leans away, so the rays are slanted and spread out, making winter.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "winter",
+     "x": 840,
+     "y": 680,
+     "text": "December: north tilts away\nslanted rays, shorter days\n= winter",
+     "size": 34,
+     "color": "blue"
+    }
+   ]
+  },
+  {
+   "title": "Summary",
+   "say": "Seasons come from the tilt of Earth's axis, not from how far away it is.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "summary",
+     "x": 800,
+     "y": 800,
+     "text": "Tilt causes seasons. Distance barely matters.",
+     "size": 40,
+     "color": "green",
+     "anchor": "middle",
+     "underline": true
+    }
+   ]
+  }
+ ]
+}

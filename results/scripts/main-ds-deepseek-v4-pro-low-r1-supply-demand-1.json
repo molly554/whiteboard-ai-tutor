@@ -1,0 +1,272 @@
+{
+ "title": "Demand Rises → Price",
+ "lang": "en",
+ "steps": [
+  {
+   "title": "Setup the market",
+   "say": "We start with a market in equilibrium, where supply meets demand.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "title",
+     "x": 80,
+     "y": 60,
+     "text": "Demand Rises → Price",
+     "size": 56,
+     "anchor": "start"
+    },
+    {
+     "op": "line",
+     "id": "axis_y",
+     "x1": 140,
+     "y1": 140,
+     "x2": 140,
+     "y2": 760,
+     "color": "gray",
+     "width": 3,
+     "arrow": true
+    },
+    {
+     "op": "line",
+     "id": "axis_x",
+     "x1": 140,
+     "y1": 760,
+     "x2": 1200,
+     "y2": 760,
+     "color": "gray",
+     "width": 3,
+     "arrow": true
+    },
+    {
+     "op": "write",
+     "id": "label_y",
+     "x": 100,
+     "y": 100,
+     "text": "P",
+     "size": 32,
+     "anchor": "middle",
+     "color": "gray"
+    },
+    {
+     "op": "write",
+     "id": "label_x",
+     "x": 1220,
+     "y": 770,
+     "text": "Q",
+     "size": 32,
+     "anchor": "middle",
+     "color": "gray"
+    }
+   ]
+  },
+  {
+   "title": "Original demand",
+   "say": "The original demand curve is D1, sloping downward.",
+   "ops": [
+    {
+     "op": "line",
+     "id": "d1",
+     "x1": 240,
+     "y1": 280,
+     "x2": 1080,
+     "y2": 700,
+     "color": "blue",
+     "width": 5
+    },
+    {
+     "op": "write",
+     "id": "label_d1",
+     "x": 1085,
+     "y": 690,
+     "text": "D1",
+     "size": 32,
+     "color": "blue"
+    }
+   ]
+  },
+  {
+   "title": "Original supply",
+   "say": "The supply curve S is upward sloping, and together they create an equilibrium.",
+   "ops": [
+    {
+     "op": "line",
+     "id": "s",
+     "x1": 320,
+     "y1": 700,
+     "x2": 1100,
+     "y2": 240,
+     "color": "red",
+     "width": 5
+    },
+    {
+     "op": "write",
+     "id": "label_s",
+     "x": 1110,
+     "y": 230,
+     "text": "S",
+     "size": 32,
+     "color": "red"
+    },
+    {
+     "op": "ellipse",
+     "id": "eq1",
+     "cx": 640,
+     "cy": 500,
+     "rx": 8,
+     "ry": 8,
+     "fill": "ink"
+    },
+    {
+     "op": "write",
+     "id": "label_eq1",
+     "x": 650,
+     "y": 470,
+     "text": "E1",
+     "size": 28,
+     "color": "ink"
+    }
+   ]
+  },
+  {
+   "title": "Demand shifts right",
+   "say": "When demand rises, the whole demand curve shifts to the right, from D1 to D2.",
+   "ops": [
+    {
+     "op": "line",
+     "id": "d2",
+     "x1": 400,
+     "y1": 240,
+     "x2": 1180,
+     "y2": 660,
+     "color": "green",
+     "width": 5
+    },
+    {
+     "op": "write",
+     "id": "label_d2",
+     "x": 1190,
+     "y": 650,
+     "text": "D2",
+     "size": 32,
+     "color": "green"
+    },
+    {
+     "op": "write",
+     "id": "shift_arrow",
+     "x": 700,
+     "y": 350,
+     "text": "→",
+     "size": 40,
+     "anchor": "middle",
+     "color": "ink"
+    },
+    {
+     "op": "write",
+     "id": "note_shift",
+     "x": 760,
+     "y": 350,
+     "text": "demand rises",
+     "size": 28,
+     "color": "ink"
+    }
+   ]
+  },
+  {
+   "title": "New equilibrium",
+   "say": "The new intersection with supply is at a higher price and higher quantity.",
+   "ops": [
+    {
+     "op": "ellipse",
+     "id": "eq2",
+     "cx": 760,
+     "cy": 440,
+     "rx": 8,
+     "ry": 8,
+     "fill": "ink"
+    },
+    {
+     "op": "write",
+     "id": "label_eq2",
+     "x": 770,
+     "y": 410,
+     "text": "E2",
+     "size": 28,
+     "color": "ink"
+    }
+   ]
+  },
+  {
+   "title": "Compare prices",
+   "say": "The equilibrium moves from E1 to E2, so the price clearly goes up.",
+   "ops": [
+    {
+     "op": "line",
+     "id": "p1_line",
+     "x1": 640,
+     "y1": 500,
+     "x2": 140,
+     "y2": 500,
+     "color": "ink",
+     "width": 3,
+     "dash": true
+    },
+    {
+     "op": "line",
+     "id": "p2_line",
+     "x1": 760,
+     "y1": 440,
+     "x2": 140,
+     "y2": 440,
+     "color": "ink",
+     "width": 3,
+     "dash": true
+    },
+    {
+     "op": "write",
+     "id": "label_p1",
+     "x": 120,
+     "y": 510,
+     "text": "P1",
+     "size": 28,
+     "anchor": "middle",
+     "color": "ink"
+    },
+    {
+     "op": "write",
+     "id": "label_p2",
+     "x": 120,
+     "y": 450,
+     "text": "P2",
+     "size": 28,
+     "anchor": "middle",
+     "color": "ink"
+    },
+    {
+     "op": "write",
+     "id": "price_up",
+     "x": 400,
+     "y": 160,
+     "text": "P2 > P1",
+     "size": 36,
+     "anchor": "middle",
+     "color": "red"
+    }
+   ]
+  },
+  {
+   "title": "Conclusion",
+   "say": "So when demand rises, the price increases, and the quantity sold also increases.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "conclusion",
+     "x": 80,
+     "y": 800,
+     "text": "Demand ↑  →  Price ↑  and  Quantity ↑",
+     "size": 40,
+     "color": "ink"
+    }
+   ]
+  }
+ ]
+}

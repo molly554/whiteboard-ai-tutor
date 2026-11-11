@@ -1,0 +1,145 @@
+{
+ "title": "Why is summer hotter if Earth is farther?",
+ "lang": "en",
+ "steps": [
+  {
+   "title": "Distance isn't the driver",
+   "say": "Yes, in northern summer Earth is actually farther from the Sun — so distance can't be what makes it hot.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "ans1",
+     "x": 60,
+     "y": 250,
+     "text": "Right! In northern summer Earth is\nfarther away — so distance is NOT the cause.",
+     "size": 36,
+     "color": "red"
+    }
+   ]
+  },
+  {
+   "title": "Sunlight hits at an angle",
+   "say": "What matters is the angle of the sunlight. A tilted Earth makes the Sun's rays strike the northern half more directly.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "ans2",
+     "x": 60,
+     "y": 360,
+     "text": "What matters: the ANGLE of sunlight.",
+     "size": 36,
+     "color": "blue"
+    },
+    {
+     "op": "line",
+     "id": "ray1",
+     "x1": 800,
+     "y1": 400,
+     "x2": 700,
+     "y2": 490,
+     "width": 4,
+     "color": "red",
+     "arrow": true
+    },
+    {
+     "op": "line",
+     "id": "ray2",
+     "x1": 800,
+     "y1": 400,
+     "x2": 760,
+     "y2": 500,
+     "width": 4,
+     "color": "red",
+     "arrow": true
+    },
+    {
+     "op": "line",
+     "id": "ray3",
+     "x1": 800,
+     "y1": 400,
+     "x2": 840,
+     "y2": 500,
+     "width": 4,
+     "color": "red",
+     "arrow": true
+    }
+   ]
+  },
+  {
+   "title": "Direct vs slanted rays",
+   "say": "Direct rays pack energy into a small area. Slanted rays spread the same energy over a much wider area.",
+   "ops": [
+    {
+     "op": "rect",
+     "id": "beamA",
+     "x": 660,
+     "y": 505,
+     "w": 90,
+     "h": 26,
+     "color": "red",
+     "width": 3,
+     "fill": "red"
+    },
+    {
+     "op": "write",
+     "id": "labA",
+     "x": 660,
+     "y": 545,
+     "text": "direct → concentrated",
+     "size": 28,
+     "color": "red"
+    },
+    {
+     "op": "rect",
+     "id": "beamB",
+     "x": 830,
+     "y": 505,
+     "w": 200,
+     "h": 26,
+     "color": "gray",
+     "width": 3,
+     "fill": "gray"
+    },
+    {
+     "op": "write",
+     "id": "labB",
+     "x": 830,
+     "y": 545,
+     "text": "slanted → spread out",
+     "size": 28,
+     "color": "gray"
+    }
+   ]
+  },
+  {
+   "title": "Long days too",
+   "say": "The tilt also gives the summer half longer days, so the ground gets more hours of heating.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "ans3",
+     "x": 60,
+     "y": 620,
+     "text": "Bonus: the tilted half also gets longer days —\nmore hours of heating each day.",
+     "size": 36
+    }
+   ]
+  },
+  {
+   "title": "Summary",
+   "say": "So seasons come from the tilt changing the angle of sunlight and the length of the day — not from distance.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "sum",
+     "x": 60,
+     "y": 740,
+     "text": "Seasons = tilt → sunlight angle + day length, not distance.",
+     "size": 36,
+     "color": "green",
+     "underline": true
+    }
+   ]
+  }
+ ]
+}

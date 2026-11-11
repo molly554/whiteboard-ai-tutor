@@ -1,0 +1,15 @@
+{
+ "_fields": "content: 1=no science/math error, 0=error or nothing shown; match: 1=text and figure agree; layout: 0-2; pedagogy: 1=complete and sensibly paced; conf: reviewer confidence",
+ "B10": {"content": 1, "match": 1, "layout": 2, "pedagogy": 1, "conf": "high", "note": "completing the square tried, erased, then factoring; clean"},
+ "B18": {"content": 1, "match": 1, "layout": 2, "pedagogy": 1, "conf": "high", "note": "formula -> discriminant 1 -> switch to factoring; includes check"},
+ "B35": {"content": 0, "match": 0, "layout": 0, "pedagogy": 0, "conf": "high", "note": "blank board: every instruction omits the op field, so nothing can be drawn"},
+ "B45": {"content": 1, "match": 1, "layout": 2, "pedagogy": 1, "conf": "high", "note": "formula tried and erased, then factoring"},
+ "B52": {"content": 1, "match": 1, "layout": 2, "pedagogy": 1, "conf": "high", "note": "formula struck out on purpose, then factoring"},
+ "B57": {"content": 1, "match": 1, "layout": 2, "pedagogy": 0, "conf": "high", "note": "correct, but never switches method midway as the question asked"},
+ "B01": {"content": 1, "match": 1, "layout": 2, "pedagogy": 1, "conf": "low", "note": "board proof valid; narration step 3 says the tilted square has side c 'by the relation we want to show' (circular wording)"},
+ "B16": {"content": 0, "match": 0, "layout": 0, "pedagogy": 0, "conf": "high", "note": "c-square is not built on the hypotenuse and has the wrong size; b-square not on leg b; figure covers the title, runs off the board; no four triangles though narration refers to them"},
+ "B48": {"content": 1, "match": 1, "layout": 2, "pedagogy": 1, "conf": "high", "note": "algebra shown then erased; final board sparse, sides not labelled a and b"},
+ "B54": {"content": 1, "match": 1, "layout": 1, "pedagogy": 1, "conf": "high", "note": "two-arrangement proof, geometry exact; highlight box misplaced over the last sentence"},
+ "B61": {"content": 0, "match": 0, "layout": 1, "pedagogy": 0, "conf": "low", "note": "c-square drawn axis-aligned beside the triangle, not on the hypotenuse; right-hand square labelled c2 has the wrong size and shows no triangles; no actual argument"},
+ "B62": {"content": 1, "match": 1, "layout": 2, "pedagogy": 1, "conf": "high", "note": "two-arrangement proof, geometry and labels exact"}
+}

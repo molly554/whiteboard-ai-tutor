@@ -1,0 +1,284 @@
+{
+ "title": "Demand Up, Price Up",
+ "lang": "en",
+ "steps": [
+  {
+   "title": "Set up the question",
+   "say": "We want to know what happens to price when demand increases. Supply stays the same.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "t1",
+     "x": 60,
+     "y": 50,
+     "text": "Demand Rises",
+     "size": 56,
+     "underline": true
+    },
+    {
+     "op": "line",
+     "id": "ax_x",
+     "x1": 200,
+     "y1": 800,
+     "x2": 1450,
+     "y2": 800,
+     "arrow": true
+    },
+    {
+     "op": "line",
+     "id": "ax_y",
+     "x1": 200,
+     "y1": 800,
+     "x2": 200,
+     "y2": 160,
+     "arrow": true
+    },
+    {
+     "op": "write",
+     "id": "lab_p",
+     "x": 60,
+     "y": 160,
+     "text": "Price",
+     "size": 32
+    },
+    {
+     "op": "write",
+     "id": "lab_q",
+     "x": 1380,
+     "y": 815,
+     "text": "Quantity",
+     "size": 32
+    }
+   ]
+  },
+  {
+   "title": "Draw supply",
+   "say": "Supply slopes upward: sellers offer more when the price is higher.",
+   "ops": [
+    {
+     "op": "line",
+     "id": "S",
+     "x1": 300,
+     "y1": 720,
+     "x2": 1200,
+     "y2": 240,
+     "color": "blue",
+     "width": 5
+    },
+    {
+     "op": "write",
+     "id": "lab_S",
+     "x": 1215,
+     "y": 215,
+     "text": "S",
+     "size": 36,
+     "color": "blue"
+    }
+   ]
+  },
+  {
+   "title": "Initial equilibrium",
+   "say": "Demand D1 meets supply at E1. This sets the starting price P1 and quantity Q1.",
+   "ops": [
+    {
+     "op": "line",
+     "id": "D1",
+     "x1": 300,
+     "y1": 260,
+     "x2": 1200,
+     "y2": 700,
+     "color": "red",
+     "width": 5
+    },
+    {
+     "op": "write",
+     "id": "lab_D1",
+     "x": 1215,
+     "y": 670,
+     "text": "D1",
+     "size": 36,
+     "color": "red"
+    },
+    {
+     "op": "ellipse",
+     "id": "E1",
+     "cx": 750,
+     "cy": 480,
+     "rx": 10,
+     "ry": 10,
+     "color": "ink",
+     "fill": "gray"
+    },
+    {
+     "op": "line",
+     "id": "P1_guide",
+     "x1": 200,
+     "y1": 480,
+     "x2": 750,
+     "y2": 480,
+     "color": "gray",
+     "width": 3,
+     "dash": "8 6"
+    },
+    {
+     "op": "write",
+     "id": "lab_P1",
+     "x": 120,
+     "y": 462,
+     "text": "P1",
+     "size": 32,
+     "color": "gray"
+    },
+    {
+     "op": "line",
+     "id": "Q1_guide",
+     "x1": 750,
+     "y1": 480,
+     "x2": 750,
+     "y2": 800,
+     "color": "gray",
+     "width": 3,
+     "dash": "8 6"
+    },
+    {
+     "op": "write",
+     "id": "lab_Q1",
+     "x": 735,
+     "y": 808,
+     "text": "Q1",
+     "size": 32,
+     "color": "gray"
+    }
+   ]
+  },
+  {
+   "title": "Demand increases",
+   "say": "More buyers want the good at every price, so the demand curve shifts right to D2.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "note_shift",
+     "x": 480,
+     "y": 150,
+     "text": "Demand up: D shifts right",
+     "size": 32,
+     "color": "red"
+    },
+    {
+     "op": "line",
+     "id": "D2",
+     "x1": 450,
+     "y1": 260,
+     "x2": 1350,
+     "y2": 700,
+     "color": "red",
+     "width": 5,
+     "dash": "12 8"
+    },
+    {
+     "op": "write",
+     "id": "lab_D2",
+     "x": 1365,
+     "y": 670,
+     "text": "D2",
+     "size": 36,
+     "color": "red"
+    }
+   ]
+  },
+  {
+   "title": "New equilibrium",
+   "say": "At the old price P1 there is now a shortage. The new equilibrium E2 has a higher price P2 and a higher quantity Q2.",
+   "ops": [
+    {
+     "op": "ellipse",
+     "id": "E2",
+     "cx": 822,
+     "cy": 442,
+     "rx": 10,
+     "ry": 10,
+     "color": "blue",
+     "fill": "blue"
+    },
+    {
+     "op": "line",
+     "id": "P2_guide",
+     "x1": 200,
+     "y1": 442,
+     "x2": 822,
+     "y2": 442,
+     "color": "blue",
+     "width": 3,
+     "dash": "8 6"
+    },
+    {
+     "op": "write",
+     "id": "lab_P2",
+     "x": 120,
+     "y": 424,
+     "text": "P2",
+     "size": 32,
+     "color": "blue"
+    },
+    {
+     "op": "line",
+     "id": "Q2_guide",
+     "x1": 822,
+     "y1": 442,
+     "x2": 822,
+     "y2": 800,
+     "color": "blue",
+     "width": 3,
+     "dash": "8 6"
+    },
+    {
+     "op": "write",
+     "id": "lab_Q2",
+     "x": 805,
+     "y": 808,
+     "text": "Q2",
+     "size": 32,
+     "color": "blue"
+    }
+   ]
+  },
+  {
+   "title": "Why the price rises",
+   "say": "At the old price, buyers want more than sellers offer. They bid the price up until the market clears.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "exp1",
+     "x": 880,
+     "y": 120,
+     "text": "Shortage at old price",
+     "size": 30
+    },
+    {
+     "op": "write",
+     "id": "exp2",
+     "x": 880,
+     "y": 160,
+     "text": "Buyers bid the price up",
+     "size": 30
+    }
+   ]
+  },
+  {
+   "title": "Result",
+   "say": "When demand rises and supply is unchanged, the price rises and the quantity traded rises too.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "res",
+     "x": 880,
+     "y": 690,
+     "text": "Demand up: P up, Q up",
+     "size": 36,
+     "color": "green",
+     "underline": true
+    }
+   ]
+  }
+ ]
+}

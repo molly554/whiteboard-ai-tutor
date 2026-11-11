@@ -1,0 +1,145 @@
+{
+ "title": "Solve x² − 5x + 6 = 0",
+ "lang": "en",
+ "steps": [
+  {
+   "title": "Write the equation",
+   "say": "We need the x-values that make this quadratic equal to zero.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "title",
+     "x": 80,
+     "y": 40,
+     "text": "Solving a Quadratic",
+     "size": 52
+    },
+    {
+     "op": "write",
+     "id": "eq",
+     "x": 80,
+     "y": 130,
+     "text": "x² − 5x + 6 = 0",
+     "size": 48
+    }
+   ]
+  },
+  {
+   "title": "Start with the formula",
+   "say": "First try the quadratic formula and compute the discriminant.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "formulaStart",
+     "x": 80,
+     "y": 230,
+     "text": "Try formula: a = 1, b = −5, c = 6",
+     "size": 36
+    },
+    {
+     "op": "write",
+     "id": "disc",
+     "x": 80,
+     "y": 290,
+     "text": "D = (−5)² − 4·1·6 = 1",
+     "size": 36
+    }
+   ]
+  },
+  {
+   "title": "Switch methods",
+   "say": "The formula works, but factoring is simpler here, so switch methods and drop the discriminant calculation.",
+   "ops": [
+    {
+     "op": "erase",
+     "ids": [
+      "disc"
+     ]
+    },
+    {
+     "op": "write",
+     "id": "switchNote",
+     "x": 80,
+     "y": 290,
+     "text": "Switch: factor — it is simpler.",
+     "size": 36,
+     "color": "red"
+    }
+   ]
+  },
+  {
+   "title": "Find the factor pair",
+   "say": "For x² − 5x + 6, we need two numbers with product 6 and sum −5.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "needProdSum",
+     "x": 80,
+     "y": 380,
+     "text": "Need: product 6, sum −5",
+     "size": 40
+    },
+    {
+     "op": "write",
+     "id": "nums",
+     "x": 80,
+     "y": 450,
+     "text": "Numbers: −2 and −3",
+     "size": 40
+    }
+   ]
+  },
+  {
+   "title": "Factor the quadratic",
+   "say": "Those numbers give the factorization into two binomials.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "factored",
+     "x": 80,
+     "y": 540,
+     "text": "x² − 5x + 6 = (x − 2)(x − 3) = 0",
+     "size": 44
+    }
+   ]
+  },
+  {
+   "title": "Use zero product",
+   "say": "A product is zero only when one of its factors is zero.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "zeroProd",
+     "x": 80,
+     "y": 630,
+     "text": "x − 2 = 0   or   x − 3 = 0",
+     "size": 40
+    }
+   ]
+  },
+  {
+   "title": "State and check the solutions",
+   "say": "Solving each linear equation gives x = 2 or x = 3, and both check in the original equation.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "sol",
+     "x": 80,
+     "y": 720,
+     "text": "x = 2  or  x = 3",
+     "size": 48,
+     "color": "blue"
+    },
+    {
+     "op": "write",
+     "id": "check",
+     "x": 850,
+     "y": 720,
+     "text": "Check: 2²−5·2+6=0\n3²−5·3+6=0",
+     "size": 32,
+     "color": "green"
+    }
+   ]
+  }
+ ]
+}

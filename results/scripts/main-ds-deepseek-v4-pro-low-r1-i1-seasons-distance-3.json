@@ -1,0 +1,132 @@
+{
+ "title": "Why do we have seasons?",
+ "lang": "en",
+ "steps": [
+  {
+   "title": "Distance is not the cause",
+   "say": "Yes — Earth is actually farthest from the Sun in early July, during northern summer. So distance alone cannot explain the heat.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "distance_note",
+     "x": 60,
+     "y": 240,
+     "text": "Northern summer: Earth is FARTHER\nfrom the Sun in early July.",
+     "size": 34,
+     "color": "red"
+    }
+   ]
+  },
+  {
+   "title": "What the tilt does",
+   "say": "The tilt changes how directly sunlight hits the northern hemisphere. In June it leans toward the Sun, so the same sunlight is concentrated over a smaller area.",
+   "ops": [
+    {
+     "op": "erase",
+     "ids": [
+      "distance_note"
+     ]
+    },
+    {
+     "op": "write",
+     "id": "tilt_effect",
+     "x": 60,
+     "y": 240,
+     "text": "Tilt changes how DIRECTLY sunlight hits us.\nDirect light = more energy on each square meter.",
+     "size": 34,
+     "color": "blue"
+    }
+   ]
+  },
+  {
+   "title": "June: northern hemisphere leans in",
+   "say": "In June the northern half of Earth leans toward the Sun, so sunlight strikes it more directly and days are longer.",
+   "ops": [
+    {
+     "op": "line",
+     "id": "june_ray1",
+     "x1": 850,
+     "y1": 550,
+     "x2": 800,
+     "y2": 400,
+     "color": "red",
+     "width": 4,
+     "arrow": true
+    },
+    {
+     "op": "line",
+     "id": "june_ray2",
+     "x1": 850,
+     "y1": 550,
+     "x2": 790,
+     "y2": 366,
+     "color": "red",
+     "width": 4,
+     "arrow": true
+    },
+    {
+     "op": "write",
+     "id": "june_label",
+     "x": 760,
+     "y": 310,
+     "text": "June: N. hemisphere\ntilts toward the Sun",
+     "size": 30,
+     "color": "red",
+     "anchor": "middle"
+    }
+   ]
+  },
+  {
+   "title": "December: northern hemisphere leans away",
+   "say": "In December the northern half leans away, so the same sunlight spreads over a larger area and days are shorter.",
+   "ops": [
+    {
+     "op": "line",
+     "id": "dec_ray1",
+     "x1": 850,
+     "y1": 650,
+     "x2": 800,
+     "y2": 800,
+     "color": "blue",
+     "width": 4,
+     "arrow": true
+    },
+    {
+     "op": "line",
+     "id": "dec_ray2",
+     "x1": 850,
+     "y1": 650,
+     "x2": 790,
+     "y2": 834,
+     "color": "blue",
+     "width": 4,
+     "arrow": true
+    },
+    {
+     "op": "write",
+     "id": "dec_label",
+     "x": 760,
+     "y": 842,
+     "text": "December: N. hemisphere\ntilts away from the Sun",
+     "size": 30,
+     "color": "blue",
+     "anchor": "middle"
+    }
+   ]
+  },
+  {
+   "title": "Direct vs slanted sunlight",
+   "say": "The same beam of sunlight is concentrated when it hits straight on, and spread out when it hits at a slant. That is why tilt matters more than distance.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "summary",
+     "x": 60,
+     "y": 240,
+     "text": "Same beam:\n• direct hit = concentrated, hotter\n• slanted hit = spread out, cooler",
+     "size": 34
+    }
+   ]
+  }
+ ]
+}

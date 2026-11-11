@@ -1,0 +1,112 @@
+{
+ "steps": [
+  {
+   "title": "Distance is not the main cause",
+   "say": "Yes, Earth is about 3% farther in July. But the tilt makes summer sunlight hit the Northern Hemisphere more directly, and daylight lasts longer.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "note1",
+     "x": 900,
+     "y": 50,
+     "text": "Yes, Earth is ~3% farther in July.",
+     "size": 32,
+     "color": "ink",
+     "anchor": "start"
+    },
+    {
+     "op": "write",
+     "id": "note2",
+     "x": 900,
+     "y": 86,
+     "text": "But the tilt makes summer sunlight",
+     "size": 32,
+     "color": "ink",
+     "anchor": "start"
+    },
+    {
+     "op": "write",
+     "id": "note3",
+     "x": 900,
+     "y": 122,
+     "text": "hit the Northern Hemisphere more",
+     "size": 32,
+     "color": "ink",
+     "anchor": "start"
+    },
+    {
+     "op": "write",
+     "id": "note4",
+     "x": 900,
+     "y": 158,
+     "text": "directly, with longer daylight.",
+     "size": 32,
+     "color": "ink",
+     "anchor": "start"
+    },
+    {
+     "op": "write",
+     "id": "summer_label",
+     "x": 920,
+     "y": 230,
+     "text": "Summer",
+     "size": 28,
+     "color": "blue",
+     "anchor": "start"
+    },
+    {
+     "op": "write",
+     "id": "winter_label",
+     "x": 1220,
+     "y": 230,
+     "text": "Winter",
+     "size": 28,
+     "color": "blue",
+     "anchor": "start"
+    },
+    {
+     "op": "line",
+     "id": "summer_ground",
+     "x1": 920,
+     "y1": 320,
+     "x2": 1120,
+     "y2": 320,
+     "color": "ink",
+     "width": 4
+    },
+    {
+     "op": "line",
+     "id": "summer_ray",
+     "x1": 1020,
+     "y1": 240,
+     "x2": 1020,
+     "y2": 320,
+     "color": "red",
+     "width": 3,
+     "arrow": true
+    },
+    {
+     "op": "line",
+     "id": "winter_ground",
+     "x1": 1220,
+     "y1": 320,
+     "x2": 1420,
+     "y2": 320,
+     "color": "ink",
+     "width": 4
+    },
+    {
+     "op": "line",
+     "id": "winter_ray",
+     "x1": 1300,
+     "y1": 240,
+     "x2": 1340,
+     "y2": 320,
+     "color": "red",
+     "width": 3,
+     "arrow": true
+    }
+   ]
+  }
+ ]
+}

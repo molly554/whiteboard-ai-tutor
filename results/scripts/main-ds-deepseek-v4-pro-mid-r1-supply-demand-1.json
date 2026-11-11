@@ -1,0 +1,231 @@
+{
+ "title": "Demand & Price",
+ "lang": "en",
+ "steps": [
+  {
+   "title": "Introduction",
+   "say": "Let's explore what happens to price when demand rises.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "title",
+     "x": 800,
+     "y": 80,
+     "text": "Demand & Price",
+     "size": 56,
+     "anchor": "middle"
+    }
+   ]
+  },
+  {
+   "title": "Draw axes",
+   "say": "First, draw the axes: price on the vertical axis, quantity on the horizontal.",
+   "ops": [
+    {
+     "op": "line",
+     "id": "x_axis",
+     "x1": 200,
+     "y1": 700,
+     "x2": 1400,
+     "y2": 700,
+     "arrow": true
+    },
+    {
+     "op": "line",
+     "id": "y_axis",
+     "x1": 200,
+     "y1": 700,
+     "x2": 200,
+     "y2": 200,
+     "arrow": true
+    },
+    {
+     "op": "write",
+     "id": "quantity_label",
+     "x": 1350,
+     "y": 730,
+     "text": "Quantity",
+     "size": 36,
+     "anchor": "middle"
+    },
+    {
+     "op": "write",
+     "id": "price_label",
+     "x": 160,
+     "y": 220,
+     "text": "Price",
+     "size": 36,
+     "anchor": "middle"
+    }
+   ]
+  },
+  {
+   "title": "Initial equilibrium",
+   "say": "We have an initial supply curve (S) and demand curve (D1); they intersect at equilibrium E1.",
+   "ops": [
+    {
+     "op": "line",
+     "id": "supply_curve",
+     "x1": 500,
+     "y1": 400,
+     "x2": 800,
+     "y2": 300,
+     "color": "blue"
+    },
+    {
+     "op": "line",
+     "id": "demand_curve_d1",
+     "x1": 400,
+     "y1": 200,
+     "x2": 900,
+     "y2": 600,
+     "color": "red"
+    },
+    {
+     "op": "ellipse",
+     "id": "equilibrium_e1",
+     "cx": 606,
+     "cy": 365,
+     "rx": 6,
+     "ry": 6,
+     "fill": "ink"
+    },
+    {
+     "op": "write",
+     "id": "label_e1",
+     "x": 620,
+     "y": 370,
+     "text": "E1",
+     "size": 34
+    }
+   ]
+  },
+  {
+   "title": "Show P1 and Q1",
+   "say": "At E1, the equilibrium price is P1 and quantity is Q1.",
+   "ops": [
+    {
+     "op": "line",
+     "id": "dash_p1",
+     "x1": 606,
+     "y1": 365,
+     "x2": 200,
+     "y2": 365,
+     "dash": true
+    },
+    {
+     "op": "line",
+     "id": "dash_q1",
+     "x1": 606,
+     "y1": 365,
+     "x2": 606,
+     "y2": 700,
+     "dash": true
+    },
+    {
+     "op": "write",
+     "id": "label_p1",
+     "x": 210,
+     "y": 370,
+     "text": "P1",
+     "size": 34
+    },
+    {
+     "op": "write",
+     "id": "label_q1",
+     "x": 600,
+     "y": 730,
+     "text": "Q1",
+     "size": 34
+    }
+   ]
+  },
+  {
+   "title": "Demand shifts right",
+   "say": "Now demand rises, shifting the demand curve to the right from D1 to D2.",
+   "ops": [
+    {
+     "op": "line",
+     "id": "demand_curve_d2",
+     "x1": 600,
+     "y1": 200,
+     "x2": 1100,
+     "y2": 600,
+     "color": "green"
+    },
+    {
+     "op": "write",
+     "id": "label_d2",
+     "x": 800,
+     "y": 180,
+     "text": "D2",
+     "size": 32,
+     "anchor": "middle"
+    }
+   ]
+  },
+  {
+   "title": "New equilibrium E2",
+   "say": "The new equilibrium is at E2, with a higher price P2.",
+   "ops": [
+    {
+     "op": "ellipse",
+     "id": "equilibrium_e2",
+     "cx": 747,
+     "cy": 318,
+     "rx": 6,
+     "ry": 6,
+     "fill": "ink"
+    },
+    {
+     "op": "line",
+     "id": "dash_p2",
+     "x1": 747,
+     "y1": 318,
+     "x2": 200,
+     "y2": 318,
+     "dash": true
+    },
+    {
+     "op": "write",
+     "id": "label_p2",
+     "x": 210,
+     "y": 323,
+     "text": "P2",
+     "size": 34
+    }
+   ]
+  },
+  {
+   "title": "Price rises",
+   "say": "Price has increased from P1 to P2.",
+   "ops": [
+    {
+     "op": "line",
+     "id": "arrow_price_up",
+     "x1": 170,
+     "y1": 365,
+     "x2": 170,
+     "y2": 318,
+     "arrow": true,
+     "width": 5
+    }
+   ]
+  },
+  {
+   "title": "Conclusion",
+   "say": "So, when demand rises, price increases.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "conclusion_text",
+     "x": 1150,
+     "y": 300,
+     "text": "Price increases",
+     "size": 44,
+     "anchor": "middle"
+    }
+   ]
+  }
+ ]
+}

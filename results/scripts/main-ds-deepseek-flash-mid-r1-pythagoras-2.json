@@ -1,0 +1,196 @@
+{
+ "title": "Why Pythagoras works",
+ "lang": "en",
+ "steps": [
+  {
+   "title": "Title",
+   "say": "Why does the Pythagorean theorem work? Let us rebuild it from areas.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "title",
+     "x": 80,
+     "y": 40,
+     "text": "Why Pythagoras works",
+     "size": 56,
+     "color": "ink"
+    }
+   ]
+  },
+  {
+   "title": "Right triangle",
+   "say": "Start with a right triangle. Its legs are a and b, and its hypotenuse is c.",
+   "ops": [
+    {
+     "op": "line",
+     "id": "tri_ab",
+     "x1": 160,
+     "y1": 640,
+     "x2": 460,
+     "y2": 640,
+     "color": "ink",
+     "width": 5
+    },
+    {
+     "op": "line",
+     "id": "tri_ac",
+     "x1": 160,
+     "y1": 640,
+     "x2": 160,
+     "y2": 400,
+     "color": "ink",
+     "width": 5
+    },
+    {
+     "op": "line",
+     "id": "tri_bc",
+     "x1": 160,
+     "y1": 400,
+     "x2": 460,
+     "y2": 640,
+     "color": "ink",
+     "width": 5
+    },
+    {
+     "op": "rect",
+     "id": "right_angle",
+     "x": 160,
+     "y": 610,
+     "w": 30,
+     "h": 30,
+     "color": "gray",
+     "width": 3
+    },
+    {
+     "op": "write",
+     "id": "label_a",
+     "x": 110,
+     "y": 500,
+     "text": "a",
+     "size": 36,
+     "color": "ink"
+    },
+    {
+     "op": "write",
+     "id": "label_b",
+     "x": 290,
+     "y": 660,
+     "text": "b",
+     "size": 36,
+     "color": "ink"
+    },
+    {
+     "op": "write",
+     "id": "label_c",
+     "x": 320,
+     "y": 500,
+     "text": "c",
+     "size": 36,
+     "color": "blue"
+    }
+   ]
+  },
+  {
+   "title": "Build a big square",
+   "say": "Build a big square of side a+b and place four copies of the triangle around a central square of area c².",
+   "ops": [
+    {
+     "op": "rect",
+     "id": "bigsq",
+     "x": 800,
+     "y": 250,
+     "w": 500,
+     "h": 500,
+     "color": "ink",
+     "width": 5
+    },
+    {
+     "op": "path",
+     "id": "csq",
+     "d": "M1100 250 L1300 550 L1000 750 L800 450 Z",
+     "color": "blue",
+     "width": 5
+    },
+    {
+     "op": "write",
+     "id": "label_c2",
+     "x": 1050,
+     "y": 474,
+     "text": "c²",
+     "size": 40,
+     "color": "blue",
+     "anchor": "middle"
+    }
+   ]
+  },
+  {
+   "title": "Total area",
+   "say": "The big square has total area (a+b)².",
+   "ops": [
+    {
+     "op": "write",
+     "id": "eq_big",
+     "x": 100,
+     "y": 670,
+     "text": "Big area = (a+b)²",
+     "size": 40,
+     "color": "ink"
+    }
+   ]
+  },
+  {
+   "title": "Count the pieces",
+   "say": "The same big square is four triangles plus the central c² square, so its area is 4(½ab)+c².",
+   "ops": [
+    {
+     "op": "write",
+     "id": "eq_parts",
+     "x": 100,
+     "y": 730,
+     "text": "= 4(½ab) + c²",
+     "size": 40,
+     "color": "ink"
+    }
+   ]
+  },
+  {
+   "title": "Expand",
+   "say": "Expand (a+b)² and compare the two area expressions.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "eq_expand",
+     "x": 100,
+     "y": 790,
+     "text": "a²+2ab+b² = 2ab+c²",
+     "size": 36,
+     "color": "ink"
+    }
+   ]
+  },
+  {
+   "title": "Cancel",
+   "say": "Cancel 2ab from both sides. That leaves a²+b²=c².",
+   "ops": [
+    {
+     "op": "erase",
+     "ids": [
+      "eq_big",
+      "eq_parts",
+      "eq_expand"
+     ]
+    },
+    {
+     "op": "write",
+     "id": "final_eq",
+     "x": 100,
+     "y": 700,
+     "text": "a² + b² = c²",
+     "size": 52,
+     "color": "red",
+     "underline": true
+    }
+   ]
+  }
+ ]
+}

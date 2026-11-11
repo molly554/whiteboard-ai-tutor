@@ -1,0 +1,114 @@
+{
+ "title": "Solving x² − 5x + 6 = 0",
+ "lang": "en",
+ "steps": [
+  {
+   "title": "The equation",
+   "say": "We need to solve the quadratic equation x squared minus five x plus six equals zero.",
+   "ops": [
+    {
+     "id": "eq",
+     "x": 800,
+     "y": 100,
+     "text": "x² − 5x + 6 = 0",
+     "size": 60,
+     "anchor": "middle"
+    }
+   ]
+  },
+  {
+   "title": "First plan: factor",
+   "say": "One way is to factor the left side. We look for two numbers that multiply to 6 and add to −5.",
+   "ops": [
+    {
+     "id": "factor_note",
+     "x": 800,
+     "y": 220,
+     "text": "Find two numbers: product = 6, sum = −5",
+     "size": 36,
+     "anchor": "middle"
+    },
+    {
+     "id": "factor_result",
+     "x": 800,
+     "y": 300,
+     "text": "−2 and −3  →  (x − 2)(x − 3) = 0",
+     "size": 40,
+     "anchor": "middle"
+    }
+   ]
+  },
+  {
+   "title": "Switch to quadratic formula",
+   "say": "Factoring works here, but let's switch to the quadratic formula—a more general method that always works.",
+   "ops": [
+    {
+     "id": "formula",
+     "x": 800,
+     "y": 420,
+     "text": "x = [ −b ± √(b² − 4ac) ] / (2a)",
+     "size": 44,
+     "anchor": "middle"
+    },
+    {
+     "id": "coeffs",
+     "x": 800,
+     "y": 520,
+     "text": "a = 1,  b = −5,  c = 6",
+     "size": 36,
+     "anchor": "middle"
+    }
+   ]
+  },
+  {
+   "title": "Compute the discriminant",
+   "say": "First compute the discriminant, b squared minus 4ac. That's 25 minus 24, which equals 1.",
+   "ops": [
+    {
+     "id": "disc",
+     "x": 800,
+     "y": 620,
+     "text": "b² − 4ac = (−5)² − 4·1·6 = 25 − 24 = 1",
+     "size": 36,
+     "anchor": "middle"
+    }
+   ]
+  },
+  {
+   "title": "Apply the formula",
+   "say": "Now plug everything into the formula: x equals 5 plus or minus the square root of 1, all over 2.",
+   "ops": [
+    {
+     "id": "subst",
+     "x": 800,
+     "y": 720,
+     "text": "x = [ 5 ± √1 ] / 2 = (5 ± 1) / 2",
+     "size": 40,
+     "anchor": "middle"
+    }
+   ]
+  },
+  {
+   "title": "Two solutions",
+   "say": "This gives two values: x equals 3 and x equals 2. Both match what factoring would give.",
+   "ops": [
+    {
+     "id": "sol1",
+     "x": 500,
+     "y": 820,
+     "text": "x = (5 + 1)/2 = 3",
+     "size": 40,
+     "anchor": "middle"
+    },
+    {
+     "id": "sol2",
+     "x": 1100,
+     "y": 820,
+     "text": "x = (5 − 1)/2 = 2",
+     "size": 40,
+     "anchor": "middle"
+    }
+   ]
+  }
+ ]
+}

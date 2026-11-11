@@ -1,0 +1,298 @@
+{
+ "title": "光合作用的场所：叶绿体",
+ "lang": "zh",
+ "steps": [
+  {
+   "title": "明确核心场所",
+   "say": "光合作用发生在植物细胞的叶绿体中。它主要分布在植物的叶肉细胞内部。",
+   "ops": [
+    {
+     "op": "write",
+     "id": "t_main",
+     "x": 80,
+     "y": 50,
+     "text": "光合作用的场所：叶绿体",
+     "size": 52,
+     "color": "ink"
+    },
+    {
+     "op": "write",
+     "id": "ans_core",
+     "x": 80,
+     "y": 130,
+     "text": "核心场所：叶绿体 (Chloroplast)",
+     "size": 34,
+     "color": "green"
+    },
+    {
+     "op": "write",
+     "id": "ans_sub",
+     "x": 80,
+     "y": 180,
+     "text": "主要存在于绿色植物的叶肉细胞中",
+     "size": 26,
+     "color": "gray"
+    }
+   ]
+  },
+  {
+   "title": "叶绿体的双层膜",
+   "say": "叶绿体具有双层膜结构，外膜和内膜包裹着内部复杂的反应系统。",
+   "ops": [
+    {
+     "op": "ellipse",
+     "id": "cp_outer",
+     "cx": 1050,
+     "cy": 450,
+     "rx": 420,
+     "ry": 250,
+     "color": "green",
+     "width": 6,
+     "fill": "green"
+    },
+    {
+     "op": "ellipse",
+     "id": "cp_inner",
+     "cx": 1050,
+     "cy": 450,
+     "rx": 390,
+     "ry": 225,
+     "color": "green",
+     "width": 4
+    },
+    {
+     "op": "line",
+     "id": "ptr_out",
+     "x1": 690,
+     "y1": 310,
+     "x2": 580,
+     "y2": 260,
+     "color": "gray",
+     "width": 3,
+     "arrow": true
+    },
+    {
+     "op": "write",
+     "id": "lbl_out",
+     "x": 510,
+     "y": 240,
+     "text": "外膜",
+     "size": 28,
+     "color": "gray"
+    },
+    {
+     "op": "line",
+     "id": "ptr_in",
+     "x1": 720,
+     "y1": 360,
+     "x2": 580,
+     "y2": 330,
+     "color": "gray",
+     "width": 3,
+     "arrow": true
+    },
+    {
+     "op": "write",
+     "id": "lbl_in",
+     "x": 510,
+     "y": 310,
+     "text": "内膜",
+     "size": 28,
+     "color": "gray"
+    }
+   ]
+  },
+  {
+   "title": "光反应场所：类囊体与基粒",
+   "say": "叶绿体内部由类囊体堆叠形成基粒。类囊体薄膜上含有叶绿素，是光反应的发生地。",
+   "ops": [
+    {
+     "op": "ellipse",
+     "id": "thk_a1",
+     "cx": 880,
+     "cy": 390,
+     "rx": 55,
+     "ry": 16,
+     "color": "green",
+     "width": 3,
+     "fill": "green"
+    },
+    {
+     "op": "ellipse",
+     "id": "thk_a2",
+     "cx": 880,
+     "cy": 430,
+     "rx": 55,
+     "ry": 16,
+     "color": "green",
+     "width": 3,
+     "fill": "green"
+    },
+    {
+     "op": "ellipse",
+     "id": "thk_a3",
+     "cx": 880,
+     "cy": 470,
+     "rx": 55,
+     "ry": 16,
+     "color": "green",
+     "width": 3,
+     "fill": "green"
+    },
+    {
+     "op": "ellipse",
+     "id": "thk_a4",
+     "cx": 880,
+     "cy": 510,
+     "rx": 55,
+     "ry": 16,
+     "color": "green",
+     "width": 3,
+     "fill": "green"
+    },
+    {
+     "op": "ellipse",
+     "id": "thk_b1",
+     "cx": 1030,
+     "cy": 420,
+     "rx": 50,
+     "ry": 15,
+     "color": "green",
+     "width": 3,
+     "fill": "green"
+    },
+    {
+     "op": "ellipse",
+     "id": "thk_b2",
+     "cx": 1030,
+     "cy": 460,
+     "rx": 50,
+     "ry": 15,
+     "color": "green",
+     "width": 3,
+     "fill": "green"
+    },
+    {
+     "op": "ellipse",
+     "id": "thk_b3",
+     "cx": 1030,
+     "cy": 500,
+     "rx": 50,
+     "ry": 15,
+     "color": "green",
+     "width": 3,
+     "fill": "green"
+    },
+    {
+     "op": "line",
+     "id": "lamella",
+     "x1": 935,
+     "y1": 470,
+     "x2": 980,
+     "y2": 470,
+     "color": "green",
+     "width": 3
+    },
+    {
+     "op": "line",
+     "id": "ptr_grana",
+     "x1": 825,
+     "y1": 470,
+     "x2": 520,
+     "y2": 470,
+     "color": "blue",
+     "width": 3,
+     "arrow": true
+    },
+    {
+     "op": "write",
+     "id": "lbl_grana",
+     "x": 230,
+     "y": 420,
+     "text": "基粒 (由类囊体堆叠)\n• 光反应场所\n• 膜上含叶绿素与光合酶",
+     "size": 26,
+     "color": "blue"
+    }
+   ]
+  },
+  {
+   "title": "暗反应场所：叶绿体基质",
+   "say": "在类囊体周围充盈的液体介质叫做基质，暗反应（碳反应）在这里将二氧化碳合成为糖类。",
+   "ops": [
+    {
+     "op": "line",
+     "id": "ptr_stroma",
+     "x1": 1180,
+     "y1": 390,
+     "x2": 1300,
+     "y2": 310,
+     "color": "red",
+     "width": 3,
+     "arrow": true
+    },
+    {
+     "op": "write",
+     "id": "lbl_stroma",
+     "x": 1280,
+     "y": 240,
+     "text": "叶绿体基质 (Stroma)\n• 暗反应 (卡尔文循环)\n• 利用能量固定 CO₂\n• 合成葡萄糖等有机物",
+     "size": 26,
+     "color": "red"
+    }
+   ]
+  },
+  {
+   "title": "两阶段分工总结",
+   "say": "总结起来，光合作用分两步：光反应在类囊体薄膜上，暗反应在基质中，分工明确。",
+   "ops": [
+    {
+     "op": "rect",
+     "id": "sum_box",
+     "x": 80,
+     "y": 640,
+     "w": 520,
+     "h": 200,
+     "color": "gray",
+     "width": 2
+    },
+    {
+     "op": "write",
+     "id": "sum_title",
+     "x": 100,
+     "y": 655,
+     "text": "叶绿体内的两步分工：",
+     "size": 30,
+     "color": "ink",
+     "underline": true
+    },
+    {
+     "op": "write",
+     "id": "sum_step1",
+     "x": 100,
+     "y": 705,
+     "text": "1. 光反应 ➔ 类囊体薄膜 (光能 ➔ 化学能，释放 O₂)",
+     "size": 24,
+     "color": "blue"
+    },
+    {
+     "op": "write",
+     "id": "sum_step2",
+     "x": 100,
+     "y": 750,
+     "text": "2. 暗反应 ➔ 叶绿体基质 (固定 CO₂，合成糖类)",
+     "size": 24,
+     "color": "red"
+    },
+    {
+     "op": "write",
+     "id": "sum_note",
+     "x": 100,
+     "y": 795,
+     "text": "注：蓝细菌等原核生物无叶绿体，在光合片层上进行。",
+     "size": 22,
+     "color": "gray"
+    }
+   ]
+  }
+ ]
+}

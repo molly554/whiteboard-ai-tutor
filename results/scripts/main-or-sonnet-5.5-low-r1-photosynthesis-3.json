@@ -1,0 +1,162 @@
+{
+ "title": "光合作用的场所",
+ "lang": "zh",
+ "steps": [
+  {
+   "title": "先说答案",
+   "say": "光合作用发生在植物细胞的叶绿体中。",
+   "ops": [
+    {
+     "id": "t1",
+     "op": "write",
+     "x": 800,
+     "y": 50,
+     "text": "光合作用在哪里发生？",
+     "size": 56,
+     "anchor": "middle",
+     "color": "blue"
+    },
+    {
+     "id": "a1",
+     "op": "write",
+     "x": 800,
+     "y": 170,
+     "text": "答案：叶绿体",
+     "size": 44,
+     "anchor": "middle",
+     "color": "green",
+     "underline": true
+    }
+   ]
+  },
+  {
+   "title": "画植物细胞",
+   "say": "先画一个植物细胞，外面一圈是细胞壁。",
+   "ops": [
+    {
+     "id": "cell",
+     "op": "rect",
+     "x": 200,
+     "y": 300,
+     "w": 700,
+     "h": 500,
+     "color": "ink",
+     "width": 6
+    },
+    {
+     "id": "cl1",
+     "op": "write",
+     "x": 550,
+     "y": 820,
+     "text": "植物细胞",
+     "size": 34,
+     "anchor": "middle",
+     "color": "gray"
+    }
+   ]
+  },
+  {
+   "title": "画叶绿体",
+   "say": "细胞里有许多椭圆形的叶绿体，它们是绿色的。",
+   "ops": [
+    {
+     "id": "c1",
+     "op": "ellipse",
+     "cx": 400,
+     "cy": 480,
+     "rx": 90,
+     "ry": 55,
+     "rotate": -20,
+     "color": "green",
+     "fill": "green"
+    },
+    {
+     "id": "c2",
+     "op": "ellipse",
+     "cx": 700,
+     "cy": 560,
+     "rx": 90,
+     "ry": 55,
+     "rotate": 15,
+     "color": "green",
+     "fill": "green"
+    },
+    {
+     "id": "c3",
+     "op": "ellipse",
+     "cx": 480,
+     "cy": 690,
+     "rx": 90,
+     "ry": 55,
+     "rotate": 10,
+     "color": "green",
+     "fill": "green"
+    }
+   ]
+  },
+  {
+   "title": "标出叶绿体",
+   "say": "用箭头指向其中一个叶绿体，标出它的名字。",
+   "ops": [
+    {
+     "id": "ar1",
+     "op": "line",
+     "x1": 1100,
+     "y1": 420,
+     "x2": 790,
+     "y2": 540,
+     "arrow": true,
+     "color": "red"
+    },
+    {
+     "id": "lb1",
+     "op": "write",
+     "x": 1000,
+     "y": 340,
+     "text": "叶绿体",
+     "size": 44,
+     "color": "red"
+    }
+   ]
+  },
+  {
+   "title": "为什么在这里",
+   "say": "叶绿体里含有叶绿素，能吸收光能，所以光合作用在这里进行。",
+   "ops": [
+    {
+     "id": "w1",
+     "op": "write",
+     "x": 1000,
+     "y": 600,
+     "text": "含叶绿素\n吸收光能",
+     "size": 38,
+     "color": "green"
+    }
+   ]
+  },
+  {
+   "title": "总结反应",
+   "say": "在叶绿体中，二氧化碳和水在光照下变成有机物和氧气。",
+   "ops": [
+    {
+     "id": "er",
+     "op": "erase",
+     "ids": [
+      "w1",
+      "lb1",
+      "ar1"
+     ]
+    },
+    {
+     "id": "eq",
+     "op": "write",
+     "x": 1000,
+     "y": 450,
+     "text": "CO₂ + H₂O\n光照 → 糖 + O₂",
+     "size": 38,
+     "color": "blue"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,425 @@
+{
+ "title": "Why Do We Have Seasons?",
+ "lang": "en",
+ "steps": [
+  {
+   "title": "The Big Myth vs. Reality",
+   "say": "Many people think seasons happen because Earth gets closer or farther from the Sun. But Earth's orbit is nearly a circle!",
+   "ops": [
+    {
+     "op": "write",
+     "id": "main_title",
+     "x": 800,
+     "y": 50,
+     "text": "Why Do We Have Seasons?",
+     "size": 52,
+     "color": "ink",
+     "anchor": "middle",
+     "underline": true
+    },
+    {
+     "op": "rect",
+     "id": "myth_box",
+     "x": 120,
+     "y": 140,
+     "w": 640,
+     "h": 130,
+     "color": "red",
+     "width": 3,
+     "fill": "red"
+    },
+    {
+     "op": "write",
+     "id": "myth_text",
+     "x": 150,
+     "y": 160,
+     "text": "MYTH: Earth is closer to the Sun in summer.\nReality: In July, Earth is actually farthest!",
+     "size": 30,
+     "color": "red"
+    },
+    {
+     "op": "rect",
+     "id": "fact_box",
+     "x": 840,
+     "y": 140,
+     "w": 640,
+     "h": 130,
+     "color": "green",
+     "width": 3,
+     "fill": "green"
+    },
+    {
+     "op": "write",
+     "id": "fact_text",
+     "x": 870,
+     "y": 160,
+     "text": "FACT: Earth's axis is tilted at 23.5°.\nThe tilt stays pointed in the same direction!",
+     "size": 30,
+     "color": "green"
+    }
+   ]
+  },
+  {
+   "title": "Earth's Orbit and the Sun",
+   "say": "Let's look at Earth revolving around the Sun throughout the year, keeping its axis tilted at 23.5 degrees.",
+   "ops": [
+    {
+     "op": "erase",
+     "ids": [
+      "myth_box",
+      "myth_text",
+      "fact_box",
+      "fact_text"
+     ]
+    },
+    {
+     "op": "ellipse",
+     "id": "orbit_path",
+     "cx": 800,
+     "cy": 450,
+     "rx": 540,
+     "ry": 160,
+     "color": "gray",
+     "width": 3,
+     "dash": true
+    },
+    {
+     "op": "ellipse",
+     "id": "sun_body",
+     "cx": 800,
+     "cy": 450,
+     "rx": 55,
+     "ry": 55,
+     "color": "red",
+     "width": 4,
+     "fill": "red"
+    },
+    {
+     "op": "write",
+     "id": "sun_label",
+     "x": 800,
+     "y": 435,
+     "text": "SUN",
+     "size": 32,
+     "color": "red",
+     "anchor": "middle"
+    }
+   ]
+  },
+  {
+   "title": "June: Northern Summer",
+   "say": "In June, the North Pole tilts toward the Sun. Sunlight hits the Northern Hemisphere directly, giving longer days and warmer weather.",
+   "ops": [
+    {
+     "op": "ellipse",
+     "id": "earth_june",
+     "cx": 260,
+     "cy": 450,
+     "rx": 42,
+     "ry": 42,
+     "color": "blue",
+     "width": 4,
+     "fill": "blue"
+    },
+    {
+     "op": "line",
+     "id": "axis_june",
+     "x1": 290,
+     "y1": 380,
+     "x2": 230,
+     "y2": 520,
+     "color": "ink",
+     "width": 4
+    },
+    {
+     "op": "line",
+     "id": "equator_june",
+     "x1": 222,
+     "y1": 435,
+     "x2": 298,
+     "y2": 465,
+     "color": "gray",
+     "width": 2,
+     "dash": true
+    },
+    {
+     "op": "line",
+     "id": "ray_june",
+     "x1": 730,
+     "y1": 450,
+     "x2": 320,
+     "y2": 450,
+     "color": "red",
+     "width": 3,
+     "arrow": true
+    },
+    {
+     "op": "write",
+     "id": "lbl_june",
+     "x": 260,
+     "y": 310,
+     "text": "JUNE SOLSTICE",
+     "size": 32,
+     "color": "ink",
+     "anchor": "middle"
+    },
+    {
+     "op": "write",
+     "id": "desc_june",
+     "x": 260,
+     "y": 540,
+     "text": "North tilts TOWARD Sun\n• North: Summer (warm & long days)\n• South: Winter (cold & short days)",
+     "size": 26,
+     "color": "ink",
+     "anchor": "middle"
+    }
+   ]
+  },
+  {
+   "title": "December: Northern Winter",
+   "say": "Six months later in December, the tilt hasn't changed direction, so now the South Pole leans toward the Sun instead.",
+   "ops": [
+    {
+     "op": "ellipse",
+     "id": "earth_dec",
+     "cx": 1340,
+     "cy": 450,
+     "rx": 42,
+     "ry": 42,
+     "color": "blue",
+     "width": 4,
+     "fill": "blue"
+    },
+    {
+     "op": "line",
+     "id": "axis_dec",
+     "x1": 1370,
+     "y1": 380,
+     "x2": 1310,
+     "y2": 520,
+     "color": "ink",
+     "width": 4
+    },
+    {
+     "op": "line",
+     "id": "equator_dec",
+     "x1": 1302,
+     "y1": 435,
+     "x2": 1378,
+     "y2": 465,
+     "color": "gray",
+     "width": 2,
+     "dash": true
+    },
+    {
+     "op": "line",
+     "id": "ray_dec",
+     "x1": 870,
+     "y1": 450,
+     "x2": 1280,
+     "y2": 450,
+     "color": "red",
+     "width": 3,
+     "arrow": true
+    },
+    {
+     "op": "write",
+     "id": "lbl_dec",
+     "x": 1340,
+     "y": 310,
+     "text": "DECEMBER SOLSTICE",
+     "size": 32,
+     "color": "ink",
+     "anchor": "middle"
+    },
+    {
+     "op": "write",
+     "id": "desc_dec",
+     "x": 1340,
+     "y": 540,
+     "text": "North tilts AWAY from Sun\n• North: Winter (cold & short days)\n• South: Summer (warm & long days)",
+     "size": 26,
+     "color": "ink",
+     "anchor": "middle"
+    }
+   ]
+  },
+  {
+   "title": "Why Angle Matters: Energy Concentration",
+   "say": "Direct sunlight concentrates heat into a tight spot, while slanted sunlight spreads the same energy over a much larger area.",
+   "ops": [
+    {
+     "op": "erase",
+     "ids": [
+      "orbit_path",
+      "sun_body",
+      "sun_label",
+      "earth_june",
+      "axis_june",
+      "equator_june",
+      "ray_june",
+      "lbl_june",
+      "desc_june",
+      "earth_dec",
+      "axis_dec",
+      "equator_dec",
+      "ray_dec",
+      "lbl_dec",
+      "desc_dec"
+     ]
+    },
+    {
+     "op": "write",
+     "id": "angle_heading",
+     "x": 800,
+     "y": 140,
+     "text": "The Mechanism: Direct vs. Slanted Sunlight",
+     "size": 38,
+     "color": "ink",
+     "anchor": "middle"
+    },
+    {
+     "op": "line",
+     "id": "ground_direct",
+     "x1": 200,
+     "y1": 460,
+     "x2": 560,
+     "y2": 460,
+     "color": "ink",
+     "width": 4
+    },
+    {
+     "op": "line",
+     "id": "beam_dir_1",
+     "x1": 340,
+     "y1": 250,
+     "x2": 340,
+     "y2": 455,
+     "color": "red",
+     "width": 3,
+     "arrow": true
+    },
+    {
+     "op": "line",
+     "id": "beam_dir_2",
+     "x1": 420,
+     "y1": 250,
+     "x2": 420,
+     "y2": 455,
+     "color": "red",
+     "width": 3,
+     "arrow": true
+    },
+    {
+     "op": "rect",
+     "id": "spot_direct",
+     "x1": 340,
+     "y": 462,
+     "w": 80,
+     "h": 14,
+     "color": "red",
+     "fill": "red"
+    },
+    {
+     "op": "write",
+     "id": "txt_direct",
+     "x": 380,
+     "y": 500,
+     "text": "Direct Sunlight (Summer)\n• High solar angle\n• Energy concentrated in small area\n• Maximum surface heating",
+     "size": 28,
+     "color": "ink",
+     "anchor": "middle"
+    },
+    {
+     "op": "line",
+     "id": "ground_slant",
+     "x1": 1040,
+     "y1": 460,
+     "x2": 1400,
+     "y2": 460,
+     "color": "ink",
+     "width": 4
+    },
+    {
+     "op": "line",
+     "id": "beam_slant_1",
+     "x1": 1100,
+     "y1": 270,
+     "x2": 1180,
+     "y2": 455,
+     "color": "blue",
+     "width": 3,
+     "arrow": true
+    },
+    {
+     "op": "line",
+     "id": "beam_slant_2",
+     "x1": 1180,
+     "y1": 270,
+     "x2": 1320,
+     "y2": 455,
+     "color": "blue",
+     "width": 3,
+     "arrow": true
+    },
+    {
+     "op": "rect",
+     "id": "spot_slant",
+     "x1": 1180,
+     "y": 462,
+     "w": 140,
+     "h": 14,
+     "color": "blue",
+     "fill": "blue"
+    },
+    {
+     "op": "write",
+     "id": "txt_slant",
+     "x": 1220,
+     "y": 500,
+     "text": "Slanted Sunlight (Winter)\n• Shallow solar angle\n• Energy spread over large area\n• Weak surface heating",
+     "size": 28,
+     "color": "ink",
+     "anchor": "middle"
+    }
+   ]
+  },
+  {
+   "title": "Summary: The Two Key Factors",
+   "say": "In summary, seasons are caused by Earth's 23.5-degree tilt and its revolution around the Sun.",
+   "ops": [
+    {
+     "op": "rect",
+     "id": "summary_card",
+     "x": 250,
+     "y": 660,
+     "w": 1100,
+     "h": 180,
+     "color": "green",
+     "width": 3,
+     "fill": "green"
+    },
+    {
+     "op": "write",
+     "id": "sum_title",
+     "x": 800,
+     "y": 680,
+     "text": "KEY TAKEAWAY",
+     "size": 34,
+     "color": "green",
+     "anchor": "middle"
+    },
+    {
+     "op": "write",
+     "id": "sum_content",
+     "x": 800,
+     "y": 730,
+     "text": "1. Earth's 23.5° axial tilt + Orbit around Sun = Seasons\n2. Tilted towards Sun = Direct rays + Long days (Summer)\n3. Tilted away from Sun = Slanted rays + Short days (Winter)",
+     "size": 28,
+     "color": "ink",
+     "anchor": "middle"
+    }
+   ]
+  }
+ ]
+}

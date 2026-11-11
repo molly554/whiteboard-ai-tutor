@@ -1,0 +1,159 @@
+{
+ "title": "Why do we have seasons?",
+ "lang": "en",
+ "steps": [
+  {
+   "title": "Distance is not the cause",
+   "say": "In northern summer, Earth is actually about 3% farther from the Sun. That gap is far too small to explain the heat, so distance cannot be the main cause.",
+   "ops": [
+    {
+     "op": "erase",
+     "ids": [
+      "sun",
+      "sunlabel",
+      "orbit",
+      "orbitlabel",
+      "earth1",
+      "axis1",
+      "earth2",
+      "axis2",
+      "earth3",
+      "axis3",
+      "earth4",
+      "axis4"
+     ]
+    },
+    {
+     "op": "write",
+     "id": "dist",
+     "x": 60,
+     "y": 260,
+     "text": "Northern summer: Earth is about 3% farther from the Sun.\nThat small gap cannot explain the heat.",
+     "size": 36
+    },
+    {
+     "op": "write",
+     "id": "distwrong",
+     "x": 60,
+     "y": 360,
+     "text": "So distance is NOT the main cause.",
+     "size": 40,
+     "color": "red"
+    }
+   ]
+  },
+  {
+   "title": "Tilt changes the angle of sunlight",
+   "say": "The northern half leans toward the Sun, so sunlight hits it more directly. The same light is spread over less ground, which makes it hotter.",
+   "ops": [
+    {
+     "op": "ellipse",
+     "id": "sun",
+     "cx": 200,
+     "cy": 600,
+     "rx": 60,
+     "ry": 60,
+     "color": "red",
+     "width": 5,
+     "fill": "red"
+    },
+    {
+     "op": "write",
+     "id": "sunlabel",
+     "x": 200,
+     "y": 675,
+     "text": "Sun",
+     "size": 30,
+     "anchor": "middle"
+    },
+    {
+     "op": "line",
+     "id": "r1",
+     "x1": 300,
+     "y1": 500,
+     "x2": 640,
+     "y2": 500,
+     "color": "red",
+     "width": 4,
+     "arrow": true
+    },
+    {
+     "op": "line",
+     "id": "r2",
+     "x1": 300,
+     "y1": 600,
+     "x2": 640,
+     "y2": 600,
+     "color": "red",
+     "width": 4,
+     "arrow": true
+    },
+    {
+     "op": "line",
+     "id": "r3",
+     "x1": 300,
+     "y1": 700,
+     "x2": 640,
+     "y2": 700,
+     "color": "red",
+     "width": 4,
+     "arrow": true
+    },
+    {
+     "op": "ellipse",
+     "id": "earth",
+     "cx": 800,
+     "cy": 600,
+     "rx": 150,
+     "ry": 150,
+     "color": "blue",
+     "width": 5
+    },
+    {
+     "op": "line",
+     "id": "tilt",
+     "x1": 736,
+     "y1": 453,
+     "x2": 864,
+     "y2": 747,
+     "color": "ink",
+     "width": 5,
+     "dash": "10 8"
+    },
+    {
+     "op": "write",
+     "id": "north",
+     "x": 800,
+     "y": 400,
+     "text": "North",
+     "size": 30,
+     "anchor": "middle",
+     "color": "blue"
+    },
+    {
+     "op": "write",
+     "id": "tiltexp",
+     "x": 1000,
+     "y": 430,
+     "text": "Northern summer: the north leans\ntoward the Sun. Sunlight hits it\nmore directly, so the ground heats\nmore, over less area.",
+     "size": 32
+    }
+   ]
+  },
+  {
+   "title": "The other half of the year",
+   "say": "Six months later, the southern half leans toward the Sun, so it is summer there while the north is in winter.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "south",
+     "x": 60,
+     "y": 790,
+     "text": "Six months later the south leans toward the Sun, and it is summer there.",
+     "size": 32,
+     "color": "green"
+    }
+   ]
+  }
+ ]
+}

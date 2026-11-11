@@ -1,0 +1,226 @@
+{
+ "title": "Demand Rises, Price Rises",
+ "lang": "en",
+ "steps": [
+  {
+   "title": "Set up the axes",
+   "say": "Let's draw a market graph with price on the vertical axis and quantity on the horizontal axis.",
+   "ops": [
+    {
+     "id": "t1",
+     "op": "write",
+     "x": 800,
+     "y": 50,
+     "text": "Demand Rises, Price Rises",
+     "size": 56,
+     "anchor": "middle"
+    },
+    {
+     "id": "ax_y",
+     "op": "line",
+     "x1": 300,
+     "y1": 780,
+     "x2": 300,
+     "y2": 190,
+     "arrow": true
+    },
+    {
+     "id": "ax_x",
+     "op": "line",
+     "x1": 300,
+     "y1": 780,
+     "x2": 900,
+     "y2": 780,
+     "arrow": true
+    },
+    {
+     "id": "lbl_p",
+     "op": "write",
+     "x": 120,
+     "y": 190,
+     "text": "Price",
+     "size": 36
+    },
+    {
+     "id": "lbl_q",
+     "op": "write",
+     "x": 780,
+     "y": 805,
+     "text": "Quantity",
+     "size": 36
+    }
+   ]
+  },
+  {
+   "title": "Draw supply",
+   "say": "The supply curve slopes upward: producers offer more when prices are higher.",
+   "ops": [
+    {
+     "id": "sup",
+     "op": "line",
+     "x1": 380,
+     "y1": 700,
+     "x2": 840,
+     "y2": 260,
+     "color": "green",
+     "width": 6
+    },
+    {
+     "id": "sup_l",
+     "op": "write",
+     "x": 850,
+     "y": 230,
+     "text": "Supply",
+     "size": 34,
+     "color": "green"
+    }
+   ]
+  },
+  {
+   "title": "Draw original demand",
+   "say": "The demand curve slopes downward: buyers want less when prices are higher.",
+   "ops": [
+    {
+     "id": "d1",
+     "op": "line",
+     "x1": 380,
+     "y1": 270,
+     "x2": 840,
+     "y2": 700,
+     "color": "blue",
+     "width": 6
+    },
+    {
+     "id": "d1_l",
+     "op": "write",
+     "x": 850,
+     "y": 700,
+     "text": "Demand D1",
+     "size": 34,
+     "color": "blue"
+    }
+   ]
+  },
+  {
+   "title": "Find the first equilibrium",
+   "say": "Where the curves cross is the equilibrium price and quantity.",
+   "ops": [
+    {
+     "id": "e1",
+     "op": "ellipse",
+     "cx": 610,
+     "cy": 485,
+     "rx": 12,
+     "ry": 12,
+     "color": "ink",
+     "fill": "gray"
+    },
+    {
+     "id": "p1_line",
+     "op": "line",
+     "x1": 300,
+     "y1": 485,
+     "x2": 598,
+     "y2": 485,
+     "color": "gray",
+     "dash": true,
+     "width": 3
+    },
+    {
+     "id": "p1_l",
+     "op": "write",
+     "x": 210,
+     "y": 468,
+     "text": "P1",
+     "size": 34
+    }
+   ]
+  },
+  {
+   "title": "Demand increases",
+   "say": "Now demand rises, so the whole demand curve shifts to the right.",
+   "ops": [
+    {
+     "id": "d2",
+     "op": "line",
+     "x1": 480,
+     "y1": 230,
+     "x2": 940,
+     "y2": 660,
+     "color": "red",
+     "width": 6
+    },
+    {
+     "id": "d2_l",
+     "op": "write",
+     "x": 950,
+     "y": 640,
+     "text": "Demand D2",
+     "size": 34,
+     "color": "red"
+    },
+    {
+     "id": "shift",
+     "op": "line",
+     "x1": 700,
+     "y1": 400,
+     "x2": 780,
+     "y2": 400,
+     "color": "red",
+     "arrow": true,
+     "width": 4
+    }
+   ]
+  },
+  {
+   "title": "New equilibrium",
+   "say": "The new curve meets supply higher up, so the equilibrium price is higher.",
+   "ops": [
+    {
+     "id": "e2",
+     "op": "ellipse",
+     "cx": 710,
+     "cy": 380,
+     "rx": 12,
+     "ry": 12,
+     "color": "ink",
+     "fill": "gray"
+    },
+    {
+     "id": "p2_line",
+     "op": "line",
+     "x1": 300,
+     "y1": 380,
+     "x2": 698,
+     "y2": 380,
+     "color": "gray",
+     "dash": true,
+     "width": 3
+    },
+    {
+     "id": "p2_l",
+     "op": "write",
+     "x": 210,
+     "y": 363,
+     "text": "P2",
+     "size": 34
+    }
+   ]
+  },
+  {
+   "title": "Conclusion",
+   "say": "When demand rises and supply stays the same, price goes up and the quantity traded also rises.",
+   "ops": [
+    {
+     "id": "c1",
+     "op": "write",
+     "x": 1060,
+     "y": 300,
+     "text": "Demand ↑\nPrice ↑ (P2 > P1)\nQuantity ↑",
+     "size": 40,
+     "color": "red"
+    }
+   ]
+  }
+ ]
+}

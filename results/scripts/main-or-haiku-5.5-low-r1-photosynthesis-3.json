@@ -1,0 +1,131 @@
+{
+ "title": "光合作用发生的场所",
+ "lang": "zh",
+ "steps": [
+  {
+   "title": "问题与标题",
+   "say": "光合作用主要发生在叶绿体里。我们先把问题写在白板上。",
+   "ops": [
+    {
+     "op": "write",
+     "id": "title",
+     "x": 800,
+     "y": 80,
+     "text": "光合作用发生在哪里？",
+     "size": 56,
+     "anchor": "middle",
+     "underline": true
+    },
+    {
+     "op": "write",
+     "id": "q1",
+     "x": 120,
+     "y": 200,
+     "text": "问：光合作用发生在细胞的哪个部分？",
+     "size": 40
+    }
+   ]
+  },
+  {
+   "title": "画一个细胞",
+   "say": "先画一个植物细胞的外形，细胞壁是最外层的边界。",
+   "ops": [
+    {
+     "op": "ellipse",
+     "id": "cell",
+     "cx": 800,
+     "cy": 500,
+     "rx": 380,
+     "ry": 260,
+     "color": "green",
+     "width": 6
+    },
+    {
+     "op": "write",
+     "id": "cellLbl",
+     "x": 800,
+     "y": 240,
+     "text": "植物细胞",
+     "size": 36,
+     "anchor": "middle",
+     "color": "green"
+    }
+   ]
+  },
+  {
+   "title": "标出叶绿体",
+   "say": "细胞里有许多绿色的小椭圆，它们就是叶绿体，光合作用在这里进行。",
+   "ops": [
+    {
+     "op": "ellipse",
+     "id": "chl1",
+     "cx": 620,
+     "cy": 480,
+     "rx": 70,
+     "ry": 40,
+     "color": "green",
+     "fill": "green",
+     "width": 4
+    },
+    {
+     "op": "ellipse",
+     "id": "chl2",
+     "cx": 860,
+     "cy": 520,
+     "rx": 70,
+     "ry": 40,
+     "color": "green",
+     "fill": "green",
+     "width": 4
+    },
+    {
+     "op": "ellipse",
+     "id": "chl3",
+     "cx": 760,
+     "cy": 640,
+     "rx": 70,
+     "ry": 40,
+     "color": "green",
+     "fill": "green",
+     "width": 4
+    },
+    {
+     "op": "line",
+     "id": "ptr",
+     "x1": 760,
+     "y1": 600,
+     "x2": 1000,
+     "y2": 360,
+     "color": "red",
+     "width": 4,
+     "arrow": true
+    },
+    {
+     "op": "write",
+     "id": "chlLbl",
+     "x": 1010,
+     "y": 330,
+     "text": "叶绿体",
+     "size": 36,
+     "color": "red"
+    }
+   ]
+  },
+  {
+   "title": "关键结论",
+   "say": "叶绿体中的叶绿素吸收光能，把二氧化碳和水转化为有机物并释放氧气。",
+   "ops": [
+    {
+     "op": "write",
+     "id": "concl",
+     "x": 120,
+     "y": 760,
+     "text": "答：在叶绿体中进行。",
+     "size": 44,
+     "color": "blue",
+     "underline": true
+    }
+   ]
+  }
+ ]
+}

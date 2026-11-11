@@ -1,0 +1,282 @@
+{
+ "title": "Demand rises, price rises",
+ "lang": "en",
+ "steps": [
+  {
+   "title": "Set up the question",
+   "say": "We ask what happens to price when demand goes up. Price is on the vertical axis and quantity on the horizontal axis.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "title",
+     "x": 800,
+     "y": 50,
+     "text": "Demand rises, price rises",
+     "size": 56,
+     "anchor": "middle",
+     "underline": true
+    }
+   ]
+  },
+  {
+   "title": "Draw the axes",
+   "say": "The vertical axis is price and the horizontal axis is quantity.",
+   "ops": [
+    {
+     "op": "line",
+     "id": "axY",
+     "x1": 200,
+     "y1": 760,
+     "x2": 200,
+     "y2": 130,
+     "arrow": true
+    },
+    {
+     "op": "line",
+     "id": "axX",
+     "x1": 200,
+     "y1": 760,
+     "x2": 1400,
+     "y2": 760,
+     "arrow": true
+    },
+    {
+     "op": "write",
+     "id": "lblP",
+     "x": 120,
+     "y": 110,
+     "text": "Price",
+     "size": 32
+    },
+    {
+     "op": "write",
+     "id": "lblQ",
+     "x": 1290,
+     "y": 800,
+     "text": "Quantity",
+     "size": 32
+    }
+   ]
+  },
+  {
+   "title": "Draw supply and demand",
+   "say": "Supply slopes up and demand slopes down. They cross at the equilibrium point E0.",
+   "ops": [
+    {
+     "op": "line",
+     "id": "S",
+     "x1": 320,
+     "y1": 700,
+     "x2": 1100,
+     "y2": 260,
+     "color": "blue",
+     "width": 5
+    },
+    {
+     "op": "line",
+     "id": "D",
+     "x1": 320,
+     "y1": 240,
+     "x2": 1100,
+     "y2": 680,
+     "color": "red",
+     "width": 5
+    },
+    {
+     "op": "write",
+     "id": "lblS",
+     "x": 1120,
+     "y": 230,
+     "text": "S",
+     "size": 36,
+     "color": "blue"
+    },
+    {
+     "op": "write",
+     "id": "lblD",
+     "x": 1120,
+     "y": 650,
+     "text": "D",
+     "size": 36,
+     "color": "red"
+    }
+   ]
+  },
+  {
+   "title": "Mark the equilibrium",
+   "say": "At E0 the price is P0 and the quantity is Q0. The dashed lines show these values on the axes.",
+   "ops": [
+    {
+     "op": "ellipse",
+     "id": "e0",
+     "cx": 728,
+     "cy": 470,
+     "rx": 8,
+     "ry": 8,
+     "fill": "ink"
+    },
+    {
+     "op": "write",
+     "id": "lblE0",
+     "x": 745,
+     "y": 425,
+     "text": "E0",
+     "size": 30
+    },
+    {
+     "op": "line",
+     "id": "g0h",
+     "x1": 200,
+     "y1": 470,
+     "x2": 728,
+     "y2": 470,
+     "color": "gray",
+     "width": 3,
+     "dash": "8 6"
+    },
+    {
+     "op": "line",
+     "id": "g0v",
+     "x1": 728,
+     "y1": 470,
+     "x2": 728,
+     "y2": 760,
+     "color": "gray",
+     "width": 3,
+     "dash": "8 6"
+    },
+    {
+     "op": "write",
+     "id": "lblP0",
+     "x": 120,
+     "y": 452,
+     "text": "P0",
+     "size": 30
+    },
+    {
+     "op": "write",
+     "id": "lblQ0",
+     "x": 710,
+     "y": 790,
+     "text": "Q0",
+     "size": 30
+    }
+   ]
+  },
+  {
+   "title": "Demand shifts right",
+   "say": "Demand rises, so the demand curve moves right to D'. At the old price, buyers now want more.",
+   "ops": [
+    {
+     "op": "line",
+     "id": "D2",
+     "x1": 520,
+     "y1": 240,
+     "x2": 1300,
+     "y2": 680,
+     "color": "red",
+     "width": 5,
+     "arrow": false
+    },
+    {
+     "op": "write",
+     "id": "lblD2",
+     "x": 1320,
+     "y": 650,
+     "text": "D'",
+     "size": 36,
+     "color": "red"
+    }
+   ]
+  },
+  {
+   "title": "New equilibrium",
+   "say": "The new equilibrium E1 is higher and further right. Price rises to P1 and quantity rises to Q1.",
+   "ops": [
+    {
+     "op": "ellipse",
+     "id": "e1",
+     "cx": 828,
+     "cy": 414,
+     "rx": 8,
+     "ry": 8,
+     "fill": "ink"
+    },
+    {
+     "op": "write",
+     "id": "lblE1",
+     "x": 845,
+     "y": 370,
+     "text": "E1",
+     "size": 30
+    },
+    {
+     "op": "line",
+     "id": "g1h",
+     "x1": 200,
+     "y1": 414,
+     "x2": 828,
+     "y2": 414,
+     "color": "gray",
+     "width": 3,
+     "dash": "8 6"
+    },
+    {
+     "op": "line",
+     "id": "g1v",
+     "x1": 828,
+     "y1": 414,
+     "x2": 828,
+     "y2": 760,
+     "color": "gray",
+     "width": 3,
+     "dash": "8 6"
+    },
+    {
+     "op": "write",
+     "id": "lblP1",
+     "x": 120,
+     "y": 396,
+     "text": "P1",
+     "size": 30,
+     "color": "red"
+    },
+    {
+     "op": "write",
+     "id": "lblQ1",
+     "x": 810,
+     "y": 790,
+     "text": "Q1",
+     "size": 30,
+     "color": "red"
+    }
+   ]
+  },
+  {
+   "title": "Read the result",
+   "say": "Price goes up from P0 to P1, and quantity traded also goes up from Q0 to Q1.",
+   "ops": [
+    {
+     "op": "line",
+     "id": "arrP",
+     "x1": 170,
+     "y1": 452,
+     "x2": 170,
+     "y2": 405,
+     "color": "red",
+     "width": 5,
+     "arrow": true
+    },
+    {
+     "op": "write",
+     "id": "concl",
+     "x": 900,
+     "y": 130,
+     "text": "Demand up → price up\nQuantity sold up too",
+     "size": 36,
+     "color": "green"
+    }
+   ]
+  }
+ ]
+}

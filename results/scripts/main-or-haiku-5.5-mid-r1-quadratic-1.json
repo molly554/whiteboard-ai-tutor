@@ -1,0 +1,166 @@
+{
+ "title": "Solving x² − 5x + 6 = 0",
+ "lang": "en",
+ "steps": [
+  {
+   "title": "Write the equation",
+   "say": "We want the x values that make x² − 5x + 6 equal zero.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "t",
+     "x": 800,
+     "y": 90,
+     "text": "Solve x² − 5x + 6 = 0",
+     "size": 56,
+     "anchor": "middle",
+     "underline": true
+    }
+   ]
+  },
+  {
+   "title": "Method 1: quadratic formula",
+   "say": "Read off a, b, and c, then substitute them into the formula.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "h1",
+     "x": 100,
+     "y": 200,
+     "text": "Method 1: quadratic formula",
+     "size": 40,
+     "color": "blue"
+    },
+    {
+     "op": "write",
+     "id": "abc",
+     "x": 100,
+     "y": 280,
+     "text": "a = 1,  b = −5,  c = 6",
+     "size": 40
+    },
+    {
+     "op": "write",
+     "id": "f",
+     "x": 100,
+     "y": 360,
+     "text": "x = (−b ± √(b² − 4ac)) / 2a",
+     "size": 40
+    }
+   ]
+  },
+  {
+   "title": "Compute the discriminant",
+   "say": "Under the root we get 25 − 24 = 1, a perfect square, so the roots are simple.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "d",
+     "x": 100,
+     "y": 460,
+     "text": "b² − 4ac = 25 − 24 = 1",
+     "size": 40
+    },
+    {
+     "op": "write",
+     "id": "r",
+     "x": 100,
+     "y": 540,
+     "text": "x = (5 ± 1) / 2",
+     "size": 40
+    },
+    {
+     "op": "write",
+     "id": "roots1",
+     "x": 100,
+     "y": 620,
+     "text": "x = 3   or   x = 2",
+     "size": 44,
+     "color": "green"
+    }
+   ]
+  },
+  {
+   "title": "Switch to factoring",
+   "say": "Factoring is quicker here: find two numbers with product 6 and sum −5.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "h2",
+     "x": 900,
+     "y": 200,
+     "text": "Simpler: factoring",
+     "size": 40,
+     "color": "blue"
+    },
+    {
+     "op": "write",
+     "id": "need",
+     "x": 900,
+     "y": 280,
+     "text": "product 6, sum −5",
+     "size": 40
+    },
+    {
+     "op": "write",
+     "id": "pair",
+     "x": 900,
+     "y": 360,
+     "text": "→ −2 and −3",
+     "size": 40
+    }
+   ]
+  },
+  {
+   "title": "Factored form",
+   "say": "The expression splits into two factors, and each factor can be set to zero.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "fac",
+     "x": 900,
+     "y": 460,
+     "text": "(x − 2)(x − 3) = 0",
+     "size": 44
+    }
+   ]
+  },
+  {
+   "title": "Read the roots",
+   "say": "Each factor gives one root, so x = 2 or x = 3, matching the formula.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "ans",
+     "x": 900,
+     "y": 560,
+     "text": "x = 2  or  x = 3",
+     "size": 44,
+     "color": "green"
+    }
+   ]
+  },
+  {
+   "title": "Check both roots",
+   "say": "Substitute each value back into the original equation to confirm it gives zero.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "chk1",
+     "x": 900,
+     "y": 680,
+     "text": "x=2: 4 − 10 + 6 = 0 ✓",
+     "size": 34
+    },
+    {
+     "op": "write",
+     "id": "chk2",
+     "x": 900,
+     "y": 740,
+     "text": "x=3: 9 − 15 + 6 = 0 ✓",
+     "size": 34
+    }
+   ]
+  }
+ ]
+}

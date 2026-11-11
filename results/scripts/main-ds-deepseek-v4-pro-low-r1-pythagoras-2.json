@@ -1,0 +1,304 @@
+{
+ "title": "Pythagorean Theorem",
+ "lang": "en",
+ "steps": [
+  {
+   "title": "Draw a right triangle",
+   "say": "Let's start with a right triangle and label its sides.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "title",
+     "x": 640,
+     "y": 60,
+     "text": "Why does a² + b² = c² work?",
+     "size": 48,
+     "anchor": "middle"
+    },
+    {
+     "op": "path",
+     "id": "triangle",
+     "d": "M 180 620 L 180 250 L 620 250 Z",
+     "color": "ink",
+     "width": 5
+    },
+    {
+     "op": "rect",
+     "id": "rightAngle",
+     "x": 180,
+     "y": 250,
+     "w": 40,
+     "h": 40,
+     "color": "ink",
+     "width": 3
+    },
+    {
+     "op": "write",
+     "id": "labelA",
+     "x": 155,
+     "y": 430,
+     "text": "a",
+     "size": 40,
+     "color": "blue",
+     "anchor": "start"
+    },
+    {
+     "op": "write",
+     "id": "labelB",
+     "x": 390,
+     "y": 265,
+     "text": "b",
+     "size": 40,
+     "color": "green",
+     "anchor": "start"
+    },
+    {
+     "op": "write",
+     "id": "labelC",
+     "x": 390,
+     "y": 470,
+     "text": "c",
+     "size": 40,
+     "color": "red",
+     "anchor": "start"
+    }
+   ]
+  },
+  {
+   "title": "Square each side",
+   "say": "Now imagine drawing a square on each side of the triangle.",
+   "ops": [
+    {
+     "op": "rect",
+     "id": "squareA",
+     "x": 180,
+     "y": 250,
+     "w": 370,
+     "h": 370,
+     "color": "blue",
+     "width": 4,
+     "fill": "blue"
+    },
+    {
+     "op": "rect",
+     "id": "squareB",
+     "x": 180,
+     "y": 250,
+     "w": 440,
+     "h": 440,
+     "color": "green",
+     "width": 4,
+     "fill": "green"
+    },
+    {
+     "op": "rect",
+     "id": "squareC",
+     "x": 620,
+     "y": 250,
+     "w": 370,
+     "h": 370,
+     "color": "red",
+     "width": 4,
+     "fill": "red"
+    },
+    {
+     "op": "write",
+     "id": "areaA",
+     "x": 310,
+     "y": 590,
+     "text": "a²",
+     "size": 36,
+     "color": "blue",
+     "anchor": "middle"
+    },
+    {
+     "op": "write",
+     "id": "areaB",
+     "x": 530,
+     "y": 590,
+     "text": "b²",
+     "size": 36,
+     "color": "green",
+     "anchor": "middle"
+    },
+    {
+     "op": "write",
+     "id": "areaC",
+     "x": 760,
+     "y": 590,
+     "text": "c²",
+     "size": 36,
+     "color": "red",
+     "anchor": "middle"
+    }
+   ]
+  },
+  {
+   "title": "Rearrange the pieces",
+   "say": "The same four triangles can be arranged two ways inside a large square.",
+   "ops": [
+    {
+     "op": "erase",
+     "ids": [
+      "squareA",
+      "squareB",
+      "squareC",
+      "areaA",
+      "areaB",
+      "areaC"
+     ]
+    },
+    {
+     "op": "rect",
+     "id": "bigSquare1",
+     "x": 180,
+     "y": 250,
+     "w": 440,
+     "h": 440,
+     "color": "ink",
+     "width": 4
+    },
+    {
+     "op": "path",
+     "id": "arrangement1",
+     "d": "M 180 250 L 620 250 L 620 690 L 180 690 Z M 180 250 L 620 690 M 620 250 L 180 690",
+     "color": "gray",
+     "width": 3,
+     "dash": "6 4"
+    },
+    {
+     "op": "write",
+     "id": "arrangement1Label",
+     "x": 400,
+     "y": 720,
+     "text": "Arrangement 1",
+     "size": 32,
+     "color": "gray",
+     "anchor": "middle"
+    }
+   ]
+  },
+  {
+   "title": "Compare the empty areas",
+   "say": "The empty area is c² in the first arrangement and a² + b² in the second.",
+   "ops": [
+    {
+     "op": "erase",
+     "ids": [
+      "arrangement1",
+      "arrangement1Label",
+      "bigSquare1"
+     ]
+    },
+    {
+     "op": "rect",
+     "id": "bigSquare2",
+     "x": 180,
+     "y": 250,
+     "w": 440,
+     "h": 440,
+     "color": "ink",
+     "width": 4
+    },
+    {
+     "op": "path",
+     "id": "arrangement2",
+     "d": "M 180 250 L 400 250 L 400 470 L 180 470 Z M 400 250 L 620 250 L 620 470 L 400 470 Z M 180 470 L 400 470 L 400 690 L 180 690 Z M 400 470 L 620 470 L 620 690 L 400 690 Z",
+     "color": "gray",
+     "width": 3,
+     "dash": "6 4"
+    },
+    {
+     "op": "write",
+     "id": "arrangement2Label",
+     "x": 400,
+     "y": 720,
+     "text": "Arrangement 2",
+     "size": 32,
+     "color": "gray",
+     "anchor": "middle"
+    }
+   ]
+  },
+  {
+   "title": "Equate the empty areas",
+   "say": "Since the big squares are the same size and the triangles are the same, the empty areas must be equal.",
+   "ops": [
+    {
+     "op": "erase",
+     "ids": [
+      "arrangement2",
+      "arrangement2Label",
+      "bigSquare2"
+     ]
+    },
+    {
+     "op": "write",
+     "id": "equation",
+     "x": 400,
+     "y": 400,
+     "text": "c² = a² + b²",
+     "size": 48,
+     "color": "red",
+     "anchor": "middle"
+    },
+    {
+     "op": "write",
+     "id": "equationNote",
+     "x": 400,
+     "y": 480,
+     "text": "The empty areas are equal!",
+     "size": 36,
+     "color": "ink",
+     "anchor": "middle"
+    }
+   ]
+  },
+  {
+   "title": "Summary",
+   "say": "So the Pythagorean theorem works because rearranging identical triangles shows the two areas must match.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "summary1",
+     "x": 400,
+     "y": 250,
+     "text": "Same big square",
+     "size": 40,
+     "color": "ink",
+     "anchor": "middle"
+    },
+    {
+     "op": "write",
+     "id": "summary2",
+     "x": 400,
+     "y": 320,
+     "text": "Same four triangles",
+     "size": 40,
+     "color": "ink",
+     "anchor": "middle"
+    },
+    {
+     "op": "write",
+     "id": "summary3",
+     "x": 400,
+     "y": 390,
+     "text": "So remaining areas are equal",
+     "size": 40,
+     "color": "ink",
+     "anchor": "middle"
+    },
+    {
+     "op": "write",
+     "id": "summary4",
+     "x": 400,
+     "y": 460,
+     "text": "a² + b² = c²",
+     "size": 48,
+     "color": "red",
+     "anchor": "middle"
+    }
+   ]
+  }
+ ]
+}

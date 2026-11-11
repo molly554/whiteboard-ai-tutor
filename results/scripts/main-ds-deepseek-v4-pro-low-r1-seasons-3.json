@@ -1,0 +1,515 @@
+{
+ "title": "Why Do We Have Seasons?",
+ "lang": "en",
+ "steps": [
+  {
+   "title": "Earth's Tilt",
+   "say": "The main reason we have seasons is that Earth's axis is tilted.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "title_tilt",
+     "x": 80,
+     "y": 60,
+     "text": "Earth's Tilt",
+     "size": 56,
+     "color": "ink"
+    },
+    {
+     "op": "ellipse",
+     "id": "earth_tilt",
+     "cx": 420,
+     "cy": 420,
+     "rx": 200,
+     "ry": 200,
+     "color": "blue",
+     "width": 4
+    },
+    {
+     "op": "line",
+     "id": "axis_tilt",
+     "x1": 420,
+     "y1": 210,
+     "x2": 420,
+     "y2": 630,
+     "color": "gray",
+     "width": 3,
+     "dash": true
+    },
+    {
+     "op": "line",
+     "id": "equator_tilt",
+     "x1": 230,
+     "y1": 420,
+     "x2": 610,
+     "y2": 420,
+     "color": "green",
+     "width": 3
+    },
+    {
+     "op": "write",
+     "id": "label_axis_tilt",
+     "x": 430,
+     "y": 640,
+     "text": "Axis",
+     "size": 32,
+     "color": "gray"
+    },
+    {
+     "op": "write",
+     "id": "label_equator_tilt",
+     "x": 620,
+     "y": 410,
+     "text": "Equator",
+     "size": 32,
+     "color": "green"
+    },
+    {
+     "op": "write",
+     "id": "note_tilt",
+     "x": 800,
+     "y": 240,
+     "text": "Tilted axis\ncauses seasons",
+     "size": 36,
+     "color": "ink"
+    }
+   ]
+  },
+  {
+   "title": "Orbit Around the Sun",
+   "say": "As Earth orbits the Sun, the tilt stays the same, so different parts get more direct sunlight at different times.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "title_orbit",
+     "x": 80,
+     "y": 60,
+     "text": "Orbit Around the Sun",
+     "size": 56,
+     "color": "ink"
+    },
+    {
+     "op": "ellipse",
+     "id": "sun_orbit",
+     "cx": 800,
+     "cy": 450,
+     "rx": 90,
+     "ry": 90,
+     "fill": "red",
+     "color": "red",
+     "width": 3
+    },
+    {
+     "op": "write",
+     "id": "label_sun_orbit",
+     "x": 780,
+     "y": 560,
+     "text": "Sun",
+     "size": 36,
+     "color": "red"
+    },
+    {
+     "op": "ellipse",
+     "id": "orbit_path",
+     "cx": 800,
+     "cy": 450,
+     "rx": 360,
+     "ry": 260,
+     "rotate": -15,
+     "color": "gray",
+     "width": 3,
+     "dash": true
+    },
+    {
+     "op": "ellipse",
+     "id": "earth_pos1",
+     "cx": 460,
+     "cy": 290,
+     "rx": 40,
+     "ry": 40,
+     "color": "blue",
+     "width": 3
+    },
+    {
+     "op": "line",
+     "id": "axis_pos1",
+     "x1": 460,
+     "y1": 245,
+     "x2": 460,
+     "y2": 335,
+     "color": "gray",
+     "width": 2,
+     "dash": true
+    },
+    {
+     "op": "write",
+     "id": "label_pos1",
+     "x": 360,
+     "y": 230,
+     "text": "Northern\nsummer",
+     "size": 30,
+     "color": "ink"
+    }
+   ]
+  },
+  {
+   "title": "Sunlight Angle",
+   "say": "In summer, sunlight hits more directly; in winter, it arrives at a lower angle and spreads out.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "title_angle",
+     "x": 80,
+     "y": 60,
+     "text": "Sunlight Angle",
+     "size": 56,
+     "color": "ink"
+    },
+    {
+     "op": "line",
+     "id": "ground_summer",
+     "x1": 180,
+     "y1": 700,
+     "x2": 700,
+     "y2": 700,
+     "color": "green",
+     "width": 4
+    },
+    {
+     "op": "line",
+     "id": "ray1_summer",
+     "x1": 340,
+     "y1": 380,
+     "x2": 340,
+     "y2": 700,
+     "color": "red",
+     "width": 3,
+     "arrow": true
+    },
+    {
+     "op": "line",
+     "id": "ray2_summer",
+     "x1": 420,
+     "y1": 380,
+     "x2": 420,
+     "y2": 700,
+     "color": "red",
+     "width": 3,
+     "arrow": true
+    },
+    {
+     "op": "line",
+     "id": "ray3_summer",
+     "x1": 500,
+     "y1": 380,
+     "x2": 500,
+     "y2": 700,
+     "color": "red",
+     "width": 3,
+     "arrow": true
+    },
+    {
+     "op": "write",
+     "id": "label_summer_angle",
+     "x": 520,
+     "y": 360,
+     "text": "Summer:\ndirect rays",
+     "size": 32,
+     "color": "red"
+    },
+    {
+     "op": "line",
+     "id": "ground_winter",
+     "x1": 900,
+     "y1": 700,
+     "x2": 1450,
+     "y2": 700,
+     "color": "green",
+     "width": 4
+    },
+    {
+     "op": "line",
+     "id": "ray1_winter",
+     "x1": 1050,
+     "y1": 380,
+     "x2": 900,
+     "y2": 700,
+     "color": "blue",
+     "width": 3,
+     "arrow": true
+    },
+    {
+     "op": "line",
+     "id": "ray2_winter",
+     "x1": 1120,
+     "y1": 380,
+     "x2": 1050,
+     "y2": 700,
+     "color": "blue",
+     "width": 3,
+     "arrow": true
+    },
+    {
+     "op": "line",
+     "id": "ray3_winter",
+     "x1": 1190,
+     "y1": 380,
+     "x2": 1200,
+     "y2": 700,
+     "color": "blue",
+     "width": 3,
+     "arrow": true
+    },
+    {
+     "op": "write",
+     "id": "label_winter_angle",
+     "x": 1220,
+     "y": 360,
+     "text": "Winter:\nspread rays",
+     "size": 32,
+     "color": "blue"
+    }
+   ]
+  },
+  {
+   "title": "Summer vs Winter",
+   "say": "The tilted hemisphere leaning toward the Sun gets summer, while the other hemisphere gets winter.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "title_seasons",
+     "x": 80,
+     "y": 60,
+     "text": "Summer vs Winter",
+     "size": 56,
+     "color": "ink"
+    },
+    {
+     "op": "ellipse",
+     "id": "sun_seasons",
+     "cx": 800,
+     "cy": 450,
+     "rx": 80,
+     "ry": 80,
+     "fill": "red",
+     "color": "red",
+     "width": 3
+    },
+    {
+     "op": "write",
+     "id": "label_sun_seasons",
+     "x": 780,
+     "y": 550,
+     "text": "Sun",
+     "size": 36,
+     "color": "red"
+    },
+    {
+     "op": "ellipse",
+     "id": "earth_north",
+     "cx": 420,
+     "cy": 450,
+     "rx": 160,
+     "ry": 160,
+     "color": "blue",
+     "width": 4
+    },
+    {
+     "op": "line",
+     "id": "axis_north",
+     "x1": 420,
+     "y1": 280,
+     "x2": 420,
+     "y2": 620,
+     "color": "gray",
+     "width": 3,
+     "dash": true
+    },
+    {
+     "op": "write",
+     "id": "label_north",
+     "x": 300,
+     "y": 200,
+     "text": "North leans\ntoward Sun",
+     "size": 32,
+     "color": "ink"
+    },
+    {
+     "op": "ellipse",
+     "id": "earth_south",
+     "cx": 1180,
+     "cy": 450,
+     "rx": 160,
+     "ry": 160,
+     "color": "blue",
+     "width": 4
+    },
+    {
+     "op": "line",
+     "id": "axis_south",
+     "x1": 1180,
+     "y1": 280,
+     "x2": 1180,
+     "y2": 620,
+     "color": "gray",
+     "width": 3,
+     "dash": true
+    },
+    {
+     "op": "write",
+     "id": "label_south",
+     "x": 1060,
+     "y": 200,
+     "text": "South leans\naway",
+     "size": 32,
+     "color": "ink"
+    },
+    {
+     "op": "line",
+     "id": "ray_north",
+     "x1": 580,
+     "y1": 450,
+     "x2": 800,
+     "y2": 450,
+     "color": "red",
+     "width": 3,
+     "arrow": true
+    },
+    {
+     "op": "line",
+     "id": "ray_south",
+     "x1": 1020,
+     "y1": 450,
+     "x2": 800,
+     "y2": 450,
+     "color": "blue",
+     "width": 3,
+     "arrow": true
+    }
+   ]
+  },
+  {
+   "title": "Four Seasons",
+   "say": "As Earth moves around its orbit, each hemisphere cycles through spring, summer, autumn, and winter.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "title_four",
+     "x": 80,
+     "y": 60,
+     "text": "Four Seasons",
+     "size": 56,
+     "color": "ink"
+    },
+    {
+     "op": "ellipse",
+     "id": "sun_four",
+     "cx": 800,
+     "cy": 450,
+     "rx": 80,
+     "ry": 80,
+     "fill": "red",
+     "color": "red",
+     "width": 3
+    },
+    {
+     "op": "write",
+     "id": "label_sun_four",
+     "x": 780,
+     "y": 550,
+     "text": "Sun",
+     "size": 36,
+     "color": "red"
+    },
+    {
+     "op": "ellipse",
+     "id": "orbit_four",
+     "cx": 800,
+     "cy": 450,
+     "rx": 380,
+     "ry": 260,
+     "rotate": -15,
+     "color": "gray",
+     "width": 3,
+     "dash": true
+    },
+    {
+     "op": "ellipse",
+     "id": "earth_spring",
+     "cx": 430,
+     "cy": 280,
+     "rx": 45,
+     "ry": 45,
+     "color": "blue",
+     "width": 3
+    },
+    {
+     "op": "write",
+     "id": "label_spring",
+     "x": 300,
+     "y": 180,
+     "text": "Spring",
+     "size": 34,
+     "color": "green"
+    },
+    {
+     "op": "ellipse",
+     "id": "earth_summer",
+     "cx": 1170,
+     "cy": 280,
+     "rx": 45,
+     "ry": 45,
+     "color": "blue",
+     "width": 3
+    },
+    {
+     "op": "write",
+     "id": "label_summer",
+     "x": 1240,
+     "y": 180,
+     "text": "Summer",
+     "size": 34,
+     "color": "red"
+    },
+    {
+     "op": "ellipse",
+     "id": "earth_autumn",
+     "cx": 1170,
+     "cy": 620,
+     "rx": 45,
+     "ry": 45,
+     "color": "blue",
+     "width": 3
+    },
+    {
+     "op": "write",
+     "id": "label_autumn",
+     "x": 1240,
+     "y": 680,
+     "text": "Autumn",
+     "size": 34,
+     "color": "gray"
+    },
+    {
+     "op": "ellipse",
+     "id": "earth_winter",
+     "cx": 430,
+     "cy": 620,
+     "rx": 45,
+     "ry": 45,
+     "color": "blue",
+     "width": 3
+    },
+    {
+     "op": "write",
+     "id": "label_winter",
+     "x": 300,
+     "y": 680,
+     "text": "Winter",
+     "size": 34,
+     "color": "blue"
+    }
+   ]
+  }
+ ]
+}

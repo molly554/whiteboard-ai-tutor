@@ -1,0 +1,417 @@
+{
+ "title": "Why the Pythagorean Theorem Works",
+ "lang": "en",
+ "steps": [
+  {
+   "title": "The Right Triangle",
+   "say": "Let's start with a right-angled triangle with legs a and b, and hypotenuse c.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "title",
+     "x": 800,
+     "y": 50,
+     "text": "Why does a² + b² = c² work?",
+     "size": 56,
+     "anchor": "middle",
+     "underline": true
+    },
+    {
+     "op": "path",
+     "id": "t0",
+     "d": "M 100 450 L 100 600 L 300 600 Z",
+     "color": "blue",
+     "fill": "blue"
+    },
+    {
+     "op": "path",
+     "id": "t0_ra",
+     "d": "M 100 580 L 120 580 L 120 600",
+     "color": "ink",
+     "width": 3
+    },
+    {
+     "op": "write",
+     "id": "t0_a",
+     "x": 75,
+     "y": 510,
+     "text": "a",
+     "size": 34,
+     "color": "blue",
+     "anchor": "middle"
+    },
+    {
+     "op": "write",
+     "id": "t0_b",
+     "x": 200,
+     "y": 615,
+     "text": "b",
+     "size": 34,
+     "color": "blue",
+     "anchor": "middle"
+    },
+    {
+     "op": "write",
+     "id": "t0_c",
+     "x": 215,
+     "y": 495,
+     "text": "c",
+     "size": 34,
+     "color": "red",
+     "anchor": "middle"
+    }
+   ]
+  },
+  {
+   "title": "Build a Big Square",
+   "say": "Now, imagine a large square where each side has length a plus b.",
+   "ops": [
+    {
+     "op": "rect",
+     "id": "sq1",
+     "x": 460,
+     "y": 240,
+     "w": 350,
+     "h": 350,
+     "color": "ink"
+    },
+    {
+     "op": "line",
+     "id": "sq1_top_tick",
+     "x1": 610,
+     "y1": 230,
+     "x2": 610,
+     "y2": 250,
+     "color": "ink",
+     "width": 3
+    },
+    {
+     "op": "write",
+     "id": "sq1_top_a",
+     "x": 535,
+     "y": 195,
+     "text": "a",
+     "size": 32,
+     "color": "blue",
+     "anchor": "middle"
+    },
+    {
+     "op": "write",
+     "id": "sq1_top_b",
+     "x": 710,
+     "y": 195,
+     "text": "b",
+     "size": 32,
+     "color": "blue",
+     "anchor": "middle"
+    },
+    {
+     "op": "line",
+     "id": "sq1_left_tick",
+     "x1": 450,
+     "y1": 440,
+     "x2": 470,
+     "y2": 440,
+     "color": "ink",
+     "width": 3
+    },
+    {
+     "op": "write",
+     "id": "sq1_left_b",
+     "x": 430,
+     "y": 325,
+     "text": "b",
+     "size": 32,
+     "color": "blue",
+     "anchor": "middle"
+    },
+    {
+     "op": "write",
+     "id": "sq1_left_a",
+     "x": 430,
+     "y": 500,
+     "text": "a",
+     "size": 32,
+     "color": "blue",
+     "anchor": "middle"
+    }
+   ]
+  },
+  {
+   "title": "Place Four Triangles",
+   "say": "We can place four identical copies of our triangle into the corners of this square.",
+   "ops": [
+    {
+     "op": "path",
+     "id": "s1_t1",
+     "d": "M 460 240 L 610 240 L 460 440 Z",
+     "color": "blue",
+     "fill": "blue"
+    },
+    {
+     "op": "path",
+     "id": "s1_t2",
+     "d": "M 810 240 L 810 390 L 610 240 Z",
+     "color": "blue",
+     "fill": "blue"
+    },
+    {
+     "op": "path",
+     "id": "s1_t3",
+     "d": "M 810 590 L 660 590 L 810 390 Z",
+     "color": "blue",
+     "fill": "blue"
+    },
+    {
+     "op": "path",
+     "id": "s1_t4",
+     "d": "M 460 590 L 460 440 L 660 590 Z",
+     "color": "blue",
+     "fill": "blue"
+    },
+    {
+     "op": "write",
+     "id": "s1_Note",
+     "x": 635,
+     "y": 620,
+     "text": "4 triangles inside",
+     "size": 30,
+     "color": "gray",
+     "anchor": "middle"
+    }
+   ]
+  },
+  {
+   "title": "The Empty Space is c²",
+   "say": "The empty space in the middle is a tilted square with side c, so its area is c squared.",
+   "ops": [
+    {
+     "op": "path",
+     "id": "s1_c2",
+     "d": "M 610 240 L 810 390 L 660 590 L 460 440 Z",
+     "color": "red",
+     "fill": "red",
+     "width": 5
+    },
+    {
+     "op": "write",
+     "id": "s1_c_lbl1",
+     "x": 700,
+     "y": 325,
+     "text": "c",
+     "size": 32,
+     "color": "red",
+     "anchor": "middle"
+    },
+    {
+     "op": "write",
+     "id": "s1_c_lbl2",
+     "x": 545,
+     "y": 345,
+     "text": "c",
+     "size": 32,
+     "color": "red",
+     "anchor": "middle"
+    },
+    {
+     "op": "write",
+     "id": "s1_c2_lbl",
+     "x": 635,
+     "y": 395,
+     "text": "Area = c²",
+     "size": 38,
+     "color": "red",
+     "anchor": "middle"
+    }
+   ]
+  },
+  {
+   "title": "Rearrange the Triangles",
+   "say": "Now, let's take another identical big square and rearrange the same four triangles into two rectangles.",
+   "ops": [
+    {
+     "op": "rect",
+     "id": "sq2",
+     "x": 1050,
+     "y": 240,
+     "w": 350,
+     "h": 350,
+     "color": "ink"
+    },
+    {
+     "op": "write",
+     "id": "sq2_top_a",
+     "x": 1125,
+     "y": 195,
+     "text": "a",
+     "size": 32,
+     "color": "blue",
+     "anchor": "middle"
+    },
+    {
+     "op": "write",
+     "id": "sq2_top_b",
+     "x": 1300,
+     "y": 195,
+     "text": "b",
+     "size": 32,
+     "color": "blue",
+     "anchor": "middle"
+    },
+    {
+     "op": "write",
+     "id": "sq2_left_a",
+     "x": 1020,
+     "y": 300,
+     "text": "a",
+     "size": 32,
+     "color": "blue",
+     "anchor": "middle"
+    },
+    {
+     "op": "write",
+     "id": "sq2_left_b",
+     "x": 1020,
+     "y": 475,
+     "text": "b",
+     "size": 32,
+     "color": "blue",
+     "anchor": "middle"
+    },
+    {
+     "op": "path",
+     "id": "s2_t1",
+     "d": "M 1200 240 L 1400 240 L 1200 390 Z",
+     "color": "blue",
+     "fill": "blue"
+    },
+    {
+     "op": "path",
+     "id": "s2_t2",
+     "d": "M 1400 240 L 1400 390 L 1200 390 Z",
+     "color": "blue",
+     "fill": "blue"
+    },
+    {
+     "op": "path",
+     "id": "s2_t3",
+     "d": "M 1050 390 L 1200 390 L 1050 590 Z",
+     "color": "blue",
+     "fill": "blue"
+    },
+    {
+     "op": "path",
+     "id": "s2_t4",
+     "d": "M 1200 390 L 1200 590 L 1050 590 Z",
+     "color": "blue",
+     "fill": "blue"
+    },
+    {
+     "op": "write",
+     "id": "s2_Note",
+     "x": 1225,
+     "y": 620,
+     "text": "Same 4 triangles",
+     "size": 30,
+     "color": "gray",
+     "anchor": "middle"
+    }
+   ]
+  },
+  {
+   "title": "Two Empty Squares: a² and b²",
+   "say": "Now the empty space is split into two smaller squares: one of area a squared, and one of area b squared!",
+   "ops": [
+    {
+     "op": "rect",
+     "id": "s2_a2",
+     "x": 1050,
+     "y": 240,
+     "w": 150,
+     "h": 150,
+     "color": "green",
+     "fill": "green",
+     "width": 5
+    },
+    {
+     "op": "rect",
+     "id": "s2_b2",
+     "x": 1200,
+     "y": 390,
+     "w": 200,
+     "h": 200,
+     "color": "green",
+     "fill": "green",
+     "width": 5
+    },
+    {
+     "op": "write",
+     "id": "s2_a2_lbl",
+     "x": 1125,
+     "y": 295,
+     "text": "a²",
+     "size": 38,
+     "color": "green",
+     "anchor": "middle"
+    },
+    {
+     "op": "write",
+     "id": "s2_b2_lbl",
+     "x": 1300,
+     "y": 470,
+     "text": "b²",
+     "size": 38,
+     "color": "green",
+     "anchor": "middle"
+    }
+   ]
+  },
+  {
+   "title": "Conclusion",
+   "say": "Since both big squares are the same size and hold the same four triangles, their empty spaces must be equal!",
+   "ops": [
+    {
+     "op": "line",
+     "id": "arr_eq",
+     "x1": 850,
+     "y1": 415,
+     "x2": 990,
+     "y2": 415,
+     "color": "ink",
+     "width": 5,
+     "arrow": "both"
+    },
+    {
+     "op": "write",
+     "id": "eq_txt",
+     "x": 920,
+     "y": 360,
+     "text": "Same\nEmpty Area",
+     "size": 28,
+     "color": "ink",
+     "anchor": "middle"
+    },
+    {
+     "op": "rect",
+     "id": "final_box",
+     "x": 550,
+     "y": 720,
+     "w": 500,
+     "h": 100,
+     "color": "red",
+     "width": 5
+    },
+    {
+     "op": "write",
+     "id": "final_eq",
+     "x": 800,
+     "y": 740,
+     "text": "a² + b² = c²",
+     "size": 52,
+     "color": "ink",
+     "anchor": "middle"
+    }
+   ]
+  }
+ ]
+}

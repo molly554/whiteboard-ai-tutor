@@ -1,0 +1,193 @@
+{
+ "title": "Why a² + b² = c²",
+ "lang": "en",
+ "steps": [
+  {
+   "title": "The claim",
+   "say": "The Pythagorean theorem says that for a right triangle, the squares on the two legs add up to the square on the hypotenuse.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "title",
+     "x": 800,
+     "y": 60,
+     "text": "Why a² + b² = c²?",
+     "size": 56,
+     "anchor": "middle",
+     "underline": true
+    }
+   ]
+  },
+  {
+   "title": "A right triangle",
+   "say": "Start with a right triangle. The legs are a and b, and the hypotenuse, the longest side, is c.",
+   "ops": [
+    {
+     "op": "path",
+     "id": "tri",
+     "d": "M200 700 L440 700 L200 520 Z",
+     "color": "ink",
+     "width": 5
+    },
+    {
+     "op": "write",
+     "id": "la",
+     "x": 160,
+     "y": 600,
+     "text": "a",
+     "size": 36
+    },
+    {
+     "op": "write",
+     "id": "lb",
+     "x": 312,
+     "y": 712,
+     "text": "b",
+     "size": 36
+    },
+    {
+     "op": "write",
+     "id": "lc",
+     "x": 362,
+     "y": 585,
+     "text": "c",
+     "size": 36
+    }
+   ]
+  },
+  {
+   "title": "A big square",
+   "say": "Build a square whose side is a + b. Its area is (a + b)².",
+   "ops": [
+    {
+     "op": "rect",
+     "id": "sq",
+     "x": 760,
+     "y": 240,
+     "w": 420,
+     "h": 420,
+     "color": "ink",
+     "width": 5
+    },
+    {
+     "op": "write",
+     "id": "sl",
+     "x": 970,
+     "y": 190,
+     "text": "side a + b",
+     "size": 32,
+     "anchor": "middle"
+    }
+   ]
+  },
+  {
+   "title": "Four copies in the corners",
+   "say": "Place four copies of the triangle in the corners. The leftover middle shape is a tilted square.",
+   "ops": [
+    {
+     "op": "path",
+     "id": "t1",
+     "d": "M760 240 L1000 240 L760 420 Z",
+     "color": "red",
+     "width": 4
+    },
+    {
+     "op": "path",
+     "id": "t2",
+     "d": "M1000 240 L1180 240 L1180 480 Z",
+     "color": "red",
+     "width": 4
+    },
+    {
+     "op": "path",
+     "id": "t3",
+     "d": "M1180 480 L1180 660 L940 660 Z",
+     "color": "red",
+     "width": 4
+    },
+    {
+     "op": "path",
+     "id": "t4",
+     "d": "M940 660 L760 660 L760 420 Z",
+     "color": "red",
+     "width": 4
+    }
+   ]
+  },
+  {
+   "title": "The middle is a square",
+   "say": "Every side of the middle shape is c. Each corner's two acute angles sum to 90°, so the middle shape has right angles. It is a square with area c².",
+   "ops": [
+    {
+     "op": "path",
+     "id": "inner",
+     "d": "M1000 240 L1180 480 L940 660 L760 420 Z",
+     "color": "blue",
+     "width": 4,
+     "fill": "blue"
+    },
+    {
+     "op": "write",
+     "id": "cl",
+     "x": 950,
+     "y": 430,
+     "text": "c²",
+     "size": 44,
+     "color": "blue",
+     "anchor": "middle"
+    }
+   ]
+  },
+  {
+   "title": "Count the area two ways",
+   "say": "The big square's area is (a + b)². It also equals four triangles, each with area ab/2, plus the middle square c².",
+   "ops": [
+    {
+     "op": "write",
+     "id": "eq1",
+     "x": 80,
+     "y": 775,
+     "text": "(a+b)² = 4·(ab/2) + c²",
+     "size": 34
+    }
+   ]
+  },
+  {
+   "title": "Expand",
+   "say": "Expand the left side. The two ways of counting must give the same total.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "eq2",
+     "x": 80,
+     "y": 820,
+     "text": "a² + 2ab + b² = 2ab + c²",
+     "size": 34
+    }
+   ]
+  },
+  {
+   "title": "Cancel 2ab",
+   "say": "Remove 2ab from both sides, leaving a² + b² = c².",
+   "ops": [
+    {
+     "op": "erase",
+     "ids": [
+      "eq1",
+      "eq2"
+     ]
+    },
+    {
+     "op": "write",
+     "id": "result",
+     "x": 80,
+     "y": 780,
+     "text": "a² + b² = c²",
+     "size": 52,
+     "color": "red",
+     "underline": true
+    }
+   ]
+  }
+ ]
+}

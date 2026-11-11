@@ -1,0 +1,8 @@
+{
+ "_note": "corrections made after viewing the board state just before the largest erase (6 boards checked: B24, B43, B48, B50, B54, B55), still before opening the mapping",
+ "_corrections": {
+  "B50": {"match": 0, "note": "the axis is drawn once and never changes: in the summer step it leans away from the Sun while the text says 'north leans toward Sun', so one of the two steps contradicts the figure"},
+  "B43": {"note": "final board shows direct vs slanted rays and takeaway; the orbit diagram shown before the erase is consistent (June toward, December away)"},
+  "B55": {"note": "final board: two clean panels, toward vs away; the four-position orbit diagram shown before the erase is consistent"}
+ }
+}

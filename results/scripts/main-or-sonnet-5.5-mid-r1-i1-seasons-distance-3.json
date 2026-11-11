@@ -1,0 +1,291 @@
+{
+ "title": "Distance is not the cause",
+ "lang": "en",
+ "steps": [
+  {
+   "title": "You're right",
+   "say": "Good catch! In northern summer Earth is actually at its farthest from the Sun, so distance can't be the reason it's hotter.",
+   "ops": [
+    {
+     "op": "erase",
+     "ids": [
+      "sun",
+      "sunlabel",
+      "orbit",
+      "orbitlabel",
+      "key",
+      "earth1",
+      "axis1",
+      "earth2",
+      "axis2",
+      "earth3",
+      "axis3",
+      "earth4",
+      "axis4"
+     ]
+    },
+    {
+     "op": "write",
+     "id": "ok",
+     "x": 60,
+     "y": 140,
+     "text": "Good catch — you're right!",
+     "size": 44,
+     "color": "green"
+    },
+    {
+     "op": "write",
+     "id": "far",
+     "x": 60,
+     "y": 250,
+     "text": "July (northern summer): farthest, about 152 million km",
+     "size": 36
+    },
+    {
+     "op": "write",
+     "id": "near",
+     "x": 60,
+     "y": 330,
+     "text": "January (northern winter): closest, about 147 million km",
+     "size": 36
+    }
+   ]
+  },
+  {
+   "title": "Too small to matter",
+   "say": "The gap is only about 3 percent, far too small to explain hot summers and cold winters. Something else must be going on.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "small",
+     "x": 60,
+     "y": 440,
+     "text": "Difference: only about 3%  →  not the cause",
+     "size": 40,
+     "color": "red"
+    },
+    {
+     "op": "write",
+     "id": "hint",
+     "x": 60,
+     "y": 530,
+     "text": "Also: when it's summer in the north,\nit's winter in the south, at the same distance!",
+     "size": 36
+    }
+   ]
+  },
+  {
+   "title": "Summer: leaning toward the Sun",
+   "say": "In July the northern half of Earth leans toward the Sun, so sunlight hits it more directly and the days are longer.",
+   "ops": [
+    {
+     "op": "erase",
+     "ids": [
+      "ok",
+      "far",
+      "near",
+      "small",
+      "hint"
+     ]
+    },
+    {
+     "op": "write",
+     "id": "h3",
+     "x": 60,
+     "y": 140,
+     "text": "The real cause: Earth's tilt",
+     "size": 44,
+     "color": "blue"
+    },
+    {
+     "op": "ellipse",
+     "id": "sun2",
+     "cx": 200,
+     "cy": 620,
+     "rx": 70,
+     "ry": 70,
+     "color": "red",
+     "fill": "red"
+    },
+    {
+     "op": "write",
+     "id": "sun2l",
+     "x": 200,
+     "y": 720,
+     "text": "Sun",
+     "size": 30,
+     "anchor": "middle"
+    },
+    {
+     "op": "line",
+     "id": "ray1",
+     "x1": 290,
+     "y1": 560,
+     "x2": 980,
+     "y2": 560,
+     "color": "red",
+     "arrow": true,
+     "width": 4
+    },
+    {
+     "op": "line",
+     "id": "ray2",
+     "x1": 290,
+     "y1": 620,
+     "x2": 980,
+     "y2": 620,
+     "color": "red",
+     "arrow": true,
+     "width": 4
+    },
+    {
+     "op": "line",
+     "id": "ray3",
+     "x1": 290,
+     "y1": 680,
+     "x2": 980,
+     "y2": 680,
+     "color": "red",
+     "arrow": true,
+     "width": 4
+    },
+    {
+     "op": "ellipse",
+     "id": "eJul",
+     "cx": 1100,
+     "cy": 620,
+     "rx": 100,
+     "ry": 100,
+     "color": "blue",
+     "fill": "blue"
+    },
+    {
+     "op": "line",
+     "id": "axJul",
+     "x1": 1044,
+     "y1": 492,
+     "x2": 1156,
+     "y2": 748,
+     "width": 4
+    },
+    {
+     "op": "write",
+     "id": "nJul",
+     "x": 1030,
+     "y": 440,
+     "text": "N",
+     "size": 32,
+     "anchor": "middle"
+    },
+    {
+     "op": "write",
+     "id": "capJul",
+     "x": 1100,
+     "y": 790,
+     "text": "Northern summer (July)",
+     "size": 32,
+     "anchor": "middle"
+    }
+   ]
+  },
+  {
+   "title": "Winter: leaning away",
+   "say": "Six months later Earth is on the other side, but its axis still points the same way. Now the north leans away, so light is slanted and days are short.",
+   "ops": [
+    {
+     "op": "erase",
+     "ids": [
+      "eJul",
+      "axJul",
+      "nJul",
+      "capJul"
+     ]
+    },
+    {
+     "op": "ellipse",
+     "id": "eJan",
+     "cx": 1100,
+     "cy": 620,
+     "rx": 100,
+     "ry": 100,
+     "color": "blue",
+     "fill": "blue"
+    },
+    {
+     "op": "line",
+     "id": "axJan",
+     "x1": 1156,
+     "y1": 492,
+     "x2": 1044,
+     "y2": 748,
+     "width": 4
+    },
+    {
+     "op": "write",
+     "id": "nJan",
+     "x": 1170,
+     "y": 440,
+     "text": "N",
+     "size": 32,
+     "anchor": "middle"
+    },
+    {
+     "op": "write",
+     "id": "capJan",
+     "x": 1100,
+     "y": 790,
+     "text": "Northern winter (January)",
+     "size": 32,
+     "anchor": "middle"
+    }
+   ]
+  },
+  {
+   "title": "Summary",
+   "say": "So seasons come from tilt: it changes how directly sunlight hits us and how long the days are, while distance barely matters.",
+   "ops": [
+    {
+     "op": "erase",
+     "ids": [
+      "sun2",
+      "sun2l",
+      "ray1",
+      "ray2",
+      "ray3",
+      "eJan",
+      "axJan",
+      "nJan",
+      "capJan"
+     ]
+    },
+    {
+     "op": "write",
+     "id": "sum1",
+     "x": 60,
+     "y": 260,
+     "text": "Tilt  →  more direct sunlight + longer days  =  summer",
+     "size": 40,
+     "color": "blue"
+    },
+    {
+     "op": "write",
+     "id": "sum2",
+     "x": 60,
+     "y": 360,
+     "text": "Tilt away  →  slanted sunlight + shorter days  =  winter",
+     "size": 40,
+     "color": "blue"
+    },
+    {
+     "op": "write",
+     "id": "sum3",
+     "x": 60,
+     "y": 480,
+     "text": "Distance to the Sun changes only about 3% — it barely matters.",
+     "size": 36,
+     "color": "green"
+    }
+   ]
+  }
+ ]
+}

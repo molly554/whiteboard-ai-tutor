@@ -1,0 +1,220 @@
+{
+ "title": "Why a² + b² = c²",
+ "lang": "en",
+ "steps": [
+  {
+   "title": "The claim",
+   "say": "For any right triangle, the square on the longest side has the same area as the two other squares added together.",
+   "ops": [
+    {
+     "id": "t1",
+     "x": 800,
+     "y": 50,
+     "text": "Pythagorean Theorem",
+     "size": 56,
+     "anchor": "middle",
+     "op": "write"
+    },
+    {
+     "id": "f1",
+     "x": 800,
+     "y": 200,
+     "text": "a² + b² = c²",
+     "size": 56,
+     "anchor": "middle",
+     "color": "blue",
+     "op": "write"
+    }
+   ]
+  },
+  {
+   "title": "The triangle",
+   "say": "Take a right triangle with legs a and b, and a long side c called the hypotenuse.",
+   "ops": [
+    {
+     "id": "tri",
+     "op": "path",
+     "d": "M 200 700 L 600 700 L 200 450 Z",
+     "width": 5
+    },
+    {
+     "id": "la",
+     "op": "write",
+     "x": 400,
+     "y": 720,
+     "text": "b",
+     "size": 36,
+     "anchor": "middle"
+    },
+    {
+     "id": "lb",
+     "op": "write",
+     "x": 140,
+     "y": 560,
+     "text": "a",
+     "size": 36,
+     "anchor": "middle"
+    },
+    {
+     "id": "lc",
+     "op": "write",
+     "x": 440,
+     "y": 520,
+     "text": "c",
+     "size": 36,
+     "anchor": "middle",
+     "color": "red"
+    }
+   ]
+  },
+  {
+   "title": "Big square",
+   "say": "Now build a big square with side a plus b. Its area is (a+b) squared, no matter what is inside.",
+   "ops": [
+    {
+     "id": "big",
+     "op": "rect",
+     "x": 900,
+     "y": 300,
+     "w": 400,
+     "h": 400,
+     "width": 5
+    },
+    {
+     "id": "bl",
+     "op": "write",
+     "x": 1100,
+     "y": 240,
+     "text": "a + b",
+     "size": 32,
+     "anchor": "middle"
+    },
+    {
+     "id": "bl2",
+     "op": "write",
+     "x": 1100,
+     "y": 730,
+     "text": "a + b",
+     "size": 32,
+     "anchor": "middle"
+    }
+   ]
+  },
+  {
+   "title": "Four triangles",
+   "say": "Place four copies of the triangle in the corners, so their hypotenuses form a tilted square in the middle.",
+   "ops": [
+    {
+     "id": "q1",
+     "op": "line",
+     "x1": 1060,
+     "y1": 300,
+     "x2": 1300,
+     "y2": 460,
+     "color": "blue",
+     "width": 5
+    },
+    {
+     "id": "q2",
+     "op": "line",
+     "x1": 1300,
+     "y1": 460,
+     "x2": 1140,
+     "y2": 700,
+     "color": "blue",
+     "width": 5
+    },
+    {
+     "id": "q3",
+     "op": "line",
+     "x1": 1140,
+     "y1": 700,
+     "x2": 900,
+     "y2": 540,
+     "color": "blue",
+     "width": 5
+    },
+    {
+     "id": "q4",
+     "op": "line",
+     "x1": 900,
+     "y1": 540,
+     "x2": 1060,
+     "y2": 300,
+     "color": "blue",
+     "width": 5
+    },
+    {
+     "id": "cc",
+     "op": "write",
+     "x": 1100,
+     "y": 475,
+     "text": "c²",
+     "size": 44,
+     "anchor": "middle",
+     "color": "red"
+    }
+   ]
+  },
+  {
+   "title": "Count the area",
+   "say": "The big square equals four triangles plus the middle square. Each triangle has area one half a times b.",
+   "ops": [
+    {
+     "id": "e1",
+     "op": "write",
+     "x": 100,
+     "y": 800,
+     "text": "(a+b)² = 4·(ab/2) + c²",
+     "size": 40,
+     "color": "green"
+    }
+   ]
+  },
+  {
+   "title": "Expand",
+   "say": "Expanding the left side gives a squared plus two a b plus b squared, and the right side is two a b plus c squared.",
+   "ops": [
+    {
+     "id": "e2",
+     "op": "erase",
+     "ids": [
+      "e1"
+     ]
+    },
+    {
+     "id": "e3",
+     "op": "write",
+     "x": 100,
+     "y": 790,
+     "text": "a² + 2ab + b² = 2ab + c²",
+     "size": 40,
+     "color": "green"
+    }
+   ]
+  },
+  {
+   "title": "Cancel",
+   "say": "Subtract two a b from both sides and you are left with a squared plus b squared equals c squared.",
+   "ops": [
+    {
+     "id": "e4",
+     "op": "erase",
+     "ids": [
+      "e3"
+     ]
+    },
+    {
+     "id": "e5",
+     "op": "write",
+     "x": 100,
+     "y": 790,
+     "text": "a² + b² = c²",
+     "size": 48,
+     "color": "blue",
+     "underline": true
+    }
+   ]
+  }
+ ]
+}

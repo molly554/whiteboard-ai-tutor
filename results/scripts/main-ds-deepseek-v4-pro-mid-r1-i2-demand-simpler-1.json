@@ -1,0 +1,133 @@
+{
+ "title": "Simpler demand shift",
+ "lang": "en",
+ "steps": [
+  {
+   "title": "Clear the right side",
+   "say": "Let me clear the right side so I can show you a simpler picture.",
+   "ops": [
+    {
+     "op": "erase",
+     "ids": [
+      "note1",
+      "note2",
+      "note3"
+     ]
+    }
+   ]
+  },
+  {
+   "title": "A simpler demand shift",
+   "say": "On the right, demand is just a line. When demand rises, the whole line shifts right, from old D to new D.",
+   "ops": [
+    {
+     "op": "line",
+     "id": "simp_yaxis",
+     "x1": 1185,
+     "y1": 700,
+     "x2": 1185,
+     "y2": 220,
+     "arrow": true,
+     "color": "ink",
+     "width": 4
+    },
+    {
+     "op": "line",
+     "id": "simp_xaxis",
+     "x1": 1185,
+     "y1": 700,
+     "x2": 1540,
+     "y2": 700,
+     "arrow": true,
+     "color": "ink",
+     "width": 4
+    },
+    {
+     "op": "write",
+     "id": "simp_price",
+     "x": 1185,
+     "y": 172,
+     "text": "Price",
+     "size": 30,
+     "anchor": "middle"
+    },
+    {
+     "op": "write",
+     "id": "simp_qty",
+     "x": 1505,
+     "y": 715,
+     "text": "Qty",
+     "size": 30,
+     "anchor": "middle"
+    },
+    {
+     "op": "line",
+     "id": "simp_oldD",
+     "x1": 1205,
+     "y1": 300,
+     "x2": 1420,
+     "y2": 640,
+     "color": "red",
+     "width": 4
+    },
+    {
+     "op": "write",
+     "id": "simp_oldD_lab",
+     "x": 1380,
+     "y": 650,
+     "text": "Old D",
+     "size": 28,
+     "color": "red"
+    },
+    {
+     "op": "line",
+     "id": "simp_newD",
+     "x1": 1325,
+     "y1": 300,
+     "x2": 1530,
+     "y2": 640,
+     "color": "red",
+     "width": 4
+    },
+    {
+     "op": "write",
+     "id": "simp_newD_lab",
+     "x": 1480,
+     "y": 250,
+     "text": "New D",
+     "size": 28,
+     "color": "red"
+    },
+    {
+     "op": "line",
+     "id": "simp_arrow",
+     "x1": 1260,
+     "y1": 250,
+     "x2": 1390,
+     "y2": 250,
+     "color": "green",
+     "width": 5,
+     "arrow": true
+    },
+    {
+     "op": "write",
+     "id": "simp_arrow_lab",
+     "x": 1325,
+     "y": 200,
+     "text": "shifts right",
+     "size": 30,
+     "anchor": "middle",
+     "color": "green"
+    },
+    {
+     "op": "write",
+     "id": "simp_note",
+     "x": 1185,
+     "y": 755,
+     "text": "Demand line shifts right\nnot a move along it",
+     "size": 28
+    }
+   ]
+  }
+ ]
+}

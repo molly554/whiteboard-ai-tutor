@@ -1,0 +1,239 @@
+{
+ "title": "Solving x² - 5x + 6 = 0",
+ "lang": "en",
+ "steps": [
+  {
+   "title": "Problem Statement",
+   "say": "Let's solve this quadratic equation. We'll start with the standard quadratic formula.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "main_title",
+     "x": 800,
+     "y": 50,
+     "text": "Solving x² - 5x + 6 = 0",
+     "size": 52,
+     "anchor": "middle"
+    },
+    {
+     "op": "write",
+     "id": "eq_orig",
+     "x": 800,
+     "y": 130,
+     "text": "x² - 5x + 6 = 0",
+     "size": 44,
+     "color": "blue",
+     "anchor": "middle"
+    },
+    {
+     "op": "write",
+     "id": "lbl_coeff",
+     "x": 100,
+     "y": 220,
+     "text": "Coefficients: a = 1,  b = -5,  c = 6",
+     "size": 36
+    }
+   ]
+  },
+  {
+   "title": "Attempting Quadratic Formula",
+   "say": "Setting up the quadratic formula works, but plugging in all these numbers is getting tedious.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "m1_title",
+     "x": 100,
+     "y": 290,
+     "text": "Method 1: Quadratic Formula",
+     "size": 36,
+     "color": "gray"
+    },
+    {
+     "op": "write",
+     "id": "qf_formula",
+     "x": 100,
+     "y": 350,
+     "text": "x = (-b ± √(b² - 4ac)) / (2a)",
+     "size": 36,
+     "color": "gray"
+    },
+    {
+     "op": "write",
+     "id": "qf_sub",
+     "x": 100,
+     "y": 420,
+     "text": "x = (-(-5) ± √((-5)² - 4(1)(6))) / (2(1))",
+     "size": 34,
+     "color": "gray"
+    },
+    {
+     "op": "line",
+     "id": "cross_line",
+     "x1": 80,
+     "y1": 390,
+     "x2": 720,
+     "y2": 430,
+     "color": "red",
+     "width": 4
+    }
+   ]
+  },
+  {
+   "title": "Switching to Factoring",
+   "say": "Wait, let's stop here! There is a much simpler way: factoring directly.",
+   "ops": [
+    {
+     "op": "erase",
+     "ids": [
+      "m1_title",
+      "qf_formula",
+      "qf_sub",
+      "cross_line"
+     ]
+    },
+    {
+     "op": "write",
+     "id": "switch_note",
+     "x": 800,
+     "y": 220,
+     "text": "Wait — factoring is much faster!",
+     "size": 40,
+     "color": "green",
+     "anchor": "middle"
+    },
+    {
+     "op": "rect",
+     "id": "factor_box",
+     "x": 200,
+     "y": 280,
+     "w": 1200,
+     "h": 200,
+     "color": "blue",
+     "width": 3
+    }
+   ]
+  },
+  {
+   "title": "Finding the Factors",
+   "say": "We need two numbers that multiply to 6 and add up to -5. Those numbers are -2 and -3.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "fact_rule1",
+     "x": 260,
+     "y": 320,
+     "text": "Find two numbers p and q such that:",
+     "size": 34
+    },
+    {
+     "op": "write",
+     "id": "fact_rule2",
+     "x": 300,
+     "y": 370,
+     "text": "p · q = 6    and    p + q = -5",
+     "size": 36,
+     "color": "blue"
+    },
+    {
+     "op": "write",
+     "id": "fact_ans",
+     "x": 900,
+     "y": 370,
+     "text": "→  p = -2,  q = -3",
+     "size": 36,
+     "color": "green"
+    }
+   ]
+  },
+  {
+   "title": "Rewriting and Solving",
+   "say": "Now we rewrite the quadratic as (x - 2)(x - 3) = 0 and solve for each term.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "factor_form",
+     "x": 800,
+     "y": 520,
+     "text": "(x - 2)(x - 3) = 0",
+     "size": 44,
+     "anchor": "middle"
+    },
+    {
+     "op": "write",
+     "id": "split_cases",
+     "x": 800,
+     "y": 600,
+     "text": "x - 2 = 0   or   x - 3 = 0",
+     "size": 38,
+     "anchor": "middle"
+    },
+    {
+     "op": "line",
+     "id": "arr_left",
+     "x1": 720,
+     "y1": 660,
+     "x2": 620,
+     "y2": 720,
+     "color": "blue",
+     "arrow": true
+    },
+    {
+     "op": "line",
+     "id": "arr_right",
+     "x1": 880,
+     "y1": 660,
+     "x2": 980,
+     "y2": 720,
+     "color": "blue",
+     "arrow": true
+    }
+   ]
+  },
+  {
+   "title": "Final Solutions",
+   "say": "And we easily get our final answers: x equals 2 or x equals 3.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "sol_1",
+     "x": 580,
+     "y": 740,
+     "text": "x = 2",
+     "size": 44,
+     "color": "green",
+     "anchor": "middle"
+    },
+    {
+     "op": "write",
+     "id": "sol_2",
+     "x": 1020,
+     "y": 740,
+     "text": "x = 3",
+     "size": 44,
+     "color": "green",
+     "anchor": "middle"
+    },
+    {
+     "op": "rect",
+     "id": "box_sol1",
+     "x": 500,
+     "y": 725,
+     "w": 160,
+     "h": 75,
+     "color": "green",
+     "width": 3
+    },
+    {
+     "op": "rect",
+     "id": "box_sol2",
+     "x": 940,
+     "y": 725,
+     "w": 160,
+     "h": 75,
+     "color": "green",
+     "width": 3
+    }
+   ]
+  }
+ ]
+}

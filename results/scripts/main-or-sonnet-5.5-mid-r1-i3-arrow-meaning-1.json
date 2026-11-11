@@ -1,0 +1,100 @@
+{
+ "title": "What the green arrow means",
+ "lang": "en",
+ "steps": [
+  {
+   "title": "Point to the arrow",
+   "say": "This green arrow shows the demand curve moving to the right, from D1 to D2. It is a shift, not a slide along the curve.",
+   "ops": [
+    {
+     "op": "erase",
+     "ids": [
+      "note1",
+      "note2",
+      "note3"
+     ]
+    },
+    {
+     "op": "write",
+     "id": "a_note",
+     "x": 1200,
+     "y": 250,
+     "text": "Green arrow =\nthe whole demand\ncurve shifts right",
+     "size": 32,
+     "color": "green"
+    },
+    {
+     "op": "line",
+     "id": "a_ptr",
+     "x1": 1190,
+     "y1": 300,
+     "x2": 440,
+     "y2": 270,
+     "color": "green",
+     "width": 3,
+     "dash": true,
+     "arrow": true
+    }
+   ]
+  },
+  {
+   "title": "Why it shifts",
+   "say": "A shift means that at every price, buyers now want more. Causes include higher incomes, a trend, or a rise in the price of a substitute.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "a_why",
+     "x": 1200,
+     "y": 430,
+     "text": "At every price,\nbuyers want more:\nhigher income,\ntrends, substitutes",
+     "size": 30
+    }
+   ]
+  },
+  {
+   "title": "The effect on price",
+   "say": "With the new curve D2 crossing supply higher up, the market settles at a higher price and a larger quantity.",
+   "ops": [
+    {
+     "op": "ellipse",
+     "id": "e2",
+     "cx": 740,
+     "cy": 470,
+     "rx": 9,
+     "ry": 9,
+     "color": "green",
+     "fill": "green"
+    },
+    {
+     "op": "line",
+     "id": "e2h",
+     "x1": 200,
+     "y1": 385,
+     "x2": 740,
+     "y2": 385,
+     "color": "gray",
+     "width": 3,
+     "dash": true
+    },
+    {
+     "op": "write",
+     "id": "p2",
+     "x": 130,
+     "y": 340,
+     "text": "P2",
+     "size": 32,
+     "anchor": "middle"
+    },
+    {
+     "op": "write",
+     "id": "result",
+     "x": 1200,
+     "y": 640,
+     "text": "New point: price\nrises from P1 to P2",
+     "size": 30,
+     "color": "green"
+    }
+   ]
+  }
+ ]
+}

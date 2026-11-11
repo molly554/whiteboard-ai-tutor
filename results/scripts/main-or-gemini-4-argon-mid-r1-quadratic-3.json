@@ -1,0 +1,294 @@
+{
+ "title": "Solving x² − 5x + 6 = 0",
+ "lang": "en",
+ "steps": [
+  {
+   "title": "The Equation",
+   "say": "Let's solve the quadratic equation x squared minus 5x plus 6 equals 0.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "title",
+     "x": 800,
+     "y": 60,
+     "text": "Solve:  x² − 5x + 6 = 0",
+     "size": 56,
+     "anchor": "middle",
+     "underline": true
+    },
+    {
+     "op": "write",
+     "id": "coefs",
+     "x": 800,
+     "y": 150,
+     "text": "a = 1,   b = −5,   c = 6",
+     "size": 34,
+     "color": "gray",
+     "anchor": "middle"
+    }
+   ]
+  },
+  {
+   "title": "First Try: Quadratic Formula",
+   "say": "Our first instinct might be to plug a, b, and c into the quadratic formula.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "qf_title",
+     "x": 120,
+     "y": 260,
+     "text": "Attempt 1: Quadratic Formula",
+     "size": 40,
+     "color": "blue"
+    },
+    {
+     "op": "write",
+     "id": "qf_form",
+     "x": 120,
+     "y": 340,
+     "text": "x = (−b ± √(b² − 4ac)) / 2a",
+     "size": 38
+    },
+    {
+     "op": "write",
+     "id": "qf_sub",
+     "x": 120,
+     "y": 430,
+     "text": "x = (−(−5) ± √((−5)² − 4(1)(6))) / 2(1)",
+     "size": 38
+    }
+   ]
+  },
+  {
+   "title": "Wait—There's an Easier Way!",
+   "say": "Wait a second... this is a lot of arithmetic for such small numbers. Let's erase this and use a simpler method!",
+   "ops": [
+    {
+     "op": "line",
+     "id": "strike1",
+     "x1": 100,
+     "y1": 360,
+     "x2": 750,
+     "y2": 460,
+     "color": "red",
+     "width": 6
+    },
+    {
+     "op": "line",
+     "id": "strike2",
+     "x1": 100,
+     "y1": 460,
+     "x2": 750,
+     "y2": 360,
+     "color": "red",
+     "width": 6
+    },
+    {
+     "op": "write",
+     "id": "wait_note",
+     "x": 850,
+     "y": 380,
+     "text": "Too much work!\nLet's factor instead.",
+     "size": 36,
+     "color": "red"
+    }
+   ]
+  },
+  {
+   "title": "Switch to Factoring",
+   "say": "Let's clean the board and factor. We just need two numbers that multiply to 6 and add to negative 5.",
+   "ops": [
+    {
+     "op": "erase",
+     "ids": [
+      "coefs",
+      "qf_title",
+      "qf_form",
+      "qf_sub",
+      "strike1",
+      "strike2",
+      "wait_note"
+     ]
+    },
+    {
+     "op": "write",
+     "id": "fac_title",
+     "x": 120,
+     "y": 220,
+     "text": "Simpler Method: Factoring",
+     "size": 42,
+     "color": "green"
+    },
+    {
+     "op": "rect",
+     "id": "puzzle_box",
+     "x": 120,
+     "y": 300,
+     "w": 560,
+     "h": 170,
+     "color": "blue",
+     "fill": "blue"
+    },
+    {
+     "op": "write",
+     "id": "puz_mult",
+     "x": 150,
+     "y": 330,
+     "text": "Multiply to  +6 :   ( ? ) × ( ? ) = 6",
+     "size": 34
+    },
+    {
+     "op": "write",
+     "id": "puz_add",
+     "x": 150,
+     "y": 400,
+     "text": "Add to      −5 :   ( ? ) + ( ? ) = −5",
+     "size": 34
+    }
+   ]
+  },
+  {
+   "title": "Find the Numbers",
+   "say": "Negative 2 and negative 3! Because negative 2 times negative 3 is positive 6, and they add up to negative 5.",
+   "ops": [
+    {
+     "op": "rect",
+     "id": "ans_box",
+     "x": 780,
+     "y": 300,
+     "w": 660,
+     "h": 170,
+     "color": "green",
+     "fill": "green"
+    },
+    {
+     "op": "write",
+     "id": "ans_num",
+     "x": 1110,
+     "y": 325,
+     "text": "Numbers:  −2  and  −3",
+     "size": 38,
+     "color": "green",
+     "anchor": "middle"
+    },
+    {
+     "op": "write",
+     "id": "ans_chk",
+     "x": 1110,
+     "y": 395,
+     "text": "(−2)(−3) = +6   and   (−2) + (−3) = −5",
+     "size": 32,
+     "anchor": "middle"
+    },
+    {
+     "op": "line",
+     "id": "arr1",
+     "x1": 690,
+     "y1": 385,
+     "x2": 765,
+     "y2": 385,
+     "color": "green",
+     "width": 5,
+     "arrow": true
+    }
+   ]
+  },
+  {
+   "title": "Write in Factored Form & Solve",
+   "say": "Now we rewrite the equation as (x minus 2) times (x minus 3) equals 0, giving us x = 2 or x = 3 right away!",
+   "ops": [
+    {
+     "op": "write",
+     "id": "fac_eq",
+     "x": 800,
+     "y": 540,
+     "text": "(x − 2)(x − 3) = 0",
+     "size": 48,
+     "anchor": "middle"
+    },
+    {
+     "op": "line",
+     "id": "split_l",
+     "x1": 720,
+     "y1": 605,
+     "x2": 550,
+     "y2": 665,
+     "color": "gray",
+     "width": 4,
+     "arrow": true
+    },
+    {
+     "op": "line",
+     "id": "split_r",
+     "x1": 880,
+     "y1": 605,
+     "x2": 1050,
+     "y2": 665,
+     "color": "gray",
+     "width": 4,
+     "arrow": true
+    },
+    {
+     "op": "write",
+     "id": "sub_eq1",
+     "x": 550,
+     "y": 680,
+     "text": "x − 2 = 0",
+     "size": 36,
+     "color": "gray",
+     "anchor": "middle"
+    },
+    {
+     "op": "write",
+     "id": "sub_eq2",
+     "x": 1050,
+     "y": 680,
+     "text": "x − 3 = 0",
+     "size": 36,
+     "color": "gray",
+     "anchor": "middle"
+    },
+    {
+     "op": "rect",
+     "id": "sol1_box",
+     "x": 430,
+     "y": 745,
+     "w": 240,
+     "h": 85,
+     "color": "green",
+     "fill": "green"
+    },
+    {
+     "op": "write",
+     "id": "sol1",
+     "x": 550,
+     "y": 765,
+     "text": "x = 2",
+     "size": 44,
+     "color": "green",
+     "anchor": "middle"
+    },
+    {
+     "op": "rect",
+     "id": "sol2_box",
+     "x": 930,
+     "y": 745,
+     "w": 240,
+     "h": 85,
+     "color": "green",
+     "fill": "green"
+    },
+    {
+     "op": "write",
+     "id": "sol2",
+     "x": 1050,
+     "y": 765,
+     "text": "x = 3",
+     "size": 44,
+     "color": "green",
+     "anchor": "middle"
+    }
+   ]
+  }
+ ]
+}

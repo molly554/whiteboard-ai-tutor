@@ -1,0 +1,163 @@
+{
+ "title": "A Simpler Way: The Umbrella Example",
+ "lang": "en",
+ "steps": [
+  {
+   "title": "Real-world intuition",
+   "say": "Forget the curves for a second—think of umbrellas when a sudden rainstorm hits. Far more buyers suddenly compete for the same goods.",
+   "ops": [
+    {
+     "op": "erase",
+     "ids": [
+      "note1",
+      "note2",
+      "note3"
+     ]
+    },
+    {
+     "op": "write",
+     "id": "rain_ex",
+     "x": 1160,
+     "y": 200,
+     "text": "Everyday intuition:\n\nSunny day: 10 umbrellas,\n10 buyers at $10.\n\nSudden rainstorm:\n50 buyers rush to buy!",
+     "size": 28
+    }
+   ]
+  },
+  {
+   "title": "Shortage at the old price",
+   "say": "At the old price P1, sellers only have Q1 umbrellas, but way more people want one now. That gap is a shortage.",
+   "ops": [
+    {
+     "op": "line",
+     "id": "shortage_line",
+     "x1": 580,
+     "y1": 470,
+     "x2": 740,
+     "y2": 470,
+     "color": "red",
+     "width": 6
+    },
+    {
+     "op": "write",
+     "id": "shortage_txt",
+     "x": 660,
+     "y": 485,
+     "text": "Shortage",
+     "size": 26,
+     "color": "red",
+     "anchor": "middle"
+    },
+    {
+     "op": "write",
+     "id": "shortage_note",
+     "x": 1160,
+     "y": 380,
+     "text": "1. Shortage at old price:\nOnly Q1 are on the shelf.\nMany buyers leave empty-handed.",
+     "size": 28,
+     "color": "red"
+    }
+   ]
+  },
+  {
+   "title": "Buyers bid up the price",
+   "say": "Because buyers don't want to get soaked, they offer more money. That bidding war pushes the price up.",
+   "ops": [
+    {
+     "op": "line",
+     "id": "price_arrow",
+     "x1": 165,
+     "y1": 465,
+     "x2": 165,
+     "y2": 415,
+     "color": "red",
+     "width": 4,
+     "arrow": true
+    },
+    {
+     "op": "write",
+     "id": "bidding_note",
+     "x": 1160,
+     "y": 520,
+     "text": "2. Bidding war:\nBuyers compete:\n\"I'll pay $15!\" \"I'll pay $20!\"\nPrice climbs up.",
+     "size": 28,
+     "color": "blue"
+    }
+   ]
+  },
+  {
+   "title": "New equilibrium",
+   "say": "The price keeps rising until supply and demand balance out again at E2, with a higher price P2.",
+   "ops": [
+    {
+     "op": "erase",
+     "ids": [
+      "shortage_line",
+      "shortage_txt"
+     ]
+    },
+    {
+     "op": "ellipse",
+     "id": "e2",
+     "cx": 660,
+     "cy": 428,
+     "rx": 9,
+     "ry": 9,
+     "color": "green",
+     "fill": "green"
+    },
+    {
+     "op": "line",
+     "id": "e2h",
+     "x1": 200,
+     "y1": 428,
+     "x2": 660,
+     "y2": 428,
+     "color": "gray",
+     "width": 3,
+     "dash": true
+    },
+    {
+     "op": "line",
+     "id": "e2v",
+     "x1": 660,
+     "y1": 428,
+     "x2": 660,
+     "y2": 720,
+     "color": "gray",
+     "width": 3,
+     "dash": true
+    },
+    {
+     "op": "write",
+     "id": "p2",
+     "x": 130,
+     "y": 405,
+     "text": "P2",
+     "size": 32,
+     "color": "red",
+     "anchor": "middle"
+    },
+    {
+     "op": "write",
+     "id": "q2",
+     "x": 660,
+     "y": 735,
+     "text": "Q2",
+     "size": 32,
+     "color": "green",
+     "anchor": "middle"
+    },
+    {
+     "op": "write",
+     "id": "result_note",
+     "x": 1160,
+     "y": 670,
+     "text": "3. New balance at E2:\nPrice is higher (P2),\nshortage is resolved!",
+     "size": 28,
+     "color": "green"
+    }
+   ]
+  }
+ ]
+}

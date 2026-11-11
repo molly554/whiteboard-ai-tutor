@@ -1,0 +1,390 @@
+{
+ "title": "光合作用发生的位置",
+ "lang": "zh",
+ "steps": [
+  {
+   "title": "明确核心场所",
+   "say": "光合作用发生在植物细胞的叶绿体中。让我们通过画图来看看它在细胞的哪个位置。",
+   "ops": [
+    {
+     "op": "write",
+     "id": "main_title",
+     "x": 800,
+     "y": 50,
+     "text": "光合作用的场所：叶绿体",
+     "size": 56,
+     "color": "ink",
+     "anchor": "middle",
+     "underline": true
+    }
+   ]
+  },
+  {
+   "title": "植物细胞结构",
+   "say": "这是一个植物细胞，最外层是坚韧的细胞壁，里面有细胞核和大型的中央液泡。",
+   "ops": [
+    {
+     "op": "rect",
+     "id": "cell_wall",
+     "x": 80,
+     "y": 180,
+     "w": 460,
+     "h": 480,
+     "color": "green",
+     "width": 6
+    },
+    {
+     "op": "rect",
+     "id": "cell_mem",
+     "x": 96,
+     "y": 196,
+     "w": 428,
+     "h": 448,
+     "color": "ink",
+     "width": 2,
+     "dash": true
+    },
+    {
+     "op": "write",
+     "id": "lbl_cell",
+     "x": 310,
+     "y": 680,
+     "text": "植物细胞",
+     "size": 36,
+     "color": "ink",
+     "anchor": "middle"
+    },
+    {
+     "op": "ellipse",
+     "id": "vacuole",
+     "cx": 240,
+     "cy": 450,
+     "rx": 100,
+     "ry": 140,
+     "color": "blue",
+     "width": 3,
+     "fill": "blue"
+    },
+    {
+     "op": "write",
+     "id": "lbl_vac",
+     "x": 240,
+     "y": 435,
+     "text": "液泡",
+     "size": 30,
+     "color": "blue",
+     "anchor": "middle"
+    },
+    {
+     "op": "ellipse",
+     "id": "nucleus",
+     "cx": 420,
+     "cy": 290,
+     "rx": 55,
+     "ry": 55,
+     "color": "ink",
+     "width": 4,
+     "fill": "gray"
+    },
+    {
+     "op": "write",
+     "id": "lbl_nuc",
+     "x": 420,
+     "y": 275,
+     "text": "细胞核",
+     "size": 28,
+     "color": "ink",
+     "anchor": "middle"
+    }
+   ]
+  },
+  {
+   "title": "定位叶绿体",
+   "say": "在细胞质里，分布着许多绿色的小颗粒，这些就是叶绿体。我们把其中一个放大来看。",
+   "ops": [
+    {
+     "op": "ellipse",
+     "id": "chlo_1",
+     "cx": 420,
+     "cy": 430,
+     "rx": 35,
+     "ry": 20,
+     "rotate": -15,
+     "color": "green",
+     "width": 4,
+     "fill": "green"
+    },
+    {
+     "op": "ellipse",
+     "id": "chlo_2",
+     "cx": 390,
+     "cy": 550,
+     "rx": 35,
+     "ry": 20,
+     "rotate": 25,
+     "color": "green",
+     "width": 4,
+     "fill": "green"
+    },
+    {
+     "op": "ellipse",
+     "id": "chlo_3",
+     "cx": 210,
+     "cy": 250,
+     "rx": 35,
+     "ry": 20,
+     "rotate": 10,
+     "color": "green",
+     "width": 4,
+     "fill": "green"
+    },
+    {
+     "op": "line",
+     "id": "zoom_arrow",
+     "x1": 465,
+     "y1": 430,
+     "x2": 660,
+     "y2": 430,
+     "color": "red",
+     "width": 5,
+     "arrow": true
+    },
+    {
+     "op": "write",
+     "id": "lbl_zoom",
+     "x": 562,
+     "y": 380,
+     "text": "放大观察",
+     "size": 32,
+     "color": "red",
+     "anchor": "middle"
+    }
+   ]
+  },
+  {
+   "title": "叶绿体的外膜与基质",
+   "say": "叶绿体呈椭球形，具有双层膜结构，内部充满液态的基质。",
+   "ops": [
+    {
+     "op": "ellipse",
+     "id": "big_outer",
+     "cx": 1080,
+     "cy": 430,
+     "rx": 380,
+     "ry": 210,
+     "color": "green",
+     "width": 6
+    },
+    {
+     "op": "ellipse",
+     "id": "big_inner",
+     "cx": 1080,
+     "cy": 430,
+     "rx": 362,
+     "ry": 192,
+     "color": "green",
+     "width": 3
+    },
+    {
+     "op": "write",
+     "id": "lbl_big_chlo",
+     "x": 1080,
+     "y": 165,
+     "text": "叶绿体结构",
+     "size": 42,
+     "color": "green",
+     "anchor": "middle"
+    },
+    {
+     "op": "line",
+     "id": "ptr_mem",
+     "x1": 745,
+     "y1": 310,
+     "x2": 660,
+     "y2": 260,
+     "color": "ink",
+     "width": 3
+    },
+    {
+     "op": "write",
+     "id": "lbl_mem",
+     "x": 650,
+     "y": 220,
+     "text": "外膜与内膜",
+     "size": 30,
+     "color": "ink"
+    }
+   ]
+  },
+  {
+   "title": "类囊体与基粒",
+   "say": "在叶绿体内部，有许多像硬币一样叠在一起的扁平囊状结构，叫做类囊体，叠成一摞称为基粒。",
+   "ops": [
+    {
+     "op": "rect",
+     "id": "thy_1a",
+     "x": 850,
+     "y": 350,
+     "w": 110,
+     "h": 28,
+     "color": "green",
+     "width": 3,
+     "fill": "green"
+    },
+    {
+     "op": "rect",
+     "id": "thy_1b",
+     "x": 850,
+     "y": 382,
+     "w": 110,
+     "h": 28,
+     "color": "green",
+     "width": 3,
+     "fill": "green"
+    },
+    {
+     "op": "rect",
+     "id": "thy_1c",
+     "x": 850,
+     "y": 414,
+     "w": 110,
+     "h": 28,
+     "color": "green",
+     "width": 3,
+     "fill": "green"
+    },
+    {
+     "op": "rect",
+     "id": "thy_1d",
+     "x": 850,
+     "y": 446,
+     "w": 110,
+     "h": 28,
+     "color": "green",
+     "width": 3,
+     "fill": "green"
+    },
+    {
+     "op": "rect",
+     "id": "thy_2a",
+     "x": 1140,
+     "y": 390,
+     "w": 110,
+     "h": 28,
+     "color": "green",
+     "width": 3,
+     "fill": "green"
+    },
+    {
+     "op": "rect",
+     "id": "thy_2b",
+     "x": 1140,
+     "y": 422,
+     "w": 110,
+     "h": 28,
+     "color": "green",
+     "width": 3,
+     "fill": "green"
+    },
+    {
+     "op": "rect",
+     "id": "thy_2c",
+     "x": 1140,
+     "y": 454,
+     "w": 110,
+     "h": 28,
+     "color": "green",
+     "width": 3,
+     "fill": "green"
+    },
+    {
+     "op": "line",
+     "id": "lamella",
+     "x1": 960,
+     "y1": 428,
+     "x2": 1140,
+     "y2": 436,
+     "color": "green",
+     "width": 5
+    },
+    {
+     "op": "line",
+     "id": "ptr_thy",
+     "x1": 905,
+     "y1": 350,
+     "x2": 905,
+     "y2": 290,
+     "color": "ink",
+     "width": 3
+    },
+    {
+     "op": "write",
+     "id": "lbl_thy",
+     "x": 905,
+     "y": 245,
+     "text": "类囊体（基粒）",
+     "size": 32,
+     "color": "green",
+     "anchor": "middle"
+    },
+    {
+     "op": "write",
+     "id": "lbl_stroma",
+     "x": 1050,
+     "y": 530,
+     "text": "叶绿体基质",
+     "size": 32,
+     "color": "ink",
+     "anchor": "middle"
+    }
+   ]
+  },
+  {
+   "title": "光合作用的两个阶段",
+   "say": "光合作用分为两步：光反应在类囊体薄膜上进行，暗反应（卡尔文循环）在叶绿体基质中进行。",
+   "ops": [
+    {
+     "op": "write",
+     "id": "note_1",
+     "x": 1195,
+     "y": 280,
+     "text": "① 光反应：类囊体薄膜",
+     "size": 32,
+     "color": "red",
+     "anchor": "middle"
+    },
+    {
+     "op": "line",
+     "id": "arr_1",
+     "x1": 1195,
+     "y1": 325,
+     "x2": 1195,
+     "y2": 380,
+     "color": "red",
+     "width": 4,
+     "arrow": true
+    },
+    {
+     "op": "write",
+     "id": "note_2",
+     "x": 800,
+     "y": 760,
+     "text": "总结：植物细胞 → 叶绿体（类囊体薄膜 + 基质）",
+     "size": 40,
+     "color": "blue",
+     "anchor": "middle"
+    },
+    {
+     "op": "write",
+     "id": "note_3",
+     "x": 1050,
+     "y": 580,
+     "text": "② 暗反应场所",
+     "size": 30,
+     "color": "blue",
+     "anchor": "middle"
+    }
+   ]
+  }
+ ]
+}

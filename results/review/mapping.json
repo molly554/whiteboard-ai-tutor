@@ -1,0 +1,578 @@
+{
+ "B04": {
+  "model": "haiku-5.5",
+  "cond": "low",
+  "scenario": "r1-seasons",
+  "run_id": "main-or-haiku-5.5-low-r1-seasons-2",
+  "hard_n": 0,
+  "cost": 0.0029656,
+  "first_op": 27.091
+ },
+ "B01": {
+  "model": "haiku-5.5",
+  "cond": "low",
+  "scenario": "r1-pythagoras",
+  "run_id": "main-or-haiku-5.5-low-r1-pythagoras-2",
+  "hard_n": 0,
+  "cost": 0.0028572,
+  "first_op": 21.001
+ },
+ "B18": {
+  "model": "haiku-5.5",
+  "cond": "low",
+  "scenario": "r1-quadratic",
+  "run_id": "main-or-haiku-5.5-low-r1-quadratic-3",
+  "hard_n": 0,
+  "cost": 0.0014078,
+  "first_op": 9.793
+ },
+ "B58": {
+  "model": "haiku-5.5",
+  "cond": "low",
+  "scenario": "r1-supply-demand",
+  "run_id": "main-or-haiku-5.5-low-r1-supply-demand-2",
+  "hard_n": 1,
+  "cost": 0.0019244,
+  "first_op": 15.002
+ },
+ "B26": {
+  "model": "haiku-5.5",
+  "cond": "low",
+  "scenario": "r1-photosynthesis",
+  "run_id": "main-or-haiku-5.5-low-r1-photosynthesis-3",
+  "hard_n": 1,
+  "cost": 0.0006124,
+  "first_op": 2.204
+ },
+ "B17": {
+  "model": "haiku-5.5",
+  "cond": "low",
+  "scenario": "r1-i1-seasons-distance",
+  "run_id": "main-or-haiku-5.5-low-r1-i1-seasons-distance-2",
+  "hard_n": 0,
+  "cost": 0.0014303,
+  "first_op": 9.477
+ },
+ "B59": {
+  "model": "haiku-5.5",
+  "cond": "low",
+  "scenario": "r1-i2-demand-simpler",
+  "run_id": "main-or-haiku-5.5-low-r1-i2-demand-simpler-1",
+  "hard_n": 1,
+  "cost": 0.0015576,
+  "first_op": 12.744
+ },
+ "B05": {
+  "model": "haiku-5.5",
+  "cond": "low",
+  "scenario": "r1-i3-arrow-meaning",
+  "run_id": "main-or-haiku-5.5-low-r1-i3-arrow-meaning-3",
+  "hard_n": 0,
+  "cost": 0.0005847,
+  "first_op": 2.2
+ },
+ "B36": {
+  "model": "haiku-5.5",
+  "cond": "mid",
+  "scenario": "r1-seasons",
+  "run_id": "main-or-haiku-5.5-mid-r1-seasons-3",
+  "hard_n": 0,
+  "cost": 0.0019361,
+  "first_op": 15.764
+ },
+ "B60": {
+  "model": "haiku-5.5",
+  "cond": "mid",
+  "scenario": "r1-supply-demand",
+  "run_id": "main-or-haiku-5.5-mid-r1-supply-demand-3",
+  "hard_n": 2,
+  "cost": 0.0030894,
+  "first_op": 24.753
+ },
+ "B19": {
+  "model": "haiku-5.5",
+  "cond": "mid",
+  "scenario": "r1-i2-demand-simpler",
+  "run_id": "main-or-haiku-5.5-mid-r1-i2-demand-simpler-2",
+  "hard_n": 0,
+  "cost": 0.0010736,
+  "first_op": 8.806
+ },
+ "B50": {
+  "model": "sonnet-5.5",
+  "cond": "low",
+  "scenario": "r1-seasons",
+  "run_id": "main-or-sonnet-5.5-low-r1-seasons-2",
+  "hard_n": 0,
+  "cost": 0.016072,
+  "first_op": 2.86
+ },
+ "B48": {
+  "model": "sonnet-5.5",
+  "cond": "low",
+  "scenario": "r1-pythagoras",
+  "run_id": "main-or-sonnet-5.5-low-r1-pythagoras-2",
+  "hard_n": 0,
+  "cost": 0.016004,
+  "first_op": 3.605
+ },
+ "B45": {
+  "model": "sonnet-5.5",
+  "cond": "low",
+  "scenario": "r1-quadratic",
+  "run_id": "main-or-sonnet-5.5-low-r1-quadratic-1",
+  "hard_n": 1,
+  "cost": 0.016716,
+  "first_op": 3.167
+ },
+ "B30": {
+  "model": "sonnet-5.5",
+  "cond": "low",
+  "scenario": "r1-supply-demand",
+  "run_id": "main-or-sonnet-5.5-low-r1-supply-demand-2",
+  "hard_n": 0,
+  "cost": 0.018288,
+  "first_op": 2.422
+ },
+ "B29": {
+  "model": "sonnet-5.5",
+  "cond": "low",
+  "scenario": "r1-photosynthesis",
+  "run_id": "main-or-sonnet-5.5-low-r1-photosynthesis-3",
+  "hard_n": 0,
+  "cost": 0.012128,
+  "first_op": 2.726
+ },
+ "B03": {
+  "model": "sonnet-5.5",
+  "cond": "low",
+  "scenario": "r1-i1-seasons-distance",
+  "run_id": "main-or-sonnet-5.5-low-r1-i1-seasons-distance-2",
+  "hard_n": 2,
+  "cost": 0.015066,
+  "first_op": 2.163
+ },
+ "B37": {
+  "model": "sonnet-5.5",
+  "cond": "low",
+  "scenario": "r1-i2-demand-simpler",
+  "run_id": "main-or-sonnet-5.5-low-r1-i2-demand-simpler-2",
+  "hard_n": 0,
+  "cost": 0.017122,
+  "first_op": 2.885
+ },
+ "B38": {
+  "model": "sonnet-5.5",
+  "cond": "low",
+  "scenario": "r1-i3-arrow-meaning",
+  "run_id": "main-or-sonnet-5.5-low-r1-i3-arrow-meaning-2",
+  "hard_n": 0,
+  "cost": 0.014564,
+  "first_op": 2.66
+ },
+ "B09": {
+  "model": "sonnet-5.5",
+  "cond": "mid",
+  "scenario": "r1-seasons",
+  "run_id": "main-or-sonnet-5.5-mid-r1-seasons-2",
+  "hard_n": 0,
+  "cost": 0.019042,
+  "first_op": 2.593
+ },
+ "B21": {
+  "model": "sonnet-5.5",
+  "cond": "mid",
+  "scenario": "r1-supply-demand",
+  "run_id": "main-or-sonnet-5.5-mid-r1-supply-demand-2",
+  "hard_n": 0,
+  "cost": 0.018178,
+  "first_op": 2.869
+ },
+ "B64": {
+  "model": "sonnet-5.5",
+  "cond": "mid",
+  "scenario": "r1-i2-demand-simpler",
+  "run_id": "main-or-sonnet-5.5-mid-r1-i2-demand-simpler-2",
+  "hard_n": 0,
+  "cost": 0.016212,
+  "first_op": 4.37
+ },
+ "B24": {
+  "model": "gemini-4-argon",
+  "cond": "low",
+  "scenario": "r1-seasons",
+  "run_id": "main-or-gemini-4-argon-low-r1-seasons-2",
+  "hard_n": 1,
+  "cost": 0.032914,
+  "first_op": 8.27
+ },
+ "B62": {
+  "model": "gemini-4-argon",
+  "cond": "low",
+  "scenario": "r1-pythagoras",
+  "run_id": "main-or-gemini-4-argon-low-r1-pythagoras-3",
+  "hard_n": 0,
+  "cost": 0.030416,
+  "first_op": 5.874
+ },
+ "B10": {
+  "model": "gemini-4-argon",
+  "cond": "low",
+  "scenario": "r1-quadratic",
+  "run_id": "main-or-gemini-4-argon-low-r1-quadratic-2",
+  "hard_n": 0,
+  "cost": 0.018846,
+  "first_op": 8.2
+ },
+ "B13": {
+  "model": "gemini-4-argon",
+  "cond": "low",
+  "scenario": "r1-supply-demand",
+  "run_id": "main-or-gemini-4-argon-low-r1-supply-demand-2",
+  "hard_n": 2,
+  "cost": 0.02686,
+  "first_op": 7.923
+ },
+ "B46": {
+  "model": "gemini-4-argon",
+  "cond": "low",
+  "scenario": "r1-photosynthesis",
+  "run_id": "main-or-gemini-4-argon-low-r1-photosynthesis-1",
+  "hard_n": 7,
+  "cost": 0.029526,
+  "first_op": 6.804
+ },
+ "B44": {
+  "model": "gemini-4-argon",
+  "cond": "low",
+  "scenario": "r1-i1-seasons-distance",
+  "run_id": "main-or-gemini-4-argon-low-r1-i1-seasons-distance-3",
+  "hard_n": 2,
+  "cost": 0.024904,
+  "first_op": 7.489
+ },
+ "B42": {
+  "model": "gemini-4-argon",
+  "cond": "low",
+  "scenario": "r1-i2-demand-simpler",
+  "run_id": "main-or-gemini-4-argon-low-r1-i2-demand-simpler-3",
+  "hard_n": 0,
+  "cost": 0.013582,
+  "first_op": 8.064
+ },
+ "B11": {
+  "model": "gemini-4-argon",
+  "cond": "low",
+  "scenario": "r1-i3-arrow-meaning",
+  "run_id": "main-or-gemini-4-argon-low-r1-i3-arrow-meaning-1",
+  "hard_n": 2,
+  "cost": 0.014064,
+  "first_op": 8.888
+ },
+ "B55": {
+  "model": "gemini-4-argon",
+  "cond": "mid",
+  "scenario": "r1-seasons",
+  "run_id": "main-or-gemini-4-argon-mid-r1-seasons-3",
+  "hard_n": 3,
+  "cost": 0.037864,
+  "first_op": 7.762
+ },
+ "B07": {
+  "model": "gemini-4-argon",
+  "cond": "mid",
+  "scenario": "r1-supply-demand",
+  "run_id": "main-or-gemini-4-argon-mid-r1-supply-demand-2",
+  "hard_n": 5,
+  "cost": 0.03018,
+  "first_op": 6.801
+ },
+ "B41": {
+  "model": "gemini-4-argon",
+  "cond": "mid",
+  "scenario": "r1-i2-demand-simpler",
+  "run_id": "main-or-gemini-4-argon-mid-r1-i2-demand-simpler-1",
+  "hard_n": 1,
+  "cost": 0.020742,
+  "first_op": 8.348
+ },
+ "B22": {
+  "model": "gemini-3.8-flash",
+  "cond": "low",
+  "scenario": "r1-seasons",
+  "run_id": "main-or-gemini-3.8-flash-low-r1-seasons-3",
+  "hard_n": 2,
+  "cost": 0.00831225,
+  "first_op": 3.056
+ },
+ "B54": {
+  "model": "gemini-3.8-flash",
+  "cond": "low",
+  "scenario": "r1-pythagoras",
+  "run_id": "main-or-gemini-3.8-flash-low-r1-pythagoras-3",
+  "hard_n": 1,
+  "cost": 0.009663,
+  "first_op": 3.438
+ },
+ "B52": {
+  "model": "gemini-3.8-flash",
+  "cond": "low",
+  "scenario": "r1-quadratic",
+  "run_id": "main-or-gemini-3.8-flash-low-r1-quadratic-3",
+  "hard_n": 2,
+  "cost": 0.006318,
+  "first_op": 3.587
+ },
+ "B40": {
+  "model": "gemini-3.8-flash",
+  "cond": "low",
+  "scenario": "r1-supply-demand",
+  "run_id": "main-or-gemini-3.8-flash-low-r1-supply-demand-2",
+  "hard_n": 2,
+  "cost": 0.0096195,
+  "first_op": 3.275
+ },
+ "B06": {
+  "model": "gemini-3.8-flash",
+  "cond": "low",
+  "scenario": "r1-photosynthesis",
+  "run_id": "main-or-gemini-3.8-flash-low-r1-photosynthesis-1",
+  "hard_n": 5,
+  "cost": 0.00670575,
+  "first_op": 3.467
+ },
+ "B20": {
+  "model": "gemini-3.8-flash",
+  "cond": "low",
+  "scenario": "r1-i1-seasons-distance",
+  "run_id": "main-or-gemini-3.8-flash-low-r1-i1-seasons-distance-1",
+  "hard_n": 3,
+  "cost": 0.006222,
+  "first_op": 3.002
+ },
+ "B34": {
+  "model": "gemini-3.8-flash",
+  "cond": "low",
+  "scenario": "r1-i2-demand-simpler",
+  "run_id": "main-or-gemini-3.8-flash-low-r1-i2-demand-simpler-3",
+  "hard_n": 0,
+  "cost": 0.0069615,
+  "first_op": 2.803
+ },
+ "B02": {
+  "model": "gemini-3.8-flash",
+  "cond": "low",
+  "scenario": "r1-i3-arrow-meaning",
+  "run_id": "main-or-gemini-3.8-flash-low-r1-i3-arrow-meaning-1",
+  "hard_n": 1,
+  "cost": 0.0040455,
+  "first_op": 2.917
+ },
+ "B43": {
+  "model": "gemini-3.8-flash",
+  "cond": "mid",
+  "scenario": "r1-seasons",
+  "run_id": "main-or-gemini-3.8-flash-mid-r1-seasons-3",
+  "hard_n": 5,
+  "cost": 0.016386,
+  "first_op": 8.971
+ },
+ "B63": {
+  "model": "gemini-3.8-flash",
+  "cond": "mid",
+  "scenario": "r1-supply-demand",
+  "run_id": "main-or-gemini-3.8-flash-mid-r1-supply-demand-3",
+  "hard_n": 3,
+  "cost": 0.02804325,
+  "first_op": 38.589
+ },
+ "B32": {
+  "model": "gemini-3.8-flash",
+  "cond": "mid",
+  "scenario": "r1-i2-demand-simpler",
+  "run_id": "main-or-gemini-3.8-flash-mid-r1-i2-demand-simpler-3",
+  "hard_n": 0,
+  "cost": 0.02186025,
+  "first_op": 39.409
+ },
+ "B15": {
+  "model": "deepseek-flash",
+  "cond": "low",
+  "scenario": "r1-seasons",
+  "run_id": "main-ds-deepseek-flash-low-r1-seasons-1",
+  "hard_n": 5,
+  "cost": 0.002163,
+  "first_op": 2.598
+ },
+ "B61": {
+  "model": "deepseek-flash",
+  "cond": "low",
+  "scenario": "r1-pythagoras",
+  "run_id": "main-ds-deepseek-flash-low-r1-pythagoras-3",
+  "hard_n": 1,
+  "cost": 0.001792,
+  "first_op": 2.432
+ },
+ "B35": {
+  "model": "deepseek-flash",
+  "cond": "low",
+  "scenario": "r1-quadratic",
+  "run_id": "main-ds-deepseek-flash-low-r1-quadratic-2",
+  "hard_n": 15,
+  "cost": 0.001406,
+  "first_op": 2.202
+ },
+ "B31": {
+  "model": "deepseek-flash",
+  "cond": "low",
+  "scenario": "r1-supply-demand",
+  "run_id": "main-ds-deepseek-flash-low-r1-supply-demand-3",
+  "hard_n": 22,
+  "cost": 0.001715,
+  "first_op": 2.662
+ },
+ "B12": {
+  "model": "deepseek-flash",
+  "cond": "low",
+  "scenario": "r1-photosynthesis",
+  "run_id": "main-ds-deepseek-flash-low-r1-photosynthesis-2",
+  "hard_n": 5,
+  "cost": 0.001977,
+  "first_op": 2.268
+ },
+ "B23": {
+  "model": "deepseek-flash",
+  "cond": "low",
+  "scenario": "r1-i1-seasons-distance",
+  "run_id": "main-ds-deepseek-flash-low-r1-i1-seasons-distance-3",
+  "hard_n": 6,
+  "cost": 0.000881,
+  "first_op": 3.568
+ },
+ "B28": {
+  "model": "deepseek-flash",
+  "cond": "low",
+  "scenario": "r1-i2-demand-simpler",
+  "run_id": "main-ds-deepseek-flash-low-r1-i2-demand-simpler-2",
+  "hard_n": 3,
+  "cost": 0.001026,
+  "first_op": 2.146
+ },
+ "B56": {
+  "model": "deepseek-flash",
+  "cond": "low",
+  "scenario": "r1-i3-arrow-meaning",
+  "run_id": "main-ds-deepseek-flash-low-r1-i3-arrow-meaning-2",
+  "hard_n": 5,
+  "cost": 0.000855,
+  "first_op": 1.92
+ },
+ "B49": {
+  "model": "deepseek-flash",
+  "cond": "mid",
+  "scenario": "r1-supply-demand",
+  "run_id": "main-ds-deepseek-flash-mid-r1-supply-demand-1",
+  "hard_n": 4,
+  "cost": 0.006144,
+  "first_op": 22.331
+ },
+ "B08": {
+  "model": "deepseek-flash",
+  "cond": "mid",
+  "scenario": "r1-i2-demand-simpler",
+  "run_id": "main-ds-deepseek-flash-mid-r1-i2-demand-simpler-1",
+  "hard_n": 1,
+  "cost": 0.007032,
+  "first_op": 31.391
+ },
+ "B39": {
+  "model": "deepseek-v4-pro",
+  "cond": "low",
+  "scenario": "r1-seasons",
+  "run_id": "main-ds-deepseek-v4-pro-low-r1-seasons-2",
+  "hard_n": 29,
+  "cost": 0.010007,
+  "first_op": 4.55
+ },
+ "B16": {
+  "model": "deepseek-v4-pro",
+  "cond": "low",
+  "scenario": "r1-pythagoras",
+  "run_id": "main-ds-deepseek-v4-pro-low-r1-pythagoras-3",
+  "hard_n": 6,
+  "cost": 0.00686,
+  "first_op": 4.428
+ },
+ "B57": {
+  "model": "deepseek-v4-pro",
+  "cond": "low",
+  "scenario": "r1-quadratic",
+  "run_id": "main-ds-deepseek-v4-pro-low-r1-quadratic-3",
+  "hard_n": 0,
+  "cost": 0.003165,
+  "first_op": 11.012
+ },
+ "B47": {
+  "model": "deepseek-v4-pro",
+  "cond": "low",
+  "scenario": "r1-supply-demand",
+  "run_id": "main-ds-deepseek-v4-pro-low-r1-supply-demand-1",
+  "hard_n": 4,
+  "cost": 0.006146,
+  "first_op": 3.341
+ },
+ "B53": {
+  "model": "deepseek-v4-pro",
+  "cond": "low",
+  "scenario": "r1-photosynthesis",
+  "run_id": "main-ds-deepseek-v4-pro-low-r1-photosynthesis-1",
+  "hard_n": 4,
+  "cost": 0.004947,
+  "first_op": 3.737
+ },
+ "B25": {
+  "model": "deepseek-v4-pro",
+  "cond": "low",
+  "scenario": "r1-i1-seasons-distance",
+  "run_id": "main-ds-deepseek-v4-pro-low-r1-i1-seasons-distance-3",
+  "hard_n": 6,
+  "cost": 0.003996,
+  "first_op": 3.414
+ },
+ "B14": {
+  "model": "deepseek-v4-pro",
+  "cond": "low",
+  "scenario": "r1-i2-demand-simpler",
+  "run_id": "main-ds-deepseek-v4-pro-low-r1-i2-demand-simpler-1",
+  "hard_n": 2,
+  "cost": 0.004831,
+  "first_op": 3.371
+ },
+ "B33": {
+  "model": "deepseek-v4-pro",
+  "cond": "low",
+  "scenario": "r1-i3-arrow-meaning",
+  "run_id": "main-ds-deepseek-v4-pro-low-r1-i3-arrow-meaning-3",
+  "hard_n": 6,
+  "cost": 0.00106,
+  "first_op": 3.866
+ },
+ "B51": {
+  "model": "deepseek-v4-pro",
+  "cond": "mid",
+  "scenario": "r1-supply-demand",
+  "run_id": "main-ds-deepseek-v4-pro-mid-r1-supply-demand-1",
+  "hard_n": 1,
+  "cost": 0.031438,
+  "first_op": 154.867
+ },
+ "B27": {
+  "model": "deepseek-v4-pro",
+  "cond": "mid",
+  "scenario": "r1-i2-demand-simpler",
+  "run_id": "main-ds-deepseek-v4-pro-mid-r1-i2-demand-simpler-2",
+  "hard_n": 0,
+  "cost": 0.025486,
+  "first_op": 102.466
+ }
+}

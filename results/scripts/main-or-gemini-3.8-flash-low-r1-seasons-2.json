@@ -1,0 +1,247 @@
+{
+ "title": "Why Do We Have Seasons?",
+ "lang": "en",
+ "steps": [
+  {
+   "title": "Topic Introduction",
+   "say": "Many people think seasons are caused by distance from the Sun, but that's a myth. Let's explore the real reason.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "main_title",
+     "x": 800,
+     "y": 60,
+     "text": "Why Do We Have Seasons?",
+     "size": 56,
+     "color": "ink",
+     "anchor": "middle",
+     "underline": true
+    },
+    {
+     "op": "write",
+     "id": "myth_text",
+     "x": 800,
+     "y": 140,
+     "text": "Myth: Earth is closer to the Sun in summer (False!)",
+     "size": 32,
+     "color": "red",
+     "anchor": "middle"
+    }
+   ]
+  },
+  {
+   "title": "The Key Factor: Axial Tilt",
+   "say": "The real cause is Earth's axial tilt. Earth spins tilted at 23.5 degrees relative to its orbital plane.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "fact_text",
+     "x": 800,
+     "y": 190,
+     "text": "Real Cause: Earth's Axial Tilt (23.5°)",
+     "size": 36,
+     "color": "blue",
+     "anchor": "middle"
+    },
+    {
+     "op": "ellipse",
+     "id": "sun_center",
+     "cx": 800,
+     "cy": 500,
+     "rx": 55,
+     "ry": 55,
+     "color": "red",
+     "fill": "red"
+    },
+    {
+     "op": "write",
+     "id": "sun_lbl",
+     "x": 800,
+     "y": 480,
+     "text": "SUN",
+     "size": 32,
+     "color": "ink",
+     "anchor": "middle"
+    },
+    {
+     "op": "ellipse",
+     "id": "orbit_track",
+     "cx": 800,
+     "cy": 500,
+     "rx": 540,
+     "ry": 180,
+     "color": "gray",
+     "dash": true,
+     "width": 3
+    }
+   ]
+  },
+  {
+   "title": "Northern Hemisphere Summer",
+   "say": "In June, the North Pole tilts toward the Sun. Solar rays strike northern lands directly, creating summer.",
+   "ops": [
+    {
+     "op": "ellipse",
+     "id": "earth_left",
+     "cx": 280,
+     "cy": 500,
+     "rx": 45,
+     "ry": 45,
+     "color": "blue",
+     "fill": "blue"
+    },
+    {
+     "op": "line",
+     "id": "axis_left",
+     "x1": 255,
+     "y1": 560,
+     "x2": 305,
+     "y2": 440,
+     "color": "ink",
+     "width": 4
+    },
+    {
+     "op": "line",
+     "id": "ray_left",
+     "x1": 730,
+     "y1": 500,
+     "x2": 340,
+     "y2": 490,
+     "color": "red",
+     "arrow": true,
+     "width": 4
+    },
+    {
+     "op": "write",
+     "id": "june_lbl",
+     "x": 280,
+     "y": 630,
+     "text": "June Solstice\n• North tilts TOWARD Sun\n• North: Summer (Long days)\n• South: Winter (Short days)",
+     "size": 28,
+     "color": "ink",
+     "anchor": "middle"
+    }
+   ]
+  },
+  {
+   "title": "Northern Hemisphere Winter",
+   "say": "Six months later in December, Earth reaches the opposite side. Now the North Pole tilts away from the Sun.",
+   "ops": [
+    {
+     "op": "ellipse",
+     "id": "earth_right",
+     "cx": 1320,
+     "cy": 500,
+     "rx": 45,
+     "ry": 45,
+     "color": "blue",
+     "fill": "blue"
+    },
+    {
+     "op": "line",
+     "id": "axis_right",
+     "x1": 1295,
+     "y1": 560,
+     "x2": 1345,
+     "y2": 440,
+     "color": "ink",
+     "width": 4
+    },
+    {
+     "op": "line",
+     "id": "ray_right",
+     "x1": 870,
+     "y1": 500,
+     "x2": 1260,
+     "y2": 510,
+     "color": "red",
+     "arrow": true,
+     "width": 4
+    },
+    {
+     "op": "write",
+     "id": "dec_lbl",
+     "x": 1320,
+     "y": 630,
+     "text": "December Solstice\n• North tilts AWAY from Sun\n• North: Winter (Direct rays miss)\n• South: Summer",
+     "size": 28,
+     "color": "ink",
+     "anchor": "middle"
+    }
+   ]
+  },
+  {
+   "title": "The Equinoxes: Spring and Autumn",
+   "say": "In March and September, neither hemisphere tilts toward the Sun. Day and night are equal everywhere.",
+   "ops": [
+    {
+     "op": "ellipse",
+     "id": "earth_top",
+     "cx": 800,
+     "cy": 320,
+     "rx": 35,
+     "ry": 35,
+     "color": "blue",
+     "fill": "blue"
+    },
+    {
+     "op": "write",
+     "id": "march_lbl",
+     "x": 800,
+     "y": 255,
+     "text": "March Equinox (Spring / Autumn)",
+     "size": 28,
+     "color": "green",
+     "anchor": "middle"
+    },
+    {
+     "op": "ellipse",
+     "id": "earth_bottom",
+     "cx": 800,
+     "cy": 680,
+     "rx": 35,
+     "ry": 35,
+     "color": "blue",
+     "fill": "blue"
+    },
+    {
+     "op": "write",
+     "id": "sept_lbl",
+     "x": 800,
+     "y": 730,
+     "text": "September Equinox (Autumn / Spring)",
+     "size": 28,
+     "color": "green",
+     "anchor": "middle"
+    }
+   ]
+  },
+  {
+   "title": "Summary",
+   "say": "In short: the 23.5° tilt changes the angle and duration of sunlight as Earth orbits the Sun each year.",
+   "ops": [
+    {
+     "op": "rect",
+     "id": "summary_box",
+     "x": 260,
+     "y": 790,
+     "w": 1080,
+     "h": 70,
+     "color": "ink",
+     "fill": "gray",
+     "width": 2
+    },
+    {
+     "op": "write",
+     "id": "summary_txt",
+     "x": 800,
+     "y": 808,
+     "text": "Takeaway: 23.5° Tilt + Orbit around Sun = Changing Sunlight Angle & Duration",
+     "size": 30,
+     "color": "ink",
+     "anchor": "middle"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,207 @@
+{
+ "title": "Why We Have Seasons",
+ "lang": "en",
+ "steps": [
+  {
+   "title": "The question",
+   "say": "Seasons come from Earth's tilt, not from how far we are from the Sun. Let's see how.",
+   "ops": [
+    {
+     "id": "t1",
+     "op": "write",
+     "x": 800,
+     "y": 50,
+     "text": "Why We Have Seasons",
+     "size": 56,
+     "anchor": "middle",
+     "underline": true
+    },
+    {
+     "id": "q1",
+     "op": "write",
+     "x": 800,
+     "y": 150,
+     "text": "Is it because Earth gets closer to the Sun?",
+     "size": 40,
+     "anchor": "middle",
+     "color": "gray"
+    }
+   ]
+  },
+  {
+   "title": "Sun and orbit",
+   "say": "Earth travels around the Sun once a year along a nearly circular path.",
+   "ops": [
+    {
+     "id": "sun",
+     "op": "ellipse",
+     "cx": 800,
+     "cy": 520,
+     "rx": 60,
+     "ry": 60,
+     "color": "red",
+     "fill": "red"
+    },
+    {
+     "id": "sunl",
+     "op": "write",
+     "x": 800,
+     "y": 600,
+     "text": "Sun",
+     "size": 32,
+     "anchor": "middle"
+    },
+    {
+     "id": "orb",
+     "op": "ellipse",
+     "cx": 800,
+     "cy": 520,
+     "rx": 500,
+     "ry": 210,
+     "color": "gray",
+     "width": 3,
+     "dash": true
+    }
+   ]
+  },
+  {
+   "title": "Earth with a tilt",
+   "say": "Earth's axis is tilted about 23.5 degrees, and it always points toward the same direction in space.",
+   "ops": [
+    {
+     "id": "e1",
+     "op": "ellipse",
+     "cx": 300,
+     "cy": 520,
+     "rx": 50,
+     "ry": 50,
+     "color": "blue",
+     "fill": "blue"
+    },
+    {
+     "id": "ax1",
+     "op": "line",
+     "x1": 272,
+     "y1": 600,
+     "x2": 328,
+     "y2": 440,
+     "color": "ink",
+     "width": 4
+    },
+    {
+     "id": "e1l",
+     "op": "write",
+     "x": 300,
+     "y": 620,
+     "text": "tilt 23.5°",
+     "size": 30,
+     "anchor": "middle"
+    }
+   ]
+  },
+  {
+   "title": "Same tilt, other side",
+   "say": "Half a year later Earth is on the opposite side, but the axis still leans the same way.",
+   "ops": [
+    {
+     "id": "e2",
+     "op": "ellipse",
+     "cx": 1300,
+     "cy": 520,
+     "rx": 50,
+     "ry": 50,
+     "color": "blue",
+     "fill": "blue"
+    },
+    {
+     "id": "ax2",
+     "op": "line",
+     "x1": 1272,
+     "y1": 600,
+     "x2": 1328,
+     "y2": 440,
+     "color": "ink",
+     "width": 4
+    },
+    {
+     "id": "e2l",
+     "op": "write",
+     "x": 1300,
+     "y": 620,
+     "text": "same tilt",
+     "size": 30,
+     "anchor": "middle"
+    }
+   ]
+  },
+  {
+   "title": "Summer in the north",
+   "say": "On the right the northern half leans toward the Sun, so sunlight is more direct and days are longer: summer.",
+   "ops": [
+    {
+     "id": "r1",
+     "op": "line",
+     "x1": 1130,
+     "y1": 520,
+     "x2": 1235,
+     "y2": 490,
+     "color": "red",
+     "arrow": true
+    },
+    {
+     "id": "s1",
+     "op": "write",
+     "x": 1300,
+     "y": 330,
+     "text": "North: summer",
+     "size": 38,
+     "anchor": "middle",
+     "color": "red"
+    }
+   ]
+  },
+  {
+   "title": "Winter in the north",
+   "say": "On the left the northern half leans away, so light is slanted and spread out, days are shorter: winter.",
+   "ops": [
+    {
+     "id": "r2",
+     "op": "line",
+     "x1": 470,
+     "y1": 520,
+     "x2": 365,
+     "y2": 520,
+     "color": "red",
+     "arrow": true,
+     "dash": true
+    },
+    {
+     "id": "s2",
+     "op": "write",
+     "x": 300,
+     "y": 330,
+     "text": "North: winter",
+     "size": 38,
+     "anchor": "middle",
+     "color": "blue"
+    }
+   ]
+  },
+  {
+   "title": "Takeaway",
+   "say": "So seasons are caused by the tilt of Earth's axis, which changes how directly sunlight hits us through the year.",
+   "ops": [
+    {
+     "id": "k1",
+     "op": "write",
+     "x": 800,
+     "y": 790,
+     "text": "Tilt → sunlight angle + day length → seasons",
+     "size": 40,
+     "anchor": "middle",
+     "color": "green"
+    }
+   ]
+  }
+ ]
+}

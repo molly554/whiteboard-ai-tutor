@@ -1,0 +1,274 @@
+{
+ "title": "Demand ↑ → Price ↑",
+ "lang": "en",
+ "steps": [
+  {
+   "title": "Set up the axes",
+   "say": "We start with a standard supply-and-demand diagram: price on the vertical axis, quantity on the horizontal axis.",
+   "ops": [
+    {
+     "id": "yaxis",
+     "op": "line",
+     "x1": 220,
+     "y1": 760,
+     "x2": 220,
+     "y2": 120,
+     "width": 5,
+     "arrow": true
+    },
+    {
+     "id": "xaxis",
+     "op": "line",
+     "x1": 220,
+     "y1": 760,
+     "x2": 1450,
+     "y2": 760,
+     "width": 5,
+     "arrow": true
+    },
+    {
+     "id": "ylabel",
+     "op": "write",
+     "x": 150,
+     "y": 90,
+     "text": "Price",
+     "size": 36,
+     "anchor": "middle"
+    },
+    {
+     "id": "xlabel",
+     "op": "write",
+     "x": 1380,
+     "y": 780,
+     "text": "Quantity",
+     "size": 36
+    }
+   ]
+  },
+  {
+   "title": "Draw the demand curve",
+   "say": "The demand curve slopes downward: at lower prices, buyers want more.",
+   "ops": [
+    {
+     "id": "dcurve",
+     "op": "line",
+     "x1": 320,
+     "y1": 220,
+     "x2": 1000,
+     "y2": 720,
+     "width": 6,
+     "color": "blue"
+    },
+    {
+     "id": "dlabel",
+     "op": "write",
+     "x": 1010,
+     "y": 660,
+     "text": "D",
+     "size": 40,
+     "color": "blue"
+    }
+   ]
+  },
+  {
+   "title": "Draw the supply curve",
+   "say": "The supply curve slopes upward: higher prices bring more sellers into the market.",
+   "ops": [
+    {
+     "id": "scurve",
+     "op": "line",
+     "x1": 340,
+     "y1": 720,
+     "x2": 1020,
+     "y2": 260,
+     "width": 6,
+     "color": "green"
+    },
+    {
+     "id": "slabel",
+     "op": "write",
+     "x": 1030,
+     "y": 220,
+     "text": "S",
+     "size": 40,
+     "color": "green"
+    }
+   ]
+  },
+  {
+   "title": "Mark the initial equilibrium",
+   "say": "Where supply meets demand, we get the market equilibrium: price P1, quantity Q1.",
+   "ops": [
+    {
+     "id": "eqdot",
+     "op": "ellipse",
+     "cx": 680,
+     "cy": 470,
+     "rx": 10,
+     "ry": 10,
+     "fill": "ink"
+    },
+    {
+     "id": "p1line",
+     "op": "line",
+     "x1": 220,
+     "y1": 470,
+     "x2": 680,
+     "y2": 470,
+     "width": 3,
+     "dash": true,
+     "color": "gray"
+    },
+    {
+     "id": "p1label",
+     "op": "write",
+     "x": 150,
+     "y": 440,
+     "text": "P1",
+     "size": 34,
+     "color": "gray"
+    },
+    {
+     "id": "q1line",
+     "op": "line",
+     "x1": 680,
+     "y1": 470,
+     "x2": 680,
+     "y2": 760,
+     "width": 3,
+     "dash": true,
+     "color": "gray"
+    },
+    {
+     "id": "q1label",
+     "op": "write",
+     "x": 650,
+     "y": 770,
+     "text": "Q1",
+     "size": 34,
+     "color": "gray"
+    }
+   ]
+  },
+  {
+   "title": "Demand rises: shift right",
+   "say": "Now demand increases, so the whole demand curve shifts to the right.",
+   "ops": [
+    {
+     "id": "dcurve2",
+     "op": "line",
+     "x1": 520,
+     "y1": 220,
+     "x2": 1200,
+     "y2": 720,
+     "width": 6,
+     "color": "blue"
+    },
+    {
+     "id": "dlabel2",
+     "op": "write",
+     "x": 1210,
+     "y": 660,
+     "text": "D'",
+     "size": 40,
+     "color": "blue"
+    },
+    {
+     "id": "shiftarrow",
+     "op": "line",
+     "x1": 850,
+     "y1": 620,
+     "x2": 1050,
+     "y2": 620,
+     "width": 5,
+     "color": "blue",
+     "arrow": true
+    },
+    {
+     "id": "shiftlabel",
+     "op": "write",
+     "x": 870,
+     "y": 640,
+     "text": "shift",
+     "size": 30,
+     "color": "blue"
+    }
+   ]
+  },
+  {
+   "title": "New equilibrium: higher price",
+   "say": "The new intersection is higher up: price rises to P2, and quantity rises to Q2.",
+   "ops": [
+    {
+     "id": "eqdot2",
+     "op": "ellipse",
+     "cx": 820,
+     "cy": 360,
+     "rx": 10,
+     "ry": 10,
+     "fill": "red"
+    },
+    {
+     "id": "p2line",
+     "op": "line",
+     "x1": 220,
+     "y1": 360,
+     "x2": 820,
+     "y2": 360,
+     "width": 3,
+     "dash": true,
+     "color": "red"
+    },
+    {
+     "id": "p2label",
+     "op": "write",
+     "x": 150,
+     "y": 330,
+     "text": "P2",
+     "size": 34,
+     "color": "red"
+    },
+    {
+     "id": "q2line",
+     "op": "line",
+     "x1": 820,
+     "y1": 360,
+     "x2": 820,
+     "y2": 760,
+     "width": 3,
+     "dash": true,
+     "color": "red"
+    },
+    {
+     "id": "q2label",
+     "op": "write",
+     "x": 790,
+     "y": 770,
+     "text": "Q2",
+     "size": 34,
+     "color": "red"
+    },
+    {
+     "id": "uparrow",
+     "op": "line",
+     "x1": 250,
+     "y1": 470,
+     "x2": 250,
+     "y2": 360,
+     "width": 5,
+     "color": "red",
+     "arrow": true
+    },
+    {
+     "id": "pricerise",
+     "op": "write",
+     "x": 270,
+     "y": 400,
+     "text": "price ↑",
+     "size": 34,
+     "color": "red"
+    }
+   ]
+  }
+ ]
+}

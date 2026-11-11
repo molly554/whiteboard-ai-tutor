@@ -1,0 +1,207 @@
+{
+ "title": "Solving x² − 5x + 6 = 0",
+ "lang": "en",
+ "steps": [
+  {
+   "title": "The problem",
+   "say": "We want the values of x that make x squared minus 5x plus 6 equal to zero.",
+   "ops": [
+    {
+     "id": "ttl",
+     "type": "write",
+     "op": "write",
+     "x": 800,
+     "y": 50,
+     "text": "Solve a quadratic",
+     "size": 56,
+     "anchor": "middle",
+     "color": "blue"
+    },
+    {
+     "id": "eq",
+     "op": "write",
+     "x": 800,
+     "y": 150,
+     "text": "x² − 5x + 6 = 0",
+     "size": 48,
+     "anchor": "middle"
+    }
+   ]
+  },
+  {
+   "title": "Try the formula",
+   "say": "First try the quadratic formula. Here a is 1, b is minus 5, and c is 6.",
+   "ops": [
+    {
+     "id": "m1",
+     "op": "write",
+     "x": 80,
+     "y": 250,
+     "text": "Method 1: quadratic formula",
+     "size": 36,
+     "color": "blue"
+    },
+    {
+     "id": "f1",
+     "op": "write",
+     "x": 80,
+     "y": 320,
+     "text": "x = ( −b ± √(b² − 4ac) ) / 2a",
+     "size": 40
+    },
+    {
+     "id": "f2",
+     "op": "write",
+     "x": 80,
+     "y": 390,
+     "text": "a = 1,  b = −5,  c = 6",
+     "size": 40,
+     "color": "gray"
+    }
+   ]
+  },
+  {
+   "title": "Plug in the numbers",
+   "say": "Substituting gives the square root of 1, so x is 5 plus or minus 1, over 2. It works, but it is a lot of machinery.",
+   "ops": [
+    {
+     "id": "f3",
+     "op": "write",
+     "x": 80,
+     "y": 470,
+     "text": "x = (5 ± √(25 − 24)) / 2",
+     "size": 40
+    },
+    {
+     "id": "f4",
+     "op": "write",
+     "x": 80,
+     "y": 540,
+     "text": "x = (5 ± 1) / 2",
+     "size": 40
+    },
+    {
+     "id": "f5",
+     "op": "write",
+     "x": 800,
+     "y": 540,
+     "text": "Works, but heavy!",
+     "size": 34,
+     "color": "red"
+    }
+   ]
+  },
+  {
+   "title": "Switch methods",
+   "say": "Since the numbers are small, let's stop here and wipe this away. Factoring will be much quicker.",
+   "ops": [
+    {
+     "id": "x1",
+     "op": "erase",
+     "ids": [
+      "m1",
+      "f1",
+      "f2",
+      "f3",
+      "f4",
+      "f5"
+     ]
+    },
+    {
+     "id": "m2",
+     "op": "write",
+     "x": 80,
+     "y": 250,
+     "text": "Method 2: factoring",
+     "size": 36,
+     "color": "green"
+    }
+   ]
+  },
+  {
+   "title": "Find the two numbers",
+   "say": "We need two numbers that multiply to 6 and add to minus 5. Those are minus 2 and minus 3.",
+   "ops": [
+    {
+     "id": "n1",
+     "op": "write",
+     "x": 80,
+     "y": 320,
+     "text": "product = 6,  sum = −5",
+     "size": 40
+    },
+    {
+     "id": "n2",
+     "op": "write",
+     "x": 80,
+     "y": 390,
+     "text": "−2 and −3",
+     "size": 44,
+     "color": "green"
+    }
+   ]
+  },
+  {
+   "title": "Write the factors",
+   "say": "So the equation factors into x minus 2 times x minus 3, equal to zero.",
+   "ops": [
+    {
+     "id": "fa",
+     "op": "write",
+     "x": 80,
+     "y": 480,
+     "text": "(x − 2)(x − 3) = 0",
+     "size": 48
+    }
+   ]
+  },
+  {
+   "title": "Zero product rule",
+   "say": "A product is zero only if one factor is zero, so x is 2 or x is 3.",
+   "ops": [
+    {
+     "id": "z1",
+     "op": "write",
+     "x": 80,
+     "y": 570,
+     "text": "x − 2 = 0   or   x − 3 = 0",
+     "size": 40
+    },
+    {
+     "id": "z2",
+     "op": "write",
+     "x": 80,
+     "y": 660,
+     "text": "x = 2   or   x = 3",
+     "size": 48,
+     "color": "green"
+    },
+    {
+     "id": "bx",
+     "op": "rect",
+     "x": 60,
+     "y": 645,
+     "w": 500,
+     "h": 95,
+     "color": "green",
+     "width": 4
+    }
+   ]
+  },
+  {
+   "title": "Quick check",
+   "say": "Check x equals 2: 4 minus 10 plus 6 is zero. Factoring got us there faster.",
+   "ops": [
+    {
+     "id": "ck",
+     "op": "write",
+     "x": 80,
+     "y": 780,
+     "text": "Check x = 2:  4 − 10 + 6 = 0  ✓",
+     "size": 36,
+     "color": "gray"
+    }
+   ]
+  }
+ ]
+}

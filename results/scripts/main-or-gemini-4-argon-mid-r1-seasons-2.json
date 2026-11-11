@@ -1,0 +1,593 @@
+{
+ "title": "Why Do We Have Seasons?",
+ "lang": "en",
+ "steps": [
+  {
+   "title": "Common Myth",
+   "say": "Why do we have seasons? Many people think it's about our distance from the Sun, but that's a myth.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "main_title",
+     "x": 800,
+     "y": 50,
+     "text": "Why Do We Have Seasons?",
+     "size": 56,
+     "anchor": "middle",
+     "underline": true
+    },
+    {
+     "op": "write",
+     "id": "myth_text",
+     "x": 800,
+     "y": 150,
+     "text": "Myth: Closer to the Sun = Summer",
+     "size": 40,
+     "color": "gray",
+     "anchor": "middle"
+    },
+    {
+     "op": "line",
+     "id": "myth_strike",
+     "x1": 450,
+     "y1": 175,
+     "x2": 1150,
+     "y2": 175,
+     "color": "red",
+     "width": 5
+    },
+    {
+     "op": "write",
+     "id": "real_reason",
+     "x": 800,
+     "y": 230,
+     "text": "Real Reason: Earth's 23.5° Axial Tilt!",
+     "size": 44,
+     "color": "blue",
+     "anchor": "middle"
+    }
+   ]
+  },
+  {
+   "title": "Earth's Tilt",
+   "say": "As Earth orbits the Sun, its rotational axis isn't straight up and down—it's tilted at 23.5 degrees.",
+   "ops": [
+    {
+     "op": "erase",
+     "ids": [
+      "myth_text",
+      "myth_strike",
+      "real_reason"
+     ]
+    },
+    {
+     "op": "ellipse",
+     "id": "earth_1",
+     "cx": 800,
+     "cy": 500,
+     "rx": 140,
+     "ry": 140,
+     "color": "blue",
+     "fill": "blue"
+    },
+    {
+     "op": "line",
+     "id": "vert_ref",
+     "x1": 800,
+     "y1": 260,
+     "x2": 800,
+     "y2": 740,
+     "color": "gray",
+     "dash": true
+    },
+    {
+     "op": "line",
+     "id": "axis_1",
+     "x1": 700,
+     "y1": 720,
+     "x2": 900,
+     "y2": 280,
+     "color": "red",
+     "width": 6
+    },
+    {
+     "op": "line",
+     "id": "eq_1",
+     "x1": 672,
+     "y1": 442,
+     "x2": 928,
+     "y2": 558,
+     "color": "ink",
+     "dash": true
+    },
+    {
+     "op": "path",
+     "id": "tilt_arc",
+     "d": "M 800 350 A 150 150 0 0 1 860 365",
+     "color": "red",
+     "width": 4
+    },
+    {
+     "op": "write",
+     "id": "tilt_lbl",
+     "x": 850,
+     "y": 230,
+     "text": "23.5° Tilt",
+     "size": 36,
+     "color": "red"
+    },
+    {
+     "op": "write",
+     "id": "np_lbl",
+     "x": 920,
+     "y": 270,
+     "text": "North Pole",
+     "size": 30,
+     "color": "ink"
+    },
+    {
+     "op": "write",
+     "id": "eq_lbl",
+     "x": 950,
+     "y": 550,
+     "text": "Equator",
+     "size": 30,
+     "color": "ink"
+    }
+   ]
+  },
+  {
+   "title": "Earth's Orbit",
+   "say": "Notice how the axis always points in the exact same direction as Earth travels around the Sun.",
+   "ops": [
+    {
+     "op": "erase",
+     "ids": [
+      "earth_1",
+      "vert_ref",
+      "axis_1",
+      "eq_1",
+      "tilt_arc",
+      "tilt_lbl",
+      "np_lbl",
+      "eq_lbl"
+     ]
+    },
+    {
+     "op": "ellipse",
+     "id": "orbit",
+     "cx": 800,
+     "cy": 460,
+     "rx": 520,
+     "ry": 190,
+     "color": "gray",
+     "dash": true
+    },
+    {
+     "op": "ellipse",
+     "id": "sun",
+     "cx": 800,
+     "cy": 460,
+     "rx": 65,
+     "ry": 65,
+     "color": "red",
+     "fill": "red"
+    },
+    {
+     "op": "write",
+     "id": "sun_lbl",
+     "x": 800,
+     "y": 442,
+     "text": "SUN",
+     "size": 36,
+     "color": "ink",
+     "anchor": "middle"
+    },
+    {
+     "op": "ellipse",
+     "id": "e_left",
+     "cx": 280,
+     "cy": 460,
+     "rx": 50,
+     "ry": 50,
+     "color": "blue",
+     "fill": "blue"
+    },
+    {
+     "op": "line",
+     "id": "ax_left",
+     "x1": 245,
+     "y1": 540,
+     "x2": 315,
+     "y2": 380,
+     "color": "red",
+     "width": 5
+    },
+    {
+     "op": "line",
+     "id": "eq_left",
+     "x1": 234,
+     "y1": 440,
+     "x2": 326,
+     "y2": 480,
+     "color": "ink",
+     "width": 3,
+     "dash": true
+    },
+    {
+     "op": "ellipse",
+     "id": "e_right",
+     "cx": 1320,
+     "cy": 460,
+     "rx": 50,
+     "ry": 50,
+     "color": "blue",
+     "fill": "blue"
+    },
+    {
+     "op": "line",
+     "id": "ax_right",
+     "x1": 1285,
+     "y1": 540,
+     "x2": 1355,
+     "y2": 380,
+     "color": "red",
+     "width": 5
+    },
+    {
+     "op": "line",
+     "id": "eq_right",
+     "x1": 1274,
+     "y1": 440,
+     "x2": 1366,
+     "y2": 480,
+     "color": "ink",
+     "width": 3,
+     "dash": true
+    }
+   ]
+  },
+  {
+   "title": "June: Northern Summer",
+   "say": "In June, the Northern Hemisphere tilts toward the Sun, getting direct sunlight. That makes it Summer in the North!",
+   "ops": [
+    {
+     "op": "line",
+     "id": "ray_l1",
+     "x1": 710,
+     "y1": 430,
+     "x2": 350,
+     "y2": 430,
+     "color": "red",
+     "arrow": true
+    },
+    {
+     "op": "line",
+     "id": "ray_l2",
+     "x1": 710,
+     "y1": 490,
+     "x2": 350,
+     "y2": 490,
+     "color": "red",
+     "arrow": true
+    },
+    {
+     "op": "write",
+     "id": "june_title",
+     "x": 280,
+     "y": 240,
+     "text": "JUNE",
+     "size": 44,
+     "color": "ink",
+     "anchor": "middle",
+     "underline": true
+    },
+    {
+     "op": "write",
+     "id": "june_n",
+     "x": 280,
+     "y": 300,
+     "text": "North tilts TOWARD Sun",
+     "size": 30,
+     "color": "red",
+     "anchor": "middle"
+    },
+    {
+     "op": "write",
+     "id": "june_s1",
+     "x": 280,
+     "y": 565,
+     "text": "North: Summer",
+     "size": 34,
+     "color": "red",
+     "anchor": "middle"
+    },
+    {
+     "op": "write",
+     "id": "june_s2",
+     "x": 280,
+     "y": 615,
+     "text": "South: Winter",
+     "size": 34,
+     "color": "blue",
+     "anchor": "middle"
+    }
+   ]
+  },
+  {
+   "title": "December: Northern Winter",
+   "say": "Six months later in December, the North tilts away from the Sun. Now the North has Winter, while the South enjoys Summer.",
+   "ops": [
+    {
+     "op": "line",
+     "id": "ray_r1",
+     "x1": 890,
+     "y1": 430,
+     "x2": 1250,
+     "y2": 430,
+     "color": "red",
+     "arrow": true
+    },
+    {
+     "op": "line",
+     "id": "ray_r2",
+     "x1": 890,
+     "y1": 490,
+     "x2": 1250,
+     "y2": 490,
+     "color": "red",
+     "arrow": true
+    },
+    {
+     "op": "write",
+     "id": "dec_title",
+     "x": 1320,
+     "y": 240,
+     "text": "DECEMBER",
+     "size": 44,
+     "color": "ink",
+     "anchor": "middle",
+     "underline": true
+    },
+    {
+     "op": "write",
+     "id": "dec_n",
+     "x": 1320,
+     "y": 300,
+     "text": "North tilts AWAY",
+     "size": 30,
+     "color": "blue",
+     "anchor": "middle"
+    },
+    {
+     "op": "write",
+     "id": "dec_s1",
+     "x": 1320,
+     "y": 565,
+     "text": "North: Winter",
+     "size": 34,
+     "color": "blue",
+     "anchor": "middle"
+    },
+    {
+     "op": "write",
+     "id": "dec_s2",
+     "x": 1320,
+     "y": 615,
+     "text": "South: Summer",
+     "size": 34,
+     "color": "red",
+     "anchor": "middle"
+    }
+   ]
+  },
+  {
+   "title": "Spring & Fall",
+   "say": "In between, neither hemisphere tilts toward the Sun, giving us the mild seasons of Spring and Autumn.",
+   "ops": [
+    {
+     "op": "ellipse",
+     "id": "e_top",
+     "cx": 800,
+     "cy": 270,
+     "rx": 35,
+     "ry": 35,
+     "color": "blue",
+     "fill": "blue"
+    },
+    {
+     "op": "line",
+     "id": "ax_top",
+     "x1": 780,
+     "y1": 315,
+     "x2": 820,
+     "y2": 225,
+     "color": "red",
+     "width": 4
+    },
+    {
+     "op": "write",
+     "id": "mar_lbl",
+     "x": 800,
+     "y": 170,
+     "text": "MARCH (Spring / Fall)",
+     "size": 32,
+     "color": "green",
+     "anchor": "middle"
+    },
+    {
+     "op": "ellipse",
+     "id": "e_bot",
+     "cx": 800,
+     "cy": 650,
+     "rx": 35,
+     "ry": 35,
+     "color": "blue",
+     "fill": "blue"
+    },
+    {
+     "op": "line",
+     "id": "ax_bot",
+     "x1": 780,
+     "y1": 695,
+     "x2": 820,
+     "y2": 605,
+     "color": "red",
+     "width": 4
+    },
+    {
+     "op": "write",
+     "id": "sep_lbl",
+     "x": 800,
+     "y": 720,
+     "text": "SEPTEMBER (Fall / Spring)",
+     "size": 32,
+     "color": "green",
+     "anchor": "middle"
+    }
+   ]
+  },
+  {
+   "title": "Why Tilt Changes Temperature",
+   "say": "Finally, why does tilting toward the Sun make it warmer? Because direct sunlight concentrates heat into a smaller area!",
+   "ops": [
+    {
+     "op": "erase",
+     "all": true
+    },
+    {
+     "op": "write",
+     "id": "angle_title",
+     "x": 800,
+     "y": 50,
+     "text": "Why Tilt Controls Temperature",
+     "size": 52,
+     "anchor": "middle",
+     "underline": true
+    },
+    {
+     "op": "rect",
+     "id": "box_dir",
+     "x": 120,
+     "y": 160,
+     "w": 620,
+     "h": 640,
+     "color": "red"
+    },
+    {
+     "op": "write",
+     "id": "dir_hdr",
+     "x": 430,
+     "y": 190,
+     "text": "Tilted Toward (Summer)",
+     "size": 38,
+     "color": "red",
+     "anchor": "middle"
+    },
+    {
+     "op": "line",
+     "id": "gnd_1",
+     "x1": 200,
+     "y1": 550,
+     "x2": 660,
+     "y2": 550,
+     "color": "green",
+     "width": 8
+    },
+    {
+     "op": "line",
+     "id": "beam_d1",
+     "x1": 380,
+     "y1": 280,
+     "x2": 380,
+     "y2": 540,
+     "color": "red",
+     "width": 6,
+     "arrow": true
+    },
+    {
+     "op": "line",
+     "id": "beam_d2",
+     "x1": 480,
+     "y1": 280,
+     "x2": 480,
+     "y2": 540,
+     "color": "red",
+     "width": 6,
+     "arrow": true
+    },
+    {
+     "op": "write",
+     "id": "dir_txt",
+     "x": 430,
+     "y": 600,
+     "text": "Direct Sunlight:\nConcentrated in a small area\n= HOTTER + Longer Days",
+     "size": 32,
+     "color": "ink",
+     "anchor": "middle"
+    },
+    {
+     "op": "rect",
+     "id": "box_ang",
+     "x": 860,
+     "y": 160,
+     "w": 620,
+     "h": 640,
+     "color": "blue"
+    },
+    {
+     "op": "write",
+     "id": "ang_hdr",
+     "x": 1170,
+     "y": 190,
+     "text": "Tilted Away (Winter)",
+     "size": 38,
+     "color": "blue",
+     "anchor": "middle"
+    },
+    {
+     "op": "line",
+     "id": "gnd_2",
+     "x1": 940,
+     "y1": 550,
+     "x2": 1400,
+     "y2": 550,
+     "color": "green",
+     "width": 8
+    },
+    {
+     "op": "line",
+     "id": "beam_a1",
+     "x1": 960,
+     "y1": 280,
+     "x2": 1120,
+     "y2": 540,
+     "color": "blue",
+     "width": 6,
+     "arrow": true
+    },
+    {
+     "op": "line",
+     "id": "beam_a2",
+     "x1": 1120,
+     "y1": 280,
+     "x2": 1280,
+     "y2": 540,
+     "color": "blue",
+     "width": 6,
+     "arrow": true
+    },
+    {
+     "op": "write",
+     "id": "ang_txt",
+     "x": 1170,
+     "y": 600,
+     "text": "Angled Sunlight:\nSpread over a wide area\n= COOLER + Shorter Days",
+     "size": 32,
+     "color": "ink",
+     "anchor": "middle"
+    }
+   ]
+  }
+ ]
+}

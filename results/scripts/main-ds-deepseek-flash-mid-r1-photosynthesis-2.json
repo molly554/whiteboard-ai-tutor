@@ -1,0 +1,261 @@
+{
+ "title": "光合作用的场所",
+ "lang": "zh",
+ "steps": [
+  {
+   "title": "题目",
+   "say": "我们先看一个问题：光合作用发生在细胞的哪个部分？",
+   "ops": [
+    {
+     "op": "write",
+     "id": "title",
+     "x": 40,
+     "y": 40,
+     "text": "光合作用发生在哪里？",
+     "size": 56,
+     "color": "ink"
+    }
+   ]
+  },
+  {
+   "title": "植物细胞",
+   "say": "先画一个植物细胞，里面有细胞核。",
+   "ops": [
+    {
+     "op": "ellipse",
+     "id": "cell",
+     "cx": 360,
+     "cy": 520,
+     "rx": 250,
+     "ry": 190,
+     "color": "green",
+     "width": 5
+    },
+    {
+     "op": "ellipse",
+     "id": "nucleus",
+     "cx": 250,
+     "cy": 430,
+     "rx": 65,
+     "ry": 55,
+     "color": "blue",
+     "width": 4
+    },
+    {
+     "op": "write",
+     "id": "label_cell",
+     "x": 285,
+     "y": 270,
+     "text": "植物细胞",
+     "size": 36,
+     "color": "green"
+    },
+    {
+     "op": "write",
+     "id": "label_nucleus",
+     "x": 325,
+     "y": 410,
+     "text": "细胞核",
+     "size": 30,
+     "color": "ink"
+    }
+   ]
+  },
+  {
+   "title": "找到叶绿体",
+   "say": "植物细胞里有绿色的叶绿体，它是光合作用的主要场所。",
+   "ops": [
+    {
+     "op": "ellipse",
+     "id": "chloro1",
+     "cx": 420,
+     "cy": 520,
+     "rx": 60,
+     "ry": 35,
+     "rotate": -20,
+     "color": "green",
+     "width": 4
+    },
+    {
+     "op": "ellipse",
+     "id": "chloro2",
+     "cx": 310,
+     "cy": 590,
+     "rx": 55,
+     "ry": 30,
+     "rotate": 25,
+     "color": "green",
+     "width": 4
+    },
+    {
+     "op": "ellipse",
+     "id": "chloro3",
+     "cx": 470,
+     "cy": 610,
+     "rx": 50,
+     "ry": 28,
+     "rotate": -10,
+     "color": "green",
+     "width": 4
+    },
+    {
+     "op": "write",
+     "id": "label_chloro",
+     "x": 250,
+     "y": 720,
+     "text": "叶绿体（绿色）",
+     "size": 30,
+     "color": "green"
+    }
+   ]
+  },
+  {
+   "title": "放大叶绿体",
+   "say": "把叶绿体放大来看，里面有两套重要的反应空间。",
+   "ops": [
+    {
+     "op": "ellipse",
+     "id": "chloroplast_big",
+     "cx": 1050,
+     "cy": 500,
+     "rx": 260,
+     "ry": 170,
+     "color": "green",
+     "width": 5
+    },
+    {
+     "op": "write",
+     "id": "label_big",
+     "x": 940,
+     "y": 270,
+     "text": "叶绿体放大",
+     "size": 34,
+     "color": "green"
+    }
+   ]
+  },
+  {
+   "title": "类囊体膜",
+   "say": "这些叠起来的小囊叫类囊体，膜上进行光反应。",
+   "ops": [
+    {
+     "op": "ellipse",
+     "id": "thyl1",
+     "cx": 980,
+     "cy": 420,
+     "rx": 55,
+     "ry": 12,
+     "color": "blue",
+     "width": 3
+    },
+    {
+     "op": "ellipse",
+     "id": "thyl2",
+     "cx": 980,
+     "cy": 445,
+     "rx": 55,
+     "ry": 12,
+     "color": "blue",
+     "width": 3
+    },
+    {
+     "op": "ellipse",
+     "id": "thyl3",
+     "cx": 980,
+     "cy": 470,
+     "rx": 55,
+     "ry": 12,
+     "color": "blue",
+     "width": 3
+    },
+    {
+     "op": "ellipse",
+     "id": "thyl4",
+     "cx": 1140,
+     "cy": 430,
+     "rx": 55,
+     "ry": 12,
+     "color": "blue",
+     "width": 3
+    },
+    {
+     "op": "ellipse",
+     "id": "thyl5",
+     "cx": 1140,
+     "cy": 455,
+     "rx": 55,
+     "ry": 12,
+     "color": "blue",
+     "width": 3
+    },
+    {
+     "op": "ellipse",
+     "id": "thyl6",
+     "cx": 1140,
+     "cy": 480,
+     "rx": 55,
+     "ry": 12,
+     "color": "blue",
+     "width": 3
+    },
+    {
+     "op": "write",
+     "id": "label_thyl",
+     "x": 880,
+     "y": 350,
+     "text": "类囊体膜：光反应",
+     "size": 30,
+     "color": "blue"
+    }
+   ]
+  },
+  {
+   "title": "基质",
+   "say": "类囊体外面的液体是基质，暗反应在这里进行。",
+   "ops": [
+    {
+     "op": "write",
+     "id": "label_stroma",
+     "x": 900,
+     "y": 560,
+     "text": "基质：暗反应",
+     "size": 32,
+     "color": "ink"
+    },
+    {
+     "op": "write",
+     "id": "label_calvin",
+     "x": 900,
+     "y": 610,
+     "text": "（卡尔文循环）",
+     "size": 28,
+     "color": "ink"
+    }
+   ]
+  },
+  {
+   "title": "总结",
+   "say": "所以，光合作用的主要场所是叶绿体；光反应在类囊体膜，暗反应在基质。",
+   "ops": [
+    {
+     "op": "write",
+     "id": "answer",
+     "x": 540,
+     "y": 740,
+     "text": "答案：主要场所是叶绿体",
+     "size": 40,
+     "color": "red"
+    },
+    {
+     "op": "write",
+     "id": "detail",
+     "x": 540,
+     "y": 800,
+     "text": "光反应：类囊体膜；暗反应：基质",
+     "size": 32,
+     "color": "ink"
+    }
+   ]
+  }
+ ]
+}

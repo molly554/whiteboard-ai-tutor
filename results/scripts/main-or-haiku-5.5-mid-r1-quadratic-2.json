@@ -1,0 +1,137 @@
+{
+ "title": "Solve x² − 5x + 6 = 0",
+ "lang": "en",
+ "steps": [
+  {
+   "title": "Start with the quadratic formula",
+   "say": "For ax² + bx + c = 0, the formula gives x = (−b ± √(b² − 4ac)) / 2a. Here the discriminant is 25 − 24 = 1, so the roots are (5 ± 1) / 2.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "title",
+     "x": 800,
+     "y": 70,
+     "text": "Solve x² − 5x + 6 = 0",
+     "size": 56,
+     "anchor": "middle",
+     "underline": true
+    },
+    {
+     "op": "write",
+     "id": "f1",
+     "x": 80,
+     "y": 200,
+     "text": "a = 1,  b = −5,  c = 6",
+     "size": 40
+    },
+    {
+     "op": "write",
+     "id": "f2",
+     "x": 80,
+     "y": 270,
+     "text": "x = (5 ± √(25 − 24)) / 2",
+     "size": 40
+    },
+    {
+     "op": "write",
+     "id": "f3",
+     "x": 80,
+     "y": 340,
+     "text": "x = (5 ± 1) / 2",
+     "size": 40,
+     "color": "blue"
+    }
+   ]
+  },
+  {
+   "title": "Switch to factoring",
+   "say": "The discriminant is a perfect square, so factoring is quicker. I erase the formula work and look for two numbers with product 6 and sum −5.",
+   "ops": [
+    {
+     "op": "erase",
+     "ids": [
+      "f1",
+      "f2",
+      "f3"
+     ]
+    },
+    {
+     "op": "write",
+     "id": "g1",
+     "x": 80,
+     "y": 200,
+     "text": "Find p, q:  p · q = 6,  p + q = −5",
+     "size": 40
+    },
+    {
+     "op": "write",
+     "id": "g2",
+     "x": 80,
+     "y": 270,
+     "text": "p = −2,  q = −3",
+     "size": 40,
+     "color": "blue"
+    }
+   ]
+  },
+  {
+   "title": "Factor the quadratic",
+   "say": "Those two numbers let us write the quadratic as a product of two binomials.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "h1",
+     "x": 80,
+     "y": 360,
+     "text": "x² − 5x + 6 = (x − 2)(x − 3)",
+     "size": 44
+    }
+   ]
+  },
+  {
+   "title": "Use the zero-product property",
+   "say": "If a product equals zero, at least one factor must be zero. Set each factor to zero.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "h2",
+     "x": 80,
+     "y": 440,
+     "text": "(x − 2)(x − 3) = 0\n⇒  x − 2 = 0   or   x − 3 = 0",
+     "size": 40
+    }
+   ]
+  },
+  {
+   "title": "Read off the solutions",
+   "say": "Solving each linear equation gives the two roots, x = 2 and x = 3.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "h3",
+     "x": 80,
+     "y": 600,
+     "text": "x = 2   or   x = 3",
+     "size": 52,
+     "color": "green",
+     "underline": true
+    }
+   ]
+  },
+  {
+   "title": "Check both roots",
+   "say": "Substitute each root back into the original equation. Both give 0, so the solutions are correct.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "k1",
+     "x": 80,
+     "y": 720,
+     "text": "x = 2:  4 − 10 + 6 = 0 ✓\nx = 3:  9 − 15 + 6 = 0 ✓",
+     "size": 34,
+     "color": "gray"
+    }
+   ]
+  }
+ ]
+}

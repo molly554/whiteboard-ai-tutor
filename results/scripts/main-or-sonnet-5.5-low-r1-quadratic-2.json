@@ -1,0 +1,190 @@
+{
+ "title": "Solving x² − 5x + 6 = 0",
+ "lang": "en",
+ "steps": [
+  {
+   "title": "The problem",
+   "say": "We want to find all x that make x squared minus 5x plus 6 equal to zero.",
+   "ops": [
+    {
+     "id": "t1",
+     "op": "write",
+     "x": 800,
+     "y": 50,
+     "text": "Solve a quadratic",
+     "size": 56,
+     "anchor": "middle",
+     "color": "blue",
+     "underline": true
+    },
+    {
+     "id": "eq1",
+     "op": "write",
+     "x": 800,
+     "y": 220,
+     "text": "x² − 5x + 6 = 0",
+     "size": 56,
+     "anchor": "middle"
+    }
+   ]
+  },
+  {
+   "title": "First try: the formula",
+   "say": "We could start with the quadratic formula, using a = 1, b = −5, c = 6.",
+   "ops": [
+    {
+     "id": "f1",
+     "op": "write",
+     "x": 200,
+     "y": 360,
+     "text": "x = (−b ± √(b² − 4ac)) / 2a",
+     "size": 40
+    },
+    {
+     "id": "f2",
+     "op": "write",
+     "x": 200,
+     "y": 440,
+     "text": "x = (5 ± √(25 − 24)) / 2",
+     "size": 40
+    }
+   ]
+  },
+  {
+   "title": "Too heavy, switch",
+   "say": "That works, but there is a simpler way here: factoring. Let's wipe the formula and switch.",
+   "ops": [
+    {
+     "id": "e1",
+     "op": "erase",
+     "ids": [
+      "f1",
+      "f2"
+     ]
+    },
+    {
+     "id": "sw",
+     "op": "write",
+     "x": 200,
+     "y": 360,
+     "text": "Simpler: factor it!",
+     "size": 44,
+     "color": "red"
+    }
+   ]
+  },
+  {
+   "title": "Find the number pair",
+   "say": "We need two numbers that multiply to 6 and add to −5. Those are −2 and −3.",
+   "ops": [
+    {
+     "id": "p1",
+     "op": "write",
+     "x": 200,
+     "y": 450,
+     "text": "multiply to 6",
+     "size": 40,
+     "color": "gray"
+    },
+    {
+     "id": "p2",
+     "op": "write",
+     "x": 200,
+     "y": 520,
+     "text": "add to −5",
+     "size": 40,
+     "color": "gray"
+    },
+    {
+     "id": "p3",
+     "op": "write",
+     "x": 200,
+     "y": 610,
+     "text": "−2 and −3",
+     "size": 44,
+     "color": "green"
+    }
+   ]
+  },
+  {
+   "title": "Write the factors",
+   "say": "So the quadratic factors into x minus 2 times x minus 3.",
+   "ops": [
+    {
+     "id": "fa",
+     "op": "write",
+     "x": 900,
+     "y": 400,
+     "text": "(x − 2)(x − 3) = 0",
+     "size": 52,
+     "color": "blue"
+    },
+    {
+     "id": "ar1",
+     "op": "line",
+     "x1": 1000,
+     "y1": 480,
+     "x2": 1000,
+     "y2": 560,
+     "arrow": true,
+     "color": "gray"
+    }
+   ]
+  },
+  {
+   "title": "Zero product rule",
+   "say": "If a product is zero, one factor must be zero. So x minus 2 is zero, or x minus 3 is zero.",
+   "ops": [
+    {
+     "id": "z1",
+     "op": "write",
+     "x": 900,
+     "y": 590,
+     "text": "x − 2 = 0",
+     "size": 44
+    },
+    {
+     "id": "z2",
+     "op": "write",
+     "x": 1250,
+     "y": 590,
+     "text": "x − 3 = 0",
+     "size": 44
+    }
+   ]
+  },
+  {
+   "title": "The answers",
+   "say": "That gives x equals 2 or x equals 3. Plugging either back in makes the equation zero.",
+   "ops": [
+    {
+     "id": "s1",
+     "op": "write",
+     "x": 900,
+     "y": 700,
+     "text": "x = 2",
+     "size": 48,
+     "color": "green"
+    },
+    {
+     "id": "s2",
+     "op": "write",
+     "x": 1250,
+     "y": 700,
+     "text": "x = 3",
+     "size": 48,
+     "color": "green"
+    },
+    {
+     "id": "bx",
+     "op": "rect",
+     "x": 870,
+     "y": 680,
+     "w": 520,
+     "h": 90,
+     "color": "green"
+    }
+   ]
+  }
+ ]
+}

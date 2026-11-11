@@ -1,0 +1,219 @@
+{
+ "title": "Why does price rise when demand rises?",
+ "lang": "en",
+ "steps": [
+  {
+   "title": "Clear the wordy notes",
+   "say": "Let's clear the wordy notes and say it simply: at each price, people want more, so the demand line shifts right.",
+   "ops": [
+    {
+     "op": "erase",
+     "ids": [
+      "note1",
+      "note2",
+      "note3"
+     ]
+    },
+    {
+     "op": "write",
+     "id": "simple_hdr",
+     "x": 1160,
+     "y": 200,
+     "text": "In plain words",
+     "size": 38,
+     "color": "blue",
+     "underline": true
+    },
+    {
+     "op": "write",
+     "id": "simple_p1",
+     "x": 1160,
+     "y": 260,
+     "text": "At every price,\npeople now want\nto buy MORE.",
+     "size": 34
+    },
+    {
+     "op": "write",
+     "id": "simple_p2",
+     "x": 1160,
+     "y": 400,
+     "text": "So the whole\nD line moves\nRIGHT.",
+     "size": 34,
+     "color": "green"
+    }
+   ]
+  },
+  {
+   "title": "A simple number example",
+   "say": "Here is a tiny table to make the shift concrete.",
+   "ops": [
+    {
+     "op": "line",
+     "id": "tbl_v1",
+     "x1": 1280,
+     "y1": 580,
+     "x2": 1280,
+     "y2": 760,
+     "color": "gray",
+     "width": 2
+    },
+    {
+     "op": "line",
+     "id": "tbl_v2",
+     "x1": 1400,
+     "y1": 580,
+     "x2": 1400,
+     "y2": 760,
+     "color": "gray",
+     "width": 2
+    },
+    {
+     "op": "line",
+     "id": "tbl_v3",
+     "x1": 1520,
+     "y1": 580,
+     "x2": 1520,
+     "y2": 760,
+     "color": "gray",
+     "width": 2
+    },
+    {
+     "op": "line",
+     "id": "tbl_h1",
+     "x1": 1160,
+     "y1": 580,
+     "x2": 1520,
+     "y2": 580,
+     "color": "gray",
+     "width": 2
+    },
+    {
+     "op": "line",
+     "id": "tbl_h2",
+     "x1": 1160,
+     "y1": 640,
+     "x2": 1520,
+     "y2": 640,
+     "color": "gray",
+     "width": 2
+    },
+    {
+     "op": "line",
+     "id": "tbl_h3",
+     "x1": 1160,
+     "y1": 700,
+     "x2": 1520,
+     "y2": 700,
+     "color": "gray",
+     "width": 2
+    },
+    {
+     "op": "line",
+     "id": "tbl_h4",
+     "x1": 1160,
+     "y1": 760,
+     "x2": 1520,
+     "y2": 760,
+     "color": "gray",
+     "width": 2
+    },
+    {
+     "op": "write",
+     "id": "tbl_th1",
+     "x": 1220,
+     "y": 585,
+     "text": "Price",
+     "size": 30,
+     "anchor": "middle"
+    },
+    {
+     "op": "write",
+     "id": "tbl_th2",
+     "x": 1340,
+     "y": 585,
+     "text": "Before",
+     "size": 30,
+     "anchor": "middle"
+    },
+    {
+     "op": "write",
+     "id": "tbl_th3",
+     "x": 1460,
+     "y": 585,
+     "text": "After",
+     "size": 30,
+     "anchor": "middle"
+    }
+   ]
+  },
+  {
+   "title": "Fill in the numbers",
+   "say": "At $10, buyers wanted 50; now they want 80. At $20, they wanted 30; now they want 55.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "tbl_c11",
+     "x": 1220,
+     "y": 645,
+     "text": "$10",
+     "size": 30,
+     "anchor": "middle"
+    },
+    {
+     "op": "write",
+     "id": "tbl_c12",
+     "x": 1340,
+     "y": 645,
+     "text": "50",
+     "size": 30,
+     "anchor": "middle"
+    },
+    {
+     "op": "write",
+     "id": "tbl_c13",
+     "x": 1460,
+     "y": 645,
+     "text": "80",
+     "size": 30,
+     "anchor": "middle"
+    },
+    {
+     "op": "write",
+     "id": "tbl_c21",
+     "x": 1220,
+     "y": 705,
+     "text": "$20",
+     "size": 30,
+     "anchor": "middle"
+    },
+    {
+     "op": "write",
+     "id": "tbl_c22",
+     "x": 1340,
+     "y": 705,
+     "text": "30",
+     "size": 30,
+     "anchor": "middle"
+    },
+    {
+     "op": "write",
+     "id": "tbl_c23",
+     "x": 1460,
+     "y": 705,
+     "text": "55",
+     "size": 30,
+     "anchor": "middle"
+    },
+    {
+     "op": "write",
+     "id": "tbl_summary",
+     "x": 1160,
+     "y": 780,
+     "text": "Same price →\npeople want more",
+     "size": 30,
+     "color": "blue"
+    }
+   ]
+  }
+ ]
+}

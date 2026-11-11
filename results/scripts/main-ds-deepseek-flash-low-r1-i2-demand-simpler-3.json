@@ -1,0 +1,309 @@
+{
+ "title": "Demand shift, simpler",
+ "lang": "en",
+ "steps": [
+  {
+   "title": "Clear the right side",
+   "say": "Let me clear the clutter and show the shift on its own, step by step.",
+   "ops": [
+    {
+     "op": "erase",
+     "ids": [
+      "note1",
+      "note2",
+      "note3",
+      "shift",
+      "shiftlab",
+      "d2",
+      "d2lab"
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Start clean",
+   "say": "Here is the market again: demand D1 and supply S meeting at E1, with price P1.",
+   "ops": [
+    {
+     "op": "erase",
+     "all": true
+    },
+    {
+     "op": "write",
+     "id": "t2",
+     "x": 60,
+     "y": 40,
+     "text": "Demand shift, step by step",
+     "size": 54
+    },
+    {
+     "op": "line",
+     "id": "x2",
+     "x1": 200,
+     "y1": 720,
+     "x2": 1120,
+     "y2": 720,
+     "arrow": true,
+     "width": 4
+    },
+    {
+     "op": "line",
+     "id": "y2",
+     "x1": 200,
+     "y1": 720,
+     "x2": 200,
+     "y2": 180,
+     "arrow": true,
+     "width": 4
+    },
+    {
+     "op": "write",
+     "id": "pr2",
+     "x": 200,
+     "y": 128,
+     "text": "Price",
+     "size": 34,
+     "anchor": "middle"
+    },
+    {
+     "op": "write",
+     "id": "qt2",
+     "x": 1000,
+     "y": 740,
+     "text": "Quantity",
+     "size": 34
+    },
+    {
+     "op": "line",
+     "id": "D1",
+     "x1": 260,
+     "y1": 300,
+     "x2": 900,
+     "y2": 640,
+     "color": "red",
+     "width": 5
+    },
+    {
+     "op": "write",
+     "id": "D1l",
+     "x": 915,
+     "y": 630,
+     "text": "D1",
+     "size": 34,
+     "color": "red"
+    },
+    {
+     "op": "line",
+     "id": "S2",
+     "x1": 260,
+     "y1": 640,
+     "x2": 900,
+     "y2": 300,
+     "color": "blue",
+     "width": 5
+    },
+    {
+     "op": "write",
+     "id": "S2l",
+     "x": 915,
+     "y": 270,
+     "text": "S",
+     "size": 34,
+     "color": "blue"
+    },
+    {
+     "op": "ellipse",
+     "id": "E1",
+     "cx": 580,
+     "cy": 470,
+     "rx": 9,
+     "ry": 9,
+     "color": "green",
+     "fill": "green"
+    },
+    {
+     "op": "write",
+     "id": "P1b",
+     "x": 130,
+     "y": 452,
+     "text": "P1",
+     "size": 32,
+     "anchor": "middle"
+    }
+   ]
+  },
+  {
+   "title": "One buyer more",
+   "say": "Imagine one extra buyer joins. At the old price P1, they want some too, so total demand is bigger.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "q1a",
+     "x": 1200,
+     "y": 200,
+     "text": "At price P1, buyers\nnow want MORE than\nbefore.",
+     "size": 30
+    },
+    {
+     "op": "line",
+     "id": "gap",
+     "x1": 580,
+     "y1": 470,
+     "x2": 760,
+     "y2": 470,
+     "color": "green",
+     "width": 4,
+     "dash": true,
+     "arrow": true
+    },
+    {
+     "op": "write",
+     "id": "gapl",
+     "x": 670,
+     "y": 430,
+     "text": "extra demand",
+     "size": 28,
+     "anchor": "middle",
+     "color": "green"
+    }
+   ]
+  },
+  {
+   "title": "Shift the whole curve",
+   "say": "Add that extra want at every price and the whole demand curve slides right, to D2.",
+   "ops": [
+    {
+     "op": "line",
+     "id": "D2",
+     "x1": 420,
+     "y1": 300,
+     "x2": 1060,
+     "y2": 640,
+     "color": "red",
+     "width": 5
+    },
+    {
+     "op": "write",
+     "id": "D2l",
+     "x": 1075,
+     "y": 625,
+     "text": "D2",
+     "size": 34,
+     "color": "red"
+    },
+    {
+     "op": "line",
+     "id": "arr",
+     "x1": 300,
+     "y1": 250,
+     "x2": 460,
+     "y2": 250,
+     "color": "green",
+     "width": 5,
+     "arrow": true
+    },
+    {
+     "op": "write",
+     "id": "arrl",
+     "x": 380,
+     "y": 205,
+     "text": "shift right",
+     "size": 30,
+     "anchor": "middle",
+     "color": "green"
+    }
+   ]
+  },
+  {
+   "title": "New crossing",
+   "say": "D2 crosses supply further up and to the right. That new crossing is E2.",
+   "ops": [
+    {
+     "op": "ellipse",
+     "id": "E2",
+     "cx": 740,
+     "cy": 380,
+     "rx": 9,
+     "ry": 9,
+     "color": "green",
+     "fill": "green"
+    },
+    {
+     "op": "line",
+     "id": "E2v",
+     "x1": 740,
+     "y1": 380,
+     "x2": 740,
+     "y2": 720,
+     "color": "gray",
+     "width": 3,
+     "dash": true
+    },
+    {
+     "op": "line",
+     "id": "E2h",
+     "x1": 200,
+     "y1": 380,
+     "x2": 740,
+     "y2": 380,
+     "color": "gray",
+     "width": 3,
+     "dash": true
+    },
+    {
+     "op": "write",
+     "id": "P2",
+     "x": 130,
+     "y": 362,
+     "text": "P2",
+     "size": 32,
+     "anchor": "middle"
+    },
+    {
+     "op": "write",
+     "id": "Q2",
+     "x": 740,
+     "y": 735,
+     "text": "Q2",
+     "size": 32,
+     "anchor": "middle"
+    }
+   ]
+  },
+  {
+   "title": "The answer",
+   "say": "Same supply, more demand: the price climbs from P1 to P2 and quantity rises too. That is why demand pushes price up.",
+   "ops": [
+    {
+     "op": "line",
+     "id": "pu",
+     "x1": 150,
+     "y1": 470,
+     "x2": 150,
+     "y2": 380,
+     "color": "red",
+     "width": 5,
+     "arrow": true
+    },
+    {
+     "op": "write",
+     "id": "pul",
+     "x": 1200,
+     "y": 430,
+     "text": "Price: P1 → P2 (higher)\nQuantity: Q1 → Q2 (more)",
+     "size": 30,
+     "color": "red"
+    },
+    {
+     "op": "write",
+     "id": "ans",
+     "x": 1200,
+     "y": 560,
+     "text": "More demand, same supply\n→ higher price.",
+     "size": 32,
+     "color": "green"
+    }
+   ]
+  }
+ ]
+}

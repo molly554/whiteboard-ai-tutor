@@ -1,0 +1,302 @@
+{
+ "title": "Why does price rise when demand rises?",
+ "lang": "en",
+ "steps": [
+  {
+   "title": "Reset: The Ticket Auction",
+   "say": "Let's step away from the abstract curves and look at an everyday auction for concert tickets.",
+   "ops": [
+    {
+     "op": "erase",
+     "ids": [
+      "xaxis",
+      "yaxis",
+      "price",
+      "qty",
+      "d1",
+      "d1lab",
+      "note1",
+      "s",
+      "slab",
+      "note2",
+      "e1",
+      "e1v",
+      "e1h",
+      "p1",
+      "q1",
+      "note3",
+      "d2",
+      "d2lab",
+      "shift",
+      "shiftlab"
+     ]
+    },
+    {
+     "op": "rect",
+     "id": "card1",
+     "x": 80,
+     "y": 160,
+     "w": 440,
+     "h": 560,
+     "color": "gray"
+    },
+    {
+     "op": "rect",
+     "id": "card2",
+     "x": 580,
+     "y": 160,
+     "w": 440,
+     "h": 560,
+     "color": "gray"
+    },
+    {
+     "op": "rect",
+     "id": "card3",
+     "x": 1080,
+     "y": 160,
+     "w": 440,
+     "h": 560,
+     "color": "gray"
+    }
+   ]
+  },
+  {
+   "title": "1. Normal Market",
+   "say": "Imagine 10 tickets for sale, and exactly 10 people want them. The price settles comfortably at fifty dollars.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "c1_title",
+     "x": 110,
+     "y": 190,
+     "text": "1. Normal Balance",
+     "size": 36,
+     "color": "ink"
+    },
+    {
+     "op": "line",
+     "id": "c1_div",
+     "x1": 110,
+     "y1": 245,
+     "x2": 490,
+     "y2": 245,
+     "color": "gray",
+     "width": 2
+    },
+    {
+     "op": "write",
+     "id": "c1_body",
+     "x": 110,
+     "y": 275,
+     "text": "Tickets available: 10\nBuyers in line: 10",
+     "size": 32,
+     "color": "ink"
+    },
+    {
+     "op": "write",
+     "id": "c1_sub",
+     "x": 110,
+     "y": 385,
+     "text": "Everyone gets one.\nNo one needs to overbid.",
+     "size": 28,
+     "color": "gray"
+    },
+    {
+     "op": "rect",
+     "id": "c1_box",
+     "x": 120,
+     "y": 530,
+     "w": 360,
+     "h": 120,
+     "color": "blue",
+     "fill": "blue"
+    },
+    {
+     "op": "write",
+     "id": "c1_price",
+     "x": 300,
+     "y": 570,
+     "text": "Price: $50",
+     "size": 40,
+     "color": "blue",
+     "anchor": "middle"
+    }
+   ]
+  },
+  {
+   "title": "2. Demand Rises",
+   "say": "When demand rises, more people want tickets at every price. Now fifty buyers show up for the same ten tickets.",
+   "ops": [
+    {
+     "op": "line",
+     "id": "arr1",
+     "x1": 525,
+     "y1": 440,
+     "x2": 575,
+     "y2": 440,
+     "color": "red",
+     "width": 5,
+     "arrow": true
+    },
+    {
+     "op": "write",
+     "id": "c2_title",
+     "x": 610,
+     "y": 190,
+     "text": "2. Demand Rises",
+     "size": 36,
+     "color": "red"
+    },
+    {
+     "op": "line",
+     "id": "c2_div",
+     "x1": 610,
+     "y1": 245,
+     "x2": 990,
+     "y2": 245,
+     "color": "gray",
+     "width": 2
+    },
+    {
+     "op": "write",
+     "id": "c2_body",
+     "x": 610,
+     "y": 275,
+     "text": "Tickets available: 10\nBuyers in line: 50!",
+     "size": 32,
+     "color": "red"
+    },
+    {
+     "op": "write",
+     "id": "c2_sub",
+     "x": 610,
+     "y": 385,
+     "text": "Shortage!\n40 buyers will leave\nempty-handed.",
+     "size": 28,
+     "color": "ink"
+    },
+    {
+     "op": "rect",
+     "id": "c2_box",
+     "x": 620,
+     "y": 530,
+     "w": 360,
+     "h": 120,
+     "color": "red",
+     "fill": "red"
+    },
+    {
+     "op": "write",
+     "id": "c2_tag",
+     "x": 800,
+     "y": 570,
+     "text": "Severe Shortage",
+     "size": 36,
+     "color": "red",
+     "anchor": "middle"
+    }
+   ]
+  },
+  {
+   "title": "3. The Bidding War",
+   "say": "Desperate buyers start outbidding each other, offering more cash until the price jumps to one hundred dollars.",
+   "ops": [
+    {
+     "op": "line",
+     "id": "arr2",
+     "x1": 1025,
+     "y1": 440,
+     "x2": 1075,
+     "y2": 440,
+     "color": "green",
+     "width": 5,
+     "arrow": true
+    },
+    {
+     "op": "write",
+     "id": "c3_title",
+     "x": 1110,
+     "y": 190,
+     "text": "3. Bidding War",
+     "size": 36,
+     "color": "green"
+    },
+    {
+     "op": "line",
+     "id": "c3_div",
+     "x1": 1110,
+     "y1": 245,
+     "x2": 1490,
+     "y2": 245,
+     "color": "gray",
+     "width": 2
+    },
+    {
+     "op": "write",
+     "id": "c3_body",
+     "x": 1110,
+     "y": 275,
+     "text": "Buyers shout:\n\"I'll pay $70!\"\n\"I'll pay $100!\"",
+     "size": 32,
+     "color": "ink"
+    },
+    {
+     "op": "write",
+     "id": "c3_sub",
+     "x": 1110,
+     "y": 415,
+     "text": "Sellers accept higher bids\nuntil only 10 can buy.",
+     "size": 28,
+     "color": "gray"
+    },
+    {
+     "op": "rect",
+     "id": "c3_box",
+     "x": 1120,
+     "y": 530,
+     "w": 360,
+     "h": 120,
+     "color": "green",
+     "fill": "green"
+    },
+    {
+     "op": "write",
+     "id": "c3_price",
+     "x": 1300,
+     "y": 570,
+     "text": "New Price: $100",
+     "size": 40,
+     "color": "green",
+     "anchor": "middle"
+    }
+   ]
+  },
+  {
+   "title": "The Takeaway",
+   "say": "That is all a demand shift means: more buyers competing for the same goods naturally bids the price up.",
+   "ops": [
+    {
+     "op": "rect",
+     "id": "banner",
+     "x": 120,
+     "y": 760,
+     "w": 1360,
+     "h": 85,
+     "color": "green",
+     "fill": "green",
+     "width": 3
+    },
+    {
+     "op": "write",
+     "id": "takeaway",
+     "x": 800,
+     "y": 782,
+     "text": "\"Demand shifts right\" = More buyers compete → Price gets bid UP!",
+     "size": 34,
+     "color": "green",
+     "anchor": "middle"
+    }
+   ]
+  }
+ ]
+}

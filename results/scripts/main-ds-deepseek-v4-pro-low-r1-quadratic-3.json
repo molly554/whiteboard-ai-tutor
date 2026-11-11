@@ -1,0 +1,116 @@
+{
+ "title": "Solve x² − 5x + 6 = 0",
+ "lang": "en",
+ "steps": [
+  {
+   "title": "Write the equation",
+   "say": "Let's start by writing the quadratic equation we need to solve.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "eq1",
+     "x": 80,
+     "y": 100,
+     "text": "x² − 5x + 6 = 0",
+     "size": 52,
+     "color": "ink",
+     "anchor": "start"
+    }
+   ]
+  },
+  {
+   "title": "Try factoring",
+   "say": "We first look for two numbers that multiply to 6 and add to −5.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "factorHint",
+     "x": 80,
+     "y": 220,
+     "text": "Find two numbers: product = 6, sum = −5",
+     "size": 34,
+     "color": "blue",
+     "anchor": "start"
+    },
+    {
+     "op": "write",
+     "id": "factorPair",
+     "x": 80,
+     "y": 280,
+     "text": "−2 and −3 work",
+     "size": 36,
+     "color": "ink",
+     "anchor": "start"
+    }
+   ]
+  },
+  {
+   "title": "Factor the quadratic",
+   "say": "Using these numbers, we can factor the quadratic.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "factoredForm",
+     "x": 80,
+     "y": 380,
+     "text": "(x − 2)(x − 3) = 0",
+     "size": 48,
+     "color": "ink",
+     "anchor": "start"
+    }
+   ]
+  },
+  {
+   "title": "Set each factor to zero",
+   "say": "For the product to be zero, at least one factor must be zero.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "zeroFactor1",
+     "x": 80,
+     "y": 500,
+     "text": "x − 2 = 0",
+     "size": 40,
+     "color": "ink",
+     "anchor": "start"
+    },
+    {
+     "op": "write",
+     "id": "zeroFactor2",
+     "x": 80,
+     "y": 570,
+     "text": "x − 3 = 0",
+     "size": 40,
+     "color": "ink",
+     "anchor": "start"
+    }
+   ]
+  },
+  {
+   "title": "Solve both equations",
+   "say": "Solving each simple equation gives the two possible values of x.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "solution1",
+     "x": 80,
+     "y": 680,
+     "text": "x = 2",
+     "size": 44,
+     "color": "green",
+     "anchor": "start"
+    },
+    {
+     "op": "write",
+     "id": "solution2",
+     "x": 80,
+     "y": 750,
+     "text": "x = 3",
+     "size": 44,
+     "color": "green",
+     "anchor": "start"
+    }
+   ]
+  }
+ ]
+}

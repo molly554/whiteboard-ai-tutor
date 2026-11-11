@@ -1,0 +1,175 @@
+{
+ "title": "Demand shift made simpler",
+ "lang": "en",
+ "steps": [
+  {
+   "title": "Clear the side notes",
+   "say": "Let’s clear the side notes so we can use that space for a simpler view.",
+   "ops": [
+    {
+     "op": "erase",
+     "ids": [
+      "note1",
+      "note2",
+      "note3"
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Build a small table",
+   "say": "This table shows what demand shifting right actually means.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "simp_title",
+     "x": 1200,
+     "y": 160,
+     "text": "Same price:\nmore wanted",
+     "size": 36
+    },
+    {
+     "op": "line",
+     "id": "tv1",
+     "x1": 1320,
+     "y1": 260,
+     "x2": 1320,
+     "y2": 490,
+     "color": "gray",
+     "width": 2
+    },
+    {
+     "op": "line",
+     "id": "tv2",
+     "x1": 1440,
+     "y1": 260,
+     "x2": 1440,
+     "y2": 490,
+     "color": "gray",
+     "width": 2
+    },
+    {
+     "op": "line",
+     "id": "th1",
+     "x1": 1200,
+     "y1": 320,
+     "x2": 1560,
+     "y2": 320,
+     "color": "gray",
+     "width": 2
+    },
+    {
+     "op": "line",
+     "id": "th2",
+     "x1": 1200,
+     "y1": 380,
+     "x2": 1560,
+     "y2": 380,
+     "color": "gray",
+     "width": 2
+    },
+    {
+     "op": "line",
+     "id": "th3",
+     "x1": 1200,
+     "y1": 440,
+     "x2": 1560,
+     "y2": 440,
+     "color": "gray",
+     "width": 2
+    },
+    {
+     "op": "line",
+     "id": "th4",
+     "x1": 1200,
+     "y1": 490,
+     "x2": 1560,
+     "y2": 490,
+     "color": "gray",
+     "width": 2
+    }
+   ]
+  },
+  {
+   "title": "Fill in the numbers",
+   "say": "At $10, people wanted 30; now they want 50. At every price, D2 is bigger, so the demand curve shifts right.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "hprice",
+     "x": 1210,
+     "y": 268,
+     "text": "Price",
+     "size": 30
+    },
+    {
+     "op": "write",
+     "id": "hd1",
+     "x": 1330,
+     "y": 268,
+     "text": "D1",
+     "size": 30
+    },
+    {
+     "op": "write",
+     "id": "hd2",
+     "x": 1450,
+     "y": 268,
+     "text": "D2",
+     "size": 30,
+     "color": "red"
+    },
+    {
+     "op": "write",
+     "id": "r1p",
+     "x": 1210,
+     "y": 330,
+     "text": "$10",
+     "size": 30
+    },
+    {
+     "op": "write",
+     "id": "r1d1",
+     "x": 1330,
+     "y": 330,
+     "text": "30",
+     "size": 30
+    },
+    {
+     "op": "write",
+     "id": "r1d2",
+     "x": 1450,
+     "y": 330,
+     "text": "50",
+     "size": 30,
+     "color": "red"
+    },
+    {
+     "op": "write",
+     "id": "r2p",
+     "x": 1210,
+     "y": 390,
+     "text": "$20",
+     "size": 30
+    },
+    {
+     "op": "write",
+     "id": "r2d1",
+     "x": 1330,
+     "y": 390,
+     "text": "20",
+     "size": 30
+    },
+    {
+     "op": "write",
+     "id": "r2d2",
+     "x": 1450,
+     "y": 390,
+     "text": "35",
+     "size": 30,
+     "color": "red"
+    }
+   ]
+  }
+ ]
+}

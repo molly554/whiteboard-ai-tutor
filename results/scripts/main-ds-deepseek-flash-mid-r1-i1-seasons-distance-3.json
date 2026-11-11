@@ -1,0 +1,93 @@
+{
+ "title": "Why do we have seasons?",
+ "lang": "en",
+ "steps": [
+  {
+   "title": "Farther, yet summer",
+   "say": "Yes — northern summer happens when Earth is farthest from the Sun. So distance cannot be the cause.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "farther",
+     "x": 60,
+     "y": 250,
+     "text": "Surprise: in July, northern summer,\nEarth is FARTHER from the Sun.\nSo distance is not the cause.",
+     "size": 36,
+     "color": "red"
+    }
+   ]
+  },
+  {
+   "title": "The tilt does it",
+   "say": "The axis leans toward the Sun, so sunlight hits the northern hemisphere more directly.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "sunlightlabel",
+     "x": 480,
+     "y": 520,
+     "text": "sunlight",
+     "size": 28,
+     "color": "red"
+    },
+    {
+     "op": "line",
+     "id": "ray1",
+     "x1": 720,
+     "y1": 560,
+     "x2": 330,
+     "y2": 560,
+     "color": "red",
+     "width": 4,
+     "arrow": true
+    },
+    {
+     "op": "line",
+     "id": "ray2",
+     "x1": 720,
+     "y1": 600,
+     "x2": 330,
+     "y2": 600,
+     "color": "red",
+     "width": 4,
+     "arrow": true
+    },
+    {
+     "op": "line",
+     "id": "ray3",
+     "x1": 720,
+     "y1": 640,
+     "x2": 330,
+     "y2": 640,
+     "color": "red",
+     "width": 4,
+     "arrow": true
+    },
+    {
+     "op": "write",
+     "id": "npoletilt",
+     "x": 45,
+     "y": 560,
+     "text": "N pole leans\ntoward the Sun",
+     "size": 28,
+     "color": "blue"
+    }
+   ]
+  },
+  {
+   "title": "Why that heats more",
+   "say": "Direct sunlight concentrates energy, and longer days add more hours of heating.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "hotter",
+     "x": 60,
+     "y": 820,
+     "text": "More direct sunlight + longer days = hotter.",
+     "size": 30,
+     "color": "red"
+    }
+   ]
+  }
+ ]
+}

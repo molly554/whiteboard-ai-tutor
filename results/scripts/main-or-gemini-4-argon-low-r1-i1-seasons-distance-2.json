@@ -1,0 +1,293 @@
+{
+ "title": "Why Distance Doesn't Rule Seasons",
+ "lang": "en",
+ "steps": [
+  {
+   "title": "Distance barely changes",
+   "say": "Yes, in July Earth is farthest from the Sun, but that distance only changes by about 3 percent — an almost invisible difference in heat.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "dist_fact1",
+     "x": 850,
+     "y": 40,
+     "text": "Jan (closest): 147 million km",
+     "size": 34,
+     "color": "ink"
+    },
+    {
+     "op": "write",
+     "id": "dist_fact2",
+     "x": 850,
+     "y": 90,
+     "text": "July (farthest): 152 million km",
+     "size": 34,
+     "color": "ink"
+    },
+    {
+     "op": "write",
+     "id": "dist_diff",
+     "x": 850,
+     "y": 145,
+     "text": "Only a 3% change in distance!",
+     "size": 36,
+     "color": "red"
+    },
+    {
+     "op": "write",
+     "id": "july_lbl",
+     "x": 280,
+     "y": 680,
+     "text": "July (N. Summer)",
+     "size": 30,
+     "color": "red",
+     "anchor": "middle"
+    },
+    {
+     "op": "write",
+     "id": "jan_lbl",
+     "x": 1320,
+     "y": 680,
+     "text": "Jan (N. Winter)",
+     "size": 30,
+     "color": "blue",
+     "anchor": "middle"
+    }
+   ]
+  },
+  {
+   "title": "Sunlight hits the North directly",
+   "say": "Look at the left Earth in July: the North Pole tilts toward the Sun, so sunlight strikes the northern hemisphere much more directly.",
+   "ops": [
+    {
+     "op": "line",
+     "id": "eq1",
+     "x1": 249,
+     "y1": 586,
+     "x2": 311,
+     "y2": 614,
+     "color": "ink",
+     "width": 3,
+     "dash": true
+    },
+    {
+     "op": "line",
+     "id": "ray_j1",
+     "x1": 720,
+     "y1": 575,
+     "x2": 335,
+     "y2": 575,
+     "color": "red",
+     "width": 4,
+     "arrow": true
+    },
+    {
+     "op": "line",
+     "id": "ray_j2",
+     "x1": 720,
+     "y1": 595,
+     "x2": 335,
+     "y2": 595,
+     "color": "red",
+     "width": 4,
+     "arrow": true
+    },
+    {
+     "op": "write",
+     "id": "ray_j_lbl",
+     "x": 530,
+     "y": 525,
+     "text": "Direct rays on North",
+     "size": 28,
+     "color": "red",
+     "anchor": "middle"
+    }
+   ]
+  },
+  {
+   "title": "Why tilt beats distance",
+   "say": "Let's zoom in to see why tilt beats that 3 percent distance: equal beams of sunlight either concentrate in a small spot or spread out thin.",
+   "ops": [
+    {
+     "op": "erase",
+     "ids": [
+      "orbitlabel",
+      "earth3",
+      "axis3",
+      "earth4",
+      "axis4"
+     ]
+    },
+    {
+     "op": "rect",
+     "id": "zoom_box",
+     "x": 60,
+     "y": 230,
+     "w": 680,
+     "h": 260,
+     "color": "gray",
+     "width": 3
+    },
+    {
+     "op": "write",
+     "id": "z_title1",
+     "x": 90,
+     "y": 245,
+     "text": "High Sun (Summer):",
+     "size": 30,
+     "color": "red"
+    },
+    {
+     "op": "line",
+     "id": "gnd1",
+     "x1": 90,
+     "y1": 345,
+     "x2": 350,
+     "y2": 345,
+     "color": "ink",
+     "width": 5
+    },
+    {
+     "op": "line",
+     "id": "b1_a",
+     "x1": 180,
+     "y1": 290,
+     "x2": 180,
+     "y2": 338,
+     "color": "red",
+     "width": 4,
+     "arrow": true
+    },
+    {
+     "op": "line",
+     "id": "b1_b",
+     "x1": 240,
+     "y1": 290,
+     "x2": 240,
+     "y2": 338,
+     "color": "red",
+     "width": 4,
+     "arrow": true
+    },
+    {
+     "op": "write",
+     "id": "z_desc1",
+     "x": 370,
+     "y": 305,
+     "text": "Concentrated heat\n+ longer days (15 hrs)",
+     "size": 28,
+     "color": "red"
+    },
+    {
+     "op": "write",
+     "id": "z_title2",
+     "x": 90,
+     "y": 375,
+     "text": "Low Sun (Winter):",
+     "size": 30,
+     "color": "blue"
+    },
+    {
+     "op": "line",
+     "id": "gnd2",
+     "x1": 90,
+     "y1": 465,
+     "x2": 350,
+     "y2": 465,
+     "color": "ink",
+     "width": 5
+    },
+    {
+     "op": "line",
+     "id": "b2_a",
+     "x1": 100,
+     "y1": 415,
+     "x2": 160,
+     "y2": 458,
+     "color": "blue",
+     "width": 4,
+     "arrow": true
+    },
+    {
+     "op": "line",
+     "id": "b2_b",
+     "x1": 190,
+     "y1": 415,
+     "x2": 250,
+     "y2": 458,
+     "color": "blue",
+     "width": 4,
+     "arrow": true
+    },
+    {
+     "op": "write",
+     "id": "z_desc2",
+     "x": 370,
+     "y": 410,
+     "text": "Spread over ~2x area\n+ shorter days (9 hrs)",
+     "size": 28,
+     "color": "blue"
+    }
+   ]
+  },
+  {
+   "title": "Compare with January",
+   "say": "In January on the right, the North tilts away from the Sun. And this huge change in beam angle and day length easily overpowers the tiny distance change!",
+   "ops": [
+    {
+     "op": "line",
+     "id": "eq2",
+     "x1": 1289,
+     "y1": 586,
+     "x2": 1351,
+     "y2": 614,
+     "color": "ink",
+     "width": 3,
+     "dash": true
+    },
+    {
+     "op": "line",
+     "id": "ray_w1",
+     "x1": 880,
+     "y1": 575,
+     "x2": 1265,
+     "y2": 575,
+     "color": "blue",
+     "width": 4,
+     "arrow": true
+    },
+    {
+     "op": "line",
+     "id": "ray_w2",
+     "x1": 880,
+     "y1": 615,
+     "x2": 1265,
+     "y2": 615,
+     "color": "blue",
+     "width": 4,
+     "arrow": true
+    },
+    {
+     "op": "write",
+     "id": "ray_w_lbl",
+     "x": 1070,
+     "y": 525,
+     "text": "North tilted away",
+     "size": 28,
+     "color": "blue",
+     "anchor": "middle"
+    },
+    {
+     "op": "write",
+     "id": "summary",
+     "x": 800,
+     "y": 825,
+     "text": "Angle + Day Length (~300% effect)  >>  Distance (~7% effect)",
+     "size": 36,
+     "color": "green",
+     "anchor": "middle"
+    }
+   ]
+  }
+ ]
+}

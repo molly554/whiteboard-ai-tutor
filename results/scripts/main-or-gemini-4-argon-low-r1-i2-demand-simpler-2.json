@@ -1,0 +1,275 @@
+{
+ "title": "Demand shift explained simply",
+ "lang": "en",
+ "steps": [
+  {
+   "title": "Let's clear the extra lines",
+   "say": "No problem! Let's erase the supply line and notes for a moment so we can look only at the buyers.",
+   "ops": [
+    {
+     "op": "erase",
+     "ids": [
+      "d2",
+      "d2lab",
+      "shift",
+      "shiftlab",
+      "s",
+      "slab",
+      "e1",
+      "e1v",
+      "e1h",
+      "note1",
+      "note2",
+      "note3"
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Look at just one price",
+   "say": "Pick one fixed price, P1 — say $2 for a lemonade. On a normal day, buyers want Q1 cups.",
+   "ops": [
+    {
+     "op": "line",
+     "id": "p1line",
+     "x1": 200,
+     "y1": 470,
+     "x2": 580,
+     "y2": 470,
+     "color": "gray",
+     "width": 3,
+     "dash": true
+    },
+    {
+     "op": "line",
+     "id": "q1line",
+     "x1": 580,
+     "y1": 470,
+     "x2": 580,
+     "y2": 720,
+     "color": "gray",
+     "width": 3,
+     "dash": true
+    },
+    {
+     "op": "ellipse",
+     "id": "pt1",
+     "cx": 580,
+     "cy": 470,
+     "rx": 9,
+     "ry": 9,
+     "color": "red",
+     "fill": "red"
+    },
+    {
+     "op": "write",
+     "id": "ex1",
+     "x": 1160,
+     "y": 240,
+     "text": "1. Normal day:\nAt price P1 ($2),\nbuyers want Q1 cups.",
+     "size": 32
+    }
+   ]
+  },
+  {
+   "title": "More people want it at the SAME price",
+   "say": "Now imagine a hot day! At the exact same $2 price, more thirsty people show up, so the quantity wanted jumps right to Q_hot.",
+   "ops": [
+    {
+     "op": "line",
+     "id": "p1ext",
+     "x1": 580,
+     "y1": 470,
+     "x2": 740,
+     "y2": 470,
+     "color": "green",
+     "width": 5,
+     "arrow": true
+    },
+    {
+     "op": "ellipse",
+     "id": "pt2",
+     "cx": 740,
+     "cy": 470,
+     "rx": 9,
+     "ry": 9,
+     "color": "red",
+     "fill": "red"
+    },
+    {
+     "op": "line",
+     "id": "qhotline",
+     "x1": 740,
+     "y1": 470,
+     "x2": 740,
+     "y2": 720,
+     "color": "gray",
+     "width": 3,
+     "dash": true
+    },
+    {
+     "op": "write",
+     "id": "qhot",
+     "x": 740,
+     "y": 735,
+     "text": "Q_hot",
+     "size": 32,
+     "anchor": "middle",
+     "color": "red"
+    },
+    {
+     "op": "write",
+     "id": "ex2",
+     "x": 1160,
+     "y": 410,
+     "text": "2. Hot day (demand rises):\nAt the SAME price P1,\nbuyers want MORE (Q_hot).",
+     "size": 32,
+     "color": "green"
+    }
+   ]
+  },
+  {
+   "title": "That happens at every price",
+   "say": "Because buyers want more at $2, at $3, and at every other price, all the points move right — forming the new line D2.",
+   "ops": [
+    {
+     "op": "line",
+     "id": "arr_hi",
+     "x1": 410,
+     "y1": 380,
+     "x2": 570,
+     "y2": 380,
+     "color": "green",
+     "width": 4,
+     "arrow": true
+    },
+    {
+     "op": "line",
+     "id": "arr_lo",
+     "x1": 750,
+     "y1": 560,
+     "x2": 910,
+     "y2": 560,
+     "color": "green",
+     "width": 4,
+     "arrow": true
+    },
+    {
+     "op": "line",
+     "id": "d2new",
+     "x1": 420,
+     "y1": 300,
+     "x2": 1060,
+     "y2": 640,
+     "color": "red",
+     "width": 5
+    },
+    {
+     "op": "write",
+     "id": "d2newlab",
+     "x": 1075,
+     "y": 625,
+     "text": "D2",
+     "size": 34,
+     "color": "red"
+    },
+    {
+     "op": "write",
+     "id": "ex3",
+     "x": 1160,
+     "y": 580,
+     "text": "3. Same at every price:\nEvery point moves right,\ncreating line D2!",
+     "size": 32,
+     "color": "red"
+    }
+   ]
+  },
+  {
+   "title": "Now bring back Supply",
+   "say": "When we put the supply curve S back on the board, it crosses the new demand D2 higher up — so the new market price P2 is higher!",
+   "ops": [
+    {
+     "op": "erase",
+     "ids": [
+      "arr_hi",
+      "arr_lo",
+      "p1ext",
+      "qhotline",
+      "qhot"
+     ]
+    },
+    {
+     "op": "line",
+     "id": "s_back",
+     "x1": 260,
+     "y1": 640,
+     "x2": 900,
+     "y2": 300,
+     "color": "blue",
+     "width": 5
+    },
+    {
+     "op": "write",
+     "id": "slab_back",
+     "x": 915,
+     "y": 270,
+     "text": "S",
+     "size": 34,
+     "color": "blue"
+    },
+    {
+     "op": "ellipse",
+     "id": "e2",
+     "cx": 660,
+     "cy": 427,
+     "rx": 10,
+     "ry": 10,
+     "color": "green",
+     "fill": "green"
+    },
+    {
+     "op": "line",
+     "id": "e2h",
+     "x1": 200,
+     "y1": 427,
+     "x2": 660,
+     "y2": 427,
+     "color": "green",
+     "width": 3,
+     "dash": true
+    },
+    {
+     "op": "line",
+     "id": "e2v",
+     "x1": 660,
+     "y1": 427,
+     "x2": 660,
+     "y2": 720,
+     "color": "green",
+     "width": 3,
+     "dash": true
+    },
+    {
+     "op": "write",
+     "id": "p2",
+     "x": 130,
+     "y": 395,
+     "text": "P2",
+     "size": 32,
+     "anchor": "middle",
+     "color": "green"
+    },
+    {
+     "op": "write",
+     "id": "q2",
+     "x": 660,
+     "y": 735,
+     "text": "Q2",
+     "size": 32,
+     "anchor": "middle",
+     "color": "green"
+    }
+   ]
+  }
+ ]
+}

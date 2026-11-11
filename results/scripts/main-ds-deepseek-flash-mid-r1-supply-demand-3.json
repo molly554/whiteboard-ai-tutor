@@ -1,0 +1,259 @@
+{
+ "title": "Demand Up → Price Up",
+ "lang": "en",
+ "steps": [
+  {
+   "title": "Set up the question",
+   "say": "We will use a supply and demand diagram to see what happens when demand rises.",
+   "ops": [
+    {
+     "id": "title_main",
+     "op": "write",
+     "x": 80,
+     "y": 60,
+     "text": "Demand Up → Price Up",
+     "size": 56
+    }
+   ]
+  },
+  {
+   "title": "Draw the axes",
+   "say": "Price is on the vertical axis and quantity is on the horizontal axis.",
+   "ops": [
+    {
+     "id": "axis_x",
+     "op": "line",
+     "x1": 400,
+     "y1": 780,
+     "x2": 1180,
+     "y2": 780,
+     "width": 5,
+     "arrow": true
+    },
+    {
+     "id": "axis_y",
+     "op": "line",
+     "x1": 400,
+     "y1": 780,
+     "x2": 400,
+     "y2": 180,
+     "width": 5,
+     "arrow": true
+    },
+    {
+     "id": "label_p",
+     "op": "write",
+     "x": 350,
+     "y": 150,
+     "text": "P",
+     "size": 34
+    },
+    {
+     "id": "label_q",
+     "op": "write",
+     "x": 1140,
+     "y": 800,
+     "text": "Q",
+     "size": 34
+    }
+   ]
+  },
+  {
+   "title": "Add supply",
+   "say": "The supply curve slopes upward: higher prices bring more quantity supplied.",
+   "ops": [
+    {
+     "id": "supply_curve",
+     "op": "line",
+     "x1": 520,
+     "y1": 710,
+     "x2": 1050,
+     "y2": 310,
+     "color": "green",
+     "width": 5
+    },
+    {
+     "id": "label_s",
+     "op": "write",
+     "x": 1055,
+     "y": 295,
+     "text": "S",
+     "size": 32,
+     "color": "green"
+    }
+   ]
+  },
+  {
+   "title": "Add initial demand",
+   "say": "This is the original demand curve, D1, and its equilibrium point E1.",
+   "ops": [
+    {
+     "id": "demand_1",
+     "op": "line",
+     "x1": 520,
+     "y1": 360,
+     "x2": 1040,
+     "y2": 710,
+     "color": "blue",
+     "width": 5
+    },
+    {
+     "id": "label_d1",
+     "op": "write",
+     "x": 1045,
+     "y": 685,
+     "text": "D1",
+     "size": 32,
+     "color": "blue"
+    },
+    {
+     "id": "eq_1",
+     "op": "ellipse",
+     "cx": 765,
+     "cy": 525,
+     "rx": 8,
+     "ry": 8,
+     "color": "blue",
+     "fill": "blue"
+    },
+    {
+     "id": "label_e1",
+     "op": "write",
+     "x": 775,
+     "y": 490,
+     "text": "E1",
+     "size": 30,
+     "color": "blue"
+    }
+   ]
+  },
+  {
+   "title": "Demand rises",
+   "say": "Higher demand shifts the demand curve rightward from D1 to D2.",
+   "ops": [
+    {
+     "id": "demand_2",
+     "op": "line",
+     "x1": 620,
+     "y1": 360,
+     "x2": 1140,
+     "y2": 710,
+     "color": "red",
+     "width": 5
+    },
+    {
+     "id": "shift_arrow",
+     "op": "line",
+     "x1": 610,
+     "y1": 330,
+     "x2": 680,
+     "y2": 330,
+     "color": "red",
+     "width": 4,
+     "arrow": true
+    },
+    {
+     "id": "label_d2",
+     "op": "write",
+     "x": 1145,
+     "y": 685,
+     "text": "D2",
+     "size": 32,
+     "color": "red"
+    },
+    {
+     "id": "eq_2",
+     "op": "ellipse",
+     "cx": 812,
+     "cy": 489,
+     "rx": 8,
+     "ry": 8,
+     "color": "red",
+     "fill": "red"
+    },
+    {
+     "id": "label_e2",
+     "op": "write",
+     "x": 822,
+     "y": 455,
+     "text": "E2",
+     "size": 30,
+     "color": "red"
+    }
+   ]
+  },
+  {
+   "title": "Compare prices",
+   "say": "The new equilibrium E2 has a higher price than E1.",
+   "ops": [
+    {
+     "id": "price_line_1",
+     "op": "line",
+     "x1": 400,
+     "y1": 525,
+     "x2": 765,
+     "y2": 525,
+     "color": "gray",
+     "width": 3,
+     "dash": true
+    },
+    {
+     "id": "price_line_2",
+     "op": "line",
+     "x1": 400,
+     "y1": 489,
+     "x2": 812,
+     "y2": 489,
+     "color": "gray",
+     "width": 3,
+     "dash": true
+    },
+    {
+     "id": "label_p1",
+     "op": "write",
+     "x": 330,
+     "y": 515,
+     "text": "P1",
+     "size": 30
+    },
+    {
+     "id": "label_p2",
+     "op": "write",
+     "x": 330,
+     "y": 460,
+     "text": "P2",
+     "size": 30
+    }
+   ]
+  },
+  {
+   "title": "State the result",
+   "say": "When demand rises, both the equilibrium price and quantity increase.",
+   "ops": [
+    {
+     "id": "result_text",
+     "op": "write",
+     "x": 1220,
+     "y": 180,
+     "text": "Demand ↑\n→ Price ↑\n→ Quantity ↑",
+     "size": 40
+    }
+   ]
+  },
+  {
+   "title": "Name the assumption",
+   "say": "This result assumes the supply curve stays unchanged.",
+   "ops": [
+    {
+     "id": "assumption_text",
+     "op": "write",
+     "x": 1220,
+     "y": 380,
+     "text": "Assuming supply\nis unchanged",
+     "size": 32,
+     "color": "gray"
+    }
+   ]
+  }
+ ]
+}

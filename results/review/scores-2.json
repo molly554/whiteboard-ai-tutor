@@ -1,0 +1,15 @@
+{
+ "_fields": "interrupt boards add: answers = 1 if the student's question is answered; placement = 1 if nothing existing is redrawn and new content sits in free space",
+ "B06": {"content": 1, "match": 1, "layout": 1, "pedagogy": 1, "conf": "high", "note": "chloroplast with double membrane, grana, stroma, light/dark reaction sites; one label crossed by the outline"},
+ "B12": {"content": 1, "match": 1, "layout": 1, "pedagogy": 1, "conf": "high", "note": "cell with wall, membrane, nucleus, vacuole, chloroplasts, zoom to grana; the chloroplast label is crossed by the cell wall and the zoom line"},
+ "B26": {"content": 1, "match": 1, "layout": 1, "pedagogy": 1, "conf": "high", "note": "correct but thin (4 steps); cell label sits on the outline, arrow runs through another chloroplast"},
+ "B29": {"content": 1, "match": 1, "layout": 2, "pedagogy": 1, "conf": "high", "note": "correct and clean; chloroplast label was erased so the ovals end unlabelled"},
+ "B46": {"content": 1, "match": 1, "layout": 1, "pedagogy": 1, "conf": "high", "note": "richest content (cell -> zoom -> light and dark reactions, inputs and outputs, prokaryote exception); title area overlapped by two labels"},
+ "B53": {"content": 1, "match": 1, "layout": 1, "pedagogy": 1, "conf": "high", "note": "correct, simple; two labels crossed by arrows or the cell outline"},
+ "B02": {"content": 1, "match": 0, "layout": 2, "pedagogy": 1, "answers": 1, "placement": 1, "conf": "high", "note": "explanation right, but the new equilibrium dot floats above the D2-S crossing, so P2 is drawn too high"},
+ "B05": {"content": 1, "match": 0, "layout": 2, "pedagogy": 1, "answers": 1, "placement": 1, "conf": "high", "note": "explanation right, but E2 is marked on the supply line far beyond the D2-S crossing"},
+ "B11": {"content": 1, "match": 1, "layout": 1, "pedagogy": 1, "answers": 1, "placement": 1, "conf": "high", "note": "E2 and the same-price point Q' both exact; shows the shortage at P1; one label crossed by D1"},
+ "B33": {"content": 1, "match": 1, "layout": 0, "pedagogy": 1, "answers": 1, "placement": 0, "conf": "high", "note": "a grey box covers the whole chart and the explanation is written across the curves"},
+ "B38": {"content": 1, "match": 0, "layout": 2, "pedagogy": 1, "answers": 1, "placement": 1, "conf": "low", "note": "explanation right and clean; E2 dot sits on the supply line slightly past the true crossing (about 30 board units off)"},
+ "B56": {"content": 1, "match": 0, "layout": 0, "pedagogy": 1, "answers": 1, "placement": 0, "conf": "high", "note": "marked points lie on neither curve, Q2 too far right; 'same P' written over P2, labels crossed by lines"}
+}

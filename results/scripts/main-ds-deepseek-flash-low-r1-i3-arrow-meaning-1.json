@@ -1,0 +1,73 @@
+{
+ "title": "What the green arrow means",
+ "lang": "en",
+ "steps": [
+  {
+   "title": "It shows a shift",
+   "say": "That green arrow is a shift arrow: it shows the whole demand curve moving, not a move along it.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "expl1",
+     "x": 200,
+     "y": 790,
+     "text": "Green arrow = the demand curve shifting right",
+     "size": 30,
+     "color": "green"
+    }
+   ]
+  },
+  {
+   "title": "Old to new",
+   "say": "It points from the old curve D1 to the new curve D2, because buyers now want more at every price.",
+   "ops": [
+    {
+     "op": "line",
+     "id": "link1",
+     "x1": 420,
+     "y1": 262,
+     "x2": 420,
+     "y2": 300,
+     "color": "green",
+     "width": 3,
+     "dash": true
+    },
+    {
+     "op": "line",
+     "id": "link2",
+     "x1": 260,
+     "y1": 262,
+     "x2": 260,
+     "y2": 300,
+     "color": "green",
+     "width": 3,
+     "dash": true
+    },
+    {
+     "op": "write",
+     "id": "expl2",
+     "x": 200,
+     "y": 830,
+     "text": "D1 → D2: more wanted at every price",
+     "size": 28,
+     "color": "gray"
+    }
+   ]
+  },
+  {
+   "title": "Not a price move",
+   "say": "Do not confuse it with sliding along a curve, which is just a price change.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "expl3",
+     "x": 1200,
+     "y": 740,
+     "text": "Shift ≠ slide along\nthe same curve",
+     "size": 28,
+     "color": "gray"
+    }
+   ]
+  }
+ ]
+}

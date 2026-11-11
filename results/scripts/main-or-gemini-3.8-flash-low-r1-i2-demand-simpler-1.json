@@ -1,0 +1,214 @@
+{
+ "title": "A simpler look: Auctioning one slice of cake",
+ "lang": "en",
+ "steps": [
+  {
+   "title": "Clear for a fresh example",
+   "say": "Let's put the graph aside and think of an auction for a single slice of cake.",
+   "ops": [
+    {
+     "op": "erase",
+     "all": true
+    },
+    {
+     "op": "write",
+     "id": "ex_title",
+     "x": 60,
+     "y": 40,
+     "text": "A simpler way: Think of an auction",
+     "size": 52
+    }
+   ]
+  },
+  {
+   "title": "Only one buyer",
+   "say": "Imagine there is only 1 cake, and only 1 hungry buyer named Alice.",
+   "ops": [
+    {
+     "op": "rect",
+     "id": "box_cake",
+     "x": 100,
+     "y": 240,
+     "w": 280,
+     "h": 220,
+     "color": "blue",
+     "fill": "blue"
+    },
+    {
+     "op": "write",
+     "id": "txt_cake",
+     "x": 240,
+     "y": 320,
+     "text": "1 Cake\nfor sale",
+     "size": 36,
+     "anchor": "middle"
+    },
+    {
+     "op": "ellipse",
+     "id": "buyer_a",
+     "cx": 600,
+     "cy": 350,
+     "rx": 70,
+     "ry": 70,
+     "color": "ink"
+    },
+    {
+     "op": "write",
+     "id": "txt_buyer_a",
+     "x": 600,
+     "y": 330,
+     "text": "Alice\n($2)",
+     "size": 32,
+     "anchor": "middle"
+    },
+    {
+     "op": "line",
+     "id": "arr_a",
+     "x1": 510,
+     "y1": 350,
+     "x2": 400,
+     "y2": 350,
+     "arrow": true,
+     "width": 4
+    },
+    {
+     "op": "write",
+     "id": "res_1",
+     "x": 800,
+     "y": 330,
+     "text": "Alice is the only bidder.\nPrice stays low: $2.",
+     "size": 36
+    }
+   ]
+  },
+  {
+   "title": "More buyers arrive",
+   "say": "Now 'demand rises' simply means more buyers show up with cash.",
+   "ops": [
+    {
+     "op": "ellipse",
+     "id": "buyer_b",
+     "cx": 600,
+     "cy": 540,
+     "rx": 70,
+     "ry": 70,
+     "color": "red"
+    },
+    {
+     "op": "write",
+     "id": "txt_buyer_b",
+     "x": 600,
+     "y": 520,
+     "text": "Bob\n($3)",
+     "size": 32,
+     "color": "red",
+     "anchor": "middle"
+    },
+    {
+     "op": "ellipse",
+     "id": "buyer_c",
+     "cx": 600,
+     "cy": 730,
+     "rx": 70,
+     "ry": 70,
+     "color": "red"
+    },
+    {
+     "op": "write",
+     "id": "txt_buyer_c",
+     "x": 600,
+     "y": 710,
+     "text": "Charlie\n($5)",
+     "size": 32,
+     "color": "red",
+     "anchor": "middle"
+    },
+    {
+     "op": "line",
+     "id": "arr_b",
+     "x1": 510,
+     "y1": 520,
+     "x2": 400,
+     "y2": 410,
+     "arrow": true,
+     "width": 4,
+     "color": "red"
+    },
+    {
+     "op": "line",
+     "id": "arr_c",
+     "x1": 510,
+     "y1": 700,
+     "x2": 380,
+     "y2": 480,
+     "arrow": true,
+     "width": 4,
+     "color": "red"
+    },
+    {
+     "op": "write",
+     "id": "tag_shift",
+     "x": 690,
+     "y": 620,
+     "text": "Demand rises =\nmore buyers!",
+     "size": 32,
+     "color": "red"
+    }
+   ]
+  },
+  {
+   "title": "Bidding war drives price up",
+   "say": "They outbid each other to get that one cake. So Charlie wins at $5, driving the price up.",
+   "ops": [
+    {
+     "op": "erase",
+     "ids": [
+      "res_1"
+     ]
+    },
+    {
+     "op": "write",
+     "id": "bidding_text",
+     "x": 820,
+     "y": 280,
+     "text": "More buyers fight for\nthe same cake:\n• Alice bids $2\n• Bob bids $3\n• Charlie bids $5",
+     "size": 34
+    },
+    {
+     "op": "rect",
+     "id": "box_win",
+     "x": 820,
+     "y": 500,
+     "w": 460,
+     "h": 140,
+     "color": "green",
+     "fill": "green"
+    },
+    {
+     "op": "write",
+     "id": "txt_win",
+     "x": 840,
+     "y": 535,
+     "text": "Winning Price: $5 (was $2)\nPrice rose because of competition!",
+     "size": 30,
+     "color": "green"
+    }
+   ]
+  },
+  {
+   "title": "The punchline",
+   "say": "That's all the demand curve shift is: more total desire chasing limited goods pulls price up.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "summary",
+     "x": 100,
+     "y": 820,
+     "text": "Key takeaway: More buyers competing for limited supply forces the price UP.",
+     "size": 34,
+     "color": "ink"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,123 @@
+{
+ "title": "Solving x² − 5x + 6 = 0",
+ "lang": "en",
+ "steps": [
+  {
+   "title": "Write the title",
+   "say": "We solve the quadratic x² − 5x + 6 = 0.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "title",
+     "x": 800,
+     "y": 80,
+     "text": "Solve x² − 5x + 6 = 0",
+     "size": 56,
+     "anchor": "middle",
+     "underline": true
+    }
+   ]
+  },
+  {
+   "title": "Start with the quadratic formula",
+   "say": "The general formula works for any quadratic. Here a = 1, b = −5, c = 6.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "f1",
+     "x": 100,
+     "y": 220,
+     "text": "x = (5 ± √(5² − 4·1·6)) / 2",
+     "size": 40,
+     "color": "blue"
+    }
+   ]
+  },
+  {
+   "title": "Compute the discriminant, then switch",
+   "say": "The discriminant is 1, which is a perfect square. So factoring is quicker than finishing the formula.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "d1",
+     "x": 100,
+     "y": 320,
+     "text": "5² − 24 = 1",
+     "size": 40,
+     "color": "blue"
+    },
+    {
+     "op": "write",
+     "id": "sw",
+     "x": 100,
+     "y": 400,
+     "text": "Switch: the discriminant is a perfect square, so factor instead.",
+     "size": 34,
+     "color": "red"
+    }
+   ]
+  },
+  {
+   "title": "Factor the quadratic",
+   "say": "We need two numbers with product 6 and sum −5. Those are −2 and −3.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "f2",
+     "x": 100,
+     "y": 500,
+     "text": "Product 6, sum −5 → −2 and −3",
+     "size": 40
+    },
+    {
+     "op": "write",
+     "id": "fac",
+     "x": 100,
+     "y": 580,
+     "text": "(x − 2)(x − 3) = 0",
+     "size": 44,
+     "underline": true
+    }
+   ]
+  },
+  {
+   "title": "Read off the roots",
+   "say": "A product is zero when one factor is zero, so each factor gives a root.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "r1",
+     "x": 100,
+     "y": 680,
+     "text": "x − 2 = 0 → x = 2",
+     "size": 40,
+     "color": "green"
+    },
+    {
+     "op": "write",
+     "id": "r2",
+     "x": 800,
+     "y": 680,
+     "text": "x − 3 = 0 → x = 3",
+     "size": 40,
+     "color": "green"
+    }
+   ]
+  },
+  {
+   "title": "Check both roots",
+   "say": "Substituting each root back into the original equation gives 0, so both are correct.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "ck",
+     "x": 100,
+     "y": 780,
+     "text": "Check: 2² − 5·2 + 6 = 0 ✓    3² − 5·3 + 6 = 0 ✓",
+     "size": 34,
+     "color": "gray"
+    }
+   ]
+  }
+ ]
+}

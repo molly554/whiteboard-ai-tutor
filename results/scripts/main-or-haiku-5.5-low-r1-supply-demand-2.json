@@ -1,0 +1,216 @@
+{
+ "title": "Demand rises, price rises",
+ "lang": "en",
+ "steps": [
+  {
+   "title": "Title",
+   "say": "When demand rises, the price usually goes up. Let's see why on a supply and demand graph.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "t1",
+     "x": 800,
+     "y": 60,
+     "text": "Demand rises, price rises",
+     "size": 56,
+     "anchor": "middle",
+     "underline": true
+    }
+   ]
+  },
+  {
+   "title": "Axes",
+   "say": "The vertical axis shows price and the horizontal axis shows quantity.",
+   "ops": [
+    {
+     "op": "line",
+     "id": "ax1",
+     "x1": 250,
+     "y1": 800,
+     "x2": 1000,
+     "y2": 800,
+     "arrow": true,
+     "width": 4
+    },
+    {
+     "op": "line",
+     "id": "ax2",
+     "x1": 250,
+     "y1": 800,
+     "x2": 250,
+     "y2": 140,
+     "arrow": true,
+     "width": 4
+    },
+    {
+     "op": "write",
+     "id": "lbP",
+     "x": 200,
+     "y": 130,
+     "text": "Price",
+     "size": 32
+    },
+    {
+     "op": "write",
+     "id": "lbQ",
+     "x": 1040,
+     "y": 815,
+     "text": "Quantity",
+     "size": 32
+    }
+   ]
+  },
+  {
+   "title": "Original curves",
+   "say": "Demand slopes down and supply slopes up. They cross at the equilibrium point.",
+   "ops": [
+    {
+     "op": "line",
+     "id": "d1",
+     "x1": 330,
+     "y1": 180,
+     "x2": 950,
+     "y2": 700,
+     "color": "blue",
+     "width": 5
+    },
+    {
+     "op": "line",
+     "id": "s1",
+     "x1": 330,
+     "y1": 720,
+     "x2": 950,
+     "y2": 250,
+     "color": "green",
+     "width": 5
+    },
+    {
+     "op": "write",
+     "id": "lbD1",
+     "x": 965,
+     "y": 680,
+     "text": "D1",
+     "size": 32,
+     "color": "blue"
+    },
+    {
+     "op": "write",
+     "id": "lbS",
+     "x": 965,
+     "y": 240,
+     "text": "S",
+     "size": 32,
+     "color": "green"
+    },
+    {
+     "op": "ellipse",
+     "id": "e1",
+     "cx": 668,
+     "cy": 464,
+     "rx": 10,
+     "ry": 10,
+     "fill": "gray"
+    },
+    {
+     "op": "write",
+     "id": "p1lb",
+     "x": 200,
+     "y": 445,
+     "text": "P1",
+     "size": 30
+    },
+    {
+     "op": "write",
+     "id": "q1lb",
+     "x": 668,
+     "y": 830,
+     "text": "Q1",
+     "size": 30,
+     "anchor": "middle"
+    }
+   ]
+  },
+  {
+   "title": "Demand shifts right",
+   "say": "Demand rises, so the demand curve shifts right to D2 at every price.",
+   "ops": [
+    {
+     "op": "line",
+     "id": "d2",
+     "x1": 530,
+     "y1": 180,
+     "x2": 1000,
+     "y2": 574,
+     "color": "red",
+     "width": 5,
+     "dash": "10 8"
+    },
+    {
+     "op": "write",
+     "id": "lbD2",
+     "x": 1015,
+     "y": 560,
+     "text": "D2",
+     "size": 32,
+     "color": "red"
+    }
+   ]
+  },
+  {
+   "title": "New equilibrium",
+   "say": "The new equilibrium is at a higher price and a higher quantity.",
+   "ops": [
+    {
+     "op": "ellipse",
+     "id": "e2",
+     "cx": 773,
+     "cy": 384,
+     "rx": 10,
+     "ry": 10,
+     "fill": "red"
+    },
+    {
+     "op": "write",
+     "id": "p2lb",
+     "x": 200,
+     "y": 365,
+     "text": "P2",
+     "size": 30
+    },
+    {
+     "op": "write",
+     "id": "q2lb",
+     "x": 773,
+     "y": 830,
+     "text": "Q2",
+     "size": 30,
+     "anchor": "middle"
+    },
+    {
+     "op": "write",
+     "id": "note1",
+     "x": 1050,
+     "y": 250,
+     "text": "Higher price,\nmore quantity",
+     "size": 34,
+     "color": "red"
+    }
+   ]
+  },
+  {
+   "title": "Summary",
+   "say": "A rightward demand shift raises both price and quantity traded.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "sum",
+     "x": 250,
+     "y": 855,
+     "text": "Demand up: price up, quantity up",
+     "size": 30,
+     "color": "blue"
+    }
+   ]
+  }
+ ]
+}

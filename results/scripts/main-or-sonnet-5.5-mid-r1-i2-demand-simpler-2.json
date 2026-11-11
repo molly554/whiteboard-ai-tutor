@@ -1,0 +1,161 @@
+{
+ "title": "Demand shift, simpler",
+ "lang": "en",
+ "steps": [
+  {
+   "title": "Clear the board",
+   "say": "Let's clear the clutter and use a simple everyday example instead of curves.",
+   "ops": [
+    {
+     "op": "erase",
+     "all": true
+    },
+    {
+     "op": "write",
+     "id": "t2",
+     "x": 60,
+     "y": 40,
+     "text": "Demand shift: a simple example",
+     "size": 54
+    }
+   ]
+  },
+  {
+   "title": "Lemonade stand",
+   "say": "Imagine a lemonade stand. It has 10 cups to sell, and today the price is $2.",
+   "ops": [
+    {
+     "op": "rect",
+     "id": "stand",
+     "x": 160,
+     "y": 260,
+     "w": 420,
+     "h": 240,
+     "color": "blue"
+    },
+    {
+     "op": "write",
+     "id": "stl",
+     "x": 370,
+     "y": 340,
+     "text": "Lemonade\n10 cups",
+     "size": 44,
+     "anchor": "middle",
+     "color": "blue"
+    },
+    {
+     "op": "write",
+     "id": "pr1",
+     "x": 370,
+     "y": 540,
+     "text": "Price: $2",
+     "size": 44,
+     "anchor": "middle"
+    }
+   ]
+  },
+  {
+   "title": "Few buyers",
+   "say": "On a normal day, only a few people want lemonade.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "b1",
+     "x": 760,
+     "y": 280,
+     "text": "Normal day:",
+     "size": 40
+    },
+    {
+     "op": "write",
+     "id": "b1n",
+     "x": 760,
+     "y": 340,
+     "text": "3 buyers",
+     "size": 44,
+     "color": "red"
+    }
+   ]
+  },
+  {
+   "title": "Hot day",
+   "say": "Now a heat wave hits. Many more people want lemonade at the same price. That is demand rising.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "b2",
+     "x": 760,
+     "y": 480,
+     "text": "Hot day:",
+     "size": 40
+    },
+    {
+     "op": "write",
+     "id": "b2n",
+     "x": 760,
+     "y": 540,
+     "text": "15 buyers!",
+     "size": 44,
+     "color": "red"
+    },
+    {
+     "op": "line",
+     "id": "arr1",
+     "x1": 1100,
+     "y1": 365,
+     "x2": 1100,
+     "y2": 530,
+     "color": "green",
+     "width": 5,
+     "arrow": true
+    }
+   ]
+  },
+  {
+   "title": "Not enough cups",
+   "say": "15 buyers are chasing only 10 cups, so some people are left empty-handed.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "short",
+     "x": 1200,
+     "y": 420,
+     "text": "15 want\nonly 10 cups",
+     "size": 36,
+     "color": "red"
+    }
+   ]
+  },
+  {
+   "title": "Price goes up",
+   "say": "The seller sees the long line and raises the price to $3. Buyers who value it less drop out.",
+   "ops": [
+    {
+     "op": "erase",
+     "ids": [
+      "pr1"
+     ]
+    },
+    {
+     "op": "write",
+     "id": "pr2",
+     "x": 370,
+     "y": 540,
+     "text": "Price: $3",
+     "size": 44,
+     "anchor": "middle",
+     "color": "green"
+    },
+    {
+     "op": "write",
+     "id": "why",
+     "x": 800,
+     "y": 720,
+     "text": "More demand, same supply → price rises",
+     "size": 40,
+     "color": "green"
+    }
+   ]
+  }
+ ]
+}

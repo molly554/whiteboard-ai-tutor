@@ -1,0 +1,97 @@
+{
+ "title": "A simpler look at a demand shift",
+ "lang": "en",
+ "steps": [
+  {
+   "title": "Clear the extra notes",
+   "say": "Let's clear the side notes and look at the demand shift more simply.",
+   "ops": [
+    {
+     "op": "erase",
+     "ids": [
+      "note1",
+      "note2",
+      "note3",
+      "d2",
+      "d2lab",
+      "shift",
+      "shiftlab"
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Same price, more buyers",
+   "say": "Demand rising means more buyers at every price, so the whole demand curve slides to the right, to D2.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "easy1",
+     "x": 1100,
+     "y": 200,
+     "text": "Same price,\nmore buyers.\nAt each price,\nmore is wanted.",
+     "size": 32,
+     "color": "ink"
+    },
+    {
+     "op": "line",
+     "id": "d2b",
+     "x1": 420,
+     "y1": 300,
+     "x2": 1060,
+     "y2": 640,
+     "color": "red",
+     "width": 5,
+     "dash": true
+    },
+    {
+     "op": "write",
+     "id": "d2blab",
+     "x": 1075,
+     "y": 625,
+     "text": "D2",
+     "size": 34,
+     "color": "red"
+    }
+   ]
+  },
+  {
+   "title": "Read it at one price",
+   "say": "At the same price P1, buyers now want Q2 instead of Q1. That gap is what pushes the price up.",
+   "ops": [
+    {
+     "op": "line",
+     "id": "p1line",
+     "x1": 200,
+     "y1": 470,
+     "x2": 740,
+     "y2": 470,
+     "color": "gray",
+     "width": 3,
+     "dash": true
+    },
+    {
+     "op": "line",
+     "id": "q2line",
+     "x1": 740,
+     "y1": 470,
+     "x2": 740,
+     "y2": 720,
+     "color": "gray",
+     "width": 3,
+     "dash": true
+    },
+    {
+     "op": "write",
+     "id": "q2",
+     "x": 740,
+     "y": 735,
+     "text": "Q2",
+     "size": 32,
+     "anchor": "middle",
+     "color": "red"
+    }
+   ]
+  }
+ ]
+}

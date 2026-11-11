@@ -1,0 +1,177 @@
+{
+ "title": "Solving x² − 5x + 6 = 0",
+ "lang": "en",
+ "steps": [
+  {
+   "title": "Write the problem",
+   "say": "We want every x that makes x² − 5x + 6 equal to zero.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "t1",
+     "x": 800,
+     "y": 60,
+     "text": "Solve x² − 5x + 6 = 0",
+     "size": 56,
+     "anchor": "middle",
+     "underline": true
+    }
+   ]
+  },
+  {
+   "title": "Start with the quadratic formula",
+   "say": "The formula works for any quadratic. Here a = 1, b = −5, c = 6, and the discriminant is 25 − 24 = 1.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "h1",
+     "x": 100,
+     "y": 180,
+     "text": "Method 1: quadratic formula",
+     "size": 40,
+     "color": "blue"
+    },
+    {
+     "op": "write",
+     "id": "f1",
+     "x": 100,
+     "y": 250,
+     "text": "x = (5 ± √(25 − 24)) / 2",
+     "size": 40
+    },
+    {
+     "op": "write",
+     "id": "c1",
+     "x": 100,
+     "y": 330,
+     "text": "x = (5 ± 1) / 2",
+     "size": 40
+    }
+   ]
+  },
+  {
+   "title": "Read off the roots",
+   "say": "Taking the plus sign gives x = 3, and the minus sign gives x = 2.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "r1",
+     "x": 100,
+     "y": 410,
+     "text": "x = 3  or  x = 2",
+     "size": 40,
+     "color": "green"
+    }
+   ]
+  },
+  {
+   "title": "Switch to a simpler method",
+   "say": "Switching to factoring: we need two numbers that multiply to 6 and add to 5. Those are 2 and 3.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "s1",
+     "x": 100,
+     "y": 530,
+     "text": "Switch: factor instead",
+     "size": 40,
+     "color": "blue"
+    },
+    {
+     "op": "write",
+     "id": "s2",
+     "x": 100,
+     "y": 600,
+     "text": "2 × 3 = 6,   2 + 3 = 5",
+     "size": 36
+    }
+   ]
+  },
+  {
+   "title": "Factor and solve",
+   "say": "So the expression factors as (x − 2)(x − 3). Setting each factor to zero gives the roots.",
+   "ops": [
+    {
+     "op": "erase",
+     "ids": [
+      "h1",
+      "f1",
+      "c1",
+      "r1"
+     ]
+    },
+    {
+     "op": "write",
+     "id": "fa",
+     "x": 100,
+     "y": 250,
+     "text": "(x − 2)(x − 3) = 0",
+     "size": 44
+    },
+    {
+     "op": "write",
+     "id": "p1",
+     "x": 100,
+     "y": 330,
+     "text": "x − 2 = 0  →  x = 2",
+     "size": 40
+    },
+    {
+     "op": "write",
+     "id": "p2",
+     "x": 100,
+     "y": 400,
+     "text": "x − 3 = 0  →  x = 3",
+     "size": 40
+    }
+   ]
+  },
+  {
+   "title": "Check both roots",
+   "say": "Substituting back confirms both values make the equation zero.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "ch1",
+     "x": 100,
+     "y": 520,
+     "text": "x = 2: 4 − 10 + 6 = 0 ✓",
+     "size": 36
+    },
+    {
+     "op": "write",
+     "id": "ch2",
+     "x": 100,
+     "y": 590,
+     "text": "x = 3: 9 − 15 + 6 = 0 ✓",
+     "size": 36
+    }
+   ]
+  },
+  {
+   "title": "Final answer",
+   "say": "The solutions are x = 2 and x = 3.",
+   "ops": [
+    {
+     "op": "rect",
+     "id": "box",
+     "x": 100,
+     "y": 680,
+     "w": 720,
+     "h": 110,
+     "color": "green",
+     "width": 4
+    },
+    {
+     "op": "write",
+     "id": "ans",
+     "x": 130,
+     "y": 715,
+     "text": "Answer: x = 2 or x = 3",
+     "size": 44,
+     "color": "green"
+    }
+   ]
+  }
+ ]
+}

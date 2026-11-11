@@ -1,0 +1,231 @@
+{
+ "title": "Demand Rises, Price Rises",
+ "lang": "en",
+ "steps": [
+  {
+   "title": "Title",
+   "say": "Let's see what happens to the price when demand rises.",
+   "ops": [
+    {
+     "id": "t1",
+     "x": 800,
+     "y": 50,
+     "text": "Demand Up → Price Up",
+     "size": 56,
+     "anchor": "middle",
+     "color": "blue",
+     "op": "write"
+    }
+   ]
+  },
+  {
+   "title": "Axes",
+   "say": "We draw a graph with quantity on the horizontal axis and price on the vertical axis.",
+   "ops": [
+    {
+     "op": "line",
+     "id": "ay",
+     "x1": 300,
+     "y1": 200,
+     "x2": 300,
+     "y2": 760,
+     "arrow": true
+    },
+    {
+     "op": "line",
+     "id": "ax",
+     "x1": 300,
+     "y1": 760,
+     "x2": 1100,
+     "y2": 760,
+     "arrow": true
+    },
+    {
+     "op": "write",
+     "id": "ly",
+     "x": 120,
+     "y": 200,
+     "text": "Price",
+     "size": 36
+    },
+    {
+     "op": "write",
+     "id": "lx",
+     "x": 1000,
+     "y": 790,
+     "text": "Quantity",
+     "size": 36
+    }
+   ]
+  },
+  {
+   "title": "Supply curve",
+   "say": "The supply curve slopes upward: sellers offer more when prices are higher.",
+   "ops": [
+    {
+     "op": "line",
+     "id": "sup",
+     "x1": 400,
+     "y1": 700,
+     "x2": 1000,
+     "y2": 280,
+     "color": "green",
+     "width": 6
+    },
+    {
+     "op": "write",
+     "id": "supl",
+     "x": 1020,
+     "y": 250,
+     "text": "Supply",
+     "size": 34,
+     "color": "green"
+    }
+   ]
+  },
+  {
+   "title": "Original demand",
+   "say": "The demand curve slopes downward. Where it crosses supply is the starting equilibrium.",
+   "ops": [
+    {
+     "op": "line",
+     "id": "d1",
+     "x1": 400,
+     "y1": 280,
+     "x2": 1000,
+     "y2": 700,
+     "color": "blue",
+     "width": 6
+    },
+    {
+     "op": "write",
+     "id": "d1l",
+     "x": 1020,
+     "y": 700,
+     "text": "Demand D1",
+     "size": 34,
+     "color": "blue"
+    },
+    {
+     "op": "ellipse",
+     "id": "e1",
+     "cx": 700,
+     "cy": 490,
+     "rx": 12,
+     "ry": 12,
+     "color": "ink",
+     "fill": "gray"
+    }
+   ]
+  },
+  {
+   "title": "Starting price",
+   "say": "Mark the starting price P1 on the vertical axis with a dashed line.",
+   "ops": [
+    {
+     "op": "line",
+     "id": "p1line",
+     "x1": 300,
+     "y1": 490,
+     "x2": 688,
+     "y2": 490,
+     "dash": true,
+     "color": "gray"
+    },
+    {
+     "op": "write",
+     "id": "p1",
+     "x": 210,
+     "y": 470,
+     "text": "P1",
+     "size": 34
+    }
+   ]
+  },
+  {
+   "title": "Demand shifts right",
+   "say": "When demand rises, the whole demand curve shifts to the right to D2.",
+   "ops": [
+    {
+     "op": "line",
+     "id": "d2",
+     "x1": 560,
+     "y1": 220,
+     "x2": 1160,
+     "y2": 640,
+     "color": "red",
+     "width": 6
+    },
+    {
+     "op": "write",
+     "id": "d2l",
+     "x": 1180,
+     "y": 620,
+     "text": "Demand D2",
+     "size": 34,
+     "color": "red"
+    },
+    {
+     "op": "line",
+     "id": "shift",
+     "x1": 860,
+     "y1": 520,
+     "x2": 960,
+     "y2": 520,
+     "arrow": true,
+     "color": "red"
+    }
+   ]
+  },
+  {
+   "title": "New equilibrium",
+   "say": "The new curve meets supply higher up, so the price rises to P2 and quantity also increases.",
+   "ops": [
+    {
+     "op": "ellipse",
+     "id": "e2",
+     "cx": 790,
+     "cy": 415,
+     "rx": 12,
+     "ry": 12,
+     "color": "red",
+     "fill": "red"
+    },
+    {
+     "op": "line",
+     "id": "p2line",
+     "x1": 300,
+     "y1": 415,
+     "x2": 778,
+     "y2": 415,
+     "dash": true,
+     "color": "red"
+    },
+    {
+     "op": "write",
+     "id": "p2",
+     "x": 210,
+     "y": 395,
+     "text": "P2",
+     "size": 34,
+     "color": "red"
+    }
+   ]
+  },
+  {
+   "title": "Conclusion",
+   "say": "So with supply unchanged, higher demand pushes the price up, because buyers compete for limited goods.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "sum",
+     "x": 1150,
+     "y": 330,
+     "text": "P2 > P1",
+     "size": 44,
+     "color": "red"
+    }
+   ]
+  }
+ ]
+}

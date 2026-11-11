@@ -1,0 +1,226 @@
+{
+ "title": "Why We Have Seasons",
+ "lang": "en",
+ "steps": [
+  {
+   "title": "The question",
+   "say": "Seasons are not caused by Earth being closer to or farther from the Sun. They are caused by Earth's tilt.",
+   "ops": [
+    {
+     "id": "t1",
+     "op": "write",
+     "x": 800,
+     "y": 50,
+     "text": "Why We Have Seasons",
+     "size": 56,
+     "anchor": "middle",
+     "color": "blue",
+     "underline": true
+    },
+    {
+     "id": "t2",
+     "op": "write",
+     "x": 800,
+     "y": 160,
+     "text": "Cause: Earth's tilt, not distance!",
+     "size": 40,
+     "anchor": "middle",
+     "color": "red"
+    }
+   ]
+  },
+  {
+   "title": "Sun and orbit",
+   "say": "Earth travels around the Sun once a year along a nearly circular path.",
+   "ops": [
+    {
+     "id": "sun",
+     "op": "ellipse",
+     "cx": 800,
+     "cy": 560,
+     "rx": 70,
+     "ry": 70,
+     "color": "red",
+     "fill": "red"
+    },
+    {
+     "id": "sunl",
+     "op": "write",
+     "x": 800,
+     "y": 645,
+     "text": "Sun",
+     "size": 32,
+     "anchor": "middle"
+    },
+    {
+     "id": "orb",
+     "op": "ellipse",
+     "cx": 800,
+     "cy": 560,
+     "rx": 520,
+     "ry": 220,
+     "color": "gray",
+     "dash": true,
+     "width": 3
+    }
+   ]
+  },
+  {
+   "title": "Tilted Earth",
+   "say": "Earth's axis is tilted about 23.5 degrees, and it keeps pointing the same direction in space all year.",
+   "ops": [
+    {
+     "id": "e1",
+     "op": "ellipse",
+     "cx": 280,
+     "cy": 560,
+     "rx": 50,
+     "ry": 50,
+     "color": "blue",
+     "fill": "blue"
+    },
+    {
+     "id": "ax1",
+     "op": "line",
+     "x1": 250,
+     "y1": 650,
+     "x2": 310,
+     "y2": 470,
+     "color": "ink",
+     "width": 4
+    },
+    {
+     "id": "e2",
+     "op": "ellipse",
+     "cx": 1320,
+     "cy": 560,
+     "rx": 50,
+     "ry": 50,
+     "color": "blue",
+     "fill": "blue"
+    },
+    {
+     "id": "ax2",
+     "op": "line",
+     "x1": 1290,
+     "y1": 650,
+     "x2": 1350,
+     "y2": 470,
+     "color": "ink",
+     "width": 4
+    },
+    {
+     "id": "tilt",
+     "op": "write",
+     "x": 100,
+     "y": 700,
+     "text": "Tilt 23.5°",
+     "size": 32
+    }
+   ]
+  },
+  {
+   "title": "Northern summer",
+   "say": "When the north end leans toward the Sun, sunlight hits the north more directly and days are longer. That is summer in the north.",
+   "ops": [
+    {
+     "id": "l1",
+     "op": "line",
+     "x1": 730,
+     "y1": 540,
+     "x2": 345,
+     "y2": 550,
+     "color": "gray",
+     "arrow": true,
+     "width": 3
+    },
+    {
+     "id": "s1",
+     "op": "write",
+     "x": 280,
+     "y": 400,
+     "text": "June: north\nleans toward Sun",
+     "size": 30,
+     "anchor": "middle",
+     "color": "green"
+    }
+   ]
+  },
+  {
+   "title": "Northern winter",
+   "say": "Half a year later the same tilt points the north away from the Sun. Light is slanted and days are shorter, so it is winter.",
+   "ops": [
+    {
+     "id": "l2",
+     "op": "line",
+     "x1": 870,
+     "y1": 540,
+     "x2": 1255,
+     "y2": 550,
+     "color": "gray",
+     "arrow": true,
+     "width": 3
+    },
+    {
+     "id": "s2",
+     "op": "write",
+     "x": 1320,
+     "y": 400,
+     "text": "December: north\nleans away",
+     "size": 30,
+     "anchor": "middle",
+     "color": "blue"
+    }
+   ]
+  },
+  {
+   "title": "Direct vs slanted light",
+   "say": "Direct light is concentrated and heats more. Slanted light spreads over a bigger area and heats less.",
+   "ops": [
+    {
+     "id": "c1",
+     "op": "erase",
+     "ids": [
+      "t2"
+     ]
+    },
+    {
+     "id": "k1",
+     "op": "write",
+     "x": 800,
+     "y": 160,
+     "text": "Direct light = more heat",
+     "size": 40,
+     "anchor": "middle",
+     "color": "green"
+    },
+    {
+     "id": "k2",
+     "op": "write",
+     "x": 800,
+     "y": 220,
+     "text": "Slanted light = less heat",
+     "size": 40,
+     "anchor": "middle",
+     "color": "blue"
+    }
+   ]
+  },
+  {
+   "title": "Summary",
+   "say": "So seasons come from the tilt of Earth as it orbits. When it is summer in the north, it is winter in the south.",
+   "ops": [
+    {
+     "id": "sm",
+     "op": "write",
+     "x": 800,
+     "y": 780,
+     "text": "Tilt + orbit = seasons (opposite in the south)",
+     "size": 40,
+     "anchor": "middle",
+     "color": "red"
+    }
+   ]
+  }
+ ]
+}

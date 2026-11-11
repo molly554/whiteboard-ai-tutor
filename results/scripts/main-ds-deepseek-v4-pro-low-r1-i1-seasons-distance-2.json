@@ -1,0 +1,113 @@
+{
+ "title": "Distance is not the cause",
+ "lang": "en",
+ "steps": [
+  {
+   "title": "Yes, it is farther",
+   "say": "You are right: in early July, Earth is actually a little farther from the Sun than in January.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "distance-fact",
+     "x": 60,
+     "y": 760,
+     "text": "Early July: Earth is slightly farther from the Sun.",
+     "size": 34,
+     "color": "blue"
+    }
+   ]
+  },
+  {
+   "title": "Distance is too small to matter",
+   "say": "But the distance change is only about three percent. That is much too small to explain winter and summer.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "distance-small",
+     "x": 60,
+     "y": 820,
+     "text": "Distance change: only ~3% — far too small to make summer.",
+     "size": 34,
+     "color": "red"
+    }
+   ]
+  },
+  {
+   "title": "The tilt changes sunlight",
+   "say": "What really matters is the tilt. It changes how high the Sun gets in the sky and how long daylight lasts.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "tilt-sunlight",
+     "x": 60,
+     "y": 880,
+     "text": "The tilt changes two things:",
+     "size": 34,
+     "color": "ink"
+    },
+    {
+     "op": "write",
+     "id": "sunlight-height",
+     "x": 100,
+     "y": 930,
+     "text": "• how high the Sun climbs in the sky",
+     "size": 32
+    },
+    {
+     "op": "write",
+     "id": "sunlight-hours",
+     "x": 100,
+     "y": 980,
+     "text": "• how many hours of daylight there are",
+     "size": 32
+    }
+   ]
+  },
+  {
+   "title": "Summer: high Sun, long days",
+   "say": "In northern summer, the northern half of Earth is tilted toward the Sun. The Sun is high and daylight is long, so it gets hot.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "summer-why",
+     "x": 60,
+     "y": 1050,
+     "text": "Northern summer: high Sun + long daylight = more heat.",
+     "size": 34,
+     "color": "green"
+    }
+   ]
+  },
+  {
+   "title": "Winter: low Sun, short days",
+   "say": "In northern winter, the northern half is tilted away from the Sun. The Sun stays low and daylight is short, so it stays cold.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "winter-why",
+     "x": 60,
+     "y": 1110,
+     "text": "Northern winter: low Sun + short daylight = less heat.",
+     "size": 34,
+     "color": "blue"
+    }
+   ]
+  },
+  {
+   "title": "It is about angle, not distance",
+   "say": "So summer is not hot because Earth is closer. It is hot because the tilted hemisphere receives sunlight more directly for more hours.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "conclusion",
+     "x": 60,
+     "y": 1170,
+     "text": "Seasons come from the tilt, not from distance.",
+     "size": 38,
+     "color": "red",
+     "underline": true
+    }
+   ]
+  }
+ ]
+}

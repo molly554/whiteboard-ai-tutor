@@ -1,0 +1,154 @@
+{
+ "title": "Why is summer hotter?",
+ "lang": "en",
+ "steps": [
+  {
+   "title": "Yes, it is farther",
+   "say": "Good catch — in northern summer, Earth is actually a bit farther from the Sun than in January.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "far",
+     "x": 60,
+     "y": 240,
+     "text": "Yes! In July Earth is ~5 million km farther\nfrom the Sun than in January.",
+     "size": 36,
+     "color": "red"
+    }
+   ]
+  },
+  {
+   "title": "Distance isn't the driver",
+   "say": "So distance can't be the main cause. What really matters is the angle of the sunlight.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "angle",
+     "x": 60,
+     "y": 330,
+     "text": "What matters: the ANGLE of sunlight,\nnot the distance.",
+     "size": 36,
+     "color": "blue"
+    }
+   ]
+  },
+  {
+   "title": "Tilt toward the Sun",
+   "say": "In northern summer, the north pole leans toward the Sun, so sunlight hits the north at a steep, direct angle.",
+   "ops": [
+    {
+     "op": "erase",
+     "ids": [
+      "earth2",
+      "axis2",
+      "earth3",
+      "axis3",
+      "earth4",
+      "axis4"
+     ]
+    },
+    {
+     "op": "write",
+     "id": "summer",
+     "x": 560,
+     "y": 300,
+     "text": "Northern summer: north pole leans toward Sun",
+     "size": 32,
+     "color": "green"
+    },
+    {
+     "op": "write",
+     "id": "steep",
+     "x": 560,
+     "y": 420,
+     "text": "Sunlight hits steeply — concentrated",
+     "size": 32,
+     "color": "green"
+    },
+    {
+     "op": "line",
+     "id": "ray1",
+     "x1": 720,
+     "y1": 600,
+     "x2": 560,
+     "y2": 470,
+     "width": 4,
+     "arrow": true,
+     "color": "green"
+    },
+    {
+     "op": "line",
+     "id": "ray2",
+     "x1": 720,
+     "y1": 600,
+     "x2": 600,
+     "y2": 470,
+     "width": 4,
+     "arrow": true,
+     "color": "green"
+    }
+   ]
+  },
+  {
+   "title": "Tilt away: winter",
+   "say": "Six months later the north pole leans away, so sunlight comes in at a shallow angle and spreads out.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "winter",
+     "x": 1000,
+     "y": 300,
+     "text": "Northern winter: north pole leans away",
+     "size": 32,
+     "color": "red"
+    },
+    {
+     "op": "write",
+     "id": "shallow",
+     "x": 1000,
+     "y": 420,
+     "text": "Sunlight hits at a shallow angle — spread out",
+     "size": 32,
+     "color": "red"
+    },
+    {
+     "op": "line",
+     "id": "ray3",
+     "x1": 1000,
+     "y1": 600,
+     "x2": 1040,
+     "y2": 470,
+     "width": 4,
+     "arrow": true,
+     "color": "red"
+    },
+    {
+     "op": "line",
+     "id": "ray4",
+     "x1": 1000,
+     "y1": 600,
+     "x2": 1100,
+     "y2": 470,
+     "width": 4,
+     "arrow": true,
+     "color": "red"
+    }
+   ]
+  },
+  {
+   "title": "The takeaway",
+   "say": "Steeper sunlight packs more energy into each patch of ground, and the days are longer too. That's why summer is hot.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "takeaway",
+     "x": 60,
+     "y": 760,
+     "text": "Steep sunlight = more energy per patch + longer days = hotter summer.",
+     "size": 36,
+     "color": "blue"
+    }
+   ]
+  }
+ ]
+}

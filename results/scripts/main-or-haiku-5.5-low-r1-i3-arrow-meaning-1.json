@@ -1,0 +1,40 @@
+{
+ "mode": "continue",
+ "steps": [
+  {
+   "title": "The green arrow",
+   "say": "The green arrow is a shift: it shows the whole demand curve moving right, from D1 to D2, not a movement along the curve.",
+   "ops": [
+    {
+     "op": "erase",
+     "ids": [
+      "shiftlab"
+     ]
+    },
+    {
+     "op": "write",
+     "id": "arrowlab",
+     "x": 200,
+     "y": 200,
+     "text": "Green arrow = shift of the\nwhole demand curve (D1 → D2)",
+     "size": 30,
+     "color": "green"
+    }
+   ]
+  },
+  {
+   "title": "Shift vs. movement",
+   "say": "A shift means buyers want more at every price. Moving along a curve only happens when the price itself changes.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "shiftnote",
+     "x": 1200,
+     "y": 790,
+     "text": "",
+     "size": 28
+    }
+   ]
+  }
+ ]
+}

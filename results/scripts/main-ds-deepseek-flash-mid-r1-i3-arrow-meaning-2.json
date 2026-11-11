@@ -1,0 +1,100 @@
+{
+ "title": "Why does price rise when demand rises?",
+ "lang": "en",
+ "steps": [
+  {
+   "title": "The arrow is a shift",
+   "say": "The green arrow is not a move along D1. It shows the whole demand curve moving right to D2, because buyers want more at every price.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "shiftnote",
+     "x": 240,
+     "y": 785,
+     "text": "Green arrow = the whole demand curve\nshifts right (more demanded at every price)",
+     "size": 28
+    }
+   ]
+  },
+  {
+   "title": "New equilibrium",
+   "say": "The new demand curve D2 crosses supply at a higher price and a larger quantity.",
+   "ops": [
+    {
+     "op": "ellipse",
+     "id": "e2",
+     "cx": 660,
+     "cy": 428,
+     "rx": 9,
+     "ry": 9,
+     "color": "green",
+     "fill": "green"
+    },
+    {
+     "op": "line",
+     "id": "e2h",
+     "x1": 200,
+     "y1": 428,
+     "x2": 660,
+     "y2": 428,
+     "color": "gray",
+     "width": 3,
+     "dash": true
+    },
+    {
+     "op": "line",
+     "id": "e2v",
+     "x1": 660,
+     "y1": 428,
+     "x2": 660,
+     "y2": 720,
+     "color": "gray",
+     "width": 3,
+     "dash": true
+    },
+    {
+     "op": "write",
+     "id": "p2",
+     "x": 130,
+     "y": 410,
+     "text": "P2",
+     "size": 32,
+     "anchor": "middle"
+    },
+    {
+     "op": "write",
+     "id": "q2",
+     "x": 660,
+     "y": 735,
+     "text": "Q2",
+     "size": 32,
+     "anchor": "middle"
+    },
+    {
+     "op": "write",
+     "id": "e2lab",
+     "x": 675,
+     "y": 360,
+     "text": "E2",
+     "size": 32,
+     "color": "green"
+    }
+   ]
+  },
+  {
+   "title": "Price rises",
+   "say": "Because demand shifted right, the equilibrium price goes up from P1 to P2, and quantity rises from Q1 to Q2.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "summary",
+     "x": 1200,
+     "y": 740,
+     "text": "So price rises: P1 → P2\nQuantity rises: Q1 → Q2",
+     "size": 28,
+     "color": "green"
+    }
+   ]
+  }
+ ]
+}

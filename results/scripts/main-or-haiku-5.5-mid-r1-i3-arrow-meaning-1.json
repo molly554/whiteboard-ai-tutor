@@ -1,0 +1,21 @@
+{
+ "title": "What the green arrow means",
+ "lang": "en",
+ "steps": [
+  {
+   "title": "Reading the arrow",
+   "say": "The green arrow shows a shift, not a movement along the curve. The whole demand curve moves right, from D1 to D2, because buyers want more at every price.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "explain1",
+     "x": 660,
+     "y": 165,
+     "text": "The green arrow shows a shift:\nthe whole demand curve moves\nright, from D1 to D2.",
+     "size": 30,
+     "color": "green"
+    }
+   ]
+  }
+ ]
+}

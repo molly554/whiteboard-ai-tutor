@@ -1,0 +1,195 @@
+{
+ "title": "Why We Have Seasons",
+ "lang": "en",
+ "steps": [
+  {
+   "title": "The question",
+   "say": "Seasons come from the tilt of Earth's axis, not from how far we are from the Sun.",
+   "ops": [
+    {
+     "id": "t1",
+     "x": 800,
+     "y": 50,
+     "text": "Why We Have Seasons",
+     "size": 56,
+     "anchor": "middle",
+     "op": "write",
+     "underline": true
+    },
+    {
+     "id": "t2",
+     "op": "write",
+     "x": 800,
+     "y": 160,
+     "text": "Cause: Earth's axis is tilted 23.5°",
+     "size": 40,
+     "anchor": "middle",
+     "color": "blue"
+    }
+   ]
+  },
+  {
+   "title": "Sun and Earth",
+   "say": "Here is the Sun on the left, shining light toward Earth.",
+   "ops": [
+    {
+     "id": "sun",
+     "op": "ellipse",
+     "cx": 220,
+     "cy": 520,
+     "rx": 110,
+     "ry": 110,
+     "color": "red",
+     "fill": "red"
+    },
+    {
+     "id": "sunl",
+     "op": "write",
+     "x": 220,
+     "y": 660,
+     "text": "Sun",
+     "size": 36,
+     "anchor": "middle"
+    },
+    {
+     "id": "r1",
+     "op": "line",
+     "x1": 350,
+     "y1": 440,
+     "x2": 600,
+     "y2": 440,
+     "color": "gray",
+     "arrow": true
+    },
+    {
+     "id": "r2",
+     "op": "line",
+     "x1": 350,
+     "y1": 520,
+     "x2": 600,
+     "y2": 520,
+     "color": "gray",
+     "arrow": true
+    },
+    {
+     "id": "r3",
+     "op": "line",
+     "x1": 350,
+     "y1": 600,
+     "x2": 600,
+     "y2": 600,
+     "color": "gray",
+     "arrow": true
+    }
+   ]
+  },
+  {
+   "title": "Tilted Earth",
+   "say": "Earth is a ball whose axis leans, always pointing the same direction in space.",
+   "ops": [
+    {
+     "id": "earth",
+     "op": "ellipse",
+     "cx": 800,
+     "cy": 520,
+     "rx": 100,
+     "ry": 100,
+     "color": "blue",
+     "fill": "blue"
+    },
+    {
+     "id": "axis",
+     "op": "line",
+     "x1": 740,
+     "y1": 360,
+     "x2": 860,
+     "y2": 680,
+     "color": "ink",
+     "dash": true,
+     "width": 4
+    },
+    {
+     "id": "eq",
+     "op": "ellipse",
+     "cx": 800,
+     "cy": 520,
+     "rx": 100,
+     "ry": 20,
+     "rotate": 20,
+     "color": "green",
+     "width": 3
+    },
+    {
+     "id": "axl",
+     "op": "write",
+     "x": 640,
+     "y": 320,
+     "text": "tilted axis",
+     "size": 32
+    }
+   ]
+  },
+  {
+   "title": "Summer in the north",
+   "say": "When the north leans toward the Sun, sunlight hits it more directly and days are longer, so it is summer there.",
+   "ops": [
+    {
+     "id": "s1",
+     "op": "write",
+     "x": 1000,
+     "y": 300,
+     "text": "Northern summer:",
+     "size": 38,
+     "color": "red"
+    },
+    {
+     "id": "s2",
+     "op": "write",
+     "x": 1000,
+     "y": 360,
+     "text": "north tilts toward Sun\ndirect light, long days",
+     "size": 34
+    }
+   ]
+  },
+  {
+   "title": "Winter in the north",
+   "say": "Half a year later, Earth is on the other side and the north leans away. Light is slanted and days are short.",
+   "ops": [
+    {
+     "id": "w1",
+     "op": "write",
+     "x": 1000,
+     "y": 540,
+     "text": "Northern winter:",
+     "size": 38,
+     "color": "blue"
+    },
+    {
+     "id": "w2",
+     "op": "write",
+     "x": 1000,
+     "y": 600,
+     "text": "north tilts away from Sun\nslanted light, short days",
+     "size": 34
+    }
+   ]
+  },
+  {
+   "title": "Not distance",
+   "say": "Distance isn't the reason: Earth is actually closest to the Sun in January, during northern winter.",
+   "ops": [
+    {
+     "id": "n1",
+     "op": "write",
+     "x": 800,
+     "y": 780,
+     "text": "Tilt, not distance, makes the seasons!",
+     "size": 42,
+     "anchor": "middle",
+     "color": "green"
+    }
+   ]
+  }
+ ]
+}

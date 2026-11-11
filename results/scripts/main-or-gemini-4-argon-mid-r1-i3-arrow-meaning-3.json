@@ -1,0 +1,198 @@
+{
+ "title": "Meaning of the shift arrow",
+ "lang": "en",
+ "steps": [
+  {
+   "title": "At the same price, buyers want more",
+   "say": "Notice it points horizontally: at the exact same price P1, buyers now want a larger quantity Q_new instead of Q1.",
+   "ops": [
+    {
+     "op": "erase",
+     "ids": [
+      "note1",
+      "note2",
+      "note3"
+     ]
+    },
+    {
+     "op": "line",
+     "id": "p1_ext",
+     "x1": 580,
+     "y1": 470,
+     "x2": 740,
+     "y2": 470,
+     "color": "green",
+     "width": 5,
+     "arrow": true
+    },
+    {
+     "op": "ellipse",
+     "id": "pt_new",
+     "cx": 740,
+     "cy": 470,
+     "rx": 8,
+     "ry": 8,
+     "color": "green",
+     "fill": "green"
+    },
+    {
+     "op": "line",
+     "id": "qnew_v",
+     "x1": 740,
+     "y1": 470,
+     "x2": 740,
+     "y2": 720,
+     "color": "green",
+     "width": 3,
+     "dash": true
+    },
+    {
+     "op": "write",
+     "id": "qnew",
+     "x": 740,
+     "y": 735,
+     "text": "Q_new",
+     "size": 30,
+     "anchor": "middle",
+     "color": "green"
+    },
+    {
+     "op": "write",
+     "id": "exp1",
+     "x": 1180,
+     "y": 220,
+     "text": "What the green arrow means:\n\nAt the SAME price (P1),\nbuyers want MORE (Q1 → Q_new).",
+     "size": 30,
+     "color": "green"
+    }
+   ]
+  },
+  {
+   "title": "Every point shifts right",
+   "say": "Because this happens at every possible price, the entire demand curve slides to the right.",
+   "ops": [
+    {
+     "op": "line",
+     "id": "sh_top",
+     "x1": 354,
+     "y1": 350,
+     "x2": 504,
+     "y2": 350,
+     "color": "green",
+     "width": 4,
+     "arrow": true,
+     "dash": true
+    },
+    {
+     "op": "line",
+     "id": "sh_bot",
+     "x1": 787,
+     "y1": 580,
+     "x2": 937,
+     "y2": 580,
+     "color": "green",
+     "width": 4,
+     "arrow": true,
+     "dash": true
+    },
+    {
+     "op": "write",
+     "id": "exp2",
+     "x": 1180,
+     "y": 430,
+     "text": "This happens at EVERY price,\nso the whole curve moves\nright from D1 to D2.",
+     "size": 30
+    }
+   ]
+  },
+  {
+   "title": "New equilibrium: higher price",
+   "say": "Now D2 crosses Supply at a new, higher point E2. That pushes the market price up to P2!",
+   "ops": [
+    {
+     "op": "erase",
+     "ids": [
+      "p1_ext",
+      "pt_new",
+      "qnew_v",
+      "qnew",
+      "sh_top",
+      "sh_bot"
+     ]
+    },
+    {
+     "op": "ellipse",
+     "id": "e2",
+     "cx": 660,
+     "cy": 427,
+     "rx": 9,
+     "ry": 9,
+     "color": "red",
+     "fill": "red"
+    },
+    {
+     "op": "line",
+     "id": "e2h",
+     "x1": 200,
+     "y1": 427,
+     "x2": 660,
+     "y2": 427,
+     "color": "gray",
+     "width": 3,
+     "dash": true
+    },
+    {
+     "op": "line",
+     "id": "e2v",
+     "x1": 660,
+     "y1": 427,
+     "x2": 660,
+     "y2": 720,
+     "color": "gray",
+     "width": 3,
+     "dash": true
+    },
+    {
+     "op": "write",
+     "id": "p2",
+     "x": 130,
+     "y": 402,
+     "text": "P2",
+     "size": 32,
+     "anchor": "middle",
+     "color": "red"
+    },
+    {
+     "op": "write",
+     "id": "q2",
+     "x": 660,
+     "y": 735,
+     "text": "Q2",
+     "size": 32,
+     "anchor": "middle",
+     "color": "red"
+    },
+    {
+     "op": "line",
+     "id": "p_up",
+     "x1": 165,
+     "y1": 465,
+     "x2": 165,
+     "y2": 420,
+     "color": "red",
+     "width": 4,
+     "arrow": true
+    },
+    {
+     "op": "write",
+     "id": "exp3",
+     "x": 1180,
+     "y": 600,
+     "text": "Result at new crossing:\n• Price rises (P1 → P2)\n• Quantity rises (Q1 → Q2)",
+     "size": 30,
+     "color": "red"
+    }
+   ]
+  }
+ ]
+}

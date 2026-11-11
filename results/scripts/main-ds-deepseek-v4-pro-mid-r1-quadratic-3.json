@@ -1,0 +1,178 @@
+{
+ "title": "Solving x² − 5x + 6 = 0",
+ "lang": "en",
+ "steps": [
+  {
+   "title": "Write equation",
+   "say": "Let's start by writing the equation we need to solve.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "title",
+     "x": 800,
+     "y": 60,
+     "text": "Solve x² − 5x + 6 = 0",
+     "size": 56,
+     "anchor": "middle",
+     "color": "ink"
+    },
+    {
+     "op": "write",
+     "id": "eq1",
+     "x": 300,
+     "y": 160,
+     "text": "x² − 5x + 6 = 0",
+     "size": 44,
+     "anchor": "start",
+     "color": "ink"
+    }
+   ]
+  },
+  {
+   "title": "Try quadratic formula",
+   "say": "One way is the quadratic formula. Let's identify a, b, and c.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "formula",
+     "x": 300,
+     "y": 260,
+     "text": "x = [−b ± √(b² − 4ac)] / (2a)",
+     "size": 36,
+     "anchor": "start",
+     "color": "ink"
+    },
+    {
+     "op": "write",
+     "id": "a_val",
+     "x": 300,
+     "y": 350,
+     "text": "a = 1, b = −5, c = 6",
+     "size": 36,
+     "anchor": "start",
+     "color": "ink"
+    },
+    {
+     "op": "write",
+     "id": "disc_label",
+     "x": 300,
+     "y": 430,
+     "text": "Discriminant: b² − 4ac",
+     "size": 32,
+     "anchor": "start",
+     "color": "gray"
+    }
+   ]
+  },
+  {
+   "title": "Compute discriminant",
+   "say": "Let's compute the discriminant first.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "disc_calc",
+     "x": 300,
+     "y": 500,
+     "text": "= (−5)² − 4(1)(6) = 25 − 24 = 1",
+     "size": 36,
+     "anchor": "start",
+     "color": "ink"
+    }
+   ]
+  },
+  {
+   "title": "Spot simpler factoring",
+   "say": "Wait, 6 factors as 2 and 3, and 2+3=5. Factoring is much simpler here!",
+   "ops": [
+    {
+     "op": "erase",
+     "ids": [
+      "formula",
+      "a_val",
+      "disc_label",
+      "disc_calc"
+     ]
+    },
+    {
+     "op": "write",
+     "id": "note_factor",
+     "x": 300,
+     "y": 260,
+     "text": "Simpler: factor!",
+     "size": 40,
+     "anchor": "start",
+     "color": "blue"
+    },
+    {
+     "op": "write",
+     "id": "factor_hint",
+     "x": 300,
+     "y": 340,
+     "text": "6 = 2 × 3 and 2 + 3 = 5",
+     "size": 36,
+     "anchor": "start",
+     "color": "gray"
+    }
+   ]
+  },
+  {
+   "title": "Factor the quadratic",
+   "say": "We can write the quadratic as a product of two binomials.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "factored",
+     "x": 300,
+     "y": 430,
+     "text": "(x − 2)(x − 3) = 0",
+     "size": 44,
+     "anchor": "start",
+     "color": "ink"
+    }
+   ]
+  },
+  {
+   "title": "Solve each factor",
+   "say": "Set each factor equal to zero and solve.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "factor1_eq",
+     "x": 300,
+     "y": 520,
+     "text": "x − 2 = 0  ⇒  x = 2",
+     "size": 40,
+     "anchor": "start",
+     "color": "ink"
+    },
+    {
+     "op": "write",
+     "id": "factor2_eq",
+     "x": 300,
+     "y": 590,
+     "text": "x − 3 = 0  ⇒  x = 3",
+     "size": 40,
+     "anchor": "start",
+     "color": "ink"
+    }
+   ]
+  },
+  {
+   "title": "Conclusion",
+   "say": "So the solutions are x = 2 and x = 3.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "solution_set",
+     "x": 300,
+     "y": 680,
+     "text": "Solution: {2, 3}",
+     "size": 44,
+     "anchor": "start",
+     "color": "blue",
+     "underline": true
+    }
+   ]
+  }
+ ]
+}

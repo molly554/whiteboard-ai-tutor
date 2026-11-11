@@ -1,0 +1,229 @@
+{
+ "title": "Solving a Quadratic",
+ "lang": "en",
+ "steps": [
+  {
+   "title": "Set up",
+   "say": "Let's solve this quadratic equation.",
+   "ops": [
+    {
+     "id": "title",
+     "op": "write",
+     "x": 60,
+     "y": 50,
+     "text": "Solve x² - 5x + 6 = 0",
+     "size": 56,
+     "underline": true
+    },
+    {
+     "id": "eq1",
+     "op": "write",
+     "x": 80,
+     "y": 160,
+     "text": "x² - 5x + 6 = 0",
+     "size": 44
+    }
+   ]
+  },
+  {
+   "title": "Picture it",
+   "say": "The graph crosses the x-axis at 2 and 3 — those are the roots.",
+   "ops": [
+    {
+     "id": "axis-x",
+     "op": "line",
+     "x1": 1060,
+     "y1": 520,
+     "x2": 1560,
+     "y2": 520,
+     "arrow": true
+    },
+    {
+     "id": "axis-y",
+     "op": "line",
+     "x1": 1100,
+     "y1": 720,
+     "x2": 1100,
+     "y2": 240,
+     "arrow": true
+    },
+    {
+     "id": "parabola",
+     "op": "path",
+     "d": "M 1100 270 Q 1190 560 1300 530 Q 1410 500 1480 450",
+     "color": "blue",
+     "width": 5
+    },
+    {
+     "id": "root2",
+     "op": "ellipse",
+     "cx": 1260,
+     "cy": 520,
+     "rx": 7,
+     "ry": 7,
+     "fill": "red"
+    },
+    {
+     "id": "root3",
+     "op": "ellipse",
+     "cx": 1340,
+     "cy": 520,
+     "rx": 7,
+     "ry": 7,
+     "fill": "red"
+    },
+    {
+     "id": "lbl2",
+     "op": "write",
+     "x": 1250,
+     "y": 540,
+     "text": "2",
+     "size": 30
+    },
+    {
+     "id": "lbl3",
+     "op": "write",
+     "x": 1330,
+     "y": 540,
+     "text": "3",
+     "size": 30
+    },
+    {
+     "id": "fig-note",
+     "op": "write",
+     "x": 1160,
+     "y": 190,
+     "text": "y = x² - 5x + 6",
+     "size": 30
+    }
+   ]
+  },
+  {
+   "title": "Start with the formula",
+   "say": "Algebraically, begin with the quadratic formula and read off the coefficients.",
+   "ops": [
+    {
+     "id": "steps-hdr",
+     "op": "write",
+     "x": 80,
+     "y": 250,
+     "text": "Try the quadratic formula:",
+     "size": 36
+    },
+    {
+     "id": "abc",
+     "op": "write",
+     "x": 80,
+     "y": 305,
+     "text": "a = 1,  b = -5,  c = 6",
+     "size": 34
+    }
+   ]
+  },
+  {
+   "title": "Plug in",
+   "say": "Plugging in gives x = (5 ± 1)/2.",
+   "ops": [
+    {
+     "id": "formula",
+     "op": "write",
+     "x": 80,
+     "y": 370,
+     "text": "x = (5 ± √(25 - 24)) / 2",
+     "size": 36
+    },
+    {
+     "id": "formula2",
+     "op": "write",
+     "x": 80,
+     "y": 425,
+     "text": "  = (5 ± 1) / 2",
+     "size": 36
+    }
+   ]
+  },
+  {
+   "title": "Switch methods",
+   "say": "That works, but there's a faster route here: factoring.",
+   "ops": [
+    {
+     "id": "erase-formula",
+     "op": "erase",
+     "ids": [
+      "formula",
+      "formula2"
+     ]
+    },
+    {
+     "id": "switch",
+     "op": "write",
+     "x": 80,
+     "y": 370,
+     "text": "This works, but factoring is faster.",
+     "size": 36,
+     "color": "blue"
+    }
+   ]
+  },
+  {
+   "title": "Find the pair",
+   "say": "We need two numbers that multiply to 6 and add to -5.",
+   "ops": [
+    {
+     "id": "need",
+     "op": "write",
+     "x": 80,
+     "y": 450,
+     "text": "Need two numbers: product 6, sum -5",
+     "size": 34
+    },
+    {
+     "id": "nums",
+     "op": "write",
+     "x": 80,
+     "y": 505,
+     "text": "-2 and -3",
+     "size": 40,
+     "color": "green"
+    }
+   ]
+  },
+  {
+   "title": "Factor",
+   "say": "So the equation factors as (x - 2)(x - 3) = 0.",
+   "ops": [
+    {
+     "id": "fact",
+     "op": "write",
+     "x": 80,
+     "y": 585,
+     "text": "(x - 2)(x - 3) = 0",
+     "size": 44
+    }
+   ]
+  },
+  {
+   "title": "Read off the roots",
+   "say": "Set each factor to zero: x = 2 or x = 3. This matches the graph.",
+   "ops": [
+    {
+     "id": "roots",
+     "op": "write",
+     "x": 80,
+     "y": 670,
+     "text": "x = 2  or  x = 3",
+     "size": 40
+    },
+    {
+     "id": "check",
+     "op": "write",
+     "x": 80,
+     "y": 740,
+     "text": "Check: 4 - 10 + 6 = 0 ✓",
+     "size": 34,
+     "color": "green"
+    }
+   ]
+  }
+ ]
+}

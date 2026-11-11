@@ -1,0 +1,227 @@
+{
+ "title": "Demand Rises, Price Rises",
+ "lang": "en",
+ "steps": [
+  {
+   "title": "Title",
+   "say": "Let's see what happens to price when demand rises.",
+   "ops": [
+    {
+     "id": "t1",
+     "x": 800,
+     "y": 50,
+     "text": "Demand Up → Price?",
+     "size": 56,
+     "anchor": "middle",
+     "color": "blue",
+     "op": "write"
+    }
+   ]
+  },
+  {
+   "title": "Axes",
+   "say": "We draw a market graph with quantity on the horizontal axis and price on the vertical axis.",
+   "ops": [
+    {
+     "op": "line",
+     "id": "ay",
+     "x1": 400,
+     "y1": 220,
+     "x2": 400,
+     "y2": 740,
+     "arrow": true
+    },
+    {
+     "op": "line",
+     "id": "ax",
+     "x1": 400,
+     "y1": 740,
+     "x2": 1100,
+     "y2": 740,
+     "arrow": true
+    },
+    {
+     "op": "write",
+     "id": "lp",
+     "x": 250,
+     "y": 200,
+     "text": "Price",
+     "size": 34
+    },
+    {
+     "op": "write",
+     "id": "lq",
+     "x": 1000,
+     "y": 770,
+     "text": "Quantity",
+     "size": 34
+    }
+   ]
+  },
+  {
+   "title": "Supply curve",
+   "say": "Supply slopes upward: producers offer more at higher prices.",
+   "ops": [
+    {
+     "op": "line",
+     "id": "s",
+     "x1": 500,
+     "y1": 680,
+     "x2": 1000,
+     "y2": 300,
+     "color": "green",
+     "width": 6
+    },
+    {
+     "op": "write",
+     "id": "ls",
+     "x": 1030,
+     "y": 270,
+     "text": "Supply",
+     "size": 34,
+     "color": "green"
+    }
+   ]
+  },
+  {
+   "title": "Original demand",
+   "say": "Demand slopes downward. Where it crosses supply is the original equilibrium.",
+   "ops": [
+    {
+     "op": "line",
+     "id": "d1",
+     "x1": 500,
+     "y1": 300,
+     "x2": 900,
+     "y2": 680,
+     "color": "blue",
+     "width": 6
+    },
+    {
+     "op": "write",
+     "id": "ld1",
+     "x": 920,
+     "y": 670,
+     "text": "D1",
+     "size": 34,
+     "color": "blue"
+    },
+    {
+     "op": "ellipse",
+     "id": "e1",
+     "cx": 700,
+     "cy": 490,
+     "rx": 12,
+     "ry": 12,
+     "color": "ink",
+     "fill": "gray"
+    },
+    {
+     "op": "line",
+     "id": "p1l",
+     "x1": 400,
+     "y1": 490,
+     "x2": 688,
+     "y2": 490,
+     "dash": true,
+     "color": "gray",
+     "width": 3
+    },
+    {
+     "op": "write",
+     "id": "p1",
+     "x": 340,
+     "y": 468,
+     "text": "P1",
+     "size": 30
+    }
+   ]
+  },
+  {
+   "title": "Demand shifts right",
+   "say": "When demand rises, the whole demand curve shifts to the right.",
+   "ops": [
+    {
+     "op": "line",
+     "id": "d2",
+     "x1": 620,
+     "y1": 300,
+     "x2": 1020,
+     "y2": 680,
+     "color": "red",
+     "width": 6
+    },
+    {
+     "op": "write",
+     "id": "ld2",
+     "x": 1040,
+     "y": 670,
+     "text": "D2",
+     "size": 34,
+     "color": "red"
+    },
+    {
+     "op": "line",
+     "id": "sh",
+     "x1": 780,
+     "y1": 240,
+     "x2": 900,
+     "y2": 240,
+     "arrow": true,
+     "color": "red"
+    }
+   ]
+  },
+  {
+   "title": "New equilibrium",
+   "say": "The new curve meets supply at a higher price and a larger quantity.",
+   "ops": [
+    {
+     "op": "ellipse",
+     "id": "e2",
+     "cx": 820,
+     "cy": 410,
+     "rx": 12,
+     "ry": 12,
+     "color": "red",
+     "fill": "red"
+    },
+    {
+     "op": "line",
+     "id": "p2l",
+     "x1": 400,
+     "y1": 410,
+     "x2": 808,
+     "y2": 410,
+     "dash": true,
+     "color": "red",
+     "width": 3
+    },
+    {
+     "op": "write",
+     "id": "p2",
+     "x": 340,
+     "y": 388,
+     "text": "P2",
+     "size": 30,
+     "color": "red"
+    }
+   ]
+  },
+  {
+   "title": "Conclusion",
+   "say": "Higher demand with the same supply creates shortage at the old price, so price rises to P2.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "c1",
+     "x": 1150,
+     "y": 420,
+     "text": "Demand ↑\nPrice ↑\nQuantity ↑",
+     "size": 42,
+     "color": "red"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,149 @@
+{
+ "title": "Why We Have Seasons",
+ "lang": "en",
+ "steps": [
+  {
+   "title": "Common misconception",
+   "say": "Seasons are not caused by Earth being closer to the Sun. The real cause is the tilt of Earth's axis.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "s1",
+     "x": 60,
+     "y": 140,
+     "text": "It's NOT because Earth is closer to the Sun.",
+     "size": 36
+    },
+    {
+     "op": "write",
+     "id": "s2",
+     "x": 60,
+     "y": 195,
+     "text": "The real cause is the tilt of Earth's axis.",
+     "size": 36,
+     "color": "blue"
+    }
+   ]
+  },
+  {
+   "title": "Sun and orbit",
+   "say": "Earth travels around the Sun in a nearly circular orbit once a year.",
+   "ops": [
+    {
+     "op": "ellipse",
+     "id": "sun",
+     "cx": 170,
+     "cy": 540,
+     "rx": 80,
+     "ry": 80,
+     "color": "red",
+     "fill": "red"
+    },
+    {
+     "op": "write",
+     "id": "suntxt",
+     "x": 170,
+     "y": 410,
+     "text": "Sun",
+     "size": 30,
+     "anchor": "middle"
+    },
+    {
+     "op": "ellipse",
+     "id": "orbit",
+     "cx": 850,
+     "cy": 540,
+     "rx": 520,
+     "ry": 240,
+     "color": "gray",
+     "width": 3
+    }
+   ]
+  },
+  {
+   "title": "Tilted axis",
+   "say": "Earth's axis is tilted about 23.4 degrees, and it keeps pointing the same direction as Earth orbits.",
+   "ops": [
+    {
+     "op": "ellipse",
+     "id": "earthTop",
+     "cx": 850,
+     "cy": 300,
+     "rx": 40,
+     "ry": 40,
+     "color": "blue",
+     "fill": "blue"
+    },
+    {
+     "op": "line",
+     "id": "axisTop",
+     "x1": 800,
+     "y1": 230,
+     "x2": 900,
+     "y2": 370,
+     "color": "gray",
+     "width": 3,
+     "dash": "10 8"
+    },
+    {
+     "op": "write",
+     "id": "tilt",
+     "x": 1000,
+     "y": 190,
+     "text": "Axis tilted 23.4°\nalways points the same way",
+     "size": 32
+    }
+   ]
+  },
+  {
+   "title": "Six months later",
+   "say": "Six months later, Earth is on the opposite side of its orbit, and the tilt still points the same way.",
+   "ops": [
+    {
+     "op": "ellipse",
+     "id": "earthBot",
+     "cx": 850,
+     "cy": 780,
+     "rx": 40,
+     "ry": 40,
+     "color": "blue",
+     "fill": "blue"
+    },
+    {
+     "op": "line",
+     "id": "axisBot",
+     "x1": 800,
+     "y1": 730,
+     "x2": 900,
+     "y2": 850,
+     "color": "gray",
+     "width": 3,
+     "dash": "10 8"
+    },
+    {
+     "op": "write",
+     "id": "later",
+     "x": 960,
+     "y": 800,
+     "text": "Six months later: the other side",
+     "size": 32
+    }
+   ]
+  },
+  {
+   "title": "Summary",
+   "say": "When your hemisphere tilts toward the Sun, sunlight is more direct and days are longer, so it is summer. When it tilts away, it is winter.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "sum",
+     "x": 60,
+     "y": 815,
+     "text": "Tilt toward Sun = summer · Tilt away = winter",
+     "size": 32,
+     "underline": true
+    }
+   ]
+  }
+ ]
+}

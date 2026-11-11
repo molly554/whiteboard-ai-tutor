@@ -1,0 +1,57 @@
+{
+ "steps": [
+  {
+   "title": "Clear the old picture",
+   "say": "Let's drop the shifted curve and use one plain idea: demand rising means more buyers want the product at the same price.",
+   "ops": [
+    {
+     "op": "erase",
+     "ids": [
+      "d2",
+      "d2lab",
+      "shift",
+      "shiftlab"
+     ]
+    },
+    {
+     "op": "write",
+     "id": "simple1",
+     "x": 300,
+     "y": 150,
+     "text": "Demand rises = more buyers want it at the SAME price",
+     "size": 36,
+     "color": "red"
+    }
+   ]
+  },
+  {
+   "title": "A number example",
+   "say": "Say at price 5, 10 people wanted to buy. Now 20 people want to buy at that same price.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "ex1",
+     "x": 300,
+     "y": 215,
+     "text": "At price 5:  before = 10 buyers   after = 20 buyers",
+     "size": 32
+    }
+   ]
+  },
+  {
+   "title": "Why price goes up",
+   "say": "At the old price there are more buyers than sellers want to supply, so the price rises until it reaches the new equilibrium.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "ex2",
+     "x": 200,
+     "y": 800,
+     "text": "Too many buyers at the old price → price rises → new equilibrium at higher P",
+     "size": 30,
+     "color": "green"
+    }
+   ]
+  }
+ ]
+}

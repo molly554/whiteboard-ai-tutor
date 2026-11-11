@@ -1,0 +1,204 @@
+{
+ "title": "Solving x² − 5x + 6 = 0",
+ "lang": "en",
+ "steps": [
+  {
+   "title": "The equation",
+   "say": "We want to find every x that makes x squared minus 5x plus 6 equal to zero.",
+   "ops": [
+    {
+     "id": "t1",
+     "op": "write",
+     "x": 800,
+     "y": 50,
+     "text": "Solve a quadratic",
+     "size": 56,
+     "anchor": "middle",
+     "color": "blue"
+    },
+    {
+     "id": "eq1",
+     "op": "write",
+     "x": 800,
+     "y": 180,
+     "text": "x² − 5x + 6 = 0",
+     "size": 52,
+     "anchor": "middle"
+    }
+   ]
+  },
+  {
+   "title": "First try: the formula",
+   "say": "We could start with the quadratic formula, using a = 1, b = −5, c = 6.",
+   "ops": [
+    {
+     "id": "f1",
+     "op": "write",
+     "x": 200,
+     "y": 300,
+     "text": "x = (−b ± √(b² − 4ac)) / 2a",
+     "size": 40
+    },
+    {
+     "id": "f2",
+     "op": "write",
+     "x": 200,
+     "y": 380,
+     "text": "a = 1,  b = −5,  c = 6",
+     "size": 36,
+     "color": "gray"
+    }
+   ]
+  },
+  {
+   "title": "Too heavy",
+   "say": "That works, but it is a lot of machinery for such a simple equation. Let's switch to factoring.",
+   "ops": [
+    {
+     "id": "cross1",
+     "op": "line",
+     "x1": 180,
+     "y1": 290,
+     "x2": 900,
+     "y2": 440,
+     "color": "red",
+     "width": 6
+    },
+    {
+     "id": "x2",
+     "op": "line",
+     "x1": 180,
+     "y1": 440,
+     "x2": 900,
+     "y2": 290,
+     "color": "red",
+     "width": 6
+    },
+    {
+     "id": "w1",
+     "op": "write",
+     "x": 950,
+     "y": 340,
+     "text": "Simpler way?",
+     "size": 40,
+     "color": "red"
+    }
+   ]
+  },
+  {
+   "title": "Clear the board",
+   "say": "Let me erase the formula and keep the equation.",
+   "ops": [
+    {
+     "id": "er1",
+     "op": "erase",
+     "ids": [
+      "f1",
+      "f2",
+      "cross1",
+      "x2",
+      "w1"
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Find two numbers",
+   "say": "Look for two numbers that multiply to 6 and add to −5. Those are −2 and −3.",
+   "ops": [
+    {
+     "id": "n1",
+     "op": "write",
+     "x": 200,
+     "y": 300,
+     "text": "multiply to 6",
+     "size": 38
+    },
+    {
+     "id": "n2",
+     "op": "write",
+     "x": 200,
+     "y": 370,
+     "text": "add to −5",
+     "size": 38
+    },
+    {
+     "id": "n3",
+     "op": "write",
+     "x": 800,
+     "y": 335,
+     "text": "−2 and −3",
+     "size": 48,
+     "color": "green"
+    },
+    {
+     "id": "n4",
+     "op": "line",
+     "x1": 560,
+     "y1": 335,
+     "x2": 770,
+     "y2": 355,
+     "arrow": true,
+     "color": "gray"
+    }
+   ]
+  },
+  {
+   "title": "Factor",
+   "say": "So the expression factors into x minus 2 times x minus 3.",
+   "ops": [
+    {
+     "id": "fa",
+     "op": "write",
+     "x": 800,
+     "y": 500,
+     "text": "(x − 2)(x − 3) = 0",
+     "size": 52,
+     "anchor": "middle",
+     "color": "blue"
+    }
+   ]
+  },
+  {
+   "title": "Set each factor to zero",
+   "say": "A product is zero only if one factor is zero, so x equals 2 or x equals 3.",
+   "ops": [
+    {
+     "id": "s1",
+     "op": "write",
+     "x": 450,
+     "y": 640,
+     "text": "x − 2 = 0  →  x = 2",
+     "size": 44,
+     "anchor": "middle"
+    },
+    {
+     "id": "s2",
+     "op": "write",
+     "x": 1150,
+     "y": 640,
+     "text": "x − 3 = 0  →  x = 3",
+     "size": 44,
+     "anchor": "middle"
+    }
+   ]
+  },
+  {
+   "title": "Answer",
+   "say": "The solutions are x equals 2 and x equals 3.",
+   "ops": [
+    {
+     "id": "ans",
+     "op": "write",
+     "x": 800,
+     "y": 770,
+     "text": "x = 2  or  x = 3",
+     "size": 56,
+     "anchor": "middle",
+     "color": "green",
+     "underline": true
+    }
+   ]
+  }
+ ]
+}

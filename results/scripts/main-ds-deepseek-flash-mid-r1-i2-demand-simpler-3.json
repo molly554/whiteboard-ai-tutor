@@ -1,0 +1,148 @@
+{
+ "title": "The demand shift, simplified",
+ "lang": "en",
+ "steps": [
+  {
+   "title": "Strip it back",
+   "say": "Fair — let's clear the long notes and keep just one idea: what the shift means at a single price.",
+   "ops": [
+    {
+     "op": "erase",
+     "ids": [
+      "note1",
+      "note2",
+      "note3"
+     ]
+    },
+    {
+     "op": "write",
+     "id": "head1",
+     "x": 1150,
+     "y": 220,
+     "text": "The shift, in one line:",
+     "size": 36
+    }
+   ]
+  },
+  {
+   "title": "One price, two quantities",
+   "say": "Pick any price and draw a dashed line across. It meets D1 here (green dot) and D2 there (green dot): same price, but D2 buyers want more.",
+   "ops": [
+    {
+     "op": "line",
+     "id": "px1",
+     "x1": 205,
+     "y1": 350,
+     "x2": 545,
+     "y2": 350,
+     "color": "gray",
+     "width": 3,
+     "dash": true
+    },
+    {
+     "op": "write",
+     "id": "pxlab",
+     "x": 60,
+     "y": 338,
+     "text": "same price",
+     "size": 28
+    },
+    {
+     "op": "ellipse",
+     "id": "c1",
+     "cx": 354,
+     "cy": 350,
+     "rx": 8,
+     "ry": 8,
+     "color": "green",
+     "fill": "green"
+    },
+    {
+     "op": "ellipse",
+     "id": "c2",
+     "cx": 514,
+     "cy": 350,
+     "rx": 8,
+     "ry": 8,
+     "color": "green",
+     "fill": "green"
+    },
+    {
+     "op": "write",
+     "id": "dxnote",
+     "x": 555,
+     "y": 250,
+     "text": "At the same price,\nD2 buyers want more\nthan D1 buyers.",
+     "size": 28
+    }
+   ]
+  },
+  {
+   "title": "So the price gets bid up",
+   "say": "Because buyers want more at the old price, they outbid each other, and the market settles at a new crossing: a higher price and a bigger quantity.",
+   "ops": [
+    {
+     "op": "ellipse",
+     "id": "e2",
+     "cx": 660,
+     "cy": 428,
+     "rx": 9,
+     "ry": 9,
+     "color": "green",
+     "fill": "green"
+    },
+    {
+     "op": "line",
+     "id": "e2v",
+     "x1": 660,
+     "y1": 428,
+     "x2": 660,
+     "y2": 720,
+     "color": "gray",
+     "width": 3,
+     "dash": true
+    },
+    {
+     "op": "line",
+     "id": "e2h",
+     "x1": 200,
+     "y1": 428,
+     "x2": 660,
+     "y2": 428,
+     "color": "gray",
+     "width": 3,
+     "dash": true
+    },
+    {
+     "op": "write",
+     "id": "p2",
+     "x": 130,
+     "y": 400,
+     "text": "P2",
+     "size": 32,
+     "anchor": "middle"
+    },
+    {
+     "op": "write",
+     "id": "q2",
+     "x": 660,
+     "y": 735,
+     "text": "Q2",
+     "size": 32,
+     "anchor": "middle"
+    },
+    {
+     "op": "line",
+     "id": "up",
+     "x1": 300,
+     "y1": 462,
+     "x2": 300,
+     "y2": 433,
+     "color": "red",
+     "width": 4,
+     "arrow": true
+    }
+   ]
+  }
+ ]
+}

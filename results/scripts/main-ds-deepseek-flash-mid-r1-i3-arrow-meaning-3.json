@@ -1,0 +1,85 @@
+{
+ "title": "What the green arrow means",
+ "lang": "en",
+ "steps": [
+  {
+   "title": "The arrow = a shift",
+   "say": "That green arrow is not a price change — it marks the whole demand curve moving to the right, from D1 to D2.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "arrownote",
+     "x": 480,
+     "y": 130,
+     "text": "The green arrow = demand shifts right",
+     "size": 34,
+     "color": "green"
+    },
+    {
+     "op": "line",
+     "id": "arrowul",
+     "x1": 500,
+     "y1": 178,
+     "x2": 860,
+     "y2": 178,
+     "color": "green",
+     "width": 3
+    }
+   ]
+  },
+  {
+   "title": "Shift vs. slide",
+   "say": "An arrow inside one curve means the price moved; an arrow from one curve to another means demand itself changed.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "distinct",
+     "x": 480,
+     "y": 210,
+     "text": "slide along a curve = price changed\njump to a new curve = demand changed",
+     "size": 30
+    }
+   ]
+  },
+  {
+   "title": "Same price, more wanted",
+   "say": "Read the arrow sideways: at any one price, the new curve D2 sits to the right, so buyers want a bigger quantity.",
+   "ops": [
+    {
+     "op": "line",
+     "id": "gaparrow",
+     "x1": 428,
+     "y1": 380,
+     "x2": 560,
+     "y2": 380,
+     "color": "green",
+     "width": 5,
+     "arrow": true
+    },
+    {
+     "op": "write",
+     "id": "gaplab",
+     "x": 660,
+     "y": 320,
+     "text": "same price,\nmore quantity",
+     "size": 30,
+     "color": "green"
+    }
+   ]
+  },
+  {
+   "title": "Why price rises",
+   "say": "At the old price P1 buyers now want more than sellers offer — a shortage — so the price gets bid up.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "why",
+     "x": 1150,
+     "y": 740,
+     "text": "At old price P1:\nshortage, so buyers\nbid the price up.",
+     "size": 28
+    }
+   ]
+  }
+ ]
+}

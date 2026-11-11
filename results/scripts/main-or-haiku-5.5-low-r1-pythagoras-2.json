@@ -1,0 +1,217 @@
+{
+ "title": "Why a² + b² = c² works",
+ "lang": "en",
+ "steps": [
+  {
+   "title": "Start with the title and a square",
+   "say": "We'll prove the theorem by comparing areas. Start with a square whose side is a + b.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "title",
+     "x": 800,
+     "y": 60,
+     "text": "Why a² + b² = c² ?",
+     "size": 56,
+     "anchor": "middle",
+     "underline": true
+    },
+    {
+     "op": "rect",
+     "id": "big",
+     "x": 120,
+     "y": 180,
+     "w": 400,
+     "h": 400,
+     "color": "ink",
+     "width": 5
+    }
+   ]
+  },
+  {
+   "title": "Place four right triangles",
+   "say": "Cut the corners so that each of the four right triangles has legs a and b and hypotenuse c.",
+   "ops": [
+    {
+     "op": "path",
+     "id": "t1",
+     "d": "M120 180 L270 180 L120 430 Z",
+     "fill": "gray",
+     "color": "ink",
+     "width": 3
+    },
+    {
+     "op": "path",
+     "id": "t2",
+     "d": "M270 180 L520 180 L520 330 Z",
+     "fill": "gray",
+     "color": "ink",
+     "width": 3
+    },
+    {
+     "op": "path",
+     "id": "t3",
+     "d": "M520 330 L520 580 L370 580 Z",
+     "fill": "gray",
+     "color": "ink",
+     "width": 3
+    },
+    {
+     "op": "path",
+     "id": "t4",
+     "d": "M370 580 L120 580 L120 430 Z",
+     "fill": "gray",
+     "color": "ink",
+     "width": 3
+    },
+    {
+     "op": "write",
+     "id": "la",
+     "x": 88,
+     "y": 480,
+     "text": "a",
+     "size": 36
+    },
+    {
+     "op": "write",
+     "id": "lb",
+     "x": 88,
+     "y": 280,
+     "text": "b",
+     "size": 36
+    },
+    {
+     "op": "write",
+     "id": "lb2",
+     "x": 195,
+     "y": 122,
+     "text": "a",
+     "size": 36,
+     "anchor": "middle"
+    },
+    {
+     "op": "write",
+     "id": "lb3",
+     "x": 395,
+     "y": 122,
+     "text": "b",
+     "size": 36,
+     "anchor": "middle"
+    }
+   ]
+  },
+  {
+   "title": "Name the tilted square",
+   "say": "The four triangles leave a tilted square in the middle. Its side is c, by the Pythagorean relation we want to show.",
+   "ops": [
+    {
+     "op": "path",
+     "id": "inner",
+     "d": "M270 180 L520 330 L370 580 L120 430 Z",
+     "fill": "blue",
+     "color": "blue",
+     "width": 4
+    },
+    {
+     "op": "write",
+     "id": "lc",
+     "x": 320,
+     "y": 355,
+     "text": "c",
+     "size": 40,
+     "anchor": "middle"
+    },
+    {
+     "op": "write",
+     "id": "lc2",
+     "x": 560,
+     "y": 240,
+     "text": "a",
+     "size": 36
+    },
+    {
+     "op": "write",
+     "id": "lc3",
+     "x": 560,
+     "y": 440,
+     "text": "b",
+     "size": 36
+    }
+   ]
+  },
+  {
+   "title": "Area of the big square",
+   "say": "The big square has side a + b, so its area is (a + b)².",
+   "ops": [
+    {
+     "op": "write",
+     "id": "side",
+     "x": 320,
+     "y": 640,
+     "text": "side = a + b",
+     "size": 36,
+     "anchor": "middle"
+    },
+    {
+     "op": "write",
+     "id": "area1",
+     "x": 640,
+     "y": 200,
+     "text": "Big square area = (a + b)²",
+     "size": 40
+    }
+   ]
+  },
+  {
+   "title": "Area in pieces",
+   "say": "The same square is also four triangles plus the tilted square. Each triangle has area ½ab.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "area2",
+     "x": 640,
+     "y": 280,
+     "text": "4 triangles: 4 × ½ab = 2ab",
+     "size": 36
+    },
+    {
+     "op": "write",
+     "id": "area3",
+     "x": 640,
+     "y": 340,
+     "text": "inner square: c²",
+     "size": 36
+    }
+   ]
+  },
+  {
+   "title": "Set the two areas equal",
+   "say": "Both counts give the same area, so we can set them equal and expand the left side.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "eq1",
+     "x": 640,
+     "y": 420,
+     "text": "a² + 2ab + b² = 2ab + c²\na² + b² = c²",
+     "size": 36,
+     "underline": true
+    }
+   ]
+  },
+  {
+   "title": "Cancel the shared term",
+   "say": "The 2ab on both sides cancels, leaving a² + b² = c². That is the Pythagorean theorem.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "end",
+     "x": 640,
+     "y": 600,
+     "text": "Subtract 2ab from both sides:\nthe a² and b² squares add up\nto the c² square.",
+     "size": 32
+    }
+   ]
+  }
+ ]
+}

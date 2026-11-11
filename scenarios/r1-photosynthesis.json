@@ -1,0 +1,61 @@
+{
+  "title": "光合作用发生在哪里？",
+  "lang": "zh",
+  "steps": [
+    {
+      "title": "提出问题",
+      "say": "植物用光、水和二氧化碳制造养分，这件事具体发生在细胞的哪个部分？",
+      "ops": [
+        { "op": "write", "id": "title", "x": 60, "y": 40, "text": "光合作用发生在哪里？", "size": 56, "underline": true },
+        { "op": "write", "id": "ask", "x": 100, "y": 150, "text": "植物用光、水和二氧化碳制造养分——\n这件事发生在细胞的哪个部分？", "size": 42 }
+      ]
+    },
+    {
+      "title": "叶片",
+      "say": "先看整片叶子：它是植物进行光合作用的主要器官。",
+      "ops": [
+        { "op": "path", "id": "leaf", "d": "M 120 650 C 150 450 330 400 420 420 C 400 520 330 650 120 650 Z", "color": "green", "width": 5, "fill": "green" },
+        { "op": "line", "id": "rib", "x1": 120, "y1": 650, "x2": 400, "y2": 440, "width": 4 },
+        { "op": "write", "id": "leaflab", "x": 270, "y": 700, "text": "叶片", "size": 38, "anchor": "middle" }
+      ]
+    },
+    {
+      "title": "叶肉细胞",
+      "say": "把叶片放大，里面是一个个叶肉细胞，细胞里有很多绿色的小颗粒。",
+      "ops": [
+        { "op": "line", "id": "arrow1", "x1": 450, "y1": 520, "x2": 570, "y2": 520, "arrow": true },
+        { "op": "rect", "id": "cell", "x": 600, "y": 400, "w": 380, "h": 260, "width": 5 },
+        { "op": "ellipse", "id": "chl1", "cx": 720, "cy": 500, "rx": 55, "ry": 32, "color": "green", "fill": "green" },
+        { "op": "ellipse", "id": "chl2", "cx": 860, "cy": 570, "rx": 55, "ry": 32, "rotate": -20, "color": "green", "fill": "green" },
+        { "op": "write", "id": "celllab", "x": 790, "y": 700, "text": "叶肉细胞", "size": 38, "anchor": "middle" }
+      ]
+    },
+    {
+      "title": "叶绿体",
+      "say": "再放大其中一个绿色小颗粒，它叫叶绿体。",
+      "ops": [
+        { "op": "line", "id": "arrow2", "x1": 1000, "y1": 520, "x2": 1120, "y2": 520, "arrow": true },
+        { "op": "ellipse", "id": "chlbig", "cx": 1330, "cy": 520, "rx": 190, "ry": 120, "color": "green", "width": 5, "fill": "green" },
+        { "op": "ellipse", "id": "g1", "cx": 1250, "cy": 500, "rx": 40, "ry": 18, "color": "green" },
+        { "op": "ellipse", "id": "g2", "cx": 1330, "cy": 570, "rx": 40, "ry": 18, "color": "green" },
+        { "op": "ellipse", "id": "g3", "cx": 1410, "cy": 490, "rx": 40, "ry": 18, "color": "green" },
+        { "op": "write", "id": "chllab", "x": 1330, "y": 700, "text": "叶绿体", "size": 38, "anchor": "middle" }
+      ]
+    },
+    {
+      "title": "答案在这里",
+      "say": "叶绿体里有叶绿素，能吸收光。光合作用就发生在叶绿体里。",
+      "ops": [
+        { "op": "write", "id": "here", "x": 1330, "y": 330, "text": "光合作用在这里发生", "size": 36, "anchor": "middle", "color": "red" },
+        { "op": "line", "id": "point", "x1": 1330, "y1": 385, "x2": 1330, "y2": 415, "color": "red", "arrow": true }
+      ]
+    },
+    {
+      "title": "整个过程",
+      "say": "总结：二氧化碳和水，在光的作用下，在叶绿体里变成葡萄糖和氧气。",
+      "ops": [
+        { "op": "write", "id": "eq", "x": 200, "y": 790, "text": "二氧化碳 + 水 + 光  →  葡萄糖 + 氧气", "size": 46, "color": "blue", "underline": true }
+      ]
+    }
+  ]
+}

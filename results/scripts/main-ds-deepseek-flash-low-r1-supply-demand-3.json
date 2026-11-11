@@ -1,0 +1,244 @@
+{
+ "title": "Demand Up → Price Up",
+ "lang": "en",
+ "steps": [
+  {
+   "title": "Set up the axes",
+   "say": "We start with a standard supply and demand diagram: price on the vertical axis, quantity on the horizontal axis.",
+   "ops": [
+    {
+     "id": "axis_y",
+     "type": "line",
+     "x1": 300,
+     "y1": 760,
+     "x2": 300,
+     "y2": 140,
+     "arrow": true
+    },
+    {
+     "id": "axis_x",
+     "type": "line",
+     "x1": 300,
+     "y1": 760,
+     "x2": 1400,
+     "y2": 760,
+     "arrow": true
+    },
+    {
+     "id": "label_p",
+     "type": "write",
+     "x": 250,
+     "y": 120,
+     "text": "Price",
+     "size": 32,
+     "anchor": "middle"
+    },
+    {
+     "id": "label_q",
+     "type": "write",
+     "x": 1420,
+     "y": 750,
+     "text": "Quantity",
+     "size": 32,
+     "anchor": "middle"
+    }
+   ]
+  },
+  {
+   "title": "Draw the supply curve",
+   "say": "The supply curve slopes upward: higher prices bring more quantity supplied.",
+   "ops": [
+    {
+     "id": "supply",
+     "type": "line",
+     "x1": 480,
+     "y1": 700,
+     "x2": 1200,
+     "y2": 300,
+     "color": "blue"
+    },
+    {
+     "id": "label_s",
+     "type": "write",
+     "x": 1220,
+     "y": 280,
+     "text": "S",
+     "size": 36,
+     "color": "blue"
+    }
+   ]
+  },
+  {
+   "title": "Draw initial demand",
+   "say": "The original demand curve slopes downward. It crosses supply at the initial equilibrium.",
+   "ops": [
+    {
+     "id": "demand1",
+     "type": "line",
+     "x1": 520,
+     "y1": 280,
+     "x2": 1200,
+     "y2": 700,
+     "color": "green"
+    },
+    {
+     "id": "label_d1",
+     "type": "write",
+     "x": 500,
+     "y": 260,
+     "text": "D1",
+     "size": 36,
+     "color": "green"
+    },
+    {
+     "id": "eq1_dot",
+     "type": "ellipse",
+     "cx": 860,
+     "cy": 490,
+     "rx": 7,
+     "ry": 7,
+     "fill": "ink"
+    },
+    {
+     "id": "eq1_p",
+     "type": "write",
+     "x": 820,
+     "y": 500,
+     "text": "P1",
+     "size": 30,
+     "anchor": "middle"
+    },
+    {
+     "id": "eq1_q",
+     "type": "write",
+     "x": 860,
+     "y": 780,
+     "text": "Q1",
+     "size": 30,
+     "anchor": "middle"
+    }
+   ]
+  },
+  {
+   "title": "Demand rises",
+   "say": "When demand rises, the demand curve shifts to the right, from D1 to D2.",
+   "ops": [
+    {
+     "id": "demand2",
+     "type": "line",
+     "x1": 820,
+     "y1": 280,
+     "x2": 1500,
+     "y2": 700,
+     "color": "green",
+     "dash": true
+    },
+    {
+     "id": "label_d2",
+     "type": "write",
+     "x": 1500,
+     "y": 260,
+     "text": "D2",
+     "size": 36,
+     "color": "green"
+    },
+    {
+     "id": "shift_arrow",
+     "type": "line",
+     "x1": 1040,
+     "y1": 420,
+     "x2": 1180,
+     "y2": 420,
+     "color": "red",
+     "arrow": true
+    },
+    {
+     "id": "shift_label",
+     "type": "write",
+     "x": 1110,
+     "y": 390,
+     "text": "shift",
+     "size": 28,
+     "color": "red",
+     "anchor": "middle"
+    }
+   ]
+  },
+  {
+   "title": "New equilibrium",
+   "say": "The new intersection is higher up and further right: both price and quantity increase.",
+   "ops": [
+    {
+     "id": "eq2_dot",
+     "type": "ellipse",
+     "cx": 1060,
+     "cy": 420,
+     "rx": 7,
+     "ry": 7,
+     "fill": "ink"
+    },
+    {
+     "id": "eq2_p",
+     "type": "write",
+     "x": 1020,
+     "y": 430,
+     "text": "P2",
+     "size": 30,
+     "anchor": "middle"
+    },
+    {
+     "id": "eq2_q",
+     "type": "write",
+     "x": 1060,
+     "y": 780,
+     "text": "Q2",
+     "size": 30,
+     "anchor": "middle"
+    },
+    {
+     "id": "price_arrow",
+     "type": "line",
+     "x1": 300,
+     "y1": 490,
+     "x2": 300,
+     "y2": 420,
+     "color": "red",
+     "arrow": true
+    },
+    {
+     "id": "p1_mark",
+     "type": "line",
+     "x1": 280,
+     "y1": 490,
+     "x2": 320,
+     "y2": 490,
+     "color": "gray"
+    },
+    {
+     "id": "p2_mark",
+     "type": "line",
+     "x1": 280,
+     "y1": 420,
+     "x2": 320,
+     "y2": 420,
+     "color": "gray"
+    }
+   ]
+  },
+  {
+   "title": "Conclusion",
+   "say": "So a rise in demand pushes the equilibrium price up — and quantity up too.",
+   "ops": [
+    {
+     "id": "conclusion",
+     "type": "write",
+     "x": 300,
+     "y": 60,
+     "text": "Demand ↑  →  Price ↑",
+     "size": 44,
+     "color": "red"
+    }
+   ]
+  }
+ ]
+}

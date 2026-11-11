@@ -1,0 +1,152 @@
+{
+ "title": "光合作用的场所",
+ "lang": "zh",
+ "steps": [
+  {
+   "title": "写出标题",
+   "say": "我们先看一个问题：光合作用发生在细胞的哪个部分？",
+   "ops": [
+    {
+     "op": "write",
+     "id": "t1",
+     "x": 800,
+     "y": 90,
+     "text": "光合作用发生在哪里？",
+     "size": 56,
+     "anchor": "middle",
+     "underline": true
+    }
+   ]
+  },
+  {
+   "title": "画出细胞轮廓",
+   "say": "先画一个植物细胞的外形，它的外层是细胞膜和细胞壁。",
+   "ops": [
+    {
+     "op": "ellipse",
+     "id": "cell",
+     "cx": 800,
+     "cy": 480,
+     "rx": 420,
+     "ry": 300,
+     "color": "gray",
+     "width": 4
+    },
+    {
+     "op": "write",
+     "id": "cellLbl",
+     "x": 1240,
+     "y": 200,
+     "text": "植物细胞",
+     "size": 32,
+     "color": "gray"
+    }
+   ]
+  },
+  {
+   "title": "标出叶绿体",
+   "say": "光合作用的场所是叶绿体，它里面含有叶绿素，能吸收光能。",
+   "ops": [
+    {
+     "op": "ellipse",
+     "id": "chl1",
+     "cx": 620,
+     "cy": 460,
+     "rx": 110,
+     "ry": 60,
+     "color": "green",
+     "width": 5,
+     "fill": "green"
+    },
+    {
+     "op": "ellipse",
+     "id": "chl2",
+     "cx": 960,
+     "cy": 520,
+     "rx": 110,
+     "ry": 60,
+     "color": "green",
+     "width": 5,
+     "fill": "green"
+    },
+    {
+     "op": "write",
+     "id": "chlLbl",
+     "x": 800,
+     "y": 400,
+     "text": "叶绿体",
+     "size": 40,
+     "color": "green",
+     "anchor": "middle"
+    }
+   ]
+  },
+  {
+   "title": "指出标注",
+   "say": "叶绿体是光合作用的核心结构，绿色来自其中的叶绿素。",
+   "ops": [
+    {
+     "op": "line",
+     "id": "ptr",
+     "x1": 800,
+     "y1": 420,
+     "x2": 700,
+     "y2": 470,
+     "color": "green",
+     "width": 3,
+     "arrow": true
+    }
+   ]
+  },
+  {
+   "title": "对比其他结构",
+   "say": "线粒体负责呼吸作用，细胞核负责遗传信息，都不是光合作用的场所。",
+   "ops": [
+    {
+     "op": "write",
+     "id": "mito",
+     "x": 180,
+     "y": 740,
+     "text": "线粒体：呼吸作用",
+     "size": 32,
+     "color": "gray"
+    },
+    {
+     "op": "write",
+     "id": "nuc",
+     "x": 1020,
+     "y": 740,
+     "text": "细胞核：遗传",
+     "size": 32,
+     "color": "gray"
+    }
+   ]
+  },
+  {
+   "title": "总结答案",
+   "say": "结论：光合作用发生在叶绿体中。",
+   "ops": [
+    {
+     "op": "rect",
+     "id": "ans",
+     "x": 380,
+     "y": 800,
+     "w": 840,
+     "h": 70,
+     "color": "blue",
+     "width": 4
+    },
+    {
+     "op": "write",
+     "id": "ansTxt",
+     "x": 800,
+     "y": 812,
+     "text": "答：叶绿体",
+     "size": 40,
+     "color": "blue",
+     "anchor": "middle"
+    }
+   ]
+  }
+ ]
+}

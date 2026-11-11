@@ -1,0 +1,236 @@
+{
+ "title": "Simpler demand shift",
+ "lang": "en",
+ "steps": [
+  {
+   "title": "Clear the side notes",
+   "say": "Let me remove the extra notes so we can focus only on the demand curves.",
+   "ops": [
+    {
+     "op": "erase",
+     "ids": [
+      "note1",
+      "note2",
+      "note3"
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Clear the old shift arrow",
+   "say": "I will also remove the old arrow so the new picture stays clean.",
+   "ops": [
+    {
+     "op": "erase",
+     "ids": [
+      "shift",
+      "shiftlab"
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Keep the two demand curves",
+   "say": "Start with D1, the original demand curve.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "d1tag",
+     "x": 935,
+     "y": 210,
+     "text": "D1 = original demand",
+     "size": 30,
+     "color": "red"
+    }
+   ]
+  },
+  {
+   "title": "Show D2 is to the right",
+   "say": "A rise in demand means buyers want more at every price, so the whole curve moves to the right, not just one point.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "d2tag",
+     "x": 935,
+     "y": 250,
+     "text": "D2 = new demand",
+     "size": 30,
+     "color": "red"
+    },
+    {
+     "op": "ellipse",
+     "id": "a1",
+     "cx": 340,
+     "cy": 360,
+     "rx": 8,
+     "ry": 8,
+     "fill": "red"
+    },
+    {
+     "op": "ellipse",
+     "id": "a2",
+     "cx": 780,
+     "cy": 360,
+     "rx": 8,
+     "ry": 8,
+     "fill": "red"
+    },
+    {
+     "op": "line",
+     "id": "shift2",
+     "x1": 340,
+     "y1": 360,
+     "x2": 780,
+     "y2": 360,
+     "color": "green",
+     "width": 5,
+     "arrow": true
+    },
+    {
+     "op": "write",
+     "id": "shift2lab",
+     "x": 560,
+     "y": 330,
+     "text": "shift right",
+     "size": 28,
+     "anchor": "middle",
+     "color": "green"
+    }
+   ]
+  },
+  {
+   "title": "Same price, more quantity",
+   "say": "Pick one price. At that same price, buyers now want a larger quantity.",
+   "ops": [
+    {
+     "op": "line",
+     "id": "pl",
+     "x1": 200,
+     "y1": 360,
+     "x2": 780,
+     "y2": 360,
+     "color": "gray",
+     "width": 3,
+     "dash": true
+    },
+    {
+     "op": "write",
+     "id": "plab",
+     "x": 140,
+     "y": 345,
+     "text": "same price",
+     "size": 28,
+     "anchor": "middle",
+     "color": "gray"
+    },
+    {
+     "op": "line",
+     "id": "qold",
+     "x1": 340,
+     "y1": 360,
+     "x2": 340,
+     "y2": 720,
+     "color": "gray",
+     "width": 3,
+     "dash": true
+    },
+    {
+     "op": "line",
+     "id": "qnew",
+     "x1": 780,
+     "y1": 360,
+     "x2": 780,
+     "y2": 720,
+     "color": "gray",
+     "width": 3,
+     "dash": true
+    },
+    {
+     "op": "write",
+     "id": "qoldlab",
+     "x": 340,
+     "y": 740,
+     "text": "old Q",
+     "size": 28,
+     "anchor": "middle"
+    },
+    {
+     "op": "write",
+     "id": "qnewlab",
+     "x": 780,
+     "y": 740,
+     "text": "new Q",
+     "size": 28,
+     "anchor": "middle"
+    }
+   ]
+  },
+  {
+   "title": "The result",
+   "say": "Because buyers want more at the old price, sellers can charge a higher price. That is why the price rises.",
+   "ops": [
+    {
+     "op": "ellipse",
+     "id": "e2",
+     "cx": 650,
+     "cy": 500,
+     "rx": 9,
+     "ry": 9,
+     "fill": "green"
+    },
+    {
+     "op": "line",
+     "id": "e2v",
+     "x1": 650,
+     "y1": 500,
+     "x2": 650,
+     "y2": 720,
+     "color": "green",
+     "width": 3,
+     "dash": true
+    },
+    {
+     "op": "line",
+     "id": "e2h",
+     "x1": 200,
+     "y1": 500,
+     "x2": 650,
+     "y2": 500,
+     "color": "green",
+     "width": 3,
+     "dash": true
+    },
+    {
+     "op": "write",
+     "id": "p2",
+     "x": 130,
+     "y": 485,
+     "text": "P2",
+     "size": 32,
+     "anchor": "middle",
+     "color": "green"
+    },
+    {
+     "op": "write",
+     "id": "q2",
+     "x": 650,
+     "y": 740,
+     "text": "Q2",
+     "size": 32,
+     "anchor": "middle",
+     "color": "green"
+    },
+    {
+     "op": "write",
+     "id": "result",
+     "x": 1180,
+     "y": 350,
+     "text": "More demand\n→ higher price\nand higher quantity",
+     "size": 30,
+     "anchor": "middle",
+     "color": "green"
+    }
+   ]
+  }
+ ]
+}

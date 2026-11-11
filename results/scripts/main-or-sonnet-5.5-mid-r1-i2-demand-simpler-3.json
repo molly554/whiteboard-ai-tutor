@@ -1,0 +1,246 @@
+{
+ "title": "Demand shift, simply",
+ "lang": "en",
+ "steps": [
+  {
+   "title": "Clear the board",
+   "say": "Let's start fresh with a simpler picture: just one price and a crowd of buyers.",
+   "ops": [
+    {
+     "op": "erase",
+     "ids": [
+      "xaxis",
+      "yaxis",
+      "price",
+      "qty",
+      "d1",
+      "d1lab",
+      "note1",
+      "s",
+      "slab",
+      "note2",
+      "e1",
+      "e1v",
+      "e1h",
+      "p1",
+      "q1",
+      "note3",
+      "d2",
+      "d2lab",
+      "shift",
+      "shiftlab"
+     ]
+    },
+    {
+     "op": "write",
+     "id": "t2",
+     "x": 60,
+     "y": 130,
+     "text": "Same price, more buyers",
+     "size": 44,
+     "color": "blue"
+    }
+   ]
+  },
+  {
+   "title": "Today's buyers",
+   "say": "Imagine a pizza costs 10 dollars, and 3 people want to buy one.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "pz",
+     "x": 120,
+     "y": 260,
+     "text": "Pizza = $10",
+     "size": 40
+    },
+    {
+     "op": "write",
+     "id": "todayl",
+     "x": 120,
+     "y": 370,
+     "text": "Today:",
+     "size": 36,
+     "color": "gray"
+    },
+    {
+     "op": "ellipse",
+     "id": "a1",
+     "cx": 380,
+     "cy": 395,
+     "rx": 30,
+     "ry": 30,
+     "color": "blue"
+    },
+    {
+     "op": "ellipse",
+     "id": "a2",
+     "cx": 480,
+     "cy": 395,
+     "rx": 30,
+     "ry": 30,
+     "color": "blue"
+    },
+    {
+     "op": "ellipse",
+     "id": "a3",
+     "cx": 580,
+     "cy": 395,
+     "rx": 30,
+     "ry": 30,
+     "color": "blue"
+    }
+   ]
+  },
+  {
+   "title": "Demand rises",
+   "say": "Now the pizza gets popular. At the same 10 dollars, 6 people want one. That is a demand increase.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "laterl",
+     "x": 120,
+     "y": 510,
+     "text": "Popular:",
+     "size": 36,
+     "color": "gray"
+    },
+    {
+     "op": "ellipse",
+     "id": "b1",
+     "cx": 380,
+     "cy": 535,
+     "rx": 30,
+     "ry": 30,
+     "color": "red"
+    },
+    {
+     "op": "ellipse",
+     "id": "b2",
+     "cx": 480,
+     "cy": 535,
+     "rx": 30,
+     "ry": 30,
+     "color": "red"
+    },
+    {
+     "op": "ellipse",
+     "id": "b3",
+     "cx": 580,
+     "cy": 535,
+     "rx": 30,
+     "ry": 30,
+     "color": "red"
+    },
+    {
+     "op": "ellipse",
+     "id": "b4",
+     "cx": 680,
+     "cy": 535,
+     "rx": 30,
+     "ry": 30,
+     "color": "red"
+    },
+    {
+     "op": "ellipse",
+     "id": "b5",
+     "cx": 780,
+     "cy": 535,
+     "rx": 30,
+     "ry": 30,
+     "color": "red"
+    },
+    {
+     "op": "ellipse",
+     "id": "b6",
+     "cx": 880,
+     "cy": 535,
+     "rx": 30,
+     "ry": 30,
+     "color": "red"
+    }
+   ]
+  },
+  {
+   "title": "Not enough pizza",
+   "say": "But the shop still has only 3 pizzas. Six people are competing for three pizzas.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "stock",
+     "x": 1000,
+     "y": 260,
+     "text": "Shop has only\n3 pizzas",
+     "size": 38,
+     "color": "green"
+    },
+    {
+     "op": "write",
+     "id": "short",
+     "x": 1000,
+     "y": 510,
+     "text": "6 buyers\nfor 3 pizzas!",
+     "size": 38,
+     "color": "red"
+    }
+   ]
+  },
+  {
+   "title": "Price goes up",
+   "say": "Buyers offer more to win, and the shop notices it can charge more. The price climbs until only about 3 people still want to buy.",
+   "ops": [
+    {
+     "op": "erase",
+     "ids": [
+      "pz"
+     ]
+    },
+    {
+     "op": "write",
+     "id": "pz2",
+     "x": 120,
+     "y": 260,
+     "text": "Pizza = $10 → $14",
+     "size": 40,
+     "color": "red"
+    },
+    {
+     "op": "line",
+     "id": "up",
+     "x1": 1000,
+     "y1": 720,
+     "x2": 1000,
+     "y2": 640,
+     "color": "red",
+     "arrow": true,
+     "width": 5
+    },
+    {
+     "op": "write",
+     "id": "uplab",
+     "x": 1040,
+     "y": 650,
+     "text": "price rises",
+     "size": 34,
+     "color": "red"
+    }
+   ]
+  },
+  {
+   "title": "The takeaway",
+   "say": "So when demand rises and supply stays put, the extra competition pushes the price up.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "sum",
+     "x": 120,
+     "y": 740,
+     "text": "More demand + same supply = higher price",
+     "size": 42,
+     "color": "green",
+     "underline": true
+    }
+   ]
+  }
+ ]
+}

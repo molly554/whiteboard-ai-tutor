@@ -1,0 +1,133 @@
+{
+ "title": "光合作用发生的场所",
+ "lang": "zh",
+ "steps": [
+  {
+   "title": "写出标题",
+   "say": "我们先来看光合作用发生在细胞的哪个部分。",
+   "ops": [
+    {
+     "op": "write",
+     "id": "title",
+     "x": 800,
+     "y": 90,
+     "text": "光合作用发生在哪里？",
+     "size": 56,
+     "anchor": "middle",
+     "underline": true
+    }
+   ]
+  },
+  {
+   "title": "画出一个植物细胞",
+   "say": "光合作用发生在植物细胞里，我们先画出一个植物细胞的外形。",
+   "ops": [
+    {
+     "op": "ellipse",
+     "id": "cell",
+     "cx": 800,
+     "cy": 480,
+     "rx": 380,
+     "ry": 300,
+     "color": "green",
+     "width": 6
+    },
+    {
+     "op": "write",
+     "id": "cell_label",
+     "x": 800,
+     "y": 800,
+     "text": "植物细胞",
+     "size": 36,
+     "anchor": "middle",
+     "color": "green"
+    }
+   ]
+  },
+  {
+   "title": "标出叶绿体",
+   "say": "光合作用的主要场所是细胞里的叶绿体，它内部含有能吸收光能的叶绿素。",
+   "ops": [
+    {
+     "op": "ellipse",
+     "id": "chloroplast",
+     "cx": 800,
+     "cy": 480,
+     "rx": 130,
+     "ry": 80,
+     "color": "green",
+     "width": 5,
+     "fill": "green"
+    },
+    {
+     "op": "write",
+     "id": "chl_label",
+     "x": 800,
+     "y": 460,
+     "text": "叶绿体",
+     "size": 40,
+     "anchor": "middle",
+     "color": "ink"
+    },
+    {
+     "op": "line",
+     "id": "pointer",
+     "x1": 1000,
+     "y1": 300,
+     "x2": 880,
+     "y2": 420,
+     "color": "blue",
+     "width": 4,
+     "arrow": true
+    },
+    {
+     "op": "write",
+     "id": "chl_note",
+     "x": 1010,
+     "y": 250,
+     "text": "主要场所",
+     "size": 32,
+     "color": "blue"
+    }
+   ]
+  },
+  {
+   "title": "说明叶绿体的作用",
+   "say": "叶绿体吸收光能，把二氧化碳和水转化为有机物，并释放氧气。",
+   "ops": [
+    {
+     "op": "write",
+     "id": "eq1",
+     "x": 200,
+     "y": 700,
+     "text": "CO₂ + H₂O → (光能, 叶绿体) → 有机物 + O₂",
+     "size": 36,
+     "color": "blue"
+    }
+   ]
+  },
+  {
+   "title": "总结",
+   "say": "所以，光合作用主要发生在植物细胞的叶绿体中。",
+   "ops": [
+    {
+     "op": "erase",
+     "ids": [
+      "eq1"
+     ]
+    },
+    {
+     "op": "write",
+     "id": "answer",
+     "x": 800,
+     "y": 740,
+     "text": "答：叶绿体",
+     "size": 48,
+     "anchor": "middle",
+     "color": "red",
+     "underline": true
+    }
+   ]
+  }
+ ]
+}

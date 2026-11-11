@@ -1,0 +1,206 @@
+{
+ "title": "Solving x² − 5x + 6 = 0",
+ "lang": "en",
+ "steps": [
+  {
+   "title": "The Equation & Method 1",
+   "say": "We want to solve x squared minus 5x plus 6 equals 0. Our first instinct might be the quadratic formula.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "t_main",
+     "x": 80,
+     "y": 50,
+     "text": "Solve: x² − 5x + 6 = 0",
+     "size": 52
+    },
+    {
+     "op": "write",
+     "id": "m1_hdr",
+     "x": 80,
+     "y": 140,
+     "text": "Method 1: Quadratic Formula",
+     "size": 38,
+     "color": "blue"
+    },
+    {
+     "op": "write",
+     "id": "m1_coeff",
+     "x": 80,
+     "y": 200,
+     "text": "a = 1,   b = -5,   c = 6",
+     "size": 32,
+     "color": "gray"
+    },
+    {
+     "op": "write",
+     "id": "m1_form",
+     "x": 80,
+     "y": 260,
+     "text": "x = (-b ± √(b² - 4ac)) / (2a)",
+     "size": 34
+    }
+   ]
+  },
+  {
+   "title": "Evaluating the Formula",
+   "say": "Substituting the coefficients gives 5 plus or minus the square root of 25 minus 24, all divided by 2.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "m1_sub",
+     "x": 80,
+     "y": 330,
+     "text": "x = (5 ± √(25 - 24)) / 2",
+     "size": 34
+    },
+    {
+     "op": "write",
+     "id": "m1_disc",
+     "x": 80,
+     "y": 400,
+     "text": "x = (5 ± 1) / 2",
+     "size": 34
+    },
+    {
+     "op": "write",
+     "id": "m1_ans",
+     "x": 80,
+     "y": 470,
+     "text": "⇒  x = 3   or   x = 2",
+     "size": 36,
+     "color": "blue"
+    }
+   ]
+  },
+  {
+   "title": "Wait—Is There a Simpler Way?",
+   "say": "The formula works, but look how much arithmetic we did. Notice the discriminant was a clean square!",
+   "ops": [
+    {
+     "op": "rect",
+     "id": "box_notice",
+     "x": 70,
+     "y": 550,
+     "w": 650,
+     "h": 120,
+     "color": "red",
+     "width": 3
+    },
+    {
+     "op": "write",
+     "id": "t_stop",
+     "x": 95,
+     "y": 575,
+     "text": "Wait: this is overkill!\nThe coefficients are small integers.\nCan we factor directly instead?",
+     "size": 28,
+     "color": "red"
+    },
+    {
+     "op": "line",
+     "id": "arrow_shift",
+     "x1": 740,
+     "y1": 340,
+     "x2": 850,
+     "y2": 340,
+     "color": "green",
+     "width": 5,
+     "arrow": true
+    }
+   ]
+  },
+  {
+   "title": "Method 2: Factoring by Inspection",
+   "say": "Let's factor directly. We just need two numbers that multiply to positive 6 and add up to negative 5.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "m2_hdr",
+     "x": 880,
+     "y": 140,
+     "text": "Method 2: Factoring (Simpler!)",
+     "size": 38,
+     "color": "green"
+    },
+    {
+     "op": "write",
+     "id": "m2_rule",
+     "x": 880,
+     "y": 210,
+     "text": "Find two numbers p and q such that:",
+     "size": 32,
+     "color": "ink"
+    },
+    {
+     "op": "write",
+     "id": "m2_p_mul",
+     "x": 920,
+     "y": 270,
+     "text": "•  p × q = +6",
+     "size": 34,
+     "color": "blue"
+    },
+    {
+     "op": "write",
+     "id": "m2_p_add",
+     "x": 920,
+     "y": 330,
+     "text": "•  p + q = -5",
+     "size": 34,
+     "color": "blue"
+    },
+    {
+     "op": "write",
+     "id": "m2_pair",
+     "x": 880,
+     "y": 410,
+     "text": "The pair is:  -2  and  -3",
+     "size": 36,
+     "color": "green"
+    }
+   ]
+  },
+  {
+   "title": "Instant Solution",
+   "say": "Now rewrite the quadratic as (x - 2)(x - 3) = 0. The roots are immediately 2 and 3.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "m2_factor",
+     "x": 880,
+     "y": 485,
+     "text": "(x - 2)(x - 3) = 0",
+     "size": 40
+    },
+    {
+     "op": "write",
+     "id": "m2_roots",
+     "x": 880,
+     "y": 560,
+     "text": "⇒  x = 2   or   x = 3",
+     "size": 44,
+     "color": "green"
+    },
+    {
+     "op": "rect",
+     "id": "box_final",
+     "x": 860,
+     "y": 545,
+     "w": 440,
+     "h": 75,
+     "color": "green",
+     "width": 4
+    },
+    {
+     "op": "write",
+     "id": "m2_comp",
+     "x": 880,
+     "y": 650,
+     "text": "Factoring took just one mental step!",
+     "size": 30,
+     "color": "gray"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,234 @@
+{
+ "title": "光合作用的场所：叶绿体",
+ "lang": "zh",
+ "steps": [
+  {
+   "title": "定位植物细胞",
+   "say": "植物进行光合作用的主要器官是叶片，深入到细胞层面，它发生在一种特殊的细胞器中。",
+   "ops": [
+    {
+     "op": "write",
+     "id": "t1",
+     "x": 800,
+     "y": 60,
+     "text": "光合作用发生在细胞的哪个部分？",
+     "size": 52,
+     "color": "ink",
+     "anchor": "middle"
+    },
+    {
+     "op": "rect",
+     "id": "cell_wall",
+     "x": 100,
+     "y": 200,
+     "w": 380,
+     "h": 580,
+     "color": "green",
+     "width": 6,
+     "fill": "green"
+    },
+    {
+     "op": "write",
+     "id": "lbl_cell",
+     "x": 290,
+     "y": 230,
+     "text": "植物细胞",
+     "size": 36,
+     "color": "green",
+     "anchor": "middle"
+    }
+   ]
+  },
+  {
+   "title": "核心细胞器：叶绿体",
+   "say": "这个关键的细胞器就是叶绿体。我们把它放大来看它的精细双层膜结构。",
+   "ops": [
+    {
+     "op": "ellipse",
+     "id": "mini_cp",
+     "cx": 290,
+     "cy": 450,
+     "rx": 90,
+     "ry": 60,
+     "color": "green",
+     "fill": "green"
+    },
+    {
+     "op": "line",
+     "id": "zoom_line1",
+     "x1": 380,
+     "y1": 430,
+     "x2": 600,
+     "y2": 260,
+     "color": "gray",
+     "dash": true
+    },
+    {
+     "op": "line",
+     "id": "zoom_line2",
+     "x1": 380,
+     "y1": 470,
+     "x2": 600,
+     "y2": 740,
+     "color": "gray",
+     "dash": true
+    },
+    {
+     "op": "ellipse",
+     "id": "cp_outer",
+     "cx": 1050,
+     "cy": 500,
+     "rx": 400,
+     "ry": 240,
+     "color": "green",
+     "width": 6
+    },
+    {
+     "op": "ellipse",
+     "id": "cp_inner",
+     "cx": 1050,
+     "cy": 500,
+     "rx": 375,
+     "ry": 220,
+     "color": "green",
+     "width": 4
+    },
+    {
+     "op": "write",
+     "id": "cp_title",
+     "x": 1050,
+     "y": 180,
+     "text": "叶绿体结构 (Chloroplast)",
+     "size": 42,
+     "color": "green",
+     "anchor": "middle"
+    }
+   ]
+  },
+  {
+   "title": "类囊体与光反应",
+   "say": "叶绿体内部叠着一摞摞像硬币一样的囊状结构，叫类囊体。这里吸收光能，进行光反应并释放氧气。",
+   "ops": [
+    {
+     "op": "ellipse",
+     "id": "thylakoid_1",
+     "cx": 880,
+     "cy": 450,
+     "rx": 90,
+     "ry": 25,
+     "color": "green",
+     "fill": "green"
+    },
+    {
+     "op": "ellipse",
+     "id": "thylakoid_2",
+     "cx": 880,
+     "cy": 490,
+     "rx": 90,
+     "ry": 25,
+     "color": "green",
+     "fill": "green"
+    },
+    {
+     "op": "ellipse",
+     "id": "thylakoid_3",
+     "cx": 880,
+     "cy": 530,
+     "rx": 90,
+     "ry": 25,
+     "color": "green",
+     "fill": "green"
+    },
+    {
+     "op": "write",
+     "id": "lbl_thyla",
+     "x": 750,
+     "y": 620,
+     "text": "类囊体 (基粒)",
+     "size": 32,
+     "color": "ink"
+    },
+    {
+     "op": "line",
+     "id": "thyla_ptr",
+     "x1": 820,
+     "y1": 610,
+     "x2": 860,
+     "y2": 550,
+     "color": "ink",
+     "arrow": true
+    },
+    {
+     "op": "write",
+     "id": "stage1_txt",
+     "x": 720,
+     "y": 670,
+     "text": "• 含有叶绿素\n• 发生「光反应」\n• 分解水，释放 O₂",
+     "size": 28,
+     "color": "blue"
+    }
+   ]
+  },
+  {
+   "title": "叶绿体基质与暗反应",
+   "say": "类囊体周围充满着胶状液体，称为基质。固定二氧化碳并合成糖类的暗反应就在基质中完成。",
+   "ops": [
+    {
+     "op": "write",
+     "id": "lbl_stroma",
+     "x": 1200,
+     "y": 420,
+     "text": "叶绿体基质",
+     "size": 32,
+     "color": "ink"
+    },
+    {
+     "op": "line",
+     "id": "stroma_ptr",
+     "x1": 1260,
+     "y1": 460,
+     "x2": 1220,
+     "y2": 520,
+     "color": "ink",
+     "arrow": true
+    },
+    {
+     "op": "write",
+     "id": "stage2_txt",
+     "x": 1160,
+     "y": 480,
+     "text": "• 充满酶的液体环境\n• 发生「暗反应 (碳反应)」\n• 固定 CO₂ 合成葡萄糖",
+     "size": 28,
+     "color": "red"
+    }
+   ]
+  },
+  {
+   "title": "总结回顾",
+   "say": "总结一下：光合作用发生在叶绿体中，光反应在类囊体薄膜上进行，暗反应在基质中进行。",
+   "ops": [
+    {
+     "op": "rect",
+     "id": "summary_box",
+     "x": 100,
+     "y": 800,
+     "w": 1400,
+     "h": 70,
+     "color": "blue",
+     "width": 3,
+     "fill": "blue"
+    },
+    {
+     "op": "write",
+     "id": "summary_txt",
+     "x": 800,
+     "y": 818,
+     "text": "结论：场所是【叶绿体】（光反应在类囊体，暗反应在基质）",
+     "size": 36,
+     "color": "ink",
+     "anchor": "middle"
+    }
+   ]
+  }
+ ]
+}

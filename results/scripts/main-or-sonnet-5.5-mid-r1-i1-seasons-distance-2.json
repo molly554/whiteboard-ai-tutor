@@ -1,0 +1,223 @@
+{
+ "title": "Why is northern summer hotter?",
+ "lang": "en",
+ "steps": [
+  {
+   "title": "Good catch!",
+   "say": "You're right: in July Earth is actually farther from the Sun. So distance can't be the reason for summer.",
+   "ops": [
+    {
+     "op": "erase",
+     "ids": [
+      "sun",
+      "sunlabel",
+      "orbit",
+      "orbitlabel",
+      "key",
+      "earth1",
+      "axis1",
+      "earth2",
+      "axis2",
+      "earth3",
+      "axis3",
+      "earth4",
+      "axis4"
+     ]
+    },
+    {
+     "op": "write",
+     "id": "ans1",
+     "x": 60,
+     "y": 128,
+     "text": "Good catch! In July Earth is farther away:\n152 million km, versus 147 million km in January.",
+     "size": 38,
+     "color": "blue"
+    }
+   ]
+  },
+  {
+   "title": "The difference is tiny",
+   "say": "Earth's orbit is almost a perfect circle. The distance changes by only about 3 percent, far too little to make hot and cold seasons.",
+   "ops": [
+    {
+     "op": "ellipse",
+     "id": "orb2",
+     "cx": 400,
+     "cy": 620,
+     "rx": 300,
+     "ry": 250,
+     "color": "gray",
+     "width": 4
+    },
+    {
+     "op": "ellipse",
+     "id": "sun2",
+     "cx": 400,
+     "cy": 620,
+     "rx": 30,
+     "ry": 30,
+     "color": "red",
+     "width": 4,
+     "fill": "red"
+    },
+    {
+     "op": "write",
+     "id": "orbtxt",
+     "x": 400,
+     "y": 480,
+     "text": "almost a circle",
+     "size": 30,
+     "anchor": "middle"
+    },
+    {
+     "op": "write",
+     "id": "difftxt",
+     "x": 800,
+     "y": 420,
+     "text": "Only about a 3% difference,\ntoo small to cause\nhot and cold seasons.",
+     "size": 38
+    }
+   ]
+  },
+  {
+   "title": "The tilt matters",
+   "say": "What matters is the tilt of Earth's axis, which changes how sunlight strikes each half of the planet.",
+   "ops": [
+    {
+     "op": "erase",
+     "ids": [
+      "orb2",
+      "sun2",
+      "orbtxt",
+      "difftxt",
+      "ans1"
+     ]
+    },
+    {
+     "op": "write",
+     "id": "tilttxt",
+     "x": 60,
+     "y": 400,
+     "text": "The real cause is the tilt:\nit changes how directly\nsunlight hits us.",
+     "size": 38,
+     "color": "blue"
+    },
+    {
+     "op": "ellipse",
+     "id": "earth",
+     "cx": 1250,
+     "cy": 620,
+     "rx": 120,
+     "ry": 120,
+     "color": "blue",
+     "width": 5,
+     "fill": "blue"
+    },
+    {
+     "op": "line",
+     "id": "axis",
+     "x1": 1182,
+     "y1": 776,
+     "x2": 1318,
+     "y2": 464,
+     "width": 5
+    },
+    {
+     "op": "write",
+     "id": "nlabel",
+     "x": 1330,
+     "y": 420,
+     "text": "North",
+     "size": 30
+    },
+    {
+     "op": "line",
+     "id": "ray1",
+     "x1": 850,
+     "y1": 540,
+     "x2": 1100,
+     "y2": 540,
+     "color": "red",
+     "arrow": true,
+     "width": 4
+    },
+    {
+     "op": "line",
+     "id": "ray2",
+     "x1": 850,
+     "y1": 620,
+     "x2": 1100,
+     "y2": 620,
+     "color": "red",
+     "arrow": true,
+     "width": 4
+    },
+    {
+     "op": "line",
+     "id": "ray3",
+     "x1": 850,
+     "y1": 700,
+     "x2": 1100,
+     "y2": 700,
+     "color": "red",
+     "arrow": true,
+     "width": 4
+    },
+    {
+     "op": "write",
+     "id": "raylabel",
+     "x": 850,
+     "y": 470,
+     "text": "Sunlight",
+     "size": 30
+    }
+   ]
+  },
+  {
+   "title": "Summer and winter",
+   "say": "When the north is tilted toward the Sun, light hits steeply and days are long, so it's summer. Tilted away, light is slanted and spread out, and days are short, so it's winter.",
+   "ops": [
+    {
+     "op": "erase",
+     "ids": [
+      "tilttxt"
+     ]
+    },
+    {
+     "op": "write",
+     "id": "summer",
+     "x": 60,
+     "y": 300,
+     "text": "North tilted toward the Sun:\nsteep rays, long days\n→ summer",
+     "size": 36,
+     "color": "green"
+    },
+    {
+     "op": "write",
+     "id": "winter",
+     "x": 60,
+     "y": 500,
+     "text": "North tilted away:\nslanted, spread-out rays, short days\n→ winter",
+     "size": 36,
+     "color": "red"
+    }
+   ]
+  },
+  {
+   "title": "Summary",
+   "say": "So distance has only a tiny effect. The tilt is the real cause, which is also why the seasons are reversed in the southern hemisphere.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "summary",
+     "x": 60,
+     "y": 780,
+     "text": "Distance: tiny effect. Tilt: the real cause.",
+     "size": 40,
+     "color": "blue",
+     "underline": true
+    }
+   ]
+  }
+ ]
+}

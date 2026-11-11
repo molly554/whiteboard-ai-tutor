@@ -1,0 +1,138 @@
+{
+ "title": "What the green arrow means",
+ "lang": "en",
+ "steps": [
+  {
+   "title": "Point at the arrow",
+   "say": "This green arrow shows a shift of the whole demand curve, not a move along it.",
+   "ops": [
+    {
+     "op": "ellipse",
+     "id": "ring",
+     "cx": 340,
+     "cy": 262,
+     "rx": 100,
+     "ry": 26,
+     "color": "green",
+     "width": 4
+    },
+    {
+     "op": "write",
+     "id": "arrownote",
+     "x": 1200,
+     "y": 120,
+     "text": "Green arrow =\nthe demand curve\nshifts to the right.",
+     "size": 30,
+     "color": "green"
+    }
+   ]
+  },
+  {
+   "title": "Shift vs. move along",
+   "say": "A shift means at every price, buyers now want more. It is not the same as sliding along one curve.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "shiftdef",
+     "x": 1200,
+     "y": 290,
+     "text": "Shift: at each price,\nquantity demanded\nis larger than before.",
+     "size": 30
+    },
+    {
+     "op": "write",
+     "id": "movedef",
+     "x": 1200,
+     "y": 450,
+     "text": "Move along: price\nchanges, same curve.",
+     "size": 30,
+     "color": "gray"
+    }
+   ]
+  },
+  {
+   "title": "New equilibrium",
+   "say": "Because demand shifted right, the crossing point moves up and to the right: a higher price and a higher quantity.",
+   "ops": [
+    {
+     "op": "ellipse",
+     "id": "e2",
+     "cx": 740,
+     "cy": 470,
+     "rx": 9,
+     "ry": 9,
+     "color": "green",
+     "fill": "green"
+    },
+    {
+     "op": "line",
+     "id": "e2v",
+     "x1": 740,
+     "y1": 470,
+     "x2": 740,
+     "y2": 720,
+     "color": "gray",
+     "width": 3,
+     "dash": true
+    },
+    {
+     "op": "line",
+     "id": "e2h",
+     "x1": 200,
+     "y1": 470,
+     "x2": 740,
+     "y2": 470,
+     "color": "gray",
+     "width": 3,
+     "dash": true
+    },
+    {
+     "op": "write",
+     "id": "p2",
+     "x": 130,
+     "y": 452,
+     "text": "P2",
+     "size": 32,
+     "anchor": "middle",
+     "color": "green"
+    },
+    {
+     "op": "write",
+     "id": "q2",
+     "x": 740,
+     "y": 735,
+     "text": "Q2",
+     "size": 32,
+     "anchor": "middle",
+     "color": "green"
+    }
+   ]
+  },
+  {
+   "title": "The answer",
+   "say": "So when demand rises, the equilibrium price goes up, from P1 to P2.",
+   "ops": [
+    {
+     "op": "line",
+     "id": "pstep",
+     "x1": 580,
+     "y1": 470,
+     "x2": 740,
+     "y2": 470,
+     "color": "green",
+     "width": 5,
+     "arrow": true
+    },
+    {
+     "op": "write",
+     "id": "answer",
+     "x": 1200,
+     "y": 610,
+     "text": "Result: price rises\n(P1 → P2) and so\ndoes quantity (Q1 → Q2).",
+     "size": 30,
+     "color": "green"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,285 @@
+{
+ "title": "光合作用的场所",
+ "lang": "zh",
+ "steps": [
+  {
+   "title": "问题",
+   "say": "光合作用发生在细胞的哪个部分？答案是叶绿体。",
+   "ops": [
+    {
+     "id": "q1",
+     "op": "write",
+     "x": 800,
+     "y": 60,
+     "text": "光合作用的场所",
+     "size": 56,
+     "anchor": "middle"
+    },
+    {
+     "id": "q2",
+     "op": "write",
+     "x": 800,
+     "y": 150,
+     "text": "答案：叶绿体",
+     "size": 44,
+     "anchor": "middle",
+     "color": "blue"
+    }
+   ]
+  },
+  {
+   "title": "植物细胞",
+   "say": "先画一个植物细胞，外面是细胞壁，里面是细胞膜。",
+   "ops": [
+    {
+     "id": "cellwall",
+     "op": "rect",
+     "x": 120,
+     "y": 260,
+     "w": 600,
+     "h": 420,
+     "color": "green",
+     "width": 6
+    },
+    {
+     "id": "cellmem",
+     "op": "rect",
+     "x": 140,
+     "y": 280,
+     "w": 560,
+     "h": 380,
+     "color": "ink",
+     "width": 4
+    },
+    {
+     "id": "lblwall",
+     "op": "write",
+     "x": 130,
+     "y": 690,
+     "text": "细胞壁",
+     "size": 30,
+     "color": "green"
+    },
+    {
+     "id": "lblmem",
+     "op": "write",
+     "x": 300,
+     "y": 690,
+     "text": "细胞膜",
+     "size": 30
+    }
+   ]
+  },
+  {
+   "title": "细胞核与液泡",
+   "say": "细胞里有细胞核和中央大液泡，但它们不是光合作用的场所。",
+   "ops": [
+    {
+     "id": "nucleus",
+     "op": "ellipse",
+     "cx": 260,
+     "cy": 400,
+     "rx": 70,
+     "ry": 60,
+     "color": "blue",
+     "width": 4
+    },
+    {
+     "id": "lblnuc",
+     "op": "write",
+     "x": 200,
+     "y": 470,
+     "text": "细胞核",
+     "size": 30,
+     "color": "blue"
+    },
+    {
+     "id": "vacuole",
+     "op": "ellipse",
+     "cx": 480,
+     "cy": 460,
+     "rx": 130,
+     "ry": 100,
+     "color": "gray",
+     "width": 4
+    },
+    {
+     "id": "lblvac",
+     "op": "write",
+     "x": 420,
+     "y": 570,
+     "text": "液泡",
+     "size": 30,
+     "color": "gray"
+    }
+   ]
+  },
+  {
+   "title": "叶绿体",
+   "say": "真正进行光合作用的是叶绿体，它们是绿色的椭圆形小体。",
+   "ops": [
+    {
+     "id": "chl1",
+     "op": "ellipse",
+     "cx": 620,
+     "cy": 340,
+     "rx": 40,
+     "ry": 22,
+     "rotate": -20,
+     "color": "green",
+     "width": 4,
+     "fill": "green"
+    },
+    {
+     "id": "chl2",
+     "op": "ellipse",
+     "cx": 350,
+     "cy": 320,
+     "rx": 40,
+     "ry": 22,
+     "rotate": 15,
+     "color": "green",
+     "width": 4,
+     "fill": "green"
+    },
+    {
+     "id": "chl3",
+     "op": "ellipse",
+     "cx": 600,
+     "cy": 580,
+     "rx": 40,
+     "ry": 22,
+     "rotate": -10,
+     "color": "green",
+     "width": 4,
+     "fill": "green"
+    },
+    {
+     "id": "lblchl",
+     "op": "write",
+     "x": 640,
+     "y": 300,
+     "text": "叶绿体",
+     "size": 32,
+     "color": "green"
+    }
+   ]
+  },
+  {
+   "title": "放大叶绿体",
+   "say": "把叶绿体放大看，里面有类囊体堆叠成的基粒。",
+   "ops": [
+    {
+     "id": "zoomline",
+     "op": "line",
+     "x1": 660,
+     "y1": 340,
+     "x2": 900,
+     "y2": 260,
+     "color": "gray",
+     "width": 3,
+     "dash": true
+    },
+    {
+     "id": "bigchl",
+     "op": "ellipse",
+     "cx": 1150,
+     "cy": 380,
+     "rx": 180,
+     "ry": 110,
+     "color": "green",
+     "width": 5
+    },
+    {
+     "id": "grana1",
+     "op": "rect",
+     "x": 1060,
+     "y": 340,
+     "w": 60,
+     "h": 14,
+     "color": "green",
+     "width": 3,
+     "fill": "green"
+    },
+    {
+     "id": "grana2",
+     "op": "rect",
+     "x": 1060,
+     "y": 360,
+     "w": 60,
+     "h": 14,
+     "color": "green",
+     "width": 3,
+     "fill": "green"
+    },
+    {
+     "id": "grana3",
+     "op": "rect",
+     "x": 1060,
+     "y": 380,
+     "w": 60,
+     "h": 14,
+     "color": "green",
+     "width": 3,
+     "fill": "green"
+    },
+    {
+     "id": "grana4",
+     "op": "rect",
+     "x": 1160,
+     "y": 360,
+     "w": 60,
+     "h": 14,
+     "color": "green",
+     "width": 3,
+     "fill": "green"
+    },
+    {
+     "id": "grana5",
+     "op": "rect",
+     "x": 1160,
+     "y": 380,
+     "w": 60,
+     "h": 14,
+     "color": "green",
+     "width": 3,
+     "fill": "green"
+    },
+    {
+     "id": "lblgrana",
+     "op": "write",
+     "x": 1040,
+     "y": 430,
+     "text": "基粒（类囊体堆叠）",
+     "size": 28,
+     "color": "green"
+    }
+   ]
+  },
+  {
+   "title": "光合作用反应",
+   "say": "在叶绿体里，二氧化碳和水在光能下变成有机物和氧气。",
+   "ops": [
+    {
+     "id": "eq",
+     "op": "write",
+     "x": 800,
+     "y": 720,
+     "text": "CO₂ + H₂O  →  有机物 + O₂",
+     "size": 40,
+     "anchor": "middle"
+    },
+    {
+     "id": "eqnote",
+     "op": "write",
+     "x": 800,
+     "y": 790,
+     "text": "（需要光能，在叶绿体中完成）",
+     "size": 30,
+     "anchor": "middle",
+     "color": "gray"
+    }
+   ]
+  }
+ ]
+}

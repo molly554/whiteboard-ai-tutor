@@ -1,0 +1,202 @@
+{
+ "title": "Why We Have Seasons",
+ "lang": "en",
+ "steps": [
+  {
+   "title": "The question",
+   "say": "Seasons come from the way Earth is tilted, not from how far we are from the Sun.",
+   "ops": [
+    {
+     "id": "t1",
+     "x": 800,
+     "y": 50,
+     "text": "Why We Have Seasons",
+     "size": 56,
+     "anchor": "middle",
+     "type": "write",
+     "op": "write",
+     "color": "blue",
+     "underline": true
+    }
+   ]
+  },
+  {
+   "title": "Sun and orbit",
+   "say": "Earth travels once around the Sun each year in a nearly circular orbit.",
+   "ops": [
+    {
+     "op": "ellipse",
+     "id": "sun",
+     "cx": 800,
+     "cy": 520,
+     "rx": 60,
+     "ry": 60,
+     "color": "red",
+     "fill": "red"
+    },
+    {
+     "op": "write",
+     "id": "sunl",
+     "x": 800,
+     "y": 600,
+     "text": "Sun",
+     "size": 32,
+     "anchor": "middle"
+    },
+    {
+     "op": "ellipse",
+     "id": "orb",
+     "cx": 800,
+     "cy": 520,
+     "rx": 500,
+     "ry": 260,
+     "color": "gray",
+     "width": 3,
+     "dash": true
+    }
+   ]
+  },
+  {
+   "title": "Tilted Earth",
+   "say": "Earth's axis is tilted about 23.5 degrees, and it always points toward the same spot in space.",
+   "ops": [
+    {
+     "op": "ellipse",
+     "id": "e1",
+     "cx": 300,
+     "cy": 520,
+     "rx": 50,
+     "ry": 50,
+     "color": "blue",
+     "fill": "blue"
+    },
+    {
+     "op": "line",
+     "id": "ax1",
+     "x1": 275,
+     "y1": 590,
+     "x2": 325,
+     "y2": 450,
+     "color": "ink",
+     "width": 4
+    },
+    {
+     "op": "write",
+     "id": "tilt",
+     "x": 120,
+     "y": 620,
+     "text": "tilt 23.5°",
+     "size": 32
+    },
+    {
+     "op": "ellipse",
+     "id": "e2",
+     "cx": 1300,
+     "cy": 520,
+     "rx": 50,
+     "ry": 50,
+     "color": "blue",
+     "fill": "blue"
+    },
+    {
+     "op": "line",
+     "id": "ax2",
+     "x1": 1275,
+     "y1": 590,
+     "x2": 1325,
+     "y2": 450,
+     "color": "ink",
+     "width": 4
+    }
+   ]
+  },
+  {
+   "title": "June side",
+   "say": "In June the northern half leans toward the Sun, so sunlight hits it more directly and days are longer.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "jun",
+     "x": 1300,
+     "y": 680,
+     "text": "June",
+     "size": 40,
+     "anchor": "middle",
+     "color": "red"
+    },
+    {
+     "op": "write",
+     "id": "junn",
+     "x": 1300,
+     "y": 740,
+     "text": "North: summer",
+     "size": 32,
+     "anchor": "middle"
+    },
+    {
+     "op": "line",
+     "id": "ray1",
+     "x1": 870,
+     "y1": 500,
+     "x2": 1210,
+     "y2": 500,
+     "color": "red",
+     "arrow": true,
+     "width": 4
+    }
+   ]
+  },
+  {
+   "title": "December side",
+   "say": "Six months later the northern half leans away, so sunlight is slanted and weaker, and days are shorter.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "dec",
+     "x": 300,
+     "y": 680,
+     "text": "December",
+     "size": 40,
+     "anchor": "middle",
+     "color": "blue"
+    },
+    {
+     "op": "write",
+     "id": "decn",
+     "x": 300,
+     "y": 740,
+     "text": "North: winter",
+     "size": 32,
+     "anchor": "middle"
+    },
+    {
+     "op": "line",
+     "id": "ray2",
+     "x1": 730,
+     "y1": 500,
+     "x2": 370,
+     "y2": 500,
+     "color": "red",
+     "arrow": true,
+     "width": 4
+    }
+   ]
+  },
+  {
+   "title": "Key idea",
+   "say": "So the tilt changes how directly sunlight hits us, and that gives us seasons. When it is summer in the north, it is winter in the south.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "key",
+     "x": 800,
+     "y": 160,
+     "text": "Tilt → direct vs slanted sunlight → seasons",
+     "size": 40,
+     "anchor": "middle",
+     "color": "green"
+    }
+   ]
+  }
+ ]
+}

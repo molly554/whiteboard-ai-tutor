@@ -1,0 +1,410 @@
+{
+ "title": "光合作用的场所：叶绿体",
+ "lang": "zh",
+ "steps": [
+  {
+   "title": "核心答案",
+   "say": "光合作用主要发生在植物细胞的“叶绿体”中。我们先来看一下它在植物细胞里的位置。",
+   "ops": [
+    {
+     "op": "write",
+     "id": "main_title",
+     "x": 800,
+     "y": 50,
+     "text": "光合作用的场所：叶绿体",
+     "size": 56,
+     "anchor": "middle",
+     "color": "green",
+     "underline": true
+    },
+    {
+     "op": "rect",
+     "id": "cell_wall",
+     "x": 80,
+     "y": 200,
+     "w": 320,
+     "h": 440,
+     "color": "ink",
+     "width": 5
+    },
+    {
+     "op": "write",
+     "id": "cell_label",
+     "x": 240,
+     "y": 145,
+     "text": "植物细胞",
+     "size": 36,
+     "anchor": "middle",
+     "color": "ink"
+    },
+    {
+     "op": "ellipse",
+     "id": "vacuole",
+     "x": 190,
+     "y": 420,
+     "cx": 190,
+     "cy": 420,
+     "rx": 70,
+     "ry": 130,
+     "color": "gray",
+     "width": 3,
+     "dash": true
+    },
+    {
+     "op": "ellipse",
+     "id": "nucleus",
+     "cx": 310,
+     "cy": 280,
+     "rx": 40,
+     "ry": 40,
+     "color": "gray",
+     "width": 3
+    },
+    {
+     "op": "ellipse",
+     "id": "chloro_small_1",
+     "cx": 320,
+     "cy": 430,
+     "rx": 35,
+     "ry": 20,
+     "color": "green",
+     "fill": "green",
+     "width": 4
+    },
+    {
+     "op": "ellipse",
+     "id": "chloro_small_2",
+     "cx": 300,
+     "cy": 540,
+     "rx": 35,
+     "ry": 20,
+     "color": "green",
+     "fill": "green",
+     "width": 4
+    },
+    {
+     "op": "write",
+     "id": "cell_note",
+     "x": 240,
+     "y": 665,
+     "text": "绿色小颗粒即为叶绿体",
+     "size": 28,
+     "anchor": "middle",
+     "color": "green"
+    }
+   ]
+  },
+  {
+   "title": "放大叶绿体",
+   "say": "把其中一个叶绿体放大来看，它是一个椭球形的结构，外有双层膜包裹，内部充满液态的基质。",
+   "ops": [
+    {
+     "op": "line",
+     "id": "zoom_arrow",
+     "x1": 365,
+     "y1": 430,
+     "x2": 530,
+     "y2": 430,
+     "color": "green",
+     "width": 5,
+     "arrow": true,
+     "dash": true
+    },
+    {
+     "op": "write",
+     "id": "zoom_text",
+     "x": 447,
+     "y": 385,
+     "text": "放大",
+     "size": 32,
+     "anchor": "middle",
+     "color": "green"
+    },
+    {
+     "op": "ellipse",
+     "id": "outer_mem",
+     "cx": 960,
+     "cy": 430,
+     "rx": 410,
+     "ry": 230,
+     "color": "green",
+     "width": 6
+    },
+    {
+     "op": "ellipse",
+     "id": "inner_mem",
+     "cx": 960,
+     "cy": 430,
+     "rx": 390,
+     "ry": 210,
+     "color": "green",
+     "width": 3,
+     "fill": "green"
+    },
+    {
+     "op": "line",
+     "id": "mem_pointer",
+     "x1": 1270,
+     "y1": 270,
+     "x2": 1370,
+     "y2": 210,
+     "color": "ink",
+     "width": 3
+    },
+    {
+     "op": "write",
+     "id": "mem_label",
+     "x": 1380,
+     "y": 190,
+     "text": "双层膜",
+     "size": 34,
+     "color": "ink"
+    }
+   ]
+  },
+  {
+   "title": "类囊体与基粒",
+   "say": "叶绿体内部有许多像硬币一样叠在一起的扁平小囊，叫做“类囊体”，它们堆叠形成“基粒”，叶绿素就分布在这里。",
+   "ops": [
+    {
+     "op": "ellipse",
+     "id": "thy_l1",
+     "cx": 760,
+     "cy": 360,
+     "rx": 75,
+     "ry": 22,
+     "color": "green",
+     "fill": "green",
+     "width": 4
+    },
+    {
+     "op": "ellipse",
+     "id": "thy_l2",
+     "cx": 760,
+     "cy": 405,
+     "rx": 75,
+     "ry": 22,
+     "color": "green",
+     "fill": "green",
+     "width": 4
+    },
+    {
+     "op": "ellipse",
+     "id": "thy_l3",
+     "cx": 760,
+     "cy": 450,
+     "rx": 75,
+     "ry": 22,
+     "color": "green",
+     "fill": "green",
+     "width": 4
+    },
+    {
+     "op": "ellipse",
+     "id": "thy_l4",
+     "cx": 760,
+     "cy": 495,
+     "rx": 75,
+     "ry": 22,
+     "color": "green",
+     "fill": "green",
+     "width": 4
+    },
+    {
+     "op": "line",
+     "id": "thy_pointer",
+     "x1": 760,
+     "y1": 335,
+     "x2": 700,
+     "y2": 270,
+     "color": "ink",
+     "width": 3
+    },
+    {
+     "op": "write",
+     "id": "thy_label",
+     "x": 680,
+     "y": 240,
+     "text": "类囊体 (基粒)",
+     "size": 34,
+     "anchor": "middle",
+     "color": "ink"
+    },
+    {
+     "op": "write",
+     "id": "stroma_label",
+     "x": 1130,
+     "y": 410,
+     "text": "叶绿体基质",
+     "size": 38,
+     "anchor": "middle",
+     "color": "ink"
+    }
+   ]
+  },
+  {
+   "title": "第一阶段：光反应",
+   "say": "光合作用分为两个阶段。第一阶段“光反应”就在类囊体薄膜上进行，叶绿素吸收光能，将水分解并产生氧气。",
+   "ops": [
+    {
+     "op": "line",
+     "id": "light_in",
+     "x1": 620,
+     "y1": 150,
+     "x2": 710,
+     "y2": 325,
+     "color": "red",
+     "width": 5,
+     "arrow": true
+    },
+    {
+     "op": "write",
+     "id": "light_label",
+     "x": 600,
+     "y": 100,
+     "text": "光能 + 水(H2O)",
+     "size": 34,
+     "anchor": "middle",
+     "color": "red"
+    },
+    {
+     "op": "line",
+     "id": "o2_out",
+     "x1": 720,
+     "y1": 525,
+     "x2": 650,
+     "y2": 690,
+     "color": "blue",
+     "width": 5,
+     "arrow": true
+    },
+    {
+     "op": "write",
+     "id": "o2_label",
+     "x": 630,
+     "y": 705,
+     "text": "氧气(O2)",
+     "size": 34,
+     "anchor": "middle",
+     "color": "blue"
+    },
+    {
+     "op": "write",
+     "id": "stage1_tag",
+     "x": 760,
+     "y": 540,
+     "text": "① 光反应",
+     "size": 36,
+     "anchor": "middle",
+     "color": "red"
+    }
+   ]
+  },
+  {
+   "title": "第二阶段：暗反应",
+   "say": "第二阶段“暗反应”（卡尔文循环）发生在叶绿体基质中，利用光反应产生的能量，把二氧化碳合成为有机物。",
+   "ops": [
+    {
+     "op": "line",
+     "id": "energy_trans",
+     "x1": 845,
+     "y1": 430,
+     "x2": 990,
+     "y2": 430,
+     "color": "red",
+     "width": 5,
+     "arrow": true,
+     "dash": true
+    },
+    {
+     "op": "write",
+     "id": "energy_label",
+     "x": 918,
+     "y": 380,
+     "text": "能量",
+     "size": 30,
+     "anchor": "middle",
+     "color": "red"
+    },
+    {
+     "op": "line",
+     "id": "co2_in",
+     "x1": 1150,
+     "y1": 160,
+     "x2": 1130,
+     "y2": 380,
+     "color": "blue",
+     "width": 5,
+     "arrow": true
+    },
+    {
+     "op": "write",
+     "id": "co2_label",
+     "x": 1150,
+     "y": 110,
+     "text": "二氧化碳(CO2)",
+     "size": 34,
+     "anchor": "middle",
+     "color": "blue"
+    },
+    {
+     "op": "line",
+     "id": "sugar_out",
+     "x1": 1130,
+     "y1": 470,
+     "x2": 1150,
+     "y2": 690,
+     "color": "green",
+     "width": 5,
+     "arrow": true
+    },
+    {
+     "op": "write",
+     "id": "sugar_label",
+     "x": 1150,
+     "y": 705,
+     "text": "有机物(糖类)",
+     "size": 34,
+     "anchor": "middle",
+     "color": "green"
+    },
+    {
+     "op": "write",
+     "id": "stage2_tag",
+     "x": 1130,
+     "y": 540,
+     "text": "② 暗反应",
+     "size": 36,
+     "anchor": "middle",
+     "color": "blue"
+    }
+   ]
+  },
+  {
+   "title": "总结与特例",
+   "say": "总结一下：植物的光合作用发生在叶绿体（类囊体与基质）。例外的是蓝细菌等原核生物，没有叶绿体，在细胞质的光合片层上进行。",
+   "ops": [
+    {
+     "op": "rect",
+     "id": "sum_box",
+     "x": 80,
+     "y": 775,
+     "w": 1440,
+     "h": 80,
+     "color": "ink",
+     "width": 3
+    },
+    {
+     "op": "write",
+     "id": "sum_text",
+     "x": 800,
+     "y": 795,
+     "text": "总结：植物在【叶绿体】（光反应：类囊体 / 暗反应：基质）；原核生物（如蓝细菌）在细胞质光合片层",
+     "size": 30,
+     "anchor": "middle",
+     "color": "ink"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,62 @@
+{
+  "title": "Solving a quadratic equation",
+  "lang": "en",
+  "steps": [
+    {
+      "title": "The equation",
+      "say": "We want the x values that make this equation true.",
+      "ops": [
+        { "op": "write", "id": "title", "x": 60, "y": 40, "text": "Solving a quadratic equation", "size": 56, "underline": true },
+        { "op": "write", "id": "eq", "x": 100, "y": 150, "text": "x² − 5x + 6 = 0", "size": 60 }
+      ]
+    },
+    {
+      "title": "Try the formula",
+      "say": "One option is the quadratic formula. It works, but it takes several steps.",
+      "ops": [
+        { "op": "write", "id": "f1", "x": 100, "y": 260, "text": "x = (5 ± √(25 − 24)) / 2", "size": 48, "color": "blue" },
+        { "op": "write", "id": "f2", "x": 100, "y": 340, "text": "x = (5 ± 1) / 2", "size": 48, "color": "blue" },
+        { "op": "write", "id": "faster", "x": 100, "y": 430, "text": "It works — but there's a faster way!", "size": 40, "color": "red" }
+      ]
+    },
+    {
+      "title": "Factor instead",
+      "say": "Let's erase that. Find two numbers whose product is 6 and whose sum is −5: they are −2 and −3. So the equation factors.",
+      "ops": [
+        { "op": "erase", "ids": ["f1", "f2", "faster"] },
+        { "op": "write", "id": "hint", "x": 100, "y": 260, "text": "Find two numbers: product = 6,\nsum = −5  →  −2 and −3", "size": 42 },
+        { "op": "write", "id": "fact", "x": 100, "y": 390, "text": "(x − 2)(x − 3) = 0", "size": 56, "color": "blue" }
+      ]
+    },
+    {
+      "title": "Each factor can be zero",
+      "say": "A product is zero only when one of the factors is zero.",
+      "ops": [
+        { "op": "write", "id": "zero", "x": 100, "y": 490, "text": "x − 2 = 0   or   x − 3 = 0", "size": 44 }
+      ]
+    },
+    {
+      "title": "The answers",
+      "say": "So x = 2 or x = 3.",
+      "ops": [
+        { "op": "write", "id": "ans", "x": 100, "y": 590, "text": "x = 2   or   x = 3", "size": 60, "color": "green" },
+        { "op": "rect", "id": "box", "x": 80, "y": 570, "w": 600, "h": 120, "color": "green", "width": 5 }
+      ]
+    },
+    {
+      "title": "See it on a graph",
+      "say": "On the graph, the curve crosses the x-axis exactly at x = 2 and x = 3.",
+      "ops": [
+        { "op": "line", "id": "xaxis", "x1": 900, "y1": 640, "x2": 1500, "y2": 640, "arrow": true, "width": 4 },
+        { "op": "line", "id": "yaxis", "x1": 950, "y1": 700, "x2": 950, "y2": 280, "arrow": true, "width": 4 },
+        { "op": "path", "id": "curve", "d": "M 950 370 Q 1200 932 1450 370", "color": "blue", "width": 5 },
+        { "op": "ellipse", "id": "dot2", "cx": 1150, "cy": 640, "rx": 9, "ry": 9, "color": "red", "fill": "red" },
+        { "op": "ellipse", "id": "dot3", "cx": 1250, "cy": 640, "rx": 9, "ry": 9, "color": "red", "fill": "red" },
+        { "op": "write", "id": "lab2", "x": 1150, "y": 665, "text": "2", "size": 30, "anchor": "middle" },
+        { "op": "write", "id": "lab3", "x": 1250, "y": 665, "text": "3", "size": 30, "anchor": "middle" },
+        { "op": "write", "id": "curvelab", "x": 1010, "y": 290, "text": "y = x² − 5x + 6", "size": 32, "color": "blue" },
+        { "op": "write", "id": "xl", "x": 1515, "y": 610, "text": "x", "size": 32 }
+      ]
+    }
+  ]
+}

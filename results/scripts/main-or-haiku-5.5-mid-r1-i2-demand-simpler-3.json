@@ -1,0 +1,101 @@
+{
+ "title": "A simpler view: hold the price fixed",
+ "lang": "en",
+ "steps": [
+  {
+   "title": "Hold the price still",
+   "say": "Forget the whole curve for a moment. Keep the price fixed at P1 and look across the dashed line.",
+   "ops": [
+    {
+     "op": "erase",
+     "ids": [
+      "shift",
+      "shiftlab"
+     ]
+    },
+    {
+     "op": "line",
+     "id": "pext",
+     "x1": 580,
+     "y1": 470,
+     "x2": 740,
+     "y2": 470,
+     "color": "gray",
+     "width": 3,
+     "dash": true
+    },
+    {
+     "op": "write",
+     "id": "fixlab",
+     "x": 600,
+     "y": 170,
+     "text": "Same price P1, but more people want the product.",
+     "size": 32,
+     "color": "ink"
+    }
+   ]
+  },
+  {
+   "title": "More wanted at P1",
+   "say": "At the price P1, buyers now want Q2 instead of Q1. The demand curve has moved right.",
+   "ops": [
+    {
+     "op": "ellipse",
+     "id": "q2pt",
+     "cx": 740,
+     "cy": 470,
+     "rx": 9,
+     "ry": 9,
+     "color": "red",
+     "fill": "red"
+    },
+    {
+     "op": "write",
+     "id": "q2",
+     "x": 740,
+     "y": 420,
+     "text": "Q2",
+     "size": 32,
+     "anchor": "middle",
+     "color": "red"
+    },
+    {
+     "op": "line",
+     "id": "gain",
+     "x1": 590,
+     "y1": 505,
+     "x2": 735,
+     "y2": 505,
+     "color": "green",
+     "width": 5,
+     "arrow": true
+    },
+    {
+     "op": "write",
+     "id": "gainlab",
+     "x": 662,
+     "y": 525,
+     "text": "more wanted",
+     "size": 30,
+     "anchor": "middle",
+     "color": "green"
+    }
+   ]
+  },
+  {
+   "title": "Shift vs. move along",
+   "say": "A shift right means more is wanted at every price. A change in price only moves you along the curve.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "summary",
+     "x": 60,
+     "y": 790,
+     "text": "Shift right = more wanted at EVERY price.\nPrice change alone = moving ALONG the curve.",
+     "size": 32,
+     "color": "ink"
+    }
+   ]
+  }
+ ]
+}

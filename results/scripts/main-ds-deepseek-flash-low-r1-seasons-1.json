@@ -1,0 +1,291 @@
+{
+ "title": "Why Do We Have Seasons?",
+ "lang": "en",
+ "steps": [
+  {
+   "title": "The common misconception",
+   "say": "Many people think seasons happen because Earth is closer to the Sun in summer. That's not the main reason.",
+   "ops": [
+    {
+     "id": "title",
+     "op": "write",
+     "x": 800,
+     "y": 60,
+     "text": "Why Do We Have Seasons?",
+     "size": 56,
+     "anchor": "middle"
+    },
+    {
+     "id": "misconception",
+     "op": "write",
+     "x": 80,
+     "y": 150,
+     "text": "Misconception: Earth is closer to the Sun in summer.",
+     "size": 40,
+     "color": "red"
+    },
+    {
+     "id": "cross1",
+     "op": "line",
+     "x1": 100,
+     "y1": 200,
+     "x2": 140,
+     "y2": 240,
+     "color": "red",
+     "width": 6
+    },
+    {
+     "id": "cross2",
+     "op": "line",
+     "x1": 140,
+     "y1": 200,
+     "x2": 100,
+     "y2": 240,
+     "color": "red",
+     "width": 6
+    }
+   ]
+  },
+  {
+   "title": "Earth's tilt",
+   "say": "Earth's axis is tilted about 23.5 degrees. This tilt is the key to seasons.",
+   "ops": [
+    {
+     "id": "tilt_label",
+     "op": "write",
+     "x": 80,
+     "y": 300,
+     "text": "Earth's axis is tilted ~23.5°",
+     "size": 40,
+     "color": "blue"
+    },
+    {
+     "id": "earth_circle",
+     "op": "ellipse",
+     "cx": 400,
+     "cy": 500,
+     "rx": 100,
+     "ry": 100,
+     "color": "blue",
+     "width": 4
+    },
+    {
+     "id": "axis_line",
+     "op": "line",
+     "x1": 400,
+     "y1": 350,
+     "x2": 400,
+     "y2": 650,
+     "color": "gray",
+     "width": 3,
+     "dash": true
+    },
+    {
+     "id": "tilt_axis",
+     "op": "line",
+     "x1": 370,
+     "y1": 380,
+     "x2": 430,
+     "y2": 620,
+     "color": "red",
+     "width": 5
+    },
+    {
+     "id": "tilt_angle",
+     "op": "path",
+     "d": "M 400 500 L 430 500 A 30 30 0 0 1 420 480",
+     "color": "red",
+     "width": 2
+    },
+    {
+     "id": "tilt_text",
+     "op": "write",
+     "x": 430,
+     "y": 480,
+     "text": "23.5°",
+     "size": 28,
+     "color": "red"
+    }
+   ]
+  },
+  {
+   "title": "Sunlight angle",
+   "say": "When sunlight hits at a steeper angle, it's concentrated and warmer. At a shallower angle, it spreads out and is cooler.",
+   "ops": [
+    {
+     "id": "sun",
+     "op": "ellipse",
+     "cx": 800,
+     "cy": 200,
+     "rx": 60,
+     "ry": 60,
+     "color": "red",
+     "fill": "red"
+    },
+    {
+     "id": "sun_label",
+     "op": "write",
+     "x": 800,
+     "y": 130,
+     "text": "Sun",
+     "size": 36,
+     "anchor": "middle"
+    },
+    {
+     "id": "ray1",
+     "op": "line",
+     "x1": 860,
+     "y1": 200,
+     "x2": 1000,
+     "y2": 350,
+     "color": "red",
+     "width": 3,
+     "arrow": true
+    },
+    {
+     "id": "ray2",
+     "op": "line",
+     "x1": 860,
+     "y1": 220,
+     "x2": 1000,
+     "y2": 370,
+     "color": "red",
+     "width": 3,
+     "arrow": true
+    },
+    {
+     "id": "ray3",
+     "op": "line",
+     "x1": 860,
+     "y1": 240,
+     "x2": 1000,
+     "y2": 390,
+     "color": "red",
+     "width": 3,
+     "arrow": true
+    },
+    {
+     "id": "ground",
+     "op": "line",
+     "x1": 950,
+     "y1": 400,
+     "x2": 1100,
+     "y2": 400,
+     "color": "ink",
+     "width": 4
+    },
+    {
+     "id": "warm_label",
+     "op": "write",
+     "x": 1020,
+     "y": 420,
+     "text": "Steep: warm",
+     "size": 32,
+     "color": "red"
+    }
+   ]
+  },
+  {
+   "title": "Summer vs winter",
+   "say": "In summer, your hemisphere tilts toward the Sun, so sunlight hits at a steeper angle. In winter, it tilts away, so sunlight is more spread out.",
+   "ops": [
+    {
+     "id": "summer_label",
+     "op": "write",
+     "x": 80,
+     "y": 600,
+     "text": "Summer: tilts toward Sun",
+     "size": 36,
+     "color": "red"
+    },
+    {
+     "id": "winter_label",
+     "op": "write",
+     "x": 80,
+     "y": 660,
+     "text": "Winter: tilts away from Sun",
+     "size": 36,
+     "color": "blue"
+    },
+    {
+     "id": "arrow_summer",
+     "op": "line",
+     "x1": 400,
+     "y1": 600,
+     "x2": 500,
+     "y2": 600,
+     "color": "red",
+     "width": 4,
+     "arrow": true
+    },
+    {
+     "id": "arrow_winter",
+     "op": "line",
+     "x1": 400,
+     "y1": 660,
+     "x2": 500,
+     "y2": 660,
+     "color": "blue",
+     "width": 4,
+     "arrow": true
+    }
+   ]
+  },
+  {
+   "title": "More hours of daylight",
+   "say": "The tilt also means longer days in summer and shorter days in winter, adding to the effect.",
+   "ops": [
+    {
+     "id": "day_label",
+     "op": "write",
+     "x": 800,
+     "y": 500,
+     "text": "Longer days in summer",
+     "size": 36,
+     "color": "green"
+    },
+    {
+     "id": "night_label",
+     "op": "write",
+     "x": 800,
+     "y": 560,
+     "text": "Shorter days in winter",
+     "size": 36,
+     "color": "gray"
+    },
+    {
+     "id": "sun_path",
+     "op": "path",
+     "d": "M 950 500 Q 1050 450 1150 500",
+     "color": "green",
+     "width": 4,
+     "arrow": true
+    },
+    {
+     "id": "sun_path2",
+     "op": "path",
+     "d": "M 950 560 Q 1050 540 1150 560",
+     "color": "gray",
+     "width": 4,
+     "arrow": true
+    }
+   ]
+  },
+  {
+   "title": "Summary",
+   "say": "Seasons are caused by Earth's tilt, not distance from the Sun. The tilt changes the angle and duration of sunlight.",
+   "ops": [
+    {
+     "id": "summary",
+     "op": "write",
+     "x": 800,
+     "y": 700,
+     "text": "Seasons are caused by Earth's tilt, not distance.",
+     "size": 40,
+     "anchor": "middle",
+     "color": "blue"
+    }
+   ]
+  }
+ ]
+}

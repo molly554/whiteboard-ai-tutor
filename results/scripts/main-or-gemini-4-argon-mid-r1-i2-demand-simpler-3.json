@@ -1,0 +1,283 @@
+{
+ "title": "Why does price rise when demand rises?",
+ "lang": "en",
+ "steps": [
+  {
+   "title": "Let's simplify",
+   "say": "Let's clear the supply curve and extra notes so we can just look at the buyers.",
+   "ops": [
+    {
+     "op": "erase",
+     "ids": [
+      "s",
+      "slab",
+      "e1",
+      "e1v",
+      "e1h",
+      "p1",
+      "q1",
+      "d2",
+      "d2lab",
+      "shift",
+      "shiftlab",
+      "note1",
+      "note2",
+      "note3"
+     ]
+    },
+    {
+     "op": "write",
+     "id": "ex_title",
+     "x": 1180,
+     "y": 180,
+     "text": "Example: Ice Cream",
+     "size": 36,
+     "color": "blue",
+     "underline": true
+    }
+   ]
+  },
+  {
+   "title": "A normal day",
+   "say": "Say ice cream costs $3. On a normal day, buyers want 10 cones. That gives us one point on the D1 line.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "p_val",
+     "x": 130,
+     "y": 452,
+     "text": "$3",
+     "size": 32,
+     "anchor": "middle"
+    },
+    {
+     "op": "line",
+     "id": "h_3",
+     "x1": 200,
+     "y1": 470,
+     "x2": 580,
+     "y2": 470,
+     "color": "gray",
+     "width": 3,
+     "dash": true
+    },
+    {
+     "op": "ellipse",
+     "id": "pt1",
+     "cx": 580,
+     "cy": 470,
+     "rx": 8,
+     "ry": 8,
+     "color": "red",
+     "fill": "red"
+    },
+    {
+     "op": "line",
+     "id": "v_10",
+     "x1": 580,
+     "y1": 470,
+     "x2": 580,
+     "y2": 720,
+     "color": "gray",
+     "width": 3,
+     "dash": true
+    },
+    {
+     "op": "write",
+     "id": "q_10",
+     "x": 580,
+     "y": 735,
+     "text": "10",
+     "size": 32,
+     "anchor": "middle"
+    },
+    {
+     "op": "write",
+     "id": "ex_normal",
+     "x": 1180,
+     "y": 250,
+     "text": "Cool day (D1):\nAt $3 → want 10",
+     "size": 32,
+     "color": "ink"
+    }
+   ]
+  },
+  {
+   "title": "A hot day!",
+   "say": "Suddenly it's a hot summer day! Even at the exact same $3 price, people now want 20 cones. The point moves right.",
+   "ops": [
+    {
+     "op": "line",
+     "id": "h_3_ext",
+     "x1": 580,
+     "y1": 470,
+     "x2": 740,
+     "y2": 470,
+     "color": "green",
+     "width": 5,
+     "arrow": true
+    },
+    {
+     "op": "ellipse",
+     "id": "pt2",
+     "cx": 740,
+     "cy": 470,
+     "rx": 8,
+     "ry": 8,
+     "color": "red",
+     "fill": "red"
+    },
+    {
+     "op": "line",
+     "id": "v_20",
+     "x1": 740,
+     "y1": 470,
+     "x2": 740,
+     "y2": 720,
+     "color": "gray",
+     "width": 3,
+     "dash": true
+    },
+    {
+     "op": "write",
+     "id": "q_20",
+     "x": 740,
+     "y": 735,
+     "text": "20",
+     "size": 32,
+     "anchor": "middle"
+    },
+    {
+     "op": "write",
+     "id": "ex_hot",
+     "x": 1180,
+     "y": 360,
+     "text": "Hot day (D2):\nAt $3 → want 20!",
+     "size": 32,
+     "color": "red"
+    }
+   ]
+  },
+  {
+   "title": "The whole line shifts",
+   "say": "This happens at every price—whether it's $2, $3, or $4, people want more. So the whole demand line shifts right to D2.",
+   "ops": [
+    {
+     "op": "line",
+     "id": "shift_top",
+     "x1": 392,
+     "y1": 370,
+     "x2": 552,
+     "y2": 370,
+     "color": "green",
+     "width": 3,
+     "arrow": true
+    },
+    {
+     "op": "line",
+     "id": "shift_bot",
+     "x1": 768,
+     "y1": 570,
+     "x2": 928,
+     "y2": 570,
+     "color": "green",
+     "width": 3,
+     "arrow": true
+    },
+    {
+     "op": "line",
+     "id": "d2",
+     "x1": 420,
+     "y1": 300,
+     "x2": 1060,
+     "y2": 640,
+     "color": "red",
+     "width": 5
+    },
+    {
+     "op": "write",
+     "id": "d2lab",
+     "x": 1075,
+     "y": 625,
+     "text": "D2",
+     "size": 34,
+     "color": "red"
+    },
+    {
+     "op": "write",
+     "id": "ex_shift",
+     "x": 1180,
+     "y": 470,
+     "text": "More wanted at\nEVERY price\n= Line moves right",
+     "size": 30,
+     "color": "green"
+    }
+   ]
+  },
+  {
+   "title": "Price rises",
+   "say": "Now put the supply line back. Where Supply meets the new D2, the market settles at a higher price, $4!",
+   "ops": [
+    {
+     "op": "line",
+     "id": "s",
+     "x1": 260,
+     "y1": 640,
+     "x2": 900,
+     "y2": 300,
+     "color": "blue",
+     "width": 5
+    },
+    {
+     "op": "write",
+     "id": "slab",
+     "x": 915,
+     "y": 270,
+     "text": "S",
+     "size": 34,
+     "color": "blue"
+    },
+    {
+     "op": "ellipse",
+     "id": "e2",
+     "cx": 660,
+     "cy": 428,
+     "rx": 10,
+     "ry": 10,
+     "color": "blue",
+     "fill": "blue"
+    },
+    {
+     "op": "line",
+     "id": "h_4",
+     "x1": 200,
+     "y1": 428,
+     "x2": 660,
+     "y2": 428,
+     "color": "blue",
+     "width": 3,
+     "dash": true
+    },
+    {
+     "op": "write",
+     "id": "p_4",
+     "x": 130,
+     "y": 395,
+     "text": "$4",
+     "size": 32,
+     "anchor": "middle",
+     "color": "blue"
+    },
+    {
+     "op": "write",
+     "id": "ex_final",
+     "x": 1180,
+     "y": 620,
+     "text": "Shortage at $3\npushes price up to $4!",
+     "size": 32,
+     "color": "blue"
+    }
+   ]
+  }
+ ]
+}

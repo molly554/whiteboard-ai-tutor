@@ -1,0 +1,122 @@
+{
+ "title": "Explaining the shift arrow",
+ "lang": "en",
+ "steps": [
+  {
+   "title": "The shift explained",
+   "say": "That arrow shows a shift of the whole curve: at any given price, people now want to buy a larger quantity.",
+   "ops": [
+    {
+     "op": "erase",
+     "ids": [
+      "note3"
+     ]
+    },
+    {
+     "op": "ellipse",
+     "id": "highlight_arrow",
+     "cx": 340,
+     "cy": 262,
+     "rx": 100,
+     "ry": 25,
+     "color": "green",
+     "width": 3,
+     "dash": true
+    },
+    {
+     "op": "write",
+     "id": "shift_desc",
+     "x": 1200,
+     "y": 600,
+     "text": "Shift to the right:\nAt EVERY price, buyers\nwant more than before.",
+     "size": 30,
+     "color": "green"
+    }
+   ]
+  },
+  {
+   "title": "The new equilibrium",
+   "say": "Because of this rightward shift, buyers compete for limited supply, pushing the price up to P2 at the new equilibrium.",
+   "ops": [
+    {
+     "op": "erase",
+     "ids": [
+      "highlight_arrow"
+     ]
+    },
+    {
+     "op": "ellipse",
+     "id": "e2",
+     "cx": 660,
+     "cy": 385,
+     "rx": 9,
+     "ry": 9,
+     "color": "red",
+     "fill": "red"
+    },
+    {
+     "op": "line",
+     "id": "e2h",
+     "x1": 200,
+     "y1": 385,
+     "x2": 660,
+     "y2": 385,
+     "color": "red",
+     "width": 3,
+     "dash": true
+    },
+    {
+     "op": "line",
+     "id": "e2v",
+     "x1": 660,
+     "y1": 385,
+     "x2": 660,
+     "y2": 720,
+     "color": "red",
+     "width": 3,
+     "dash": true
+    },
+    {
+     "op": "write",
+     "id": "p2",
+     "x": 130,
+     "y": 367,
+     "text": "P2",
+     "size": 32,
+     "anchor": "middle",
+     "color": "red"
+    },
+    {
+     "op": "write",
+     "id": "q2",
+     "x": 660,
+     "y": 735,
+     "text": "Q2",
+     "size": 32,
+     "anchor": "middle",
+     "color": "red"
+    },
+    {
+     "op": "line",
+     "id": "price_up",
+     "x1": 130,
+     "y1": 440,
+     "x2": 130,
+     "y2": 405,
+     "color": "red",
+     "width": 4,
+     "arrow": true
+    },
+    {
+     "op": "write",
+     "id": "conclusion",
+     "x": 1200,
+     "y": 740,
+     "text": "Result: Price rises!",
+     "size": 34,
+     "color": "red"
+    }
+   ]
+  }
+ ]
+}

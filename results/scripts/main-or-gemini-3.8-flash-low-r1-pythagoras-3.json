@@ -1,0 +1,325 @@
+{
+ "title": "Why the Pythagorean Theorem Works",
+ "lang": "en",
+ "steps": [
+  {
+   "title": "The Claim",
+   "say": "For any right triangle with legs a and b and hypotenuse c, the sum of the squares of the legs equals the square of the hypotenuse.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "main_title",
+     "x": 800,
+     "y": 50,
+     "text": "Why does a² + b² = c²?",
+     "size": 52,
+     "color": "ink",
+     "anchor": "middle"
+    },
+    {
+     "op": "path",
+     "id": "tri_shape",
+     "d": "M 200 380 L 360 380 L 200 260 Z",
+     "color": "blue",
+     "width": 4,
+     "fill": "blue"
+    },
+    {
+     "op": "rect",
+     "id": "tri_corner",
+     "x": 200,
+     "y": 360,
+     "w": 20,
+     "h": 20,
+     "color": "blue",
+     "width": 2
+    },
+    {
+     "op": "write",
+     "id": "lbl_a",
+     "x": 165,
+     "y": 310,
+     "text": "a",
+     "size": 32,
+     "color": "ink"
+    },
+    {
+     "op": "write",
+     "id": "lbl_b",
+     "x": 270,
+     "y": 395,
+     "text": "b",
+     "size": 32,
+     "color": "ink"
+    },
+    {
+     "op": "write",
+     "id": "lbl_c",
+     "x": 290,
+     "y": 300,
+     "text": "c",
+     "size": 32,
+     "color": "ink"
+    },
+    {
+     "op": "write",
+     "id": "eq_goal",
+     "x": 520,
+     "y": 300,
+     "text": "Goal: Prove that Area(c²) = Area(a²) + Area(b²)",
+     "size": 36,
+     "color": "ink"
+    }
+   ]
+  },
+  {
+   "title": "Clear the Board for Proof",
+   "say": "Let's use an elegant geometric proof by arranging four copies of this triangle into a large square.",
+   "ops": [
+    {
+     "op": "erase",
+     "ids": [
+      "tri_shape",
+      "tri_corner",
+      "lbl_a",
+      "lbl_b",
+      "lbl_c",
+      "eq_goal"
+     ]
+    },
+    {
+     "op": "write",
+     "id": "sub_header",
+     "x": 800,
+     "y": 125,
+     "text": "Compare two ways to arrange 4 identical triangles in a square of side (a + b)",
+     "size": 32,
+     "color": "gray",
+     "anchor": "middle"
+    }
+   ]
+  },
+  {
+   "title": "Arrangement 1: The c² Square",
+   "say": "In the first square, we place the four triangles around the perimeter, creating a tilted square of side c in the center.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "lbl_fig1",
+     "x": 375,
+     "y": 190,
+     "text": "Arrangement A",
+     "size": 36,
+     "color": "ink",
+     "anchor": "middle"
+    },
+    {
+     "op": "rect",
+     "id": "outer_sq1",
+     "x": 150,
+     "y": 250,
+     "w": 450,
+     "h": 450,
+     "color": "ink",
+     "width": 4
+    },
+    {
+     "op": "path",
+     "id": "t1_1",
+     "d": "M 150 550 L 150 700 L 450 700 Z",
+     "color": "blue",
+     "width": 2,
+     "fill": "blue"
+    },
+    {
+     "op": "path",
+     "id": "t1_2",
+     "d": "M 450 700 L 600 700 L 600 400 Z",
+     "color": "blue",
+     "width": 2,
+     "fill": "blue"
+    },
+    {
+     "op": "path",
+     "id": "t1_3",
+     "d": "M 600 400 L 600 250 L 300 250 Z",
+     "color": "blue",
+     "width": 2,
+     "fill": "blue"
+    },
+    {
+     "op": "path",
+     "id": "t1_4",
+     "d": "M 300 250 L 150 250 L 150 550 Z",
+     "color": "blue",
+     "width": 2,
+     "fill": "blue"
+    },
+    {
+     "op": "path",
+     "id": "inner_c",
+     "d": "M 150 550 L 450 700 L 600 400 L 300 250 Z",
+     "color": "red",
+     "width": 4,
+     "fill": "red"
+    },
+    {
+     "op": "write",
+     "id": "lbl_c2",
+     "x": 375,
+     "y": 455,
+     "text": "c²",
+     "size": 52,
+     "color": "red",
+     "anchor": "middle"
+    },
+    {
+     "op": "write",
+     "id": "math_fig1",
+     "x": 375,
+     "y": 730,
+     "text": "Total Area = 4 Triangles + c²",
+     "size": 32,
+     "color": "ink",
+     "anchor": "middle"
+    }
+   ]
+  },
+  {
+   "title": "Arrangement 2: The a² and b² Squares",
+   "say": "In the second identical square, we pair the four triangles into two rectangles in the corners, leaving behind two empty squares.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "lbl_fig2",
+     "x": 1175,
+     "y": 190,
+     "text": "Arrangement B",
+     "size": 36,
+     "color": "ink",
+     "anchor": "middle"
+    },
+    {
+     "op": "rect",
+     "id": "outer_sq2",
+     "x": 950,
+     "y": 250,
+     "w": 450,
+     "h": 450,
+     "color": "ink",
+     "width": 4
+    },
+    {
+     "op": "rect",
+     "id": "sq_a2",
+     "x": 950,
+     "y": 250,
+     "w": 150,
+     "h": 150,
+     "color": "green",
+     "width": 4,
+     "fill": "green"
+    },
+    {
+     "op": "rect",
+     "id": "sq_b2",
+     "x": 1100,
+     "y": 400,
+     "w": 300,
+     "h": 300,
+     "color": "green",
+     "width": 4,
+     "fill": "green"
+    },
+    {
+     "op": "path",
+     "id": "t2_1",
+     "d": "M 1100 250 L 1400 250 L 1400 400 Z",
+     "color": "blue",
+     "width": 2,
+     "fill": "blue"
+    },
+    {
+     "op": "path",
+     "id": "t2_2",
+     "d": "M 1100 250 L 1100 400 L 1400 400 Z",
+     "color": "blue",
+     "width": 2,
+     "fill": "blue"
+    },
+    {
+     "op": "path",
+     "id": "t2_3",
+     "d": "M 950 400 L 1100 400 L 1100 700 Z",
+     "color": "blue",
+     "width": 2,
+     "fill": "blue"
+    },
+    {
+     "op": "path",
+     "id": "t2_4",
+     "d": "M 950 400 L 950 700 L 1100 700 Z",
+     "color": "blue",
+     "width": 2,
+     "fill": "blue"
+    },
+    {
+     "op": "write",
+     "id": "lbl_a2",
+     "x": 1025,
+     "y": 305,
+     "text": "a²",
+     "size": 40,
+     "color": "green",
+     "anchor": "middle"
+    },
+    {
+     "op": "write",
+     "id": "lbl_b2",
+     "x": 1250,
+     "y": 530,
+     "text": "b²",
+     "size": 52,
+     "color": "green",
+     "anchor": "middle"
+    },
+    {
+     "op": "write",
+     "id": "math_fig2",
+     "x": 1175,
+     "y": 730,
+     "text": "Total Area = 4 Triangles + a² + b²",
+     "size": 32,
+     "color": "ink",
+     "anchor": "middle"
+    }
+   ]
+  },
+  {
+   "title": "Conclusion",
+   "say": "Both large frames are identical in size and both contain the exact same four triangles. Subtracting the triangles reveals that c² must equal a² + b².",
+   "ops": [
+    {
+     "op": "write",
+     "id": "conclusion_text",
+     "x": 800,
+     "y": 790,
+     "text": "Subtracting the 4 blue triangles from both gives:  a² + b² = c²",
+     "size": 38,
+     "color": "ink",
+     "anchor": "middle"
+    },
+    {
+     "op": "rect",
+     "id": "box_qed",
+     "x": 480,
+     "y": 775,
+     "w": 640,
+     "h": 65,
+     "color": "red",
+     "width": 3
+    }
+   ]
+  }
+ ]
+}

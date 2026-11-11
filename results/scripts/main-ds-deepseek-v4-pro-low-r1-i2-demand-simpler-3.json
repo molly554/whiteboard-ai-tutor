@@ -1,0 +1,153 @@
+{
+ "title": "Demand shift made simpler",
+ "lang": "en",
+ "steps": [
+  {
+   "title": "Clear space",
+   "say": "Let me clear the notes so we can focus on the shift.",
+   "ops": [
+    {
+     "op": "erase",
+     "ids": [
+      "note1",
+      "note2",
+      "note3"
+     ]
+    }
+   ]
+  },
+  {
+   "title": "One demand line",
+   "say": "Think of this as the old demand line: at each price, it shows how much people want to buy.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "simpleD1lab",
+     "x": 935,
+     "y": 625,
+     "text": "Old demand",
+     "size": 30,
+     "color": "red"
+    },
+    {
+     "op": "write",
+     "id": "simpleD1note",
+     "x": 940,
+     "y": 672,
+     "text": "At price P, people\nwant this much",
+     "size": 28,
+     "color": "gray"
+    }
+   ]
+  },
+  {
+   "title": "Same price, more wanted",
+   "say": "Now demand rises: at the same price, people want to buy more.",
+   "ops": [
+    {
+     "op": "line",
+     "id": "samePriceLine",
+     "x1": 200,
+     "y1": 470,
+     "x2": 900,
+     "y2": 470,
+     "color": "gray",
+     "width": 3,
+     "dash": true
+    },
+    {
+     "op": "ellipse",
+     "id": "oldPoint",
+     "cx": 580,
+     "cy": 470,
+     "rx": 8,
+     "ry": 8,
+     "color": "red",
+     "fill": "red"
+    },
+    {
+     "op": "ellipse",
+     "id": "newPoint",
+     "cx": 740,
+     "cy": 470,
+     "rx": 8,
+     "ry": 8,
+     "color": "green",
+     "fill": "green"
+    },
+    {
+     "op": "line",
+     "id": "oldToNew",
+     "x1": 580,
+     "y1": 470,
+     "x2": 740,
+     "y2": 470,
+     "color": "green",
+     "width": 5,
+     "arrow": true
+    },
+    {
+     "op": "write",
+     "id": "moreWanted",
+     "x": 700,
+     "y": 430,
+     "text": "more wanted",
+     "size": 28,
+     "anchor": "middle",
+     "color": "green"
+    }
+   ]
+  },
+  {
+   "title": "Shift the whole line",
+   "say": "That is not one point moving. The whole demand line shifts right to D2.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "simpleD2lab",
+     "x": 1075,
+     "y": 625,
+     "text": "New demand",
+     "size": 30,
+     "color": "red"
+    },
+    {
+     "op": "write",
+     "id": "simpleD2note",
+     "x": 940,
+     "y": 672,
+     "text": "At the same price,\npeople now want\nthis much more",
+     "size": 28,
+     "color": "gray"
+    }
+   ]
+  },
+  {
+   "title": "The result",
+   "say": "So demand rising means the demand curve moves right, from old demand to new demand.",
+   "ops": [
+    {
+     "op": "line",
+     "id": "simpleShiftArrow",
+     "x1": 340,
+     "y1": 262,
+     "x2": 500,
+     "y2": 262,
+     "color": "green",
+     "width": 5,
+     "arrow": true
+    },
+    {
+     "op": "write",
+     "id": "simpleShiftLabel",
+     "x": 420,
+     "y": 210,
+     "text": "whole line moves right",
+     "size": 28,
+     "anchor": "middle",
+     "color": "green"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,235 @@
+{
+ "title": "Why Do We Have Seasons?",
+ "lang": "en",
+ "steps": [
+  {
+   "title": "The common myth",
+   "say": "Many people think seasons happen because Earth is closer to the Sun in summer. That's not the main reason.",
+   "ops": [
+    {
+     "id": "t1",
+     "op": "write",
+     "x": 80,
+     "y": 60,
+     "text": "Why Do We Have Seasons?",
+     "size": 56
+    },
+    {
+     "id": "myth",
+     "op": "write",
+     "x": 80,
+     "y": 180,
+     "text": "Myth: Earth is closer to the Sun in summer.",
+     "size": 40,
+     "color": "gray"
+    },
+    {
+     "id": "mythx",
+     "op": "line",
+     "x1": 90,
+     "y1": 205,
+     "x2": 760,
+     "y2": 205,
+     "color": "red",
+     "width": 4
+    }
+   ]
+  },
+  {
+   "title": "The real cause: tilt",
+   "say": "The real cause is Earth's axis is tilted about 23.5 degrees. As Earth orbits, each hemisphere leans toward or away from the Sun.",
+   "ops": [
+    {
+     "id": "real",
+     "op": "write",
+     "x": 80,
+     "y": 260,
+     "text": "Real cause: Earth's axis is tilted ~23.5°",
+     "size": 40,
+     "color": "blue"
+    },
+    {
+     "id": "sun",
+     "op": "ellipse",
+     "cx": 260,
+     "cy": 560,
+     "rx": 90,
+     "ry": 90,
+     "color": "red",
+     "fill": "red"
+    },
+    {
+     "id": "sunlbl",
+     "op": "write",
+     "x": 230,
+     "y": 680,
+     "text": "Sun",
+     "size": 36,
+     "anchor": "middle"
+    },
+    {
+     "id": "orbit",
+     "op": "ellipse",
+     "cx": 700,
+     "cy": 560,
+     "rx": 330,
+     "ry": 200,
+     "color": "gray",
+     "width": 3,
+     "dash": true
+    },
+    {
+     "id": "earth1",
+     "op": "ellipse",
+     "cx": 370,
+     "cy": 560,
+     "rx": 28,
+     "ry": 28,
+     "color": "blue",
+     "fill": "blue"
+    },
+    {
+     "id": "axis1",
+     "op": "line",
+     "x1": 355,
+     "y1": 520,
+     "x2": 385,
+     "y2": 600,
+     "color": "ink",
+     "width": 4
+    },
+    {
+     "id": "earth2",
+     "op": "ellipse",
+     "cx": 1030,
+     "cy": 560,
+     "rx": 28,
+     "ry": 28,
+     "color": "blue",
+     "fill": "blue"
+    },
+    {
+     "id": "axis2",
+     "op": "line",
+     "x1": 1015,
+     "y1": 520,
+     "x2": 1045,
+     "y2": 600,
+     "color": "ink",
+     "width": 4
+    }
+   ]
+  },
+  {
+   "title": "Summer: tilted toward Sun",
+   "say": "In summer, your hemisphere is tilted toward the Sun. Sunlight hits more directly and is concentrated, so it's warmer.",
+   "ops": [
+    {
+     "id": "summer",
+     "op": "write",
+     "x": 80,
+     "y": 780,
+     "text": "Summer: tilted toward Sun → direct, concentrated light",
+     "size": 36,
+     "color": "green"
+    },
+    {
+     "id": "ray1",
+     "op": "line",
+     "x1": 350,
+     "y1": 560,
+     "x2": 300,
+     "y2": 560,
+     "color": "green",
+     "width": 4,
+     "arrow": true
+    },
+    {
+     "id": "ray2",
+     "op": "line",
+     "x1": 350,
+     "y1": 545,
+     "x2": 300,
+     "y2": 545,
+     "color": "green",
+     "width": 4,
+     "arrow": true
+    },
+    {
+     "id": "ray3",
+     "op": "line",
+     "x1": 350,
+     "y1": 575,
+     "x2": 300,
+     "y2": 575,
+     "color": "green",
+     "width": 4,
+     "arrow": true
+    }
+   ]
+  },
+  {
+   "title": "Winter: tilted away",
+   "say": "In winter, your hemisphere is tilted away. Sunlight hits at a slant and spreads out, so it's colder.",
+   "ops": [
+    {
+     "id": "winter",
+     "op": "write",
+     "x": 80,
+     "y": 830,
+     "text": "Winter: tilted away → slanted, spread-out light",
+     "size": 36,
+     "color": "blue"
+    },
+    {
+     "id": "wray1",
+     "op": "line",
+     "x1": 1010,
+     "y1": 560,
+     "x2": 1060,
+     "y2": 560,
+     "color": "blue",
+     "width": 4,
+     "arrow": true
+    },
+    {
+     "id": "wray2",
+     "op": "line",
+     "x1": 1010,
+     "y1": 545,
+     "x2": 1060,
+     "y2": 545,
+     "color": "blue",
+     "width": 4,
+     "arrow": true
+    },
+    {
+     "id": "wray3",
+     "op": "line",
+     "x1": 1010,
+     "y1": 575,
+     "x2": 1060,
+     "y2": 575,
+     "color": "blue",
+     "width": 4,
+     "arrow": true
+    }
+   ]
+  },
+  {
+   "title": "Opposite seasons",
+   "say": "Because of the tilt, the Northern and Southern Hemispheres get opposite seasons at the same time.",
+   "ops": [
+    {
+     "id": "opp",
+     "op": "write",
+     "x": 80,
+     "y": 880,
+     "text": "Opposite hemispheres → opposite seasons",
+     "size": 36,
+     "color": "ink"
+    }
+   ]
+  }
+ ]
+}

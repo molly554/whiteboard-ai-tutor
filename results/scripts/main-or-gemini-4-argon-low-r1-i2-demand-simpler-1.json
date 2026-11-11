@@ -1,0 +1,144 @@
+{
+ "title": "Simpler view of demand shift",
+ "lang": "en",
+ "steps": [
+  {
+   "title": "Hold price steady",
+   "say": "Let's clear the side notes and look at just one price: P1.",
+   "ops": [
+    {
+     "op": "erase",
+     "ids": [
+      "note1",
+      "note2",
+      "note3",
+      "shift",
+      "shiftlab"
+     ]
+    },
+    {
+     "op": "write",
+     "id": "s_note1",
+     "x": 1160,
+     "y": 220,
+     "text": "Imagine a hot day:\nmore people want\nice cream!",
+     "size": 32,
+     "color": "red"
+    }
+   ]
+  },
+  {
+   "title": "More wanted at P1",
+   "say": "Even though the price is still P1, buyers now want Q_new instead of Q1.",
+   "ops": [
+    {
+     "op": "line",
+     "id": "p1_ext",
+     "x1": 580,
+     "y1": 470,
+     "x2": 740,
+     "y2": 470,
+     "color": "red",
+     "width": 4,
+     "arrow": true
+    },
+    {
+     "op": "ellipse",
+     "id": "pt_new",
+     "cx": 740,
+     "cy": 470,
+     "rx": 9,
+     "ry": 9,
+     "color": "red",
+     "fill": "red"
+    },
+    {
+     "op": "line",
+     "id": "qnew_v",
+     "x1": 740,
+     "y1": 470,
+     "x2": 740,
+     "y2": 720,
+     "color": "gray",
+     "width": 3,
+     "dash": true
+    },
+    {
+     "op": "write",
+     "id": "qnew",
+     "x": 740,
+     "y": 735,
+     "text": "Q_new",
+     "size": 32,
+     "anchor": "middle",
+     "color": "red"
+    },
+    {
+     "op": "write",
+     "id": "s_note2",
+     "x": 1160,
+     "y": 380,
+     "text": "At the SAME price P1,\nbuyers want MORE\n(Q1 → Q_new).\n\nEvery point moves right\n→ that is line D2!",
+     "size": 30
+    }
+   ]
+  },
+  {
+   "title": "Shortage pushes price up",
+   "say": "At P1, sellers only have Q1, so there is a shortage. Buyers bid the price up to P2!",
+   "ops": [
+    {
+     "op": "ellipse",
+     "id": "e2",
+     "cx": 660,
+     "cy": 428,
+     "rx": 9,
+     "ry": 9,
+     "color": "green",
+     "fill": "green"
+    },
+    {
+     "op": "line",
+     "id": "e2h",
+     "x1": 200,
+     "y1": 428,
+     "x2": 660,
+     "y2": 428,
+     "color": "gray",
+     "width": 3,
+     "dash": true
+    },
+    {
+     "op": "write",
+     "id": "p2",
+     "x": 130,
+     "y": 405,
+     "text": "P2",
+     "size": 32,
+     "anchor": "middle",
+     "color": "green"
+    },
+    {
+     "op": "line",
+     "id": "p_up",
+     "x1": 85,
+     "y1": 468,
+     "x2": 85,
+     "y2": 420,
+     "color": "green",
+     "width": 5,
+     "arrow": true
+    },
+    {
+     "op": "write",
+     "id": "s_note3",
+     "x": 1160,
+     "y": 620,
+     "text": "Not enough at P1!\nBuyers compete,\npushing price up to P2.",
+     "size": 32,
+     "color": "green"
+    }
+   ]
+  }
+ ]
+}

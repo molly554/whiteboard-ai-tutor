@@ -1,0 +1,271 @@
+{
+ "title": "Why Do We Have Seasons?",
+ "lang": "en",
+ "steps": [
+  {
+   "title": "The Big Question",
+   "say": "Why does Earth have seasons? It's not because we're closer to the Sun in summer.",
+   "ops": [
+    {
+     "id": "title",
+     "op": "write",
+     "x": 800,
+     "y": 70,
+     "text": "Why Do We Have Seasons?",
+     "size": 56,
+     "anchor": "middle"
+    },
+    {
+     "id": "q1",
+     "op": "write",
+     "x": 800,
+     "y": 160,
+     "text": "Hint: it's NOT about distance from the Sun!",
+     "size": 36,
+     "anchor": "middle",
+     "color": "blue"
+    }
+   ]
+  },
+  {
+   "title": "Earth's Tilt",
+   "say": "Earth's axis is tilted about 23.5 degrees from vertical. That tilt stays pointed the same way all year.",
+   "ops": [
+    {
+     "id": "sun",
+     "op": "ellipse",
+     "cx": 200,
+     "cy": 300,
+     "rx": 90,
+     "ry": 90,
+     "fill": "yellow",
+     "color": "ink",
+     "width": 4
+    },
+    {
+     "id": "sunlabel",
+     "op": "write",
+     "x": 200,
+     "y": 405,
+     "text": "Sun",
+     "size": 36,
+     "anchor": "middle"
+    },
+    {
+     "id": "earthc",
+     "op": "ellipse",
+     "cx": 700,
+     "cy": 300,
+     "rx": 70,
+     "ry": 70,
+     "fill": "blue",
+     "color": "ink",
+     "width": 4
+    },
+    {
+     "id": "earthlabel",
+     "op": "write",
+     "x": 700,
+     "y": 385,
+     "text": "Earth",
+     "size": 36,
+     "anchor": "middle"
+    },
+    {
+     "id": "axis",
+     "op": "line",
+     "x1": 680,
+     "y1": 230,
+     "x2": 720,
+     "y2": 370,
+     "color": "red",
+     "width": 6
+    },
+    {
+     "id": "tiltlabel",
+     "op": "write",
+     "x": 760,
+     "y": 250,
+     "text": "23.5° tilt",
+     "size": 32,
+     "color": "red"
+    }
+   ]
+  },
+  {
+   "title": "Same Tilt, Different Sunlight",
+   "say": "As Earth orbits the Sun, the tilt makes sunlight hit at different angles and for different lengths of time.",
+   "ops": [
+    {
+     "id": "orbit",
+     "op": "ellipse",
+     "cx": 700,
+     "cy": 300,
+     "rx": 420,
+     "ry": 190,
+     "color": "gray",
+     "width": 3,
+     "dash": true
+    },
+    {
+     "id": "summerpos",
+     "op": "ellipse",
+     "cx": 1120,
+     "cy": 300,
+     "rx": 70,
+     "ry": 70,
+     "fill": "blue",
+     "color": "ink",
+     "width": 4
+    },
+    {
+     "id": "summeraxis",
+     "op": "line",
+     "x1": 1100,
+     "y1": 230,
+     "x2": 1140,
+     "y2": 370,
+     "color": "red",
+     "width": 6
+    },
+    {
+     "id": "summerlabel",
+     "op": "write",
+     "x": 1120,
+     "y": 395,
+     "text": "Summer (N. Hemisphere)",
+     "size": 28,
+     "anchor": "middle",
+     "color": "red"
+    },
+    {
+     "id": "winterpos",
+     "op": "ellipse",
+     "cx": 280,
+     "cy": 300,
+     "rx": 70,
+     "ry": 70,
+     "fill": "blue",
+     "color": "ink",
+     "width": 4
+    },
+    {
+     "id": "winteraxis",
+     "op": "line",
+     "x1": 260,
+     "y1": 230,
+     "x2": 300,
+     "y2": 370,
+     "color": "red",
+     "width": 6
+    },
+    {
+     "id": "winterlabel",
+     "op": "write",
+     "x": 280,
+     "y": 395,
+     "text": "Winter (N. Hemisphere)",
+     "size": 28,
+     "anchor": "middle",
+     "color": "red"
+    }
+   ]
+  },
+  {
+   "title": "Sunlight Angle Matters",
+   "say": "When sunlight comes in at a steep angle, it spreads over less area and heats the ground more. A shallow angle spreads the same energy over a larger area.",
+   "ops": [
+    {
+     "id": "steepnote",
+     "op": "write",
+     "x": 800,
+     "y": 520,
+     "text": "Steep angle = concentrated energy (summer)",
+     "size": 32,
+     "color": "green"
+    },
+    {
+     "id": "shallowline",
+     "op": "line",
+     "x1": 800,
+     "y1": 620,
+     "x2": 1100,
+     "y2": 620,
+     "color": "ink",
+     "width": 4
+    },
+    {
+     "id": "steeparrow",
+     "op": "line",
+     "x1": 950,
+     "y1": 540,
+     "x2": 950,
+     "y2": 620,
+     "color": "red",
+     "width": 5,
+     "arrow": true
+    },
+    {
+     "id": "shallowarrow",
+     "op": "line",
+     "x1": 800,
+     "y1": 580,
+     "x2": 900,
+     "y2": 620,
+     "color": "blue",
+     "width": 5,
+     "arrow": true
+    },
+    {
+     "id": "shallowlabel",
+     "op": "write",
+     "x": 800,
+     "y": 640,
+     "text": "Shallow angle = spread out energy (winter)",
+     "size": 32,
+     "color": "blue"
+    }
+   ]
+  },
+  {
+   "title": "Day Length Changes Too",
+   "say": "The tilt also changes how long the Sun stays above the horizon. Summer days are longer; winter days are shorter.",
+   "ops": [
+    {
+     "id": "summerdays",
+     "op": "write",
+     "x": 200,
+     "y": 720,
+     "text": "Summer: long days, short nights",
+     "size": 34,
+     "color": "green"
+    },
+    {
+     "id": "winterdays",
+     "op": "write",
+     "x": 200,
+     "y": 790,
+     "text": "Winter: short days, long nights",
+     "size": 34,
+     "color": "blue"
+    }
+   ]
+  },
+  {
+   "title": "Takeaway",
+   "say": "Seasons happen because Earth's tilted axis changes the angle and duration of sunlight throughout the year, not because of our distance from the Sun.",
+   "ops": [
+    {
+     "id": "takeaway",
+     "op": "write",
+     "x": 800,
+     "y": 820,
+     "text": "Key idea: Tilt → angle + day length → seasons",
+     "size": 36,
+     "anchor": "middle",
+     "color": "red"
+    }
+   ]
+  }
+ ]
+}

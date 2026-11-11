@@ -1,0 +1,238 @@
+{
+ "title": "Why Pythagoras Works",
+ "lang": "en",
+ "steps": [
+  {
+   "title": "The claim",
+   "say": "In a right triangle with legs a and b and hypotenuse c, the squares on the legs add up to the square on the hypotenuse.",
+   "ops": [
+    {
+     "id": "t1",
+     "op": "write",
+     "x": 800,
+     "y": 50,
+     "text": "Why Pythagoras Works",
+     "size": 56,
+     "anchor": "middle",
+     "color": "blue"
+    },
+    {
+     "id": "tri1",
+     "op": "path",
+     "d": "M 250 650 L 250 350 L 650 650 Z",
+     "width": 5
+    },
+    {
+     "id": "la",
+     "op": "write",
+     "x": 190,
+     "y": 480,
+     "text": "a",
+     "size": 36
+    },
+    {
+     "id": "lb",
+     "op": "write",
+     "x": 440,
+     "y": 670,
+     "text": "b",
+     "size": 36
+    },
+    {
+     "id": "lc",
+     "op": "write",
+     "x": 480,
+     "y": 440,
+     "text": "c",
+     "size": 36
+    },
+    {
+     "id": "f1",
+     "op": "write",
+     "x": 1100,
+     "y": 450,
+     "text": "a² + b² = c²",
+     "size": 52,
+     "anchor": "middle",
+     "color": "red"
+    }
+   ]
+  },
+  {
+   "title": "Build a big square",
+   "say": "Take four copies of the triangle and arrange them inside a square whose side is a plus b.",
+   "ops": [
+    {
+     "id": "e1",
+     "op": "erase",
+     "ids": [
+      "tri1",
+      "la",
+      "lb",
+      "lc",
+      "f1"
+     ]
+    },
+    {
+     "id": "big",
+     "op": "rect",
+     "x": 300,
+     "y": 200,
+     "w": 500,
+     "h": 500,
+     "width": 5
+    },
+    {
+     "id": "sidetop",
+     "op": "write",
+     "x": 550,
+     "y": 140,
+     "text": "a + b",
+     "size": 34,
+     "anchor": "middle",
+     "color": "gray"
+    },
+    {
+     "id": "sideleft",
+     "op": "write",
+     "x": 170,
+     "y": 430,
+     "text": "a + b",
+     "size": 34,
+     "color": "gray"
+    }
+   ]
+  },
+  {
+   "title": "Tilted square inside",
+   "say": "Place the four triangles in the corners. Their hypotenuses form a tilted square in the middle, with side c.",
+   "ops": [
+    {
+     "id": "q1",
+     "op": "line",
+     "x1": 380,
+     "y1": 200,
+     "x2": 800,
+     "y2": 280,
+     "color": "blue",
+     "width": 5
+    },
+    {
+     "id": "q2",
+     "op": "line",
+     "x1": 800,
+     "y1": 280,
+     "x2": 720,
+     "y2": 700,
+     "color": "blue",
+     "width": 5
+    },
+    {
+     "id": "q3",
+     "op": "line",
+     "x1": 720,
+     "y1": 700,
+     "x2": 300,
+     "y2": 620,
+     "color": "blue",
+     "width": 5
+    },
+    {
+     "id": "q4",
+     "op": "line",
+     "x1": 300,
+     "y1": 620,
+     "x2": 380,
+     "y2": 200,
+     "color": "blue",
+     "width": 5
+    },
+    {
+     "id": "cl",
+     "op": "write",
+     "x": 550,
+     "y": 420,
+     "text": "c²",
+     "size": 48,
+     "anchor": "middle",
+     "color": "red"
+    }
+   ]
+  },
+  {
+   "title": "Count the area: way one",
+   "say": "The big square's area equals the tilted square plus four triangles, each with area one half a times b.",
+   "ops": [
+    {
+     "id": "w1",
+     "op": "write",
+     "x": 900,
+     "y": 250,
+     "text": "Big square =\n c² + 4 · ½ab\n = c² + 2ab",
+     "size": 42
+    }
+   ]
+  },
+  {
+   "title": "Count the area: way two",
+   "say": "But the big square has side a plus b, so its area is a plus b, squared, which expands to a squared plus 2ab plus b squared.",
+   "ops": [
+    {
+     "id": "w2",
+     "op": "write",
+     "x": 900,
+     "y": 520,
+     "text": "Big square =\n (a + b)²\n = a² + 2ab + b²",
+     "size": 42
+    }
+   ]
+  },
+  {
+   "title": "Compare",
+   "say": "Both expressions describe the same area, so they must be equal.",
+   "ops": [
+    {
+     "id": "w3",
+     "op": "write",
+     "x": 1250,
+     "y": 380,
+     "text": "=",
+     "size": 60,
+     "color": "gray"
+    }
+   ]
+  },
+  {
+   "title": "Cancel 2ab",
+   "say": "Subtract 2ab from both sides and what remains is a squared plus b squared equals c squared. That is why it works.",
+   "ops": [
+    {
+     "id": "e2",
+     "op": "erase",
+     "ids": [
+      "w1",
+      "w2",
+      "w3"
+     ]
+    },
+    {
+     "id": "w4",
+     "op": "write",
+     "x": 900,
+     "y": 300,
+     "text": "c² + 2ab = a² + 2ab + b²",
+     "size": 40
+    },
+    {
+     "id": "w5",
+     "op": "write",
+     "x": 900,
+     "y": 480,
+     "text": "c² = a² + b²",
+     "size": 56,
+     "color": "red"
+    }
+   ]
+  }
+ ]
+}

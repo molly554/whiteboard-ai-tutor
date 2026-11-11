@@ -1,0 +1,304 @@
+{
+ "title": "Why Distance Doesn't Rule Seasons",
+ "lang": "en",
+ "steps": [
+  {
+   "title": "Distance barely changes",
+   "say": "Earth's orbit is actually almost a perfect circle. The distance only changes by about 3 percent all year!",
+   "ops": [
+    {
+     "op": "write",
+     "id": "dist_title",
+     "x": 850,
+     "y": 50,
+     "text": "Distance vs. Tilt:",
+     "size": 42,
+     "underline": true
+    },
+    {
+     "op": "write",
+     "id": "dist_fact1",
+     "x": 850,
+     "y": 115,
+     "text": "• Jan (closest): 147 million km",
+     "size": 32
+    },
+    {
+     "op": "write",
+     "id": "dist_fact2",
+     "x": 850,
+     "y": 165,
+     "text": "• July (farthest): 152 million km",
+     "size": 32
+    },
+    {
+     "op": "write",
+     "id": "dist_diff",
+     "x": 850,
+     "y": 215,
+     "text": "Only a 3% difference — too small to drive seasons!",
+     "size": 32,
+     "color": "red"
+    }
+   ]
+  },
+  {
+   "title": "Tilt points North toward the Sun",
+   "say": "Look at the left position in June. The northern half of Earth tilts directly toward the sunlight.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "june_lbl",
+     "x": 280,
+     "y": 465,
+     "text": "June (N. Summer)",
+     "size": 30,
+     "color": "red",
+     "anchor": "middle"
+    },
+    {
+     "op": "write",
+     "id": "dec_lbl",
+     "x": 1320,
+     "y": 465,
+     "text": "Dec (N. Winter)",
+     "size": 30,
+     "color": "blue",
+     "anchor": "middle"
+    },
+    {
+     "op": "line",
+     "id": "ray1",
+     "x1": 730,
+     "y1": 580,
+     "x2": 330,
+     "y2": 580,
+     "color": "red",
+     "width": 4,
+     "arrow": true
+    },
+    {
+     "op": "line",
+     "id": "ray2",
+     "x1": 730,
+     "y1": 620,
+     "x2": 330,
+     "y2": 620,
+     "color": "red",
+     "width": 4,
+     "arrow": true
+    },
+    {
+     "op": "write",
+     "id": "ray_lbl",
+     "x": 530,
+     "y": 530,
+     "text": "Direct sunlight",
+     "size": 28,
+     "color": "red",
+     "anchor": "middle"
+    }
+   ]
+  },
+  {
+   "title": "Why tilt beats distance",
+   "say": "Let's clear the orbit diagram and zoom in on a patch of ground to see why tilt makes such a huge difference.",
+   "ops": [
+    {
+     "op": "erase",
+     "ids": [
+      "sun",
+      "sunlabel",
+      "orbit",
+      "orbitlabel",
+      "earth1",
+      "axis1",
+      "earth2",
+      "axis2",
+      "earth3",
+      "axis3",
+      "earth4",
+      "axis4",
+      "june_lbl",
+      "dec_lbl",
+      "ray1",
+      "ray2",
+      "ray_lbl"
+     ]
+    },
+    {
+     "op": "write",
+     "id": "two_reasons",
+     "x": 60,
+     "y": 250,
+     "text": "Tilting toward the Sun gives two huge boosts:",
+     "size": 38,
+     "color": "ink"
+    }
+   ]
+  },
+  {
+   "title": "Effect 1: Concentrated vs. Spread Out",
+   "say": "First: direct light hits high overhead and concentrates heat into a small area. Low-angle winter light spreads the same energy over a much wider area.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "eff1_title",
+     "x": 80,
+     "y": 330,
+     "text": "1. Concentrated Sunlight (Summer)",
+     "size": 34,
+     "color": "red"
+    },
+    {
+     "op": "line",
+     "id": "ground1",
+     "x1": 100,
+     "y1": 560,
+     "x2": 600,
+     "y2": 560,
+     "color": "ink",
+     "width": 6
+    },
+    {
+     "op": "line",
+     "id": "s_ray1",
+     "x1": 300,
+     "y1": 400,
+     "x2": 300,
+     "y2": 550,
+     "color": "red",
+     "width": 5,
+     "arrow": true
+    },
+    {
+     "op": "line",
+     "id": "s_ray2",
+     "x1": 400,
+     "y1": 400,
+     "x2": 400,
+     "y2": 550,
+     "color": "red",
+     "width": 5,
+     "arrow": true
+    },
+    {
+     "op": "ellipse",
+     "id": "spot1",
+     "cx": 350,
+     "cy": 560,
+     "rx": 65,
+     "ry": 15,
+     "color": "red",
+     "fill": "red"
+    },
+    {
+     "op": "write",
+     "id": "spot1_lbl",
+     "x": 350,
+     "y": 590,
+     "text": "Small area = Intense heat",
+     "size": 28,
+     "color": "red",
+     "anchor": "middle"
+    },
+    {
+     "op": "write",
+     "id": "eff2_title",
+     "x": 850,
+     "y": 330,
+     "text": "Low-Angle Sunlight (Winter)",
+     "size": 34,
+     "color": "blue"
+    },
+    {
+     "op": "line",
+     "id": "ground2",
+     "x1": 850,
+     "y1": 560,
+     "x2": 1450,
+     "y2": 560,
+     "color": "ink",
+     "width": 6
+    },
+    {
+     "op": "line",
+     "id": "w_ray1",
+     "x1": 880,
+     "y1": 400,
+     "x2": 1080,
+     "y2": 550,
+     "color": "blue",
+     "width": 5,
+     "arrow": true
+    },
+    {
+     "op": "line",
+     "id": "w_ray2",
+     "x1": 1030,
+     "y1": 400,
+     "x2": 1280,
+     "y2": 550,
+     "color": "blue",
+     "width": 5,
+     "arrow": true
+    },
+    {
+     "op": "ellipse",
+     "id": "spot2",
+     "cx": 1180,
+     "cy": 560,
+     "rx": 140,
+     "ry": 15,
+     "color": "blue",
+     "fill": "blue"
+    },
+    {
+     "op": "write",
+     "id": "spot2_lbl",
+     "x": 1180,
+     "y": 590,
+     "text": "Spread out = Weak heat",
+     "size": 28,
+     "color": "blue",
+     "anchor": "middle"
+    }
+   ]
+  },
+  {
+   "title": "Effect 2: Longer Daylight Hours",
+   "say": "Second: tilting toward the Sun keeps you in the sunlit half for more hours each day, giving the ground much more time to warm up!",
+   "ops": [
+    {
+     "op": "rect",
+     "id": "summary_box",
+     "x": 80,
+     "y": 670,
+     "w": 1370,
+     "h": 160,
+     "color": "green",
+     "width": 4,
+     "fill": "green"
+    },
+    {
+     "op": "write",
+     "id": "eff_days",
+     "x": 110,
+     "y": 690,
+     "text": "2. Longer Days: ~15 hours of heating in summer vs. ~9 hours in winter.",
+     "size": 34,
+     "color": "green"
+    },
+    {
+     "op": "write",
+     "id": "conclusion",
+     "x": 110,
+     "y": 755,
+     "text": "Takeaway: Steep angle + Long days easily overpower the tiny 3% distance change!",
+     "size": 34,
+     "color": "ink"
+    }
+   ]
+  }
+ ]
+}

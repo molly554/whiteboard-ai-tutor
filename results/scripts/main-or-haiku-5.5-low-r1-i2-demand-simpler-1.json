@@ -1,0 +1,115 @@
+{
+ "title": "Demand shift, simpler",
+ "lang": "en",
+ "steps": [
+  {
+   "title": "Clear the old shift",
+   "say": "Let's drop the confusing arrow. At one fixed price, look at how many buyers want the product.",
+   "ops": [
+    {
+     "op": "erase",
+     "ids": [
+      "d2",
+      "d2lab",
+      "shift",
+      "shiftlab"
+     ]
+    },
+    {
+     "op": "write",
+     "id": "fixlab",
+     "x": 640,
+     "y": 200,
+     "text": "Same price, more buyers",
+     "size": 32,
+     "color": "green"
+    },
+    {
+     "op": "line",
+     "id": "pl",
+     "x1": 200,
+     "y1": 500,
+     "x2": 1000,
+     "y2": 500,
+     "color": "gray",
+     "width": 3,
+     "dash": true
+    },
+    {
+     "op": "ellipse",
+     "id": "ptA",
+     "cx": 637,
+     "cy": 500,
+     "rx": 8,
+     "ry": 8,
+     "color": "red",
+     "fill": "red"
+    },
+    {
+     "op": "write",
+     "id": "plab",
+     "x": 1010,
+     "y": 485,
+     "text": "P",
+     "size": 32,
+     "color": "gray"
+    }
+   ]
+  },
+  {
+   "title": "Demand moves right",
+   "say": "A demand rise moves the whole curve right to D2. At the same price, buyers now want more, so the new point B is further right.",
+   "ops": [
+    {
+     "op": "line",
+     "id": "d2",
+     "x1": 460,
+     "y1": 300,
+     "x2": 1100,
+     "y2": 640,
+     "color": "red",
+     "width": 5
+    },
+    {
+     "op": "write",
+     "id": "d2lab",
+     "x": 1115,
+     "y": 625,
+     "text": "D2",
+     "size": 34,
+     "color": "red"
+    },
+    {
+     "op": "ellipse",
+     "id": "ptB",
+     "cx": 837,
+     "cy": 500,
+     "rx": 8,
+     "ry": 8,
+     "color": "green",
+     "fill": "green"
+    },
+    {
+     "op": "line",
+     "id": "gap",
+     "x1": 660,
+     "y1": 500,
+     "x2": 815,
+     "y2": 500,
+     "color": "green",
+     "width": 5,
+     "arrow": true
+    },
+    {
+     "op": "write",
+     "id": "gaplab",
+     "x": 660,
+     "y": 462,
+     "text": "more bought at same price",
+     "size": 28,
+     "color": "green"
+    }
+   ]
+  }
+ ]
+}

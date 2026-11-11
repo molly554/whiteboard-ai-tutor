@@ -1,0 +1,280 @@
+{
+ "title": "Demand shift, simpler",
+ "lang": "en",
+ "steps": [
+  {
+   "title": "Clear the board",
+   "say": "Let me clear the board and show the shift with just one line at a time.",
+   "ops": [
+    {
+     "op": "erase",
+     "ids": [
+      "d1",
+      "d1lab",
+      "note1",
+      "s",
+      "slab",
+      "note2",
+      "e1",
+      "e1v",
+      "e1h",
+      "p1",
+      "q1",
+      "note3",
+      "d2",
+      "d2lab",
+      "shift",
+      "shiftlab",
+      "price",
+      "qty"
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Fresh axes",
+   "say": "Same axes: price up, quantity across.",
+   "ops": [
+    {
+     "op": "line",
+     "id": "ax2",
+     "x1": 220,
+     "y1": 700,
+     "x2": 1000,
+     "y2": 700,
+     "arrow": true,
+     "width": 4
+    },
+    {
+     "op": "line",
+     "id": "ay2",
+     "x1": 220,
+     "y1": 700,
+     "x2": 220,
+     "y2": 200,
+     "arrow": true,
+     "width": 4
+    },
+    {
+     "op": "write",
+     "id": "plab2",
+     "x": 220,
+     "y": 150,
+     "text": "Price",
+     "size": 34,
+     "anchor": "middle"
+    },
+    {
+     "op": "write",
+     "id": "qlab2",
+     "x": 920,
+     "y": 715,
+     "text": "Quantity",
+     "size": 34
+    }
+   ]
+  },
+  {
+   "title": "One buyer at a price",
+   "say": "Fix a price here. How many units do buyers want? That is a single point.",
+   "ops": [
+    {
+     "op": "line",
+     "id": "pline",
+     "x1": 220,
+     "y1": 420,
+     "x2": 1000,
+     "y2": 420,
+     "color": "gray",
+     "width": 3,
+     "dash": true
+    },
+    {
+     "op": "write",
+     "id": "plab3",
+     "x": 150,
+     "y": 402,
+     "text": "P",
+     "size": 32,
+     "anchor": "middle"
+    },
+    {
+     "op": "ellipse",
+     "id": "dotA",
+     "cx": 520,
+     "cy": 420,
+     "rx": 9,
+     "ry": 9,
+     "color": "red",
+     "fill": "red"
+    },
+    {
+     "op": "write",
+     "id": "dotAlab",
+     "x": 520,
+     "y": 440,
+     "text": "A",
+     "size": 32,
+     "anchor": "middle",
+     "color": "red"
+    }
+   ]
+  },
+  {
+   "title": "More buyers, same price",
+   "say": "Demand rises: at the very same price, buyers now want more. So the point slides right to B.",
+   "ops": [
+    {
+     "op": "ellipse",
+     "id": "dotB",
+     "cx": 720,
+     "cy": 420,
+     "rx": 9,
+     "ry": 9,
+     "color": "green",
+     "fill": "green"
+    },
+    {
+     "op": "write",
+     "id": "dotBlab",
+     "x": 720,
+     "y": 440,
+     "text": "B",
+     "size": 32,
+     "anchor": "middle",
+     "color": "green"
+    },
+    {
+     "op": "line",
+     "id": "slide",
+     "x1": 540,
+     "y1": 420,
+     "x2": 700,
+     "y2": 420,
+     "color": "green",
+     "width": 5,
+     "arrow": true
+    },
+    {
+     "op": "write",
+     "id": "slidelab",
+     "x": 620,
+     "y": 378,
+     "text": "more wanted",
+     "size": 30,
+     "anchor": "middle",
+     "color": "green"
+    }
+   ]
+  },
+  {
+   "title": "Join the dots",
+   "say": "Do that for every price and the points line up into a new curve, shifted right.",
+   "ops": [
+    {
+     "op": "line",
+     "id": "dnew",
+     "x1": 340,
+     "y1": 260,
+     "x2": 860,
+     "y2": 640,
+     "color": "red",
+     "width": 5
+    },
+    {
+     "op": "write",
+     "id": "dnewlab",
+     "x": 875,
+     "y": 630,
+     "text": "D2",
+     "size": 34,
+     "color": "red"
+    },
+    {
+     "op": "write",
+     "id": "doldlab",
+     "x": 330,
+     "y": 640,
+     "text": "D1",
+     "size": 34,
+     "color": "gray"
+    },
+    {
+     "op": "line",
+     "id": "dold",
+     "x1": 240,
+     "y1": 340,
+     "x2": 700,
+     "y2": 660,
+     "color": "gray",
+     "width": 4,
+     "dash": true
+    }
+   ]
+  },
+  {
+   "title": "Why price rises",
+   "say": "Add supply back. The new crossing sits higher, so the market price goes up.",
+   "ops": [
+    {
+     "op": "line",
+     "id": "s2",
+     "x1": 300,
+     "y1": 640,
+     "x2": 860,
+     "y2": 300,
+     "color": "blue",
+     "width": 5
+    },
+    {
+     "op": "write",
+     "id": "s2lab",
+     "x": 875,
+     "y": 270,
+     "text": "S",
+     "size": 34,
+     "color": "blue"
+    },
+    {
+     "op": "ellipse",
+     "id": "e2",
+     "cx": 640,
+     "cy": 452,
+     "rx": 9,
+     "ry": 9,
+     "color": "ink",
+     "fill": "ink"
+    },
+    {
+     "op": "line",
+     "id": "e2h",
+     "x1": 220,
+     "y1": 452,
+     "x2": 640,
+     "y2": 452,
+     "color": "gray",
+     "width": 3,
+     "dash": true
+    },
+    {
+     "op": "write",
+     "id": "p2",
+     "x": 150,
+     "y": 434,
+     "text": "P2",
+     "size": 32,
+     "anchor": "middle",
+     "color": "red"
+    },
+    {
+     "op": "write",
+     "id": "p1b",
+     "x": 150,
+     "y": 402,
+     "text": "",
+     "size": 24
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,287 @@
+{
+ "title": "Why is it hotter when farther?",
+ "lang": "en",
+ "steps": [
+  {
+   "title": "Distance barely changes",
+   "say": "Yes! In July, Earth is actually slightly farther from the Sun. Let's look at the numbers.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "dist_title",
+     "x": 850,
+     "y": 40,
+     "text": "Distance vs. Tilt:",
+     "size": 44,
+     "underline": true
+    },
+    {
+     "op": "write",
+     "id": "dist_jan",
+     "x": 850,
+     "y": 110,
+     "text": "• Jan (closest): 147 million km",
+     "size": 34
+    },
+    {
+     "op": "write",
+     "id": "dist_jul",
+     "x": 850,
+     "y": 160,
+     "text": "• Jul (farthest): 152 million km",
+     "size": 34
+    },
+    {
+     "op": "write",
+     "id": "dist_diff",
+     "x": 850,
+     "y": 215,
+     "text": "Only a 3% difference! Orbit is nearly a circle.",
+     "size": 34,
+     "color": "gray"
+    }
+   ]
+  },
+  {
+   "title": "Northern summer on the orbit",
+   "say": "Look at the left side: the North Pole tilts toward the Sun. That's June — northern summer.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "jun_lbl",
+     "x": 180,
+     "y": 440,
+     "text": "June (N. Summer)\nNorth tilts toward Sun",
+     "size": 30,
+     "color": "red",
+     "anchor": "middle"
+    },
+    {
+     "op": "line",
+     "id": "ray_jun1",
+     "x1": 730,
+     "y1": 585,
+     "x2": 330,
+     "y2": 585,
+     "color": "red",
+     "width": 4,
+     "arrow": true
+    },
+    {
+     "op": "line",
+     "id": "ray_jun2",
+     "x1": 730,
+     "y1": 615,
+     "x2": 330,
+     "y2": 615,
+     "color": "red",
+     "width": 4,
+     "arrow": true
+    },
+    {
+     "op": "write",
+     "id": "dec_lbl",
+     "x": 1400,
+     "y": 440,
+     "text": "Dec (N. Winter)\nNorth tilts away",
+     "size": 30,
+     "color": "blue",
+     "anchor": "middle"
+    },
+    {
+     "op": "line",
+     "id": "ray_dec1",
+     "x1": 870,
+     "y1": 600,
+     "x2": 1270,
+     "y2": 600,
+     "color": "blue",
+     "width": 4,
+     "arrow": true
+    }
+   ]
+  },
+  {
+   "title": "Why tilt beats distance: beam angle",
+   "say": "Let's zoom in on the ground. When tilted toward the Sun, sunlight hits steeper and concentrates in a small area.",
+   "ops": [
+    {
+     "op": "erase",
+     "ids": [
+      "orbit",
+      "orbitlabel",
+      "sun",
+      "sunlabel",
+      "earth1",
+      "axis1",
+      "earth2",
+      "axis2",
+      "earth3",
+      "axis3",
+      "earth4",
+      "axis4",
+      "jun_lbl",
+      "dec_lbl",
+      "ray_jun1",
+      "ray_jun2",
+      "ray_dec1"
+     ]
+    },
+    {
+     "op": "write",
+     "id": "effect1",
+     "x": 60,
+     "y": 250,
+     "text": "1. Steeper angle = concentrated heat",
+     "size": 38,
+     "color": "red"
+    },
+    {
+     "op": "line",
+     "id": "gnd1",
+     "x1": 100,
+     "y1": 700,
+     "x2": 650,
+     "y2": 700,
+     "color": "ink",
+     "width": 6
+    },
+    {
+     "op": "line",
+     "id": "sray1",
+     "x1": 300,
+     "y1": 380,
+     "x2": 300,
+     "y2": 690,
+     "color": "red",
+     "width": 5,
+     "arrow": true
+    },
+    {
+     "op": "line",
+     "id": "sray2",
+     "x1": 450,
+     "y1": 380,
+     "x2": 450,
+     "y2": 690,
+     "color": "red",
+     "width": 5,
+     "arrow": true
+    },
+    {
+     "op": "ellipse",
+     "id": "spot1",
+     "cx": 375,
+     "cy": 700,
+     "rx": 85,
+     "ry": 18,
+     "color": "red",
+     "fill": "red"
+    },
+    {
+     "op": "write",
+     "id": "spot1_lbl",
+     "x": 375,
+     "y": 735,
+     "text": "Summer: High angle\nSame energy in small patch -> HOT",
+     "size": 32,
+     "color": "red",
+     "anchor": "middle"
+    }
+   ]
+  },
+  {
+   "title": "Low angle in winter",
+   "say": "When tilted away, the exact same beam of sunlight hits at a low angle and spreads out thin.",
+   "ops": [
+    {
+     "op": "line",
+     "id": "gnd2",
+     "x1": 850,
+     "y1": 700,
+     "x2": 1500,
+     "y2": 700,
+     "color": "ink",
+     "width": 6
+    },
+    {
+     "op": "line",
+     "id": "wray1",
+     "x1": 1300,
+     "y1": 380,
+     "x2": 980,
+     "y2": 690,
+     "color": "blue",
+     "width": 5,
+     "arrow": true
+    },
+    {
+     "op": "line",
+     "id": "wray2",
+     "x1": 1510,
+     "y1": 380,
+     "x2": 1290,
+     "y2": 690,
+     "color": "blue",
+     "width": 5,
+     "arrow": true
+    },
+    {
+     "op": "ellipse",
+     "id": "spot2",
+     "cx": 1135,
+     "cy": 700,
+     "rx": 170,
+     "ry": 18,
+     "color": "blue",
+     "fill": "blue"
+    },
+    {
+     "op": "write",
+     "id": "spot2_lbl",
+     "x": 1175,
+     "y": 735,
+     "text": "Winter: Low angle\nSpread over large area -> COLD",
+     "size": 32,
+     "color": "blue",
+     "anchor": "middle"
+    }
+   ]
+  },
+  {
+   "title": "Bonus: Longer days",
+   "say": "Plus, tilting toward the Sun gives you more hours of daylight to heat up the ground!",
+   "ops": [
+    {
+     "op": "write",
+     "id": "effect2",
+     "x": 60,
+     "y": 310,
+     "text": "2. Longer days = more hours of heating (e.g. 15 hrs vs 9 hrs)",
+     "size": 38,
+     "color": "green"
+    },
+    {
+     "op": "rect",
+     "id": "sum_box",
+     "x": 850,
+     "y": 270,
+     "w": 680,
+     "h": 75,
+     "color": "green",
+     "fill": "green"
+    },
+    {
+     "op": "write",
+     "id": "sum_txt",
+     "x": 1190,
+     "y": 290,
+     "text": "Direct rays + Long days >> 3% distance!",
+     "size": 34,
+     "color": "ink",
+     "anchor": "middle"
+    }
+   ]
+  }
+ ]
+}

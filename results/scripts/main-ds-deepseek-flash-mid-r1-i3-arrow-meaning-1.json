@@ -1,0 +1,186 @@
+{
+ "title": "What the green arrow means",
+ "lang": "en",
+ "steps": [
+  {
+   "title": "It is a shift",
+   "say": "That green arrow labels the demand curve moving to a new position — a shift of the whole curve.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "arrowlab",
+     "x": 250,
+     "y": 130,
+     "text": "green arrow = a shift right",
+     "size": 30,
+     "color": "green"
+    }
+   ]
+  },
+  {
+   "title": "Shift vs. move along",
+   "say": "Don't confuse shifting the curve with sliding along one curve.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "notemove",
+     "x": 60,
+     "y": 775,
+     "text": "Shift is not a move along the curve\nalong: price changed · shift: other causes",
+     "size": 28
+    }
+   ]
+  },
+  {
+   "title": "Same price, more wanted",
+   "say": "Pick any price. At that same price the quantity buyers want is now larger — from A on D1 to B on D2.",
+   "ops": [
+    {
+     "op": "line",
+     "id": "pline",
+     "x1": 200,
+     "y1": 400,
+     "x2": 444,
+     "y2": 400,
+     "color": "gray",
+     "width": 3,
+     "dash": true
+    },
+    {
+     "op": "write",
+     "id": "sameprice",
+     "x": 206,
+     "y": 354,
+     "text": "same price",
+     "size": 28,
+     "color": "gray"
+    },
+    {
+     "op": "ellipse",
+     "id": "pa",
+     "cx": 448,
+     "cy": 400,
+     "rx": 8,
+     "ry": 8,
+     "color": "ink",
+     "fill": "ink"
+    },
+    {
+     "op": "line",
+     "id": "qaarrow",
+     "x1": 456,
+     "y1": 400,
+     "x2": 600,
+     "y2": 400,
+     "color": "green",
+     "width": 4,
+     "arrow": true
+    },
+    {
+     "op": "ellipse",
+     "id": "pb",
+     "cx": 608,
+     "cy": 400,
+     "rx": 8,
+     "ry": 8,
+     "color": "ink",
+     "fill": "ink"
+    },
+    {
+     "op": "write",
+     "id": "la",
+     "x": 434,
+     "y": 412,
+     "text": "A",
+     "size": 28
+    },
+    {
+     "op": "write",
+     "id": "lb",
+     "x": 594,
+     "y": 412,
+     "text": "B",
+     "size": 28
+    },
+    {
+     "op": "write",
+     "id": "notemore",
+     "x": 960,
+     "y": 790,
+     "text": "At the same price, buyers want more",
+     "size": 28
+    }
+   ]
+  },
+  {
+   "title": "Higher price",
+   "say": "With demand shifted right, the new crossing with supply sits higher, so the price is higher.",
+   "ops": [
+    {
+     "op": "ellipse",
+     "id": "e2",
+     "cx": 660,
+     "cy": 428,
+     "rx": 9,
+     "ry": 9,
+     "color": "green",
+     "fill": "green"
+    },
+    {
+     "op": "line",
+     "id": "e2h",
+     "x1": 200,
+     "y1": 428,
+     "x2": 660,
+     "y2": 428,
+     "color": "gray",
+     "width": 3,
+     "dash": true
+    },
+    {
+     "op": "line",
+     "id": "e2v",
+     "x1": 660,
+     "y1": 428,
+     "x2": 660,
+     "y2": 720,
+     "color": "gray",
+     "width": 3,
+     "dash": true
+    },
+    {
+     "op": "write",
+     "id": "p2",
+     "x": 146,
+     "y": 404,
+     "text": "P2",
+     "size": 30
+    },
+    {
+     "op": "write",
+     "id": "q2",
+     "x": 660,
+     "y": 735,
+     "text": "Q2",
+     "size": 30,
+     "anchor": "middle"
+    }
+   ]
+  },
+  {
+   "title": "Result",
+   "say": "So a rise in demand raises both the market price and the quantity traded.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "result",
+     "x": 980,
+     "y": 120,
+     "text": "Result: the price rises\nfrom P1 to P2, and the\nquantity rises from Q1 to Q2",
+     "size": 28,
+     "color": "ink"
+    }
+   ]
+  }
+ ]
+}

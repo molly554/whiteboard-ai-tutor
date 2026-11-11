@@ -1,0 +1,237 @@
+{
+ "title": "Why a² + b² = c²",
+ "lang": "en",
+ "steps": [
+  {
+   "title": "The claim",
+   "say": "For any right triangle, the square on the longest side has the same area as the two squares on the other sides added together.",
+   "ops": [
+    {
+     "id": "t1",
+     "op": "write",
+     "x": 800,
+     "y": 50,
+     "text": "Pythagorean Theorem",
+     "size": 56,
+     "anchor": "middle"
+    },
+    {
+     "id": "tri1",
+     "op": "path",
+     "d": "M 300 700 L 300 400 L 700 700 Z",
+     "color": "blue",
+     "width": 5
+    },
+    {
+     "id": "la",
+     "op": "write",
+     "x": 230,
+     "y": 530,
+     "text": "a",
+     "size": 36,
+     "color": "blue"
+    },
+    {
+     "id": "lb",
+     "op": "write",
+     "x": 490,
+     "y": 720,
+     "text": "b",
+     "size": 36,
+     "color": "blue"
+    },
+    {
+     "id": "lc",
+     "op": "write",
+     "x": 530,
+     "y": 510,
+     "text": "c",
+     "size": 36,
+     "color": "blue"
+    },
+    {
+     "id": "eq1",
+     "op": "write",
+     "x": 1100,
+     "y": 500,
+     "text": "a² + b² = c²",
+     "size": 56,
+     "color": "red"
+    }
+   ]
+  },
+  {
+   "title": "Big square",
+   "say": "Build a big square with side a plus b. Its area is (a+b) squared, no matter how we cut it up.",
+   "ops": [
+    {
+     "id": "e1",
+     "op": "erase",
+     "ids": [
+      "tri1",
+      "la",
+      "lb",
+      "lc",
+      "eq1"
+     ]
+    },
+    {
+     "id": "big",
+     "op": "rect",
+     "x": 500,
+     "y": 180,
+     "w": 520,
+     "h": 520,
+     "color": "ink",
+     "width": 5
+    },
+    {
+     "id": "bl",
+     "op": "write",
+     "x": 760,
+     "y": 720,
+     "text": "a + b",
+     "size": 36,
+     "anchor": "middle"
+    },
+    {
+     "id": "ar1",
+     "op": "write",
+     "x": 1070,
+     "y": 420,
+     "text": "Area = (a+b)²",
+     "size": 40
+    }
+   ]
+  },
+  {
+   "title": "Four triangles",
+   "say": "Place four copies of the right triangle inside, one in each corner. They leave a tilted square in the middle, with side c.",
+   "ops": [
+    {
+     "id": "s1",
+     "op": "line",
+     "x1": 700,
+     "y1": 180,
+     "x2": 1020,
+     "y2": 380,
+     "color": "blue"
+    },
+    {
+     "id": "s2",
+     "op": "line",
+     "x1": 1020,
+     "y1": 380,
+     "x2": 820,
+     "y2": 700,
+     "color": "blue"
+    },
+    {
+     "id": "s3",
+     "op": "line",
+     "x1": 820,
+     "y1": 700,
+     "x2": 500,
+     "y2": 500,
+     "color": "blue"
+    },
+    {
+     "id": "s4",
+     "op": "line",
+     "x1": 500,
+     "y1": 500,
+     "x2": 700,
+     "y2": 180,
+     "color": "blue"
+    },
+    {
+     "id": "cl",
+     "op": "write",
+     "x": 760,
+     "y": 420,
+     "text": "c²",
+     "size": 52,
+     "color": "red",
+     "anchor": "middle"
+    }
+   ]
+  },
+  {
+   "title": "Add up the area",
+   "say": "So the big square equals four triangles plus the middle square. Each triangle has area one half a b.",
+   "ops": [
+    {
+     "id": "eq2",
+     "op": "write",
+     "x": 1070,
+     "y": 520,
+     "text": "(a+b)² = 4·(½ab) + c²",
+     "size": 40,
+     "color": "blue"
+    }
+   ]
+  },
+  {
+   "title": "Expand",
+   "say": "Expand the left side: a squared plus two a b plus b squared. The four triangles contribute two a b.",
+   "ops": [
+    {
+     "id": "eq3",
+     "op": "write",
+     "x": 1070,
+     "y": 600,
+     "text": "a² + 2ab + b² = 2ab + c²",
+     "size": 40
+    }
+   ]
+  },
+  {
+   "title": "Cancel",
+   "say": "Subtract two a b from both sides, and what remains is the theorem.",
+   "ops": [
+    {
+     "id": "x1",
+     "op": "erase",
+     "ids": [
+      "ar1",
+      "eq2",
+      "eq3"
+     ]
+    },
+    {
+     "id": "eq4",
+     "op": "write",
+     "x": 1070,
+     "y": 420,
+     "text": "a² + b² = c²",
+     "size": 56,
+     "color": "red"
+    },
+    {
+     "id": "ul",
+     "op": "line",
+     "x1": 1070,
+     "y1": 490,
+     "x2": 1420,
+     "y2": 490,
+     "color": "red"
+    }
+   ]
+  },
+  {
+   "title": "Why it works",
+   "say": "It works because the same big square can be measured two ways, and the extra triangle areas cancel exactly.",
+   "ops": [
+    {
+     "id": "fin",
+     "op": "write",
+     "x": 1070,
+     "y": 560,
+     "text": "Same area,\ntwo ways to\ncount it",
+     "size": 40,
+     "color": "green"
+    }
+   ]
+  }
+ ]
+}

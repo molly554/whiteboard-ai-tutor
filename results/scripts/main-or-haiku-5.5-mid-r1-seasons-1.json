@@ -1,0 +1,199 @@
+{
+ "title": "Why We Have Seasons",
+ "lang": "en",
+ "steps": [
+  {
+   "title": "Set the title",
+   "say": "Seasons come from how Earth is tilted as it orbits the Sun. Let's draw it.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "title",
+     "x": 800,
+     "y": 60,
+     "text": "Why We Have Seasons",
+     "size": 56,
+     "anchor": "middle",
+     "underline": true
+    }
+   ]
+  },
+  {
+   "title": "Sun and orbit",
+   "say": "The Sun sits in the middle, and Earth travels around it on this orbit.",
+   "ops": [
+    {
+     "op": "ellipse",
+     "id": "sun",
+     "cx": 620,
+     "cy": 460,
+     "rx": 70,
+     "ry": 70,
+     "color": "red",
+     "fill": "red"
+    },
+    {
+     "op": "write",
+     "id": "sunlbl",
+     "x": 620,
+     "y": 540,
+     "text": "Sun",
+     "size": 30,
+     "anchor": "middle"
+    },
+    {
+     "op": "ellipse",
+     "id": "orbit",
+     "cx": 620,
+     "cy": 460,
+     "rx": 380,
+     "ry": 240,
+     "color": "gray",
+     "width": 3
+    }
+   ]
+  },
+  {
+   "title": "June: north tilts toward the Sun",
+   "say": "In June, the northern half of Earth is tilted toward the Sun, so sunlight hits it more directly and days are longer.",
+   "ops": [
+    {
+     "op": "ellipse",
+     "id": "earthJun",
+     "cx": 1000,
+     "cy": 460,
+     "rx": 40,
+     "ry": 40,
+     "color": "blue",
+     "fill": "blue"
+    },
+    {
+     "op": "line",
+     "id": "axJun",
+     "x1": 972,
+     "y1": 396,
+     "x2": 1028,
+     "y2": 524,
+     "color": "gray",
+     "width": 3,
+     "dash": "6 6"
+    },
+    {
+     "op": "write",
+     "id": "nJun",
+     "x": 948,
+     "y": 352,
+     "text": "N",
+     "size": 32,
+     "color": "red"
+    },
+    {
+     "op": "line",
+     "id": "rayJun",
+     "x1": 700,
+     "y1": 460,
+     "x2": 955,
+     "y2": 460,
+     "color": "red",
+     "width": 4,
+     "arrow": true
+    },
+    {
+     "op": "write",
+     "id": "junLbl",
+     "x": 1100,
+     "y": 360,
+     "text": "June: northern half\ntilts toward the Sun",
+     "size": 32
+    }
+   ]
+  },
+  {
+   "title": "December: north tilts away",
+   "say": "Six months later, Earth is on the other side of the Sun, but its tilt points the same way. Now the northern half leans away, so sunlight is more spread out and winter comes.",
+   "ops": [
+    {
+     "op": "ellipse",
+     "id": "earthDec",
+     "cx": 240,
+     "cy": 460,
+     "rx": 40,
+     "ry": 40,
+     "color": "blue",
+     "fill": "blue"
+    },
+    {
+     "op": "line",
+     "id": "axDec",
+     "x1": 268,
+     "y1": 396,
+     "x2": 212,
+     "y2": 524,
+     "color": "gray",
+     "width": 3,
+     "dash": "6 6"
+    },
+    {
+     "op": "write",
+     "id": "nDec",
+     "x": 262,
+     "y": 352,
+     "text": "N",
+     "size": 32,
+     "color": "red"
+    },
+    {
+     "op": "line",
+     "id": "rayDec",
+     "x1": 550,
+     "y1": 460,
+     "x2": 285,
+     "y2": 460,
+     "color": "red",
+     "width": 4,
+     "arrow": true
+    },
+    {
+     "op": "write",
+     "id": "decLbl",
+     "x": 40,
+     "y": 120,
+     "text": "December: north\ntilts away from Sun",
+     "size": 32
+    }
+   ]
+  },
+  {
+   "title": "The key idea: tilt",
+   "say": "The tilt stays fixed at about 23.5 degrees all year. That tilt, not the distance, is what makes the seasons.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "tilt",
+     "x": 800,
+     "y": 720,
+     "text": "Earth's axis stays tilted about 23.5° all year",
+     "size": 36,
+     "anchor": "middle",
+     "color": "blue"
+    }
+   ]
+  },
+  {
+   "title": "Not distance",
+   "say": "Earth is actually closest to the Sun in January, so distance is not the reason for seasons.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "dist",
+     "x": 800,
+     "y": 790,
+     "text": "Not distance: Earth is closest to the Sun in January.",
+     "size": 32,
+     "anchor": "middle",
+     "color": "gray"
+    }
+   ]
+  }
+ ]
+}

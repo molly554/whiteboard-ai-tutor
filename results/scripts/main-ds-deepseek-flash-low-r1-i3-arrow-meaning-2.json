@@ -1,0 +1,176 @@
+{
+ "title": "What the green arrow means",
+ "lang": "en",
+ "steps": [
+  {
+   "title": "Point at the arrow",
+   "say": "This green arrow shows the demand curve moving, not sliding along itself.",
+   "ops": [
+    {
+     "op": "ellipse",
+     "id": "ring",
+     "cx": 340,
+     "cy": 262,
+     "rx": 95,
+     "ry": 26,
+     "color": "green",
+     "width": 4
+    },
+    {
+     "op": "write",
+     "id": "arrowsay",
+     "x": 1200,
+     "y": 730,
+     "text": "Green arrow = the whole\ndemand curve shifts right.",
+     "size": 30,
+     "color": "green"
+    }
+   ]
+  },
+  {
+   "title": "Shift vs. slide",
+   "say": "A shift means at every price, buyers now want more than before.",
+   "ops": [
+    {
+     "op": "line",
+     "id": "samep",
+     "x1": 200,
+     "y1": 400,
+     "x2": 700,
+     "y2": 400,
+     "color": "gray",
+     "width": 3,
+     "dash": true
+    },
+    {
+     "op": "write",
+     "id": "sameplab",
+     "x": 150,
+     "y": 382,
+     "text": "same P",
+     "size": 28,
+     "anchor": "middle"
+    },
+    {
+     "op": "ellipse",
+     "id": "oldq",
+     "cx": 490,
+     "cy": 400,
+     "rx": 7,
+     "ry": 7,
+     "color": "red",
+     "fill": "red"
+    },
+    {
+     "op": "ellipse",
+     "id": "newq",
+     "cx": 650,
+     "cy": 400,
+     "rx": 7,
+     "ry": 7,
+     "color": "red",
+     "fill": "red"
+    },
+    {
+     "op": "line",
+     "id": "moreq",
+     "x1": 490,
+     "y1": 430,
+     "x2": 650,
+     "y2": 430,
+     "color": "green",
+     "width": 4,
+     "arrow": "both"
+    },
+    {
+     "op": "write",
+     "id": "moreqlab",
+     "x": 570,
+     "y": 438,
+     "text": "more Q",
+     "size": 28,
+     "anchor": "middle",
+     "color": "green"
+    }
+   ]
+  },
+  {
+   "title": "The new crossing",
+   "say": "D2 now crosses supply higher up, so the equilibrium price moves up to P2.",
+   "ops": [
+    {
+     "op": "ellipse",
+     "id": "e2",
+     "cx": 740,
+     "cy": 410,
+     "rx": 9,
+     "ry": 9,
+     "color": "green",
+     "fill": "green"
+    },
+    {
+     "op": "line",
+     "id": "e2v",
+     "x1": 740,
+     "y1": 410,
+     "x2": 740,
+     "y2": 720,
+     "color": "gray",
+     "width": 3,
+     "dash": true
+    },
+    {
+     "op": "line",
+     "id": "e2h",
+     "x1": 200,
+     "y1": 410,
+     "x2": 740,
+     "y2": 410,
+     "color": "green",
+     "width": 3,
+     "dash": true
+    },
+    {
+     "op": "write",
+     "id": "p2",
+     "x": 130,
+     "y": 392,
+     "text": "P2",
+     "size": 32,
+     "anchor": "middle",
+     "color": "green"
+    },
+    {
+     "op": "write",
+     "id": "q2",
+     "x": 740,
+     "y": 735,
+     "text": "Q2",
+     "size": 32,
+     "anchor": "middle",
+     "color": "green"
+    },
+    {
+     "op": "line",
+     "id": "pup",
+     "x1": 250,
+     "y1": 470,
+     "x2": 250,
+     "y2": 410,
+     "color": "green",
+     "width": 4,
+     "arrow": true
+    },
+    {
+     "op": "write",
+     "id": "puplab",
+     "x": 262,
+     "y": 430,
+     "text": "price\nrises",
+     "size": 28,
+     "color": "green"
+    }
+   ]
+  }
+ ]
+}

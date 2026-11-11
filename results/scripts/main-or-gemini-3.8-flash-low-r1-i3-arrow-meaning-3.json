@@ -1,0 +1,150 @@
+{
+ "title": "Why the curve shifts",
+ "lang": "en",
+ "steps": [
+  {
+   "title": "Rightward shift",
+   "say": "The green arrow shows a shift of the entire curve to the right, meaning buyers want more units at every single price.",
+   "ops": [
+    {
+     "op": "line",
+     "id": "pt_d1_d2",
+     "x1": 340,
+     "y1": 342,
+     "x2": 500,
+     "y2": 342,
+     "color": "green",
+     "width": 4,
+     "arrow": true,
+     "dash": true
+    },
+    {
+     "op": "write",
+     "id": "shift_exp1",
+     "x": 1200,
+     "y": 750,
+     "text": "Arrow = rightward shift:\nat the SAME price,\nbuyers now want more.",
+     "size": 28,
+     "color": "green"
+    }
+   ]
+  },
+  {
+   "title": "Shortage at old price",
+   "say": "At the original price P1, buyers now want Q-new, but sellers only provide Q1. This creates a shortage.",
+   "ops": [
+    {
+     "op": "line",
+     "id": "d2_p1_h",
+     "x1": 580,
+     "y1": 470,
+     "x2": 740,
+     "y2": 470,
+     "color": "red",
+     "width": 4,
+     "arrow": true
+    },
+    {
+     "op": "line",
+     "id": "d2_p1_v",
+     "x1": 740,
+     "y1": 470,
+     "x2": 740,
+     "y2": 720,
+     "color": "gray",
+     "width": 3,
+     "dash": true
+    },
+    {
+     "op": "write",
+     "id": "qnew",
+     "x": 740,
+     "y": 735,
+     "text": "Q'",
+     "size": 32,
+     "anchor": "middle",
+     "color": "red"
+    },
+    {
+     "op": "write",
+     "id": "shortage_lab",
+     "x": 660,
+     "y": 430,
+     "text": "Shortage!",
+     "size": 30,
+     "anchor": "middle",
+     "color": "red"
+    }
+   ]
+  },
+  {
+   "title": "New equilibrium",
+   "say": "Because of the shortage, buyers bid the price up until a new equilibrium is reached at P2 and Q2.",
+   "ops": [
+    {
+     "op": "ellipse",
+     "id": "e2",
+     "cx": 660,
+     "cy": 385,
+     "rx": 9,
+     "ry": 9,
+     "color": "green",
+     "fill": "green"
+    },
+    {
+     "op": "line",
+     "id": "e2v",
+     "x1": 660,
+     "y1": 385,
+     "x2": 660,
+     "y2": 720,
+     "color": "gray",
+     "width": 3,
+     "dash": true
+    },
+    {
+     "op": "line",
+     "id": "e2h",
+     "x1": 200,
+     "y1": 385,
+     "x2": 660,
+     "y2": 385,
+     "color": "gray",
+     "width": 3,
+     "dash": true
+    },
+    {
+     "op": "write",
+     "id": "p2",
+     "x": 130,
+     "y": 367,
+     "text": "P2",
+     "size": 32,
+     "anchor": "middle",
+     "color": "green"
+    },
+    {
+     "op": "write",
+     "id": "q2",
+     "x": 660,
+     "y": 775,
+     "text": "Q2",
+     "size": 32,
+     "anchor": "middle",
+     "color": "green"
+    },
+    {
+     "op": "line",
+     "id": "price_up",
+     "x1": 130,
+     "y1": 440,
+     "x2": 130,
+     "y2": 390,
+     "color": "green",
+     "width": 4,
+     "arrow": true
+    }
+   ]
+  }
+ ]
+}

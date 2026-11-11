@@ -1,0 +1,227 @@
+{
+ "title": "Why a² + b² = c²",
+ "lang": "en",
+ "steps": [
+  {
+   "title": "The question",
+   "say": "Why does a² + b² = c² hold for every right triangle? We'll answer with areas: the same big square, cut up in two different ways.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "title",
+     "x": 800,
+     "y": 50,
+     "text": "Why a² + b² = c² works",
+     "size": 56,
+     "anchor": "middle",
+     "underline": true
+    }
+   ]
+  },
+  {
+   "title": "Big square",
+   "say": "Start with a square whose side is a + b. Its area is (a+b)².",
+   "ops": [
+    {
+     "op": "rect",
+     "id": "outer",
+     "x": 520,
+     "y": 200,
+     "w": 560,
+     "h": 560,
+     "width": 5
+    }
+   ]
+  },
+  {
+   "title": "Four right triangles",
+   "say": "Place four copies of the right triangle, with legs a and b, in the corners. Each one has area ½ab.",
+   "ops": [
+    {
+     "op": "path",
+     "id": "t1",
+     "d": "M520,200 L760,200 L520,520 Z",
+     "fill": "blue",
+     "color": "blue",
+     "width": 3
+    },
+    {
+     "op": "path",
+     "id": "t2",
+     "d": "M1080,200 L1080,440 L760,200 Z",
+     "fill": "red",
+     "color": "red",
+     "width": 3
+    },
+    {
+     "op": "path",
+     "id": "t3",
+     "d": "M1080,760 L840,760 L1080,440 Z",
+     "fill": "green",
+     "color": "green",
+     "width": 3
+    },
+    {
+     "op": "path",
+     "id": "t4",
+     "d": "M520,760 L520,520 L840,760 Z",
+     "fill": "gray",
+     "color": "gray",
+     "width": 3
+    }
+   ]
+  },
+  {
+   "title": "Label the legs",
+   "say": "Each outer side is split into a and b, so the corner triangles have legs a and b.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "a1",
+     "x": 640,
+     "y": 160,
+     "text": "a",
+     "size": 32,
+     "anchor": "middle"
+    },
+    {
+     "op": "write",
+     "id": "b1",
+     "x": 920,
+     "y": 160,
+     "text": "b",
+     "size": 32,
+     "anchor": "middle"
+    },
+    {
+     "op": "write",
+     "id": "a2",
+     "x": 1098,
+     "y": 300,
+     "text": "a",
+     "size": 32
+    },
+    {
+     "op": "write",
+     "id": "b2",
+     "x": 1098,
+     "y": 580,
+     "text": "b",
+     "size": 32
+    },
+    {
+     "op": "write",
+     "id": "a3",
+     "x": 960,
+     "y": 770,
+     "text": "a",
+     "size": 32,
+     "anchor": "middle"
+    },
+    {
+     "op": "write",
+     "id": "b3",
+     "x": 680,
+     "y": 770,
+     "text": "b",
+     "size": 32,
+     "anchor": "middle"
+    },
+    {
+     "op": "write",
+     "id": "a4",
+     "x": 490,
+     "y": 620,
+     "text": "a",
+     "size": 32,
+     "anchor": "middle"
+    },
+    {
+     "op": "write",
+     "id": "b4",
+     "x": 490,
+     "y": 340,
+     "text": "b",
+     "size": 32,
+     "anchor": "middle"
+    }
+   ]
+  },
+  {
+   "title": "Inner square",
+   "say": "What remains in the middle is a tilted square with side c, because each of its sides is the hypotenuse of a triangle. Its area is c².",
+   "ops": [
+    {
+     "op": "path",
+     "id": "inner",
+     "d": "M760,200 L1080,440 L840,760 L520,520 Z",
+     "color": "red",
+     "width": 6
+    },
+    {
+     "op": "write",
+     "id": "c",
+     "x": 800,
+     "y": 460,
+     "text": "c",
+     "size": 44,
+     "anchor": "middle",
+     "color": "red"
+    }
+   ]
+  },
+  {
+   "title": "Outer area, first way",
+   "say": "The big square has side a + b, so its area expands to a² + 2ab + b².",
+   "ops": [
+    {
+     "op": "write",
+     "id": "eq1",
+     "x": 1150,
+     "y": 260,
+     "text": "Outer square = (a+b)²\n= a² + 2ab + b²",
+     "size": 30,
+     "color": "blue"
+    }
+   ]
+  },
+  {
+   "title": "Outer area, second way",
+   "say": "The same square is also the four triangles plus the inner square, so its area is 2ab + c².",
+   "ops": [
+    {
+     "op": "write",
+     "id": "eq2",
+     "x": 1150,
+     "y": 380,
+     "text": "4 triangles: 4 × ½ab = 2ab\nInner square: c²\nSo outer = 2ab + c²",
+     "size": 30
+    }
+   ]
+  },
+  {
+   "title": "Conclusion",
+   "say": "Both expressions give the same area. Cancel the 2ab from each side, and you get a² + b² = c².",
+   "ops": [
+    {
+     "op": "write",
+     "id": "concl",
+     "x": 1150,
+     "y": 560,
+     "text": "a² + b² = c²",
+     "size": 46,
+     "color": "red",
+     "underline": true
+    },
+    {
+     "op": "write",
+     "id": "concl2",
+     "x": 1150,
+     "y": 640,
+     "text": "Same area, so the\n2ab terms cancel.",
+     "size": 30
+    }
+   ]
+  }
+ ]
+}

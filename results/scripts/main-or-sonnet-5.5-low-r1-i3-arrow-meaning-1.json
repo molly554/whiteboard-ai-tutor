@@ -1,0 +1,108 @@
+{
+ "title": "What the green arrow means",
+ "lang": "en",
+ "steps": [
+  {
+   "title": "What the arrow shows",
+   "say": "The green arrow points from the old demand curve D1 toward the new one, D2. It shows the whole demand curve shifting to the right.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "c1",
+     "x": 1200,
+     "y": 120,
+     "text": "Arrow = shift\nof the demand curve",
+     "size": 34,
+     "color": "green"
+    }
+   ]
+  },
+  {
+   "title": "Why a shift right",
+   "say": "Rightward means more buyers want the product at every price, for example because of higher income or a trend.",
+   "ops": [
+    {
+     "op": "erase",
+     "ids": [
+      "note1",
+      "note2",
+      "note3"
+     ]
+    },
+    {
+     "op": "write",
+     "id": "c2",
+     "x": 1200,
+     "y": 300,
+     "text": "Right = more quantity\ndemanded at every price",
+     "size": 32
+    }
+   ]
+  },
+  {
+   "title": "What happens next",
+   "say": "The new curve D2 crosses supply higher up, so equilibrium moves to a higher price and a larger quantity.",
+   "ops": [
+    {
+     "op": "ellipse",
+     "id": "e2",
+     "cx": 680,
+     "cy": 420,
+     "rx": 9,
+     "ry": 9,
+     "color": "green",
+     "fill": "green"
+    },
+    {
+     "op": "line",
+     "id": "e2h",
+     "x1": 200,
+     "y1": 420,
+     "x2": 680,
+     "y2": 420,
+     "color": "gray",
+     "width": 3,
+     "dash": true
+    },
+    {
+     "op": "line",
+     "id": "e2v",
+     "x1": 680,
+     "y1": 420,
+     "x2": 680,
+     "y2": 720,
+     "color": "gray",
+     "width": 3,
+     "dash": true
+    },
+    {
+     "op": "write",
+     "id": "p2",
+     "x": 130,
+     "y": 402,
+     "text": "P2",
+     "size": 32,
+     "anchor": "middle"
+    },
+    {
+     "op": "write",
+     "id": "q2",
+     "x": 680,
+     "y": 735,
+     "text": "Q2",
+     "size": 32,
+     "anchor": "middle"
+    },
+    {
+     "op": "write",
+     "id": "c3",
+     "x": 1200,
+     "y": 480,
+     "text": "New equilibrium:\nP2 is higher than P1",
+     "size": 32,
+     "color": "green"
+    }
+   ]
+  }
+ ]
+}

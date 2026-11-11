@@ -1,0 +1,22 @@
+{
+ "mode": "continue",
+ "title": "What the green arrow means",
+ "lang": "en",
+ "steps": [
+  {
+   "title": "The shift",
+   "say": "The green arrow means the whole demand curve moves right, from D1 to D2. At every price, buyers now want more.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "arrowmean",
+     "x": 680,
+     "y": 170,
+     "text": "The green arrow: the whole\ndemand curve moves right,\nD1 → D2. At each price,\nbuyers want more.",
+     "size": 32,
+     "color": "green"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,194 @@
+{
+ "title": "光合作用发生在哪里",
+ "lang": "zh",
+ "steps": [
+  {
+   "title": "答案先行",
+   "say": "光合作用发生在植物细胞的叶绿体中。",
+   "ops": [
+    {
+     "id": "t1",
+     "x": 800,
+     "y": 50,
+     "text": "光合作用的场所",
+     "size": 56,
+     "anchor": "middle",
+     "type": "write",
+     "op": "write",
+     "color": "blue"
+    },
+    {
+     "id": "a1",
+     "op": "write",
+     "x": 800,
+     "y": 150,
+     "text": "答案：叶绿体",
+     "size": 44,
+     "anchor": "middle",
+     "color": "red"
+    }
+   ]
+  },
+  {
+   "title": "画植物细胞",
+   "say": "先画一个植物细胞，外面有一层细胞壁。",
+   "ops": [
+    {
+     "id": "wall",
+     "op": "rect",
+     "x": 200,
+     "y": 260,
+     "w": 700,
+     "h": 500,
+     "color": "green",
+     "width": 6
+    },
+    {
+     "id": "wl",
+     "op": "write",
+     "x": 200,
+     "y": 790,
+     "text": "细胞壁",
+     "size": 32,
+     "color": "green"
+    }
+   ]
+  },
+  {
+   "title": "细胞里的结构",
+   "say": "细胞内有细胞核和大液泡，它们不进行光合作用。",
+   "ops": [
+    {
+     "id": "nuc",
+     "op": "ellipse",
+     "cx": 330,
+     "cy": 380,
+     "rx": 60,
+     "ry": 50,
+     "color": "gray",
+     "width": 4
+    },
+    {
+     "id": "nucl",
+     "op": "write",
+     "x": 410,
+     "y": 360,
+     "text": "细胞核",
+     "size": 30,
+     "color": "gray"
+    },
+    {
+     "id": "vac",
+     "op": "ellipse",
+     "cx": 560,
+     "cy": 640,
+     "rx": 180,
+     "ry": 70,
+     "color": "gray",
+     "width": 4
+    },
+    {
+     "id": "vacl",
+     "op": "write",
+     "x": 560,
+     "y": 625,
+     "text": "液泡",
+     "size": 30,
+     "color": "gray",
+     "anchor": "middle"
+    }
+   ]
+  },
+  {
+   "title": "画叶绿体",
+   "say": "在细胞里画几个椭圆形的叶绿体，它们让叶片呈绿色。",
+   "ops": [
+    {
+     "id": "c1",
+     "op": "ellipse",
+     "cx": 640,
+     "cy": 360,
+     "rx": 70,
+     "ry": 38,
+     "rotate": -15,
+     "color": "green",
+     "fill": "green",
+     "width": 5
+    },
+    {
+     "id": "c2",
+     "op": "ellipse",
+     "cx": 780,
+     "cy": 480,
+     "rx": 70,
+     "ry": 38,
+     "rotate": 20,
+     "color": "green",
+     "fill": "green",
+     "width": 5
+    },
+    {
+     "id": "c3",
+     "op": "ellipse",
+     "cx": 320,
+     "cy": 520,
+     "rx": 70,
+     "ry": 38,
+     "rotate": 10,
+     "color": "green",
+     "fill": "green",
+     "width": 5
+    },
+    {
+     "id": "cl",
+     "op": "write",
+     "x": 1000,
+     "y": 300,
+     "text": "叶绿体",
+     "size": 44,
+     "color": "green"
+    },
+    {
+     "id": "cla",
+     "op": "line",
+     "x1": 990,
+     "y1": 330,
+     "x2": 720,
+     "y2": 350,
+     "color": "green",
+     "arrow": true
+    }
+   ]
+  },
+  {
+   "title": "为什么是叶绿体",
+   "say": "因为叶绿体里含有叶绿素，能吸收光能。",
+   "ops": [
+    {
+     "id": "w1",
+     "op": "write",
+     "x": 1000,
+     "y": 420,
+     "text": "含叶绿素\n能吸收光能",
+     "size": 38,
+     "color": "ink"
+    }
+   ]
+  },
+  {
+   "title": "反应式",
+   "say": "在叶绿体中，二氧化碳和水在光照下变成有机物和氧气。",
+   "ops": [
+    {
+     "id": "eq",
+     "op": "write",
+     "x": 1000,
+     "y": 600,
+     "text": "CO₂ + H₂O\n光 → 有机物 + O₂",
+     "size": 36,
+     "color": "blue"
+    }
+   ]
+  }
+ ]
+}

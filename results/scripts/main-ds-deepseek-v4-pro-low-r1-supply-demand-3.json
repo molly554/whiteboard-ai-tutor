@@ -1,0 +1,277 @@
+{
+ "title": "Demand Rises",
+ "lang": "en",
+ "steps": [
+  {
+   "title": "Initial Market",
+   "say": "Let's start with a market in equilibrium.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "title",
+     "x": 80,
+     "y": 60,
+     "text": "What Happens When Demand Rises?",
+     "size": 48,
+     "anchor": "start"
+    },
+    {
+     "op": "line",
+     "id": "axis_x",
+     "x1": 100,
+     "y1": 700,
+     "x2": 1500,
+     "y2": 700,
+     "color": "ink",
+     "width": 3,
+     "arrow": true
+    },
+    {
+     "op": "line",
+     "id": "axis_y",
+     "x1": 100,
+     "y1": 700,
+     "x2": 100,
+     "y2": 100,
+     "color": "ink",
+     "width": 3,
+     "arrow": true
+    },
+    {
+     "op": "write",
+     "id": "label_x",
+     "x": 1450,
+     "y": 720,
+     "text": "Quantity",
+     "size": 36,
+     "anchor": "middle"
+    },
+    {
+     "op": "write",
+     "id": "label_y",
+     "x": 40,
+     "y": 120,
+     "text": "Price",
+     "size": 36,
+     "anchor": "middle"
+    },
+    {
+     "op": "line",
+     "id": "demand1",
+     "x1": 200,
+     "y1": 200,
+     "x2": 1300,
+     "y2": 650,
+     "color": "blue",
+     "width": 5
+    },
+    {
+     "op": "write",
+     "id": "label_d1",
+     "x": 1050,
+     "y": 540,
+     "text": "D1",
+     "size": 34,
+     "color": "blue"
+    },
+    {
+     "op": "line",
+     "id": "supply1",
+     "x1": 300,
+     "y1": 650,
+     "x2": 1400,
+     "y2": 250,
+     "color": "red",
+     "width": 5
+    },
+    {
+     "op": "write",
+     "id": "label_s1",
+     "x": 1250,
+     "y": 260,
+     "text": "S1",
+     "size": 34,
+     "color": "red"
+    },
+    {
+     "op": "ellipse",
+     "id": "eq1",
+     "cx": 750,
+     "cy": 425,
+     "rx": 10,
+     "ry": 10,
+     "color": "ink",
+     "fill": "ink"
+    },
+    {
+     "op": "write",
+     "id": "label_p1",
+     "x": 80,
+     "y": 415,
+     "text": "P1",
+     "size": 32
+    },
+    {
+     "op": "write",
+     "id": "label_q1",
+     "x": 740,
+     "y": 720,
+     "text": "Q1",
+     "size": 32,
+     "anchor": "middle"
+    }
+   ]
+  },
+  {
+   "title": "Demand Shifts Right",
+   "say": "When demand rises, the demand curve shifts to the right.",
+   "ops": [
+    {
+     "op": "line",
+     "id": "demand2",
+     "x1": 350,
+     "y1": 200,
+     "x2": 1450,
+     "y2": 650,
+     "color": "blue",
+     "width": 5
+    },
+    {
+     "op": "write",
+     "id": "label_d2",
+     "x": 1200,
+     "y": 540,
+     "text": "D2",
+     "size": 34,
+     "color": "blue"
+    },
+    {
+     "op": "line",
+     "id": "arrow_shift",
+     "x1": 800,
+     "y1": 425,
+     "x2": 950,
+     "y2": 425,
+     "color": "green",
+     "width": 4,
+     "arrow": true
+    }
+   ]
+  },
+  {
+   "title": "New Equilibrium",
+   "say": "The new equilibrium shows a higher price and a higher quantity.",
+   "ops": [
+    {
+     "op": "line",
+     "id": "guide_p2",
+     "x1": 100,
+     "y1": 350,
+     "x2": 900,
+     "y2": 350,
+     "color": "gray",
+     "width": 2,
+     "dash": "5,5"
+    },
+    {
+     "op": "line",
+     "id": "guide_q2",
+     "x1": 900,
+     "y1": 350,
+     "x2": 900,
+     "y2": 700,
+     "color": "gray",
+     "width": 2,
+     "dash": "5,5"
+    },
+    {
+     "op": "ellipse",
+     "id": "eq2",
+     "cx": 900,
+     "cy": 350,
+     "rx": 10,
+     "ry": 10,
+     "color": "ink",
+     "fill": "ink"
+    },
+    {
+     "op": "write",
+     "id": "label_p2",
+     "x": 80,
+     "y": 340,
+     "text": "P2",
+     "size": 32
+    },
+    {
+     "op": "write",
+     "id": "label_q2",
+     "x": 900,
+     "y": 720,
+     "text": "Q2",
+     "size": 32,
+     "anchor": "middle"
+    }
+   ]
+  },
+  {
+   "title": "Compare Prices",
+   "say": "Compare P1 and P2: the price has increased.",
+   "ops": [
+    {
+     "op": "line",
+     "id": "arrow_p_up",
+     "x1": 80,
+     "y1": 420,
+     "x2": 80,
+     "y2": 350,
+     "color": "green",
+     "width": 4,
+     "arrow": true
+    }
+   ]
+  },
+  {
+   "title": "Compare Quantities",
+   "say": "Compare Q1 and Q2: the quantity has also increased.",
+   "ops": [
+    {
+     "op": "line",
+     "id": "arrow_q_up",
+     "x1": 750,
+     "y1": 680,
+     "x2": 900,
+     "y2": 680,
+     "color": "green",
+     "width": 4,
+     "arrow": true
+    }
+   ]
+  },
+  {
+   "title": "Summary",
+   "say": "So, when demand rises, both equilibrium price and equilibrium quantity increase.",
+   "ops": [
+    {
+     "op": "rect",
+     "id": "summary_box",
+     "x": 80,
+     "y": 760,
+     "w": 1440,
+     "h": 100,
+     "color": "ink",
+     "width": 3,
+     "fill": "gray"
+    },
+    {
+     "op": "write",
+     "id": "summary_text",
+     "x": 800,
+     "y": 785,
+     "text": "Demand ↑  →  Price ↑  and  Quantity ↑",
+     "size": 40,
+     "anchor": "middle"
+    }
+   ]
+  }
+ ]
+}

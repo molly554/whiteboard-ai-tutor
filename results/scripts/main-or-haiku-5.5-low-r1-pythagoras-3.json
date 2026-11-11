@@ -1,0 +1,201 @@
+{
+ "title": "Why a² + b² = c² works",
+ "lang": "en",
+ "steps": [
+  {
+   "title": "The claim",
+   "say": "For any right triangle with legs a and b and hypotenuse c, the squares on the legs add up to the square on the hypotenuse. We will prove it by comparing areas.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "title",
+     "x": 100,
+     "y": 70,
+     "text": "Why a² + b² = c² works",
+     "size": 56
+    },
+    {
+     "op": "write",
+     "id": "claim",
+     "x": 100,
+     "y": 130,
+     "text": "Claim: legs a, b and hypotenuse c",
+     "size": 32,
+     "color": "gray"
+    }
+   ]
+  },
+  {
+   "title": "Build a big square",
+   "say": "Place four copies of the same right triangle inside a square whose side is a + b. The square's area is (a + b)².",
+   "ops": [
+    {
+     "op": "rect",
+     "id": "big",
+     "x": 100,
+     "y": 180,
+     "w": 400,
+     "h": 400,
+     "color": "ink",
+     "width": 5
+    },
+    {
+     "op": "write",
+     "id": "lblA",
+     "x": 180,
+     "y": 140,
+     "text": "a",
+     "size": 32,
+     "color": "blue"
+    },
+    {
+     "op": "write",
+     "id": "lblB",
+     "x": 50,
+     "y": 300,
+     "text": "b",
+     "size": 32,
+     "color": "blue"
+    },
+    {
+     "op": "write",
+     "id": "lblSide",
+     "x": 300,
+     "y": 130,
+     "text": "side = a + b",
+     "size": 32
+    }
+   ]
+  },
+  {
+   "title": "Four triangles",
+   "say": "Each corner holds a right triangle with legs a and b. Together they cover four triangles, each with area ab/2.",
+   "ops": [
+    {
+     "op": "path",
+     "id": "t1",
+     "d": "M100 180 L260 180 L100 420 Z",
+     "color": "blue",
+     "width": 4,
+     "fill": "blue"
+    },
+    {
+     "op": "path",
+     "id": "t2",
+     "d": "M500 180 L260 180 L500 340 Z",
+     "color": "blue",
+     "width": 4,
+     "fill": "blue"
+    },
+    {
+     "op": "path",
+     "id": "t3",
+     "d": "M500 580 L340 580 L500 340 Z",
+     "color": "blue",
+     "width": 4,
+     "fill": "blue"
+    },
+    {
+     "op": "path",
+     "id": "t4",
+     "d": "M100 580 L340 580 L100 420 Z",
+     "color": "blue",
+     "width": 4,
+     "fill": "blue"
+    }
+   ]
+  },
+  {
+   "title": "The tilted square",
+   "say": "The four hypotenuses enclose a tilted square. Its side is c, so its area is c².",
+   "ops": [
+    {
+     "op": "path",
+     "id": "inner",
+     "d": "M260 180 L500 340 L340 580 L100 420 Z",
+     "color": "red",
+     "width": 6
+    },
+    {
+     "op": "write",
+     "id": "c2",
+     "x": 300,
+     "y": 380,
+     "text": "c²",
+     "size": 44,
+     "color": "red",
+     "anchor": "middle"
+    }
+   ]
+  },
+  {
+   "title": "Compare the areas",
+   "say": "The big square equals the four triangles plus the tilted square. Write that as an equation.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "eq1",
+     "x": 700,
+     "y": 220,
+     "text": "Big square = (a + b)²",
+     "size": 40
+    },
+    {
+     "op": "write",
+     "id": "eq2",
+     "x": 700,
+     "y": 290,
+     "text": "= 4 triangles + c²",
+     "size": 40
+    },
+    {
+     "op": "write",
+     "id": "eq3",
+     "x": 700,
+     "y": 360,
+     "text": "= 4 · (ab/2) + c²",
+     "size": 40
+    }
+   ]
+  },
+  {
+   "title": "Algebra",
+   "say": "Expand the left side and simplify. The 2ab terms cancel, leaving a² + b² = c².",
+   "ops": [
+    {
+     "op": "write",
+     "id": "alg1",
+     "x": 700,
+     "y": 460,
+     "text": "a² + 2ab + b² = 2ab + c²",
+     "size": 40
+    },
+    {
+     "op": "write",
+     "id": "alg2",
+     "x": 700,
+     "y": 540,
+     "text": "a² + b² = c²",
+     "size": 52,
+     "color": "green",
+     "underline": true
+    }
+   ]
+  },
+  {
+   "title": "Why it always holds",
+   "say": "The proof used only the area of the triangles, so it works for every right triangle. The right angle is what places the four triangles into a square.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "end",
+     "x": 700,
+     "y": 660,
+     "text": "Any right triangle, same area argument.",
+     "size": 32,
+     "color": "gray"
+    }
+   ]
+  }
+ ]
+}

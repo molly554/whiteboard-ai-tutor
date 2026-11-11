@@ -1,0 +1,237 @@
+{
+ "title": "Solve x² − 5x + 6 = 0",
+ "lang": "en",
+ "steps": [
+  {
+   "title": "The Equation",
+   "say": "Let's solve the quadratic equation x squared minus 5x plus 6 equals 0.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "title",
+     "x": 80,
+     "y": 60,
+     "text": "Solve Quadratic Equation",
+     "size": 56,
+     "color": "ink"
+    },
+    {
+     "op": "write",
+     "id": "eq",
+     "x": 80,
+     "y": 150,
+     "text": "x² − 5x + 6 = 0",
+     "size": 44,
+     "color": "blue"
+    }
+   ]
+  },
+  {
+   "title": "Try Completing the Square",
+   "say": "We could start by completing the square, moving 6 to the right and adding 5 over 2 squared to both sides.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "m1_label",
+     "x": 80,
+     "y": 250,
+     "text": "Method 1: Completing the Square",
+     "size": 36,
+     "color": "gray"
+    },
+    {
+     "op": "write",
+     "id": "m1_s1",
+     "x": 80,
+     "y": 320,
+     "text": "x² − 5x = −6",
+     "size": 40,
+     "color": "ink"
+    },
+    {
+     "op": "write",
+     "id": "m1_s2",
+     "x": 80,
+     "y": 390,
+     "text": "x² − 5x + (5/2)² = −6 + 25/4",
+     "size": 40,
+     "color": "ink"
+    }
+   ]
+  },
+  {
+   "title": "Switch to a Simpler Method",
+   "say": "Wait, working with fractions like 25 over 4 is tedious. Let's erase this and use a much simpler method!",
+   "ops": [
+    {
+     "op": "line",
+     "id": "strike1",
+     "x1": 70,
+     "y1": 360,
+     "x2": 650,
+     "y2": 420,
+     "color": "red",
+     "width": 4
+    },
+    {
+     "op": "write",
+     "id": "wait_note",
+     "x": 700,
+     "y": 380,
+     "text": "Too many fractions!",
+     "size": 34,
+     "color": "red"
+    }
+   ]
+  },
+  {
+   "title": "Factoring by Inspection",
+   "say": "Instead, let's factor directly! We just need two numbers that multiply to positive 6 and add up to negative 5.",
+   "ops": [
+    {
+     "op": "erase",
+     "ids": [
+      "m1_label",
+      "m1_s1",
+      "m1_s2",
+      "strike1",
+      "wait_note"
+     ]
+    },
+    {
+     "op": "write",
+     "id": "m2_label",
+     "x": 80,
+     "y": 250,
+     "text": "Simpler Method: Factoring",
+     "size": 36,
+     "color": "green"
+    },
+    {
+     "op": "write",
+     "id": "rule_mul",
+     "x": 950,
+     "y": 250,
+     "text": "Multiply to: +6",
+     "size": 36,
+     "color": "blue"
+    },
+    {
+     "op": "write",
+     "id": "rule_add",
+     "x": 950,
+     "y": 310,
+     "text": "Add up to: −5",
+     "size": 36,
+     "color": "blue"
+    }
+   ]
+  },
+  {
+   "title": "Find the Numbers",
+   "say": "Consider negative 2 and negative 3. Their product is positive 6, and their sum is negative 5. Perfect!",
+   "ops": [
+    {
+     "op": "rect",
+     "id": "box_nums",
+     "x": 930,
+     "y": 380,
+     "w": 460,
+     "h": 150,
+     "color": "green",
+     "fill": "green"
+    },
+    {
+     "op": "write",
+     "id": "try_nums",
+     "x": 960,
+     "y": 400,
+     "text": "Try −2 and −3:",
+     "size": 34,
+     "color": "ink"
+    },
+    {
+     "op": "write",
+     "id": "chk_1",
+     "x": 960,
+     "y": 455,
+     "text": "(−2) × (−3) = +6  &  (−2) + (−3) = −5",
+     "size": 28,
+     "color": "green"
+    },
+    {
+     "op": "write",
+     "id": "factored",
+     "x": 80,
+     "y": 340,
+     "text": "(x − 2)(x − 3) = 0",
+     "size": 44,
+     "color": "ink"
+    }
+   ]
+  },
+  {
+   "title": "Solve for x",
+   "say": "By the zero product property, we set each factor to zero, giving us the final solutions: x equals 2 or x equals 3.",
+   "ops": [
+    {
+     "op": "line",
+     "id": "arr1",
+     "x1": 160,
+     "y1": 400,
+     "x2": 130,
+     "y2": 460,
+     "color": "gray",
+     "arrow": true
+    },
+    {
+     "op": "line",
+     "id": "arr2",
+     "x1": 330,
+     "y1": 400,
+     "x2": 360,
+     "y2": 460,
+     "color": "gray",
+     "arrow": true
+    },
+    {
+     "op": "write",
+     "id": "sub_eq1",
+     "x": 80,
+     "y": 480,
+     "text": "x − 2 = 0",
+     "size": 38,
+     "color": "ink"
+    },
+    {
+     "op": "write",
+     "id": "sub_eq2",
+     "x": 310,
+     "y": 480,
+     "text": "x − 3 = 0",
+     "size": 38,
+     "color": "ink"
+    },
+    {
+     "op": "rect",
+     "id": "ans_box",
+     "x": 80,
+     "y": 570,
+     "w": 430,
+     "h": 90,
+     "color": "blue",
+     "fill": "blue"
+    },
+    {
+     "op": "write",
+     "id": "ans",
+     "x": 110,
+     "y": 592,
+     "text": "x = 2   or   x = 3",
+     "size": 44,
+     "color": "blue"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,415 @@
+{
+ "title": "Why Does the Pythagorean Theorem Work?",
+ "lang": "en",
+ "steps": [
+  {
+   "title": "The Claim",
+   "say": "For any right triangle, does a² + b² really always equal c²? Let's prove it visually with an elegant area puzzle.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "t-main",
+     "x": 800,
+     "y": 50,
+     "text": "Why Does the Pythagorean Theorem Work?",
+     "size": 52,
+     "color": "ink",
+     "anchor": "middle"
+    },
+    {
+     "op": "write",
+     "id": "t-sub",
+     "x": 800,
+     "y": 115,
+     "text": "A Visual Proof by Area Rearrangement",
+     "size": 30,
+     "color": "gray",
+     "anchor": "middle"
+    },
+    {
+     "op": "path",
+     "id": "intro-tri",
+     "d": "M 240 460 L 480 460 L 480 340 Z",
+     "color": "ink",
+     "width": 4,
+     "fill": "gray"
+    },
+    {
+     "op": "path",
+     "id": "intro-sq",
+     "d": "M 460 460 L 460 440 L 480 440",
+     "color": "ink",
+     "width": 3
+    },
+    {
+     "op": "write",
+     "id": "intro-lbl-b",
+     "x": 360,
+     "y": 475,
+     "text": "b",
+     "size": 32,
+     "color": "ink",
+     "anchor": "middle"
+    },
+    {
+     "op": "write",
+     "id": "intro-lbl-a",
+     "x": 505,
+     "y": 395,
+     "text": "a",
+     "size": 32,
+     "color": "ink",
+     "anchor": "middle"
+    },
+    {
+     "op": "write",
+     "id": "intro-lbl-c",
+     "x": 340,
+     "y": 380,
+     "text": "c",
+     "size": 32,
+     "color": "blue",
+     "anchor": "middle"
+    },
+    {
+     "op": "write",
+     "id": "intro-claim",
+     "x": 750,
+     "y": 380,
+     "text": "Target: Prove that  a² + b² = c²",
+     "size": 42,
+     "color": "blue"
+    }
+   ]
+  },
+  {
+   "title": "Build the Big Square",
+   "say": "We construct a large square with side length a + b, and place four copies of our right triangle along its corners.",
+   "ops": [
+    {
+     "op": "erase",
+     "ids": [
+      "intro-tri",
+      "intro-sq",
+      "intro-lbl-a",
+      "intro-lbl-b",
+      "intro-lbl-c",
+      "intro-claim"
+     ]
+    },
+    {
+     "op": "rect",
+     "id": "outer-sq",
+     "x": 200,
+     "y": 240,
+     "w": 360,
+     "h": 360,
+     "color": "ink",
+     "width": 4
+    },
+    {
+     "op": "write",
+     "id": "lbl-top-a",
+     "x": 260,
+     "y": 200,
+     "text": "a",
+     "size": 28,
+     "color": "ink",
+     "anchor": "middle"
+    },
+    {
+     "op": "write",
+     "id": "lbl-top-b",
+     "x": 440,
+     "y": 200,
+     "text": "b",
+     "size": 28,
+     "color": "ink",
+     "anchor": "middle"
+    },
+    {
+     "op": "write",
+     "id": "lbl-right-a",
+     "x": 580,
+     "y": 295,
+     "text": "a",
+     "size": 28,
+     "color": "ink",
+     "anchor": "middle"
+    },
+    {
+     "op": "write",
+     "id": "lbl-right-b",
+     "x": 580,
+     "y": 490,
+     "text": "b",
+     "size": 28,
+     "color": "ink",
+     "anchor": "middle"
+    },
+    {
+     "op": "write",
+     "id": "lbl-bot-b",
+     "x": 320,
+     "y": 615,
+     "text": "b",
+     "size": 28,
+     "color": "ink",
+     "anchor": "middle"
+    },
+    {
+     "op": "write",
+     "id": "lbl-bot-a",
+     "x": 500,
+     "y": 615,
+     "text": "a",
+     "size": 28,
+     "color": "ink",
+     "anchor": "middle"
+    },
+    {
+     "op": "write",
+     "id": "lbl-left-b",
+     "x": 170,
+     "y": 350,
+     "text": "b",
+     "size": 28,
+     "color": "ink",
+     "anchor": "middle"
+    },
+    {
+     "op": "write",
+     "id": "lbl-left-a",
+     "x": 170,
+     "y": 535,
+     "text": "a",
+     "size": 28,
+     "color": "ink",
+     "anchor": "middle"
+    }
+   ]
+  },
+  {
+   "title": "The Inner Square",
+   "say": "Connecting the vertices forms an inner square tilted inside, with each edge equal to hypotenuse c.",
+   "ops": [
+    {
+     "op": "path",
+     "id": "inner-sq",
+     "d": "M 320 240 L 560 360 L 440 600 L 200 480 Z",
+     "color": "blue",
+     "width": 4,
+     "fill": "blue"
+    },
+    {
+     "op": "write",
+     "id": "lbl-c1",
+     "x": 245,
+     "y": 345,
+     "text": "c",
+     "size": 30,
+     "color": "blue",
+     "anchor": "middle"
+    },
+    {
+     "op": "write",
+     "id": "lbl-c2",
+     "x": 450,
+     "y": 285,
+     "text": "c",
+     "size": 30,
+     "color": "blue",
+     "anchor": "middle"
+    },
+    {
+     "op": "write",
+     "id": "lbl-c3",
+     "x": 515,
+     "y": 490,
+     "text": "c",
+     "size": 30,
+     "color": "blue",
+     "anchor": "middle"
+    },
+    {
+     "op": "write",
+     "id": "lbl-c4",
+     "x": 310,
+     "y": 550,
+     "text": "c",
+     "size": 30,
+     "color": "blue",
+     "anchor": "middle"
+    },
+    {
+     "op": "write",
+     "id": "lbl-c-area",
+     "x": 380,
+     "y": 405,
+     "text": "c²",
+     "size": 44,
+     "color": "blue",
+     "anchor": "middle"
+    },
+    {
+     "op": "write",
+     "id": "lbl-tri-tag",
+     "x": 240,
+     "y": 270,
+     "text": "½ab",
+     "size": 24,
+     "color": "gray"
+    }
+   ]
+  },
+  {
+   "title": "Method 1: Sum of the Parts",
+   "say": "The total area can be written as the area of the 4 outer triangles plus the inner square c².",
+   "ops": [
+    {
+     "op": "write",
+     "id": "m1-title",
+     "x": 760,
+     "y": 240,
+     "text": "Method 1: Pieces of the Square",
+     "size": 34,
+     "color": "blue"
+    },
+    {
+     "op": "write",
+     "id": "m1-line1",
+     "x": 760,
+     "y": 290,
+     "text": "Total Area = 4 × (Triangle) + Center Square",
+     "size": 30,
+     "color": "ink"
+    },
+    {
+     "op": "write",
+     "id": "m1-line2",
+     "x": 760,
+     "y": 335,
+     "text": "           = 4 × (½ · a · b) + c²",
+     "size": 30,
+     "color": "ink"
+    },
+    {
+     "op": "write",
+     "id": "m1-res",
+     "x": 760,
+     "y": 385,
+     "text": "           = 2ab + c²",
+     "size": 34,
+     "color": "red"
+    }
+   ]
+  },
+  {
+   "title": "Method 2: Area of the Whole Square",
+   "say": "At the same time, the outer square has side (a + b), so its area is (a + b)² which expands algebraically.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "m2-title",
+     "x": 760,
+     "y": 460,
+     "text": "Method 2: Whole Square Formula",
+     "size": 34,
+     "color": "blue"
+    },
+    {
+     "op": "write",
+     "id": "m2-line1",
+     "x": 760,
+     "y": 510,
+     "text": "Total Area = (side)² = (a + b)²",
+     "size": 30,
+     "color": "ink"
+    },
+    {
+     "op": "write",
+     "id": "m2-res",
+     "x": 760,
+     "y": 555,
+     "text": "           = a² + 2ab + b²",
+     "size": 34,
+     "color": "red"
+    }
+   ]
+  },
+  {
+   "title": "Equate and Conclude",
+   "say": "Both methods measure the exact same total area. Equating them and subtracting 2ab from both sides reveals a² + b² = c²!",
+   "ops": [
+    {
+     "op": "write",
+     "id": "eq-title",
+     "x": 760,
+     "y": 630,
+     "text": "Both Areas Are Equal:",
+     "size": 34,
+     "color": "ink"
+    },
+    {
+     "op": "write",
+     "id": "eq-step1",
+     "x": 760,
+     "y": 680,
+     "text": "a² + 2ab + b²  =  2ab + c²",
+     "size": 36,
+     "color": "ink"
+    },
+    {
+     "op": "line",
+     "id": "cancel-l",
+     "x1": 845,
+     "y1": 695,
+     "x2": 930,
+     "y2": 695,
+     "color": "red",
+     "width": 4
+    },
+    {
+     "op": "line",
+     "id": "cancel-r",
+     "x1": 1055,
+     "y1": 695,
+     "x2": 1140,
+     "y2": 695,
+     "color": "red",
+     "width": 4
+    },
+    {
+     "op": "rect",
+     "id": "final-box",
+     "x": 750,
+     "y": 740,
+     "w": 420,
+     "h": 70,
+     "color": "green",
+     "width": 4,
+     "fill": "green"
+    },
+    {
+     "op": "write",
+     "id": "final-formula",
+     "x": 960,
+     "y": 752,
+     "text": "a² + b² = c²",
+     "size": 44,
+     "color": "green",
+     "anchor": "middle"
+    },
+    {
+     "op": "write",
+     "id": "final-qed",
+     "x": 1200,
+     "y": 760,
+     "text": "Q.E.D. ✓",
+     "size": 32,
+     "color": "green"
+    }
+   ]
+  }
+ ]
+}

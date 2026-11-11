@@ -1,0 +1,219 @@
+{
+ "title": "Why a² + b² = c²",
+ "lang": "en",
+ "steps": [
+  {
+   "title": "The claim",
+   "say": "For any right triangle, the squares on the two short sides add up to the square on the longest side.",
+   "ops": [
+    {
+     "id": "t1",
+     "x": 800,
+     "y": 50,
+     "text": "Pythagorean Theorem",
+     "size": 56,
+     "anchor": "middle",
+     "op": "write"
+    },
+    {
+     "id": "f1",
+     "x": 800,
+     "y": 150,
+     "text": "a² + b² = c²",
+     "size": 48,
+     "anchor": "middle",
+     "color": "blue",
+     "op": "write"
+    }
+   ]
+  },
+  {
+   "title": "A right triangle",
+   "say": "Here is a right triangle with legs a and b and hypotenuse c.",
+   "ops": [
+    {
+     "id": "tri",
+     "d": "M 200 700 L 600 700 L 200 450 Z",
+     "width": 5,
+     "op": "path"
+    },
+    {
+     "id": "ra",
+     "x": 200,
+     "y": 670,
+     "w": 30,
+     "h": 30,
+     "op": "rect",
+     "width": 3,
+     "color": "gray"
+    },
+    {
+     "id": "la",
+     "x": 400,
+     "y": 720,
+     "text": "b",
+     "size": 36,
+     "anchor": "middle",
+     "color": "green",
+     "op": "write"
+    },
+    {
+     "id": "lb",
+     "x": 150,
+     "y": 560,
+     "text": "a",
+     "size": 36,
+     "color": "red",
+     "op": "write"
+    },
+    {
+     "id": "lc",
+     "x": 430,
+     "y": 530,
+     "text": "c",
+     "size": 36,
+     "color": "blue",
+     "op": "write"
+    }
+   ]
+  },
+  {
+   "title": "Big square",
+   "say": "Build a big square with side a plus b. Its area is a plus b, squared, no matter how we cut it up.",
+   "ops": [
+    {
+     "id": "big",
+     "x": 900,
+     "y": 250,
+     "w": 500,
+     "h": 500,
+     "width": 5,
+     "op": "rect"
+    },
+    {
+     "id": "bl",
+     "x": 1150,
+     "y": 200,
+     "text": "a + b",
+     "size": 34,
+     "anchor": "middle",
+     "op": "write"
+    },
+    {
+     "id": "ba",
+     "x": 1150,
+     "y": 790,
+     "text": "Area = (a + b)²",
+     "size": 36,
+     "anchor": "middle",
+     "color": "blue",
+     "op": "write"
+    }
+   ]
+  },
+  {
+   "title": "Four triangles",
+   "say": "Place four copies of the triangle inside the square, one in each corner, so their hypotenuses form a tilted square in the middle.",
+   "ops": [
+    {
+     "id": "e1",
+     "x1": 900,
+     "y1": 250,
+     "x2": 1250,
+     "y2": 250,
+     "op": "line",
+     "color": "gray",
+     "width": 2
+    },
+    {
+     "id": "d1",
+     "x1": 1250,
+     "y1": 250,
+     "x2": 1400,
+     "y2": 500,
+     "op": "line",
+     "color": "blue"
+    },
+    {
+     "id": "d2",
+     "x1": 1400,
+     "y1": 500,
+     "x2": 1150,
+     "y2": 750,
+     "op": "line",
+     "color": "blue"
+    },
+    {
+     "id": "d3",
+     "x1": 1150,
+     "y1": 750,
+     "x2": 900,
+     "y2": 500,
+     "op": "line",
+     "color": "blue"
+    },
+    {
+     "id": "d4",
+     "x1": 900,
+     "y1": 500,
+     "x2": 1250,
+     "y2": 250,
+     "op": "line",
+     "color": "blue"
+    }
+   ]
+  },
+  {
+   "title": "Count the area",
+   "say": "The big square equals four triangles plus the tilted square of side c. Each triangle has area a b over 2.",
+   "ops": [
+    {
+     "id": "eq1",
+     "x": 100,
+     "y": 60,
+     "text": "",
+     "size": 24,
+     "op": "write"
+    },
+    {
+     "id": "eq2",
+     "x": 100,
+     "y": 260,
+     "text": "(a + b)² = 4 · ab/2 + c²",
+     "size": 40,
+     "op": "write"
+    }
+   ]
+  },
+  {
+   "title": "Expand",
+   "say": "Expanding the left side gives a squared plus two a b plus b squared, and the right side has two a b plus c squared.",
+   "ops": [
+    {
+     "id": "eq3",
+     "x": 100,
+     "y": 330,
+     "text": "a² + 2ab + b² = 2ab + c²",
+     "size": 40,
+     "op": "write"
+    }
+   ]
+  },
+  {
+   "title": "Cancel",
+   "say": "Subtract two a b from both sides and what remains is exactly a squared plus b squared equals c squared.",
+   "ops": [
+    {
+     "id": "eq4",
+     "x": 100,
+     "y": 400,
+     "text": "a² + b² = c²",
+     "size": 52,
+     "color": "blue",
+     "op": "write",
+     "underline": true
+    }
+   ]
+  }
+ ]
+}

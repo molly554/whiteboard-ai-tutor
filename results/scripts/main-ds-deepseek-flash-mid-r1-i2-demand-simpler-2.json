@@ -1,0 +1,261 @@
+{
+ "mode": "continue",
+ "title": "Seeing the demand shift simply",
+ "lang": "en",
+ "steps": [
+  {
+   "title": "Clear the clutter",
+   "say": "Let's take the side notes away so we can look at just one idea: who is buying.",
+   "ops": [
+    {
+     "op": "erase",
+     "ids": [
+      "note1",
+      "note2",
+      "note3"
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Before: a few buyers",
+   "say": "At the price P1, only three people wanted the product. Count them.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "beflab",
+     "x": 700,
+     "y": 170,
+     "text": "Same price P1 - 3 buyers want it",
+     "size": 30
+    },
+    {
+     "op": "ellipse",
+     "id": "bn1",
+     "cx": 720,
+     "cy": 280,
+     "rx": 16,
+     "ry": 16,
+     "color": "blue",
+     "fill": "blue"
+    },
+    {
+     "op": "ellipse",
+     "id": "bn2",
+     "cx": 790,
+     "cy": 280,
+     "rx": 16,
+     "ry": 16,
+     "color": "blue",
+     "fill": "blue"
+    },
+    {
+     "op": "ellipse",
+     "id": "bn3",
+     "cx": 860,
+     "cy": 280,
+     "rx": 16,
+     "ry": 16,
+     "color": "blue",
+     "fill": "blue"
+    }
+   ]
+  },
+  {
+   "title": "After: more buyers",
+   "say": "Demand rises means at that exact same price, more people now want it. Six, not three.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "aftlab",
+     "x": 700,
+     "y": 380,
+     "text": "Demand rises - now 6 buyers at P1",
+     "size": 30
+    },
+    {
+     "op": "ellipse",
+     "id": "ab1",
+     "cx": 720,
+     "cy": 480,
+     "rx": 16,
+     "ry": 16,
+     "color": "red",
+     "fill": "red"
+    },
+    {
+     "op": "ellipse",
+     "id": "ab2",
+     "cx": 785,
+     "cy": 480,
+     "rx": 16,
+     "ry": 16,
+     "color": "red",
+     "fill": "red"
+    },
+    {
+     "op": "ellipse",
+     "id": "ab3",
+     "cx": 850,
+     "cy": 480,
+     "rx": 16,
+     "ry": 16,
+     "color": "red",
+     "fill": "red"
+    },
+    {
+     "op": "ellipse",
+     "id": "ab4",
+     "cx": 915,
+     "cy": 480,
+     "rx": 16,
+     "ry": 16,
+     "color": "red",
+     "fill": "red"
+    },
+    {
+     "op": "ellipse",
+     "id": "ab5",
+     "cx": 980,
+     "cy": 480,
+     "rx": 16,
+     "ry": 16,
+     "color": "red",
+     "fill": "red"
+    },
+    {
+     "op": "ellipse",
+     "id": "ab6",
+     "cx": 1045,
+     "cy": 480,
+     "rx": 16,
+     "ry": 16,
+     "color": "red",
+     "fill": "red"
+    },
+    {
+     "op": "line",
+     "id": "grow",
+     "x1": 1250,
+     "y1": 300,
+     "x2": 1250,
+     "y2": 470,
+     "color": "green",
+     "width": 5,
+     "arrow": true
+    },
+    {
+     "op": "write",
+     "id": "growlab",
+     "x": 1160,
+     "y": 485,
+     "text": "demand rises",
+     "size": 28,
+     "color": "green"
+    }
+   ]
+  },
+  {
+   "title": "So the curve moves right",
+   "say": "More buyers at every price is exactly what shifting the demand curve to the right, D1 to D2, means.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "shifttxt",
+     "x": 700,
+     "y": 560,
+     "text": "More buyers at every price = curve slides right",
+     "size": 30
+    },
+    {
+     "op": "line",
+     "id": "miniarrow",
+     "x1": 700,
+     "y1": 630,
+     "x2": 900,
+     "y2": 630,
+     "color": "green",
+     "width": 5,
+     "arrow": true
+    },
+    {
+     "op": "write",
+     "id": "minilab",
+     "x": 915,
+     "y": 610,
+     "text": "D1 to D2",
+     "size": 28,
+     "color": "green"
+    }
+   ]
+  },
+  {
+   "title": "The new crossing",
+   "say": "With D2, the market meets supply at a new point E2, higher up and further right than E1.",
+   "ops": [
+    {
+     "op": "ellipse",
+     "id": "e2",
+     "cx": 660,
+     "cy": 427,
+     "rx": 9,
+     "ry": 9,
+     "color": "green",
+     "fill": "green"
+    },
+    {
+     "op": "line",
+     "id": "e2v",
+     "x1": 660,
+     "y1": 427,
+     "x2": 660,
+     "y2": 720,
+     "color": "gray",
+     "width": 3,
+     "dash": true
+    },
+    {
+     "op": "line",
+     "id": "e2h",
+     "x1": 200,
+     "y1": 427,
+     "x2": 660,
+     "y2": 427,
+     "color": "gray",
+     "width": 3,
+     "dash": true
+    },
+    {
+     "op": "write",
+     "id": "p2",
+     "x": 140,
+     "y": 405,
+     "text": "P2",
+     "size": 32
+    },
+    {
+     "op": "write",
+     "id": "q2",
+     "x": 660,
+     "y": 735,
+     "text": "Q2",
+     "size": 32
+    }
+   ]
+  },
+  {
+   "title": "The answer",
+   "say": "Compare the two points: the price went up from P1 to P2, and the quantity sold went up too.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "concl",
+     "x": 215,
+     "y": 780,
+     "text": "More buyers at every price,\nso price and quantity both rise.",
+     "size": 30
+    }
+   ]
+  }
+ ]
+}

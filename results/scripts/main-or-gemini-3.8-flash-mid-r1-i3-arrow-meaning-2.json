@@ -1,0 +1,200 @@
+{
+ "title": "Why price rises when demand rises",
+ "lang": "en",
+ "steps": [
+  {
+   "title": "Meaning of the shift arrow",
+   "say": "That arrow shows the entire demand curve shifting right. It means at every price, buyers now want to purchase a greater quantity.",
+   "ops": [
+    {
+     "op": "rect",
+     "id": "shift_box",
+     "x": 470,
+     "y": 180,
+     "w": 450,
+     "h": 85,
+     "color": "green"
+    },
+    {
+     "op": "write",
+     "id": "shift_exp",
+     "x": 485,
+     "y": 192,
+     "text": "Shift right means buyers want\nmore at EVERY price level.",
+     "size": 28,
+     "color": "green"
+    },
+    {
+     "op": "line",
+     "id": "shift_pointer",
+     "x1": 430,
+     "y1": 262,
+     "x2": 470,
+     "y2": 230,
+     "color": "green",
+     "width": 3,
+     "dash": true
+    }
+   ]
+  },
+  {
+   "title": "Shortage at original price",
+   "say": "At the old price P1, buyers now want more goods than sellers are willing to supply, creating a shortage.",
+   "ops": [
+    {
+     "op": "line",
+     "id": "p1_ext",
+     "x1": 580,
+     "y1": 470,
+     "x2": 740,
+     "y2": 470,
+     "color": "red",
+     "width": 3,
+     "dash": true
+    },
+    {
+     "op": "ellipse",
+     "id": "shortage_pt",
+     "cx": 740,
+     "cy": 470,
+     "rx": 7,
+     "ry": 7,
+     "color": "red",
+     "fill": "red"
+    },
+    {
+     "op": "write",
+     "id": "shortage_txt",
+     "x": 755,
+     "y": 452,
+     "text": "Shortage!",
+     "size": 28,
+     "color": "red"
+    },
+    {
+     "op": "write",
+     "id": "shortage_note",
+     "x": 755,
+     "y": 488,
+     "text": "demand > supply",
+     "size": 24,
+     "color": "gray"
+    }
+   ]
+  },
+  {
+   "title": "New equilibrium",
+   "say": "Because buyers compete for scarce goods, sellers raise prices until a new equilibrium is reached where S meets D2.",
+   "ops": [
+    {
+     "op": "ellipse",
+     "id": "e2",
+     "cx": 660,
+     "cy": 428,
+     "rx": 9,
+     "ry": 9,
+     "color": "green",
+     "fill": "green"
+    },
+    {
+     "op": "line",
+     "id": "e2v",
+     "x1": 660,
+     "y1": 428,
+     "x2": 660,
+     "y2": 720,
+     "color": "gray",
+     "width": 3,
+     "dash": true
+    },
+    {
+     "op": "line",
+     "id": "e2h",
+     "x1": 200,
+     "y1": 428,
+     "x2": 660,
+     "y2": 428,
+     "color": "gray",
+     "width": 3,
+     "dash": true
+    },
+    {
+     "op": "write",
+     "id": "p2",
+     "x": 130,
+     "y": 410,
+     "text": "P2",
+     "size": 32,
+     "anchor": "middle",
+     "color": "red"
+    },
+    {
+     "op": "write",
+     "id": "q2",
+     "x": 660,
+     "y": 735,
+     "text": "Q2",
+     "size": 32,
+     "anchor": "middle",
+     "color": "red"
+    },
+    {
+     "op": "write",
+     "id": "e2lab",
+     "x": 680,
+     "y": 398,
+     "text": "New E",
+     "size": 28,
+     "color": "green"
+    }
+   ]
+  },
+  {
+   "title": "Result: price rises",
+   "say": "So when demand rises, the shortage drives the price up from P1 to P2, and quantity increases to Q2.",
+   "ops": [
+    {
+     "op": "line",
+     "id": "parrow",
+     "x1": 160,
+     "y1": 460,
+     "x2": 160,
+     "y2": 430,
+     "color": "red",
+     "width": 4,
+     "arrow": true
+    },
+    {
+     "op": "line",
+     "id": "qarrow",
+     "x1": 595,
+     "y1": 780,
+     "x2": 645,
+     "y2": 780,
+     "color": "red",
+     "width": 4,
+     "arrow": true
+    },
+    {
+     "op": "rect",
+     "id": "sumbox",
+     "x": 1180,
+     "y": 745,
+     "w": 380,
+     "h": 115,
+     "color": "green",
+     "fill": "green"
+    },
+    {
+     "op": "write",
+     "id": "sumtxt",
+     "x": 1200,
+     "y": 760,
+     "text": "Conclusion:\nPrice rises (P1 → P2)\nQuantity rises (Q1 → Q2)",
+     "size": 28,
+     "color": "ink"
+    }
+   ]
+  }
+ ]
+}

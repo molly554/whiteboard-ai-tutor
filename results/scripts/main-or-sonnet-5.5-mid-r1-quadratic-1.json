@@ -1,0 +1,208 @@
+{
+ "title": "Solving a Quadratic",
+ "lang": "en",
+ "steps": [
+  {
+   "title": "The problem",
+   "say": "We want the values of x that make x squared minus 5x plus 6 equal to zero.",
+   "ops": [
+    {
+     "id": "t1",
+     "op": "write",
+     "x": 800,
+     "y": 40,
+     "text": "Solving a Quadratic",
+     "size": 56,
+     "anchor": "middle"
+    },
+    {
+     "id": "p1",
+     "op": "write",
+     "x": 800,
+     "y": 140,
+     "text": "x² − 5x + 6 = 0",
+     "size": 48,
+     "anchor": "middle",
+     "color": "blue"
+    }
+   ]
+  },
+  {
+   "title": "Try the formula",
+   "say": "First, try the quadratic formula. Here a is 1, b is minus 5, and c is 6.",
+   "ops": [
+    {
+     "id": "f1",
+     "op": "write",
+     "x": 80,
+     "y": 240,
+     "text": "Try the formula:",
+     "size": 36
+    },
+    {
+     "id": "f2",
+     "op": "write",
+     "x": 80,
+     "y": 300,
+     "text": "x = (−b ± √(b² − 4ac)) / 2a",
+     "size": 40
+    },
+    {
+     "id": "f3",
+     "op": "write",
+     "x": 80,
+     "y": 380,
+     "text": "a = 1, b = −5, c = 6",
+     "size": 36,
+     "color": "gray"
+    }
+   ]
+  },
+  {
+   "title": "Plug in the numbers",
+   "say": "Substituting gives 5 plus or minus the square root of 1, over 2, so x is 3 or 2.",
+   "ops": [
+    {
+     "id": "f4",
+     "op": "write",
+     "x": 80,
+     "y": 450,
+     "text": "x = (5 ± √(25 − 24)) / 2",
+     "size": 40
+    },
+    {
+     "id": "f5",
+     "op": "write",
+     "x": 80,
+     "y": 520,
+     "text": "x = (5 ± 1) / 2",
+     "size": 40
+    },
+    {
+     "id": "f6",
+     "op": "write",
+     "x": 80,
+     "y": 590,
+     "text": "x = 3 or x = 2",
+     "size": 40,
+     "color": "green"
+    }
+   ]
+  },
+  {
+   "title": "Switch methods",
+   "say": "That works, but it is a lot of work for this equation. Factoring is simpler, so let's switch.",
+   "ops": [
+    {
+     "id": "nb",
+     "op": "rect",
+     "x": 880,
+     "y": 280,
+     "w": 560,
+     "h": 180,
+     "color": "red"
+    },
+    {
+     "id": "n1",
+     "op": "write",
+     "x": 900,
+     "y": 300,
+     "text": "That works, but it's heavy.\nThere is a simpler way:\nfactoring!",
+     "size": 36,
+     "color": "red"
+    }
+   ]
+  },
+  {
+   "title": "Find two numbers",
+   "say": "Clear the board. We need two numbers that multiply to 6 and add to minus 5. Those are minus 2 and minus 3.",
+   "ops": [
+    {
+     "id": "e1",
+     "op": "erase",
+     "ids": [
+      "f1",
+      "f2",
+      "f3",
+      "f4",
+      "f5",
+      "f6",
+      "n1",
+      "nb"
+     ]
+    },
+    {
+     "id": "g1",
+     "op": "write",
+     "x": 800,
+     "y": 250,
+     "text": "Find two numbers: product 6, sum −5",
+     "size": 40,
+     "anchor": "middle"
+    },
+    {
+     "id": "g2",
+     "op": "write",
+     "x": 800,
+     "y": 330,
+     "text": "−2 and −3",
+     "size": 44,
+     "anchor": "middle",
+     "color": "green"
+    }
+   ]
+  },
+  {
+   "title": "Factor and split",
+   "say": "So the equation factors as x minus 2 times x minus 3. A product is zero only when one factor is zero.",
+   "ops": [
+    {
+     "id": "g3",
+     "op": "write",
+     "x": 800,
+     "y": 430,
+     "text": "(x − 2)(x − 3) = 0",
+     "size": 48,
+     "anchor": "middle",
+     "color": "blue"
+    },
+    {
+     "id": "g4",
+     "op": "write",
+     "x": 800,
+     "y": 530,
+     "text": "x − 2 = 0   or   x − 3 = 0",
+     "size": 40,
+     "anchor": "middle"
+    }
+   ]
+  },
+  {
+   "title": "Answer and check",
+   "say": "So x equals 2 or x equals 3. Plugging each back in gives zero, so both work.",
+   "ops": [
+    {
+     "id": "g5",
+     "op": "write",
+     "x": 800,
+     "y": 620,
+     "text": "x = 2   or   x = 3",
+     "size": 48,
+     "anchor": "middle",
+     "color": "green",
+     "underline": true
+    },
+    {
+     "id": "g6",
+     "op": "write",
+     "x": 800,
+     "y": 740,
+     "text": "Check: 4 − 10 + 6 = 0 and 9 − 15 + 6 = 0",
+     "size": 32,
+     "anchor": "middle",
+     "color": "gray"
+    }
+   ]
+  }
+ ]
+}

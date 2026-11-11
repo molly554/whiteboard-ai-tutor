@@ -1,0 +1,227 @@
+{
+ "title": "Demand Rises, Price Rises",
+ "lang": "en",
+ "steps": [
+  {
+   "title": "Set up the axes",
+   "say": "Let's draw a market graph with quantity on the horizontal axis and price on the vertical axis.",
+   "ops": [
+    {
+     "id": "ttl",
+     "op": "write",
+     "x": 800,
+     "y": 50,
+     "text": "Demand Rises, Price Rises",
+     "size": 56,
+     "anchor": "middle"
+    },
+    {
+     "id": "ay",
+     "op": "line",
+     "x1": 300,
+     "y1": 200,
+     "x2": 300,
+     "y2": 760,
+     "arrow": true
+    },
+    {
+     "id": "ax",
+     "op": "line",
+     "x1": 300,
+     "y1": 760,
+     "x2": 900,
+     "y2": 760,
+     "arrow": true
+    },
+    {
+     "id": "lp",
+     "op": "write",
+     "x": 190,
+     "y": 150,
+     "text": "Price",
+     "size": 34
+    },
+    {
+     "id": "lq",
+     "op": "write",
+     "x": 780,
+     "y": 790,
+     "text": "Quantity",
+     "size": 34
+    }
+   ]
+  },
+  {
+   "title": "Draw supply",
+   "say": "The supply curve slopes upward: sellers offer more when prices are higher.",
+   "ops": [
+    {
+     "id": "sup",
+     "op": "line",
+     "x1": 380,
+     "y1": 680,
+     "x2": 820,
+     "y2": 280,
+     "color": "green",
+     "width": 6
+    },
+    {
+     "id": "sl",
+     "op": "write",
+     "x": 840,
+     "y": 250,
+     "text": "Supply",
+     "size": 34,
+     "color": "green"
+    }
+   ]
+  },
+  {
+   "title": "Draw original demand",
+   "say": "The demand curve slopes downward: buyers want less when prices are higher.",
+   "ops": [
+    {
+     "id": "d1",
+     "op": "line",
+     "x1": 380,
+     "y1": 280,
+     "x2": 820,
+     "y2": 680,
+     "color": "blue",
+     "width": 6
+    },
+    {
+     "id": "d1l",
+     "op": "write",
+     "x": 840,
+     "y": 660,
+     "text": "D1",
+     "size": 34,
+     "color": "blue"
+    }
+   ]
+  },
+  {
+   "title": "Mark the equilibrium",
+   "say": "Where the curves cross is the equilibrium price and quantity.",
+   "ops": [
+    {
+     "id": "e1",
+     "op": "ellipse",
+     "cx": 600,
+     "cy": 480,
+     "rx": 12,
+     "ry": 12,
+     "color": "ink",
+     "fill": "gray"
+    },
+    {
+     "id": "p1l",
+     "op": "line",
+     "x1": 300,
+     "y1": 480,
+     "x2": 588,
+     "y2": 480,
+     "color": "gray",
+     "dash": true,
+     "width": 3
+    },
+    {
+     "id": "p1t",
+     "op": "write",
+     "x": 215,
+     "y": 462,
+     "text": "P1",
+     "size": 32
+    }
+   ]
+  },
+  {
+   "title": "Demand shifts right",
+   "say": "Now demand rises. Buyers want more at every price, so the whole demand curve shifts to the right.",
+   "ops": [
+    {
+     "id": "d2",
+     "op": "line",
+     "x1": 480,
+     "y1": 280,
+     "x2": 920,
+     "y2": 680,
+     "color": "red",
+     "width": 6
+    },
+    {
+     "id": "d2l",
+     "op": "write",
+     "x": 940,
+     "y": 660,
+     "text": "D2",
+     "size": 34,
+     "color": "red"
+    },
+    {
+     "id": "arr",
+     "op": "line",
+     "x1": 700,
+     "y1": 740,
+     "x2": 800,
+     "y2": 740,
+     "color": "red",
+     "arrow": true,
+     "width": 4
+    }
+   ]
+  },
+  {
+   "title": "New equilibrium",
+   "say": "The new curve meets supply higher up, so the price rises and more is traded.",
+   "ops": [
+    {
+     "id": "e2",
+     "op": "ellipse",
+     "cx": 660,
+     "cy": 430,
+     "rx": 12,
+     "ry": 12,
+     "color": "ink",
+     "fill": "red"
+    },
+    {
+     "id": "p2l",
+     "op": "line",
+     "x1": 300,
+     "y1": 430,
+     "x2": 648,
+     "y2": 430,
+     "color": "red",
+     "dash": true,
+     "width": 3
+    },
+    {
+     "id": "p2t",
+     "op": "write",
+     "x": 215,
+     "y": 330,
+     "text": "P2",
+     "size": 32,
+     "color": "red"
+    }
+   ]
+  },
+  {
+   "title": "Takeaway",
+   "say": "So when demand rises and supply stays the same, the equilibrium price goes up.",
+   "ops": [
+    {
+     "id": "sum",
+     "op": "write",
+     "x": 1000,
+     "y": 400,
+     "text": "Demand up\n→ Price up\n→ Quantity up",
+     "size": 44,
+     "color": "blue"
+    }
+   ]
+  }
+ ]
+}

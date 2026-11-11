@@ -1,0 +1,146 @@
+{
+ "title": "Why do we have seasons?",
+ "lang": "en",
+ "steps": [
+  {
+   "title": "The distance objection",
+   "say": "Yes, northern summer does happen near Earth's farthest point from the Sun. But that distance change is tiny compared with the tilt effect.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "aphelion",
+     "x": 840,
+     "y": 100,
+     "text": "Yes — north summer is near aphelion,\nbut distance changes sunlight only ~7%.\nThe tilt matters far more.",
+     "size": 32,
+     "color": "blue"
+    }
+   ]
+  },
+  {
+   "title": "Tilt changes the sunlight angle",
+   "say": "When the north pole leans toward the Sun, sunlight strikes the northern hemisphere more directly. Leaning away, the same light is spread out.",
+   "ops": [
+    {
+     "op": "erase",
+     "ids": [
+      "orbitlabel"
+     ]
+    },
+    {
+     "op": "ellipse",
+     "id": "tiltA",
+     "cx": 960,
+     "cy": 285,
+     "rx": 26,
+     "ry": 26,
+     "color": "blue",
+     "width": 4,
+     "fill": "blue"
+    },
+    {
+     "op": "line",
+     "id": "axisA",
+     "x1": 973,
+     "y1": 330,
+     "x2": 947,
+     "y2": 240,
+     "width": 4
+    },
+    {
+     "op": "line",
+     "id": "rayA1",
+     "x1": 880,
+     "y1": 270,
+     "x2": 930,
+     "y2": 270,
+     "width": 3,
+     "arrow": true
+    },
+    {
+     "op": "line",
+     "id": "rayA2",
+     "x1": 880,
+     "y1": 300,
+     "x2": 930,
+     "y2": 300,
+     "width": 3,
+     "arrow": true
+    },
+    {
+     "op": "ellipse",
+     "id": "tiltB",
+     "cx": 1160,
+     "cy": 285,
+     "rx": 26,
+     "ry": 26,
+     "color": "blue",
+     "width": 4,
+     "fill": "blue"
+    },
+    {
+     "op": "line",
+     "id": "axisB",
+     "x1": 1147,
+     "y1": 330,
+     "x2": 1173,
+     "y2": 240,
+     "width": 4
+    },
+    {
+     "op": "line",
+     "id": "rayB1",
+     "x1": 1080,
+     "y1": 270,
+     "x2": 1130,
+     "y2": 270,
+     "width": 3,
+     "arrow": true
+    },
+    {
+     "op": "line",
+     "id": "rayB2",
+     "x1": 1080,
+     "y1": 300,
+     "x2": 1130,
+     "y2": 300,
+     "width": 3,
+     "arrow": true
+    },
+    {
+     "op": "write",
+     "id": "summerLabel",
+     "x": 920,
+     "y": 345,
+     "text": "summer",
+     "size": 26,
+     "color": "red"
+    },
+    {
+     "op": "write",
+     "id": "winterLabel",
+     "x": 1120,
+     "y": 345,
+     "text": "winter",
+     "size": 26,
+     "color": "gray"
+    }
+   ]
+  },
+  {
+   "title": "Two heating effects",
+   "say": "So the northern summer is hotter for two reasons: steeper sunlight concentrates energy, and longer days give more hours of heating.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "effects",
+     "x": 50,
+     "y": 230,
+     "text": "Hotter because:\n• Sunlight hits at a steeper angle\n  → energy concentrated\n• Days last longer",
+     "size": 30,
+     "color": "ink"
+    }
+   ]
+  }
+ ]
+}

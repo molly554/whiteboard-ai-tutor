@@ -1,0 +1,139 @@
+{
+ "title": "Why northern summer is hotter",
+ "lang": "en",
+ "steps": [
+  {
+   "title": "Yes, farther — and still hotter",
+   "say": "Good catch: in northern summer Earth is actually near its farthest point from the Sun. So distance can't be the cause.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "far",
+     "x": 60,
+     "y": 250,
+     "text": "Right: northern summer is near Earth's\nFARTHEST point from the Sun.\nSo distance is not the cause.",
+     "size": 36,
+     "color": "red"
+    }
+   ]
+  },
+  {
+   "title": "Sunlight hits at an angle",
+   "say": "What changes is the angle of the sunlight. A tilted Earth makes the northern half face the Sun more directly in summer.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "angle",
+     "x": 60,
+     "y": 400,
+     "text": "The tilt changes the ANGLE of sunlight:\nsteeper rays = more concentrated heat.",
+     "size": 36,
+     "color": "blue"
+    }
+   ]
+  },
+  {
+   "title": "Summer side vs winter side",
+   "say": "On the left, the north pole leans toward the Sun — northern summer. On the right, it leans away — northern winter.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "summer",
+     "x": 150,
+     "y": 700,
+     "text": "North leans\nTOWARD Sun\n= summer",
+     "size": 30,
+     "anchor": "middle",
+     "color": "red"
+    },
+    {
+     "op": "write",
+     "id": "winter",
+     "x": 1380,
+     "y": 700,
+     "text": "North leans\nAWAY\n= winter",
+     "size": 30,
+     "anchor": "middle",
+     "color": "blue"
+    }
+   ]
+  },
+  {
+   "title": "Same rays, spread out",
+   "say": "Steep rays pack energy into a small area; slanted rays spread the same energy over a larger area, so it is weaker.",
+   "ops": [
+    {
+     "op": "rect",
+     "id": "boxA",
+     "x": 560,
+     "y": 180,
+     "w": 200,
+     "h": 140,
+     "color": "green",
+     "width": 4
+    },
+    {
+     "op": "write",
+     "id": "boxAlabel",
+     "x": 660,
+     "y": 340,
+     "text": "steep rays:\nsmall area, hot",
+     "size": 28,
+     "anchor": "middle",
+     "color": "green"
+    },
+    {
+     "op": "rect",
+     "id": "boxB",
+     "x": 900,
+     "y": 180,
+     "w": 380,
+     "h": 140,
+     "color": "gray",
+     "width": 4
+    },
+    {
+     "op": "write",
+     "id": "boxBlabel",
+     "x": 1090,
+     "y": 340,
+     "text": "slanted rays:\nsame energy, larger area, cooler",
+     "size": 28,
+     "anchor": "middle",
+     "color": "gray"
+    }
+   ]
+  },
+  {
+   "title": "Longer days too",
+   "say": "Summer also brings longer days, so the ground has more hours to warm up.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "days",
+     "x": 560,
+     "y": 430,
+     "text": "Plus: summer days are longer,\nso more hours of heating.",
+     "size": 34,
+     "color": "ink"
+    }
+   ]
+  },
+  {
+   "title": "The takeaway",
+   "say": "Seasons come from the 23.5 degree tilt — the angle of sunlight and day length — not from our distance to the Sun.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "take",
+     "x": 60,
+     "y": 820,
+     "text": "Takeaway: seasons = tilt, not distance.",
+     "size": 40,
+     "color": "blue",
+     "underline": true
+    }
+   ]
+  }
+ ]
+}

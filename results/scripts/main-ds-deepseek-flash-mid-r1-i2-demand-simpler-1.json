@@ -1,0 +1,153 @@
+{
+ "title": "The demand shift, simply",
+ "lang": "en",
+ "steps": [
+  {
+   "title": "Clear the clutter",
+   "say": "Let me clear those small labels and tell this as a simple story instead.",
+   "ops": [
+    {
+     "op": "erase",
+     "ids": [
+      "note1",
+      "note2",
+      "note3"
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Same price, more buyers",
+   "say": "At the old price, buyers now want more than before. That is all a demand shift means.",
+   "ops": [
+    {
+     "op": "line",
+     "id": "arrowMore",
+     "x1": 580,
+     "y1": 470,
+     "x2": 735,
+     "y2": 470,
+     "color": "green",
+     "width": 5,
+     "arrow": true
+    },
+    {
+     "op": "ellipse",
+     "id": "dotMore",
+     "cx": 745,
+     "cy": 470,
+     "rx": 8,
+     "ry": 8,
+     "color": "green",
+     "fill": "green"
+    },
+    {
+     "op": "write",
+     "id": "moreLab",
+     "x": 880,
+     "y": 380,
+     "text": "same price,\nmore buyers\nwant it",
+     "size": 28,
+     "color": "green"
+    }
+   ]
+  },
+  {
+   "title": "So there is a shortage",
+   "say": "Sellers still bring the same amount to market, so at that price some buyers go home empty-handed.",
+   "ops": [
+    {
+     "op": "line",
+     "id": "shortArr",
+     "x1": 590,
+     "y1": 560,
+     "x2": 740,
+     "y2": 560,
+     "color": "red",
+     "width": 5,
+     "arrow": "both"
+    },
+    {
+     "op": "write",
+     "id": "shortLab",
+     "x": 665,
+     "y": 575,
+     "text": "shortage",
+     "size": 28,
+     "color": "red",
+     "anchor": "middle"
+    }
+   ]
+  },
+  {
+   "title": "Buyers bid the price up",
+   "say": "The buyers who missed out offer more, so the price climbs to a new equilibrium where demand and supply meet again.",
+   "ops": [
+    {
+     "op": "line",
+     "id": "p2line",
+     "x1": 200,
+     "y1": 428,
+     "x2": 660,
+     "y2": 428,
+     "color": "gray",
+     "width": 3,
+     "dash": true
+    },
+    {
+     "op": "ellipse",
+     "id": "e2",
+     "cx": 660,
+     "cy": 428,
+     "rx": 9,
+     "ry": 9,
+     "color": "green",
+     "fill": "green"
+    },
+    {
+     "op": "write",
+     "id": "p2",
+     "x": 130,
+     "y": 400,
+     "text": "P2",
+     "size": 32,
+     "anchor": "middle"
+    },
+    {
+     "op": "line",
+     "id": "q2line",
+     "x1": 660,
+     "y1": 428,
+     "x2": 660,
+     "y2": 720,
+     "color": "gray",
+     "width": 3,
+     "dash": true
+    },
+    {
+     "op": "write",
+     "id": "q2",
+     "x": 645,
+     "y": 735,
+     "text": "Q2",
+     "size": 30,
+     "anchor": "middle"
+    }
+   ]
+  },
+  {
+   "title": "The story in words",
+   "say": "Same idea in plain words: more buyers, same number of bikes, so the price rises.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "story",
+     "x": 1180,
+     "y": 200,
+     "text": "Simple story\n$100: 3 people wanted\na bike. Now 6 want one.\nSellers still have only 3.\nSome buyers miss out, so\nthey offer more money.\nPrice rises until only\n3 people want it again.",
+     "size": 28
+    }
+   ]
+  }
+ ]
+}

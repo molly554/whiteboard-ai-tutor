@@ -1,0 +1,225 @@
+{
+ "title": "Why does price rise when demand rises?",
+ "lang": "en",
+ "steps": [
+  {
+   "title": "Step back for a simpler example",
+   "say": "Let's erase the shift and notes for a moment, and think about ice cream on a hot day.",
+   "ops": [
+    {
+     "op": "erase",
+     "ids": [
+      "d2",
+      "d2lab",
+      "shift",
+      "shiftlab",
+      "note1",
+      "note2",
+      "note3"
+     ]
+    },
+    {
+     "op": "write",
+     "id": "ex_title",
+     "x": 1150,
+     "y": 160,
+     "text": "Example: Ice Cream",
+     "size": 36,
+     "underline": true
+    },
+    {
+     "op": "write",
+     "id": "ex_p",
+     "x": 1150,
+     "y": 230,
+     "text": "Suppose P1 = $3",
+     "size": 32
+    }
+   ]
+  },
+  {
+   "title": "Normal day vs. Hot day",
+   "say": "At 3 dollars, people normally buy Q1 cones. Suddenly a heatwave hits! At that exact same 3 dollar price, people now want way more.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "ex_norm",
+     "x": 1150,
+     "y": 300,
+     "text": "• Cool day: buyers want Q1",
+     "size": 30
+    },
+    {
+     "op": "write",
+     "id": "ex_hot",
+     "x": 1150,
+     "y": 355,
+     "text": "• Hot day: at $3, buyers\n  want MORE!",
+     "size": 30,
+     "color": "red"
+    },
+    {
+     "op": "line",
+     "id": "same_p_arrow",
+     "x1": 595,
+     "y1": 470,
+     "x2": 725,
+     "y2": 470,
+     "color": "green",
+     "width": 5,
+     "arrow": true
+    },
+    {
+     "op": "ellipse",
+     "id": "pt_hot",
+     "cx": 740,
+     "cy": 470,
+     "rx": 9,
+     "ry": 9,
+     "color": "red",
+     "fill": "red"
+    },
+    {
+     "op": "write",
+     "id": "same_p_txt",
+     "x": 660,
+     "y": 490,
+     "text": "more wanted\nat same P1",
+     "size": 26,
+     "color": "green",
+     "anchor": "middle"
+    }
+   ]
+  },
+  {
+   "title": "Why the whole line shifts",
+   "say": "Because people want more cones at 3 dollars, and at 4 dollars, and at every price, all points move right. That makes the new line D2.",
+   "ops": [
+    {
+     "op": "line",
+     "id": "arr_up",
+     "x1": 435,
+     "y1": 385,
+     "x2": 565,
+     "y2": 385,
+     "color": "green",
+     "width": 4,
+     "arrow": true
+    },
+    {
+     "op": "line",
+     "id": "arr_dn",
+     "x1": 755,
+     "y1": 555,
+     "x2": 885,
+     "y2": 555,
+     "color": "green",
+     "width": 4,
+     "arrow": true
+    },
+    {
+     "op": "line",
+     "id": "d2_new",
+     "x1": 420,
+     "y1": 300,
+     "x2": 1060,
+     "y2": 640,
+     "color": "red",
+     "width": 5
+    },
+    {
+     "op": "write",
+     "id": "d2lab_new",
+     "x": 1075,
+     "y": 625,
+     "text": "D2",
+     "size": 34,
+     "color": "red"
+    },
+    {
+     "op": "write",
+     "id": "ex_shift",
+     "x": 1150,
+     "y": 455,
+     "text": "More wanted at EVERY\nprice → whole line\nmoves right to D2.",
+     "size": 30
+    }
+   ]
+  },
+  {
+   "title": "Shortage pushes price up",
+   "say": "At the old price P1, buyers want more than sellers have. This shortage pushes the price up to P2, reaching the new balance.",
+   "ops": [
+    {
+     "op": "erase",
+     "ids": [
+      "arr_up",
+      "arr_dn",
+      "same_p_txt"
+     ]
+    },
+    {
+     "op": "ellipse",
+     "id": "e2",
+     "cx": 660,
+     "cy": 428,
+     "rx": 9,
+     "ry": 9,
+     "color": "green",
+     "fill": "green"
+    },
+    {
+     "op": "line",
+     "id": "e2h",
+     "x1": 200,
+     "y1": 428,
+     "x2": 660,
+     "y2": 428,
+     "color": "gray",
+     "width": 3,
+     "dash": true
+    },
+    {
+     "op": "line",
+     "id": "e2v",
+     "x1": 660,
+     "y1": 428,
+     "x2": 660,
+     "y2": 720,
+     "color": "gray",
+     "width": 3,
+     "dash": true
+    },
+    {
+     "op": "write",
+     "id": "p2",
+     "x": 130,
+     "y": 405,
+     "text": "P2",
+     "size": 32,
+     "color": "green",
+     "anchor": "middle"
+    },
+    {
+     "op": "write",
+     "id": "q2",
+     "x": 660,
+     "y": 735,
+     "text": "Q2",
+     "size": 32,
+     "color": "green",
+     "anchor": "middle"
+    },
+    {
+     "op": "write",
+     "id": "ex_final",
+     "x": 1150,
+     "y": 600,
+     "text": "Result:\nPrice rises (P1 → P2)\nQuantity rises (Q1 → Q2)",
+     "size": 32,
+     "color": "green"
+    }
+   ]
+  }
+ ]
+}

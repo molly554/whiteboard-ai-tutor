@@ -1,0 +1,370 @@
+{
+ "title": "Why Do We Have Seasons?",
+ "lang": "en",
+ "steps": [
+  {
+   "title": "The Earth's Tilt",
+   "say": "First, let's remember that the Earth's axis is tilted, not straight up and down.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "title_tilt",
+     "x": 80,
+     "y": 80,
+     "text": "1. Earth's Tilt",
+     "size": 56,
+     "color": "ink",
+     "anchor": "start"
+    },
+    {
+     "op": "write",
+     "id": "label_tilt",
+     "x": 80,
+     "y": 160,
+     "text": "Earth's axis is tilted about 23.5°",
+     "size": 40,
+     "color": "ink",
+     "anchor": "start"
+    },
+    {
+     "op": "path",
+     "id": "tilt_line",
+     "d": "M 400 200 L 400 500",
+     "color": "blue",
+     "width": 5
+    },
+    {
+     "op": "line",
+     "id": "tilt_arrow",
+     "x1": 400,
+     "y1": 500,
+     "x2": 460,
+     "y2": 500,
+     "color": "red",
+     "width": 4,
+     "arrow": true
+    },
+    {
+     "op": "write",
+     "id": "tilt_angle_label",
+     "x": 470,
+     "y": 490,
+     "text": "23.5°",
+     "size": 34,
+     "color": "red",
+     "anchor": "start"
+    }
+   ]
+  },
+  {
+   "title": "Orbit Around the Sun",
+   "say": "As Earth orbits the Sun, the tilt always points in the same direction.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "title_orbit",
+     "x": 80,
+     "y": 80,
+     "text": "2. Orbit Around the Sun",
+     "size": 56,
+     "color": "ink",
+     "anchor": "start"
+    },
+    {
+     "op": "ellipse",
+     "id": "orbit_ellipse",
+     "cx": 800,
+     "cy": 450,
+     "rx": 500,
+     "ry": 220,
+     "color": "gray",
+     "width": 3
+    },
+    {
+     "op": "ellipse",
+     "id": "sun",
+     "cx": 800,
+     "cy": 450,
+     "rx": 45,
+     "ry": 45,
+     "color": "red",
+     "fill": "red",
+     "width": 3
+    },
+    {
+     "op": "write",
+     "id": "sun_label",
+     "x": 860,
+     "y": 430,
+     "text": "Sun",
+     "size": 36,
+     "color": "red",
+     "anchor": "start"
+    },
+    {
+     "op": "ellipse",
+     "id": "earth_orbit",
+     "cx": 300,
+     "cy": 450,
+     "rx": 30,
+     "ry": 30,
+     "color": "blue",
+     "fill": "blue",
+     "width": 3
+    },
+    {
+     "op": "write",
+     "id": "earth_label",
+     "x": 240,
+     "y": 500,
+     "text": "Earth",
+     "size": 36,
+     "color": "blue",
+     "anchor": "start"
+    }
+   ]
+  },
+  {
+   "title": "Summer in the North",
+   "say": "When the Northern Hemisphere tilts toward the Sun, it gets more direct sunlight and longer days.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "title_summer",
+     "x": 80,
+     "y": 80,
+     "text": "3. Summer in the North",
+     "size": 56,
+     "color": "ink",
+     "anchor": "start"
+    },
+    {
+     "op": "ellipse",
+     "id": "sun_summer",
+     "cx": 1200,
+     "cy": 450,
+     "rx": 45,
+     "ry": 45,
+     "color": "red",
+     "fill": "red",
+     "width": 3
+    },
+    {
+     "op": "ellipse",
+     "id": "earth_summer",
+     "cx": 500,
+     "cy": 450,
+     "rx": 40,
+     "ry": 40,
+     "color": "blue",
+     "fill": "blue",
+     "width": 3
+    },
+    {
+     "op": "line",
+     "id": "tilt_summer",
+     "x1": 500,
+     "y1": 410,
+     "x2": 500,
+     "y2": 490,
+     "color": "blue",
+     "width": 5
+    },
+    {
+     "op": "line",
+     "id": "sunlight_summer",
+     "x1": 1155,
+     "y1": 450,
+     "x2": 540,
+     "y2": 450,
+     "color": "red",
+     "width": 4,
+     "arrow": true
+    },
+    {
+     "op": "write",
+     "id": "north_label",
+     "x": 500,
+     "y": 360,
+     "text": "N",
+     "size": 32,
+     "color": "ink",
+     "anchor": "middle"
+    },
+    {
+     "op": "write",
+     "id": "summer_note",
+     "x": 80,
+     "y": 600,
+     "text": "Northern hemisphere tilted toward the Sun\n→ more direct sunlight, longer days",
+     "size": 36,
+     "color": "ink",
+     "anchor": "start"
+    }
+   ]
+  },
+  {
+   "title": "Winter in the North",
+   "say": "When the Northern Hemisphere tilts away from the Sun, sunlight is more spread out and days are shorter.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "title_winter",
+     "x": 80,
+     "y": 80,
+     "text": "4. Winter in the North",
+     "size": 56,
+     "color": "ink",
+     "anchor": "start"
+    },
+    {
+     "op": "ellipse",
+     "id": "sun_winter",
+     "cx": 1200,
+     "cy": 450,
+     "rx": 45,
+     "ry": 45,
+     "color": "red",
+     "fill": "red",
+     "width": 3
+    },
+    {
+     "op": "ellipse",
+     "id": "earth_winter",
+     "cx": 500,
+     "cy": 450,
+     "rx": 40,
+     "ry": 40,
+     "color": "blue",
+     "fill": "blue",
+     "width": 3
+    },
+    {
+     "op": "line",
+     "id": "tilt_winter",
+     "x1": 500,
+     "y1": 410,
+     "x2": 500,
+     "y2": 490,
+     "color": "blue",
+     "width": 5
+    },
+    {
+     "op": "line",
+     "id": "sunlight_winter",
+     "x1": 1155,
+     "y1": 450,
+     "x2": 540,
+     "y2": 450,
+     "color": "red",
+     "width": 4,
+     "arrow": true
+    },
+    {
+     "op": "write",
+     "id": "south_label",
+     "x": 500,
+     "y": 510,
+     "text": "S",
+     "size": 32,
+     "color": "ink",
+     "anchor": "middle"
+    },
+    {
+     "op": "write",
+     "id": "winter_note",
+     "x": 80,
+     "y": 600,
+     "text": "Northern hemisphere tilted away from the Sun\n→ less direct sunlight, shorter days",
+     "size": 36,
+     "color": "ink",
+     "anchor": "start"
+    }
+   ]
+  },
+  {
+   "title": "Spring and Autumn",
+   "say": "During spring and autumn, neither hemisphere tilts strongly toward the Sun, so we get milder weather.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "title_spring",
+     "x": 80,
+     "y": 80,
+     "text": "5. Spring and Autumn",
+     "size": 56,
+     "color": "ink",
+     "anchor": "start"
+    },
+    {
+     "op": "ellipse",
+     "id": "sun_spring",
+     "cx": 1200,
+     "cy": 450,
+     "rx": 45,
+     "ry": 45,
+     "color": "red",
+     "fill": "red",
+     "width": 3
+    },
+    {
+     "op": "ellipse",
+     "id": "earth_spring",
+     "cx": 500,
+     "cy": 450,
+     "rx": 40,
+     "ry": 40,
+     "color": "blue",
+     "fill": "blue",
+     "width": 3
+    },
+    {
+     "op": "line",
+     "id": "tilt_spring",
+     "x1": 500,
+     "y1": 410,
+     "x2": 500,
+     "y2": 490,
+     "color": "blue",
+     "width": 5
+    },
+    {
+     "op": "write",
+     "id": "spring_note",
+     "x": 80,
+     "y": 600,
+     "text": "Neither hemisphere tilted strongly toward the Sun\n→ milder weather, roughly equal day and night",
+     "size": 36,
+     "color": "ink",
+     "anchor": "start"
+    }
+   ]
+  },
+  {
+   "title": "The Reason",
+   "say": "So seasons are caused by Earth's tilted axis and its orbit around the Sun, not by distance from the Sun.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "title_reason",
+     "x": 80,
+     "y": 80,
+     "text": "6. The Reason",
+     "size": 56,
+     "color": "ink",
+     "anchor": "start"
+    },
+    {
+     "op": "write",
+     "id": "reason_text",
+     "x": 80,
+     "y": 180,
+     "text": "Seasons are caused by:\n• Earth's 23.5° tilt\n• Earth's orbit around the Sun\n• Not by Earth's distance from the Sun",
+     "size": 40,
+     "color": "ink",
+     "anchor": "start"
+    }
+   ]
+  }
+ ]
+}

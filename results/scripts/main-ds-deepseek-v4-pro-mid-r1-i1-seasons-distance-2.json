@@ -1,0 +1,92 @@
+{
+ "title": "Why do we have seasons?",
+ "lang": "en",
+ "steps": [
+  {
+   "title": "Farther, but not the cause",
+   "say": "Yes — in early July, during northern summer, Earth is actually farthest from the Sun. But that is not why it is hot.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "far",
+     "x": 1050,
+     "y": 80,
+     "text": "Yes — Earth is farthest\nin early July.",
+     "size": 32,
+     "color": "blue"
+    }
+   ]
+  },
+  {
+   "title": "Distance is tiny",
+   "say": "The distance change only alters sunlight by about seven percent. That is much too small to make summer.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "dist",
+     "x": 1050,
+     "y": 160,
+     "text": "Distance changes sunlight\nby only ~7%.",
+     "size": 32,
+     "color": "red"
+    }
+   ]
+  },
+  {
+   "title": "Tilt makes direct rays",
+   "say": "What really matters is the tilt: it makes summer sunlight hit the northern hemisphere more directly, and days are longer.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "tilt",
+     "x": 1050,
+     "y": 240,
+     "text": "Tilt → more direct rays\n+ longer days.",
+     "size": 32
+    },
+    {
+     "op": "write",
+     "id": "summerlabel",
+     "x": 1320,
+     "y": 510,
+     "text": "summer",
+     "size": 30,
+     "anchor": "middle",
+     "color": "red"
+    },
+    {
+     "op": "write",
+     "id": "winterlabel",
+     "x": 280,
+     "y": 690,
+     "text": "winter",
+     "size": 30,
+     "anchor": "middle",
+     "color": "blue"
+    },
+    {
+     "op": "line",
+     "id": "arrowsum",
+     "x1": 1320,
+     "y1": 540,
+     "x2": 1320,
+     "y2": 560,
+     "arrow": true,
+     "color": "red",
+     "width": 3
+    },
+    {
+     "op": "line",
+     "id": "arrowwin",
+     "x1": 280,
+     "y1": 670,
+     "x2": 280,
+     "y2": 640,
+     "arrow": true,
+     "color": "blue",
+     "width": 3
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,42 @@
+{
+  "mode": "continue",
+  "base": "r1-supply-demand",
+  "atStep": 5,
+  "question": "I don't get the demand shift. Can you show it a simpler way?",
+  "steps": [
+    {
+      "title": "Drop the curves for a moment",
+      "say": "Let's forget the curves for a moment and think about a simple market.",
+      "ops": [
+        { "op": "erase", "ids": ["d2", "d2lab", "shift", "shiftlab", "note1", "note2", "note3"] }
+      ]
+    },
+    {
+      "title": "A simple story",
+      "say": "Five apples at a market. Then more buyers arrive.",
+      "ops": [
+        { "op": "write", "id": "story", "x": 1200, "y": 250, "text": "5 apples at the market.\nMore buyers show up!", "size": 28 },
+        { "op": "ellipse", "id": "ap1", "cx": 1230, "cy": 360, "rx": 24, "ry": 24, "color": "red", "fill": "red" },
+        { "op": "ellipse", "id": "ap2", "cx": 1290, "cy": 360, "rx": 24, "ry": 24, "color": "red", "fill": "red" },
+        { "op": "ellipse", "id": "ap3", "cx": 1350, "cy": 360, "rx": 24, "ry": 24, "color": "red", "fill": "red" },
+        { "op": "ellipse", "id": "ap4", "cx": 1410, "cy": 360, "rx": 24, "ry": 24, "color": "red", "fill": "red" },
+        { "op": "ellipse", "id": "ap5", "cx": 1470, "cy": 360, "rx": 24, "ry": 24, "color": "red", "fill": "red" }
+      ]
+    },
+    {
+      "title": "Buyers bid up the price",
+      "say": "With the same apples but more buyers, people offer more money. The price goes up.",
+      "ops": [
+        { "op": "write", "id": "bid", "x": 1200, "y": 440, "text": "More buyers,\nsame apples →\nprice goes up.", "size": 30 },
+        { "op": "line", "id": "up", "x1": 1500, "y1": 560, "x2": 1500, "y2": 440, "color": "red", "width": 8, "arrow": true }
+      ]
+    },
+    {
+      "title": "Back to the graph",
+      "say": "On the graph this is the same story: the demand curve slides right, and the price where the curves meet goes up.",
+      "ops": [
+        { "op": "write", "id": "back", "x": 1200, "y": 600, "text": "On the graph, the demand\ncurve slides right.", "size": 28 }
+      ]
+    }
+  ]
+}

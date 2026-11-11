@@ -1,0 +1,175 @@
+{
+ "title": "Solve a Quadratic",
+ "lang": "en",
+ "steps": [
+  {
+   "title": "Set up the equation",
+   "say": "Start with the quadratic equation we need to solve.",
+   "ops": [
+    {
+     "id": "title",
+     "op": "write",
+     "x": 80,
+     "y": 45,
+     "text": "Solve a Quadratic",
+     "size": 56
+    },
+    {
+     "id": "eq0",
+     "op": "write",
+     "x": 100,
+     "y": 140,
+     "text": "x² − 5x + 6 = 0",
+     "size": 48
+    }
+   ]
+  },
+  {
+   "title": "First: quadratic formula",
+   "say": "Identify a, b, and c, then substitute into the quadratic formula.",
+   "ops": [
+    {
+     "id": "introQF",
+     "op": "write",
+     "x": 100,
+     "y": 230,
+     "text": "First try the quadratic formula:",
+     "size": 36
+    },
+    {
+     "id": "abc",
+     "op": "write",
+     "x": 100,
+     "y": 290,
+     "text": "a = 1,  b = −5,  c = 6",
+     "size": 36
+    },
+    {
+     "id": "qf",
+     "op": "write",
+     "x": 100,
+     "y": 350,
+     "text": "x = (5 ± √(25 − 24)) / 2",
+     "size": 40
+    }
+   ]
+  },
+  {
+   "title": "Formula gives the roots",
+   "say": "The discriminant is 1, so the formula gives x = 3 or x = 2.",
+   "ops": [
+    {
+     "id": "disc",
+     "op": "write",
+     "x": 100,
+     "y": 430,
+     "text": "25 − 24 = 1, so √1 = 1",
+     "size": 36
+    },
+    {
+     "id": "rootsQF",
+     "op": "write",
+     "x": 100,
+     "y": 490,
+     "text": "x = (5 ± 1)/2 = 3 or 2",
+     "size": 40,
+     "color": "blue"
+    }
+   ]
+  },
+  {
+   "title": "Switch to factoring",
+   "say": "That works, but factoring is simpler here. Erase the formula work and start fresh.",
+   "ops": [
+    {
+     "id": "eraseQF",
+     "op": "erase",
+     "ids": [
+      "introQF",
+      "abc",
+      "qf",
+      "disc",
+      "rootsQF"
+     ]
+    },
+    {
+     "id": "switch",
+     "op": "write",
+     "x": 100,
+     "y": 230,
+     "text": "Simpler method: factor the quadratic.",
+     "size": 40,
+     "color": "green"
+    }
+   ]
+  },
+  {
+   "title": "Factor the quadratic",
+   "say": "Find two numbers with product 6 and sum −5: they are −2 and −3.",
+   "ops": [
+    {
+     "id": "factorHint",
+     "op": "write",
+     "x": 100,
+     "y": 300,
+     "text": "Product 6, sum −5:  −2 and −3",
+     "size": 36
+    },
+    {
+     "id": "factored",
+     "op": "write",
+     "x": 100,
+     "y": 370,
+     "text": "x² − 5x + 6 = (x − 2)(x − 3)",
+     "size": 44
+    }
+   ]
+  },
+  {
+   "title": "Set each factor to zero",
+   "say": "A product is zero only when one of its factors is zero.",
+   "ops": [
+    {
+     "id": "zeroPrinciple",
+     "op": "write",
+     "x": 100,
+     "y": 470,
+     "text": "Set each factor equal to zero:",
+     "size": 36
+    },
+    {
+     "id": "factorEqs",
+     "op": "write",
+     "x": 100,
+     "y": 530,
+     "text": "x − 2 = 0   or   x − 3 = 0",
+     "size": 40
+    }
+   ]
+  },
+  {
+   "title": "State the solutions",
+   "say": "Solving each linear equation gives x = 2 or x = 3.",
+   "ops": [
+    {
+     "id": "solutions",
+     "op": "write",
+     "x": 100,
+     "y": 630,
+     "text": "x = 2   or   x = 3",
+     "size": 52,
+     "color": "blue"
+    },
+    {
+     "id": "check",
+     "op": "write",
+     "x": 100,
+     "y": 720,
+     "text": "Check: both values make x² − 5x + 6 = 0.",
+     "size": 34,
+     "color": "gray"
+    }
+   ]
+  }
+ ]
+}

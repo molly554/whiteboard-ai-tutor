@@ -9,6 +9,8 @@
 
 [English](README.md) · [简体中文](README.zh-CN.md)
 
+**[▶ 在线画廊：在浏览器里重放每一节课](https://molly554.github.io/whiteboard-ai-tutor/gallery.zh.html)**
+
 ![license](https://img.shields.io/badge/license-MIT-2a78d6)
 ![models](https://img.shields.io/badge/models-6-2a78d6)
 ![api calls](https://img.shields.io/badge/API%20calls-288-2a78d6)
@@ -69,7 +71,7 @@
 </tr>
 </table>
 
-全部 64 块评审板和每块的结论、评语都在画廊里（`gallery.zh.html`，先运行 `python serve.py`）。
+全部 64 块评审板和每块的结论、评语都在[在线画廊](https://molly554.github.io/whiteboard-ai-tutor/gallery.zh.html)里，点任意一块板可以看它被写出来的过程。
 
 ## 发现了什么
 
@@ -147,7 +149,7 @@ flowchart LR
 
 ## 快速开始
 
-看结果（不需要密钥，不需要装依赖）：
+看结果可以直接开[在线画廊](https://molly554.github.io/whiteboard-ai-tutor/gallery.zh.html)，也可以在本地看（不需要密钥，不需要装依赖）：
 
 ```bash
 git clone https://github.com/molly554/whiteboard-ai-tutor.git
@@ -200,6 +202,7 @@ audit.html     人工抽核清单
 - **八个场景、三次重复。** 都是中学程度的科学、数学和经济题，说明不了真实学生问题下的表现。
 - **延迟是在一台桌面电脑上测的**，Claude 和 Gemini 还多经过 OpenRouter 一跳。只适合模型之间互相比较。
 - **中思考档的结果被上限截断。** 23 次调用撞上 8000 token 上限，那一档的解析成功率反映的是截断，不是能力。
+- **手写字体取决于系统。** 播放器用的是 Windows 自带的 Ink Free；在其他系统上会退回到通用手写体，重放的样子可能和评审用的板书图片（在 Windows 上渲染）不一样。
 - **价格会变。** 成本按 2026-11-11 的官方标价计算。
 
 ## 值得接着测的方向

@@ -9,6 +9,8 @@ One frozen prompt. Six models. 288 lessons drawn stroke by stroke. Blind-reviewe
 
 [English](README.md) · [简体中文](README.zh-CN.md)
 
+**[▶ Live gallery: replay every lesson in your browser](https://molly554.github.io/whiteboard-ai-tutor/)**
+
 ![license](https://img.shields.io/badge/license-MIT-2a78d6)
 ![models](https://img.shields.io/badge/models-6-2a78d6)
 ![api calls](https://img.shields.io/badge/API%20calls-288-2a78d6)
@@ -74,7 +76,8 @@ order in the middle is not. See [Limitations](#limitations).
 </tr>
 </table>
 
-All 64 reviewed boards, with verdicts and notes, are in the gallery (`index.html`; run `python serve.py`).
+All 64 reviewed boards, with verdicts and notes, are in the
+[live gallery](https://molly554.github.io/whiteboard-ai-tutor/); click a board to watch it being written.
 
 ## What we found
 
@@ -171,7 +174,8 @@ Details and the exact reproduction steps are in [`docs/METHOD.md`](docs/METHOD.m
 
 ## Quickstart
 
-Look at the results (no keys, no dependencies):
+Look at the results in the [live gallery](https://molly554.github.io/whiteboard-ai-tutor/), or locally (no keys, no
+dependencies):
 
 ```bash
 git clone https://github.com/molly554/whiteboard-ai-tutor.git
@@ -231,6 +235,9 @@ audit.html     the human-audit sheet
   models with each other, not with your own production numbers.
 - **The medium-thinking results are capped.** 23 calls hit the 8,000-token limit, so parse rates there measure
   truncation, not ability.
+- **Handwriting depends on your system font.** The player uses Ink Free, which ships with Windows. Elsewhere it falls
+  back to a generic cursive font, so a replay can look different from the reviewed board images, which were rendered
+  on Windows.
 - **Prices move.** Costs are list prices on 2026-11-11.
 
 ## Ideas worth testing next

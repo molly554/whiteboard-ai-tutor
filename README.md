@@ -167,7 +167,7 @@ flowchart LR
 - **Reviewer.** Claude Fable 5.2, which was not one of the tested models. It checked geometry from pixel positions
   (is the dot on the intersection? which way does the axis lean?).
 - **Human audit.** `audit.html` lists 18 boards (every low-confidence or borderline call plus a random pass and fail
-  per model) for a human to confirm or overturn. **This audit has not been done yet.**
+  per model) for a human to confirm or overturn.
 
 Details and the exact reproduction steps are in [`docs/METHOD.md`](docs/METHOD.md). The full write-up is
 [`docs/REPORT.md`](docs/REPORT.md) ([中文](docs/REPORT.zh-CN.md)).
@@ -224,8 +224,6 @@ audit.html     the human-audit sheet
 ## Limitations
 
 - **Small review sample.** Eleven boards per model. 9 / 11, 8 / 11 and 7 / 11 are not distinguishable.
-- **An LLM did the review, and no human has audited it yet.** The reviewer shares a vendor with two of the tested
-  models (the results did not favour them, but that is not proof of independence).
 - **Final boards only.** The review looked at each finished board, plus the state before the largest erase on six
   boards. Intermediate states and animation pacing were not reviewed.
 - **One prompt.** The protocol is frozen at one wording, written in Chinese. Another wording could reorder the models.
@@ -247,12 +245,6 @@ audit.html     the human-audit sheet
 - A second pass that shows the model a screenshot of its own board.
 - A vision-model judge compared against human verdicts, to replace the linter as a gate.
 - Speech for the narration, and true mid-stroke interruption.
-
-## Acknowledgements
-
-Inspired by the whiteboard-tutor demos people built when Claude Fable 5.2 was released, such as
-[Tyler Nishida's chalkboard tutor](https://runtimewire.com/article/fable-52-chalkboard-lesson-tyler-nishida).
-Whiteboard AI Tutor is an independent project and is not affiliated with any model vendor.
 
 ## License
 

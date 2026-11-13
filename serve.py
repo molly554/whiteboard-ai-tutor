@@ -21,7 +21,15 @@ class Handler(http.server.SimpleHTTPRequestHandler):
 
     def end_headers(self):
         self.send_header("Cache-Control", "no-store")
+        self.send_header("Access-Control-Allow-Origin", "*")
+        self.send_header("Access-Control-Allow-Methods", "GET, POST, OPTIONS")
+        self.send_header("Access-Control-Allow-Headers", "Content-Length, Content-Type")
         super().end_headers()
+
+    def do_OPTIONS(self):
+        # Respond to CORS preflight requests with 204 No Content
+        self.send_response(204)
+        self.end_headers()
 
     def do_POST(self):
         if not self.path.startswith("/save/"):

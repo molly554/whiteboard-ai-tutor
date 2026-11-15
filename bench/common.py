@@ -6,6 +6,12 @@ import re
 import time
 
 try:
+    import fcntl
+    _HAS_FCNTL = True
+except ImportError:
+    _HAS_FCNTL = False
+
+try:
     import winreg
 except ImportError:  # 非 Windows
     winreg = None
@@ -189,5 +195,26 @@ class Budget:
         return True, ""
 
     def add(self, model, cost):
-        self.spent[model] = round(self.spent.get(model, 0) + cost, 6)
-        json.dump(self.spent, open(self.path, "w", encoding="utf-8", newline="\n"), indent=1)
+        """Atomically add cost and persist. Uses file locking (fcntl) when available
+        so concurrent processes see a consistent spent state."""
+        # Open with shared lock, read latest state, compute new value, write back with exclusive lock
+        mode = "a+" if _HAS_FCNTL else "r+"
+        with open(self.path, mode) as f:
+            if _HAS_FCNTL:
+                fcntl.flock(f, fcntl.LOCK_EX)
+            try:
+                f.seek(0)
+                content = f.read().strip()
+                spent = json.loads(content) if content else {}
+                spent[model] = round(spent.get(model, 0) + cost, 6)
+                f.seek(0)
+                f.truncate()
+                json.dump(spent, f, indent=1)
+                f.write("\n")
+                f.flush()
+                if _HAS_FCNTL:
+                    os.fsync(f.fileno())
+            finally:
+                if _HAS_FCNTL:
+                    fcntl.flock(f, fcntl.LOCK_UN)
+        self.spent = spent

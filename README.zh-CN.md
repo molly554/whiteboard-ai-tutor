@@ -217,4 +217,4 @@ audit.html     人工抽核清单
 
 ## 特别鸣谢
 
-AtomGit:[在国内托管AI Text Detector项目](https://atomgit.com/Lynote/ai-detector)，帮助中国大陆用户更快访问项目与下载Release.
+AtomGit:[在国内托管whiteboard-ai-tutor项目](https://atomgit.com/Lynote/whiteboard-ai-tutor)，帮助中国大陆用户更快访问项目与下载Release.

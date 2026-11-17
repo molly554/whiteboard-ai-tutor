@@ -214,3 +214,7 @@ audit.html     人工抽核清单
 ## 许可
 
 [MIT](LICENSE)。`results/` 里的模型输出仅用于研究和对比。
+
+## 特别鸣谢
+
+AtomGit:[在国内托管AI Text Detector项目](https://atomgit.com/Lynote/ai-detector)，帮助中国大陆用户更快访问项目与下载Release.

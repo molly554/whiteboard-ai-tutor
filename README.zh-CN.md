@@ -219,7 +219,7 @@ audit.html     人工抽核清单
 画廊与播放器都是静态网页，重放示例无需构建、托管推理服务或 API 密钥。
 界面支持中英文，录制的模型输出保留原始语言。
 
-欢迎参与白板动画、可视化学习与教育 AI 相关改进。请先阅读[贡献指南](CONTRIBUTING.md)，
+欢迎参与白板动画、可视化学习与教育 AI 相关改进。请先阅读[贡献指南](CONTRIBUTING.zh-CN.md)，
 再查看[公开任务](https://github.com/molly554/whiteboard-ai-tutor/issues)。
 
 ## 许可

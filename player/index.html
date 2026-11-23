@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Whiteboard AI Tutor · player</title>
 <style>
 :root{--bg:#d9d5cc;--ink:#26363d}
@@ -41,20 +42,20 @@ textarea{width:100%;height:180px;font:12px Consolas,monospace}
 .hint{font-size:12px;color:#666;margin-top:8px}
 .boardonly #top,.boardonly #panel,.boardonly .hint,.boardonly #lint,.boardonly #report,.boardonly #statebox{display:none}
 </style>
+<link rel="stylesheet" href="player.css">
 </head>
 <body>
-<div id="wrap">
+<main id="wrap">
+  <header id="player-header"><a id="back-gallery" href="../">← All boards</a><b>Whiteboard AI Tutor</b><nav><a id="language" href="?lang=zh">中文</a><a href="https://github.com/molly554/whiteboard-ai-tutor" target="_blank" rel="noopener">GitHub ↗</a></nav></header>
+  <div class="player-heading"><h1 id="player-title">Whiteboard replay</h1><p id="recorded-note">Recorded model output · Interface language does not translate the original board or narration.</p></div>
+  <div id="status" role="status" aria-live="polite">Loading the recording…</div>
   <div id="top">
-    <select id="sel"></select>
-    <button id="play" class="pri">▶ Play</button>
-    <button id="next">⏭ Next step</button>
-    <button id="replay">⟲ Replay</button>
-    <button id="finish">⏩ Finished board</button>
-    <select id="speed"><option value="1">1×</option><option value="2">2×</option><option value="4">4×</option></select>
-    <label class="chk"><input type="checkbox" id="auto" checked>Auto-advance</label>
-    <button id="export">Export board state</button>
-    <button id="lintall">Lint all scenarios</button>
-    <span id="badge" title="Click for lint details">linting…</span>
+    <select id="sel" aria-label="Choose a lesson" disabled></select>
+    <button id="play" class="pri" disabled>▶ Play</button>
+    <button id="next" disabled>⏭ Next step</button>
+    <button id="finish" disabled>⏩ Finished board</button>
+    <select id="speed" aria-label="Playback speed"><option value="1">1×</option><option value="2">2×</option><option value="4">4×</option></select>
+    <button id="zoom" aria-pressed="false" aria-controls="frame">Enlarge board</button>
   </div>
 
   <div id="frame">
@@ -74,21 +75,63 @@ textarea{width:100%;height:180px;font:12px Consolas,monospace}
     <div id="chips"></div>
   </div>
 
-  <div id="lint"></div>
-  <div id="statebox"><b>Current board state</b> (send this to the tutor model to simulate a student interruption)<textarea id="statetxt" readonly></textarea><div class="hint" id="statehint"></div></div>
-  <div id="report"></div>
-  <div class="hint">Space = play / pause. To simulate an interruption: turn off Auto-advance, pause after a step, then Export board state.</div>
-</div>
+  <p class="hint" id="keyboard-hint">Space = play / pause. Enlarge the board to scroll through small details.</p>
+  <details id="advanced"><summary id="advanced-title">Advanced options</summary>
+    <div class="advanced-controls"><label class="chk"><input type="checkbox" id="auto" checked><span id="auto-label">Auto-advance</span></label><button id="replay">⟲ Restart</button><button id="export">Export board state</button><button id="lintall">Lint all scenarios</button><button id="badge" title="Show lint details">Checking…</button></div>
+    <div id="run-info"></div>
+    <div id="lint"></div>
+    <div id="statebox"><b id="state-label">Current board state</b><p class="hint" id="state-help">Send this state to the tutor model to simulate an interruption.</p><textarea id="statetxt" aria-label="Current board state JSON" readonly></textarea><div class="hint" id="statehint"></div></div>
+    <div id="report"></div>
+    <p class="hint" id="interrupt-hint">To simulate an interruption, turn off Auto-advance, pause after a step, then export the board state.</p>
+  </details>
+</main>
 
 <svg id="meas" width="1600" height="900" xmlns="http://www.w3.org/2000/svg" style="position:absolute;left:-9999px;top:0"></svg>
 
 <script>
+const UI_LANG=new URLSearchParams(location.search).get('lang')==='zh'?'zh':'en';
+const ZH=UI_LANG==='zh';
+const tr=(en,zh)=>ZH?zh:en;
+document.documentElement.lang=ZH?'zh-CN':'en';
+document.title=tr('Whiteboard AI Tutor · player','白板 AI 导师 · 播放器');
 const NS='http://www.w3.org/2000/svg';
 const BASE='../';   // the player lives in /player/, data lives at the repo root
 const COLORS={ink:'#1d1d1f',blue:'#1f4fd8',red:'#d32f2f',green:'#1b8a4a',gray:'#9a9a9a'};
 const FONT="'Ink Free','Segoe Print','KaiTi','STKaiti','Microsoft YaHei',cursive";
 const $=s=>document.querySelector(s);
 const layer=$('#layer'), defs=$('#defs');
+const LABELS={
+ 'play':['▶ Play','▶ 播放'], 'badge':['Checking…','正在检查…'],
+ 'back-gallery':['← All boards','← 返回全部白板'], 'player-title':['Whiteboard replay','白板讲解回放'],
+ 'recorded-note':['Recorded model output · The original board and narration keep their recorded language.','录制结果回放 · 白板与讲解文本保留模型输出时的原始语言。'],
+ 'next':['⏭ Next step','⏭ 下一步'], 'replay':['⟲ Restart','⟲ 从头播放'], 'finish':['⏩ Finished board','⏩ 查看最终白板'],
+ 'zoom':['Enlarge board','放大白板'], 'advanced-title':['Advanced options','高级选项'], 'auto-label':['Auto-advance','自动播放下一步'],
+ 'export':['Export board state','导出白板状态'], 'lintall':['Lint all scenarios','检查全部场景'],
+ 'state-label':['Current board state','当前白板状态'],
+ 'state-help':['Send this state to the tutor model to simulate an interruption.','将此状态交给导师模型，可模拟学生打断后的续讲。'],
+ 'keyboard-hint':['Space = play / pause. Enlarge the board to scroll through small details.','空格键播放或暂停。放大白板后可滚动查看细节。'],
+ 'interrupt-hint':['To simulate an interruption, turn off Auto-advance, pause after a step, then export the board state.','模拟打断：关闭自动播放下一步，在一步结束后暂停，再导出白板状态。']
+};
+for(const [id,labels] of Object.entries(LABELS))$('#'+id).textContent=tr(...labels);
+$('#back-gallery').href=ZH?'../gallery.zh.html':'../index.html';
+$('#sel').setAttribute('aria-label',tr('Choose a lesson','选择讲解场景'));
+$('#speed').setAttribute('aria-label',tr('Playback speed','播放速度'));
+$('#statetxt').setAttribute('aria-label',tr('Current board state JSON','当前白板状态 JSON'));
+$('#badge').title=tr('Show lint details','显示检查详情');
+const languageLink=$('#language');languageLink.textContent=ZH?'English':'中文';
+function updateLanguageLink(){const url=new URL(location.href);url.searchParams.set('lang',ZH?'en':'zh');if(!url.searchParams.has('run')&&$('#sel').value)url.searchParams.set('s',$('#sel').value);languageLink.href=url.href;}
+updateLanguageLink();
+function setLoading(loading){
+ const status=$('#status');status.hidden=!loading;status.className='';status.textContent=tr('Loading the recording…','正在加载录制的讲解…');
+ for(const el of document.querySelectorAll('#top button,#sel'))el.disabled=loading;
+}
+function loadError(err){
+ const status=$('#status');status.hidden=false;status.className='error';
+ status.textContent=tr('This recording could not be loaded. Choose another lesson, return to the gallery, or reload to retry.','这段讲解未能加载。请选择其他场景、返回画廊，或刷新页面重试。');
+ for(const el of document.querySelectorAll('#top button'))el.disabled=true;
+ $('#sel').disabled=!INDEX.length;console.error(err);
+}
+$('#zoom').onclick=()=>{const zoomed=$('#frame').classList.toggle('zoomed');$('#zoom').setAttribute('aria-pressed',String(zoomed));$('#zoom').textContent=zoomed?tr('Fit board','适应屏幕'):tr('Enlarge board','放大白板');};
 function mk(tag,attrs,parent){const e=document.createElementNS(NS,tag);for(const k in attrs)e.setAttribute(k,attrs[k]);if(parent)parent.appendChild(e);return e;}
 
 /* ───────── validation ───────── */
@@ -274,7 +317,7 @@ function getState(){
 
 /* ───────── loading scripts ───────── */
 let INDEX=[],S=null,cursor=0;
-async function fetchJSON(f){const r=await fetch(f+'?t='+Date.now());if(!r.ok)throw new Error(f+' → '+r.status);return r.json();}
+async function fetchJSON(f){const controller=new AbortController(),timer=setTimeout(()=>controller.abort(),20000);try{const r=await fetch(f,{signal:controller.signal});if(!r.ok)throw new Error(f+' → '+r.status);return await r.json();}finally{clearTimeout(timer);}}
 async function loadSteps(entry){
   const j=await fetchJSON(BASE+entry.file);
   if(j.mode==='continue'){
@@ -293,17 +336,20 @@ async function prepareBoard(){
     for(let i=0;i<S.atStep;i++)for(const op of S.steps[i].ops||[])await doOp(op,i+1,tok);
     INSTANT=false;cursor=S.atStep;
   }
-  $('#stitle').textContent=S.atStep?`Board shown up to step ${S.atStep}; the continuation plays next`:'';
+  $('#stitle').textContent=S.atStep?tr(`Board shown up to step ${S.atStep}; the continuation plays next`,`已显示前 ${S.atStep} 步的白板，接下来播放续讲`):'';
   $('#say').textContent='';
   renderChips();syncBtn();
 }
 async function loadEntry(id){
-  const entry=INDEX.find(e=>e.id===id);
-  const L=await loadSteps(entry);
-  S={entry,...L};
-  $('#q').textContent='The question: '+(S.question||'');
-  await prepareBoard();
-  runLintUI();
+  setLoading(true);
+  try{
+    const entry=INDEX.find(e=>e.id===id);
+    if(!entry)throw new Error('Unknown lesson');
+    const L=await loadSteps(entry);
+    S={entry,...L};
+    $('#q').textContent=tr('The question: ','问题：')+(S.question||'');
+    await prepareBoard();runLintUI();updateLanguageLink();setLoading(false);
+  }catch(err){loadError(err);}
 }
 
 /* ───────── playback controls ───────── */
@@ -317,12 +363,12 @@ function renderChips(curIdx){
 }
 function syncBtn(){
   const b=$('#play');
-  if(!runningFlag)b.textContent=cursor>=S.steps.length?'⟲ Replay':'▶ Play';
-  else b.textContent=paused?'▶ Resume':'⏸ Pause';
+  if(!runningFlag)b.textContent=cursor>=S.steps.length?tr('⟲ Replay','⟲ 重新播放'):tr('▶ Play','▶ 播放');
+  else b.textContent=paused?tr('▶ Resume','▶ 继续'):tr('⏸ Pause','⏸ 暂停');
 }
 async function playStep(i,tok){
   const st=S.steps[i];
-  $('#stitle').textContent=`Step ${i+1}${st.title?': '+st.title:''}`;$('#say').textContent=st.say||'';
+  $('#stitle').textContent=tr(`Step ${i+1}`,`第 ${i+1} 步`)+(st.title?': '+st.title:'');$('#say').textContent=st.say||'';
   renderChips(i);inStep=true;
   for(const op of st.ops||[]){await doOp(op,i+1,tok);await wait(160,tok);}
   inStep=false;
@@ -361,17 +407,17 @@ $('#finish').onclick=async()=>{
   const tok=TOKEN;INSTANT=true;
   for(let i=cursor;i<S.steps.length;i++)for(const op of S.steps[i].ops||[])await doOp(op,i+1,tok);
   INSTANT=false;cursor=S.steps.length;finished=true;renderChips();syncBtn();
-  $('#stitle').textContent='Finished board';$('#say').textContent='';
+  $('#stitle').textContent=tr('Finished board','最终白板');$('#say').textContent='';
 };
 $('#speed').onchange=e=>{speed=+e.target.value;};
 $('#sel').onchange=e=>loadEntry(e.target.value);
-document.addEventListener('keydown',e=>{if(e.code==='Space'&&!/SELECT|TEXTAREA|INPUT/.test(e.target.tagName)){e.preventDefault();$('#play').click();}});
+document.addEventListener('keydown',e=>{if(e.code==='Space'&&!/SELECT|TEXTAREA|INPUT|BUTTON|SUMMARY|A|VIDEO/.test(e.target.tagName)){e.preventDefault();$('#play').click();}});
 $('#export').onclick=()=>{
   const st=getState(),box=$('#statebox');
   $('#statetxt').value=JSON.stringify(st,null,1);
-  $('#statehint').textContent=st.midStep?'⚠ A step is still being drawn. Turn off Auto-advance and export after the step finishes.':`Steps 1–${st.atStep} have been played.`;
+  $('#statehint').textContent=st.midStep?tr('A step is still being drawn. Turn off Auto-advance and export after the step finishes.','当前步骤仍在绘制，请关闭自动播放下一步，在步骤结束后导出。'):tr(`Steps 1–${st.atStep} have been played.`,`已播放 ${st.atStep} 步。`);
   box.style.display='block';
-  try{navigator.clipboard.writeText($('#statetxt').value);}catch(e){}
+  if(navigator.clipboard)navigator.clipboard.writeText($('#statetxt').value).catch(()=>{});
 };
 
 /* ───────── linter (deterministic rules, no model self-assessment) ───────── */
@@ -441,8 +487,8 @@ function runLintUI(){
   const r=lintSim(S.steps);LASTLINT=r;
   const b=$('#badge');
   b.className=r.hard.length?'bad':'ok';
-  b.textContent=`hard ${r.hard.length} · notes ${r.soft.length}`;
-  $('#lint').innerHTML=`<b>Lint details</b><ul>${issueHTML(r)||'<li>no issues</li>'}</ul>`;
+  b.textContent=tr(`hard ${r.hard.length} · notes ${r.soft.length}`,`错误 ${r.hard.length} · 提示 ${r.soft.length}`);
+  $('#lint').innerHTML=`<b>${tr('Lint details (diagnostic messages use English)','检查详情（诊断信息保留英文）')}</b><ul>${issueHTML(r)||'<li>'+tr('no issues','未发现问题')+'</li>'}</ul>`;
 }
 $('#badge').onclick=()=>{const l=$('#lint');l.style.display=l.style.display==='block'?'none':'block';};
 async function lintAll(){
@@ -458,7 +504,7 @@ async function lintAll(){
 }
 $('#lintall').onclick=async()=>{
   const rows=await lintAll(),box=$('#report');
-  box.innerHTML='<b>Lint results for all scenarios</b><table><tr><th>scenario</th><th class="num">steps</th><th class="num">ops</th><th class="num">hard</th><th class="num">notes</th></tr>'+
+  box.innerHTML='<b>'+tr('Lint results for all scenarios','全部场景检查结果')+'</b><table><tr><th>'+tr('scenario','场景')+'</th><th class="num">'+tr('steps','步骤')+'</th><th class="num">'+tr('ops','操作')+'</th><th class="num">'+tr('hard','错误')+'</th><th class="num">'+tr('notes','提示')+'</th></tr>'+
     rows.map(r=>`<tr><td>${r.group?'['+r.group+'] ':''}${r.title}${r.error?' ⚠ '+r.error:''}</td><td class="num">${r.steps}</td><td class="num">${r.ops}</td><td class="num ${r.hard?'h':''}">${r.hard}</td><td class="num ${r.soft?'s':''}">${r.soft}</td></tr>`+
       ((r.hard||r.soft)?`<tr><td colspan="5"><ul style="margin:0;padding-left:18px">${issueHTML(r.detail)}</ul></td></tr>`:'')).join('')+'</table>';
   box.style.display='block';
@@ -597,12 +643,14 @@ async function lintToFile(phases,outName){const rows=await lintRuns(phases);awai
 
 /* ───────── startup ───────── */
 (async()=>{
+  setLoading(true);
   const idx=await fetchJSON(BASE+'scenarios/index.json');
   INDEX=idx.scripts;
   const sel=$('#sel'),groups={};
   INDEX.forEach(e=>{
-    if(!groups[e.group]){groups[e.group]=document.createElement('optgroup');groups[e.group].label=e.group;sel.appendChild(groups[e.group]);}
-    const o=document.createElement('option');o.value=e.id;o.textContent=e.title;groups[e.group].appendChild(o);
+    if(!groups[e.group]){groups[e.group]=document.createElement('optgroup');groups[e.group].label=e.group==='Lessons'?tr('Lessons','讲解'):tr('Interruptions','打断续讲');sel.appendChild(groups[e.group]);}
+    const SCENARIO_ZH={'r1-seasons':'为什么会有四季？','r1-pythagoras':'勾股定理为什么成立？','r1-quadratic':'解方程：中途换一种方法','r1-supply-demand':'需求增加时，价格会怎样？','r1-photosynthesis':'光合作用发生在哪里？','r1-i1-seasons-distance':'打断：地球更远，为什么更热？','r1-i2-demand-simpler':'打断：能换个简单的讲法吗？','r1-i3-arrow-meaning':'打断：这条箭头是什么意思？'};
+    const o=document.createElement('option');o.value=e.id;o.textContent=ZH?(SCENARIO_ZH[e.id]||e.title):e.title;groups[e.group].appendChild(o);
   });
   const want=new URLSearchParams(location.search).get('s');
   const first=(want&&INDEX.find(e=>e.id===want))?want:INDEX[0].id;
@@ -613,12 +661,14 @@ async function lintToFile(phases,outName){const rows=await lintRuns(phases);awai
     const sc=INDEX.find(e=>e.id===qp.get('sc'));
     await loadRun(qp.get('run'),qp.get('sc')||'');
     $('#sel').style.display='none';
-    $('#q').innerHTML='<a href="../">← gallery</a> · '+xmlEsc(qp.get('run'))+(sc?' · question: '+xmlEsc(sc.question):'');
+    $('#q').textContent=sc?tr('The question: ','问题：')+sc.question:'';
+    $('#run-info').textContent=tr('Run: ','原始生成记录：')+qp.get('run');
     runLintUI();
-    if(qp.get('board'))await finishBoard();else{renderChips();syncBtn();start();}   // a replay starts playing by itself
+    if(qp.get('board')||matchMedia('(prefers-reduced-motion: reduce)').matches){await finishBoard();renderChips();syncBtn();$('#stitle').textContent=tr('Finished board','最终白板');}else{renderChips();syncBtn();start();}   // a replay starts playing by itself
   }else await loadEntry(first);
+  if(!$('#status').classList.contains('error'))setLoading(false);
   window.__ready=true;
-})();
+})().catch(loadError);
 window.__wb={loadEntry,lintAll,getState,loadSteps,get S(){return S;},objs,finishNow:()=>$('#finish').click(),
   lintRuns,renderRuns,renderFromFile,lintToFile,loadRun,finishBoard,saveFile,captureRun,get ready(){return !!window.__ready;}};
 </script>

@@ -5,11 +5,11 @@
 **开源的白板 AI 导师（AI 老师），以及一份「哪个大模型讲得最好」的评测。**
 
 它边讲边写字、画图、擦除，学生可以随时打断。<br>
-同一份提示词，六个模型，288 节一笔一笔画出来的课，盲评打分。
+同一份提示词，六个模型，288 次生成测试，64 块白板盲评。
 
 [English](README.md) · [简体中文](README.zh-CN.md)
 
-**[▶ 在线画廊：在浏览器里重放每一节课](https://molly554.github.io/whiteboard-ai-tutor/gallery.zh.html)**
+**[▶ 观看演示](https://molly554.github.io/whiteboard-ai-tutor/gallery.zh.html)** · [查看模型评测](https://molly554.github.io/whiteboard-ai-tutor/gallery.zh.html#benchmark) · [自己运行](#快速开始)
 
 ![license](https://img.shields.io/badge/license-MIT-2a78d6)
 ![models](https://img.shields.io/badge/models-6-2a78d6)
@@ -22,6 +22,8 @@
 <sub>Gemini 4 Argon 证明勾股定理。模型只输出了 JSON，手写动画是播放器画出来的。3 倍速播放。</sub>
 
 </div>
+
+想把 PDF、课程录音和视频整理成学习笔记、闪卡与测验？试试 [Lynote AI Notes](https://lynote.ai/ai-notes)。
 
 ## 这是什么
 
@@ -210,6 +212,15 @@ audit.html     人工抽核清单
 - 第二遍：把模型自己画出的板截图给它看，让它修正。
 - 用视觉模型当裁判并和人工结论对照，代替检查脚本当闸门。
 - 给旁白配语音，以及真正的「写到一半被打断」。
+
+## 项目更新与参与
+
+已发布的改进见[更新日志](CHANGELOG.md)，后续方向见[路线图](ROADMAP.md)。
+画廊与播放器都是静态网页，重放示例无需构建、托管推理服务或 API 密钥。
+界面支持中英文，录制的模型输出保留原始语言。
+
+欢迎参与白板动画、可视化学习与教育 AI 相关改进。请先阅读[贡献指南](CONTRIBUTING.md)，
+再查看[公开任务](https://github.com/molly554/whiteboard-ai-tutor/issues)。
 
 ## 许可
 

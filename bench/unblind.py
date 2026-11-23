@@ -12,6 +12,7 @@ import html
 import json
 import os
 import random
+from gallery_layout import gallery_header, gallery_footer
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(HERE)
@@ -165,7 +166,7 @@ CSS = """:root{color-scheme:light}body{font-family:-apple-system,'Segoe UI','Mic
 .lead{color:#52514e;max-width:900px;line-height:1.55}.top{display:flex;justify-content:space-between;align-items:baseline;gap:16px}
 table.lb{border-collapse:collapse;background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 1px 4px #0001;margin-top:8px}
 table.lb th,table.lb td{padding:8px 16px;text-align:left;border-bottom:1px solid #eeece7;font-size:14px}table.lb td.n{text-align:right;font-variant-numeric:tabular-nums}
-.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(400px,1fr));gap:14px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,400px),1fr));gap:14px}
 .card{background:#fff;border-radius:10px;padding:12px;box-shadow:0 1px 4px #0002}.card img{width:100%;aspect-ratio:16/9;border:1px solid #e4e2dc;border-radius:6px;display:block}
 .meta{font-size:13px;margin:7px 0 3px}.small{font-size:12px;color:#66655f;margin:3px 0}.note{font-size:13px;line-height:1.45;margin:6px 0 4px}
 .v{display:inline-block;padding:1px 8px;border-radius:9px;font-size:12px;font-weight:600}.v.pass{background:#e2f3e6;color:#1d6a35}.v.fail{background:#fde7e7;color:#9b1c1c}.v.borderline{background:#fbf0cf;color:#7a5c00}
@@ -174,7 +175,7 @@ a{color:#1f4fd8;text-decoration:none}a:hover{text-decoration:underline}details{d
 
 def card(r, lang, reveal=True):
     t = T[lang]
-    play = "player/?run=%s&sc=%s" % (r["run_id"], r["scenario"])
+    play = "player/index.html?run=%s&amp;sc=%s&amp;lang=%s" % (r["run_id"], r["scenario"], lang)
     v = verdict(r)
     who = "%s · %s" % (MODEL[r["model"]], t["think"][r["cond"]])
     if not reveal:
@@ -183,7 +184,7 @@ def card(r, lang, reveal=True):
     if r["kind"] == "interrupt":
         rub += t["rub_i"].format(a=r.get("answers"), pl=r.get("placement"))
     return ('<div class="card"><div class="meta"><b>%s</b> · %s <span class="v %s">%s</span></div><div class="small">%s: %s</div>'
-            '<a href="%s"><img src="results/review/boards/%s.png" alt="%s"></a><div class="note">%s</div>'
+            '<a href="%s"><img src="results/review/boards/%s.png" alt="%s" loading="lazy" decoding="async" width="1600" height="900"></a><div class="note">%s</div>'
             '<div class="small">%s</div><div class="small">%s · <a href="%s">%s</a></div></div>') % (
         r["id"], SC[lang][r["scenario"]], v, t["verdicts"][v], t["q"], html.escape(Q.get(r["scenario"], "")), play, r["id"],
         html.escape(SC[lang][r["scenario"]]), html.escape(r["note_" + lang]), rub, who, play, t["play"])
@@ -192,21 +193,25 @@ def card(r, lang, reveal=True):
 def gallery(lang, fname):
     t = T[lang]
     desc = {"en": "Open-source AI tutor that teaches on a whiteboard: it writes, draws, erases and takes interruptions. "
-                  "Benchmark of Claude, Gemini and DeepSeek on 288 lessons, blind-reviewed. Replay every board.",
-            "zh": "开源的白板 AI 导师：边讲边写字、画图、擦除，可以被打断。Claude、Gemini、DeepSeek 六个模型 288 节课的评测，盲评打分，每块板都能重放。"}[lang]
+                  "Compare six models across 288 generation runs and 64 blind-reviewed boards. Replay recorded explanations for free.",
+            "zh": "开源的白板 AI 导师：边讲边写字、画图、擦除，可以被打断。Claude、Gemini、DeepSeek 六个模型，288 次生成测试，64 块白板盲评。免费重放录制的讲解。"}[lang]
     p = ['<!DOCTYPE html><html lang="%s"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">'
-         '<meta name="description" content="%s"><title>%s</title><style>%s</style></head><body><div class="wrap">' % (lang, desc, t["title"], CSS),
-         '<div class="top"><h1>%s</h1><div>%s</div></div><p class="lead">%s</p>' % (t["h1"], t["other"], t["lead"]),
-         '<h2>%s</h2><table class="lb"><tr><th>%s</th><th>%s</th><th>%s</th><th>%s</th></tr>' % (t["board"], t["m"], t["p"], t["fs"], t["c"])]
+         '<meta name="description" content="%s"><title>%s</title><style>%s</style>'
+         '<link rel="stylesheet" href="docs/assets/gallery.css"><script defer src="docs/assets/gallery.js"></script></head><body><main class="wrap">' % (lang, desc, t["title"], CSS),
+         gallery_header(lang),
+         '<div class="table-scroll" role="region" aria-label="%s" tabindex="0"><table class="lb"><tr><th scope="col">%s</th><th scope="col">%s</th><th scope="col">%s</th><th scope="col">%s</th></tr>' % (t["board"], t["m"], t["p"], t["fs"], t["c"])]
     for b in board:
         p.append('<tr><td><a href="#%s">%s</a></td><td class="n">%d / %d</td><td class="n">%.1f s</td><td class="n">$%.4f</td></tr>' % (
             b["model"], b["name"], b["passed"], b["boards"], b["first_stroke_lesson_p50"], b["cost_lesson"]))
-    p.append("</table>")
+    p.append('</table></div>')
+    note = ('每个模型仅评审 10–11 块白板；通过率不代表全面教学能力。延迟与成本来自低思考档，成本按 2026-11-11 标价计算。' if lang == 'zh' else
+            'Only 10–11 boards reviewed per model. Pass rates are not a comprehensive measure of teaching ability. Latency and cost use the low-thinking setting; prices are dated 2026-11-11.')
+    p.append('<p class="benchmark-note">%s</p>' % note)
     for m in ORDER:
         sel = sorted([r for r in rows if r["model"] == m], key=lambda r: (r["cond"], SC_ORDER.index(r["scenario"])))
         p.append('<h2 id="%s">%s</h2><div class="grid">' % (m, t["sec"].format(name=MODEL[m], p=sum(r["lenient"] for r in sel), n=len(sel))))
         p += [card(r, lang) for r in sel] + ["</div>"]
-    p.append('<p class="small" style="margin-top:30px">%s</p></div></body></html>' % t["foot"])
+    p.append(gallery_footer(lang) + '</main></body></html>')
     open(os.path.join(ROOT, fname), "w", encoding="utf-8", newline="\n").write("\n".join(p))
 
 

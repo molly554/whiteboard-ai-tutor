@@ -5,11 +5,11 @@
 **An open-source AI tutor that teaches on a whiteboard — and a benchmark of which LLM does it best.**
 
 It writes, draws and erases while it explains, and the student can interrupt.<br>
-One frozen prompt. Six models. 288 lessons drawn stroke by stroke. Blind-reviewed.
+One frozen prompt. Six models. 288 generation runs. 64 blind-reviewed boards.
 
 [English](README.md) · [简体中文](README.zh-CN.md)
 
-**[▶ Live gallery: replay every lesson in your browser](https://molly554.github.io/whiteboard-ai-tutor/)**
+**[▶ Watch the demos](https://molly554.github.io/whiteboard-ai-tutor/)** · [Explore the benchmark](https://molly554.github.io/whiteboard-ai-tutor/#benchmark) · [Run it yourself](#quickstart)
 
 ![license](https://img.shields.io/badge/license-MIT-2a78d6)
 ![models](https://img.shields.io/badge/models-6-2a78d6)
@@ -22,6 +22,8 @@ One frozen prompt. Six models. 288 lessons drawn stroke by stroke. Blind-reviewe
 <sub>Gemini 4 Argon proving the Pythagorean theorem. The model only wrote JSON; the player turned it into handwriting. Played at 3× speed.</sub>
 
 </div>
+
+For study notes, flashcards and quizzes from your own PDFs, lectures and videos, explore [Lynote AI Notes](https://lynote.ai/ai-notes).
 
 ## What is this?
 
@@ -245,6 +247,15 @@ audit.html     the human-audit sheet
 - A second pass that shows the model a screenshot of its own board.
 - A vision-model judge compared against human verdicts, to replace the linter as a gate.
 - Speech for the narration, and true mid-stroke interruption.
+
+## Project updates and contributions
+
+See the [changelog](CHANGELOG.md) for released improvements and the [roadmap](ROADMAP.md) for the next iteration.
+The player and gallery are static: no build step, hosted inference service or API key is needed to replay the examples.
+The interface is available in English and Chinese; recorded model outputs keep their original language.
+
+Contributions to whiteboard animation, visual learning and educational AI are welcome. Start with the
+[contribution guide](CONTRIBUTING.md) and [open tasks](https://github.com/molly554/whiteboard-ai-tutor/issues).
 
 ## License
 

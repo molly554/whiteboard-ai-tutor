@@ -9,7 +9,7 @@ One frozen prompt. Six models. 288 generation runs. 64 blind-reviewed boards.
 
 [English](README.md) · [简体中文](README.zh-CN.md)
 
-**[▶ Watch the demos](https://molly554.github.io/whiteboard-ai-tutor/)** · [Explore the benchmark](https://molly554.github.io/whiteboard-ai-tutor/#benchmark) · [Run it yourself](#quickstart)
+**[▶ Watch the demos](https://molly554.github.io/whiteboard-ai-tutor/)** · **[Compare two models](https://molly554.github.io/whiteboard-ai-tutor/compare.html)** · [Explore the benchmark](https://molly554.github.io/whiteboard-ai-tutor/#benchmark) · [Run it yourself](#quickstart)
 
 ![license](https://img.shields.io/badge/license-MIT-2a78d6)
 ![models](https://img.shields.io/badge/models-6-2a78d6)
@@ -40,6 +40,14 @@ So any LLM can be the tutor. This repository is two things:
 
 It is not a hosted tutoring app. The player replays recorded lessons; to generate new ones, run the benchmark runner
 with your own API key.
+
+## Compare the same question across models
+
+[Open the model comparison](https://molly554.github.io/whiteboard-ai-tutor/compare.html): choose a question and thinking setting,
+then inspect two original boards, review notes and recorded run metrics side by side. Open each replay independently and copy a link to share the selected comparison.
+
+[Browse all 64 reviewed boards](https://molly554.github.io/whiteboard-ai-tutor/#boards) using question, model, verdict and thinking-setting filters.
+The medium-thinking review covers only three scenarios. Missing usable outputs and unreviewed combinations are shown separately.
 
 ## Leaderboard
 

@@ -1,5 +1,31 @@
 # Changelog
 
+## v0.2.0 — 2026-11-23
+
+### Compare explanations
+
+- Compare two models on the same question and thinking setting in English or Chinese.
+- Inspect the original boards, blind-review verdicts, notes and per-run latency/cost side by side.
+- Open each recording in its own player and return to the selected comparison.
+- Copy a shareable link preserving the question, thinking setting and both models. A selectable-link fallback works when clipboard access is unavailable.
+- Distinguish unreviewed combinations from the two sampled cells with no usable output.
+
+### Find a board
+
+- Filter the 64 reviewed boards by question, model, verdict and thinking setting.
+- Restore filters from a link, switch language without losing them, and use browser back/forward navigation.
+- Show a useful empty state and reset control when no boards match.
+
+### 中文说明
+
+- 新增中英文同题对比页，并排查看两份板书、盲评意见及单次生成指标。
+- 支持单独打开回放并返回原对比，分享链接保留题目、思考档与左右模型。
+- 画廊支持题目、模型、评审结果和思考档筛选，支持链接恢复与浏览器前进后退。
+- 明确区分未评审组合、没有可用输出及加载失败状态。
+
+All features reuse the existing recordings and review data. The frozen protocol, prompts, scores and historical leaderboard remain unchanged; no model API calls are required.
+
+
 ## v0.1.0 — 2026-11-22
 
 ### Demo and playback

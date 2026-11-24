@@ -9,7 +9,7 @@
 
 [English](README.md) · [简体中文](README.zh-CN.md)
 
-**[▶ 观看演示](https://molly554.github.io/whiteboard-ai-tutor/gallery.zh.html)** · [查看模型评测](https://molly554.github.io/whiteboard-ai-tutor/gallery.zh.html#benchmark) · [自己运行](#快速开始)
+**[▶ 观看演示](https://molly554.github.io/whiteboard-ai-tutor/gallery.zh.html)** · **[同题对比两个模型](https://molly554.github.io/whiteboard-ai-tutor/compare.zh.html)** · [查看模型评测](https://molly554.github.io/whiteboard-ai-tutor/gallery.zh.html#benchmark) · [自己运行](#快速开始)
 
 ![license](https://img.shields.io/badge/license-MIT-2a78d6)
 ![models](https://img.shields.io/badge/models-6-2a78d6)
@@ -36,6 +36,14 @@
 - **一份评测**：同一份提示词、同样八个教学场景（科学、数学、经济）、六个模型、两档思考、各重复三次。每一块板都在仓库里，都可以重放。
 
 它不是一个在线的辅导产品。播放器重放的是录下来的课；要生成新的课，需要用你自己的 API 密钥跑评测运行器。
+
+## 同一道题，对比两个模型
+
+[打开模型对比](https://molly554.github.io/whiteboard-ai-tutor/compare.zh.html)：选择一道题和同一个思考档，
+并排查看两份原始板书、评审意见与本次生成的耗时和费用。每份讲解都可单独打开播放器回放，对比链接可复制分享。
+
+[筛选全部 64 块白板](https://molly554.github.io/whiteboard-ai-tutor/gallery.zh.html#boards)：按题目、模型、评审结果和思考档查找案例。
+中思考档只评审了三个场景；没有可用输出的单元与未评审的组合会分别标明。
 
 ## 排行榜
 

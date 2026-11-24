@@ -114,6 +114,12 @@ const LABELS={
 };
 for(const [id,labels] of Object.entries(LABELS))$('#'+id).textContent=tr(...labels);
 $('#back-gallery').href=ZH?'../gallery.zh.html':'../index.html';
+if(new URLSearchParams(location.search).get('from')==='compare'){
+ const params=new URLSearchParams(location.search),back=new URL(ZH?'../compare.zh.html':'../compare.html',location.href);
+ for(const key of ['sc','cond','a','b'])if(params.has(key))back.searchParams.set(key,params.get(key));
+ $('#back-gallery').href=back.href;$('#back-gallery').textContent=tr('← Back to comparison','← 返回模型对比');
+}
+
 $('#sel').setAttribute('aria-label',tr('Choose a lesson','选择讲解场景'));
 $('#speed').setAttribute('aria-label',tr('Playback speed','播放速度'));
 $('#statetxt').setAttribute('aria-label',tr('Current board state JSON','当前白板状态 JSON'));

@@ -33,4 +33,13 @@ jobs:
             echo "Release $version already exists."
             exit 0
           fi
-          gh release create "$version" --repo "$GH_REPO" --target "$RELEASE_COMMIT" --title "$version" --notes-file CHANGELOG.md
+          python - <<'PY'
+          from pathlib import Path
+          import re
+          version = Path('VERSION').read_text().strip()
+          lines = Path('CHANGELOG.md').read_text(encoding='utf-8').splitlines()
+          start = next(i for i, line in enumerate(lines) if re.match(r'^## ' + re.escape(version) + r'(?:\s|$)', line))
+          end = next((i for i in range(start + 1, len(lines)) if lines[i].startswith('## ')), len(lines))
+          Path('RELEASE_NOTES.md').write_text('\n'.join(lines[start:end]).strip() + '\n', encoding='utf-8')
+          PY
+          gh release create "$version" --repo "$GH_REPO" --target "$RELEASE_COMMIT" --title "$version" --notes-file RELEASE_NOTES.md

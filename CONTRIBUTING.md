@@ -12,6 +12,15 @@ Open `http://localhost:8811/`. The gallery and player have no build step and req
 Use the English and Chinese galleries, try playback on a phone-size viewport, and check that opening a board and
 returning to the gallery preserve the selected interface language.
 
+## Verify comparison changes
+
+Open compare.html and compare.zh.html. Check a normal pair, a borderline result, a medium-thinking cell with no usable output,
+and a question not reviewed at medium thinking. Verify that copying/reopening the link restores both model choices and that changing language preserves the selection.
+Open each replay and check the return link. In the gallery, combine filters, reset an empty result and use browser back/forward navigation.
+
+Comparison rendering is in docs/assets/compare.js; shared review labels are in docs/assets/review-ui.js.
+Keep all displayed notes and scores tied to their original board IDs, scenarios and thinking settings.
+
 ## Useful contributions
 
 - Additional interface translations. Keep the original recorded board and narration intact.

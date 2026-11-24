@@ -12,7 +12,7 @@ import html
 import json
 import os
 import random
-from gallery_layout import gallery_header, gallery_footer
+from gallery_layout import gallery_header, gallery_footer, gallery_filters, comparison_page
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(HERE)
@@ -176,6 +176,8 @@ a{color:#1f4fd8;text-decoration:none}a:hover{text-decoration:underline}details{d
 def card(r, lang, reveal=True):
     t = T[lang]
     play = "player/index.html?run=%s&amp;sc=%s&amp;lang=%s" % (r["run_id"], r["scenario"], lang)
+    other_model = 'sonnet-5.5' if r['model'] != 'sonnet-5.5' else 'gemini-4-argon'
+    compare = ('compare.zh.html' if lang == 'zh' else 'compare.html') + '?sc=%s&amp;cond=%s&amp;a=%s&amp;b=%s' % (r['scenario'], r['cond'], r['model'], other_model)
     v = verdict(r)
     who = "%s · %s" % (MODEL[r["model"]], t["think"][r["cond"]])
     if not reveal:
@@ -183,9 +185,9 @@ def card(r, lang, reveal=True):
     rub = t["rub"].format(c=r["content"], m=r["match"], l=r["layout"], p=r["pedagogy"])
     if r["kind"] == "interrupt":
         rub += t["rub_i"].format(a=r.get("answers"), pl=r.get("placement"))
-    return ('<div class="card"><div class="meta"><b>%s</b> · %s <span class="v %s">%s</span></div><div class="small">%s: %s</div>'
+    return ('<div class="card" data-model="'+r['model']+'" data-sc="'+r['scenario']+'" data-cond="'+r['cond']+'" data-verdict="'+v+'"><div class="meta"><b>%s</b> · %s <span class="v %s">%s</span></div><div class="small">%s: %s</div>'
             '<a href="%s"><img src="results/review/boards/%s.png" alt="%s" loading="lazy" decoding="async" width="1600" height="900"></a><div class="note">%s</div>'
-            '<div class="small">%s</div><div class="small">%s · <a href="%s">%s</a></div></div>') % (
+            '<div class="small">%s</div><div class="small">%s · <a href="%s">%s</a></div><a class="card-compare" href="'+compare+'">'+('同题对比 →' if lang == 'zh' else 'Compare this question →')+'</a></div>') % (
         r["id"], SC[lang][r["scenario"]], v, t["verdicts"][v], t["q"], html.escape(Q.get(r["scenario"], "")), play, r["id"],
         html.escape(SC[lang][r["scenario"]]), html.escape(r["note_" + lang]), rub, who, play, t["play"])
 
@@ -197,7 +199,7 @@ def gallery(lang, fname):
             "zh": "开源的白板 AI 导师：边讲边写字、画图、擦除，可以被打断。Claude、Gemini、DeepSeek 六个模型，288 次生成测试，64 块白板盲评。免费重放录制的讲解。"}[lang]
     p = ['<!DOCTYPE html><html lang="%s"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">'
          '<meta name="description" content="%s"><title>%s</title><style>%s</style>'
-         '<link rel="stylesheet" href="docs/assets/gallery.css"><script defer src="docs/assets/gallery.js"></script></head><body><main class="wrap">' % (lang, desc, t["title"], CSS),
+         '<link rel="stylesheet" href="docs/assets/gallery.css"><script type="module" src="docs/assets/gallery.js"></script></head><body><main class="wrap">' % (lang, desc, t["title"], CSS),
          gallery_header(lang),
          '<div class="table-scroll" role="region" aria-label="%s" tabindex="0"><table class="lb"><tr><th scope="col">%s</th><th scope="col">%s</th><th scope="col">%s</th><th scope="col">%s</th></tr>' % (t["board"], t["m"], t["p"], t["fs"], t["c"])]
     for b in board:
@@ -207,16 +209,20 @@ def gallery(lang, fname):
     note = ('每个模型仅评审 10–11 块白板；通过率不代表全面教学能力。延迟与成本来自低思考档，成本按 2026-11-11 标价计算。' if lang == 'zh' else
             'Only 10–11 boards reviewed per model. Pass rates are not a comprehensive measure of teaching ability. Latency and cost use the low-thinking setting; prices are dated 2026-11-11.')
     p.append('<p class="benchmark-note">%s</p>' % note)
+    p.append(gallery_filters(lang))
+    p.append('<div id="board-results" class="board-results">')
     for m in ORDER:
         sel = sorted([r for r in rows if r["model"] == m], key=lambda r: (r["cond"], SC_ORDER.index(r["scenario"])))
-        p.append('<h2 id="%s">%s</h2><div class="grid">' % (m, t["sec"].format(name=MODEL[m], p=sum(r["lenient"] for r in sel), n=len(sel))))
+        p.append('<h2 class="model-heading" data-model="%s" id="%s">%s</h2><div class="grid" data-model="%s">' % (m, m, t["sec"].format(name=MODEL[m], p=sum(r["lenient"] for r in sel), n=len(sel)), m))
         p += [card(r, lang) for r in sel] + ["</div>"]
-    p.append(gallery_footer(lang) + '</main></body></html>')
+    p.append('</div>' + gallery_footer(lang) + '</main></body></html>')
     open(os.path.join(ROOT, fname), "w", encoding="utf-8", newline="\n").write("\n".join(p))
 
 
 gallery("en", "index.html")
 gallery("zh", "gallery.zh.html")
+for lang, filename in [('en', 'compare.html'), ('zh', 'compare.zh.html')]:
+    open(os.path.join(ROOT, filename), 'w', encoding='utf-8', newline='\n').write(comparison_page(lang))
 t = T["en"]
 p = ['<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">'
      '<title>Whiteboard AI Tutor · human audit sheet</title><style>%s</style></head><body><div class="wrap">' % CSS,

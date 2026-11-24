@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Preview the full steps of a whiteboard lesson and print or save them as an A4 landscape PDF.">
+<title>Lesson PDF preview · Whiteboard AI Tutor</title>
+<link rel="stylesheet" href="docs/assets/gallery.css">
+<link rel="stylesheet" href="docs/assets/lesson-pdf.css">
+<script type="module" src="docs/assets/lesson-pdf.js"></script>
+</head>
+<body class="pdf-preview">
+<main>
+  <div class="preview-controls wrap">
+    <header class="site-header"><a class="wordmark" id="gallery-link" href="index.html"><span class="brand-mark" aria-hidden="true">w.</span>Whiteboard AI Tutor</a><nav><a id="preview-language" href="?lang=zh">中文</a><a id="open-replay" href="index.html" target="_blank" rel="noopener">Open replay ↗</a></nav></header>
+    <div class="preview-intro"><p class="eyebrow" id="preview-eyebrow">COMPLETE LESSON · A4 LANDSCAPE</p><h1 id="preview-title">Lesson PDF preview</h1><p id="preview-help">Review the pages, then choose Print / Save as PDF. Closing or cancelling the print dialog does not reset your source player.</p></div>
+    <div class="preview-toolbar"><button id="print-pdf" class="button primary" type="button" disabled>Print / Save as PDF</button><button id="preview-zoom" class="button secondary" type="button" aria-pressed="false" disabled>Actual size</button><button id="close-preview" class="button secondary" type="button">Close preview</button><span id="page-summary" role="status" aria-live="polite"></span></div>
+    <p class="desktop-note" id="desktop-note">For best results, use desktop Chrome or Edge. Keep A4 landscape at the default scale and turn browser headers/footers off. Saving on phones depends on the browser and system.</p>
+    <div id="preview-status" class="preview-status" role="status" aria-live="polite">Loading the lesson…</div>
+    <div id="preview-error" class="preview-error" role="alert" hidden><h2 id="error-title">The preview could not be prepared</h2><p id="error-help">Check your connection, try again, or open the lesson in the player.</p><button id="retry-preview" class="button secondary" type="button">Try again</button></div>
+    <noscript><p>Enable JavaScript to prepare the lesson pages. You can still browse the <a href="index.html">recorded boards</a>.</p></noscript>
+  </div>
+  <div id="paper-collection" class="paper-collection" aria-label="Lesson pages"></div>
+  <p id="close-help" class="close-help preview-controls" hidden>You can close this tab to return to your original player.</p>
+</main>
+</body>
+</html>

@@ -21,6 +21,14 @@ Open each replay and check the return link. In the gallery, combine filters, res
 Comparison rendering is in docs/assets/compare.js; shared review labels are in docs/assets/review-ui.js.
 Keep all displayed notes and scores tied to their original board IDs, scenarios and thinking settings.
 
+## Verify PDF preview changes
+
+Use the player's PDF preview in desktop Chrome and Edge. Print or save an English maths lesson, a Chinese lesson and an interrupted lesson as A4 landscape, at the default scale with browser headers/footers off.
+Check the step count, initial interruption context, erased objects, full narration, page numbers and replay links. Test a long explanation that needs continuation pages; render the saved PDF and inspect Chinese glyphs and formulas as well as extracting the text.
+Opening the preview, cancelling print and closing the tab must preserve the source player's progress, pause state and speed. Check fit/actual-size preview on phone-sized screens, and retry after a failed request without showing partial pages.
+
+Preview layout is in lesson-pdf.html and docs/assets/lesson-pdf.{js,css}. Step snapshots reuse player/index.html in a separate renderer. No model API calls are needed.
+
 ## Useful contributions
 
 - Additional interface translations. Keep the original recorded board and narration intact.

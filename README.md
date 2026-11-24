@@ -49,6 +49,14 @@ then inspect two original boards, review notes and recorded run metrics side by 
 [Browse all 64 reviewed boards](https://molly554.github.io/whiteboard-ai-tutor/#boards) using question, model, verdict and thinking-setting filters.
 The medium-thinking review covers only three scenarios. Missing usable outputs and unreviewed combinations are shown separately.
 
+## Save a complete lesson as PDF
+
+Open any recorded lesson and choose **PDF preview** in the player, then **Print / Save as PDF**. [Try a lesson preview](https://molly554.github.io/whiteboard-ai-tutor/lesson-pdf.html?run=main-or-gemini-4-argon-low-r1-pythagoras-3&sc=r1-pythagoras&lang=en).
+
+The preview includes every step-end board and the full original explanation on **A4 landscape** pages; long explanations continue onto extra pages. Interrupted lessons start with the board at interruption and the student's question. Each page links back to the replay.
+
+Use desktop **Chrome or Edge**, select **Save as PDF**, and keep A4 landscape at the default scale with browser headers/footers off. Phone previews can be enlarged; saving depends on the browser and system. The preview opens separately and preserves the source player's progress and speed. English/Chinese controls do not translate the recorded lesson. No API key or server-side PDF service is needed.
+
 ## Leaderboard
 
 <picture>

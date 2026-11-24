@@ -45,6 +45,14 @@
 [筛选全部 64 块白板](https://molly554.github.io/whiteboard-ai-tutor/gallery.zh.html#boards)：按题目、模型、评审结果和思考档查找案例。
 中思考档只评审了三个场景；没有可用输出的单元与未评审的组合会分别标明。
 
+## 将完整讲解保存为 PDF
+
+打开任意一份录制讲解，点击播放器中的 **PDF 预览**，检查页面后点击 **打印 / 另存为 PDF**。[试用课件预览](https://molly554.github.io/whiteboard-ai-tutor/lesson-pdf.html?run=main-or-haiku-5.5-low-r1-photosynthesis-3&sc=r1-photosynthesis&lang=zh)。
+
+课件以 **A4 横向** 展示单节课的全部步骤：每步结束时的板书、完整原始讲解，长文本自动续页。打断续讲会先展示打断时的白板与学生追问，每页附有回放来源链接。
+
+建议使用电脑端 **Chrome 或 Edge**，在打印窗口选择“另存为 PDF”，保留 A4 横向、默认缩放，并关闭浏览器额外的页眉页脚。手机可放大预览，保存方式取决于浏览器和系统。预览在独立标签页打开，原播放器的进度与速度保持不变。切换中英文只影响操作界面，不翻译原始讲解；无需 API 密钥或额外 PDF 服务。
+
 ## 排行榜
 
 <picture>

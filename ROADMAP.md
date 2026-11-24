@@ -1,5 +1,13 @@
 # Roadmap
 
+## v0.3.0 — Complete-lesson PDF preview
+
+- Preview every step-end board and its full narration as A4 landscape pages, with long-text continuation pages.
+- Include the board at interruption and student question for continuation lessons.
+- Print or save from desktop Chrome/Edge without changing the source player's state; offer English/Chinese controls and phone preview.
+
+Implemented from the request in [#9](https://github.com/molly554/whiteboard-ai-tutor/issues/9). See [CHANGELOG.md](CHANGELOG.md).
+
 ## v0.2.0 — Compare explanations
 
 - Filter the existing boards by teaching scenario, model, review verdict and thinking setting.
@@ -11,10 +19,6 @@ This release uses the existing recordings and scores. See [CHANGELOG.md](CHANGEL
 ## v0.1.0 — Demo and discovery
 
 An animation-first gallery, responsive playback, English/Chinese interface continuity, and clearer project and benchmark information.
-
-## Under evaluation: PDF export
-
-Exporting step-end boards together with their narration is being evaluated in [#9](https://github.com/molly554/whiteboard-ai-tutor/issues/9). Scope and timing are not committed.
 
 ## Research directions
 

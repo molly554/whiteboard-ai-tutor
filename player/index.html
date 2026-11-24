@@ -56,6 +56,7 @@ textarea{width:100%;height:180px;font:12px Consolas,monospace}
     <button id="finish" disabled>⏩ Finished board</button>
     <select id="speed" aria-label="Playback speed"><option value="1">1×</option><option value="2">2×</option><option value="4">4×</option></select>
     <button id="zoom" aria-pressed="false" aria-controls="frame">Enlarge board</button>
+    <a id="pdf-export" class="pdf-export" aria-disabled="true" tabindex="-1" target="_blank" rel="noopener">PDF preview</a>
   </div>
 
   <div id="frame">
@@ -91,6 +92,8 @@ textarea{width:100%;height:180px;font:12px Consolas,monospace}
 <script>
 const UI_LANG=new URLSearchParams(location.search).get('lang')==='zh'?'zh':'en';
 const ZH=UI_LANG==='zh';
+const PDF_RENDER=new URLSearchParams(location.search).get('pdf')==='1';
+let LOAD_ERROR=null;
 const tr=(en,zh)=>ZH?zh:en;
 document.documentElement.lang=ZH?'zh-CN':'en';
 document.title=tr('Whiteboard AI Tutor · player','白板 AI 导师 · 播放器');
@@ -101,6 +104,7 @@ const FONT="'Ink Free','Segoe Print','KaiTi','STKaiti','Microsoft YaHei',cursive
 const $=s=>document.querySelector(s);
 const layer=$('#layer'), defs=$('#defs');
 const LABELS={
+ 'pdf-export':['PDF preview ↗','PDF 预览 ↗'],
  'play':['▶ Play','▶ 播放'], 'badge':['Checking…','正在检查…'],
  'back-gallery':['← All boards','← 返回全部白板'], 'player-title':['Whiteboard replay','白板讲解回放'],
  'recorded-note':['Recorded model output · The original board and narration keep their recorded language.','录制结果回放 · 白板与讲解文本保留模型输出时的原始语言。'],
@@ -127,11 +131,27 @@ $('#badge').title=tr('Show lint details','显示检查详情');
 const languageLink=$('#language');languageLink.textContent=ZH?'English':'中文';
 function updateLanguageLink(){const url=new URL(location.href);url.searchParams.set('lang',ZH?'en':'zh');if(!url.searchParams.has('run')&&$('#sel').value)url.searchParams.set('s',$('#sel').value);languageLink.href=url.href;}
 updateLanguageLink();
+function updatePDFLink(enabled){
+ const link=$('#pdf-export');
+ if(!enabled||!S||S.steps.length<=S.atStep){link.removeAttribute('href');link.setAttribute('aria-disabled','true');link.tabIndex=-1;return;}
+ const url=new URL('../lesson-pdf.html',location.href),query=new URLSearchParams(location.search);
+ url.searchParams.set('lang',UI_LANG);
+ if(query.get('run')){
+  url.searchParams.set('run',S.entry.id);
+  const scenario=query.get('sc')||INDEX.find(e=>S.entry.id.includes('-'+e.id+'-'))?.id;
+  if(scenario)url.searchParams.set('sc',scenario);
+ }else url.searchParams.set('s',S.entry.id);
+ if(query.get('from')==='compare')for(const key of ['from','cond','a','b'])if(query.has(key))url.searchParams.set(key,query.get(key));
+ link.href=url.href;link.setAttribute('aria-disabled','false');link.tabIndex=0;
+}
 function setLoading(loading){
+ if(loading)LOAD_ERROR=null;
+ updatePDFLink(!loading);
  const status=$('#status');status.hidden=!loading;status.className='';status.textContent=tr('Loading the recording…','正在加载录制的讲解…');
  for(const el of document.querySelectorAll('#top button,#sel'))el.disabled=loading;
 }
 function loadError(err){
+ LOAD_ERROR=String(err);updatePDFLink(false);
  const status=$('#status');status.hidden=false;status.className='error';
  status.textContent=tr('This recording could not be loaded. Choose another lesson, return to the gallery, or reload to retry.','这段讲解未能加载。请选择其他场景、返回画廊，或刷新页面重试。');
  for(const el of document.querySelectorAll('#top button'))el.disabled=true;
@@ -354,7 +374,7 @@ async function loadEntry(id){
     const L=await loadSteps(entry);
     S={entry,...L};
     $('#q').textContent=tr('The question: ','问题：')+(S.question||'');
-    await prepareBoard();runLintUI();updateLanguageLink();setLoading(false);
+    await prepareBoard();if(!PDF_RENDER)runLintUI();updateLanguageLink();setLoading(false);
   }catch(err){loadError(err);}
 }
 
@@ -529,7 +549,7 @@ async function stepsFromRun(obj,scenario){
 async function loadRun(runId,scenario){
   const obj=await fetchJSON(BASE+'results/scripts/'+runId+'.json');
   const L=await stepsFromRun(obj,scenario);
-  S={entry:{id:runId},question:'',...L};
+  S={entry:{id:runId,title:obj.title||''},question:INDEX.find(e=>e.id===scenario)?.question||obj.title||'',...L};
   await prepareBoard();
   return S;
 }
@@ -587,6 +607,25 @@ async function svgToPNG(svg,w,h){
   return await new Promise(r=>c.toBlob(r,'image/png'));
 }
 async function boardPNG(){return svgToPNG(boardSVG(),1280,720);}
+/* Export runs in a separate, non-animated player; it never changes the source tab. */
+async function lessonSnapshots(progress){
+ if(!PDF_RENDER)throw new Error('Snapshot collection requires the isolated PDF renderer');
+ if(!S||S.steps.length<=S.atStep)throw new Error('No lesson steps to export');
+ await document.fonts.ready;await prepareBoard();
+ const tok=TOKEN,shots=[],total=S.steps.length-S.atStep;
+ const snap=(kind,index,title,say)=>({kind,index,title:title||'',say:say||'',svg:boardSVG(),objectIds:[...objs.keys()]});
+ if(S.atStep)shots.push(snap('context',0,tr('Board at interruption','打断时的白板'),S.question));
+ INSTANT=true;
+ try{
+  for(let i=S.atStep;i<S.steps.length;i++){
+   const st=S.steps[i];
+   for(const op of st.ops||[])await doOp(op,i+1,tok);
+   cursor=i+1;shots.push(snap('step',i-S.atStep+1,st.title,st.say));
+   if(progress)progress(i-S.atStep+1,total);
+  }
+ }finally{INSTANT=false;hidePen();}
+ return {id:S.entry.id,title:S.entry.title||S.question,question:S.question,totalSteps:total,hasContext:!!S.atStep,snapshots:shots};
+}
 /* frame capture (tooling): plays a run deterministically and saves PNG frames under results/.frames/<outDir>/ */
 async function captureRun(runId,scenario,outDir,opts){
   opts=Object.assign({dt:400,w:800,question:''},opts||{});
@@ -650,6 +689,7 @@ async function lintToFile(phases,outName){const rows=await lintRuns(phases);awai
 /* ───────── startup ───────── */
 (async()=>{
   setLoading(true);
+  if(PDF_RENDER){document.body.classList.add('boardonly');await document.fonts.ready;}
   const idx=await fetchJSON(BASE+'scenarios/index.json');
   INDEX=idx.scripts;
   const sel=$('#sel'),groups={};
@@ -669,14 +709,14 @@ async function lintToFile(phases,outName){const rows=await lintRuns(phases);awai
     $('#sel').style.display='none';
     $('#q').textContent=sc?tr('The question: ','问题：')+sc.question:'';
     $('#run-info').textContent=tr('Run: ','原始生成记录：')+qp.get('run');
-    runLintUI();
-    if(qp.get('board')||matchMedia('(prefers-reduced-motion: reduce)').matches){await finishBoard();renderChips();syncBtn();$('#stitle').textContent=tr('Finished board','最终白板');}else{renderChips();syncBtn();start();}   // a replay starts playing by itself
+    if(!PDF_RENDER)runLintUI();
+    if(PDF_RENDER){renderChips();syncBtn();}else if(qp.get('board')||matchMedia('(prefers-reduced-motion: reduce)').matches){await finishBoard();renderChips();syncBtn();$('#stitle').textContent=tr('Finished board','最终白板');}else{renderChips();syncBtn();start();}   // a replay starts playing by itself
   }else await loadEntry(first);
   if(!$('#status').classList.contains('error'))setLoading(false);
   window.__ready=true;
 })().catch(loadError);
 window.__wb={loadEntry,lintAll,getState,loadSteps,get S(){return S;},objs,finishNow:()=>$('#finish').click(),
-  lintRuns,renderRuns,renderFromFile,lintToFile,loadRun,finishBoard,saveFile,captureRun,get ready(){return !!window.__ready;}};
+  lintRuns,renderRuns,renderFromFile,lintToFile,loadRun,finishBoard,saveFile,captureRun,lessonSnapshots,get error(){return LOAD_ERROR;},get playback(){return {cursor,paused,running:runningFlag,speed};},get ready(){return !!window.__ready;}};
 </script>
 </body>
 </html>

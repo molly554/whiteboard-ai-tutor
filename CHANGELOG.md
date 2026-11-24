@@ -1,5 +1,25 @@
 # Changelog
 
+## v0.3.0 — 2026-11-23
+
+### Complete-lesson PDF preview
+
+- Open PDF preview from the player in a separate tab, then use Print / Save as PDF.
+- Lay out every step-end board and its full original narration on A4 landscape pages. Long explanations continue onto additional pages.
+- For interrupted lessons, include the board at interruption and the student's question before the continuation steps.
+- Include question, model, thinking setting, existing review ID/verdict, page numbers and a link to replay the lesson.
+- Preserve the original player's playback state and speed when opening, printing, cancelling or closing the preview.
+- Provide English/Chinese controls, fit-to-screen and actual-size preview, loading feedback and retry on failure. Printing is verified on desktop Chrome and Edge; saving on phones depends on the browser and system.
+
+### 中文说明
+
+- 播放器新增 PDF 预览入口，在独立标签页检查课件后，使用“打印 / 另存为 PDF”。
+- 单节课所有步骤以 A4 横向排版，保留每步结束时的板书与完整原始讲解，长文本自动续页。
+- 打断续讲先展示打断时的白板和学生追问，再展示后续步骤；附题目、模型、已有评审信息、页码与回放来源。
+- 预览、打印、取消和关闭不会重置原播放器；支持中英文界面、缩放预览、加载提示和失败重试。
+
+This release reuses the existing player renderer and recordings. It requires no model API calls, PDF service or new runtime dependency. The frozen benchmark data and historical scores remain unchanged.
+
 ## v0.2.0 — 2026-11-23
 
 ### Compare explanations

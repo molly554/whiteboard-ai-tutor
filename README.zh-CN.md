@@ -245,4 +245,5 @@ audit.html     人工抽核清单
 ## 特别鸣谢
 
 AtomGit:[在国内托管whiteboard-ai-tutor项目](https://atomgit.com/Lynote/whiteboard-ai-tutor)，帮助中国大陆用户更快访问项目与下载Release.
+
 模真真：买 AI 别花冤枉钱！比价、验真、查降智，免费查：mozhenzhen.com（https://mozhenzhen.com/go/whiteboard-ai-tutor）

@@ -10,3 +10,6 @@ results/scripts/smoke*.json
 results/scripts/mock*.json
 .DS_Store
 Thumbs.db
+results/widgets/spend-*.json
+results/widgets/wmock*
+results/widgets/*.log

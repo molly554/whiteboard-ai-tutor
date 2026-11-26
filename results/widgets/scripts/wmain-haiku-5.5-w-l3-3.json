@@ -1,0 +1,126 @@
+{
+ "title": "Supply, demand and the price",
+ "lang": "en",
+ "steps": [
+  {
+   "title": "Two curves",
+   "say": "Demand slopes down: the lower the price, the more buyers want. Supply slopes up: the higher the price, the more sellers offer.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "title",
+     "x": 60,
+     "y": 40,
+     "text": "Supply, demand and the price",
+     "size": 54
+    },
+    {
+     "op": "widget",
+     "id": "sd",
+     "kind": "supply-demand",
+     "params": {
+      "show": [
+       "axes",
+       "demand",
+       "supply"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "title": "Where they cross",
+   "say": "The equilibrium is where the curves cross. At price 5 the quantity buyers want equals the quantity sellers offer, which is 5.",
+   "ops": [
+    {
+     "op": "widget",
+     "id": "sd",
+     "kind": "supply-demand",
+     "params": {
+      "show": [
+       "axes",
+       "demand",
+       "supply",
+       "equilibrium",
+       "readout"
+      ]
+     },
+     "expect": {
+      "price": "same",
+      "quantity": "same"
+     }
+    }
+   ]
+  },
+  {
+   "title": "Price above equilibrium",
+   "say": "If the price is above 5, sellers offer more than buyers want. The surplus pushes the price down until it reaches 5.",
+   "ops": [
+    {
+     "op": "widget",
+     "id": "sd",
+     "kind": "supply-demand",
+     "params": {
+      "show": [
+       "axes",
+       "demand",
+       "supply",
+       "equilibrium",
+       "readout"
+      ]
+     },
+     "expect": {
+      "price": "same",
+      "quantity": "same"
+     }
+    }
+   ]
+  },
+  {
+   "title": "Price below equilibrium",
+   "say": "If the price is below 5, buyers want more than sellers offer. The shortage pushes the price up until it reaches 5.",
+   "ops": [
+    {
+     "op": "widget",
+     "id": "sd",
+     "kind": "supply-demand",
+     "params": {
+      "show": [
+       "axes",
+       "demand",
+       "supply",
+       "equilibrium",
+       "readout"
+      ]
+     },
+     "expect": {
+      "price": "same",
+      "quantity": "same"
+     }
+    }
+   ]
+  },
+  {
+   "title": "Quiz: supply falls",
+   "say": "Supply falls by 2 steps, so the supply curve moves left. Drag the dot to where you think the new equilibrium is.",
+   "ops": [
+    {
+     "op": "widget",
+     "id": "sd",
+     "kind": "supply-demand",
+     "params": {
+      "show": [
+       "axes",
+       "demand",
+       "supply",
+       "equilibrium",
+       "readout"
+      ],
+      "supplyShift": -2,
+      "ask": "equilibrium"
+     }
+    }
+   ]
+  }
+ ]
+}

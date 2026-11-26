@@ -1,0 +1,328 @@
+{
+ "title": "Why the Pythagorean Theorem Works",
+ "lang": "en",
+ "steps": [
+  {
+   "title": "A Right-Angled Triangle",
+   "say": "Let's start with a right triangle with legs a and b, and hypotenuse c.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "title",
+     "x": 60,
+     "y": 40,
+     "text": "Proof of the Pythagorean Theorem",
+     "size": 52
+    },
+    {
+     "op": "path",
+     "id": "tri_base",
+     "d": "M 200 400 L 440 400 L 200 220 Z",
+     "color": "blue",
+     "width": 4,
+     "fill": "blue"
+    },
+    {
+     "op": "path",
+     "id": "right_angle",
+     "d": "M 200 370 L 230 370 L 230 400",
+     "color": "ink",
+     "width": 3
+    },
+    {
+     "op": "write",
+     "id": "lbl_a",
+     "x": 160,
+     "y": 300,
+     "text": "a",
+     "size": 36,
+     "color": "ink"
+    },
+    {
+     "op": "write",
+     "id": "lbl_b",
+     "x": 310,
+     "y": 415,
+     "text": "b",
+     "size": 36,
+     "color": "ink"
+    },
+    {
+     "op": "write",
+     "id": "lbl_c",
+     "x": 330,
+     "y": 290,
+     "text": "c",
+     "size": 36,
+     "color": "ink"
+    },
+    {
+     "op": "write",
+     "id": "goal",
+     "x": 600,
+     "y": 140,
+     "text": "Goal: Show that a² + b² = c²",
+     "size": 42,
+     "color": "ink"
+    }
+   ]
+  },
+  {
+   "title": "Arrange Four Copies",
+   "say": "We arrange four identical copies of this triangle inside a large square of side length a plus b.",
+   "ops": [
+    {
+     "op": "erase",
+     "ids": [
+      "tri_base",
+      "right_angle",
+      "lbl_a",
+      "lbl_b",
+      "lbl_c"
+     ]
+    },
+    {
+     "op": "write",
+     "id": "setup_desc",
+     "x": 600,
+     "y": 210,
+     "text": "Build a square of side (a + b).\nTotal Area = (a + b)²",
+     "size": 34,
+     "color": "gray"
+    },
+    {
+     "op": "rect",
+     "id": "big_square_1",
+     "x": 120,
+     "y": 320,
+     "w": 400,
+     "h": 400,
+     "color": "ink",
+     "width": 4
+    },
+    {
+     "op": "path",
+     "id": "sq1_t1",
+     "d": "M 120 440 L 520 320 L 120 320 Z",
+     "fill": "blue",
+     "color": "blue",
+     "width": 2
+    },
+    {
+     "op": "path",
+     "id": "sq1_t2",
+     "d": "M 520 320 L 520 720 L 400 720 Z",
+     "fill": "blue",
+     "color": "blue",
+     "width": 2
+    },
+    {
+     "op": "path",
+     "id": "sq1_t3",
+     "d": "M 400 720 L 120 720 L 120 440 Z",
+     "fill": "blue",
+     "color": "blue",
+     "width": 2
+    },
+    {
+     "op": "path",
+     "id": "inner_tilted_square",
+     "d": "M 120 440 L 400 320 L 520 600 L 240 720 Z",
+     "color": "ink",
+     "width": 3,
+     "fill": "red"
+    },
+    {
+     "op": "write",
+     "id": "lbl_fig1",
+     "x": 240,
+     "y": 740,
+     "text": "Arrangement 1",
+     "size": 34,
+     "color": "ink"
+    }
+   ]
+  },
+  {
+   "title": "The Inner Square c²",
+   "say": "The four blue triangles leave a tilted square in the middle with side length c, so its area is c².",
+   "ops": [
+    {
+     "op": "write",
+     "id": "lbl_c2",
+     "x": 310,
+     "y": 500,
+     "text": "c²",
+     "size": 48,
+     "color": "red"
+    },
+    {
+     "op": "write",
+     "id": "eq1",
+     "x": 600,
+     "y": 320,
+     "text": "Arrangement 1:\nArea = 4 × Triangle + c²",
+     "size": 36,
+     "color": "red"
+    }
+   ]
+  },
+  {
+   "title": "Rearrange into Two Rectangles",
+   "say": "Now, take the exact same four triangles and pair them up into two rectangles inside an identical large square.",
+   "ops": [
+    {
+     "op": "rect",
+     "id": "big_square_2",
+     "x": 1050,
+     "y": 320,
+     "w": 400,
+     "h": 400,
+     "color": "ink",
+     "width": 4
+    },
+    {
+     "op": "rect",
+     "id": "rect_pair1",
+     "x": 1050,
+     "y": 320,
+     "w": 280,
+     "h": 120,
+     "color": "blue",
+     "width": 2,
+     "fill": "blue"
+    },
+    {
+     "op": "line",
+     "id": "diag_pair1",
+     "x1": 1050,
+     "y1": 440,
+     "x2": 1330,
+     "y2": 320,
+     "color": "blue",
+     "width": 2
+    },
+    {
+     "op": "rect",
+     "id": "rect_pair2",
+     "x": 1330,
+     "y": 440,
+     "w": 120,
+     "h": 280,
+     "color": "blue",
+     "width": 2,
+     "fill": "blue"
+    },
+    {
+     "op": "line",
+     "id": "diag_pair2",
+     "x1": 1330,
+     "y1": 720,
+     "x2": 1450,
+     "y2": 440,
+     "color": "blue",
+     "width": 2
+    },
+    {
+     "op": "write",
+     "id": "lbl_fig2",
+     "x": 1170,
+     "y": 740,
+     "text": "Arrangement 2",
+     "size": 34,
+     "color": "ink"
+    }
+   ]
+  },
+  {
+   "title": "The Uncovered Squares a² and b²",
+   "say": "The empty space remaining forms two squares: one with side a, and one with side b.",
+   "ops": [
+    {
+     "op": "rect",
+     "id": "sq_a2",
+     "x": 1330,
+     "y": 320,
+     "w": 120,
+     "h": 120,
+     "color": "green",
+     "width": 3,
+     "fill": "green"
+    },
+    {
+     "op": "write",
+     "id": "lbl_a2",
+     "x": 1375,
+     "y": 360,
+     "text": "a²",
+     "size": 38,
+     "color": "green"
+    },
+    {
+     "op": "rect",
+     "id": "sq_b2",
+     "x": 1050,
+     "y": 440,
+     "w": 280,
+     "h": 280,
+     "color": "green",
+     "width": 3,
+     "fill": "green"
+    },
+    {
+     "op": "write",
+     "id": "lbl_b2",
+     "x": 1170,
+     "y": 560,
+     "text": "b²",
+     "size": 48,
+     "color": "green"
+    },
+    {
+     "op": "write",
+     "id": "eq2",
+     "x": 600,
+     "y": 440,
+     "text": "Arrangement 2:\nArea = 4 × Triangle + a² + b²",
+     "size": 36,
+     "color": "green"
+    }
+   ]
+  },
+  {
+   "title": "Compare the Uncovered Areas",
+   "say": "Both large squares have the same total area and contain the same four triangles. Subtracting the triangles proves that a² plus b² equals c².",
+   "ops": [
+    {
+     "op": "line",
+     "id": "sep_line",
+     "x1": 600,
+     "y1": 560,
+     "x2": 950,
+     "y2": 560,
+     "color": "gray",
+     "width": 2
+    },
+    {
+     "op": "write",
+     "id": "step_subtract",
+     "x": 600,
+     "y": 580,
+     "text": "Subtract 4 × Triangle from both:",
+     "size": 32,
+     "color": "gray"
+    },
+    {
+     "op": "write",
+     "id": "final_eq",
+     "x": 600,
+     "y": 640,
+     "text": "a² + b² = c²",
+     "size": 56,
+     "color": "ink",
+     "underline": true
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,99 @@
+{
+ "title": "What Happens to Price When Demand Rises?",
+ "lang": "en",
+ "steps": [
+  {
+   "title": "Market Equilibrium",
+   "say": "Let's begin with our market in equilibrium, where the demand curve intersects the supply curve.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "title",
+     "x": 60,
+     "y": 40,
+     "text": "What Happens to Price When Demand Rises?",
+     "size": 52
+    },
+    {
+     "op": "widget",
+     "id": "market",
+     "kind": "supply-demand",
+     "params": {
+      "show": [
+       "axes",
+       "demand",
+       "supply",
+       "equilibrium",
+       "readout"
+      ],
+      "demandShift": 0,
+      "supplyShift": 0,
+      "interactive": "none"
+     },
+     "expect": {
+      "price": "same",
+      "quantity": "same"
+     }
+    }
+   ]
+  },
+  {
+   "title": "Predict the New Equilibrium",
+   "say": "When demand rises, consumers want more at every price. Drag the point to where you think the new equilibrium lands!",
+   "ops": [
+    {
+     "op": "widget",
+     "id": "market",
+     "kind": "supply-demand",
+     "params": {
+      "demandShift": 2,
+      "ask": "equilibrium"
+     }
+    }
+   ]
+  },
+  {
+   "title": "Price and Quantity Rise",
+   "say": "The demand curve shifts to the right, which pushes the equilibrium price up and increases the quantity traded.",
+   "ops": [
+    {
+     "op": "widget",
+     "id": "market",
+     "kind": "supply-demand",
+     "params": {
+      "ask": null,
+      "show": [
+       "axes",
+       "demand",
+       "supply",
+       "equilibrium",
+       "readout"
+      ]
+     },
+     "expect": {
+      "price": "up",
+      "quantity": "up"
+     }
+    }
+   ]
+  },
+  {
+   "title": "Try It Yourself",
+   "say": "Try dragging the demand and supply curves yourself to see how price and quantity respond to different shifts.",
+   "ops": [
+    {
+     "op": "widget",
+     "id": "market",
+     "kind": "supply-demand",
+     "params": {
+      "interactive": "curves"
+     },
+     "expect": {
+      "price": "up",
+      "quantity": "up"
+     }
+    }
+   ]
+  }
+ ]
+}

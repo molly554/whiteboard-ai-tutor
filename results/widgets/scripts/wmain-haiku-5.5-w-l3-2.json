@@ -1,0 +1,81 @@
+{
+ "title": "Supply, demand and the price",
+ "lang": "en",
+ "steps": [
+  {
+   "title": "Two curves",
+   "say": "Demand slopes down: buyers want more at a lower price. Supply slopes up: sellers offer more at a higher price.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "title",
+     "x": 60,
+     "y": 40,
+     "text": "Supply, demand and the price",
+     "size": 54
+    },
+    {
+     "op": "widget",
+     "id": "sd",
+     "kind": "supply-demand",
+     "params": {
+      "show": [
+       "axes",
+       "demand",
+       "supply"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "title": "Where they cross",
+   "say": "The price where the two curves cross is the equilibrium. At price 5 buyers want exactly the quantity sellers offer, which is 5.",
+   "ops": [
+    {
+     "op": "widget",
+     "id": "sd",
+     "kind": "supply-demand",
+     "params": {
+      "show": [
+       "axes",
+       "demand",
+       "supply",
+       "equilibrium",
+       "readout"
+      ]
+     },
+     "expect": {
+      "price": "same",
+      "quantity": "same"
+     }
+    }
+   ]
+  },
+  {
+   "title": "Why the price settles there",
+   "say": "If the price is above 5, sellers offer more than buyers want, so there is a surplus and sellers cut the price. If it is below 5, buyers want more than is offered, so there is a shortage and the price rises.",
+   "ops": []
+  },
+  {
+   "title": "Curves move, price follows",
+   "say": "When something other than price changes what buyers want or sellers offer, the whole curve shifts. The price and quantity then move to a new crossing point.",
+   "ops": []
+  },
+  {
+   "title": "Quiz: supply falls",
+   "say": "Supply has fallen by 2, so the supply curve has moved left. Drag the dot to where you think the new equilibrium is.",
+   "ops": [
+    {
+     "op": "widget",
+     "id": "sd",
+     "kind": "supply-demand",
+     "params": {
+      "supplyShift": -2,
+      "ask": "equilibrium"
+     }
+    }
+   ]
+  }
+ ]
+}

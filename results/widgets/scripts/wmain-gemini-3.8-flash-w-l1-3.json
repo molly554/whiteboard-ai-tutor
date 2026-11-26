@@ -1,0 +1,91 @@
+{
+ "title": "What happens when demand rises?",
+ "lang": "en",
+ "steps": [
+  {
+   "title": "Supply and Demand",
+   "say": "Let's start with a market at equilibrium, where the downward-sloping demand curve intersects the upward-sloping supply curve.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "title",
+     "x": 60,
+     "y": 40,
+     "text": "What happens when demand rises?",
+     "size": 52
+    },
+    {
+     "op": "widget",
+     "id": "market",
+     "kind": "supply-demand",
+     "params": {
+      "show": [
+       "axes",
+       "demand",
+       "supply",
+       "equilibrium",
+       "readout"
+      ],
+      "interactive": "none"
+     },
+     "expect": {
+      "price": "same",
+      "quantity": "same"
+     }
+    }
+   ]
+  },
+  {
+   "title": "Demand Increases",
+   "say": "When demand rises, consumers want to buy more at every price, shifting the entire demand curve to the right.",
+   "ops": [
+    {
+     "op": "widget",
+     "id": "market",
+     "kind": "supply-demand",
+     "params": {
+      "demandShift": 2,
+      "ask": "equilibrium"
+     }
+    }
+   ]
+  },
+  {
+   "title": "New Equilibrium",
+   "say": "At the original price there is now a shortage, which pushes prices upward until quantity supplied expands to meet demand.",
+   "ops": [
+    {
+     "op": "widget",
+     "id": "market",
+     "kind": "supply-demand",
+     "params": {
+      "ask": null,
+      "demandShift": 2
+     },
+     "expect": {
+      "price": "up",
+      "quantity": "up"
+     }
+    }
+   ]
+  },
+  {
+   "title": "Try it yourself",
+   "say": "Both the equilibrium price and quantity have increased. Try dragging the curves to see how different shifts affect the market!",
+   "ops": [
+    {
+     "op": "widget",
+     "id": "market",
+     "kind": "supply-demand",
+     "params": {
+      "interactive": "curves"
+     },
+     "expect": {
+      "price": "up",
+      "quantity": "up"
+     }
+    }
+   ]
+  }
+ ]
+}

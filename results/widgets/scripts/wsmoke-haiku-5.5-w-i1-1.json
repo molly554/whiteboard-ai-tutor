@@ -1,0 +1,24 @@
+{
+ "title": "Why the price fell",
+ "lang": "en",
+ "steps": [
+  {
+   "title": "Supply rose",
+   "say": "You moved the supply curve to the right, so sellers now offer more at every price. With more goods available, buyers can pay less, and the price falls from 5 to 4 while the quantity rises from 5 to 6.",
+   "ops": [
+    {
+     "op": "widget",
+     "id": "sd",
+     "kind": "supply-demand",
+     "params": {
+      "supplyShift": 2
+     },
+     "expect": {
+      "price": "down",
+      "quantity": "up"
+     }
+    }
+   ]
+  }
+ ]
+}

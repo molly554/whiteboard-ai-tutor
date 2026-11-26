@@ -1,0 +1,75 @@
+{
+ "title": "Distance vs Tilt",
+ "lang": "en",
+ "steps": [
+  {
+   "title": "Distance is not the cause",
+   "say": "Surprisingly, Earth is actually closest to the Sun in January! Distance does not cause the seasons.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "title",
+     "x": 60,
+     "y": 40,
+     "text": "Distance vs. Axial Tilt",
+     "size": 54
+    },
+    {
+     "op": "widget",
+     "id": "se",
+     "kind": "seasons",
+     "params": {
+      "position": "summer-solstice"
+     },
+     "expect": {
+      "north": "summer",
+      "sun_overhead": "north"
+     }
+    }
+   ]
+  },
+  {
+   "title": "Tilt creates direct sunlight",
+   "say": "Notice where you dragged Earth: the north leans directly toward the Sun, concentrating the sunlight and creating summer.",
+   "ops": [
+    {
+     "op": "widget",
+     "id": "se",
+     "kind": "seasons",
+     "params": {
+      "show": [
+       "orbit",
+       "labels",
+       "zoom",
+       "readout",
+       "note"
+      ],
+      "interactive": "earth"
+     },
+     "expect": {
+      "north": "summer",
+      "sun_overhead": "north"
+     }
+    }
+   ]
+  },
+  {
+   "title": "Opposite seasons",
+   "say": "At the exact same moment, the southern hemisphere leans away and experiences winter, proving distance cannot be the reason.",
+   "ops": [
+    {
+     "op": "widget",
+     "id": "se",
+     "kind": "seasons",
+     "params": {
+      "interactive": "earth"
+     },
+     "expect": {
+      "north": "summer",
+      "sun_overhead": "north"
+     }
+    }
+   ]
+  }
+ ]
+}

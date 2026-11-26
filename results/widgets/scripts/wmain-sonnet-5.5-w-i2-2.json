@@ -1,0 +1,63 @@
+{
+ "title": "Distance is not the reason",
+ "lang": "en",
+ "steps": [
+  {
+   "title": "Not the distance",
+   "say": "Good guess, but distance is not the cause. The orbit is almost a circle, and in fact the Earth is closest to the Sun in early January, in the middle of northern winter.",
+   "ops": [
+    {
+     "op": "widget",
+     "id": "se",
+     "kind": "seasons",
+     "params": {
+      "position": "summer-solstice",
+      "interactive": "none"
+     },
+     "expect": {
+      "north": "summer",
+      "sun_overhead": "north"
+     }
+    }
+   ]
+  },
+  {
+   "title": "The tilt does it",
+   "say": "What matters is the tilt. Where you dragged the Earth, the north leans toward the Sun, so sunlight hits the north more directly and days are longer, which makes it summer there.",
+   "ops": [
+    {
+     "op": "widget",
+     "id": "se",
+     "kind": "seasons",
+     "params": {
+      "position": "summer-solstice",
+      "interactive": "none"
+     },
+     "expect": {
+      "north": "summer",
+      "sun_overhead": "north"
+     }
+    }
+   ]
+  },
+  {
+   "title": "The south is opposite",
+   "say": "At the same moment the south leans away, so it is winter there, even though the Earth is at the same distance. Drag the Earth around the orbit and watch the seasons change.",
+   "ops": [
+    {
+     "op": "widget",
+     "id": "se",
+     "kind": "seasons",
+     "params": {
+      "position": "summer-solstice",
+      "interactive": "earth"
+     },
+     "expect": {
+      "north": "summer",
+      "sun_overhead": "north"
+     }
+    }
+   ]
+  }
+ ]
+}

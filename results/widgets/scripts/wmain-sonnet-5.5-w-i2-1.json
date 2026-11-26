@@ -1,0 +1,85 @@
+{
+ "title": "Distance is not the reason",
+ "lang": "en",
+ "steps": [
+  {
+   "title": "Not about distance",
+   "say": "Good guess, but distance is not the cause. The orbit is almost a circle, and in fact the Earth is closest to the Sun in early January, which is winter in the north.",
+   "ops": [
+    {
+     "op": "widget",
+     "id": "se",
+     "kind": "seasons",
+     "params": {
+      "show": [
+       "orbit",
+       "labels",
+       "zoom",
+       "readout",
+       "note"
+      ],
+      "position": "summer-solstice"
+     },
+     "expect": {
+      "north": "summer",
+      "sun_overhead": "north"
+     }
+    }
+   ]
+  },
+  {
+   "title": "The tilt does it",
+   "say": "You moved the Earth to the summer position. The north pole now leans toward the Sun, so sunlight hits the north more directly and days are longer, about 14.9 hours at 40 degrees north.",
+   "ops": [
+    {
+     "op": "widget",
+     "id": "se",
+     "kind": "seasons",
+     "params": {
+      "position": "summer-solstice"
+     },
+     "expect": {
+      "north": "summer",
+      "sun_overhead": "north"
+     }
+    }
+   ]
+  },
+  {
+   "title": "The south is opposite",
+   "say": "At the same moment the south is leaning away, so it is winter there. If distance were the cause, both hemispheres would have the same season.",
+   "ops": [
+    {
+     "op": "widget",
+     "id": "se",
+     "kind": "seasons",
+     "params": {
+      "position": "summer-solstice"
+     },
+     "expect": {
+      "north": "summer",
+      "sun_overhead": "north"
+     }
+    }
+   ]
+  },
+  {
+   "title": "Try it yourself",
+   "say": "Drag the Earth around the orbit and watch the sunlight angle change. The tilt, not the distance, makes the seasons.",
+   "ops": [
+    {
+     "op": "widget",
+     "id": "se",
+     "kind": "seasons",
+     "params": {
+      "interactive": "earth"
+     },
+     "expect": {
+      "north": "summer",
+      "sun_overhead": "north"
+     }
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,112 @@
+{
+ "title": "Supply, Demand, and Equilibrium",
+ "lang": "en",
+ "steps": [
+  {
+   "title": "Market Curves",
+   "say": "Buyers want more at lower prices, while sellers supply more at higher prices. Together, demand and supply meet in the market.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "title",
+     "x": 60,
+     "y": 40,
+     "text": "Supply, Demand, and Equilibrium",
+     "size": 52
+    },
+    {
+     "op": "widget",
+     "id": "sd",
+     "kind": "supply-demand",
+     "params": {
+      "show": [
+       "axes",
+       "demand",
+       "supply"
+      ],
+      "interactive": "none"
+     }
+    }
+   ]
+  },
+  {
+   "title": "Market Equilibrium",
+   "say": "Where the two curves cross, quantity demanded equals quantity supplied. This intersection determines the market price.",
+   "ops": [
+    {
+     "op": "widget",
+     "id": "sd",
+     "kind": "supply-demand",
+     "params": {
+      "show": [
+       "axes",
+       "demand",
+       "supply",
+       "equilibrium",
+       "readout"
+      ]
+     },
+     "expect": {
+      "price": "same",
+      "quantity": "same"
+     }
+    }
+   ]
+  },
+  {
+   "title": "Supply Decreases",
+   "say": "Suppose bad weather ruins crops, so supply falls and the entire supply curve shifts to the left.",
+   "ops": [
+    {
+     "op": "widget",
+     "id": "sd",
+     "kind": "supply-demand",
+     "params": {
+      "supplyShift": -2,
+      "ask": "equilibrium"
+     }
+    }
+   ]
+  },
+  {
+   "title": "New Equilibrium",
+   "say": "Because goods are scarcer, buyers compete for fewer items, driving the equilibrium price up and the quantity down.",
+   "ops": [
+    {
+     "op": "widget",
+     "id": "sd",
+     "kind": "supply-demand",
+     "params": {
+      "ask": null,
+      "supplyShift": -2,
+      "show": [
+       "axes",
+       "demand",
+       "supply",
+       "equilibrium",
+       "readout"
+      ]
+     },
+     "expect": {
+      "price": "up",
+      "quantity": "down"
+     }
+    }
+   ]
+  },
+  {
+   "title": "Explore the Market",
+   "say": "Try dragging the curves yourself to see how various shifts in supply and demand affect market price and quantity.",
+   "ops": [
+    {
+     "op": "widget",
+     "id": "sd",
+     "kind": "supply-demand",
+     "params": {
+      "interactive": "curves"
+     }
+    }
+   ]
+  }
+ ]
+}

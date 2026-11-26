@@ -1,0 +1,40 @@
+{
+ "steps": [
+  {
+   "title": "Supply moved right",
+   "say": "You shifted supply to the right. At every price, sellers now offer more, so the supply curve sits further out.",
+   "ops": [
+    {
+     "op": "widget",
+     "id": "sd",
+     "kind": "supply-demand",
+     "params": {
+      "supplyShift": 2
+     },
+     "expect": {
+      "price": "down",
+      "quantity": "up"
+     }
+    }
+   ]
+  },
+  {
+   "title": "Why the price falls",
+   "say": "At the old price of 5 there is now more on offer than buyers want, a surplus. Sellers cut the price until buyers take it all, which settles at price 4 and quantity 6.",
+   "ops": [
+    {
+     "op": "widget",
+     "id": "sd",
+     "kind": "supply-demand",
+     "params": {
+      "supplyShift": 2
+     },
+     "expect": {
+      "price": "down",
+      "quantity": "up"
+     }
+    }
+   ]
+  }
+ ]
+}

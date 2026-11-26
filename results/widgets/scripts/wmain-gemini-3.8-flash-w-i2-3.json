@@ -1,0 +1,89 @@
+{
+ "title": "Why do we have seasons?",
+ "lang": "en",
+ "steps": [
+  {
+   "title": "Distance is not the cause",
+   "say": "Actually, Earth is closest to the Sun in January during northern winter! The 23.5-degree axial tilt, not the distance, causes the seasons.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "dist_fact",
+     "x": 60,
+     "y": 40,
+     "text": "Distance vs. Tilt: Earth is closest in January!",
+     "size": 52
+    },
+    {
+     "op": "widget",
+     "id": "se",
+     "kind": "seasons",
+     "params": {
+      "show": [
+       "orbit",
+       "labels",
+       "zoom",
+       "readout",
+       "note"
+      ],
+      "position": "summer-solstice"
+     },
+     "expect": {
+      "north": "summer",
+      "sun_overhead": "north"
+     }
+    }
+   ]
+  },
+  {
+   "title": "Summer solstice tilt",
+   "say": "Here in June, the Northern Hemisphere tilts directly toward the Sun, concentrating sunlight and making days longer.",
+   "ops": [
+    {
+     "op": "widget",
+     "id": "se",
+     "kind": "seasons",
+     "params": {
+      "position": "summer-solstice"
+     },
+     "expect": {
+      "north": "summer",
+      "sun_overhead": "north"
+     }
+    }
+   ]
+  },
+  {
+   "title": "Opposite hemispheres",
+   "say": "Notice that while the north enjoys summer, the southern hemisphere tilts away into winter, which wouldn't happen if distance were the cause.",
+   "ops": [
+    {
+     "op": "widget",
+     "id": "se",
+     "kind": "seasons",
+     "params": {
+      "position": "winter-solstice"
+     },
+     "expect": {
+      "north": "winter",
+      "sun_overhead": "south"
+     }
+    }
+   ]
+  },
+  {
+   "title": "Explore the orbit",
+   "say": "Drag Earth along its orbit to see how the tilt changes the angle of sunlight throughout the year.",
+   "ops": [
+    {
+     "op": "widget",
+     "id": "se",
+     "kind": "seasons",
+     "params": {
+      "interactive": "earth"
+     }
+    }
+   ]
+  }
+ ]
+}

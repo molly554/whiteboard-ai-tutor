@@ -1,0 +1,155 @@
+{
+ "title": "Supply, Demand and Price",
+ "lang": "en",
+ "steps": [
+  {
+   "title": "Demand",
+   "say": "Buyers want less of something as its price rises, so the demand curve slopes downward.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "title",
+     "x": 60,
+     "y": 40,
+     "text": "Supply, Demand and Price",
+     "size": 54
+    },
+    {
+     "op": "widget",
+     "id": "sd",
+     "kind": "supply-demand",
+     "params": {
+      "show": [
+       "axes",
+       "demand"
+      ],
+      "interactive": "none"
+     }
+    }
+   ]
+  },
+  {
+   "title": "Supply",
+   "say": "Sellers offer more as the price rises, so the supply curve slopes upward.",
+   "ops": [
+    {
+     "op": "widget",
+     "id": "sd",
+     "kind": "supply-demand",
+     "params": {
+      "show": [
+       "axes",
+       "demand",
+       "supply"
+      ],
+      "interactive": "none"
+     }
+    }
+   ]
+  },
+  {
+   "title": "Equilibrium",
+   "say": "Where the curves cross, buyers and sellers agree: the price is 5 and the quantity is 5. That is the equilibrium.",
+   "ops": [
+    {
+     "op": "widget",
+     "id": "sd",
+     "kind": "supply-demand",
+     "params": {
+      "show": [
+       "axes",
+       "demand",
+       "supply",
+       "equilibrium",
+       "readout"
+      ],
+      "interactive": "none"
+     },
+     "expect": {
+      "price": "same",
+      "quantity": "same"
+     }
+    }
+   ]
+  },
+  {
+   "title": "Demand rises",
+   "say": "If demand rises, the demand curve moves right. Buyers compete, so the price and the quantity both go up.",
+   "ops": [
+    {
+     "op": "widget",
+     "id": "sd",
+     "kind": "supply-demand",
+     "params": {
+      "show": [
+       "axes",
+       "demand",
+       "supply",
+       "equilibrium",
+       "readout"
+      ],
+      "demandShift": 2,
+      "interactive": "none"
+     },
+     "expect": {
+      "price": "up",
+      "quantity": "up"
+     }
+    }
+   ]
+  },
+  {
+   "title": "Back to start",
+   "say": "Let's reset demand to its starting position, so we can look at supply on its own.",
+   "ops": [
+    {
+     "op": "widget",
+     "id": "sd",
+     "kind": "supply-demand",
+     "params": {
+      "demandShift": 0
+     },
+     "expect": {
+      "price": "same",
+      "quantity": "same"
+     }
+    }
+   ]
+  },
+  {
+   "title": "Your turn: supply falls",
+   "say": "Now supply falls, so the supply curve moves left. Drag the dot to where you think the new equilibrium will be.",
+   "ops": [
+    {
+     "op": "widget",
+     "id": "sd",
+     "kind": "supply-demand",
+     "params": {
+      "supplyShift": -2,
+      "ask": "equilibrium",
+      "interactive": "none"
+     }
+    }
+   ]
+  },
+  {
+   "title": "Try it yourself",
+   "say": "Nice work. Now drag the curves yourself and watch how the price and the quantity respond.",
+   "ops": [
+    {
+     "op": "widget",
+     "id": "sd",
+     "kind": "supply-demand",
+     "params": {
+      "ask": null,
+      "interactive": "curves"
+     },
+     "expect": {
+      "price": "up",
+      "quantity": "down"
+     }
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,53 @@
+{
+ "title": "Why do we have seasons?",
+ "lang": "en",
+ "steps": [
+  {
+   "title": "Distance is not the cause",
+   "say": "The Earth is actually farthest from the Sun in early July, and the distance changes too little to matter. The real cause is the tilt: in summer the north pole leans toward the Sun.",
+   "ops": [
+    {
+     "op": "widget",
+     "id": "se",
+     "kind": "seasons",
+     "params": {
+      "show": [
+       "orbit",
+       "labels",
+       "zoom",
+       "readout",
+       "note"
+      ],
+      "position": "summer-solstice"
+     },
+     "expect": {
+      "north": "summer",
+      "sun_overhead": "north"
+     }
+    }
+   ]
+  },
+  {
+   "title": "Your turn",
+   "say": "Drag the Earth to the place where it is summer in the north. Then check the sunlight panel.",
+   "ops": [
+    {
+     "op": "widget",
+     "id": "se",
+     "kind": "seasons",
+     "params": {
+      "show": [
+       "orbit",
+       "labels",
+       "zoom",
+       "readout",
+       "note"
+      ],
+      "position": "winter-solstice",
+      "ask": "north-summer"
+     }
+    }
+   ]
+  }
+ ]
+}

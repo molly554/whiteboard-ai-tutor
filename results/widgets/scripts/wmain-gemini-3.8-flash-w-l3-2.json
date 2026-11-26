@@ -1,0 +1,103 @@
+{
+ "title": "Supply, Demand, and Equilibrium",
+ "lang": "en",
+ "steps": [
+  {
+   "title": "Market Curves",
+   "say": "Let's look at how buyers and sellers interact. Buyers demand more at lower prices, while sellers supply more at higher prices.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "title",
+     "x": 60,
+     "y": 40,
+     "text": "Supply, Demand, and Equilibrium",
+     "size": 52
+    },
+    {
+     "op": "widget",
+     "id": "mkt",
+     "kind": "supply-demand",
+     "params": {
+      "show": [
+       "axes",
+       "demand",
+       "supply"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "title": "Finding Equilibrium",
+   "say": "Where the demand and supply curves cross, the market reaches equilibrium with a balanced price and quantity.",
+   "ops": [
+    {
+     "op": "widget",
+     "id": "mkt",
+     "kind": "supply-demand",
+     "params": {
+      "show": [
+       "axes",
+       "demand",
+       "supply",
+       "equilibrium",
+       "readout"
+      ]
+     },
+     "expect": {
+      "price": "same",
+      "quantity": "same"
+     }
+    }
+   ]
+  },
+  {
+   "title": "Supply Decreases",
+   "say": "Suppose production becomes harder or more expensive. The supply curve shifts left because fewer goods are supplied at every price.",
+   "ops": [
+    {
+     "op": "widget",
+     "id": "mkt",
+     "kind": "supply-demand",
+     "params": {
+      "supplyShift": -2,
+      "ask": "equilibrium"
+     }
+    }
+   ]
+  },
+  {
+   "title": "The New Equilibrium",
+   "say": "Notice what happened: because supply fell, the equilibrium price rises while the equilibrium quantity falls.",
+   "ops": [
+    {
+     "op": "widget",
+     "id": "mkt",
+     "kind": "supply-demand",
+     "params": {
+      "ask": null
+     },
+     "expect": {
+      "price": "up",
+      "quantity": "down"
+     }
+    }
+   ]
+  },
+  {
+   "title": "Explore the Market",
+   "say": "Now try dragging the curves yourself to see how different shifts in supply and demand affect the price and quantity.",
+   "ops": [
+    {
+     "op": "widget",
+     "id": "mkt",
+     "kind": "supply-demand",
+     "params": {
+      "interactive": "curves"
+     }
+    }
+   ]
+  }
+ ]
+}

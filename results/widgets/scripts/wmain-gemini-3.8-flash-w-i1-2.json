@@ -1,0 +1,53 @@
+{
+ "title": "Supply rises",
+ "lang": "en",
+ "steps": [
+  {
+   "title": "Supply shifted right",
+   "say": "You increased supply! Moving the blue curve to the right means sellers are offering more goods at every price.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "title",
+     "x": 60,
+     "y": 40,
+     "text": "Why more supply lowers the price",
+     "size": 54
+    }
+   ]
+  },
+  {
+   "title": "Surplus leads to lower prices",
+   "say": "With more goods available than before, sellers must lower their prices to compete and sell everything, pushing the price down to 4.",
+   "ops": [
+    {
+     "op": "widget",
+     "id": "sd",
+     "kind": "supply-demand",
+     "params": {
+      "supplyShift": 2,
+      "demandShift": 0
+     },
+     "expect": {
+      "price": "down",
+      "quantity": "up"
+     }
+    }
+   ]
+  },
+  {
+   "title": "Try shifting demand",
+   "say": "Now try dragging the red demand curve to the right to see what happens when buyer demand rises instead!",
+   "ops": [
+    {
+     "op": "widget",
+     "id": "sd",
+     "kind": "supply-demand",
+     "params": {
+      "interactive": "curves"
+     }
+    }
+   ]
+  }
+ ]
+}

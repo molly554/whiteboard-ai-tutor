@@ -1,5 +1,25 @@
 # Changelog
 
+## v0.4.0 — 2026-11-26
+
+### Interactive widgets (experiment)
+
+- Add an experimental `widget` operation (protocol v1.1 draft): a figure that the player computes from a few parameters and the student can drag. It lowers to ordinary v1 operations, so playback, the linter and the recordings are unchanged.
+- Add two hand-written widgets, supply and demand and seasons, with four example lessons under **Interactive widgets (hand-written)** in the player's lesson menu. Drag a curve or the Earth, or answer a question by dragging a dot: the lesson pauses for the answer, and the explanation for each typical mistake is worked out by code.
+- Record each drag and answer as a structured event and report it with the board state (Export board state), together with the widget's current parameters.
+- Run the draft protocol once with three models on six tasks (54 calls, $0.37): every output parsed and passed the schema check, and the models chose the right widget, or none for a topic no widget covers. The prompt, settings, results and limits are in [docs/INTERACTIVE.md](docs/INTERACTIVE.md) ([中文](docs/INTERACTIVE.zh-CN.md)). These calls are separate from the 288 v1 runs and the leaderboard.
+- The PDF preview does not support widget lessons yet; its button is disabled for them.
+
+### 中文说明
+
+- 新增实验性的 `widget` 操作（协议 v1.1 草稿）：由播放器根据少量参数算出整张图，学生可以拖动。它会展开成普通的 v1 操作，播放、检查脚本和已有录制不受影响。
+- 新增两个手写板件（供需、四季）和四节示例课，位于播放器课程菜单的“Interactive widgets (hand-written)”分组。可以拖动曲线或地球，也可以拖一个点来回答问题；课程会暂停等待作答，针对每种典型错误的讲解由代码给出。
+- 每次拖动和作答都会记录成结构化事件，随“导出白板状态”一起给出，并附板件当前的参数。
+- 对该草稿协议做了一次独立的小规模实测（3 个模型、6 个任务、54 次调用、$0.37）：所有输出都能解析、通过格式检查，模型选对了板件，板件没覆盖的题也没有被硬套。提示词、设置、结果和局限见 [docs/INTERACTIVE.zh-CN.md](docs/INTERACTIVE.zh-CN.md)。这些调用不在 288 次 v1 生成和排行榜之内。
+- PDF 预览暂不支持板件课程，对应按钮已置灰。
+
+This release adds files and a small extension to the player. The frozen protocol, prompts, scores and historical leaderboard remain unchanged; replaying lessons still needs no API key or new runtime dependency.
+
 ## v0.3.0 — 2026-11-23
 
 ### Complete-lesson PDF preview

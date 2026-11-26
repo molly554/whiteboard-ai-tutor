@@ -165,6 +165,21 @@ flowchart LR
 
 细节和复现步骤见 [`docs/METHOD.md`](docs/METHOD.md)，完整报告见 [`docs/REPORT.zh-CN.md`](docs/REPORT.zh-CN.md)（[English](docs/REPORT.md)）。
 
+## 互动板件（实验）
+
+以上都是冻结的 v1 评测。另有一个单独、手工搭建的实验，问的是另一个问题：如果图形是由播放器计算的「板件」，学生又能拖动它，会怎样？
+
+- `widget` 操作（协议 v1.1 草稿）只写图形的种类和参数，例如
+  `{"op": "widget", "kind": "supply-demand", "params": {"demandShift": 2}}`，每个坐标、标注和读数都由播放器算出。它会展开成普通的 v1 操作，
+  所以播放、检查脚本和已有录制都不受影响。
+- 播放空闲时，学生可以拖动曲线或地球，也可以拖一个点来回答问题。答案由代码判定，每个操作记录成结构化事件，随白板状态一起给出。
+- 目前有两个板件（供需、四季），都是手写的，配 4 节示例课：
+  [在播放器里试试](https://molly554.github.io/whiteboard-ai-tutor/player/?s=w2-predict-equilibrium.en&lang=zh)。
+- 一次小规模的跟进实测（3 个模型、6 个任务、54 次调用、$0.37）：所有输出都能解析、通过格式检查，模型都选对了板件，板件没覆盖的题也没有被硬套。
+  两个手写板件和 54 次调用，说明不了其他知识点和其他模型，更说明不了拖动是否帮助学习。这些调用不在上面的 288 次里，也不在排行榜上。
+
+设置、协议草稿、结果和局限见 [`docs/INTERACTIVE.zh-CN.md`](docs/INTERACTIVE.zh-CN.md)（[English](docs/INTERACTIVE.md)）。
+
 ## 快速开始
 
 看结果可以直接开[在线画廊](https://molly554.github.io/whiteboard-ai-tutor/gallery.zh.html)，也可以在本地看（不需要密钥，不需要装依赖）：
@@ -197,15 +212,18 @@ python bench/aggregate.py                                          # 结果表�
 ## 仓库结构
 
 ```
-protocol/      冻结的提示词（实测用的中文原文 + 英文译本）
-scenarios/     8 个场景：5 个讲解，3 个打断（含固定的前文板书和白板状态）
-player/        白板播放器、检查脚本、动图捕获工具（单个 HTML，无需构建）
+protocol/      冻结的提示词（实测用的中文原文 + 英文译本）和 v1.1 板件草稿
+scenarios/     8 个场景：5 个讲解，3 个打断（含固定的前文板书和白板状态）；
+               scenarios/widgets/ 是手写的板件课程
+player/        白板播放器、检查脚本、动图捕获工具（单个 HTML，无需构建）；
+               player/widgets/ 是板件运行时和两个板件
 bench/         运行器、各家接口适配、汇总、盲评辅助脚本、图表和动图生成
 results/
   runs/        每一次 API 调用：耗时、token 用量、费用、原始输出
   scripts/     263 份解析成功的输出，可直接重放
   lint/        每次调用的检查结果
   review/      64 块渲染好的板、盲评打分、编号对应表、逐板评语
+  widgets/     板件实验：原始调用、输出和汇总（与 v1 结果分开存放）
 docs/          报告、方法、图表和动图
 index.html     全部评审板的画廊（也是 GitHub Pages 的入口）
 audit.html     人工抽核清单
@@ -224,7 +242,8 @@ audit.html     人工抽核清单
 
 ## 值得接着测的方向
 
-- 更高层的指令（`mark_intersection(a, b)`、`label(id, text)`），让代码而不是模型去算位置。这正对着最常见的错误。
+- 更高层的指令（`mark_intersection(a, b)`、`label(id, text)`），让代码而不是模型去算位置。这正对着最常见的错误（[#7](https://github.com/molly554/whiteboard-ai-tutor/issues/7)）。
+  由参数算出整张图的「互动板件」是其中的一次独立尝试，见 [`docs/INTERACTIVE.zh-CN.md`](docs/INTERACTIVE.zh-CN.md)。
 - 第二遍：把模型自己画出的板截图给它看，让它修正。
 - 用视觉模型当裁判并和人工结论对照，代替检查脚本当闸门。
 - 给旁白配语音，以及真正的「写到一半被打断」。

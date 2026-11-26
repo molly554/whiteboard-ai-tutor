@@ -1,0 +1,96 @@
+{
+ "title": "Why do we have seasons?",
+ "lang": "en",
+ "steps": [
+  {
+   "title": "The orbit",
+   "say": "The Earth goes around the Sun once a year. Its axis is tilted 23.5° and always points the same way.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "title",
+     "x": 60,
+     "y": 40,
+     "text": "Why do we have seasons?",
+     "size": 54
+    },
+    {
+     "op": "widget",
+     "id": "se",
+     "kind": "seasons",
+     "params": {
+      "show": [
+       "orbit",
+       "labels",
+       "note"
+      ],
+      "angle": 0,
+      "interactive": "none"
+     }
+    }
+   ]
+  },
+  {
+   "title": "Winter in the north",
+   "say": "Zoom in. Here the north pole leans away from the Sun, so sunlight hits the north at a low angle and the days are short: winter in the north, summer in the south.",
+   "ops": [
+    {
+     "op": "widget",
+     "id": "se",
+     "kind": "seasons",
+     "params": {
+      "show": [
+       "orbit",
+       "labels",
+       "note",
+       "zoom",
+       "readout"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "title": "Half a year later",
+   "say": "Half a year later the Earth is on the other side. The axis still points the same way, so now the north pole leans toward the Sun: summer in the north.",
+   "ops": [
+    {
+     "op": "widget",
+     "id": "se",
+     "kind": "seasons",
+     "params": {
+      "angle": 3.141592653589793
+     }
+    }
+   ]
+  },
+  {
+   "title": "Between",
+   "say": "In between, the axis leans neither toward nor away from the Sun: spring or autumn, with the Sun overhead near the equator.",
+   "ops": [
+    {
+     "op": "widget",
+     "id": "se",
+     "kind": "seasons",
+     "params": {
+      "angle": 1.5707963267948966
+     }
+    }
+   ]
+  },
+  {
+   "title": "Try it",
+   "say": "Your turn: drag the Earth around the orbit. The panel on the right is worked out by code from the position.",
+   "ops": [
+    {
+     "op": "widget",
+     "id": "se",
+     "kind": "seasons",
+     "params": {
+      "interactive": "earth"
+     }
+    }
+   ]
+  }
+ ]
+}

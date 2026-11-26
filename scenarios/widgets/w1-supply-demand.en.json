@@ -1,0 +1,114 @@
+{
+ "title": "Why does the price rise when demand rises?",
+ "lang": "en",
+ "steps": [
+  {
+   "title": "The axes",
+   "say": "Price goes up the side, and quantity goes along the bottom.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "title",
+     "x": 60,
+     "y": 40,
+     "text": "Why does the price rise when demand rises?",
+     "size": 54
+    },
+    {
+     "op": "widget",
+     "id": "sd",
+     "kind": "supply-demand",
+     "params": {
+      "show": [
+       "axes"
+      ],
+      "interactive": "none"
+     }
+    }
+   ]
+  },
+  {
+   "title": "Demand",
+   "say": "Demand slopes down: the higher the price, the less buyers want.",
+   "ops": [
+    {
+     "op": "widget",
+     "id": "sd",
+     "kind": "supply-demand",
+     "params": {
+      "show": [
+       "axes",
+       "demand"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "title": "Supply",
+   "say": "Supply slopes up: the higher the price, the more sellers offer.",
+   "ops": [
+    {
+     "op": "widget",
+     "id": "sd",
+     "kind": "supply-demand",
+     "params": {
+      "show": [
+       "axes",
+       "demand",
+       "supply"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "title": "Equilibrium",
+   "say": "They cross at E: that is the market price and quantity.",
+   "ops": [
+    {
+     "op": "widget",
+     "id": "sd",
+     "kind": "supply-demand",
+     "params": {
+      "show": [
+       "axes",
+       "demand",
+       "supply",
+       "equilibrium",
+       "readout"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "title": "Demand rises",
+   "say": "Now demand rises, so the demand curve shifts right. The equilibrium slides up along the supply curve: price and quantity both rise.",
+   "ops": [
+    {
+     "op": "widget",
+     "id": "sd",
+     "kind": "supply-demand",
+     "params": {
+      "demandShift": 2
+     }
+    }
+   ]
+  },
+  {
+   "title": "Try it",
+   "say": "Your turn: drag the red or the blue curve and watch the equilibrium move. The numbers on the right are worked out by code.",
+   "ops": [
+    {
+     "op": "widget",
+     "id": "sd",
+     "kind": "supply-demand",
+     "params": {
+      "interactive": "curves"
+     }
+    }
+   ]
+  }
+ ]
+}

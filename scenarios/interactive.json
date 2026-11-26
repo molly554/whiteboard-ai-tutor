@@ -1,0 +1,32 @@
+{
+ "scripts": [
+  {
+   "id": "w1-supply-demand.en",
+   "file": "scenarios/widgets/w1-supply-demand.en.json",
+   "group": "Interactive widgets (hand-written)",
+   "title": "Supply & demand: drag the curves",
+   "question": "Supply & demand: drag the curves"
+  },
+  {
+   "id": "w2-predict-equilibrium.en",
+   "file": "scenarios/widgets/w2-predict-equilibrium.en.json",
+   "group": "Interactive widgets (hand-written)",
+   "title": "Supply & demand: predict the equilibrium",
+   "question": "Supply & demand: predict the equilibrium"
+  },
+  {
+   "id": "w3-seasons.en",
+   "file": "scenarios/widgets/w3-seasons.en.json",
+   "group": "Interactive widgets (hand-written)",
+   "title": "Seasons: drag the Earth",
+   "question": "Seasons: drag the Earth"
+  },
+  {
+   "id": "w4-seasons-ask.en",
+   "file": "scenarios/widgets/w4-seasons-ask.en.json",
+   "group": "Interactive widgets (hand-written)",
+   "title": "Seasons: where is it summer?",
+   "question": "Seasons: where is it summer?"
+  }
+ ]
+}

@@ -29,11 +29,26 @@ Opening the preview, cancelling print and closing the tab must preserve the sour
 
 Preview layout is in lesson-pdf.html and docs/assets/lesson-pdf.{js,css}. Step snapshots reuse player/index.html in a separate renderer. No model API calls are needed.
 
+## Verify widget changes
+
+Open the four **Interactive widgets (hand-written)** lessons in the player (`?s=w1-supply-demand.en`, `w2-predict-equilibrium.en`,
+`w3-seasons.en`, `w4-seasons-ask.en`). Check that each lesson plays to the end; that dragging a curve or the Earth updates the figure
+and the readout; that a question pauses the lesson, a wrong answer and the right answer give different explanations, and the lesson
+continues after Resume; and that **Export board state** lists the student's actions. Run **Lint all scenarios**: hard errors must stay 0.
+The PDF preview is disabled for these lessons. No model API calls are needed.
+
+A new widget needs its code in `player/widgets/`, an entry in `protocol/PROTOCOL-v1.1-widgets.md` and a hand-written lesson under
+`scenarios/widgets/` listed in `scenarios/interactive.json`. Write down once every definition it relies on (for example what counts as
+"summer") so that the readout and the answer judging cannot disagree. Runs of the widget protocol with a model keep their prompt, raw calls
+and summary under `results/widgets/`, never in the v1 results, and report model/provider, date, settings, sample size and review method as in
+[docs/INTERACTIVE.md](docs/INTERACTIVE.md).
+
 ## Useful contributions
 
 - Additional interface translations. Keep the original recorded board and narration intact.
 - Font compatibility reports with operating system, browser version and screenshots of the same recording.
 - New, small teaching examples clearly labeled as reference scenarios rather than benchmark results.
+- New widgets for other topics, with a hand-written lesson and a note on how answers are judged.
 - Bug fixes with a concrete reproduction and the expected behavior.
 
 Open an issue before starting a substantial feature. Check the [roadmap](ROADMAP.md) and existing issues first.

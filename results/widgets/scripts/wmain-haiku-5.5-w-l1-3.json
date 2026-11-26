@@ -1,0 +1,84 @@
+{
+ "title": "Demand rises: the price rises",
+ "lang": "en",
+ "steps": [
+  {
+   "title": "The curves",
+   "say": "Demand slopes down: the higher the price, the less buyers want. Supply slopes up: the higher the price, the more sellers offer.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "title",
+     "x": 60,
+     "y": 40,
+     "text": "Demand rises: the price rises",
+     "size": 54
+    },
+    {
+     "op": "widget",
+     "id": "sd",
+     "kind": "supply-demand",
+     "params": {
+      "show": [
+       "axes",
+       "demand",
+       "supply"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "title": "Starting equilibrium",
+   "say": "The curves cross at price 5 and quantity 5. This is the market before anything changes.",
+   "ops": [
+    {
+     "op": "widget",
+     "id": "sd",
+     "kind": "supply-demand",
+     "params": {
+      "show": [
+       "axes",
+       "demand",
+       "supply",
+       "equilibrium",
+       "readout"
+      ]
+     },
+     "expect": {
+      "price": "same",
+      "quantity": "same"
+     }
+    }
+   ]
+  },
+  {
+   "title": "Demand rises",
+   "say": "More buyers want the good at every price, so the demand curve moves right. At the old price of 5, buyers now want more than sellers offer.",
+   "ops": [
+    {
+     "op": "widget",
+     "id": "sd",
+     "kind": "supply-demand",
+     "params": {
+      "demandShift": 2
+     },
+     "expect": {
+      "price": "up",
+      "quantity": "up"
+     }
+    }
+   ]
+  },
+  {
+   "title": "Why the price rises",
+   "say": "The shortage pushes the price up. As the price rises, buyers want less and sellers offer more, until they meet at a higher price and a higher quantity.",
+   "ops": []
+  },
+  {
+   "title": "Try it yourself",
+   "say": "Drag the demand curve or the supply curve and watch where the new equilibrium lands. What happens to the price if supply rises instead?",
+   "ops": []
+  }
+ ]
+}

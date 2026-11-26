@@ -1,0 +1,53 @@
+{
+ "title": "Where is it summer?",
+ "lang": "en",
+ "steps": [
+  {
+   "title": "North",
+   "say": "Put the Earth where it is summer in the north, then let go. The lesson waits for you.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "title",
+     "x": 60,
+     "y": 40,
+     "text": "Where is it summer?",
+     "size": 54
+    },
+    {
+     "op": "widget",
+     "id": "se",
+     "kind": "seasons",
+     "params": {
+      "show": [
+       "orbit",
+       "zoom",
+       "readout",
+       "note"
+      ],
+      "angle": 4.71238898038469,
+      "ask": "north-summer",
+      "answered": false,
+      "interactive": "earth"
+     }
+    }
+   ]
+  },
+  {
+   "title": "South",
+   "say": "Now put the Earth where it is summer in the south.",
+   "ops": [
+    {
+     "op": "widget",
+     "id": "se",
+     "kind": "seasons",
+     "params": {
+      "angle": 4.71238898038469,
+      "ask": "south-summer",
+      "answered": false
+     }
+    }
+   ]
+  }
+ ]
+}

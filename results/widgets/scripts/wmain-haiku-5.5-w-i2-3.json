@@ -1,0 +1,52 @@
+{
+ "steps": [
+  {
+   "title": "Distance is not the cause",
+   "say": "Not quite. Your Earth is at the summer solstice, and it is summer in the north here because the north pole leans toward the Sun. Sunlight then hits the north more directly and for more hours. The Earth is actually closest to the Sun in early January, during northern winter.",
+   "ops": [
+    {
+     "op": "widget",
+     "id": "se",
+     "kind": "seasons",
+     "params": {
+      "position": "summer-solstice",
+      "ask": null,
+      "show": [
+       "orbit",
+       "labels",
+       "zoom",
+       "readout",
+       "note"
+      ]
+     },
+     "expect": {
+      "north": "summer",
+      "sun_overhead": "north"
+     }
+    }
+   ]
+  },
+  {
+   "title": "Your turn",
+   "say": "Drag the Earth to the place on its orbit where it is summer in the north. Remember, the tilt matters, not the distance.",
+   "ops": [
+    {
+     "op": "widget",
+     "id": "se",
+     "kind": "seasons",
+     "params": {
+      "position": "winter-solstice",
+      "ask": "north-summer",
+      "show": [
+       "orbit",
+       "labels",
+       "zoom",
+       "readout",
+       "note"
+      ]
+     }
+    }
+   ]
+  }
+ ]
+}

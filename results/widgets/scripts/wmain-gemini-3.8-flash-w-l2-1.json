@@ -1,0 +1,141 @@
+{
+ "title": "Why Do We Have Seasons?",
+ "lang": "en",
+ "steps": [
+  {
+   "title": "The Earth and Sun",
+   "say": "Many people think seasons are caused by Earth getting closer to or farther from the Sun, but that is a myth.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "title",
+     "x": 60,
+     "y": 40,
+     "text": "Why Do We Have Seasons?",
+     "size": 54
+    },
+    {
+     "op": "widget",
+     "id": "seasons_sim",
+     "kind": "seasons",
+     "params": {
+      "show": [
+       "orbit",
+       "labels"
+      ],
+      "position": "winter-solstice",
+      "interactive": "none"
+     }
+    }
+   ]
+  },
+  {
+   "title": "Earth's Axial Tilt",
+   "say": "The real cause is Earth's axial tilt of 23.5 degrees, which always points in the same direction in space as we orbit the Sun.",
+   "ops": [
+    {
+     "op": "widget",
+     "id": "seasons_sim",
+     "kind": "seasons",
+     "params": {
+      "show": [
+       "orbit",
+       "labels",
+       "zoom",
+       "readout",
+       "note"
+      ],
+      "position": "winter-solstice"
+     },
+     "expect": {
+      "north": "winter",
+      "sun_overhead": "south"
+     }
+    }
+   ]
+  },
+  {
+   "title": "Northern Winter",
+   "say": "In December, the Northern Hemisphere tilts away from the Sun, receiving indirect light and shorter days, creating winter.",
+   "ops": [
+    {
+     "op": "widget",
+     "id": "seasons_sim",
+     "kind": "seasons",
+     "params": {
+      "position": "winter-solstice"
+     },
+     "expect": {
+      "north": "winter",
+      "sun_overhead": "south"
+     }
+    }
+   ]
+  },
+  {
+   "title": "Northern Summer",
+   "say": "Six months later in June, the Northern Hemisphere tilts toward the Sun, getting direct sunlight and long days, which brings summer.",
+   "ops": [
+    {
+     "op": "widget",
+     "id": "seasons_sim",
+     "kind": "seasons",
+     "params": {
+      "position": "summer-solstice"
+     },
+     "expect": {
+      "north": "summer",
+      "sun_overhead": "north"
+     }
+    }
+   ]
+  },
+  {
+   "title": "Equinoxes",
+   "say": "During spring and autumn, neither hemisphere tilts toward or away from the Sun, so both receive equal amounts of daylight.",
+   "ops": [
+    {
+     "op": "widget",
+     "id": "seasons_sim",
+     "kind": "seasons",
+     "params": {
+      "position": "spring-equinox"
+     },
+     "expect": {
+      "north": "spring",
+      "sun_overhead": "equator"
+     }
+    }
+   ]
+  },
+  {
+   "title": "Check Your Understanding",
+   "say": "Can you drag the Earth along its orbit to find where it is summer in the Southern Hemisphere?",
+   "ops": [
+    {
+     "op": "widget",
+     "id": "seasons_sim",
+     "kind": "seasons",
+     "params": {
+      "ask": "south-summer"
+     }
+    }
+   ]
+  },
+  {
+   "title": "Explore the Orbit",
+   "say": "Great job! Try dragging Earth to any point on its orbit to see how sunlight angles and day lengths change throughout the year.",
+   "ops": [
+    {
+     "op": "widget",
+     "id": "seasons_sim",
+     "kind": "seasons",
+     "params": {
+      "ask": null,
+      "interactive": "earth"
+     }
+    }
+   ]
+  }
+ ]
+}

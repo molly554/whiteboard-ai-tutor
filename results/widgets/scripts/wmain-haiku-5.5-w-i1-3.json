@@ -1,0 +1,49 @@
+{
+ "title": "Why the price fell",
+ "lang": "en",
+ "steps": [
+  {
+   "title": "Supply moved right",
+   "say": "Moving the supply line right means sellers offer more at every price. At the old price of 5 there is now more on offer than buyers want.",
+   "ops": [
+    {
+     "op": "widget",
+     "id": "sd",
+     "kind": "supply-demand",
+     "params": {
+      "supplyShift": 2
+     },
+     "expect": {
+      "price": "down",
+      "quantity": "up"
+     }
+    }
+   ]
+  },
+  {
+   "title": "The price falls",
+   "say": "With extra goods unsold, sellers cut the price until buyers take everything on offer. The new equilibrium is at price 4 and quantity 6.",
+   "ops": [
+    {
+     "op": "widget",
+     "id": "sd",
+     "kind": "supply-demand",
+     "params": {
+      "show": [
+       "axes",
+       "demand",
+       "supply",
+       "equilibrium",
+       "readout"
+      ],
+      "supplyShift": 2
+     },
+     "expect": {
+      "price": "down",
+      "quantity": "up"
+     }
+    }
+   ]
+  }
+ ]
+}

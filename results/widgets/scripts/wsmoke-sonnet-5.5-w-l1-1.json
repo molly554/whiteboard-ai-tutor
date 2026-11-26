@@ -1,0 +1,132 @@
+{
+ "title": "Demand rises",
+ "lang": "en",
+ "steps": [
+  {
+   "title": "The axes",
+   "say": "Price is on the vertical axis and quantity on the horizontal axis.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "title",
+     "x": 60,
+     "y": 40,
+     "text": "Demand rises",
+     "size": 54
+    },
+    {
+     "op": "widget",
+     "id": "sd",
+     "kind": "supply-demand",
+     "params": {
+      "show": [
+       "axes"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "title": "Demand curve",
+   "say": "Demand slopes down: the lower the price, the more people want to buy.",
+   "ops": [
+    {
+     "op": "widget",
+     "id": "sd",
+     "kind": "supply-demand",
+     "params": {
+      "show": [
+       "axes",
+       "demand"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "title": "Supply curve",
+   "say": "Supply slopes up: the higher the price, the more sellers want to sell.",
+   "ops": [
+    {
+     "op": "widget",
+     "id": "sd",
+     "kind": "supply-demand",
+     "params": {
+      "show": [
+       "axes",
+       "demand",
+       "supply"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "title": "Starting equilibrium",
+   "say": "The curves cross at the equilibrium, price 5 and quantity 5, where buyers and sellers agree.",
+   "ops": [
+    {
+     "op": "widget",
+     "id": "sd",
+     "kind": "supply-demand",
+     "params": {
+      "show": [
+       "axes",
+       "demand",
+       "supply",
+       "equilibrium",
+       "readout"
+      ]
+     },
+     "expect": {
+      "price": "same",
+      "quantity": "same"
+     }
+    }
+   ]
+  },
+  {
+   "title": "Demand rises",
+   "say": "When demand rises, the demand curve moves right. At the old price buyers want more than sellers offer, so the price is pushed up.",
+   "ops": [
+    {
+     "op": "widget",
+     "id": "sd",
+     "kind": "supply-demand",
+     "params": {
+      "show": [
+       "axes",
+       "demand",
+       "supply",
+       "equilibrium",
+       "readout"
+      ],
+      "demandShift": 2
+     },
+     "expect": {
+      "price": "up",
+      "quantity": "up"
+     }
+    }
+   ]
+  },
+  {
+   "title": "Your turn",
+   "say": "Both price and quantity end up higher. Try dragging the curves to see how the equilibrium moves.",
+   "ops": [
+    {
+     "op": "widget",
+     "id": "sd",
+     "kind": "supply-demand",
+     "params": {
+      "interactive": "curves"
+     },
+     "expect": {
+      "price": "up",
+      "quantity": "up"
+     }
+    }
+   ]
+  }
+ ]
+}

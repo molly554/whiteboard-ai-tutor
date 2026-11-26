@@ -1,0 +1,128 @@
+{
+ "title": "Why do we have seasons?",
+ "lang": "en",
+ "steps": [
+  {
+   "title": "Not distance",
+   "say": "Seasons are not caused by Earth being closer to the Sun in summer. They come from the tilt of Earth's axis, which is 23.5 degrees and always points the same way.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "title",
+     "x": 60,
+     "y": 40,
+     "text": "Why do we have seasons?",
+     "size": 54
+    },
+    {
+     "op": "widget",
+     "id": "seasons",
+     "kind": "seasons",
+     "params": {
+      "show": [
+       "orbit",
+       "labels"
+      ],
+      "position": "winter-solstice"
+     }
+    }
+   ]
+  },
+  {
+   "title": "Summer in the north",
+   "say": "In June the northern half of Earth tilts toward the Sun. Sunlight arrives more directly and the days are longer, so it is summer there.",
+   "ops": [
+    {
+     "op": "widget",
+     "id": "seasons",
+     "kind": "seasons",
+     "params": {
+      "show": [
+       "orbit",
+       "labels",
+       "zoom",
+       "readout",
+       "note"
+      ],
+      "position": "summer-solstice"
+     },
+     "expect": {
+      "north": "summer",
+      "sun_overhead": "north"
+     }
+    }
+   ]
+  },
+  {
+   "title": "Winter in the north",
+   "say": "Half a year later the northern half tilts away from the Sun. The light is spread out and weaker, so it is winter there while the south has summer.",
+   "ops": [
+    {
+     "op": "widget",
+     "id": "seasons",
+     "kind": "seasons",
+     "params": {
+      "position": "winter-solstice"
+     },
+     "expect": {
+      "north": "winter",
+      "sun_overhead": "south"
+     }
+    }
+   ]
+  },
+  {
+   "title": "Spring and autumn",
+   "say": "At the equinoxes the Sun is overhead at the equator and both hemispheres get about equal light. These are the transitions between the seasons.",
+   "ops": [
+    {
+     "op": "widget",
+     "id": "seasons",
+     "kind": "seasons",
+     "params": {
+      "position": "spring-equinox"
+     },
+     "expect": {
+      "north": "spring",
+      "sun_overhead": "equator"
+     }
+    }
+   ]
+  },
+  {
+   "title": "Your turn",
+   "say": "Drag the Earth to the place on its orbit where it is summer in the northern hemisphere.",
+   "ops": [
+    {
+     "op": "widget",
+     "id": "seasons",
+     "kind": "seasons",
+     "params": {
+      "position": "winter-solstice",
+      "ask": "north-summer"
+     }
+    }
+   ]
+  },
+  {
+   "title": "Check",
+   "say": "Summer in the north is when the north tilts toward the Sun, which is the June point on the orbit. Try the southern summer on your own.",
+   "ops": [
+    {
+     "op": "widget",
+     "id": "seasons",
+     "kind": "seasons",
+     "params": {
+      "ask": null,
+      "position": "summer-solstice",
+      "interactive": "earth"
+     },
+     "expect": {
+      "north": "summer",
+      "sun_overhead": "north"
+     }
+    }
+   ]
+  }
+ ]
+}

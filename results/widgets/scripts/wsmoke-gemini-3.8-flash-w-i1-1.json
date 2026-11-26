@@ -1,0 +1,52 @@
+{
+ "title": "Supply rises",
+ "lang": "en",
+ "steps": [
+  {
+   "title": "More supply",
+   "say": "The blue line is supply. Shifting it right means sellers bring more goods to the market at every price.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "title",
+     "x": 60,
+     "y": 40,
+     "text": "Why more supply lowers the price",
+     "size": 54
+    }
+   ]
+  },
+  {
+   "title": "Surplus and lower price",
+   "say": "With more goods competing for the same buyers, sellers cut prices to clear their stock, so the equilibrium slides down along the demand curve.",
+   "ops": [
+    {
+     "op": "widget",
+     "id": "sd",
+     "kind": "supply-demand",
+     "params": {
+      "supplyShift": 2
+     },
+     "expect": {
+      "price": "down",
+      "quantity": "up"
+     }
+    }
+   ]
+  },
+  {
+   "title": "Try shifting demand",
+   "say": "Now try dragging the red demand curve to see how buyers moving their demand changes the price.",
+   "ops": [
+    {
+     "op": "widget",
+     "id": "sd",
+     "kind": "supply-demand",
+     "params": {
+      "interactive": "curves"
+     }
+    }
+   ]
+  }
+ ]
+}

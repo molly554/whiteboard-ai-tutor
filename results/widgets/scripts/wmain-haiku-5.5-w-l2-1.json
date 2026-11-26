@@ -1,0 +1,127 @@
+{
+ "title": "Why we have seasons",
+ "lang": "en",
+ "steps": [
+  {
+   "title": "The tilted Earth",
+   "say": "The Earth goes around the Sun once a year. Its axis is tilted 23.5 degrees, and the tilt always points the same way in space.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "title",
+     "x": 60,
+     "y": 40,
+     "text": "Why we have seasons",
+     "size": 54
+    },
+    {
+     "op": "widget",
+     "id": "earth",
+     "kind": "seasons",
+     "params": {
+      "show": [
+       "orbit",
+       "labels"
+      ],
+      "position": "winter-solstice"
+     }
+    }
+   ]
+  },
+  {
+   "title": "Northern winter",
+   "say": "In northern winter the northern half leans away from the Sun. Sunlight arrives at a low angle, spread thin, and the days are short.",
+   "ops": [
+    {
+     "op": "widget",
+     "id": "earth",
+     "kind": "seasons",
+     "params": {
+      "show": [
+       "orbit",
+       "labels",
+       "zoom",
+       "readout",
+       "note"
+      ],
+      "position": "winter-solstice"
+     },
+     "expect": {
+      "north": "winter",
+      "sun_overhead": "south"
+     }
+    }
+   ]
+  },
+  {
+   "title": "Northern summer",
+   "say": "Half a year later the Earth is on the other side of the Sun. The same tilt now leans the northern half toward the Sun, so the light is strong and the days are long.",
+   "ops": [
+    {
+     "op": "widget",
+     "id": "earth",
+     "kind": "seasons",
+     "params": {
+      "position": "summer-solstice"
+     },
+     "expect": {
+      "north": "summer",
+      "sun_overhead": "north"
+     }
+    }
+   ]
+  },
+  {
+   "title": "Equinoxes",
+   "say": "At the equinoxes the tilt is sideways to the Sun. The Sun is overhead at the equator, and day and night are about equal everywhere.",
+   "ops": [
+    {
+     "op": "widget",
+     "id": "earth",
+     "kind": "seasons",
+     "params": {
+      "position": "spring-equinox"
+     },
+     "expect": {
+      "north": "spring",
+      "sun_overhead": "equator"
+     }
+    }
+   ]
+  },
+  {
+   "title": "Your turn",
+   "say": "Now you try. Drag the Earth to the place where it is summer in the southern hemisphere.",
+   "ops": [
+    {
+     "op": "widget",
+     "id": "earth",
+     "kind": "seasons",
+     "params": {
+      "position": "winter-solstice",
+      "ask": "south-summer"
+     }
+    }
+   ]
+  },
+  {
+   "title": "Explore",
+   "say": "Drag the Earth around its orbit and watch how the sunlight on each hemisphere changes. Notice that the distance to the Sun is not what causes the seasons. The tilt is.",
+   "ops": [
+    {
+     "op": "widget",
+     "id": "earth",
+     "kind": "seasons",
+     "params": {
+      "ask": null,
+      "interactive": "earth"
+     },
+     "expect": {
+      "north": "autumn",
+      "sun_overhead": "equator"
+     }
+    }
+   ]
+  }
+ ]
+}

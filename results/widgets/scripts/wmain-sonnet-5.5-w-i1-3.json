@@ -1,0 +1,80 @@
+{
+ "title": "Why the price fell",
+ "lang": "en",
+ "steps": [
+  {
+   "title": "Which line moved",
+   "say": "The curve you dragged to the right was supply, not demand. Demand is still unshifted, and that is why the price fell.",
+   "ops": [
+    {
+     "op": "widget",
+     "id": "sd",
+     "kind": "supply-demand",
+     "params": {
+      "supplyShift": 2
+     },
+     "expect": {
+      "price": "down",
+      "quantity": "up"
+     }
+    }
+   ]
+  },
+  {
+   "title": "More supply",
+   "say": "When supply moves right, sellers offer more at every price. There is now more on the market than buyers wanted at the old price.",
+   "ops": [
+    {
+     "op": "widget",
+     "id": "sd",
+     "kind": "supply-demand",
+     "params": {
+      "supplyShift": 2
+     },
+     "expect": {
+      "price": "down",
+      "quantity": "up"
+     }
+    }
+   ]
+  },
+  {
+   "title": "Price falls",
+   "say": "To sell the extra goods, the price drops. Buyers then want more, so quantity rises along the demand curve, and the market settles at a lower price and a higher quantity.",
+   "ops": [
+    {
+     "op": "widget",
+     "id": "sd",
+     "kind": "supply-demand",
+     "params": {
+      "supplyShift": 2
+     },
+     "expect": {
+      "price": "down",
+      "quantity": "up"
+     }
+    }
+   ]
+  },
+  {
+   "title": "Now raise demand",
+   "say": "To see what happens when demand rises, I'll reset supply and move the demand curve right. This time the price goes up. Try dragging the curves yourself.",
+   "ops": [
+    {
+     "op": "widget",
+     "id": "sd",
+     "kind": "supply-demand",
+     "params": {
+      "supplyShift": 0,
+      "demandShift": 2,
+      "interactive": "curves"
+     },
+     "expect": {
+      "price": "up",
+      "quantity": "up"
+     }
+    }
+   ]
+  }
+ ]
+}

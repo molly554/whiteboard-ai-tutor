@@ -1,0 +1,236 @@
+{
+ "title": "Why a² + b² = c²",
+ "lang": "en",
+ "steps": [
+  {
+   "title": "Two big squares",
+   "say": "Take a right triangle with legs a and b and hypotenuse c. Build a square with side a + b, which has area (a + b)².",
+   "ops": [
+    {
+     "op": "write",
+     "id": "title",
+     "x": 60,
+     "y": 40,
+     "text": "Why a² + b² = c²",
+     "size": 56
+    },
+    {
+     "op": "write",
+     "id": "intro",
+     "x": 100,
+     "y": 140,
+     "text": "A square of side a + b, built with four copies of the triangle",
+     "size": 34
+    },
+    {
+     "op": "rect",
+     "id": "sq-left",
+     "x": 100,
+     "y": 240,
+     "w": 280,
+     "h": 280,
+     "color": "ink",
+     "width": 5
+    }
+   ]
+  },
+  {
+   "title": "Place the triangles",
+   "say": "Put one triangle in each corner. The legs run along the edges of the big square, so the leftover middle is a tilted square.",
+   "ops": [
+    {
+     "op": "path",
+     "id": "t1",
+     "d": "M100,240 L260,240 L100,360 Z",
+     "color": "ink",
+     "fill": "gray",
+     "width": 4
+    },
+    {
+     "op": "path",
+     "id": "t2",
+     "d": "M260,240 L380,240 L380,400 Z",
+     "color": "ink",
+     "fill": "gray",
+     "width": 4
+    },
+    {
+     "op": "path",
+     "id": "t3",
+     "d": "M380,400 L380,520 L220,520 Z",
+     "color": "ink",
+     "fill": "gray",
+     "width": 4
+    },
+    {
+     "op": "path",
+     "id": "t4",
+     "d": "M220,520 L100,520 L100,360 Z",
+     "color": "ink",
+     "fill": "gray",
+     "width": 4
+    },
+    {
+     "op": "write",
+     "id": "lbl-a",
+     "x": 60,
+     "y": 290,
+     "text": "a",
+     "size": 36
+    },
+    {
+     "op": "write",
+     "id": "lbl-b",
+     "x": 160,
+     "y": 196,
+     "text": "b",
+     "size": 36,
+     "anchor": "middle"
+    }
+   ]
+  },
+  {
+   "title": "The tilted square",
+   "say": "Each side of the tilted square is the hypotenuse c, so its area is c².",
+   "ops": [
+    {
+     "op": "path",
+     "id": "c-sq",
+     "d": "M260,240 L380,400 L220,520 L100,360 Z",
+     "color": "blue",
+     "fill": "blue",
+     "width": 5
+    },
+    {
+     "op": "write",
+     "id": "lbl-c",
+     "x": 240,
+     "y": 360,
+     "text": "c²",
+     "size": 44,
+     "anchor": "middle",
+     "color": "blue"
+    }
+   ]
+  },
+  {
+   "title": "Rearrange",
+   "say": "Now the same big square, with the triangles moved. The space left over is a square of side a and a square of side b.",
+   "ops": [
+    {
+     "op": "rect",
+     "id": "sq-right",
+     "x": 900,
+     "y": 240,
+     "w": 280,
+     "h": 280,
+     "color": "ink",
+     "width": 5
+    },
+    {
+     "op": "rect",
+     "id": "a-sq",
+     "x": 900,
+     "y": 240,
+     "w": 120,
+     "h": 120,
+     "color": "red",
+     "fill": "red",
+     "width": 4
+    },
+    {
+     "op": "rect",
+     "id": "b-sq",
+     "x": 1020,
+     "y": 360,
+     "w": 160,
+     "h": 160,
+     "color": "blue",
+     "fill": "blue",
+     "width": 4
+    },
+    {
+     "op": "write",
+     "id": "lbl-a2",
+     "x": 960,
+     "y": 280,
+     "text": "a²",
+     "size": 44,
+     "anchor": "middle",
+     "color": "red"
+    },
+    {
+     "op": "write",
+     "id": "lbl-b2",
+     "x": 1100,
+     "y": 420,
+     "text": "b²",
+     "size": 44,
+     "anchor": "middle",
+     "color": "blue"
+    }
+   ]
+  },
+  {
+   "title": "Fill with triangles",
+   "say": "The four triangles are placed in the remaining space. Each one is cut from a rectangle along its diagonal.",
+   "ops": [
+    {
+     "op": "path",
+     "id": "r1",
+     "d": "M1020,240 L1180,240 L1020,360 Z",
+     "color": "ink",
+     "fill": "gray",
+     "width": 4
+    },
+    {
+     "op": "path",
+     "id": "r2",
+     "d": "M1180,240 L1180,360 L1020,360 Z",
+     "color": "ink",
+     "fill": "gray",
+     "width": 4
+    },
+    {
+     "op": "path",
+     "id": "r3",
+     "d": "M900,360 L1020,360 L1020,520 Z",
+     "color": "ink",
+     "fill": "gray",
+     "width": 4
+    },
+    {
+     "op": "path",
+     "id": "r4",
+     "d": "M900,360 L900,520 L1020,520 Z",
+     "color": "ink",
+     "fill": "gray",
+     "width": 4
+    }
+   ]
+  },
+  {
+   "title": "Compare the areas",
+   "say": "Both big squares hold the same four triangles, so the leftover area must match. That gives a² + b² = c².",
+   "ops": [
+    {
+     "op": "write",
+     "id": "eq1",
+     "x": 100,
+     "y": 600,
+     "text": "Both big squares contain the same four triangles.",
+     "size": 36
+    },
+    {
+     "op": "write",
+     "id": "eq2",
+     "x": 100,
+     "y": 680,
+     "text": "So the leftover area matches: a² + b² = c²",
+     "size": 52,
+     "color": "blue"
+    }
+   ]
+  }
+ ]
+}

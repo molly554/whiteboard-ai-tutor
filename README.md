@@ -190,6 +190,25 @@ flowchart LR
 Details and the exact reproduction steps are in [`docs/METHOD.md`](docs/METHOD.md). The full write-up is
 [`docs/REPORT.md`](docs/REPORT.md) ([中文](docs/REPORT.zh-CN.md)).
 
+## Interactive widgets (experiment)
+
+Everything above is the frozen v1 benchmark. A separate, hand-built experiment asks a different question: what if a
+figure is a *widget* that the player computes, and the student can drag?
+
+- A `widget` operation (a protocol v1.1 draft) names a figure and its parameters, for example
+  `{"op": "widget", "kind": "supply-demand", "params": {"demandShift": 2}}`. The player works out every coordinate, label
+  and readout. It lowers to ordinary v1 operations, so playback, the linter and the recordings are unchanged.
+- When playback is idle the student can drag a curve or the Earth, or answer a question by dragging a dot. Code judges the
+  answer and records each action as a structured event that is reported with the board state.
+- Two widgets exist so far (supply and demand, seasons), written by hand, with four example lessons:
+  [try them](https://molly554.github.io/whiteboard-ai-tutor/player/?s=w2-predict-equilibrium.en).
+- In a small follow-up run (3 models, 6 tasks, 54 calls, $0.37) every output parsed and passed the schema check, and the
+  models chose the right widget, or none for a topic no widget covers. Two hand-written widgets and 54 calls say nothing
+  about other topics or models, and nothing about whether dragging helps anyone learn. These calls are not part of the 288
+  above and not on the leaderboard.
+
+Setup, protocol draft, results and limits: [`docs/INTERACTIVE.md`](docs/INTERACTIVE.md).
+
 ## Quickstart
 
 Look at the results in the [live gallery](https://molly554.github.io/whiteboard-ai-tutor/), or locally (no keys, no
@@ -225,15 +244,18 @@ a total budget cap, and appends each call to `results/runs/*.jsonl` so an interr
 ## Repository layout
 
 ```
-protocol/      the frozen prompt (tested version in Chinese, plus an English translation)
-scenarios/     8 scenarios: 5 lessons, 3 interruptions with their fixed prior board and board state
-player/        the whiteboard player, the linter and the frame-capture tool (one HTML file, no build step)
+protocol/      the frozen prompt (tested version in Chinese, plus an English translation) and the v1.1 widget draft
+scenarios/     8 scenarios: 5 lessons, 3 interruptions with their fixed prior board and board state;
+               scenarios/widgets/ has the hand-written widget lessons
+player/        the whiteboard player, the linter and the frame-capture tool (one HTML file, no build step);
+               player/widgets/ holds the widget runtime and the two widgets
 bench/         runner, provider adapters, aggregation, blind-review helpers, chart and animation builders
 results/
   runs/        every API call: timings, token usage, cost, raw output
   scripts/     the 263 outputs that parsed, ready to replay
   lint/        linter output per run
   review/      64 rendered boards, the blind scores, the id mapping, per-board notes
+  widgets/     the widget experiment: raw calls, outputs and summary (separate from the v1 results)
 docs/          report, method, chart and animation assets
 index.html     gallery of all reviewed boards (also the GitHub Pages entry point)
 audit.html     the human-audit sheet
@@ -259,7 +281,9 @@ audit.html     the human-audit sheet
 ## Ideas worth testing next
 
 - Higher-level operations (`mark_intersection(a, b)`, `label(id, text)`) so that code, not the model, computes
-  positions. This targets the most common failure directly.
+  positions. This targets the most common failure directly ([#7](https://github.com/molly554/whiteboard-ai-tutor/issues/7)).
+  A first, separate take on it, whole figures computed from a few parameters, is described in
+  [`docs/INTERACTIVE.md`](docs/INTERACTIVE.md).
 - A second pass that shows the model a screenshot of its own board.
 - A vision-model judge compared against human verdicts, to replace the linter as a gate.
 - Speech for the narration, and true mid-stroke interruption.

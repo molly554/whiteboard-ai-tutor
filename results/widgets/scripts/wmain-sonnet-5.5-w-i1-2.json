@@ -1,0 +1,69 @@
+{
+ "title": "Why the price fell",
+ "lang": "en",
+ "steps": [
+  {
+   "title": "Which line moved",
+   "say": "The line you dragged was the supply curve, not demand. Supply shifted right by 2, so sellers now offer more at every price.",
+   "ops": [
+    {
+     "op": "widget",
+     "id": "sd",
+     "kind": "supply-demand",
+     "params": {
+      "show": [
+       "axes",
+       "demand",
+       "supply",
+       "equilibrium",
+       "readout"
+      ],
+      "demandShift": 0,
+      "supplyShift": 2
+     },
+     "expect": {
+      "price": "down",
+      "quantity": "up"
+     }
+    }
+   ]
+  },
+  {
+   "title": "Why price falls",
+   "say": "With more on offer at the old price, sellers compete for buyers and cut prices. Buyers then want more, so the equilibrium moves down along demand: price 4, quantity 6.",
+   "ops": []
+  },
+  {
+   "title": "Now demand",
+   "say": "Now try the demand curve. When demand shifts right, the equilibrium moves up along supply, so price rises. First I reset supply.",
+   "ops": [
+    {
+     "op": "widget",
+     "id": "sd",
+     "kind": "supply-demand",
+     "params": {
+      "show": [
+       "axes",
+       "demand",
+       "supply",
+       "equilibrium",
+       "readout"
+      ],
+      "supplyShift": 0,
+      "demandShift": 2,
+      "interactive": "curves"
+     },
+     "expect": {
+      "price": "up",
+      "quantity": "up"
+     }
+    }
+   ]
+  },
+  {
+   "title": "Try it",
+   "say": "Drag each curve yourself. A shift of supply moves price the opposite way from quantity. A shift of demand moves both up or both down.",
+   "ops": []
+  }
+ ]
+}

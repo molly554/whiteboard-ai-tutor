@@ -1,0 +1,98 @@
+{
+ "title": "Price when demand rises",
+ "lang": "en",
+ "steps": [
+  {
+   "title": "The two curves",
+   "say": "Demand slopes down: buyers want more at lower prices. Supply slopes up: sellers offer more at higher prices.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "title",
+     "x": 60,
+     "y": 40,
+     "text": "Price when demand rises",
+     "size": 54
+    },
+    {
+     "op": "widget",
+     "id": "sd",
+     "kind": "supply-demand",
+     "params": {
+      "show": [
+       "axes",
+       "demand",
+       "supply"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "title": "Starting equilibrium",
+   "say": "The curves cross at price 5 and quantity 5. This is the market before anything changes.",
+   "ops": [
+    {
+     "op": "widget",
+     "id": "sd",
+     "kind": "supply-demand",
+     "params": {
+      "show": [
+       "axes",
+       "demand",
+       "supply",
+       "equilibrium",
+       "readout"
+      ]
+     },
+     "expect": {
+      "price": "same",
+      "quantity": "same"
+     }
+    }
+   ]
+  },
+  {
+   "title": "Demand rises",
+   "say": "More buyers want the good at every price, so the demand curve moves right.",
+   "ops": [
+    {
+     "op": "widget",
+     "id": "sd",
+     "kind": "supply-demand",
+     "params": {
+      "demandShift": 2
+     },
+     "expect": {
+      "price": "up",
+      "quantity": "up"
+     }
+    }
+   ]
+  },
+  {
+   "title": "Why the price rises",
+   "say": "At the old price 5 there are now more buyers than goods, so the price is bid up until supply and demand meet again at a higher price.",
+   "ops": []
+  },
+  {
+   "title": "Try it yourself",
+   "say": "Drag the demand curve back to where it started, then think about what a fall in demand would do to price.",
+   "ops": [
+    {
+     "op": "widget",
+     "id": "sd",
+     "kind": "supply-demand",
+     "params": {
+      "demandShift": -2,
+      "interactive": "curves"
+     },
+     "expect": {
+      "price": "down",
+      "quantity": "down"
+     }
+    }
+   ]
+  }
+ ]
+}

@@ -1,5 +1,10 @@
 # Roadmap
 
+## v0.4.0 — Interactive widgets (experiment)
+
+- Figures the player computes from a few parameters and the student can drag; answers judged by code; student actions reported as structured events.
+- Two hand-written widgets, four example lessons, a draft protocol and a small separate model run. See [docs/INTERACTIVE.md](docs/INTERACTIVE.md) ([中文](docs/INTERACTIVE.zh-CN.md)) and [CHANGELOG.md](CHANGELOG.md).
+
 ## v0.3.0 — Complete-lesson PDF preview
 
 - Preview every step-end board and its full narration as A4 landscape pages, with long-text continuation pages.
@@ -25,4 +30,5 @@ An animation-first gallery, responsive playback, English/Chinese interface conti
 Higher-level geometry operations ([#7](https://github.com/molly554/whiteboard-ai-tutor/issues/7)), screenshot-based correction,
 evaluation against human judgments, speech narration and mid-stroke interruption remain separate experiments.
 Manual editing, undo and restoration are being evaluated in [#3](https://github.com/molly554/whiteboard-ai-tutor/issues/3).
+Widgets are a first, separate take on moving figure geometry from the model into the player; a larger catalogue, general building blocks, PDF support for widget lessons and student trials remain open.
 The frozen v1 benchmark remains available for reproducibility.

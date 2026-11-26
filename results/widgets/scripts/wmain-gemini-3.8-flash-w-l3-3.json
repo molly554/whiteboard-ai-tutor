@@ -1,0 +1,122 @@
+{
+ "title": "Supply, Demand & Equilibrium",
+ "lang": "en",
+ "steps": [
+  {
+   "title": "The Market Curves",
+   "say": "Let's look at how buyers and sellers interact in a market.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "title",
+     "x": 60,
+     "y": 40,
+     "text": "Supply, Demand & Equilibrium",
+     "size": 52
+    },
+    {
+     "op": "widget",
+     "id": "mkt",
+     "kind": "supply-demand",
+     "params": {
+      "show": [
+       "axes",
+       "demand",
+       "supply"
+      ],
+      "interactive": "none"
+     }
+    }
+   ]
+  },
+  {
+   "title": "Market Equilibrium",
+   "say": "Where the demand and supply curves cross, we find the equilibrium price and quantity.",
+   "ops": [
+    {
+     "op": "widget",
+     "id": "mkt",
+     "kind": "supply-demand",
+     "params": {
+      "show": [
+       "axes",
+       "demand",
+       "supply",
+       "equilibrium",
+       "readout"
+      ],
+      "interactive": "none"
+     },
+     "expect": {
+      "price": "same",
+      "quantity": "same"
+     }
+    }
+   ]
+  },
+  {
+   "title": "Supply Decreases",
+   "say": "Now, imagine supply falls due to a shortage. The supply curve shifts to the left.",
+   "ops": [
+    {
+     "op": "widget",
+     "id": "mkt",
+     "kind": "supply-demand",
+     "params": {
+      "supplyShift": -2,
+      "show": [
+       "axes",
+       "demand",
+       "supply"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "title": "Quiz: Find the New Equilibrium",
+   "say": "Where is the new equilibrium point? Drag the dot to where the new supply curve meets demand.",
+   "ops": [
+    {
+     "op": "widget",
+     "id": "mkt",
+     "kind": "supply-demand",
+     "params": {
+      "ask": "equilibrium"
+     }
+    }
+   ]
+  },
+  {
+   "title": "Result of Supply Falling",
+   "say": "When supply falls, the lower availability drives prices up, while the traded quantity decreases.",
+   "ops": [
+    {
+     "op": "widget",
+     "id": "mkt",
+     "kind": "supply-demand",
+     "params": {
+      "ask": null,
+      "show": [
+       "axes",
+       "demand",
+       "supply",
+       "equilibrium",
+       "readout"
+      ],
+      "interactive": "curves"
+     },
+     "expect": {
+      "price": "up",
+      "quantity": "down"
+     }
+    }
+   ]
+  },
+  {
+   "title": "Explore on Your Own",
+   "say": "Try dragging both curves yourself to see how various shifts change market price and quantity!",
+   "ops": []
+  }
+ ]
+}

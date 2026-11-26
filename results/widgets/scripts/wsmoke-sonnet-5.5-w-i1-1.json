@@ -1,0 +1,68 @@
+{
+ "title": "Why the price fell",
+ "lang": "en",
+ "steps": [
+  {
+   "title": "Which line moved",
+   "say": "The line you moved to the right was the supply curve, not demand. Demand is still unshifted, and supply has shifted by 2.",
+   "ops": [
+    {
+     "op": "widget",
+     "id": "sd",
+     "kind": "supply-demand",
+     "params": {
+      "show": [
+       "axes",
+       "demand",
+       "supply",
+       "equilibrium",
+       "readout"
+      ]
+     },
+     "expect": {
+      "price": "down",
+      "quantity": "up"
+     }
+    }
+   ]
+  },
+  {
+   "title": "Why the price fell",
+   "say": "When supply moves right, sellers offer more at every price. Buyers have not changed, so the market only clears at a lower price, which is now 4 instead of 5, and the quantity rises from 5 to 6.",
+   "ops": [
+    {
+     "op": "widget",
+     "id": "sd",
+     "kind": "supply-demand",
+     "params": {
+      "supplyShift": 2
+     },
+     "expect": {
+      "price": "down",
+      "quantity": "up"
+     }
+    }
+   ]
+  },
+  {
+   "title": "Now try demand",
+   "say": "If you want demand to rise, drag the other curve to the right. Then both price and quantity go up. Try it and compare.",
+   "ops": [
+    {
+     "op": "widget",
+     "id": "sd",
+     "kind": "supply-demand",
+     "params": {
+      "supplyShift": 0,
+      "demandShift": 2,
+      "interactive": "curves"
+     },
+     "expect": {
+      "price": "up",
+      "quantity": "up"
+     }
+    }
+   ]
+  }
+ ]
+}

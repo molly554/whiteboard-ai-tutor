@@ -1,0 +1,60 @@
+{
+ "title": "Why do we have seasons?",
+ "lang": "en",
+ "steps": [
+  {
+   "title": "Distance myth",
+   "say": "Actually, Earth is closest to the Sun in January, during northern winter! Distance does not cause the seasons.",
+   "ops": [
+    {
+     "op": "widget",
+     "id": "se",
+     "kind": "seasons",
+     "params": {
+      "position": "winter-solstice"
+     },
+     "expect": {
+      "north": "winter",
+      "sun_overhead": "south"
+     }
+    }
+   ]
+  },
+  {
+   "title": "Summer tilt",
+   "say": "You dragged Earth to northern summer: notice the northern hemisphere tilts toward the Sun, receiving direct sunlight and longer days.",
+   "ops": [
+    {
+     "op": "widget",
+     "id": "se",
+     "kind": "seasons",
+     "params": {
+      "position": "summer-solstice"
+     },
+     "expect": {
+      "north": "summer",
+      "sun_overhead": "north"
+     }
+    }
+   ]
+  },
+  {
+   "title": "Try dragging again",
+   "say": "Explore how the tilt changes sunlight and seasons across the year by dragging the Earth around its orbit.",
+   "ops": [
+    {
+     "op": "widget",
+     "id": "se",
+     "kind": "seasons",
+     "params": {
+      "interactive": "earth"
+     },
+     "expect": {
+      "north": "summer",
+      "sun_overhead": "north"
+     }
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,64 @@
+{
+ "title": "Is distance the reason?",
+ "lang": "en",
+ "steps": [
+  {
+   "title": "Summer in the north",
+   "say": "Right now the north pole leans toward the Sun, so the Sun is overhead at 23.5° north and it is summer there. Earth's distance from the Sun does not decide this.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "title",
+     "x": 60,
+     "y": 40,
+     "text": "Is distance the reason?",
+     "size": 54
+    },
+    {
+     "op": "widget",
+     "id": "se",
+     "kind": "seasons",
+     "params": {
+      "show": [
+       "orbit",
+       "labels",
+       "zoom",
+       "readout",
+       "note"
+      ],
+      "position": "summer-solstice"
+     },
+     "expect": {
+      "north": "summer",
+      "sun_overhead": "north"
+     }
+    }
+   ]
+  },
+  {
+   "title": "Closest in winter",
+   "say": "Earth is actually closest to the Sun in early January, when it is winter in the north. The tilt, not the distance, makes the seasons.",
+   "ops": [
+    {
+     "op": "widget",
+     "id": "se",
+     "kind": "seasons",
+     "params": {
+      "show": [
+       "orbit",
+       "labels",
+       "zoom",
+       "readout",
+       "note"
+      ],
+      "position": "winter-solstice"
+     },
+     "expect": {
+      "north": "winter",
+      "sun_overhead": "south"
+     }
+    }
+   ]
+  }
+ ]
+}

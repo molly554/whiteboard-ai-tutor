@@ -1,0 +1,259 @@
+{
+ "title": "Why Pythagoras works",
+ "lang": "en",
+ "steps": [
+  {
+   "title": "The claim",
+   "say": "In a right triangle with legs a and b and hypotenuse c, the theorem says a² + b² = c². Let's see why, using areas.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "title",
+     "x": 60,
+     "y": 40,
+     "text": "Why a² + b² = c²",
+     "size": 54
+    },
+    {
+     "op": "line",
+     "id": "t1",
+     "x1": 200,
+     "y1": 650,
+     "x2": 600,
+     "y2": 650,
+     "color": "blue",
+     "width": 5
+    },
+    {
+     "op": "line",
+     "id": "t2",
+     "x1": 200,
+     "y1": 650,
+     "x2": 200,
+     "y2": 350,
+     "color": "green",
+     "width": 5
+    },
+    {
+     "op": "line",
+     "id": "t3",
+     "x1": 200,
+     "y1": 350,
+     "x2": 600,
+     "y2": 650,
+     "color": "red",
+     "width": 5
+    },
+    {
+     "op": "write",
+     "id": "la",
+     "x": 380,
+     "y": 690,
+     "text": "b",
+     "size": 34
+    },
+    {
+     "op": "write",
+     "id": "lb",
+     "x": 140,
+     "y": 480,
+     "text": "a",
+     "size": 34
+    },
+    {
+     "op": "write",
+     "id": "lc",
+     "x": 420,
+     "y": 440,
+     "text": "c",
+     "size": 34
+    },
+    {
+     "op": "write",
+     "id": "form",
+     "x": 800,
+     "y": 200,
+     "text": "a² + b² = c²",
+     "size": 48
+    }
+   ]
+  },
+  {
+   "title": "Big square",
+   "say": "Build a big square with side a + b. Its area is (a + b)², no matter how we cut it up.",
+   "ops": [
+    {
+     "op": "erase",
+     "all": true
+    },
+    {
+     "op": "write",
+     "id": "title2",
+     "x": 60,
+     "y": 40,
+     "text": "Square of side a + b",
+     "size": 54
+    },
+    {
+     "op": "rect",
+     "id": "big",
+     "x": 400,
+     "y": 160,
+     "w": 600,
+     "h": 600,
+     "color": "ink",
+     "width": 5
+    },
+    {
+     "op": "write",
+     "id": "area",
+     "x": 1080,
+     "y": 420,
+     "text": "area = (a + b)²",
+     "size": 40
+    }
+   ]
+  },
+  {
+   "title": "Four triangles, tilted square",
+   "say": "Place four copies of the triangle in the corners. The leftover middle is a tilted square whose side is the hypotenuse c.",
+   "ops": [
+    {
+     "op": "line",
+     "id": "s1",
+     "x1": 640,
+     "y1": 160,
+     "x2": 1000,
+     "y2": 400,
+     "color": "red",
+     "width": 5
+    },
+    {
+     "op": "line",
+     "id": "s2",
+     "x1": 1000,
+     "y1": 400,
+     "x2": 760,
+     "y2": 760,
+     "color": "red",
+     "width": 5
+    },
+    {
+     "op": "line",
+     "id": "s3",
+     "x1": 760,
+     "y1": 760,
+     "x2": 400,
+     "y2": 520,
+     "color": "red",
+     "width": 5
+    },
+    {
+     "op": "line",
+     "id": "s4",
+     "x1": 400,
+     "y1": 520,
+     "x2": 640,
+     "y2": 160,
+     "color": "red",
+     "width": 5
+    },
+    {
+     "op": "write",
+     "id": "lc2",
+     "x": 780,
+     "y": 240,
+     "text": "c",
+     "size": 34,
+     "color": "red"
+    },
+    {
+     "op": "write",
+     "id": "la2",
+     "x": 500,
+     "y": 110,
+     "text": "a",
+     "size": 34,
+     "color": "green"
+    },
+    {
+     "op": "write",
+     "id": "lb2",
+     "x": 820,
+     "y": 110,
+     "text": "b",
+     "size": 34,
+     "color": "blue"
+    }
+   ]
+  },
+  {
+   "title": "Count the area",
+   "say": "The big square equals four triangles plus the tilted square: (a + b)² = 4·(ab/2) + c².",
+   "ops": [
+    {
+     "op": "write",
+     "id": "eq1",
+     "x": 1080,
+     "y": 520,
+     "text": "= 4 · ab/2 + c²",
+     "size": 40
+    },
+    {
+     "op": "write",
+     "id": "eq2",
+     "x": 1080,
+     "y": 590,
+     "text": "= 2ab + c²",
+     "size": 40
+    }
+   ]
+  },
+  {
+   "title": "Expand",
+   "say": "Expanding the left side gives a² + 2ab + b². So a² + 2ab + b² = 2ab + c².",
+   "ops": [
+    {
+     "op": "erase",
+     "ids": [
+      "area",
+      "eq1",
+      "eq2"
+     ]
+    },
+    {
+     "op": "write",
+     "id": "ex1",
+     "x": 1080,
+     "y": 300,
+     "text": "(a + b)² = a² + 2ab + b²",
+     "size": 36
+    },
+    {
+     "op": "write",
+     "id": "ex2",
+     "x": 1080,
+     "y": 380,
+     "text": "a² + 2ab + b² = 2ab + c²",
+     "size": 36
+    }
+   ]
+  },
+  {
+   "title": "Cancel 2ab",
+   "say": "Subtract 2ab from both sides and what remains is a² + b² = c². The theorem is just area bookkeeping.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "ex3",
+     "x": 1080,
+     "y": 480,
+     "text": "a² + b² = c²",
+     "size": 48,
+     "color": "green",
+     "underline": true
+    }
+   ]
+  }
+ ]
+}

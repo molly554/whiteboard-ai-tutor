@@ -1,0 +1,125 @@
+{
+ "title": "Demand rises",
+ "lang": "en",
+ "steps": [
+  {
+   "title": "The axes",
+   "say": "Price is on the vertical axis and quantity on the horizontal axis.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "title",
+     "x": 60,
+     "y": 40,
+     "text": "Demand rises",
+     "size": 54
+    },
+    {
+     "op": "widget",
+     "id": "sd",
+     "kind": "supply-demand",
+     "params": {
+      "show": [
+       "axes"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "title": "Demand curve",
+   "say": "Demand slopes down: the higher the price, the less people want to buy.",
+   "ops": [
+    {
+     "op": "widget",
+     "id": "sd",
+     "kind": "supply-demand",
+     "params": {
+      "show": [
+       "axes",
+       "demand"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "title": "Supply curve",
+   "say": "Supply slopes up: the higher the price, the more sellers want to sell.",
+   "ops": [
+    {
+     "op": "widget",
+     "id": "sd",
+     "kind": "supply-demand",
+     "params": {
+      "show": [
+       "axes",
+       "demand",
+       "supply"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "title": "Starting equilibrium",
+   "say": "Where the curves cross, the market settles at price 5 and quantity 5.",
+   "ops": [
+    {
+     "op": "widget",
+     "id": "sd",
+     "kind": "supply-demand",
+     "params": {
+      "show": [
+       "axes",
+       "demand",
+       "supply",
+       "equilibrium",
+       "readout"
+      ]
+     },
+     "expect": {
+      "price": "same",
+      "quantity": "same"
+     }
+    }
+   ]
+  },
+  {
+   "title": "Demand rises",
+   "say": "Now buyers want more at every price, so the demand curve moves to the right. The equilibrium slides up along the supply curve: the price rises and so does the quantity.",
+   "ops": [
+    {
+     "op": "widget",
+     "id": "sd",
+     "kind": "supply-demand",
+     "params": {
+      "demandShift": 2
+     },
+     "expect": {
+      "price": "up",
+      "quantity": "up"
+     }
+    }
+   ]
+  },
+  {
+   "title": "Try it yourself",
+   "say": "Drag the curves to see how the price changes. When demand rises, the price goes up.",
+   "ops": [
+    {
+     "op": "widget",
+     "id": "sd",
+     "kind": "supply-demand",
+     "params": {
+      "interactive": "curves"
+     },
+     "expect": {
+      "price": "up",
+      "quantity": "up"
+     }
+    }
+   ]
+  }
+ ]
+}

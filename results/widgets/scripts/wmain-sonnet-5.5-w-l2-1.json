@@ -1,0 +1,128 @@
+{
+ "title": "Why We Have Seasons",
+ "lang": "en",
+ "steps": [
+  {
+   "title": "The orbit",
+   "say": "The Earth travels around the Sun once a year, and its axis is tilted 23.5° and always points the same way.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "title",
+     "x": 60,
+     "y": 40,
+     "text": "Why We Have Seasons",
+     "size": 54
+    },
+    {
+     "op": "widget",
+     "id": "se",
+     "kind": "seasons",
+     "params": {
+      "show": [
+       "orbit",
+       "labels"
+      ],
+      "position": "winter-solstice",
+      "interactive": "none"
+     }
+    }
+   ]
+  },
+  {
+   "title": "Northern winter",
+   "say": "In December the north end of the axis leans away from the Sun, so northern sunlight hits at a low angle and spreads out. Days are short and it is winter.",
+   "ops": [
+    {
+     "op": "widget",
+     "id": "se",
+     "kind": "seasons",
+     "params": {
+      "show": [
+       "orbit",
+       "labels",
+       "zoom",
+       "readout"
+      ],
+      "position": "winter-solstice",
+      "interactive": "none"
+     },
+     "expect": {
+      "north": "winter",
+      "sun_overhead": "south"
+     }
+    }
+   ]
+  },
+  {
+   "title": "Spring",
+   "say": "A quarter of a year later, neither pole leans toward the Sun. The Sun is over the equator and the north is warming up.",
+   "ops": [
+    {
+     "op": "widget",
+     "id": "se",
+     "kind": "seasons",
+     "params": {
+      "position": "spring-equinox"
+     },
+     "expect": {
+      "north": "spring",
+      "sun_overhead": "equator"
+     }
+    }
+   ]
+  },
+  {
+   "title": "Northern summer",
+   "say": "In June the north leans toward the Sun. Sunlight hits more directly and days are long, so it is summer in the north, and winter in the south.",
+   "ops": [
+    {
+     "op": "widget",
+     "id": "se",
+     "kind": "seasons",
+     "params": {
+      "position": "summer-solstice"
+     },
+     "expect": {
+      "north": "summer",
+      "sun_overhead": "north"
+     }
+    }
+   ]
+  },
+  {
+   "title": "Autumn",
+   "say": "By September the tilt is sideways to the Sun again. The Sun is over the equator and the north is cooling.",
+   "ops": [
+    {
+     "op": "widget",
+     "id": "se",
+     "kind": "seasons",
+     "params": {
+      "position": "autumn-equinox"
+     },
+     "expect": {
+      "north": "autumn",
+      "sun_overhead": "equator"
+     }
+    }
+   ]
+  },
+  {
+   "title": "Your turn",
+   "say": "Seasons come from the tilt, not from distance to the Sun. Now drag the Earth to where it is summer in the south.",
+   "ops": [
+    {
+     "op": "widget",
+     "id": "se",
+     "kind": "seasons",
+     "params": {
+      "position": "summer-solstice",
+      "ask": "south-summer",
+      "interactive": "earth"
+     }
+    }
+   ]
+  }
+ ]
+}

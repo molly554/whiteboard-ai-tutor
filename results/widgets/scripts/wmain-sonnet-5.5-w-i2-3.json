@@ -1,0 +1,56 @@
+{
+ "title": "Distance is not the reason",
+ "lang": "en",
+ "steps": [
+  {
+   "title": "Not distance",
+   "say": "Good guess, but distance is not the cause. The Earth is actually a little closer to the Sun in early January, when it is winter in the north.",
+   "ops": [
+    {
+     "op": "widget",
+     "id": "se",
+     "kind": "seasons",
+     "params": {
+      "show": [
+       "orbit",
+       "labels",
+       "zoom",
+       "readout",
+       "note"
+      ],
+      "position": "winter-solstice",
+      "interactive": "none"
+     },
+     "expect": {
+      "north": "winter",
+      "sun_overhead": "south"
+     }
+    }
+   ]
+  },
+  {
+   "title": "Tilt decides",
+   "say": "Where you dragged it, the north leans toward the Sun, so sunlight hits it more directly and the days are longer. That is why it is summer there, while the south has winter.",
+   "ops": [
+    {
+     "op": "widget",
+     "id": "se",
+     "kind": "seasons",
+     "params": {
+      "position": "summer-solstice",
+      "interactive": "earth"
+     },
+     "expect": {
+      "north": "summer",
+      "sun_overhead": "north"
+     }
+    }
+   ]
+  },
+  {
+   "title": "Try it",
+   "say": "Drag the Earth around the orbit. The distance barely changes, but the tilt makes the seasons swap between the two hemispheres.",
+   "ops": []
+  }
+ ]
+}

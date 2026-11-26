@@ -1,0 +1,72 @@
+{
+ "title": "Predict the new equilibrium",
+ "lang": "en",
+ "steps": [
+  {
+   "title": "A market",
+   "say": "Demand slopes down, supply slopes up, and they cross at the equilibrium E.",
+   "ops": [
+    {
+     "op": "write",
+     "id": "title",
+     "x": 60,
+     "y": 40,
+     "text": "Where is the new equilibrium?",
+     "size": 54
+    },
+    {
+     "op": "widget",
+     "id": "sd",
+     "kind": "supply-demand",
+     "params": {
+      "show": [
+       "axes",
+       "demand",
+       "supply",
+       "equilibrium",
+       "readout"
+      ],
+      "interactive": "none"
+     }
+    }
+   ]
+  },
+  {
+   "title": "Demand rises",
+   "say": "Demand rises: the demand curve shifts right to D₂. Where is the new equilibrium? Drag the green dot there and let go. The lesson waits for you.",
+   "ops": [
+    {
+     "op": "widget",
+     "id": "sd",
+     "kind": "supply-demand",
+     "params": {
+      "demandShift": 2,
+      "ask": "equilibrium",
+      "answered": false,
+      "marker": null,
+      "interactive": "none"
+     }
+    }
+   ]
+  },
+  {
+   "title": "Supply falls",
+   "say": "A different shock: supply falls, so the supply curve shifts left to S₂. Where is the new equilibrium?",
+   "ops": [
+    {
+     "op": "widget",
+     "id": "sd",
+     "kind": "supply-demand",
+     "params": {
+      "demandShift": 0,
+      "supplyShift": -2,
+      "ask": "equilibrium",
+      "answered": false,
+      "marker": null,
+      "interactive": "none"
+     }
+    }
+   ]
+  }
+ ]
+}

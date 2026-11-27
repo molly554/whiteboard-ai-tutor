@@ -1,4 +1,4 @@
-<div align="center">
+<img width="771" height="656" alt="image" src="https://github.com/user-attachments/assets/b734e02b-a8e9-47f3-9a86-67babbce364c" /><div align="center">
 
 # Whiteboard AI Tutor
 
@@ -300,3 +300,8 @@ Contributions to whiteboard animation, visual learning and educational AI are we
 ## License
 
 [MIT](LICENSE). Model outputs in `results/` are included for research and comparison.
+
+
+## Special Thanks
+
+Mozhenzhen: Stop overpaying for AI — compare prices, verify models & spot nerfed APIs for free at mozhenzhen.com(https://mozhenzhen.com/go/whiteboard-ai-tutor)

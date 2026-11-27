@@ -1,5 +1,3 @@
-<img width="771" height="656" alt="image" src="https://github.com/user-attachments/assets/b734e02b-a8e9-47f3-9a86-67babbce364c" /><div align="center">
-
 # Whiteboard AI Tutor
 
 **An open-source AI tutor that teaches on a whiteboard — and a benchmark of which LLM does it best.**

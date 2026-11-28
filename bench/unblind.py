@@ -172,9 +172,31 @@ table.lb th,table.lb td{padding:8px 16px;text-align:left;border-bottom:1px solid
 .v{display:inline-block;padding:1px 8px;border-radius:9px;font-size:12px;font-weight:600}.v.pass{background:#e2f3e6;color:#1d6a35}.v.fail{background:#fde7e7;color:#9b1c1c}.v.borderline{background:#fbf0cf;color:#7a5c00}
 a{color:#1f4fd8;text-decoration:none}a:hover{text-decoration:underline}details{display:inline}"""
 
+# Descriptions of the six existing low-thinking Pythagoras boards. Keep these
+# factual: the verdict and reviewer note are displayed separately from the image.
+PYTHAGORAS_ALT = {
+    "en": {
+        "B01": "A blue tilted square labeled c inside a black square with sides marked a and b; area equations on the right subtract four triangles.",
+        "B48": "A blue tilted square inside a black square labeled a plus b; the right side shows a squared plus b squared equals c squared and a brief area note.",
+        "B62": "A labeled right triangle, then two side-by-side squares: one has a green central c-squared region, the other separate a-squared and b-squared regions.",
+        "B54": "Two arrangements of four blue triangles: a red central c-squared square on the left, and separate green a-squared and b-squared regions on the right; bottom text overlaps a red box.",
+        "B61": "A right triangle with blue a-squared and green b-squared squares; a red c-squared square beside it and a larger black-outlined c-squared square to the right.",
+        "B16": "A right triangle with a blue a-squared square below, a green b-squared square above, and an oversized tilted red c-squared square overlapping the triangle and text.",
+    },
+    "zh": {
+        "B01": "黑色大正方形内有蓝色倾斜正方形，标着 c；外边标着 a 和 b。右侧列出面积等式，并减去四个三角形的面积。",
+        "B48": "黑色大正方形内有蓝色倾斜正方形，外边标着 a+b；右侧写有 a²+b²=c² 和简短的面积说明。",
+        "B62": "左侧是标有边长的直角三角形；中间正方形有绿色的 c² 区域，右侧正方形分出 a² 和 b² 区域。",
+        "B54": "四个蓝色三角形的两种排列：左侧中央为红色 c² 正方形，右侧分出绿色 a² 和 b² 区域；底部文字与红框重叠。",
+        "B61": "直角三角形旁有蓝色 a² 和绿色 b² 正方形；其右侧有红色 c² 正方形，更右边还有一个较大的黑框 c² 正方形。",
+        "B16": "直角三角形下方是蓝色 a² 正方形，上方是绿色 b² 正方形；倾斜的红色 c² 正方形较大，与三角形及文字重叠。",
+    },
+}
+
 
 def card(r, lang, reveal=True):
     t = T[lang]
+    image_alt = PYTHAGORAS_ALT[lang].get(r["id"], SC[lang][r["scenario"]])
     play = "player/index.html?run=%s&amp;sc=%s&amp;lang=%s" % (r["run_id"], r["scenario"], lang)
     other_model = 'sonnet-5.5' if r['model'] != 'sonnet-5.5' else 'gemini-4-argon'
     compare = ('compare.zh.html' if lang == 'zh' else 'compare.html') + '?sc=%s&amp;cond=%s&amp;a=%s&amp;b=%s' % (r['scenario'], r['cond'], r['model'], other_model)
@@ -189,7 +211,7 @@ def card(r, lang, reveal=True):
             '<a href="%s"><img src="results/review/boards/%s.png" alt="%s" loading="lazy" decoding="async" width="1600" height="900"></a><div class="note">%s</div>'
             '<div class="small">%s</div><div class="small">%s · <a href="%s">%s</a></div><a class="card-compare" href="'+compare+'">'+('同题对比 →' if lang == 'zh' else 'Compare this question →')+'</a></div>') % (
         r["id"], SC[lang][r["scenario"]], v, t["verdicts"][v], t["q"], html.escape(Q.get(r["scenario"], "")), play, r["id"],
-        html.escape(SC[lang][r["scenario"]]), html.escape(r["note_" + lang]), rub, who, play, t["play"])
+        html.escape(image_alt), html.escape(r["note_" + lang]), rub, who, play, t["play"])
 
 
 def gallery(lang, fname):
